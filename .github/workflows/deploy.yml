@@ -18,15 +18,13 @@ jobs:
         username: ${{ secrets.VPS_USER }}
         password: ${{ secrets.VPS_PASSWORD }}
         script: |
-          cd C:\Users\Administrator\ai-juku
-          echo "Current directory: $(pwd)"
-          git status
+          Set-Location C:/Users/Administrator/ai-juku
           git fetch origin
           git reset --hard origin/main
-          copy C:\Users\Administrator\ai-juku-data\*.db ai_school\app\ 2>nul || echo "No DB to restore"
-          copy C:\Users\Administrator\ai-juku-data\.env .\ 2>nul || echo "No .env to restore"
+          Copy-Item C:/Users/Administrator/ai-juku-data/*.db ai_school/app/ -ErrorAction SilentlyContinue
+          Copy-Item C:/Users/Administrator/ai-juku-data/.env ./ -ErrorAction SilentlyContinue
           if (-Not (Test-Path .venv)) { python -m venv .venv }
-          .venv\Scripts\Activate.ps1
+          .venv/Scripts/Activate.ps1
           pip install -r requirements.txt
-          taskkill /F /IM python.exe 2>nul || echo "No python running"
+          taskkill /F /IM python.exe 2>$null
           Start-Process -NoNewWindow -FilePath "python" -ArgumentList "-m uvicorn ai_school.app.main:app --host 0.0.0.0 --port 8000"
