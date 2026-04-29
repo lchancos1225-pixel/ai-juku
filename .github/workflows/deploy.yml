@@ -19,9 +19,13 @@ jobs:
         password: ${{ secrets.VPS_PASSWORD }}
         script: |
           cd C:\Users\Administrator\ai-juku
-          git pull origin main
+          echo "Current directory: $(pwd)"
+          git status
+          git fetch origin
+          git reset --hard origin/main
           copy C:\Users\Administrator\ai-juku-data\*.db ai_school\app\ 2>nul || echo "No DB to restore"
           copy C:\Users\Administrator\ai-juku-data\.env .\ 2>nul || echo "No .env to restore"
+          if (-Not (Test-Path .venv)) { python -m venv .venv }
           .venv\Scripts\Activate.ps1
           pip install -r requirements.txt
           taskkill /F /IM python.exe 2>nul || echo "No python running"
