@@ -1,0 +1,310 @@
+{% extends "base.html" %}
+{% block content %}
+
+{# ===== すごろくヒーローヘッダー ===== #}
+<section class="card sugoroku-hero">
+  <div class="sugoroku-hero__inner">
+    <div class="sugoroku-hero__char-col">
+      <img class="mein-char mein-char--hero" src="/static/characters/mein_y1.png" alt="mein" aria-hidden="true">
+      <div class="gold-chip">
+        <span class="gold-chip__icon">🪙</span>
+        <span class="gold-chip__value">{{ progress.gold }}</span>
+        <span class="gold-chip__unit">G</span>
+      </div>
+    </div>
+    <div class="sugoroku-hero__info">
+      <p class="section-label">My レコード</p>
+      <h2>{{ progress.student.display_name }} の冒険</h2>
+      <p class="sugoroku-hero__lead">{{ progress.hero.lead }}</p>
+    </div>
+    <div class="hero-right-col">
+      <div class="hero-btn-grid">
+        <a class="hero-cta-btn" href="/students/{{ progress.student.student_id }}?subject=math">📐 数学の問題を解く</a>
+        <a class="hero-cta-btn hero-cta-btn--units" href="/students/{{ progress.student.student_id }}/units">数学単元を選ぶ</a>
+        <a class="hero-cta-btn hero-cta-btn--english" href="/students/{{ progress.student.student_id }}/english/problem">🇺🇸 英語の問題を解く</a>
+        <a class="hero-cta-btn hero-cta-btn--english-units" href="/students/{{ progress.student.student_id }}/english">英語単元を選ぶ</a>
+        <a class="hero-cta-btn" style="background:#ecfdf5; color:#065f46;" href="/students/{{ progress.student.student_id }}/flashcards">📚 単語帳</a>
+        <a class="hero-cta-btn" style="background:#eef2ff; color:#3730a3;" href="/students/{{ progress.student.student_id }}/listening">🎧 リスニング</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# ===== 現在のボード ===== #}
+<section class="card sugoroku-board-card">
+  <div class="sugoroku-board-header">
+    <div>
+      <p class="section-label">Current Board</p>
+      <h3>📍 {{ progress.board.current_unit_name }}</h3>
+    </div>
+    <span class="board-cell-count">{{ progress.board.cells | length }} マス</span>
+  </div>
+
+  {% if progress.board.cells | length == 0 %}
+  <p class="board-empty-hint">まだこのユニットで問題を解いていないよ。やってみよう！🌱</p>
+  {% else %}
+  <div class="board-track-wrap">
+    <div class="board-track">
+      <div class="board-cell board-cell--start">
+        <span class="board-cell__icon">🚀</span>
+        <span class="board-cell__label">START</span>
+      </div>
+      {% for cell in progress.board.cells %}
+      <div class="board-cell board-cell--{{ cell.cell_type }}" title="{{ cell.ai_event_text or '' }}">
+        <span class="board-cell__num">{{ cell.cell_index + 1 }}</span>
+        {% if cell.cell_type == 'bonus' %}
+        <span class="board-cell__icon">⭐</span>
+        {% elif cell.cell_type == 'correct' %}
+        <span class="board-cell__icon">✅</span>
+        {% elif cell.cell_type == 'hint' %}
+        <span class="board-cell__icon">💡</span>
+        {% else %}
+        <span class="board-cell__icon">💥</span>
+        {% endif %}
+        {% if cell.g_earned > 0 %}
+        <span class="board-cell__g">+{{ cell.g_earned }}G</span>
+        {% endif %}
+        {% if cell.ai_event_text %}
+        <div class="board-cell__bubble">{{ cell.ai_event_text }}</div>
+        {% endif %}
+      </div>
+      {% endfor %}
+      <div class="board-cell-active-wrap">
+        <div class="board-char-on-cell" aria-hidden="true">
+          <img class="mein-char mein-char--small" src="/static/characters/mein_y1.png" alt="mein">
+        </div>
+        <div class="board-cell board-cell--active">
+          <span class="board-cell__label">今ここ</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endif %}
+</section>
+
+{# ===== ショップ: 激ムズ問題 ===== #}
+<section id="shop" class="card shop-card {% if not progress.can_buy_challenge %}shop-card--locked{% endif %}">
+  <p class="section-label">Shop</p>
+  <h3>🏪 激ムズ問題ショップ</h3>
+  <p class="shop-desc">100G で超難問に挑戦！解けたら達成感MAX 🔥</p>
+  {% if progress.can_buy_challenge %}
+    {% if progress.has_challenge_problems %}
+    <form action="/students/{{ progress.student.student_id }}/shop/buy_challenge" method="post" class="shop-buy-form">
+      <label class="shop-select-label" for="shop_problem_id">買う問題を選んでね</label>
+      <select name="problem_id" id="shop_problem_id" class="shop-problem-select" required>
+        <option value="" disabled selected>— 単元と問題を選択 —</option>
+        {% for group in progress.challenge_shop_groups %}
+        <optgroup label="{{ group.unit_name }}">
+          {# dict の .items はメソッドなのでキー参照にする #}
+          {% for item in group['items'] %}
+          <option value="{{ item.problem_id }}">{{ loop.index }}. {{ item.preview }}</option>
+          {% endfor %}
+        </optgroup>
+        {% endfor %}
+      </select>
+      <button type="submit" class="shop-buy-btn">
+        🪙 100G でこの問題を買う（残 {{ progress.gold }}G）
+      </button>
+    </form>
+    {% else %}
+    <p class="shop-locked-msg">激ムズ問題の準備中です。しばらくしてからまた来てね。</p>
+    {% endif %}
+  {% else %}
+  <p class="shop-locked-msg">🔒 あと {{ 100 - progress.gold }}G 貯めると解放されるよ！（現在: {{ progress.gold }}G）</p>
+  <div class="shop-progress-bar"><span style="width: {{ [progress.gold, 100] | min }}%"></span></div>
+  {% endif %}
+</section>
+
+{# ===== 歴代ボード ===== #}
+{% if progress.board.past_boards %}
+<section class="card past-boards-card">
+  <p class="section-label">History</p>
+  <h3>📜 歴代ボード</h3>
+  {% for past in progress.board.past_boards %}
+  <details class="past-board-summary">
+    <summary>
+      <span class="past-board-name">{{ past.unit_name }}</span>
+      <span class="past-board-stats">{{ past.correct_count }}/{{ past.cell_count }} 正解 ・ 🪙 {{ past.total_g }}G</span>
+    </summary>
+    <div class="past-board-track-wrap">
+      <div class="board-track board-track--mini">
+        {% for cell in past.cells %}
+        <div class="board-cell board-cell--mini board-cell--{{ cell.cell_type }}" title="{{ cell.ai_event_text or '' }}">
+          {% if cell.cell_type == 'bonus' %}⭐{% elif cell.cell_type == 'correct' %}✅{% elif cell.cell_type == 'hint' %}💡{% else %}💥{% endif %}
+        </div>
+        {% endfor %}
+        <div class="board-cell board-cell--mini board-cell--goal">🏁</div>
+      </div>
+    </div>
+  </details>
+  {% endfor %}
+</section>
+{% endif %}
+
+{# ===== 今日のアクティビティ ===== #}
+<section class="card progress-section">
+  <div class="progress-section-head">
+    <div>
+      <p class="section-label">Today</p>
+      <h3>今日のアクティビティ</h3>
+    </div>
+    <p class="progress-section-copy">{{ progress.today.message }}</p>
+  </div>
+  <div class="effort-grid">
+    {% for item in progress.today.cards %}
+    <div class="effort-card">
+      <p class="effort-label">{{ item.label }}</p>
+      <strong class="effort-value">{{ item.value }}</strong>
+      <p class="effort-note">{{ item.note }}</p>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+{# ===== 🌿 単元成長記録 ===== #}
+<section class="card">
+  <p class="section-label">Units</p>
+  <h3>🌿 単元ごとの成長記録</h3>
+  <div class="unit-progress-two-col">
+    <div class="unit-progress-col">
+      <p class="unit-progress-col__label unit-progress-col__label--math">📐 数学</p>
+      <div class="unit-progress-list">
+        {% for unit in progress.math_unit_progress %}
+        <article class="unit-progress-card {{ unit.tone_class }} {{ 'is-current' if unit.is_current else '' }}">
+          <div class="unit-progress-head">
+            <div>
+              <h4>{% if unit.progress_percent >= 75 %}💎{% elif unit.progress_percent >= 40 %}🌿{% else %}🌱{% endif %} {{ unit.display_name }}</h4>
+              <p>{{ unit.status_label }}</p>
+            </div>
+            <strong>{{ unit.progress_percent }}%</strong>
+          </div>
+          <div class="unit-progress-bar" aria-hidden="true">
+            <span style="width: {{ unit.progress_percent }}%"></span>
+          </div>
+          <p class="unit-progress-note">{{ unit.message }}</p>
+        </article>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="unit-progress-col">
+      <p class="unit-progress-col__label unit-progress-col__label--eng">🇺🇸 英語</p>
+      <div class="unit-progress-list">
+        {% for unit in progress.eng_unit_progress %}
+        <article class="unit-progress-card {{ unit.tone_class }} {{ 'is-current' if unit.is_current else '' }}">
+          <div class="unit-progress-head">
+            <div>
+              <h4>{% if unit.progress_percent >= 75 %}💎{% elif unit.progress_percent >= 40 %}🌿{% else %}🌱{% endif %} {{ unit.display_name }}</h4>
+              <p>{{ unit.status_label }}</p>
+            </div>
+            <strong>{{ unit.progress_percent }}%</strong>
+          </div>
+          <div class="unit-progress-bar" aria-hidden="true">
+            <span style="width: {{ unit.progress_percent }}%"></span>
+          </div>
+          <p class="unit-progress-note">{{ unit.message }}</p>
+        </article>
+        {% endfor %}
+        {% if not progress.eng_unit_progress %}
+        <p class="unit-progress-empty">まだ英語の履歴がありません。</p>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{# ===== 📚 単語帳進捗 ===== #}
+<section class="card">
+  <p class="section-label">Vocabulary</p>
+  <h3>📚 単語帳の進み具合</h3>
+
+  {# サマリーバー #}
+  <div class="fc-summary-bar">
+    <div class="fc-summary-bar__info">
+      <span class="fc-summary-bar__done">{{ flashcard_summary.done }}</span>
+      <span class="fc-summary-bar__sep">/</span>
+      <span class="fc-summary-bar__total">{{ flashcard_summary.total }}語</span>
+      <span class="fc-summary-bar__label">マスター済み</span>
+      <span class="fc-summary-bar__pct">{{ flashcard_summary.percent }}%</span>
+    </div>
+    <div class="unit-progress-bar fc-summary-bar__bar">
+      <span style="width: {{ flashcard_summary.percent }}%;"></span>
+    </div>
+    <p class="fc-summary-bar__note">
+      {% if flashcard_summary.percent >= 100 %}🎉 全単語マスター！
+      {% elif flashcard_summary.percent >= 70 %}💪 あと少し！
+      {% elif flashcard_summary.percent >= 30 %}🌿 いい調子！続けよう
+      {% elif flashcard_summary.started > 0 %}🌱 {{ flashcard_summary.started }}語 学習中
+      {% else %}まだ単語帳を開いていません。<a href="/students/{{ progress.student.student_id }}/flashcards">やってみよう！</a>
+      {% endif %}
+    </p>
+  </div>
+
+  {# ユニット別リスト（折りたたみ）#}
+  <details class="fc-units-details">
+    <summary class="fc-units-summary">ユニット別を見る ▼</summary>
+    <div class="fc-unit-list">
+      {% for unit in flashcard_units %}
+      <div class="fc-unit-row">
+        <div class="fc-unit-row__head">
+          <span class="fc-unit-row__name">
+            {% if unit.percent >= 100 %}✅ {% elif unit.percent >= 50 %}🌿 {% else %}🌱 {% endif %}{{ unit.display_name }}
+          </span>
+          <span class="fc-unit-row__stat">{{ unit.done }}/{{ unit.total }}語 ({{ unit.percent }}%)</span>
+        </div>
+        <div class="unit-progress-bar fc-unit-row__bar">
+          <span style="width: {{ unit.percent }}%;"></span>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </details>
+
+  <a class="hero-cta-btn" style="margin-top:1rem; background:#ecfdf5; color:#065f46; display:inline-block;"
+     href="/students/{{ progress.student.student_id }}/flashcards">📚 単語帳を開く</a>
+</section>
+
+
+{# ===== リスニング進捗 ===== #}
+<section class="card progress-section">
+  <p class="section-label">Listening</p>
+  <h3>🎧 リスニング</h3>
+  {% if listening_mastery %}
+    {% for unit in listening_mastery %}
+    <div class="unit-mastery-row">
+      <span class="unit-name">{{ unit.display_name }}</span>
+      <div class="mastery-bar">
+        <div class="mastery-fill" style="width: {{ (unit.mastery_score * 100)|int }}%"></div>
+      </div>
+      <span class="mastery-pct">{{ (unit.mastery_score * 100)|int }}%</span>
+    </div>
+    {% endfor %}
+  {% else %}
+    <p class="no-data">まだリスニング学習記録がありません。</p>
+  {% endif %}
+  <a href="/students/{{ student_id }}/listening" class="btn-secondary" style="display:inline-block;margin-top:1rem;">リスニングを始める</a>
+</section>
+
+
+{# ===== AI メッセージ ===== #}
+<section class="card">
+  <p class="section-label">AI Message</p>
+  <h3>AIからの応援メッセージ</h3>
+  <p>{{ progress.encouragement }}</p>
+</section>
+
+<script>
+(function () {
+  var frames = [
+    '/static/characters/mein_y1.png',
+    '/static/characters/mein_y2.png',
+  ];
+  var idx = 0;
+  var boardChars = document.querySelectorAll('.mein-char--small');
+  setInterval(function () {
+    idx = (idx + 1) % frames.length;
+    boardChars.forEach(function (img) { img.src = frames[idx]; });
+  }, 400);
+})();
+</script>
+
+{% endblock %}

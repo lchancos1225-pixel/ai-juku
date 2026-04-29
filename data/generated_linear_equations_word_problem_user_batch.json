@@ -1,0 +1,331 @@
+{
+  "problems": [
+    {
+      "full_unit_id": "linear_equations_word_problem",
+      "unit_id": "linear_equations",
+      "sub_unit": "word_problem",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "question_text": "りんごを 6 個買ったら代金の合計が 420 円でした。りんご 1 個の値段を求めなさい。",
+      "diagram": null,
+      "correct_answer": "70円",
+      "hint_1": "りんご 1 個の値段を x 円として方程式を作りましょう。",
+      "hint_2": "6x = 420 という方程式になります。両辺を 6 で割りましょう。",
+      "explanation_base": "りんご 1 個の値段を x 円とすると、6x = 420。x = 420 ÷ 6 = 70。したがって 70 円です。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "linear_equations_word_problem",
+      "unit_id": "linear_equations",
+      "sub_unit": "word_problem",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "question_text": "ある数 x を 3 倍すると 24 になります。ある数 x を求めなさい。",
+      "diagram": null,
+      "correct_answer": "8",
+      "hint_1": "「ある数 x を 3 倍すると 24」を式に表しましょう。",
+      "hint_2": "3x = 24 となります。両辺を 3 で割りましょう。",
+      "explanation_base": "3x = 24 を解きます。x = 24 ÷ 3 = 8 となります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "advance_with_confidence",
+        "retry_with_hint"
+      ]
+    },
+    {
+      "full_unit_id": "linear_equations_word_problem",
+      "unit_id": "linear_equations",
+      "sub_unit": "word_problem",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "question_text": "兄の年齢は妹の年齢より 5 才多く、兄の年齢は 14 才です。妹の年齢を求めなさい。",
+      "diagram": null,
+      "correct_answer": "9才",
+      "hint_1": "妹の年齢を x 才とすると、兄の年齢は x + 5 才になります。",
+      "hint_2": "x + 5 = 14 として x を求めましょう。",
+      "explanation_base": "妹の年齢を x 才とすると x + 5 = 14。x = 14 − 5 = 9 となり、妹は 9 才です。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "comprehension_gap"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "retry_with_hint"
+      ]
+    },
+    {
+      "full_unit_id": "linear_equations_word_problem",
+      "unit_id": "linear_equations",
+      "sub_unit": "word_problem",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "question_text": "みかんを何個か箱に入れたら、8 個余りました。箱の中のみかんの数を x 個とすると、みかんの総数は x + 8 個です。みかんの総数が 32 個のとき、箱の中のみかんの数を求めなさい。",
+      "diagram": null,
+      "correct_answer": "24個",
+      "hint_1": "x + 8 = 32 という方程式を解きます。",
+      "hint_2": "x = 32 − 8 を計算しましょう。",
+      "explanation_base": "x + 8 = 32 を解きます。x = 32 − 8 = 24 となります。箱の中のみかんは 24 個です。",
+      "error_pattern_candidates": [
+        "careless_error",
+        "comprehension_gap"
+      ],
+      "intervention_candidates": [
+        "advance_with_confidence",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "linear_equations_word_problem",
+      "unit_id": "linear_equations",
+      "sub_unit": "word_problem",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "question_text": "えんぴつ 1 本とノート 1 冊を買いました。ノートの値段はえんぴつの値段より 80 円高く、合計は 240 円でした。えんぴつの値段を求めなさい。",
+      "diagram": null,
+      "correct_answer": "80円",
+      "hint_1": "えんぴつの値段を x 円とすると、ノートの値段は x + 80 円です。",
+      "hint_2": "x + (x + 80) = 240 という方程式を作って解きましょう。",
+      "explanation_base": "えんぴつ x 円、ノート x + 80 円とすると、x + (x + 80) = 240。2x + 80 = 240。2x = 160。x = 80 円。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "retry_with_hint"
+      ]
+    },
+    {
+      "full_unit_id": "linear_equations_word_problem",
+      "unit_id": "linear_equations",
+      "sub_unit": "word_problem",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "question_text": "駅から図書館まで 1800 m あります。分速 60 m で歩いたとき、何分かかりますか。",
+      "diagram": null,
+      "correct_answer": "30分",
+      "hint_1": "（時間）= （距離）÷（速さ）の関係を使います。",
+      "hint_2": "かかる時間を x 分とすると 60x = 1800 という方程式になります。",
+      "explanation_base": "かかる時間を x 分とすると 60x = 1800。x = 1800 ÷ 60 = 30。30 分かかります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "comprehension_gap"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "retry_with_hint"
+      ]
+    },
+    {
+      "full_unit_id": "linear_equations_word_problem",
+      "unit_id": "linear_equations",
+      "sub_unit": "word_problem",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "question_text": "子どもたちに飴を配ります。1 人に 4 個ずつ配ると 3 個余り、1 人に 5 個ずつ配ると 2 個足りません。子どもの人数を求めなさい。",
+      "diagram": null,
+      "correct_answer": "5人",
+      "hint_1": "子どもの人数を x 人として、飴の総数を 2 通りで表しましょう。",
+      "hint_2": "4x + 3 = 5x − 2 という方程式になります。",
+      "explanation_base": "子ども x 人として飴の総数は 4x + 3（余り）= 5x − 2（不足）。整理すると x = 5。子どもは 5 人です。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "sign_error",
+        "comprehension_gap"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "explain_differently",
+        "retry_with_hint"
+      ]
+    },
+    {
+      "full_unit_id": "linear_equations_word_problem",
+      "unit_id": "linear_equations",
+      "sub_unit": "word_problem",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "question_text": "ある整数に 7 を加えると、その整数の 3 倍から 5 を引いた数と等しくなります。その整数を求めなさい。",
+      "diagram": null,
+      "correct_answer": "6",
+      "hint_1": "ある整数を x として方程式を作ります。「x に 7 を加えると」は x + 7 です。",
+      "hint_2": "x + 7 = 3x − 5 という方程式を解きましょう。",
+      "explanation_base": "x + 7 = 3x − 5。移項すると 7 + 5 = 3x − x。12 = 2x。x = 6 となります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "formula_setup_error"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "retry_with_hint"
+      ]
+    },
+    {
+      "full_unit_id": "linear_equations_word_problem",
+      "unit_id": "linear_equations",
+      "sub_unit": "word_problem",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "question_text": "120 円のお茶と 150 円のジュースを合わせて 10 本買い、代金の合計が 1350 円でした。お茶と ジュースの本数をそれぞれ求めなさい。",
+      "diagram": null,
+      "correct_answer": "お茶5本、ジュース5本",
+      "hint_1": "お茶の本数を x 本とすると、ジュースは (10 − x) 本です。",
+      "hint_2": "120x + 150(10 − x) = 1350 という方程式を作りましょう。",
+      "explanation_base": "お茶 x 本、ジュース (10 − x) 本とすると 120x + 150(10 − x) = 1350。120x + 1500 − 150x = 1350。−30x = −150。x = 5。お茶 5 本、ジュース 5 本です。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "arithmetic_error",
+        "comprehension_gap"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "explain_differently",
+        "retry_with_hint"
+      ]
+    },
+    {
+      "full_unit_id": "linear_equations_word_problem",
+      "unit_id": "linear_equations",
+      "sub_unit": "word_problem",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "question_text": "A 地点から B 地点まで 24 km あります。行きは時速 4 km で歩き、帰りは時速 6 km で走りました。往復にかかった時間の合計を求めなさい。",
+      "diagram": null,
+      "correct_answer": "10時間",
+      "hint_1": "時間 = 距離 ÷ 速さ です。行きと帰りの時間を別々に計算しましょう。",
+      "hint_2": "行き: 24 ÷ 4 = ? 時間、帰り: 24 ÷ 6 = ? 時間",
+      "explanation_base": "行きの時間: 24 ÷ 4 = 6 時間。帰りの時間: 24 ÷ 6 = 4 時間。合計 6 + 4 = 10 時間です。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "retry_with_hint"
+      ]
+    },
+    {
+      "full_unit_id": "linear_equations_word_problem",
+      "unit_id": "linear_equations",
+      "sub_unit": "word_problem",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "question_text": "定価 2000 円の商品を 20% 引きで買いました。代金はいくらですか。",
+      "diagram": null,
+      "correct_answer": "1600円",
+      "hint_1": "20% 引きとは、定価の (1 − 0.20) = 0.80 倍の値段です。",
+      "hint_2": "2000 × 0.8 を計算しましょう。",
+      "explanation_base": "定価の 20% 引きなので、代金 = 2000 × (1 − 0.20) = 2000 × 0.80 = 1600 円です。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "formula_setup_error"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "explain_differently"
+      ]
+    },
+    {
+      "full_unit_id": "linear_equations_word_problem",
+      "unit_id": "linear_equations",
+      "sub_unit": "word_problem",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "question_text": "連続する 3 つの整数があり、その合計が 54 です。最も小さい整数を求めなさい。",
+      "diagram": null,
+      "correct_answer": "17",
+      "hint_1": "最も小さい整数を x とすると、3 つの連続する整数は x、x + 1、x + 2 と表せます。",
+      "hint_2": "x + (x + 1) + (x + 2) = 54 という方程式を作って解きましょう。",
+      "explanation_base": "最小の整数を x とすると x + (x + 1) + (x + 2) = 54。3x + 3 = 54。3x = 51。x = 17 となります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "arithmetic_error",
+        "comprehension_gap"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "full_unit_id": "linear_equations_word_problem",
+      "unit_id": "linear_equations",
+      "sub_unit": "word_problem",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "question_text": "現在、父は 42 才、子は 12 才です。父の年齢が子の年齢の 2 倍になるのは何年後ですか。",
+      "diagram": null,
+      "correct_answer": "18年後",
+      "hint_1": "x 年後の父の年齢は 42 + x 才、子の年齢は 12 + x 才です。",
+      "hint_2": "父の年齢が子の 2 倍なので 42 + x = 2(12 + x) という方程式を作りましょう。",
+      "explanation_base": "x 年後について 42 + x = 2(12 + x)。42 + x = 24 + 2x。42 − 24 = 2x − x。18 = x。18 年後です。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "sign_error",
+        "comprehension_gap"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "explain_differently",
+        "retry_with_hint"
+      ]
+    },
+    {
+      "full_unit_id": "linear_equations_word_problem",
+      "unit_id": "linear_equations",
+      "sub_unit": "word_problem",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "question_text": "A さんは家を出発し、分速 70 m で学校に向かいました。10 分後に B さんが同じ家から分速 90 m で追いかけました。B さんが A さんに追いつくのは、B さんが出発してから何分後ですか。",
+      "diagram": null,
+      "correct_answer": "35分後",
+      "hint_1": "B さんが出発してから x 分後に追いつくとします。そのとき二人が進んだ距離は等しいです。",
+      "hint_2": "A さんは (x + 10) 分間歩くので距離 = 70(x + 10)。B さんの距離 = 90x。",
+      "explanation_base": "B さんが x 分後に追いつくとすると 70(x + 10) = 90x。70x + 700 = 90x。700 = 20x。x = 35。35 分後です。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "comprehension_gap",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "explain_differently",
+        "retry_with_hint"
+      ]
+    },
+    {
+      "full_unit_id": "linear_equations_word_problem",
+      "unit_id": "linear_equations",
+      "sub_unit": "word_problem",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "question_text": "ある仕事を A さん一人でやると 12 日、B さん一人でやると 18 日かかります。2 人で一緒にやると何日で終わりますか。",
+      "diagram": null,
+      "correct_answer": "7日と5分の1日（36/5日）",
+      "hint_1": "1 日に A さんは全体の 1/12、B さんは全体の 1/18 を終わらせます。",
+      "hint_2": "2 人で x 日かかるとすると、1/12 × x + 1/18 × x = 1 という方程式を作りましょう。",
+      "explanation_base": "x 日で終わるとすると (1/12 + 1/18)x = 1。1/12 + 1/18 = 3/36 + 2/36 = 5/36。(5/36)x = 1。x = 36/5 = 7と5分の1日です。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "arithmetic_error",
+        "comprehension_gap"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "explain_differently",
+        "retry_with_hint"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,304 @@
+{
+  "problems": [
+    {
+      "full_unit_id": "sample_survey_basic",
+      "unit_id": "sample_survey",
+      "sub_unit": "basic",
+      "problem_type": "mini_test",
+      "test_scope": "mini_test",
+      "difficulty": "easy",
+      "question_text": "次の調査のうち、標本調査が適しているものをア〜ウから1つ選びなさい。\nア：学校の健康診断\nイ：国勢調査\nウ：テレビの視聴率調査",
+      "diagram": null,
+      "correct_answer": "ウ",
+      "explanation_base": "すべてを調べるのが難しい、またはすべてを調べると対象物が壊れてしまうような場合に標本調査を行います。テレビの視聴率は一部の世帯を抽出して全体を推測するため、標本調査が適しています。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "advance_with_confidence"
+      ]
+    },
+    {
+      "full_unit_id": "sample_survey_basic",
+      "unit_id": "sample_survey",
+      "sub_unit": "basic",
+      "problem_type": "mini_test",
+      "test_scope": "mini_test",
+      "difficulty": "easy",
+      "question_text": "ある工場で生産された10000個の電球から、50個を無作為に抽出して点灯時間を調べました。この調査において、調査するために抽出された50個の電球の集まりを何といいますか。",
+      "diagram": null,
+      "correct_answer": "標本",
+      "explanation_base": "標本調査において、調査の対象として母集団から選び出された一部の集まりを「標本」といいます。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "retry_with_hint"
+      ]
+    },
+    {
+      "full_unit_id": "sample_survey_basic",
+      "unit_id": "sample_survey",
+      "sub_unit": "basic",
+      "problem_type": "mini_test",
+      "test_scope": "mini_test",
+      "difficulty": "normal",
+      "question_text": "ある市で中学生の読書時間を調べるために、市内の中学生から無作為に300人を選んでアンケートを行いました。この調査における「母集団」は何ですか。",
+      "diagram": null,
+      "correct_answer": "市内の中学生全員",
+      "explanation_base": "標本調査において、調査の対象となる集団全体を「母集団」といいます。この場合、調べたい対象全体は「市内の中学生全員」となります。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "formula_setup_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "retry_with_hint"
+      ]
+    },
+    {
+      "full_unit_id": "sample_survey_basic",
+      "unit_id": "sample_survey",
+      "sub_unit": "basic",
+      "problem_type": "mini_test",
+      "test_scope": "mini_test",
+      "difficulty": "hard",
+      "question_text": "ある池の魚の数を調べるために、池のあちこちで魚を80匹捕まえて、すべてに印をつけてから池に戻しました。数日後、同じ池で魚を60匹捕まえたところ、印のついた魚が3匹含まれていました。この池にいる魚の総数はおよそ何匹と推測できますか。",
+      "diagram": null,
+      "correct_answer": "1600匹",
+      "explanation_base": "池の魚の総数をx匹とします。印のついた魚は80匹なので、全体に対する割合は 80/x です。捕まえた60匹の中に印のついた魚が3匹いたので、その割合は 3/60 = 1/20 です。80/x = 1/20 と推測できるので、x = 80 × 20 = 1600 となります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "sample_survey_basic",
+      "unit_id": "sample_survey",
+      "sub_unit": "basic",
+      "problem_type": "mini_test",
+      "test_scope": "mini_test",
+      "difficulty": "hard",
+      "question_text": "袋の中に白い碁石がたくさん入っています。この袋の中に黒い碁石を50個入れてよく混ぜ、そこから40個の碁石を無作為に取り出したところ、その中に黒い碁石が4個含まれていました。はじめに袋に入っていた白い碁石はおよそ何個と推測できますか。",
+      "diagram": null,
+      "correct_answer": "450個",
+      "explanation_base": "取り出した40個のうち黒い碁石が4個なので、袋の中の碁石全体の数に対する黒い碁石の割合も 4/40 = 1/10 であると推測できます。全体の数をx個とすると、x × (1/10) = 50 となり、x = 500 となります。黒い碁石50個を引いて、白い碁石は 500 - 50 = 450 個と推測できます。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "comprehension_gap"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "teacher_intervention_needed"
+      ]
+    },
+    {
+      "full_unit_id": "sample_survey_basic",
+      "unit_id": "sample_survey",
+      "sub_unit": "basic",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "easy",
+      "question_text": "次のア〜ウのうち、全数調査を行うべきものを1つ選びなさい。\nア：蛍光灯の寿命テスト\nイ：川の水質調査\nウ：クラスの出欠確認",
+      "diagram": null,
+      "correct_answer": "ウ",
+      "explanation_base": "出欠確認は全員の状態を知る必要があるため、全数調査を行います。蛍光灯の寿命テストや水質調査は、すべて調べると商品がなくなったり事実上不可能だったりするため標本調査を行います。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "advance_with_confidence"
+      ]
+    },
+    {
+      "full_unit_id": "sample_survey_basic",
+      "unit_id": "sample_survey",
+      "sub_unit": "basic",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "easy",
+      "question_text": "母集団から標本を選ぶとき、偏りがないように、どの対象も同じ確率で選ばれるようにすることを「何抽出」といいますか。",
+      "diagram": null,
+      "correct_answer": "無作為抽出",
+      "explanation_base": "標本が母集団の性質を正しく反映するように、偏りなくくじ引きや乱数表などを用いて抽出する方法を「無作為抽出」といいます。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "unknown_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "full_unit_id": "sample_survey_basic",
+      "unit_id": "sample_survey",
+      "sub_unit": "basic",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "easy",
+      "question_text": "ある学校の全校生徒800人から、コンピュータの乱数を用いて80人の生徒を無作為に抽出しました。このとき、抽出された80人の生徒の集まりのことを何といいますか。",
+      "diagram": null,
+      "correct_answer": "標本",
+      "explanation_base": "調査のために母集団（この場合は全校生徒800人）から抽出された一部の集まりを標本といいます。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "full_unit_id": "sample_survey_basic",
+      "unit_id": "sample_survey",
+      "sub_unit": "basic",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "normal",
+      "question_text": "ある箱の中に赤い玉と白い玉が合わせて400個入っています。ここから無作為に50個の玉を取り出したところ、赤い玉が15個含まれていました。この箱の中には、赤い玉はおよそ何個入っていると推測できますか。",
+      "diagram": null,
+      "correct_answer": "120個",
+      "explanation_base": "取り出した50個の中の赤い玉の割合は 15/50 = 3/10 です。箱の中の赤い玉の数もこれと同じ割合だと推測できるので、400 × (3/10) = 120個 となります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "reinforce_same_pattern",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "sample_survey_basic",
+      "unit_id": "sample_survey",
+      "sub_unit": "basic",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "normal",
+      "question_text": "ある工場で1日に製造される製品2000個の中から、100個を無作為に抽出して不良品を調べたところ、2個の不良品が見つかりました。この日に製造された2000個の製品のうち、不良品はおよそ何個含まれていると推測できますか。",
+      "diagram": null,
+      "correct_answer": "40個",
+      "explanation_base": "標本における不良品の割合は 2/100 です。これが母集団（2000個）でも同じ割合であると推測し、2000 × (2/100) = 40個 と計算します。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "reinforce_same_pattern",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "sample_survey_basic",
+      "unit_id": "sample_survey",
+      "sub_unit": "basic",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "normal",
+      "question_text": "ある地域に住む有権者50000人の中から、無作為に400人を抽出して支持する政党を調査したところ、A党を支持する人が120人いました。この地域の有権者の中で、A党を支持する人はおよそ何人と推測できますか。",
+      "diagram": null,
+      "correct_answer": "15000人",
+      "explanation_base": "標本の中でA党を支持する人の割合は 120/400 = 3/10 です。地域全体（50000人）でも同じ割合だと推測できるので、50000 × (3/10) = 15000人 となります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "explain_differently"
+      ]
+    },
+    {
+      "full_unit_id": "sample_survey_basic",
+      "unit_id": "sample_survey",
+      "sub_unit": "basic",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "normal",
+      "question_text": "ある本の中で使われている文字「の」の数を推測するために、全250ページの中から無作為に10ページを選び、「の」の数を数えたところ、合計で180個ありました。この本全体では、「の」の文字はおよそ何個使われていると推測できますか。",
+      "diagram": null,
+      "correct_answer": "4500個",
+      "explanation_base": "10ページあたりに180個あるので、1ページあたりの平均は 180 ÷ 10 = 18個 です。本全体は250ページあるので、18 × 250 = 4500個 と推測できます。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "sample_survey_basic",
+      "unit_id": "sample_survey",
+      "sub_unit": "basic",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "hard",
+      "question_text": "袋の中にたくさんの青玉が入っています。この袋の中に赤玉を100個入れてよく混ぜ、無作為に50個の玉を取り出すと、赤玉が10個含まれていました。はじめに袋に入っていた青玉はおよそ何個と推測できますか。",
+      "diagram": null,
+      "correct_answer": "400個",
+      "explanation_base": "取り出した50個のうち赤玉が10個なので、全体に対する赤玉の割合は 10/50 = 1/5 です。全体の玉の数をx個とすると、x × (1/5) = 100 となり、全体の玉は500個と推測できます。あとから入れた赤玉100個を引いて、青玉は 500 - 100 = 400個 となります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "comprehension_gap"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "teacher_intervention_needed"
+      ]
+    },
+    {
+      "full_unit_id": "sample_survey_basic",
+      "unit_id": "sample_survey",
+      "sub_unit": "basic",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "hard",
+      "question_text": "大きな池にいるコイの数を推測するために、80匹のコイを捕まえて背びれに印をつけ、池に戻しました。2週間後、再び池でコイを50匹捕まえたところ、印のついたコイが4匹いました。池全体のコイの数はおよそ何匹と推測できますか。",
+      "diagram": null,
+      "correct_answer": "1000匹",
+      "explanation_base": "捕まえた50匹のうち印がついているのは4匹なので、池全体に対する印のついたコイの割合は 4/50 = 2/25 と推測できます。池全体のコイの数をx匹とすると、x × (2/25) = 80 となり、x = 80 × 25/2 = 1000匹 となります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "explain_differently"
+      ]
+    },
+    {
+      "full_unit_id": "sample_survey_basic",
+      "unit_id": "sample_survey",
+      "sub_unit": "basic",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "hard",
+      "question_text": "袋の中に白玉だけがたくさん入っています。この袋から無作為に30個の玉を取り出し、すべてに印をつけてから袋に戻してよく混ぜました。再び無作為に40個の玉を取り出したところ、印のついた玉が6個含まれていました。袋の中の白玉はおよそ何個と推測できますか。",
+      "diagram": null,
+      "correct_answer": "200個",
+      "explanation_base": "2回目に取り出した40個のうち印がついていたのは6個なので、印のついた玉の割合は 6/40 = 3/20 と推測できます。袋の中の玉の総数をx個とすると、印のついた玉は最初にいれた30個なので、x × (3/20) = 30 となります。これを解くと x = 30 × 20/3 = 200個 となります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "comprehension_gap"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "teacher_intervention_needed"
+      ]
+    }
+  ]
+}

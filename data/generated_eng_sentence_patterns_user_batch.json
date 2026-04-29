@@ -1,0 +1,709 @@
+{
+  "problems": [
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_sentence_patterns",
+      "unit_id": "eng_sentence_patterns",
+      "sub_unit": "sentence_patterns",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "次の文の文型を答えなさい。\n「She gave him a present.」",
+      "correct_answer": "SVOO",
+      "hint_1": "「〜に〜を与える」は SVOO（主語・動詞・目的語・目的語）の文型です。",
+      "hint_2": "give + 人（O1） + もの（O2）= SVOO",
+      "explanation_base": "She gave him a present. → S(She)V(gave)O(him)O(a present) → SVOO",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_sentence_patterns",
+      "unit_id": "eng_sentence_patterns",
+      "sub_unit": "sentence_patterns",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "次の文の文型を答えなさい。\n「He sent me a letter.」",
+      "correct_answer": "SVOO",
+      "hint_1": "send + 人 + もの = SVOO の文型です。",
+      "hint_2": "S + V + O1(人) + O2(もの) の形。",
+      "explanation_base": "He sent me a letter. → SVOO",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_sentence_patterns",
+      "unit_id": "eng_sentence_patterns",
+      "sub_unit": "sentence_patterns",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "次の文の文型を答えなさい。\n「They call her Kate.」",
+      "correct_answer": "SVOC",
+      "hint_1": "「〜を…と呼ぶ」は SVOC（主語・動詞・目的語・補語）の文型です。",
+      "hint_2": "call + O + C（OとCは同じ人/ものを指す）",
+      "explanation_base": "They call her Kate. → S(They)V(call)O(her)C(Kate) → SVOC",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_sentence_patterns",
+      "unit_id": "eng_sentence_patterns",
+      "sub_unit": "sentence_patterns",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "次の文の文型を答えなさい。\n「We make her happy.」",
+      "correct_answer": "SVOC",
+      "hint_1": "make + O + C（OをCの状態にする）= SVOC",
+      "hint_2": "make + 人（O）+ 形容詞（C）= SVOC",
+      "explanation_base": "We make her happy. → SVOC",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_sentence_patterns",
+      "unit_id": "eng_sentence_patterns",
+      "sub_unit": "sentence_patterns",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に入る文型を答えなさい。\n「She told me the truth.」の文型は（　）です。",
+      "correct_answer": "SVOO",
+      "hint_1": "tell + 人 + こと = SVOO",
+      "hint_2": "S + V + O1(人) + O2(こと) の形。",
+      "explanation_base": "She told me the truth. → SVOO",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_sentence_patterns",
+      "unit_id": "eng_sentence_patterns",
+      "sub_unit": "sentence_patterns",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に正しい語句を入れなさい。（SVOOの文に）\n「She showed ( ) the picture.」\n※「彼女は私に写真を見せた。」",
+      "correct_answer": "me the picture",
+      "hint_1": "「〜に〜を見せる」は show + 人 + もの = SVOO。",
+      "hint_2": "show + 人(me) + もの(the picture) の順にします。",
+      "explanation_base": "She showed me the picture. → SVOO",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_sentence_patterns",
+      "unit_id": "eng_sentence_patterns",
+      "sub_unit": "sentence_patterns",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に正しい語句を入れなさい。（SVOCの文に）\n「The news made ( ) sad.」\n※「その知らせは彼らを悲しくさせた。」",
+      "correct_answer": "them sad",
+      "hint_1": "make + O + C（OをCの状態にする）= SVOC。",
+      "hint_2": "make + them（O） + sad（C）の順にします。",
+      "explanation_base": "The news made them sad. → SVOC",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_sentence_patterns",
+      "unit_id": "eng_sentence_patterns",
+      "sub_unit": "sentence_patterns",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "「My teacher gave me some advice.」をSVOOの別の形（to を使った形）に書き換えなさい。",
+      "correct_answer": "My teacher gave some advice to me.",
+      "hint_1": "SVOO → SVO + to + 人 の形に書き換えられます。",
+      "hint_2": "give + もの(O) + to + 人 の形にします。",
+      "explanation_base": "My teacher gave some advice to me.（to を使った書き換え）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_sentence_patterns",
+      "unit_id": "eng_sentence_patterns",
+      "sub_unit": "sentence_patterns",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "「She calls him Ken.」を日本語に訳しなさい。",
+      "correct_answer": "彼女は彼をケンと呼んでいます。",
+      "hint_1": "SVOC の文型です。call O C = 「OをCと呼ぶ」",
+      "hint_2": "call + O(him) + C(Ken)の意味を確認します。",
+      "explanation_base": "SVOC：She calls him Ken. → 「彼女は彼をケンと呼んでいます。」",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_sentence_patterns",
+      "unit_id": "eng_sentence_patterns",
+      "sub_unit": "sentence_patterns",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "「We found the movie interesting.」を日本語に訳しなさい。",
+      "correct_answer": "私たちはその映画がおもしろいとわかりました。",
+      "hint_1": "SVOC の文型です。find O C = 「OがCだとわかる」",
+      "hint_2": "find + O(the movie) + C(interesting)の意味を確認します。",
+      "explanation_base": "SVOC：We found the movie interesting. → 「私たちはその映画がおもしろいとわかりました。」",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_sentence_patterns",
+      "unit_id": "eng_sentence_patterns",
+      "sub_unit": "sentence_patterns",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。（SVOOの文で）\n「彼女は私にプレゼントをくれました。」",
+      "correct_answer": "She gave me a present.",
+      "hint_1": "give + 人(me) + もの(a present) = SVOO",
+      "hint_2": "She gave + 人 + もの の形にします。",
+      "explanation_base": "She gave me a present. → SVOO",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_sentence_patterns",
+      "unit_id": "eng_sentence_patterns",
+      "sub_unit": "sentence_patterns",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。（SVOCの文で）\n「その音楽が私を幸せにします。」",
+      "correct_answer": "The music makes me happy.",
+      "hint_1": "make + O + C（OをCの状態にする）= SVOC",
+      "hint_2": "The music makes + me(O) + happy(C) の形にします。",
+      "explanation_base": "The music makes me happy. → SVOC",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_sentence_patterns",
+      "unit_id": "eng_sentence_patterns",
+      "sub_unit": "sentence_patterns",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「彼らは彼女を先生と呼んでいます。」",
+      "correct_answer": "They call her their teacher.",
+      "hint_1": "call + O + C（OをCと呼ぶ）= SVOC",
+      "hint_2": "They call + her(O) + their teacher(C) の形にします。",
+      "explanation_base": "They call her their teacher. → SVOC",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_sentence_patterns",
+      "unit_id": "eng_sentence_patterns",
+      "sub_unit": "sentence_patterns",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。（SVOO to型）\n「彼は私に本を送ってくれました。」",
+      "correct_answer": "He sent a book to me.",
+      "hint_1": "send + もの + to + 人（SVOO のto型）",
+      "hint_2": "He sent + a book(O) + to me の形にします。",
+      "explanation_base": "He sent a book to me.（SVOO のto型）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_sentence_patterns",
+      "unit_id": "eng_sentence_patterns",
+      "sub_unit": "sentence_patterns",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「その知らせは彼女を悲しくさせました。」",
+      "correct_answer": "The news made her sad.",
+      "hint_1": "make + O + C（OをCの状態にする）= SVOC",
+      "hint_2": "The news made + her(O) + sad(C) の形にします。",
+      "explanation_base": "The news made her sad. → SVOC",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_sentence_patterns",
+      "unit_id": "eng_sentence_patterns",
+      "sub_unit": "sentence_patterns",
+      "problem_type": "mini_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "次の文の文型を答えなさい。\n「She bought him a gift.」",
+      "correct_answer": "SVOO",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "She bought him a gift. → SVOO",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_sentence_patterns"
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_sentence_patterns",
+      "unit_id": "eng_sentence_patterns",
+      "sub_unit": "sentence_patterns",
+      "problem_type": "mini_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "次の文の文型を答えなさい。\n「They named the dog Max.」",
+      "correct_answer": "SVOC",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "They named the dog Max. → SVOC（name O C）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_sentence_patterns"
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_sentence_patterns",
+      "unit_id": "eng_sentence_patterns",
+      "sub_unit": "sentence_patterns",
+      "problem_type": "mini_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。（SVOO）\n「彼女は彼に本を渡しました。」",
+      "correct_answer": "She handed him the book.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "She handed him the book. → SVOO",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_sentence_patterns"
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_sentence_patterns",
+      "unit_id": "eng_sentence_patterns",
+      "sub_unit": "sentence_patterns",
+      "problem_type": "mini_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。（SVOC）\n「私たちはその犬をポチと名付けました。」",
+      "correct_answer": "We named the dog Pochi.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "We named the dog Pochi. → SVOC",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_sentence_patterns"
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_sentence_patterns",
+      "unit_id": "eng_sentence_patterns",
+      "sub_unit": "sentence_patterns",
+      "problem_type": "mini_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "次の文の文型を答えなさい。\n「The coach kept us motivated.」",
+      "correct_answer": "SVOC",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "The coach kept us motivated. → SVOC（keep O C）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_sentence_patterns"
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_sentence_patterns",
+      "unit_id": "eng_sentence_patterns",
+      "sub_unit": "sentence_patterns",
+      "problem_type": "unit_test",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "次の文の文型を答えなさい。\n「He taught me math.」",
+      "correct_answer": "SVOO",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "He taught me math. → SVOO",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_sentence_patterns"
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_sentence_patterns",
+      "unit_id": "eng_sentence_patterns",
+      "sub_unit": "sentence_patterns",
+      "problem_type": "unit_test",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "次の文の文型を答えなさい。\n「She painted the wall white.」",
+      "correct_answer": "SVOC",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "She painted the wall white. → SVOC（paint O C）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_sentence_patterns"
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_sentence_patterns",
+      "unit_id": "eng_sentence_patterns",
+      "sub_unit": "sentence_patterns",
+      "problem_type": "unit_test",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "次の文の文型を答えなさい。\n「I asked her a question.」",
+      "correct_answer": "SVOO",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "I asked her a question. → SVOO",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_sentence_patterns"
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_sentence_patterns",
+      "unit_id": "eng_sentence_patterns",
+      "sub_unit": "sentence_patterns",
+      "problem_type": "unit_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。（SVOO）\n「彼は私に手紙を書いてくれました。」",
+      "correct_answer": "He wrote me a letter.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "He wrote me a letter. → SVOO",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_sentence_patterns"
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_sentence_patterns",
+      "unit_id": "eng_sentence_patterns",
+      "sub_unit": "sentence_patterns",
+      "problem_type": "unit_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。（SVOC）\n「みんなは彼を英雄と呼んでいます。」",
+      "correct_answer": "Everyone calls him a hero.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "Everyone calls him a hero. → SVOC",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_sentence_patterns"
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_sentence_patterns",
+      "unit_id": "eng_sentence_patterns",
+      "sub_unit": "sentence_patterns",
+      "problem_type": "unit_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "次の文をto型に書き換えなさい。\n「He gave me some money.」",
+      "correct_answer": "He gave some money to me.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "He gave some money to me.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_sentence_patterns"
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_sentence_patterns",
+      "unit_id": "eng_sentence_patterns",
+      "sub_unit": "sentence_patterns",
+      "problem_type": "unit_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。（SVOC）\n「彼女はその映画を退屈だと思いました。」",
+      "correct_answer": "She found the movie boring.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "She found the movie boring. → SVOC",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_sentence_patterns"
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_sentence_patterns",
+      "unit_id": "eng_sentence_patterns",
+      "sub_unit": "sentence_patterns",
+      "problem_type": "unit_test",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。（SVOO）\n「先生は私たちに宿題を出しました。」",
+      "correct_answer": "The teacher gave us homework.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "The teacher gave us homework. → SVOO",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_sentence_patterns"
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_sentence_patterns",
+      "unit_id": "eng_sentence_patterns",
+      "sub_unit": "sentence_patterns",
+      "problem_type": "unit_test",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。（SVOC）\n「その経験は彼女を強くしました。」",
+      "correct_answer": "The experience made her strong.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "The experience made her strong. → SVOC",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_sentence_patterns"
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_sentence_patterns",
+      "unit_id": "eng_sentence_patterns",
+      "sub_unit": "sentence_patterns",
+      "problem_type": "unit_test",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "次の文のOとCを答えなさい。\n「She kept the room clean.」",
+      "correct_answer": "O: the room, C: clean",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "keep O C → O: the room, C: clean",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_sentence_patterns"
+    }
+  ]
+}

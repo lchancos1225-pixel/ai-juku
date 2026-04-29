@@ -1,0 +1,709 @@
+{
+  "problems": [
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_relative_pronoun",
+      "unit_id": "eng_relative_pronoun",
+      "sub_unit": "relative_pronoun",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に正しい関係代名詞を入れなさい。\n「The boy ( ) is playing soccer is my brother.」",
+      "correct_answer": "who",
+      "hint_1": "先行詞が「人」の場合は who を使います。",
+      "hint_2": "The boy（人）なので who を使います。",
+      "explanation_base": "The boy who is playing soccer is my brother.（先行詞＝人→who）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_relative_pronoun",
+      "unit_id": "eng_relative_pronoun",
+      "sub_unit": "relative_pronoun",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に正しい関係代名詞を入れなさい。\n「I have a dog ( ) can run fast.」",
+      "correct_answer": "that",
+      "hint_1": "先行詞が「動物・物」の場合は which/that を使います。",
+      "hint_2": "a dog（動物）なので which または that が使えます。",
+      "explanation_base": "I have a dog that can run fast.（先行詞＝動物→that/which）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_relative_pronoun",
+      "unit_id": "eng_relative_pronoun",
+      "sub_unit": "relative_pronoun",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に正しい関係代名詞を入れなさい。\n「She is the woman ( ) helped me.」",
+      "correct_answer": "who",
+      "hint_1": "先行詞が「人」の場合は who を使います。",
+      "hint_2": "the woman（人）なので who を使います。",
+      "explanation_base": "She is the woman who helped me.（先行詞＝人→who）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_relative_pronoun",
+      "unit_id": "eng_relative_pronoun",
+      "sub_unit": "relative_pronoun",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に正しい関係代名詞を入れなさい。\n「This is the book ( ) I bought yesterday.」",
+      "correct_answer": "that",
+      "hint_1": "先行詞が「物」の場合は which/that を使います。",
+      "hint_2": "the book（物）なので that または which が使えます。",
+      "explanation_base": "This is the book that I bought yesterday.（先行詞＝物→that/which）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_relative_pronoun",
+      "unit_id": "eng_relative_pronoun",
+      "sub_unit": "relative_pronoun",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に正しい関係代名詞を入れなさい。\n「The car ( ) is parked there is mine.」",
+      "correct_answer": "that",
+      "hint_1": "先行詞が「物」の場合は which/that を使います。",
+      "hint_2": "The car（物）なので which または that が使えます。",
+      "explanation_base": "The car that is parked there is mine.（先行詞＝物→that/which）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_relative_pronoun",
+      "unit_id": "eng_relative_pronoun",
+      "sub_unit": "relative_pronoun",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "次の2文を関係代名詞でつなぎなさい。\n「I know a girl. She speaks French.」",
+      "correct_answer": "I know a girl who speaks French.",
+      "hint_1": "先行詞（a girl）が人なので who を使います。",
+      "hint_2": "I know a girl + who + speaks French の形にします。",
+      "explanation_base": "I know a girl who speaks French.（関係代名詞 who）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_relative_pronoun",
+      "unit_id": "eng_relative_pronoun",
+      "sub_unit": "relative_pronoun",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "次の2文を関係代名詞でつなぎなさい。\n「I have a book. It was written by Soseki.」",
+      "correct_answer": "I have a book that was written by Soseki.",
+      "hint_1": "先行詞（a book）が物なので that/which を使います。",
+      "hint_2": "I have a book + that + was written by Soseki の形にします。",
+      "explanation_base": "I have a book that was written by Soseki.（関係代名詞 that）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_relative_pronoun",
+      "unit_id": "eng_relative_pronoun",
+      "sub_unit": "relative_pronoun",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "次の2文を関係代名詞でつなぎなさい。\n「The man is my teacher. He taught me English.」",
+      "correct_answer": "The man who taught me English is my teacher.",
+      "hint_1": "先行詞（The man）が人なので who を使います。",
+      "hint_2": "The man + who + taught me English は my teacher の形にします。",
+      "explanation_base": "The man who taught me English is my teacher.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_relative_pronoun",
+      "unit_id": "eng_relative_pronoun",
+      "sub_unit": "relative_pronoun",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "次の2文を関係代名詞でつなぎなさい。\n「This is the song. I like it best.」",
+      "correct_answer": "This is the song that I like best.",
+      "hint_1": "先行詞（the song）が物なので that/which を使います。",
+      "hint_2": "This is the song + that + I like best の形にします。",
+      "explanation_base": "This is the song that I like best.（関係代名詞 that）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_relative_pronoun",
+      "unit_id": "eng_relative_pronoun",
+      "sub_unit": "relative_pronoun",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に正しい関係代名詞を入れなさい。\n「Is there anything ( ) I can do for you?」",
+      "correct_answer": "that",
+      "hint_1": "先行詞が anything（不特定のもの）の時は that を使います。",
+      "hint_2": "anything のような先行詞には that がよく使われます。",
+      "explanation_base": "Is there anything that I can do for you?（関係代名詞 that）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_relative_pronoun",
+      "unit_id": "eng_relative_pronoun",
+      "sub_unit": "relative_pronoun",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「あの背が高い男性が、私の父です。」",
+      "correct_answer": "The tall man who is standing there is my father.",
+      "hint_1": "先行詞が人なので who を使います。",
+      "hint_2": "The tall man + who + is standing there の形にします。",
+      "explanation_base": "The tall man who is standing there is my father.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_relative_pronoun",
+      "unit_id": "eng_relative_pronoun",
+      "sub_unit": "relative_pronoun",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「彼女は私に親切にしてくれた人です。」",
+      "correct_answer": "She is the person who was kind to me.",
+      "hint_1": "先行詞が人なので who を使います。",
+      "hint_2": "She is the person + who + was kind to me の形にします。",
+      "explanation_base": "She is the person who was kind to me.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_relative_pronoun",
+      "unit_id": "eng_relative_pronoun",
+      "sub_unit": "relative_pronoun",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「私が昨日読んだ本はとても面白かったです。」",
+      "correct_answer": "The book that I read yesterday was very interesting.",
+      "hint_1": "先行詞が物なので that/which を使います。",
+      "hint_2": "The book + that + I read yesterday の形にします。",
+      "explanation_base": "The book that I read yesterday was very interesting.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_relative_pronoun",
+      "unit_id": "eng_relative_pronoun",
+      "sub_unit": "relative_pronoun",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「彼が買った犬は毎日走ります。」",
+      "correct_answer": "The dog that he bought runs every day.",
+      "hint_1": "先行詞が動物なので that/which を使います。",
+      "hint_2": "The dog + that + he bought の形にします。",
+      "explanation_base": "The dog that he bought runs every day.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_relative_pronoun",
+      "unit_id": "eng_relative_pronoun",
+      "sub_unit": "relative_pronoun",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「私が訪れた国はとても美しかったです。」",
+      "correct_answer": "The country that I visited was very beautiful.",
+      "hint_1": "先行詞が物・場所なので that/which を使います。",
+      "hint_2": "The country + that + I visited の形にします。",
+      "explanation_base": "The country that I visited was very beautiful.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_relative_pronoun",
+      "unit_id": "eng_relative_pronoun",
+      "sub_unit": "relative_pronoun",
+      "problem_type": "mini_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に正しい関係代名詞を入れなさい。\n「The student ( ) won the prize is my friend.」",
+      "correct_answer": "who",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "The student who won the prize is my friend.（先行詞＝人→who）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_relative_pronoun"
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_relative_pronoun",
+      "unit_id": "eng_relative_pronoun",
+      "sub_unit": "relative_pronoun",
+      "problem_type": "mini_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に正しい関係代名詞を入れなさい。\n「I saw a bird ( ) could talk.」",
+      "correct_answer": "that",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "I saw a bird that could talk.（先行詞＝動物→that/which）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_relative_pronoun"
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_relative_pronoun",
+      "unit_id": "eng_relative_pronoun",
+      "sub_unit": "relative_pronoun",
+      "problem_type": "mini_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "次の2文を関係代名詞でつなぎなさい。\n「She is a nurse. She works at a hospital.」",
+      "correct_answer": "She is a nurse who works at a hospital.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "She is a nurse who works at a hospital.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_relative_pronoun"
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_relative_pronoun",
+      "unit_id": "eng_relative_pronoun",
+      "sub_unit": "relative_pronoun",
+      "problem_type": "mini_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に正しい関係代名詞を入れなさい。\n「This is the film ( ) everyone liked.」",
+      "correct_answer": "that",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "This is the film that everyone liked.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_relative_pronoun"
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_relative_pronoun",
+      "unit_id": "eng_relative_pronoun",
+      "sub_unit": "relative_pronoun",
+      "problem_type": "mini_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「彼が住んでいる家は大きいです。」",
+      "correct_answer": "The house that he lives in is big.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "The house that he lives in is big.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_relative_pronoun"
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_relative_pronoun",
+      "unit_id": "eng_relative_pronoun",
+      "sub_unit": "relative_pronoun",
+      "problem_type": "unit_test",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に正しい関係代名詞を入れなさい。\n「The teacher ( ) teaches me math is nice.」",
+      "correct_answer": "who",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "The teacher who teaches me math is nice.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_relative_pronoun"
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_relative_pronoun",
+      "unit_id": "eng_relative_pronoun",
+      "sub_unit": "relative_pronoun",
+      "problem_type": "unit_test",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に正しい関係代名詞を入れなさい。\n「I lost the key ( ) I found yesterday.」",
+      "correct_answer": "that",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "I lost the key that I found yesterday.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_relative_pronoun"
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_relative_pronoun",
+      "unit_id": "eng_relative_pronoun",
+      "sub_unit": "relative_pronoun",
+      "problem_type": "unit_test",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に正しい関係代名詞を入れなさい。\n「I want a dog ( ) doesn't bark.」",
+      "correct_answer": "that",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "I want a dog that doesn't bark.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_relative_pronoun"
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_relative_pronoun",
+      "unit_id": "eng_relative_pronoun",
+      "sub_unit": "relative_pronoun",
+      "problem_type": "unit_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "次の2文を関係代名詞でつなぎなさい。\n「She is a singer. She sings beautifully.」",
+      "correct_answer": "She is a singer who sings beautifully.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "She is a singer who sings beautifully.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_relative_pronoun"
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_relative_pronoun",
+      "unit_id": "eng_relative_pronoun",
+      "sub_unit": "relative_pronoun",
+      "problem_type": "unit_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "次の2文を関係代名詞でつなぎなさい。\n「This is a movie. Everyone loves it.」",
+      "correct_answer": "This is a movie that everyone loves.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "This is a movie that everyone loves.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_relative_pronoun"
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_relative_pronoun",
+      "unit_id": "eng_relative_pronoun",
+      "sub_unit": "relative_pronoun",
+      "problem_type": "unit_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「私が最も尊敬している人は私の母です。」",
+      "correct_answer": "The person that I respect most is my mother.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "The person that I respect most is my mother.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_relative_pronoun"
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_relative_pronoun",
+      "unit_id": "eng_relative_pronoun",
+      "sub_unit": "relative_pronoun",
+      "problem_type": "unit_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「彼は私が話していた男性です。」",
+      "correct_answer": "He is the man who I was talking about.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "He is the man who I was talking about.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_relative_pronoun"
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_relative_pronoun",
+      "unit_id": "eng_relative_pronoun",
+      "sub_unit": "relative_pronoun",
+      "problem_type": "unit_test",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「この写真は彼が5年前に撮ったものです。」",
+      "correct_answer": "This is the picture that he took five years ago.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "This is the picture that he took five years ago.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_relative_pronoun"
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_relative_pronoun",
+      "unit_id": "eng_relative_pronoun",
+      "sub_unit": "relative_pronoun",
+      "problem_type": "unit_test",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「私が好きな音楽のスタイルはジャズです。」",
+      "correct_answer": "The music style that I like is jazz.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "The music style that I like is jazz.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_relative_pronoun"
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_relative_pronoun",
+      "unit_id": "eng_relative_pronoun",
+      "sub_unit": "relative_pronoun",
+      "problem_type": "unit_test",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「彼女が発見した問題は非常に難しかったです。」",
+      "correct_answer": "The problem that she discovered was very difficult.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "The problem that she discovered was very difficult.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_relative_pronoun"
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="card test-result-screen">
+  <p class="section-label test-label">{{ scope_label }}</p>
+  <h2>テスト結果</h2>
+  <p class="test-unit-label">単元: {{ unit_labels.get(session.unit_id, session.unit_id) }}</p>
+  {% if time_expired %}
+  <p class="test-time-up-note">時間切れです</p>
+  {% endif %}
+  {% if wrong_count is defined and unanswered_count is defined %}
+  <p class="meta-note" style="margin:0 0 8px">不正解 {{ wrong_count }} / 未回答 {{ unanswered_count }}{% if defer_count %} / あとで解く操作 {{ defer_count }}回{% endif %}{% if time_limit_sec %} / 制限 {{ (time_limit_sec // 60) }}分{% endif %}{% if time_spent_sec is not none %} / 使用 {{ (time_spent_sec // 60) }}分{{ time_spent_sec % 60 }}秒{% endif %}</p>
+  {% endif %}
+
+  {# ---- スコア大表示 ---- #}
+  <div class="test-score-block test-score-block--{{ pass_status }}">
+    <div class="test-score-circle">
+      <span class="test-score-main">{{ score_correct }}</span>
+      <span class="test-score-sep">/</span>
+      <span class="test-score-total">{{ score_total }}</span>
+    </div>
+    <p class="test-score-percent">{{ percentage }}点</p>
+    <p class="test-score-message">{{ message }}</p>
+    <p class="test-score-message-sub">{{ message_en }}</p>
+  </div>
+
+  {# ---- 問題ごとのレビュー ---- #}
+  <section class="test-review">
+    <h3>問題レビュー</h3>
+    <div class="test-review-list">
+      {% for a in answers %}
+      <article class="test-review-item test-review-item--{% if a.answer_status == 'unanswered' %}unanswered{% elif a.is_correct %}correct{% else %}wrong{% endif %}">
+        <div class="test-review-item__header">
+          <span class="test-review-badge">{% if a.answer_status == 'unanswered' %}—{% elif a.is_correct %}○{% else %}×{% endif %}</span>
+          <span class="test-review-meta">難易度 Lv{{ a.difficulty }}</span>
+          {% if a.hint_used > 0 %}
+          <span class="test-review-hint-badge">H{{ a.hint_used }}</span>
+          {% endif %}
+        </div>
+        <p class="test-review-question">{{ a.question_text | render_math_text }}</p>
+        <div class="test-review-answers">
+          {% if a.answer_status == 'unanswered' %}
+          <span class="meta-note">未回答</span>
+          {% else %}
+          <span>あなたの答え: <strong class="result-answer-main">{{ a.submitted_main | render_math_text }}</strong>{% if a.submitted_aux %} <span class="result-answer-unit">単位: {{ a.submitted_aux }}</span>{% endif %}</span>
+          {% if not a.is_correct %}
+          <span class="test-review-correct">正答: <strong class="result-answer-main">{{ a.correct_main | render_math_text }}</strong>{% if a.correct_aux %} <span class="result-answer-unit">単位: {{ a.correct_aux }}</span>{% endif %}</span>
+          {% endif %}
+          {% endif %}
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </section>
+
+  {# ---- CTA ---- #}
+  <div class="test-cta-row">
+    <a class="primary-button" href="/students/{{ student.student_id }}">練習に戻る</a>
+    <a class="result-action-btn" href="/students/{{ student.student_id }}/progress">進みぐあいを見る</a>
+  </div>
+</section>
+{% endblock %}

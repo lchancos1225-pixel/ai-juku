@@ -1,0 +1,714 @@
+{% extends "base.html" %}
+{% block content %}
+
+{# ======================================================== 復習バナー ========================================================= #}
+<div class="student-top-bar">
+  <div class="student-top-bar__info">
+    <span class="student-top-bar__name">{{ student.display_name }} さん</span>
+    <span class="state-chip state-chip--review">🔁 復習モード</span>
+    <span class="state-chip">残り {{ review_remaining }}問</span>
+  </div>
+  <a class="progress-chip-btn" href="/students/{{ student.student_id }}">← ホームに戻る</a>
+</div>
+
+<section class="card test-mode-banner" style="border-color: var(--color-accent, #e67e22);">
+  <p class="section-label" style="color: var(--color-accent, #e67e22);">忘却曲線 復習</p>
+  <h2>間違えた問題をもう一度！</h2>
+  <p>一度苦手だった問題を復習して、記憶を定着させましょう。</p>
+</section>
+
+<section class="card problem-card">
+  <div class="problem-layout">
+    <div class="problem-main-col">
+      <p class="section-label">問題 {{ problem.problem_id }}</p>
+      <div class="problem-title-row">
+        <h3>{{ unit_labels.get(problem.full_unit_id or problem.unit, problem.full_unit_id or problem.unit) }} / 難易度 {{ problem.difficulty }}</h3>
+        <a class="btn--ai-teacher" href="/students/{{ student.student_id }}/lecture/{{ problem.full_unit_id or problem.unit }}">✨🤖 AI先生教えて！</a>
+      </div>
+
+      {% if problem.subject == 'english' %}
+      {% set eng_chars = ['eruf.svg', 'doafu.svg', 'jyujin.png', 'majic.png', 'mein.png', 'naito.png'] %}
+      {% set char_name = eng_chars | random %}
+      <div class="eng-char-scene">
+        <img src="/static/characters/{{ char_name }}" class="eng-talk-char" alt="{{ char_name }}" aria-hidden="true">
+        <div class="eng-speech-bubble">
+          {% if problem.answer_type == 'sort' %}
+          {{ problem.question_text | replace('\n', '<br>') | safe }}
+          {% else %}
+          {{ problem.question_text | render_math_text }}
+          {% endif %}
+        </div>
+      </div>
+      {% else %}
+      {% if use_math_answer_panel and question_slots_html %}
+      <div class="question-text question-text--with-slots">{{ question_slots_html | safe }}</div>
+      {% else %}
+      <p class="question-text">{{ problem.question_text | render_math_text }}</p>
+      {% endif %}
+      {% endif %}
+
+      {% if diagram_svg %}
+      <section class="problem-diagram-block" aria-labelledby="problem-diagram-title">
+        <p class="section-label">図</p>
+        <h4 id="problem-diagram-title" class="problem-diagram-title">{{ diagram_display.section_title if diagram_display else "問題の図" }}</h4>
+        {% if diagram_display and diagram_display.display_name %}
+        <p class="meta-note problem-diagram-subtitle">{{ diagram_display.display_name }}</p>
+        {% endif %}
+        <div class="problem-diagram-frame">
+          {{ diagram_svg | safe }}
+        </div>
+      </section>
+      {% endif %}
+
+      <form method="post" action="/students/{{ student.student_id }}/submit" class="answer-form" id="answer-form">
+        <input type="hidden" name="problem_id" value="{{ problem.problem_id }}">
+        <input type="number" name="elapsed_sec" value="0" hidden>
+        <input type="hidden" name="hint_used" value="0">
+        <input type="hidden" name="canvas_image" id="canvas-image-field" value="">
+        <input type="hidden" name="review_mode" value="1">
+
+        {# ===== 4択選択式 ===== #}
+        {% if problem.answer_type == 'choice' %}
+        <input type="hidden" name="answer" id="answer" value="">
+        {% set choice_list = problem.choices | from_json %}
+        <div class="eng-choice-grid" role="group" aria-label="選択肢">
+          {% for ch in choice_list %}
+          <button type="button" class="eng-choice-btn"
+            onclick="selectChoice(this,'{{ ch | e }}')"
+            aria-pressed="false">{{ ch }}</button>
+          {% endfor %}
+        </div>
+        <p class="eng-choice-selected" id="eng-choice-label">選択してください</p>
+        <button type="submit" class="submit-answer-btn" id="submit-btn" disabled>答えを送る →</button>
+
+        {# ===== 語順並び替え ===== #}
+        {% elif problem.answer_type == 'sort' %}
+        <input type="hidden" name="answer" id="answer" value="">
+        <p class="eng-sort-guide">単語をタップして正しい順に並べてください</p>
+        <div class="eng-sort-pool" id="sort-pool"><!-- JS で生成 --></div>
+        <div class="eng-sort-answer" id="sort-answer">
+          <span class="eng-sort-placeholder" id="sort-placeholder">ここに並べる</span>
+        </div>
+        <div class="eng-sort-actions">
+              <button type="button" class="btn btn--ghost" onclick="resetSort()" aria-label="並び替えをリセット">↩ やり直し</button>
+        </div>
+        <button type="submit" class="submit-answer-btn" id="submit-btn" disabled>答えを送る →</button>
+        <script>
+        (function() {
+          const choices = {{ problem.choices | safe }};
+          const pool = document.getElementById('sort-pool');
+          const ans = document.getElementById('sort-answer');
+          const placeholder = document.getElementById('sort-placeholder');
+          const hiddenAnswer = document.getElementById('answer');
+          const submitBtn = document.getElementById('submit-btn');
+          let selected = [];
+
+          function renderPool() {
+            pool.innerHTML = '';
+            choices.forEach((word, i) => {
+              if (selected.includes(i)) return;
+              const t = document.createElement('button');
+              t.type = 'button';
+              t.className = 'eng-word-tile';
+              t.textContent = word;
+              t.onclick = () => { selected.push(i); refresh(); };
+              pool.appendChild(t);
+            });
+          }
+
+          function renderAnswer() {
+            ans.querySelectorAll('.eng-word-tile').forEach(el => el.remove());
+            placeholder.style.display = selected.length ? 'none' : '';
+            selected.forEach((idx, pos) => {
+              const t = document.createElement('button');
+              t.type = 'button';
+              t.className = 'eng-word-tile eng-word-tile--selected';
+              t.textContent = choices[idx];
+              t.onclick = () => { selected.splice(pos, 1); refresh(); };
+              ans.appendChild(t);
+            });
+            const words = selected.map(i => choices[i]);
+            hiddenAnswer.value = words.join(' ');
+            submitBtn.disabled = selected.length !== choices.length;
+          }
+
+          function refresh() { renderPool(); renderAnswer(); }
+
+          window.resetSort = function() { selected = []; refresh(); };
+          refresh();
+        })();
+        </script>
+
+        {# math structured answer panel #}
+        {% elif use_math_answer_panel %}
+        <input type="hidden" name="answer" id="answer" value="">
+        <script type="application/json" id="answer-blanks-spec">{{ answer_blanks_json | safe }}</script>
+        <div class="student-answer-workspace">
+          <div class="student-input-panel" id="student-input-panel">
+            <div class="student-fraction-editor" id="fraction-editor" hidden>
+              <div class="student-fraction-editor__heading">分数</div>
+              <div class="student-frac-input" id="frac-input-visual">
+                <div class="student-frac-input__row student-frac-input__row--num is-focused" id="frac-row-num" data-frac-part="num">
+                  <span class="student-frac-input__value" id="frac-disp-num"></span>
+                </div>
+                <div class="student-frac-input__bar"></div>
+                <div class="student-frac-input__row student-frac-input__row--den" id="frac-row-den" data-frac-part="den">
+                  <span class="student-frac-input__value" id="frac-disp-den"></span>
+                </div>
+              </div>
+              <div class="student-fraction-editor__nav">
+                <button type="button" class="hw-btn" id="frac-focus-num">上段</button>
+                <button type="button" class="hw-btn" id="frac-focus-den">下段</button>
+              </div>
+            </div>
+            <div class="student-keypad" id="student-keypad"></div>
+          </div>
+          <button type="submit" class="submit-answer-btn" id="submit-btn">✅ 答えを送る</button>
+        </div>
+        {# ===== デフォルト: テキスト/数値（英語・フォールバック） ===== #}
+        {% else %}
+        <label for="answer">答えを入力</label>
+        <input id="answer" name="answer" type="text" inputmode="text" autocomplete="off" placeholder="ここに入力" required>
+        <button type="submit" class="submit-answer-btn">✅ 答えを送る</button>
+        {% endif %}
+
+      </form>
+
+      <div class="hint-panel hint-panel--compact hint-panel--inline">
+        <div class="hint-header-row">
+          <span class="section-label">ヒント</span>
+          <span class="hint-subtext">必要なときだけ開こう</span>
+        </div>
+        <div class="hint-toggle-row">
+          <button type="button" class="btn btn--hint hint-toggle-button" data-target="hint-1-block" data-hint-level="1" aria-label="ヒントレベル1を表示">Hint 1 を見る</button>
+          {% if problem.hint_2 %}
+          <button type="button" class="btn btn--hint hint-toggle-button" data-target="hint-2-block" data-hint-level="2" aria-label="ヒントレベル2を表示">Hint 2 を見る</button>
+          {% endif %}
+        </div>
+        <div id="hint-1-block" class="hint-reveal" hidden>
+          <p class="hint-step">Hint 1</p>
+          <p class="hint-text">{{ (problem.hint_1 or problem.hint_text or "この問題にはヒントがありません。") | render_math_text }}</p>
+        </div>
+        {% if problem.hint_2 %}
+        <div id="hint-2-block" class="hint-reveal" hidden>
+          <p class="hint-step">Hint 2</p>
+          <p class="hint-text">{{ problem.hint_2 | render_math_text }}</p>
+        </div>
+        {% endif %}
+      </div>
+
+    </div>
+    <aside class="problem-hint-col">
+      <section class="handwriting-panel handwriting-panel--side handwriting-panel--fullcol" aria-labelledby="handwriting-title">
+        <div class="hint-header-row">
+          <span class="section-label" id="handwriting-title">手書きメモ</span>
+          <span class="hint-subtext hw-subtext">途中式・考え方メモ（採点に使いません）</span>
+        </div>
+        <div class="handwriting-toolbar handwriting-toolbar--compact">
+          <button type="button" id="pen-tool" class="hw-btn active">ペン</button>
+          <button type="button" id="eraser-tool" class="hw-btn">消しゴム</button>
+          <button type="button" id="clear-canvas" class="hw-btn">クリア</button>
+          <button type="button" id="ocr-canvas" class="hw-btn hw-btn--ocr-secondary">文字認識（任意）</button>
+        </div>
+        <div class="hw-canvas-wrap hw-canvas-wrap--memo-only">
+          <canvas id="draw" class="handwriting-canvas" aria-label="手書きメモ"></canvas>
+        </div>
+        <p id="handwriting-status" class="handwriting-status" hidden></p>
+        <div id="ocr-preview" class="ocr-preview" hidden></div>
+      </section>
+    </aside>
+  </div>
+</section>
+
+<script>
+  (() => {
+    const canvas = document.getElementById("draw");
+    const answerInput = document.getElementById("answer");
+    const status = document.getElementById("handwriting-status");
+    const penButton = document.getElementById("pen-tool");
+    const eraserButton = document.getElementById("eraser-tool");
+    const clearButton = document.getElementById("clear-canvas");
+    const ocrButton = document.getElementById("ocr-canvas");
+    const preview = document.getElementById("ocr-preview");
+    if (!canvas || !answerInput) return;
+
+    const ctx = canvas.getContext("2d");
+    let drawing = false;
+    let hasStroke = false;
+
+    function resizeCanvas() {
+      const ratio = window.devicePixelRatio || 1;
+      const rect = canvas.getBoundingClientRect();
+      canvas.width = rect.width * ratio;
+      canvas.height = rect.height * ratio;
+      ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
+      ctx.lineCap = "round";
+      ctx.lineJoin = "round";
+      ctx.strokeStyle = "#1f4f85";
+      ctx.lineWidth = 4;
+    }
+
+    function setMode(mode) {
+      penButton.classList.toggle("active", mode === "pen");
+      eraserButton.classList.toggle("active", mode === "eraser");
+      ctx.globalCompositeOperation = mode === "eraser" ? "destination-out" : "source-over";
+      ctx.strokeStyle = "#1f4f85";
+      ctx.lineWidth = mode === "eraser" ? 18 : 4;
+    }
+
+    function getPoint(event) {
+      const rect = canvas.getBoundingClientRect();
+      const source = event.touches ? event.touches[0] : event;
+      return { x: source.clientX - rect.left, y: source.clientY - rect.top };
+    }
+
+    function start(event) {
+      event.preventDefault();
+      const point = getPoint(event);
+      drawing = true;
+      hasStroke = true;
+      ctx.beginPath();
+      ctx.moveTo(point.x, point.y);
+    }
+
+    function move(event) {
+      if (!drawing) return;
+      event.preventDefault();
+      const point = getPoint(event);
+      ctx.lineTo(point.x, point.y);
+      ctx.stroke();
+    }
+
+    function end(event) {
+      if (!drawing) return;
+      event.preventDefault();
+      drawing = false;
+      ctx.closePath();
+    }
+
+    function clearCanvas() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      hasStroke = false;
+      preview.hidden = true;
+      preview.textContent = "";
+      status.textContent = "キャンバスをクリアしました。";
+    }
+
+
+    async function runOcr() {
+      if (!hasStroke) {
+        status.textContent = "\u307e\u3060\u624b\u66f8\u304d\u304c\u3042\u308a\u307e\u305b\u3093\u3002";
+        return;
+      }
+      status.textContent = "OCR \u3092\u5b9f\u884c\u3057\u3066\u3044\u307e\u3059\u2026";
+      ocrButton.disabled = true;
+      const structured = document.getElementById("answer-blanks-spec");
+      try {
+        const imageDataUrl = canvas.toDataURL("image/png");
+        const response = await fetch(`/students/{{ student.student_id }}/ocr`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ image_data_url: imageDataUrl }),
+        });
+        const payload = await response.json();
+        if (payload.recognized_text) {
+          preview.hidden = false;
+          preview.textContent = "OCR\u7d50\u679c\uff08\u53c2\u8003\uff09: " + payload.recognized_text;
+          if (!structured) {
+            answerInput.value = payload.recognized_text;
+            status.textContent =
+              "OCR\u7d50\u679c\u3092\u5165\u529b\u6b04\u3078\u53cd\u6620\u3057\u307e\u3057\u305f\u3002\u5fc5\u8981\u306a\u3089\u4fee\u6b63\u3057\u3066\u9001\u4fe1\u3057\u3066\u304f\u3060\u3055\u3044\u3002";
+          } else {
+            status.textContent =
+              "\u7b54\u3048\u306f\u4e0b\u306e\u5165\u529b\u30d1\u30cd\u30eb\u3067\u78ba\u5b9a\u3057\u3066\u304f\u3060\u3055\u3044\u3002OCR\u306f\u53c2\u8003\u3067\u3059\u3002";
+          }
+        } else {
+          preview.hidden = false;
+          const errorMessages = {
+            no_api_key: "OCR \u7528\u306e API \u30ad\u30fc\u304c\u672a\u8a2d\u5b9a\u3067\u3059\u3002.env \u306b GITHUB_TOKEN \u3092\u8a2d\u5b9a\u3057\u3066\u304f\u3060\u3055\u3044\u3002",
+            no_ocr_backend: "OCR \u30a8\u30f3\u30b8\u30f3\u304c\u672a\u8a2d\u5b9a\u3067\u3059\u3002",
+            ai_vision_failed: "AI Vision \u3067\u8a8d\u8b58\u3067\u304d\u307e\u305b\u3093\u3067\u3057\u305f\u3002",
+            recognition_failed: "\u8a8d\u8b58\u3067\u304d\u307e\u305b\u3093\u3067\u3057\u305f\u3002",
+          };
+          const msg = errorMessages[payload.error] || "\u8a8d\u8b58\u3067\u304d\u307e\u305b\u3093\u3067\u3057\u305f\u3002";
+          preview.textContent = "OCR: " + msg;
+          status.textContent = msg;
+        }
+      } catch (error) {
+        preview.hidden = false;
+        preview.textContent = "OCR\u7d50\u679c: \u5931\u6557";
+        status.textContent = "OCR\u306b\u5931\u6557\u3057\u307e\u3057\u305f\u3002";
+      } finally {
+        ocrButton.disabled = false;
+      }
+    }
+
+    resizeCanvas();
+    setMode("pen");
+    window.addEventListener("resize", resizeCanvas);
+    canvas.addEventListener("mousedown", start);
+    canvas.addEventListener("mousemove", move);
+    canvas.addEventListener("mouseup", end);
+    canvas.addEventListener("mouseleave", end);
+    canvas.addEventListener("touchstart", start, { passive: false });
+    canvas.addEventListener("touchmove", move, { passive: false });
+    canvas.addEventListener("touchend", end, { passive: false });
+    penButton.addEventListener("click", () => setMode("pen"));
+    eraserButton.addEventListener("click", () => setMode("eraser"));
+    clearButton.addEventListener("click", clearCanvas);
+    ocrButton.addEventListener("click", runOcr);
+
+    // 送信時にキャンバス画像を hidden field にセット
+    const answerForm = document.getElementById("answer-form");
+    const canvasImageField = document.getElementById("canvas-image-field");
+    if (answerForm) {
+      answerForm.addEventListener("submit", () => {
+        if (hasStroke) {
+          canvasImageField.value = canvas.toDataURL("image/png", 0.6);
+        }
+      });
+    }
+
+    const hintUsedField = document.querySelector('input[name="hint_used"]');
+    document.querySelectorAll(".hint-toggle-button").forEach((button) => {
+      button.addEventListener("click", () => {
+        const target = document.getElementById(button.dataset.target);
+        if (!target) return;
+        target.hidden = false;
+        button.disabled = true;
+        // ヒントを開いたらhint_usedを更新（最大値を保持）
+        if (hintUsedField && button.dataset.hintLevel) {
+          const level = parseInt(button.dataset.hintLevel, 10);
+          const current = parseInt(hintUsedField.value, 10) || 0;
+          if (level > current) hintUsedField.value = level;
+        }
+      });
+    });
+
+  (() => {
+    const specEl = document.getElementById("answer-blanks-spec");
+    if (!specEl) return;
+    const MULTI = "@@@";
+    let blanks;
+    try {
+      blanks = JSON.parse(specEl.textContent || "[]");
+    } catch (e) {
+      return;
+    }
+    if (!blanks.length) return;
+
+    const answerField = document.getElementById("answer");
+    const keypad = document.getElementById("student-keypad");
+    const fractionEditor = document.getElementById("fraction-editor");
+    const fracRowNum = document.getElementById("frac-row-num");
+    const fracRowDen = document.getElementById("frac-row-den");
+    const fracDispNum = document.getElementById("frac-disp-num");
+    const fracDispDen = document.getElementById("frac-disp-den");
+    const answerForm = document.getElementById("answer-form");
+
+    let activeIdx = 0;
+    let fracFocus = "num";
+    let fracDraft = { num: "", den: "" };
+    const valueById = {};
+    blanks.forEach((b) => {
+      valueById[b.id] = "";
+    });
+
+    function escapeHtml(s) {
+      return String(s)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;");
+    }
+
+    function activeBlank() {
+      return blanks[activeIdx];
+    }
+
+    function syncAnswerField() {
+      answerField.value = blanks.map((b) => valueById[b.id] || "").join(MULTI);
+    }
+
+    function fracVerticalHtml(num, den) {
+      const n = escapeHtml(num || " ");
+      const d = escapeHtml(den || " ");
+      return (
+        '<span class="math-frac" aria-label="' +
+        escapeHtml((num || "") + "/" + (den || "")) +
+        '"><span class="math-frac-top">' +
+        n +
+        '</span><span class="math-frac-bar"></span><span class="math-frac-bottom">' +
+        d +
+        "</span></span>"
+      );
+    }
+
+    function studentEmptySlotCaption(b) {
+      if (b.student_token_in_question && b.student_token) {
+        return "\uff08" + b.student_token + "\uff09";
+      }
+      if (blanks.length === 1) return "\uff08\u7b54\u3048\uff09";
+      return "\uff08\u5165\u529b\uff09";
+    }
+
+    function renderSlotInner(b) {
+      const raw = valueById[b.id] || "";
+      const body = document.querySelector(
+        '.answer-blank-slot[data-blank-id="' + b.id + '"] .answer-blank-slot__body'
+      );
+      if (!body) return;
+      if (!raw) {
+        body.className = "answer-blank-slot__body answer-blank-slot__body--empty";
+        body.textContent = studentEmptySlotCaption(b);
+        return;
+      }
+      body.className = "answer-blank-slot__body";
+      if (b.input_mode === "fraction" && raw.includes("/")) {
+        const idx = raw.indexOf("/");
+        const n = raw.slice(0, idx);
+        const d = raw.slice(idx + 1);
+        body.innerHTML = fracVerticalHtml(n, d);
+      } else {
+        body.textContent = raw;
+      }
+    }
+
+    function renderAllSlots() {
+      blanks.forEach(renderSlotInner);
+    }
+
+    function loadFracDraftFromValue() {
+      const b = activeBlank();
+      const v = valueById[b.id] || "";
+      if (!v) {
+        fracDraft = { num: "", den: "" };
+        return;
+      }
+      const i = v.indexOf("/");
+      if (i === -1) {
+        fracDraft = { num: v, den: "" };
+      } else {
+        fracDraft = { num: v.slice(0, i), den: v.slice(i + 1) };
+      }
+    }
+
+    function commitFraction() {
+      const b = activeBlank();
+      if (b.input_mode !== "fraction") return;
+      valueById[b.id] = fracDraft.num + "/" + fracDraft.den;
+      if (valueById[b.id] === "/") valueById[b.id] = "";
+      syncAnswerField();
+      renderSlotInner(b);
+    }
+
+    function refreshFracDisp() {
+      fracDispNum.textContent = fracDraft.num || "";
+      fracDispDen.textContent = fracDraft.den || "";
+      fracRowNum.classList.toggle("is-focused", fracFocus === "num");
+      fracRowDen.classList.toggle("is-focused", fracFocus === "den");
+      fracRowNum.classList.toggle("is-dim", fracFocus === "den");
+      fracRowDen.classList.toggle("is-dim", fracFocus === "num");
+    }
+
+    function renderFractionEditor() {
+      const b = activeBlank();
+      if (b.input_mode !== "fraction") {
+        fractionEditor.hidden = true;
+        return;
+      }
+      fractionEditor.hidden = false;
+      loadFracDraftFromValue();
+      fracFocus = "num";
+      refreshFracDisp();
+    }
+
+    function highlightSlots() {
+      document.querySelectorAll(".answer-blank-slot").forEach((el) => {
+        el.classList.toggle("is-active", el.dataset.blankId === activeBlank().id);
+      });
+    }
+
+    function appendToCurrent(ch) {
+      const b = activeBlank();
+      if (b.input_mode === "fraction") {
+        if (ch === "-" && fracFocus === "den") return;
+        if (fracFocus === "num") fracDraft.num += ch;
+        else fracDraft.den += ch;
+        commitFraction();
+        refreshFracDisp();
+        return;
+      }
+      valueById[b.id] = (valueById[b.id] || "") + ch;
+      syncAnswerField();
+      renderSlotInner(b);
+    }
+
+    function backspace() {
+      const b = activeBlank();
+      if (b.input_mode === "fraction") {
+        if (fracFocus === "num") fracDraft.num = fracDraft.num.slice(0, -1);
+        else fracDraft.den = fracDraft.den.slice(0, -1);
+        commitFraction();
+        refreshFracDisp();
+        return;
+      }
+      const s = valueById[b.id] || "";
+      valueById[b.id] = s.slice(0, -1);
+      syncAnswerField();
+      renderSlotInner(b);
+    }
+
+    function makeKey(label, onClick, wide) {
+      const btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "student-keypad__key" + (wide ? " student-keypad__key--wide" : "");
+      btn.textContent = label;
+      btn.addEventListener("click", onClick);
+      return btn;
+    }
+
+    function renderKeypad() {
+      keypad.innerHTML = "";
+      const b = activeBlank();
+      const mode = b.input_mode;
+      const addRow = (keys) => {
+        const row = document.createElement("div");
+        row.className = "student-keypad__row";
+        keys.forEach((k) => row.appendChild(k));
+        keypad.appendChild(row);
+      };
+
+      if (mode === "numeric") {
+        const nums = ["7", "8", "9", "4", "5", "6", "1", "2", "3"];
+        for (let r = 0; r < 3; r++) {
+          const rowKeys = [];
+          for (let c = 0; c < 3; c++) {
+            const d = nums[r * 3 + c];
+            rowKeys.push(makeKey(d, () => appendToCurrent(d), false));
+          }
+          addRow(rowKeys);
+        }
+        addRow([
+          makeKey("-", () => appendToCurrent("-"), false),
+          makeKey("0", () => appendToCurrent("0"), false),
+          makeKey(".", () => appendToCurrent("."), false),
+        ]);
+        addRow([makeKey("\u232b", backspace, true)]);
+      } else if (mode === "expression") {
+        const nums = ["7", "8", "9", "4", "5", "6", "1", "2", "3"];
+        for (let r = 0; r < 3; r++) {
+          const rowKeys = [];
+          for (let c = 0; c < 3; c++) {
+            const d = nums[r * 3 + c];
+            rowKeys.push(makeKey(d, () => appendToCurrent(d), false));
+          }
+          addRow(rowKeys);
+        }
+        addRow([
+          makeKey("0", () => appendToCurrent("0"), false),
+          makeKey("x", () => appendToCurrent("x"), false),
+          makeKey("a", () => appendToCurrent("a"), false),
+        ]);
+        addRow([
+          makeKey("(", () => appendToCurrent("("), false),
+          makeKey(")", () => appendToCurrent(")"), false),
+          makeKey("^", () => appendToCurrent("^"), false),
+        ]);
+        addRow([
+          makeKey("-", () => appendToCurrent("-"), false),
+          makeKey("x\u00b2", () => appendToCurrent("x^2"), false),
+          makeKey("a\u00b2", () => appendToCurrent("a^2"), false),
+        ]);
+        addRow([makeKey("\u232b", backspace, true)]);
+      } else if (mode === "fraction") {
+        const nums = ["7", "8", "9", "4", "5", "6", "1", "2", "3"];
+        for (let r = 0; r < 3; r++) {
+          const rowKeys = [];
+          for (let c = 0; c < 3; c++) {
+            const d = nums[r * 3 + c];
+            rowKeys.push(makeKey(d, () => appendToCurrent(d), false));
+          }
+          addRow(rowKeys);
+        }
+        addRow([
+          makeKey("-", () => appendToCurrent("-"), false),
+          makeKey("0", () => appendToCurrent("0"), false),
+          makeKey("\u5206\u6570", () => {
+            fracDraft = { num: "", den: "" };
+            fracFocus = "num";
+            commitFraction();
+            refreshFracDisp();
+          }, false),
+        ]);
+        addRow([makeKey("\u232b", backspace, true)]);
+      }
+    }
+
+    function setActiveIndex(i) {
+      if (i < 0 || i >= blanks.length) return;
+      if (activeBlank().input_mode === "fraction") {
+        commitFraction();
+      }
+      activeIdx = i;
+      renderKeypad();
+      renderFractionEditor();
+      highlightSlots();
+    }
+
+    document.querySelectorAll(".answer-blank-slot").forEach((el) => {
+      el.addEventListener("click", () =>
+        setActiveIndex(blanks.findIndex((b) => b.id === el.dataset.blankId))
+      );
+    });
+
+    document.getElementById("frac-focus-num").addEventListener("click", () => {
+      fracFocus = "num";
+      refreshFracDisp();
+    });
+    document.getElementById("frac-focus-den").addEventListener("click", () => {
+      fracFocus = "den";
+      refreshFracDisp();
+    });
+
+    if (answerForm) {
+      answerForm.addEventListener("submit", (e) => {
+        for (const b of blanks) {
+          if (!(valueById[b.id] || "").trim()) {
+            e.preventDefault();
+            alert(
+              "\u3059\u3079\u3066\u306e\u7a7a\u6b04\u306b\u7b54\u3048\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044\u3002"
+            );
+            setActiveIndex(blanks.findIndex((x) => x.id === b.id));
+            return;
+          }
+        }
+        syncAnswerField();
+      });
+    }
+
+    setActiveIndex(0);
+    syncAnswerField();
+    renderAllSlots();
+  })();
+
+  })();
+</script>
+
+{% if problem.answer_type == 'choice' %}
+<script>
+function selectChoice(btn, value) {
+  document.querySelectorAll('.eng-choice-btn').forEach(b => {
+    b.classList.remove('eng-choice-btn--selected');
+    b.setAttribute('aria-pressed', 'false');
+  });
+  btn.classList.add('eng-choice-btn--selected');
+  btn.setAttribute('aria-pressed', 'true');
+  document.getElementById('answer').value = value;
+  document.getElementById('eng-choice-label').textContent = '選択中: ' + value;
+  document.getElementById('submit-btn').disabled = false;
+}
+</script>
+{% endif %}
+
+{% endblock %}

@@ -1,0 +1,152 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="card problem-list-page">
+  <p class="section-label">教材管理</p>
+  <h2>AI生成問題 — 承認キュー</h2>
+  <p class="meta-note">AI が生成した問題を確認し、承認または却下してください。承認された問題のみ生徒に出題されます。</p>
+
+  <div class="approval-queue-nav">
+    <a href="/teachers/problems" class="secondary-link">← 問題一覧に戻る</a>
+  </div>
+
+  {% if pending_problems %}
+  <p class="approval-queue-count">承認待ち: <strong>{{ pending_problems | length }} 件</strong></p>
+
+  <div class="approval-queue-list">
+    {% for problem in pending_problems %}
+    {% set unit_name = full_unit_labels.get(problem.full_unit_id, unit_labels.get(problem.unit, problem.unit)) %}
+    {% set diff_label = {1: 'easy', 2: 'normal', 3: 'hard'}.get(problem.difficulty, '?') %}
+    <article class="approval-card" id="card-{{ problem.problem_id }}">
+      <div class="approval-card-header">
+        <span class="approval-card-unit">{{ unit_name }}</span>
+        <span class="approval-card-diff approval-diff-{{ diff_label }}">{{ diff_label }}</span>
+        <span class="approval-card-id">#{{ problem.problem_id }}</span>
+      </div>
+
+      <div class="approval-card-question">{{ problem.question_text }}</div>
+
+      <div class="approval-card-meta">
+        <div><span class="approval-label">正解</span> <code>{{ problem.correct_answer }}</code></div>
+        {% if problem.hint_1 %}
+        <div><span class="approval-label">ヒント1</span> {{ problem.hint_1 }}</div>
+        {% endif %}
+        {% if problem.hint_2 %}
+        <div><span class="approval-label">ヒント2</span> {{ problem.hint_2 }}</div>
+        {% endif %}
+        {% if problem.explanation_base %}
+        <div><span class="approval-label">解説</span> {{ problem.explanation_base }}</div>
+        {% endif %}
+      </div>
+
+      <div class="approval-card-actions">
+        <button class="approval-btn approve-btn" onclick="approveReject({{ problem.problem_id }}, 'approve')">
+          ✓ 承認して出題する
+        </button>
+        <button class="approval-btn reject-btn" onclick="approveReject({{ problem.problem_id }}, 'reject')">
+          ✗ 却下
+        </button>
+        <a class="approval-btn preview-btn" href="/teachers/problems/{{ problem.problem_id }}/preview" target="_blank">
+          プレビュー
+        </a>
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+
+  <div class="approval-bulk-actions">
+    <button class="approval-btn approve-btn" onclick="approveAll()">すべて承認</button>
+  </div>
+
+  {% else %}
+  <div class="approval-empty">
+    <p>承認待ちの問題はありません。</p>
+    <p class="meta-note">ノートブックで問題を生成して import_problems.py を実行すると、ここに表示されます。</p>
+  </div>
+  {% endif %}
+</section>
+
+<style>
+.approval-queue-nav { margin-bottom: 1.2rem; }
+.approval-queue-count { margin-bottom: 1rem; color: var(--color-text-muted, #666); }
+.approval-queue-list { display: flex; flex-direction: column; gap: 1.2rem; }
+.approval-card {
+  border: 1px solid var(--color-border, #ddd);
+  border-radius: 10px;
+  padding: 1.2rem 1.4rem;
+  background: var(--color-surface, #fff);
+}
+.approval-card-header {
+  display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.8rem; flex-wrap: wrap;
+}
+.approval-card-unit { font-weight: 600; color: var(--color-primary, #3a5bd9); }
+.approval-card-diff {
+  padding: 2px 8px; border-radius: 12px; font-size: 0.78rem; font-weight: 600;
+}
+.approval-diff-easy { background: #d4f0dc; color: #1e6b35; }
+.approval-diff-normal { background: #fff3cd; color: #856404; }
+.approval-diff-hard { background: #fde8e8; color: #9b2335; }
+.approval-card-id { margin-left: auto; color: var(--color-text-muted, #888); font-size: 0.85rem; }
+.approval-card-question {
+  font-size: 1.05rem; font-weight: 500; margin-bottom: 0.9rem;
+  padding: 0.6rem 0.8rem; background: var(--color-bg, #f8f9fa); border-radius: 6px;
+}
+.approval-card-meta { display: flex; flex-direction: column; gap: 0.35rem; margin-bottom: 1rem; font-size: 0.88rem; }
+.approval-label {
+  display: inline-block; min-width: 4rem; font-weight: 600;
+  color: var(--color-text-muted, #666); margin-right: 0.4rem;
+}
+.approval-card-actions { display: flex; gap: 0.6rem; flex-wrap: wrap; }
+.approval-btn {
+  padding: 0.45rem 1rem; border-radius: 6px; font-size: 0.88rem;
+  font-weight: 600; cursor: pointer; border: none; text-decoration: none;
+  display: inline-block; text-align: center;
+}
+.approve-btn { background: #1e6b35; color: #fff; }
+.approve-btn:hover { background: #17562b; }
+.reject-btn { background: #9b2335; color: #fff; }
+.reject-btn:hover { background: #7d1c2a; }
+.preview-btn { background: var(--color-border, #ddd); color: var(--color-text, #333); }
+.approval-bulk-actions { margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--color-border, #ddd); }
+.approval-empty { text-align: center; padding: 3rem 1rem; }
+</style>
+
+<script>
+async function approveReject(problemId, action) {
+  const endpoint = '/teachers/problems/' + problemId + '/' + action;
+  const res = await fetch(endpoint, { method: 'POST', headers: {'Content-Type': 'application/json'} });
+  if (res.ok) {
+    const card = document.getElementById('card-' + problemId);
+    if (card) {
+      card.style.opacity = '0.4';
+      card.style.pointerEvents = 'none';
+      const label = action === 'approve' ? '✓ 承認済み' : '✗ 却下済み';
+      const color = action === 'approve' ? '#1e6b35' : '#9b2335';
+      card.querySelector('.approval-card-actions').innerHTML =
+        '<span style="color:' + color + ';font-weight:600;">' + label + '</span>';
+    }
+    
+    // すべてのカードが完了したか確認
+    const allCards = document.querySelectorAll('.approval-card');
+    const allComplete = Array.from(allCards).every(c => c.style.pointerEvents === 'none');
+    if (allComplete) {
+      setTimeout(function() {
+        window.location.href = '/teachers/problems?t=' + Date.now();
+      }, 800);
+    }
+  } else {
+    alert('操作に失敗しました');
+  }
+}
+
+async function approveAll() {
+  const cards = document.querySelectorAll('.approval-card');
+  for (const card of cards) {
+    const id = card.id.replace('card-', '');
+    if (card.style.pointerEvents !== 'none') {
+      await approveReject(parseInt(id), 'approve');
+      await new Promise(r => setTimeout(r, 150));
+    }
+  }
+}
+</script>
+{% endblock %}

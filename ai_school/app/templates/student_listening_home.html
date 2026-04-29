@@ -1,0 +1,62 @@
+﻿{% extends "base.html" %}
+{% block content %}
+<section class="card">
+  <p class="section-label">Listening</p>
+  <h2>リスニング</h2>
+  <p class="listening-hint">イヤホン推奨・静かな場所で取り組みましょう。</p>
+</section>
+
+<div class="listening-grade-tabs" role="tablist">
+  {% for g in [7, 8, 9] %}
+  <button type="button" class="listening-tab{% if g == default_grade %} listening-tab--active{% endif %}" data-grade="{{ g }}" role="tab" aria-selected="{{ 'true' if g == default_grade else 'false' }}">
+    中{{ g - 6 }}
+  </button>
+  {% endfor %}
+</div>
+
+{% for g in [7, 8, 9] %}
+<div class="listening-grade-panel{% if g != default_grade %} listening-grade-panel--hidden{% endif %}" data-grade-panel="{{ g }}">
+  <div class="listening-unit-grid">
+    {% for u in units_by_grade[g] %}
+    <article class="listening-unit-card{% if not u.unlocked %} listening-unit-card--locked{% endif %}">
+      {% if u.unlocked %}
+      <a class="listening-unit-card__link" href="/students/{{ student_id }}/listening/problem?unit_id={{ u.full_unit_id }}">
+        <h3>{{ u.display_name }}</h3>
+        <p class="listening-unit-meta">習熟 {{ u.mastery_score }}% ・ 正解 {{ u.correct_count }}問 / 収録 {{ u.problem_total }}問</p>
+        <div class="unit-progress-bar"><span style="width: {{ u.mastery_score }}%;"></span></div>
+      </a>
+      {% else %}
+      <div class="listening-unit-card__locked">
+        <h3>🔒 ロック中</h3>
+        <p>{{ u.display_name }}</p>
+        <p class="listening-unit-meta">前の単元の習熟が進むと解放されます。</p>
+      </div>
+      {% endif %}
+    </article>
+    {% endfor %}
+  </div>
+</div>
+{% endfor %}
+
+<p style="margin-top:1rem;"><a class="btn-secondary" href="/students/{{ student_id }}/listening/progress">進みを見る</a></p>
+<p><a class="btn-secondary" href="/students/{{ student_id }}/progress">← Myレコードに戻る</a></p>
+
+<script>
+(function () {
+  var tabs = document.querySelectorAll(".listening-tab");
+  var panels = document.querySelectorAll("[data-grade-panel]");
+  tabs.forEach(function (tab) {
+    tab.addEventListener("click", function () {
+      var g = tab.getAttribute("data-grade");
+      tabs.forEach(function (t) {
+        t.classList.toggle("listening-tab--active", t === tab);
+        t.setAttribute("aria-selected", t === tab ? "true" : "false");
+      });
+      panels.forEach(function (p) {
+        p.classList.toggle("listening-grade-panel--hidden", p.getAttribute("data-grade-panel") !== g);
+      });
+    });
+  });
+})();
+</script>
+{% endblock %}

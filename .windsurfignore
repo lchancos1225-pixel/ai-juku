@@ -1,0 +1,41 @@
+# 依存関係（トークン消費の最大の敵）
+node_modules/
+bun.lockb
+package-lock.json
+yarn.lock
+
+# ビルド成果物・キャッシュ
+dist/
+build/
+.next/
+.cache/
+out/
+
+# ログ・一時ファイル
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.env*
+!.env.example
+
+# Git・エディタ設定
+.git/
+.vscode/
+.idea/
+.cursor/  # Cursorの設定ファイルもAIには不要なので無視させます
+
+# メディア・重いファイル（AIが読んでも意味がなく、インデックスを汚します）
+public/images/
+public/assets/
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.svg
+*.mp4
+*.pdf
+
+# OS生成ファイル
+.DS_Store
+Thumbs.db

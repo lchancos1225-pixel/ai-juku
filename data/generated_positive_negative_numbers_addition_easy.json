@@ -1,0 +1,69 @@
+{
+  "problems": [
+    {
+      "full_unit_id": "positive_negative_numbers_addition",
+      "unit_id": "positive_negative_numbers",
+      "sub_unit": "addition",
+      "difficulty": "easy",
+      "question_text": "−2 + 7 を計算しなさい。",
+      "correct_answer": "5",
+      "hint_1": "負の数から右に進むイメージで考えよう。",
+      "hint_2": "7 から 2 を引くといくつになるか見てみよう。",
+      "explanation_base": "−2 + 7 は 7 − 2 と同じなので、答えは 5 です。",
+      "error_pattern_candidates": ["sign_error", "arithmetic_error"],
+      "intervention_candidates": ["show_number_line", "repeat_basic_addition"]
+    },
+    {
+      "full_unit_id": "positive_negative_numbers_addition",
+      "unit_id": "positive_negative_numbers",
+      "sub_unit": "addition",
+      "difficulty": "easy",
+      "question_text": "−6 + 9 を計算しなさい。",
+      "correct_answer": "3",
+      "hint_1": "大きい数の符号が答えの符号になります。",
+      "hint_2": "9 から 6 を引いて考えよう。",
+      "explanation_base": "−6 + 9 は 9 − 6 なので、答えは 3 です。",
+      "error_pattern_candidates": ["sign_error", "arithmetic_error"],
+      "intervention_candidates": ["show_number_line", "repeat_basic_addition"]
+    },
+    {
+      "full_unit_id": "positive_negative_numbers_addition",
+      "unit_id": "positive_negative_numbers",
+      "sub_unit": "addition",
+      "difficulty": "easy",
+      "question_text": "4 + (−7) を計算しなさい。",
+      "correct_answer": "-3",
+      "hint_1": "4 から左に 7 進むイメージで考えよう。",
+      "hint_2": "7 の方が大きいので、答えは負の数になります。",
+      "explanation_base": "4 + (−7) は 4 − 7 と同じなので、答えは −3 です。",
+      "error_pattern_candidates": ["sign_error", "arithmetic_error"],
+      "intervention_candidates": ["show_number_line", "repeat_basic_addition"]
+    },
+    {
+      "full_unit_id": "positive_negative_numbers_addition",
+      "unit_id": "positive_negative_numbers",
+      "sub_unit": "addition",
+      "difficulty": "easy",
+      "question_text": "−5 + 8 を計算しなさい。",
+      "correct_answer": "3",
+      "hint_1": "絶対値が大きい数を見てみよう。",
+      "hint_2": "8 から 5 を引くと答えが見えます。",
+      "explanation_base": "−5 + 8 は 8 − 5 と同じなので、答えは 3 です。",
+      "error_pattern_candidates": ["sign_error", "arithmetic_error"],
+      "intervention_candidates": ["show_number_line", "repeat_basic_addition"]
+    },
+    {
+      "full_unit_id": "positive_negative_numbers_addition",
+      "unit_id": "positive_negative_numbers",
+      "sub_unit": "addition",
+      "difficulty": "easy",
+      "question_text": "6 + (−2) を計算しなさい。",
+      "correct_answer": "4",
+      "hint_1": "正の数から左に 2 進むイメージを持とう。",
+      "hint_2": "6 から 2 を引く計算に直そう。",
+      "explanation_base": "6 + (−2) は 6 − 2 と同じなので、答えは 4 です。",
+      "error_pattern_candidates": ["sign_error", "arithmetic_error"],
+      "intervention_candidates": ["show_number_line", "repeat_basic_addition"]
+    }
+  ]
+}

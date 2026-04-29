@@ -1,0 +1,276 @@
+{
+  "problems": [
+    {
+      "unit_id": "linear_equations",
+      "sub_unit": "transposition",
+      "difficulty": "easy",
+      "question_text": "次の方程式を解きなさい。 x - 7 = 3",
+      "correct_answer": "10",
+      "hint_1": "左辺の -7 を右辺に移項しましょう。",
+      "hint_2": "移項すると符号が変わるので、x = 3 + 7 になります。",
+      "explanation_base": "-7 を移項すると +7 になります。x = 3 + 7 を計算して x = 10 となります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "sign_error"
+      ],
+      "intervention_candidates": [
+        "step_by_step_equation_check",
+        "review_sign_rules"
+      ]
+    },
+    {
+      "unit_id": "linear_equations",
+      "sub_unit": "transposition",
+      "difficulty": "easy",
+      "question_text": "次の方程式を解きなさい。 x + 5 = 1",
+      "correct_answer": "-4",
+      "hint_1": "左辺の +5 を右辺に移項しましょう。",
+      "hint_2": "移項すると符号が変わり、x = 1 - 5 になります。",
+      "explanation_base": "+5 を移項すると -5 になります。x = 1 - 5 を計算して x = -4 となります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "sign_error"
+      ],
+      "intervention_candidates": [
+        "step_by_step_equation_check",
+        "review_sign_rules"
+      ]
+    },
+    {
+      "unit_id": "linear_equations",
+      "sub_unit": "transposition",
+      "difficulty": "easy",
+      "question_text": "次の方程式を解きなさい。 2x = x + 5",
+      "correct_answer": "5",
+      "hint_1": "右辺にある x を左辺に移項しましょう。",
+      "hint_2": "移項すると 2x - x = 5 になります。",
+      "explanation_base": "右辺の x を左辺に移項すると -x になります。2x - x = 5 より x = 5 となります。",
+      "error_pattern_candidates": [
+        "variable_handling_error",
+        "formula_setup_error"
+      ],
+      "intervention_candidates": [
+        "separate_terms_visually",
+        "step_by_step_equation_check"
+      ]
+    },
+    {
+      "unit_id": "linear_equations",
+      "sub_unit": "transposition",
+      "difficulty": "easy",
+      "question_text": "次の方程式を解きなさい。 -3 + x = 6",
+      "correct_answer": "9",
+      "hint_1": "左辺の -3 を右辺に移項しましょう。",
+      "hint_2": "移項すると x = 6 + 3 になります。",
+      "explanation_base": "-3 を移項すると +3 になります。x = 6 + 3 を計算して x = 9 となります。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "step_by_step_equation_check",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "unit_id": "linear_equations",
+      "sub_unit": "transposition",
+      "difficulty": "easy",
+      "question_text": "次の方程式を解きなさい。 4x = 3x - 2",
+      "correct_answer": "-2",
+      "hint_1": "右辺にある 3x を左辺に移項しましょう。",
+      "hint_2": "移項すると符号が変わり、4x - 3x = -2 になります。",
+      "explanation_base": "3x を移項すると -3x になります。4x - 3x = -2 を計算して x = -2 となります。",
+      "error_pattern_candidates": [
+        "variable_handling_error",
+        "sign_error"
+      ],
+      "intervention_candidates": [
+        "separate_terms_visually",
+        "review_sign_rules"
+      ]
+    },
+    {
+      "unit_id": "linear_equations",
+      "sub_unit": "transposition",
+      "difficulty": "normal",
+      "question_text": "次の方程式を解きなさい。 3x + 2 = 2x + 7",
+      "correct_answer": "5",
+      "hint_1": "x の項を左辺に、数字の項を右辺に移項しましょう。",
+      "hint_2": "2x を左辺へ、+2 を右辺へ移項すると、3x - 2x = 7 - 2 になります。",
+      "explanation_base": "移項すると 3x - 2x = 7 - 2 となります。計算すると x = 5 になります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "sign_error"
+      ],
+      "intervention_candidates": [
+        "step_by_step_equation_check",
+        "separate_terms_visually"
+      ]
+    },
+    {
+      "unit_id": "linear_equations",
+      "sub_unit": "transposition",
+      "difficulty": "normal",
+      "question_text": "次の方程式を解きなさい。 5x - 4 = 3x + 6",
+      "correct_answer": "5",
+      "hint_1": "x の項を左辺に、数字の項を右辺に集めましょう。",
+      "hint_2": "移項すると 5x - 3x = 6 + 4 になります。それぞれの辺を計算しましょう。",
+      "explanation_base": "移項して整理すると 2x = 10 になります。両辺を 2 で割って x = 5 となります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "step_by_step_equation_check",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "unit_id": "linear_equations",
+      "sub_unit": "transposition",
+      "difficulty": "normal",
+      "question_text": "次の方程式を解きなさい。 2x + 9 = 5x",
+      "correct_answer": "3",
+      "hint_1": "2x を右辺に移項するか、5x を左辺に移項して x の項をまとめましょう。",
+      "hint_2": "5x を左辺、9 を右辺に移項すると 2x - 5x = -9 になります。",
+      "explanation_base": "移項すると 2x - 5x = -9 となり、-3x = -9 です。両辺を -3 で割って x = 3 となります。",
+      "error_pattern_candidates": [
+        "variable_handling_error",
+        "sign_error"
+      ],
+      "intervention_candidates": [
+        "review_sign_rules",
+        "step_by_step_equation_check"
+      ]
+    },
+    {
+      "unit_id": "linear_equations",
+      "sub_unit": "transposition",
+      "difficulty": "normal",
+      "question_text": "次の方程式を解きなさい。 -x + 5 = x - 1",
+      "correct_answer": "3",
+      "hint_1": "右辺の x を左辺へ、左辺の +5 を右辺へ移項しましょう。",
+      "hint_2": "移項すると -x - x = -1 - 5 になります。",
+      "explanation_base": "移項してまとめると -2x = -6 になります。両辺を -2 で割って x = 3 となります。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "review_sign_rules",
+        "step_by_step_equation_check"
+      ]
+    },
+    {
+      "unit_id": "linear_equations",
+      "sub_unit": "transposition",
+      "difficulty": "normal",
+      "question_text": "次の方程式を解きなさい。 4x - 7 = 6x + 3",
+      "correct_answer": "-5",
+      "hint_1": "文字の項を左辺に、数字の項を右辺に移項して整理しましょう。",
+      "hint_2": "移項すると 4x - 6x = 3 + 7 になります。",
+      "explanation_base": "移項して整理すると -2x = 10 になります。両辺を -2 で割って x = -5 となります。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "formula_setup_error"
+      ],
+      "intervention_candidates": [
+        "step_by_step_equation_check",
+        "review_sign_rules"
+      ]
+    },
+    {
+      "unit_id": "linear_equations",
+      "sub_unit": "transposition",
+      "difficulty": "hard",
+      "question_text": "次の方程式を解きなさい。 3(x - 2) = x + 4",
+      "correct_answer": "5",
+      "hint_1": "まずは左辺のかっこを外しましょう。",
+      "hint_2": "かっこを外すると 3x - 6 = x + 4 になります。x の項を左辺、数字を右辺に移項しましょう。",
+      "explanation_base": "かっこを外して 3x - 6 = x + 4。移項すると 3x - x = 4 + 6 となり、2x = 10 より x = 5 になります。",
+      "error_pattern_candidates": [
+        "variable_handling_error",
+        "formula_setup_error",
+        "sign_error"
+      ],
+      "intervention_candidates": [
+        "step_by_step_equation_check",
+        "separate_terms_visually"
+      ]
+    },
+    {
+      "unit_id": "linear_equations",
+      "sub_unit": "transposition",
+      "difficulty": "hard",
+      "question_text": "次の方程式を解きなさい。 5x - (2x + 1) = x - 7",
+      "correct_answer": "-3",
+      "hint_1": "左辺のかっこを外すとき、マイナスの符号に注意しましょう。",
+      "hint_2": "かっこを外すと 5x - 2x - 1 = x - 7 になります。同類項をまとめてから移項しましょう。",
+      "explanation_base": "かっこを外して 3x - 1 = x - 7。移項すると 3x - x = -7 + 1 となり、2x = -6 より x = -3 になります。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "variable_handling_error"
+      ],
+      "intervention_candidates": [
+        "review_sign_rules",
+        "step_by_step_equation_check"
+      ]
+    },
+    {
+      "unit_id": "linear_equations",
+      "sub_unit": "transposition",
+      "difficulty": "hard",
+      "question_text": "次の方程式を解きなさい。 0.3x + 1 = 0.1x + 1.4",
+      "correct_answer": "2",
+      "hint_1": "小数を消すために、まず両辺を10倍しましょう。",
+      "hint_2": "10倍すると 3x + 10 = x + 14 になります。ここから移項して解きましょう。",
+      "explanation_base": "両辺を10倍して 3x + 10 = x + 14。移項すると 3x - x = 14 - 10 となり、2x = 4 より x = 2 になります。",
+      "error_pattern_candidates": [
+        "prerequisite_gap",
+        "formula_setup_error"
+      ],
+      "intervention_candidates": [
+        "fallback_prerequisite",
+        "step_by_step_equation_check"
+      ]
+    },
+    {
+      "unit_id": "linear_equations",
+      "sub_unit": "transposition",
+      "difficulty": "hard",
+      "question_text": "次の方程式を解きなさい。 x/2 - 1 = x/3 + 1",
+      "correct_answer": "12",
+      "hint_1": "分母をはらうために、両辺に2と3の最小公倍数である6をかけましょう。",
+      "hint_2": "6をかけると 3x - 6 = 2x + 6 になります。移項して x を求めましょう。",
+      "explanation_base": "両辺に6をかけて分母をはらうと 3x - 6 = 2x + 6 となります。移項して 3x - 2x = 6 + 6 より x = 12 になります。",
+      "error_pattern_candidates": [
+        "prerequisite_gap",
+        "formula_setup_error"
+      ],
+      "intervention_candidates": [
+        "fallback_prerequisite",
+        "step_by_step_equation_check"
+      ]
+    },
+    {
+      "unit_id": "linear_equations",
+      "sub_unit": "transposition",
+      "difficulty": "hard",
+      "question_text": "次の方程式を解きなさい。 4 - 2x = 3(x - 2) - 5",
+      "correct_answer": "3",
+      "hint_1": "右辺のかっこを外して、同類項をまとめましょう。",
+      "hint_2": "右辺は 3x - 6 - 5 となり、3x - 11 になります。次に移項して x について解きましょう。",
+      "explanation_base": "かっこを外して右辺をまとめると 4 - 2x = 3x - 11 になります。移項すると -2x - 3x = -11 - 4 となり、-5x = -15 より x = 3 になります。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "arithmetic_error",
+        "formula_setup_error"
+      ],
+      "intervention_candidates": [
+        "step_by_step_equation_check",
+        "review_sign_rules"
+      ]
+    }
+  ]
+}

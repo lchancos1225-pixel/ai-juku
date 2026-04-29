@@ -1,0 +1,304 @@
+{
+  "problems": [
+    {
+      "full_unit_id": "quadratic_equations_basic",
+      "unit_id": "quadratic_equations",
+      "sub_unit": "basic",
+      "problem_type": "mini_test",
+      "test_scope": "mini_test",
+      "difficulty": "easy",
+      "question_text": "次の二次方程式を解きなさい。\nx^2 = 25",
+      "diagram": null,
+      "correct_answer": "x = 5, -5 (または x = ±5)",
+      "explanation_base": "2乗して25になる数は5と-5です。したがって、x = ±5 となります。",
+      "error_pattern_candidates": [
+        "careless_error",
+        "sign_error"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "advance_with_confidence"
+      ]
+    },
+    {
+      "full_unit_id": "quadratic_equations_basic",
+      "unit_id": "quadratic_equations",
+      "sub_unit": "basic",
+      "problem_type": "mini_test",
+      "test_scope": "mini_test",
+      "difficulty": "easy",
+      "question_text": "次の二次方程式を解きなさい。\n(x - 2)(x + 5) = 0",
+      "diagram": null,
+      "correct_answer": "x = 2, -5",
+      "explanation_base": "AB = 0 ならば A = 0 または B = 0 です。したがって、x - 2 = 0 より x = 2、x + 5 = 0 より x = -5 となります。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "comprehension_gap"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "retry_with_hint"
+      ]
+    },
+    {
+      "full_unit_id": "quadratic_equations_basic",
+      "unit_id": "quadratic_equations",
+      "sub_unit": "basic",
+      "problem_type": "mini_test",
+      "test_scope": "mini_test",
+      "difficulty": "normal",
+      "question_text": "次の二次方程式を解きなさい。\nx^2 - 6x + 8 = 0",
+      "diagram": null,
+      "correct_answer": "x = 2, 4",
+      "explanation_base": "左辺を因数分解すると (x - 2)(x - 4) = 0 となります。したがって、x - 2 = 0 または x - 4 = 0 より、x = 2, 4 となります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "sign_error"
+      ],
+      "intervention_candidates": [
+        "reinforce_same_pattern",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "quadratic_equations_basic",
+      "unit_id": "quadratic_equations",
+      "sub_unit": "basic",
+      "problem_type": "mini_test",
+      "test_scope": "mini_test",
+      "difficulty": "normal",
+      "question_text": "次の二次方程式を解きなさい。\nx^2 - 7x = 0",
+      "diagram": null,
+      "correct_answer": "x = 0, 7",
+      "explanation_base": "左辺を共通因数 x でくくって因数分解すると、x(x - 7) = 0 となります。したがって、x = 0 または x - 7 = 0 より、x = 0, 7 となります。",
+      "error_pattern_candidates": [
+        "variable_handling_error",
+        "comprehension_gap"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "retry_with_hint"
+      ]
+    },
+    {
+      "full_unit_id": "quadratic_equations_basic",
+      "unit_id": "quadratic_equations",
+      "sub_unit": "basic",
+      "problem_type": "mini_test",
+      "test_scope": "mini_test",
+      "difficulty": "hard",
+      "question_text": "次の二次方程式を解きなさい。\n(x - 3)^2 = 16",
+      "diagram": null,
+      "correct_answer": "x = 7, -1",
+      "explanation_base": "2乗して16になる数は ±4 なので、x - 3 = ±4 となります。x = 3 + 4 より x = 7、x = 3 - 4 より x = -1 となります。",
+      "error_pattern_candidates": [
+        "operation_confusion",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "teacher_intervention_needed"
+      ]
+    },
+    {
+      "full_unit_id": "quadratic_equations_basic",
+      "unit_id": "quadratic_equations",
+      "sub_unit": "basic",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "easy",
+      "question_text": "次の二次方程式を解きなさい。\nx^2 - 36 = 0",
+      "diagram": null,
+      "correct_answer": "x = 6, -6 (または x = ±6)",
+      "explanation_base": "-36 を移項して x^2 = 36 とします。2乗して36になる数は ±6 なので、x = ±6 となります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "sign_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "quadratic_equations_basic",
+      "unit_id": "quadratic_equations",
+      "sub_unit": "basic",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "easy",
+      "question_text": "次の二次方程式を解きなさい。\nx(x - 4) = 0",
+      "diagram": null,
+      "correct_answer": "x = 0, 4",
+      "explanation_base": "掛け合わせて0になるため、x = 0 または x - 4 = 0 です。したがって解は x = 0, 4 となります。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "advance_with_confidence"
+      ]
+    },
+    {
+      "full_unit_id": "quadratic_equations_basic",
+      "unit_id": "quadratic_equations",
+      "sub_unit": "basic",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "easy",
+      "question_text": "次の二次方程式を解きなさい。\n(x + 3)^2 = 0",
+      "diagram": null,
+      "correct_answer": "x = -3",
+      "explanation_base": "2乗して0になる数は0だけです。x + 3 = 0 より、解は x = -3 の1つ（重解）になります。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "comprehension_gap"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "quadratic_equations_basic",
+      "unit_id": "quadratic_equations",
+      "sub_unit": "basic",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "normal",
+      "question_text": "次の二次方程式を解きなさい。\nx^2 + 8x + 15 = 0",
+      "diagram": null,
+      "correct_answer": "x = -3, -5",
+      "explanation_base": "和が8、積が15になる2つの数を見つけて因数分解します。(x + 3)(x + 5) = 0 となるため、x = -3, -5 となります。",
+      "error_pattern_candidates": [
+        "arithmetic_error",
+        "sign_error"
+      ],
+      "intervention_candidates": [
+        "reinforce_same_pattern",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "quadratic_equations_basic",
+      "unit_id": "quadratic_equations",
+      "sub_unit": "basic",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "normal",
+      "question_text": "次の二次方程式を解きなさい。\nx^2 - 10x + 25 = 0",
+      "diagram": null,
+      "correct_answer": "x = 5",
+      "explanation_base": "左辺を因数分解すると (x - 5)^2 = 0 となります。したがって、解は x = 5 です。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "sign_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "reinforce_same_pattern"
+      ]
+    },
+    {
+      "full_unit_id": "quadratic_equations_basic",
+      "unit_id": "quadratic_equations",
+      "sub_unit": "basic",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "normal",
+      "question_text": "次の二次方程式を解きなさい。\nx^2 = 5x",
+      "diagram": null,
+      "correct_answer": "x = 0, 5",
+      "explanation_base": "5x を左辺に移項して x^2 - 5x = 0 とします。x でくくって因数分解すると x(x - 5) = 0 となり、x = 0, 5 が得られます。（両辺をxで割ってはいけません）",
+      "error_pattern_candidates": [
+        "variable_handling_error",
+        "operation_confusion"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "quadratic_equations_basic",
+      "unit_id": "quadratic_equations",
+      "sub_unit": "basic",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "normal",
+      "question_text": "次の二次方程式を解きなさい。\n3x^2 - 12 = 0",
+      "diagram": null,
+      "correct_answer": "x = 2, -2 (または x = ±2)",
+      "explanation_base": "-12 を移項して 3x^2 = 12 とします。両辺を3で割ると x^2 = 4 となり、x = ±2 となります。",
+      "error_pattern_candidates": [
+        "arithmetic_error",
+        "formula_setup_error"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "retry_with_hint"
+      ]
+    },
+    {
+      "full_unit_id": "quadratic_equations_basic",
+      "unit_id": "quadratic_equations",
+      "sub_unit": "basic",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "hard",
+      "question_text": "次の二次方程式を解きなさい。\nx^2 - 4x - 12 = 0",
+      "diagram": null,
+      "correct_answer": "x = 6, -2",
+      "explanation_base": "和が -4、積が -12 となる2つの数は 6 と -2 ではなく、-6 と 2 です。因数分解すると (x - 6)(x + 2) = 0 となり、x = 6, -2 となります。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "reinforce_same_pattern"
+      ]
+    },
+    {
+      "full_unit_id": "quadratic_equations_basic",
+      "unit_id": "quadratic_equations",
+      "sub_unit": "basic",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "hard",
+      "question_text": "次の二次方程式を解きなさい。\n(x + 2)(x - 5) = 8",
+      "diagram": null,
+      "correct_answer": "x = 6, -3",
+      "explanation_base": "まず左辺を展開します。x^2 - 3x - 10 = 8。右辺の8を移項して整理すると、x^2 - 3x - 18 = 0 となります。これを因数分解して (x - 6)(x + 3) = 0 より、x = 6, -3 となります。",
+      "error_pattern_candidates": [
+        "operation_confusion",
+        "formula_setup_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "teacher_intervention_needed"
+      ]
+    },
+    {
+      "full_unit_id": "quadratic_equations_basic",
+      "unit_id": "quadratic_equations",
+      "sub_unit": "basic",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "hard",
+      "question_text": "次の二次方程式を解きなさい。\n2x^2 + 6x - 20 = 0",
+      "diagram": null,
+      "correct_answer": "x = -5, 2",
+      "explanation_base": "すべての項が2の倍数なので、両辺を2で割ります。x^2 + 3x - 10 = 0 となります。これを因数分解して (x + 5)(x - 2) = 0 より、x = -5, 2 となります。",
+      "error_pattern_candidates": [
+        "prerequisite_gap",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "fallback_prerequisite",
+        "slow_down_and_confirm"
+      ]
+    }
+  ]
+}

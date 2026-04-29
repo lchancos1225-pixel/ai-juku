@@ -1,0 +1,24 @@
+{
+  "problems": [
+    {
+      "full_unit_id": "linear_equations_basic",
+      "unit_id": "linear_equations",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "question_text": "5x + 4 = 19",
+      "correct_answer": "3",
+      "hint_1": "5x を左辺に残すために、両辺から同じ数を引いてみましょう。",
+      "hint_2": "両辺から -4 を引くと 5x = 15 になります。次に両辺を 5 で割ります。",
+      "explanation_base": "両辺から 4 を引いて 5x = 15。両辺を 5 で割って x = 3。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "slow_down_and_confirm"
+      ]
+    }
+  ]
+}

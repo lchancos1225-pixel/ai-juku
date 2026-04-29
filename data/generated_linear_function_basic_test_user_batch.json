@@ -1,0 +1,304 @@
+{
+  "problems": [
+    {
+      "full_unit_id": "linear_function_basic",
+      "unit_id": "linear_function",
+      "sub_unit": "basic",
+      "problem_type": "mini_test",
+      "test_scope": "mini_test",
+      "difficulty": "easy",
+      "question_text": "一次関数 y = 3x - 5 について、xの増加量が 2 のときの yの増加量を求めなさい。",
+      "diagram": null,
+      "correct_answer": "6",
+      "explanation_base": "一次関数 y = ax + b において、(yの増加量) = (変化の割合 a) × (xの増加量) です。変化の割合は 3 なので、yの増加量は 3 × 2 = 6 になります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "explain_differently"
+      ]
+    },
+    {
+      "full_unit_id": "linear_function_basic",
+      "unit_id": "linear_function",
+      "sub_unit": "basic",
+      "problem_type": "mini_test",
+      "test_scope": "mini_test",
+      "difficulty": "easy",
+      "question_text": "一次関数 y = -2x + 4 のグラフについて、傾きと切片をそれぞれ答えなさい。",
+      "diagram": null,
+      "correct_answer": "傾き: -2, 切片: 4",
+      "explanation_base": "一次関数 y = ax + b のグラフにおいて、a を傾き、b を切片といいます。よって、傾きは -2、切片は 4 です。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "sign_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "explain_differently"
+      ]
+    },
+    {
+      "full_unit_id": "linear_function_basic",
+      "unit_id": "linear_function",
+      "sub_unit": "basic",
+      "problem_type": "mini_test",
+      "test_scope": "mini_test",
+      "difficulty": "normal",
+      "question_text": "2点 (1, 2), (3, 8) を通る直線の式を求めなさい。",
+      "diagram": null,
+      "correct_answer": "y = 3x - 1",
+      "explanation_base": "直線の式を y = ax + b とします。傾き a は (8 - 2) / (3 - 1) = 6 / 2 = 3 です。y = 3x + b に x = 1, y = 2 を代入して 2 = 3 + b より b = -1 となります。したがって、求める式は y = 3x - 1 です。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "linear_function_basic",
+      "unit_id": "linear_function",
+      "sub_unit": "basic",
+      "problem_type": "mini_test",
+      "test_scope": "mini_test",
+      "difficulty": "normal",
+      "question_text": "一次関数 y = -3x + 2 について、xの変域が -2 ≦ x ≦ 1 のときの yの変域を求めなさい。",
+      "diagram": null,
+      "correct_answer": "-1 ≦ y ≦ 8",
+      "explanation_base": "x = -2 のとき y = -3 × (-2) + 2 = 8。x = 1 のとき y = -3 × 1 + 2 = -1。傾きが負なので、xが最小のときにyは最大になります。よって、-1 ≦ y ≦ 8 です。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "formula_setup_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "explain_differently"
+      ]
+    },
+    {
+      "full_unit_id": "linear_function_basic",
+      "unit_id": "linear_function",
+      "sub_unit": "basic",
+      "problem_type": "mini_test",
+      "test_scope": "mini_test",
+      "difficulty": "hard",
+      "question_text": "変化の割合が -4 で、x = 2 のとき y = 1 となる一次関数の式を求めなさい。",
+      "diagram": null,
+      "correct_answer": "y = -4x + 9",
+      "explanation_base": "変化の割合が -4 なので、求める式は y = -4x + b と表せます。この式に x = 2, y = 1 を代入すると、1 = -4 × 2 + b となり、1 = -8 + b より b = 9 となります。よって、y = -4x + 9 です。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "sign_error"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "explain_differently"
+      ]
+    },
+    {
+      "full_unit_id": "linear_function_basic",
+      "unit_id": "linear_function",
+      "sub_unit": "basic",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "easy",
+      "question_text": "長さ 15cm の線香に火をつけると、1分間に 0.5cm ずつ短くなります。火をつけてから x分後の線香の長さを ycm とするとき、y を x の式で表しなさい。",
+      "diagram": null,
+      "correct_answer": "y = -0.5x + 15",
+      "explanation_base": "はじめの長さが 15cm で、1分間に 0.5cm ずつ短くなるため、x分後には 0.5x cm 短くなります。したがって、残りの長さ y は y = 15 - 0.5x、つまり y = -0.5x + 15 と表せます。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "comprehension_gap"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "explain_differently"
+      ]
+    },
+    {
+      "full_unit_id": "linear_function_basic",
+      "unit_id": "linear_function",
+      "sub_unit": "basic",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "easy",
+      "question_text": "一次関数 y = 5x - 3 において、x = -2 のときの y の値を求めなさい。",
+      "diagram": null,
+      "correct_answer": "-13",
+      "explanation_base": "式 y = 5x - 3 に x = -2 を代入します。y = 5 × (-2) - 3 = -10 - 3 = -13 になります。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "linear_function_basic",
+      "unit_id": "linear_function",
+      "sub_unit": "basic",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "normal",
+      "question_text": "グラフが点 (-2, 1) を通り、傾きが 4 である直線の式を求めなさい。",
+      "diagram": null,
+      "correct_answer": "y = 4x + 9",
+      "explanation_base": "傾きが 4 なので、求める直線の式は y = 4x + b とおけます。これに x = -2, y = 1 を代入すると、1 = 4 × (-2) + b となり、1 = -8 + b より b = 9 です。したがって、y = 4x + 9 となります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "sign_error"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "explain_differently"
+      ]
+    },
+    {
+      "full_unit_id": "linear_function_basic",
+      "unit_id": "linear_function",
+      "sub_unit": "basic",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "normal",
+      "question_text": "一次関数 y = (2/3)x - 4 について、xの増加量が 6 のときの yの増加量を求めなさい。",
+      "diagram": null,
+      "correct_answer": "4",
+      "explanation_base": "一次関数の変化の割合は一定で 2/3 です。(yの増加量) = (変化の割合) × (xの増加量) なので、yの増加量は (2/3) × 6 = 4 になります。",
+      "error_pattern_candidates": [
+        "arithmetic_error",
+        "formula_setup_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "explain_differently"
+      ]
+    },
+    {
+      "full_unit_id": "linear_function_basic",
+      "unit_id": "linear_function",
+      "sub_unit": "basic",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "normal",
+      "question_text": "グラフが2点 (-3, -1), (2, 9) を通る一次関数の式を求めなさい。",
+      "diagram": null,
+      "correct_answer": "y = 2x + 5",
+      "explanation_base": "変化の割合(傾き) a は {9 - (-1)} / {2 - (-3)} = 10 / 5 = 2 です。y = 2x + b に x = 2, y = 9 を代入して、9 = 4 + b より b = 5 です。したがって、式は y = 2x + 5 です。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "sign_error"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "explain_differently"
+      ]
+    },
+    {
+      "full_unit_id": "linear_function_basic",
+      "unit_id": "linear_function",
+      "sub_unit": "basic",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "normal",
+      "question_text": "一次関数 y = -2x + 7 について、xの変域が 1 < x ≦ 4 のときの yの変域を求めなさい。",
+      "diagram": null,
+      "correct_answer": "-1 ≦ y < 5",
+      "explanation_base": "x = 1 のとき y = 5、x = 4 のとき y = -1。傾きが負なので、xが大きくなるほどyは小さくなります。不等号の向きと種類に注意し、-1 ≦ y < 5 が正しい変域になります。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "sign_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "explain_differently"
+      ]
+    },
+    {
+      "full_unit_id": "linear_function_basic",
+      "unit_id": "linear_function",
+      "sub_unit": "basic",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "hard",
+      "question_text": "点 (3, -2) を通り、直線 y = -x + 4 に平行な直線の式を求めなさい。",
+      "diagram": null,
+      "correct_answer": "y = -x + 1",
+      "explanation_base": "平行な直線は傾きが等しいため、求める直線の傾きは -1 です。y = -x + b に x = 3, y = -2 を代入すると、-2 = -3 + b となり、b = 1 です。したがって、直線の式は y = -x + 1 です。",
+      "error_pattern_candidates": [
+        "prerequisite_gap",
+        "formula_setup_error"
+      ],
+      "intervention_candidates": [
+        "fallback_prerequisite",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "linear_function_basic",
+      "unit_id": "linear_function",
+      "sub_unit": "basic",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "hard",
+      "question_text": "直線 y = -1/2 x + 3 と x軸、y軸とで囲まれた三角形の面積を求めなさい。ただし、座標軸の1目盛りを1cmとします。",
+      "diagram": null,
+      "correct_answer": "9cm²",
+      "explanation_base": "y軸との交点（切片）は (0, 3) なので、三角形の高さは 3cm です。x軸との交点は y = 0 を代入して 0 = -1/2 x + 3 より x = 6、よって (6, 0) となり底辺は 6cm です。三角形の面積は 6 × 3 ÷ 2 = 9cm² になります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "comprehension_gap"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "linear_function_basic",
+      "unit_id": "linear_function",
+      "sub_unit": "basic",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "hard",
+      "question_text": "一次関数 y = ax + b において、a < 0 とします。xの変域が -2 ≦ x ≦ 4 のとき、yの変域が -3 ≦ y ≦ 9 となりました。このとき、a と b の値を求めなさい。",
+      "diagram": null,
+      "correct_answer": "a = -2, b = 5",
+      "explanation_base": "a < 0 なので、グラフは右下がりです。したがって、xが最小のときyは最大、xが最大のときyは最小になります。つまり、x = -2 のとき y = 9、x = 4 のとき y = -3 になります。これらを代入した連立方程式 -2a + b = 9 と 4a + b = -3 を解くと、a = -2, b = 5 となります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "sign_error"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "explain_differently"
+      ]
+    },
+    {
+      "full_unit_id": "linear_function_basic",
+      "unit_id": "linear_function",
+      "sub_unit": "basic",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "hard",
+      "question_text": "水が 10L 入っている水そうに、一定の割合で水を入れます。水を入れ始めてから 3分後には水そうの水が 16L になりました。水を入れ始めてから x分後の水そうの水の量を yL とするとき、y を x の式で表しなさい。",
+      "diagram": null,
+      "correct_answer": "y = 2x + 10",
+      "explanation_base": "水が10L入っていたので、切片 b = 10 です。3分間で水が 16 - 10 = 6L 増えたので、1分間あたり 6 ÷ 3 = 2L ずつ増えます。これが変化の割合(傾き)なので a = 2 です。したがって、y = 2x + 10 となります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "explain_differently"
+      ]
+    }
+  ]
+}

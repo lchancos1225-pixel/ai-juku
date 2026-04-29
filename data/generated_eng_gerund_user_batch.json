@@ -1,0 +1,709 @@
+{
+  "problems": [
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_gerund",
+      "unit_id": "eng_gerund",
+      "sub_unit": "gerund",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に動詞を動名詞にして入れなさい。\n「I like ( swim ).」",
+      "correct_answer": "swimming",
+      "hint_1": "動名詞は動詞の -ing 形で「〜すること」を表します。",
+      "hint_2": "swim → swimming（語末子音重ね）",
+      "explanation_base": "I like swimming.（動名詞を目的語として）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_gerund",
+      "unit_id": "eng_gerund",
+      "sub_unit": "gerund",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に動詞を動名詞にして入れなさい。\n「She enjoys ( read ).」",
+      "correct_answer": "reading",
+      "hint_1": "動名詞は動詞の -ing 形で「〜すること」を表します。",
+      "hint_2": "read → reading",
+      "explanation_base": "She enjoys reading.（動名詞を目的語として）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_gerund",
+      "unit_id": "eng_gerund",
+      "sub_unit": "gerund",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に動詞を動名詞にして入れなさい。\n「He is good at ( play ) soccer.」",
+      "correct_answer": "playing",
+      "hint_1": "前置詞の後には動名詞を使います。",
+      "hint_2": "play → playing",
+      "explanation_base": "He is good at playing soccer.（前置詞 at の後）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_gerund",
+      "unit_id": "eng_gerund",
+      "sub_unit": "gerund",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に動詞を動名詞にして入れなさい。\n「I practice ( sing ) every day.」",
+      "correct_answer": "singing",
+      "hint_1": "動名詞は動詞の -ing 形で「〜すること」を表します。",
+      "hint_2": "sing → singing",
+      "explanation_base": "I practice singing every day.（動名詞を目的語として）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_gerund",
+      "unit_id": "eng_gerund",
+      "sub_unit": "gerund",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に動詞を動名詞にして入れなさい。\n「She stopped ( talk ).」",
+      "correct_answer": "talking",
+      "hint_1": "stop の後には動名詞を使います（stop to do とは意味が違う）。",
+      "hint_2": "talk → talking",
+      "explanation_base": "She stopped talking.（動名詞を目的語として）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_gerund",
+      "unit_id": "eng_gerund",
+      "sub_unit": "gerund",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に動詞を動名詞にして入れなさい。\n「( Study ) is important.」",
+      "correct_answer": "Studying",
+      "hint_1": "動名詞を主語として使う用法です。",
+      "hint_2": "Study → Studying（文頭で主語）",
+      "explanation_base": "Studying is important.（動名詞を主語として）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_gerund",
+      "unit_id": "eng_gerund",
+      "sub_unit": "gerund",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に動詞を動名詞にして入れなさい。\n「( Eat ) too much is bad for your health.」",
+      "correct_answer": "Eating",
+      "hint_1": "動名詞を主語として使う用法です。",
+      "hint_2": "Eat → Eating（文頭で主語）",
+      "explanation_base": "Eating too much is bad for your health.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_gerund",
+      "unit_id": "eng_gerund",
+      "sub_unit": "gerund",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に動詞を動名詞にして入れなさい。\n「She finished ( write ) the report.」",
+      "correct_answer": "writing",
+      "hint_1": "finish の後には動名詞を使います。",
+      "hint_2": "write → writing",
+      "explanation_base": "She finished writing the report.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_gerund",
+      "unit_id": "eng_gerund",
+      "sub_unit": "gerund",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に動詞を動名詞にして入れなさい。\n「I'm interested in ( learn ) new languages.」",
+      "correct_answer": "learning",
+      "hint_1": "前置詞の後には動名詞を使います。",
+      "hint_2": "learn → learning",
+      "explanation_base": "I'm interested in learning new languages.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_gerund",
+      "unit_id": "eng_gerund",
+      "sub_unit": "gerund",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に動詞を動名詞にして入れなさい。\n「He went to bed without ( brush ) his teeth.」",
+      "correct_answer": "brushing",
+      "hint_1": "前置詞 without の後には動名詞を使います。",
+      "hint_2": "brush → brushing",
+      "explanation_base": "He went to bed without brushing his teeth.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_gerund",
+      "unit_id": "eng_gerund",
+      "sub_unit": "gerund",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「彼女は毎朝ランニングを楽しんでいます。」",
+      "correct_answer": "She enjoys running every morning.",
+      "hint_1": "enjoy の後には動名詞を使います。",
+      "hint_2": "She enjoys 動名詞〜 の形にします。",
+      "explanation_base": "She enjoys running every morning.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_gerund",
+      "unit_id": "eng_gerund",
+      "sub_unit": "gerund",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「写真を撮ることが私の趣味です。」",
+      "correct_answer": "Taking pictures is my hobby.",
+      "hint_1": "「〜することは」という動名詞を主語にします。",
+      "hint_2": "動名詞 + is my hobby の形にします。",
+      "explanation_base": "Taking pictures is my hobby.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_gerund",
+      "unit_id": "eng_gerund",
+      "sub_unit": "gerund",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「彼は本を読むことをやめました。」",
+      "correct_answer": "He stopped reading books.",
+      "hint_1": "stop の後には動名詞を使います。",
+      "hint_2": "He stopped 動名詞〜 の形にします。",
+      "explanation_base": "He stopped reading books.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_gerund",
+      "unit_id": "eng_gerund",
+      "sub_unit": "gerund",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「食べ過ぎは体に良くありません。」",
+      "correct_answer": "Eating too much is not good for your health.",
+      "hint_1": "「食べ過ぎること」は動名詞を主語にします。",
+      "hint_2": "Eating too much 〜 の形にします。",
+      "explanation_base": "Eating too much is not good for your health.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_gerund",
+      "unit_id": "eng_gerund",
+      "sub_unit": "gerund",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「彼女は泳ぐのが得意です。」",
+      "correct_answer": "She is good at swimming.",
+      "hint_1": "「〜が得意だ」は be good at 動名詞の形です。",
+      "hint_2": "She is good at 動名詞〜 の形にします。",
+      "explanation_base": "She is good at swimming.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_gerund",
+      "unit_id": "eng_gerund",
+      "sub_unit": "gerund",
+      "problem_type": "mini_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に動詞を動名詞にして入れなさい。\n「I enjoy ( cook ).」",
+      "correct_answer": "cooking",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "I enjoy cooking.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_gerund"
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_gerund",
+      "unit_id": "eng_gerund",
+      "sub_unit": "gerund",
+      "problem_type": "mini_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "( Walk ) is good for your health.",
+      "correct_answer": "Walking",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "Walking is good for your health.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_gerund"
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_gerund",
+      "unit_id": "eng_gerund",
+      "sub_unit": "gerund",
+      "problem_type": "mini_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「彼は音楽を聴くことが好きです。」",
+      "correct_answer": "He likes listening to music.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "He likes listening to music.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_gerund"
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_gerund",
+      "unit_id": "eng_gerund",
+      "sub_unit": "gerund",
+      "problem_type": "mini_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に動詞を動名詞にして入れなさい。\n「She is afraid of ( speak ) in public.」",
+      "correct_answer": "speaking",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "She is afraid of speaking in public.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_gerund"
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_gerund",
+      "unit_id": "eng_gerund",
+      "sub_unit": "gerund",
+      "problem_type": "mini_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「彼女は宿題を終えてから遊びます。」",
+      "correct_answer": "She plays after finishing her homework.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "She plays after finishing her homework.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_gerund"
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_gerund",
+      "unit_id": "eng_gerund",
+      "sub_unit": "gerund",
+      "problem_type": "unit_test",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に動詞を動名詞にして入れなさい。\n「I like ( take ) photos.」",
+      "correct_answer": "taking",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "I like taking photos.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_gerund"
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_gerund",
+      "unit_id": "eng_gerund",
+      "sub_unit": "gerund",
+      "problem_type": "unit_test",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に動詞を動名詞にして入れなさい。\n「She enjoys ( dance ).」",
+      "correct_answer": "dancing",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "She enjoys dancing.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_gerund"
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_gerund",
+      "unit_id": "eng_gerund",
+      "sub_unit": "gerund",
+      "problem_type": "unit_test",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "( Read ) is fun.",
+      "correct_answer": "Reading",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "Reading is fun.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_gerund"
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_gerund",
+      "unit_id": "eng_gerund",
+      "sub_unit": "gerund",
+      "problem_type": "unit_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「外国語を学ぶことはわくわくすることです。」",
+      "correct_answer": "Learning a foreign language is exciting.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "Learning a foreign language is exciting.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_gerund"
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_gerund",
+      "unit_id": "eng_gerund",
+      "sub_unit": "gerund",
+      "problem_type": "unit_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「彼は夕食の前に手を洗うことを忘れました。」",
+      "correct_answer": "He forgot washing his hands before dinner.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "He forgot washing his hands before dinner.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_gerund"
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_gerund",
+      "unit_id": "eng_gerund",
+      "sub_unit": "gerund",
+      "problem_type": "unit_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に動詞を動名詞にして入れなさい。\n「She kept ( run ) despite the rain.」",
+      "correct_answer": "running",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "She kept running despite the rain.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_gerund"
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_gerund",
+      "unit_id": "eng_gerund",
+      "sub_unit": "gerund",
+      "problem_type": "unit_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「彼女はその映画を見ることをやめませんでした。」",
+      "correct_answer": "She didn't stop watching the movie.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "She didn't stop watching the movie.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_gerund"
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_gerund",
+      "unit_id": "eng_gerund",
+      "sub_unit": "gerund",
+      "problem_type": "unit_test",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「早起きすることがあなたの健康を改善します。」",
+      "correct_answer": "Getting up early improves your health.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "Getting up early improves your health.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_gerund"
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_gerund",
+      "unit_id": "eng_gerund",
+      "sub_unit": "gerund",
+      "problem_type": "unit_test",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「彼は発表前に練習することを忘れませんでした。」",
+      "correct_answer": "He didn't forget practicing before the presentation.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "He didn't forget practicing before the presentation.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_gerund"
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_gerund",
+      "unit_id": "eng_gerund",
+      "sub_unit": "gerund",
+      "problem_type": "unit_test",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「他人を助けることはとても大切なことです。」",
+      "correct_answer": "Helping others is very important.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "Helping others is very important.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_gerund"
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="card problem-preview-page">
+  <p class="section-label">教材プレビュー</p>
+  <div class="problem-preview-header">
+    <div>
+      <h2>問題プレビュー</h2>
+      <p class="meta-note">これは講師用の表示確認画面です。採点・学習状態更新・ログ保存は行いません。</p>
+    </div>
+    <a class="secondary-link" href="/teachers/problems">問題一覧へ戻る</a>
+  </div>
+
+  <div class="problem-preview-meta">
+    <span class="problem-preview-badge">#{{ problem.problem_id }}</span>
+    <span class="problem-preview-badge">{{ problem.problem_type }}</span>
+    {% if problem.test_scope %}
+    <span class="problem-preview-badge">{{ problem.test_scope }}</span>
+    {% endif %}
+    <span class="problem-preview-badge">{{ unit_labels.get(problem.full_unit_id or problem.unit, problem.full_unit_id or problem.unit) }}</span>
+    <span class="problem-preview-badge">Lv{{ problem.difficulty }}</span>
+    {% if problem.diagram_required %}
+    <span class="problem-preview-badge">diagram_required</span>
+    {% endif %}
+  </div>
+
+  <div class="teacher-info-block">
+    <div><span class="meta-note">full_unit_id</span><strong>{{ problem.full_unit_id or "-" }}</strong></div>
+    <div><span class="meta-note">problem_type</span><strong>{{ problem.problem_type }}</strong></div>
+    <div><span class="meta-note">test_scope</span><strong>{{ problem.test_scope or "-" }}</strong></div>
+  </div>
+</section>
+
+<section class="card problem-card problem-preview-student-view">
+  <p class="section-label">生徒表示イメージ</p>
+  <h3>{{ unit_labels.get(problem.full_unit_id or problem.unit, problem.full_unit_id or problem.unit) }} / 難易度 {{ problem.difficulty }}</h3>
+  <p class="question-text">{{ problem.question_text | render_math_text }}</p>
+
+  {% if diagram_svg %}
+  <section class="problem-diagram-block" aria-labelledby="problem-preview-diagram-title">
+    <p class="section-label">図</p>
+    <h4 id="problem-preview-diagram-title" class="problem-diagram-title">{{ diagram_display.section_title if diagram_display else "問題の図" }}</h4>
+    {% if diagram_display and diagram_display.display_name %}
+    <p class="meta-note problem-diagram-subtitle">{{ diagram_display.display_name }}</p>
+    {% endif %}
+    {% if diagram_display and diagram_display.show_internal_key and diagram_display.internal_key %}
+    <p class="meta-note problem-diagram-internal-key">{{ diagram_display.internal_key }}</p>
+    {% endif %}
+    <div class="problem-diagram-frame">
+      {{ diagram_svg | safe }}
+    </div>
+  </section>
+  {% endif %}
+
+  <form class="answer-form problem-preview-answer" action="#" method="get">
+    <label for="preview-answer">答えを入力</label>
+    <input id="preview-answer" type="text" inputmode="text" autocomplete="off" placeholder="ここに入力" disabled>
+    <button type="button" disabled>送信する</button>
+  </form>
+
+  {% if problem.hint_1 %}
+  <div class="hint-panel hint-panel--compact problem-preview-hint">
+    <p class="section-label">Hint 1</p>
+    <p class="hint-text">{{ problem.hint_1 | render_math_text }}</p>
+  </div>
+  {% endif %}
+
+  {% if problem.hint_2 %}
+  <div class="hint-panel hint-panel--compact problem-preview-hint">
+    <p class="section-label">Hint 2</p>
+    <p class="hint-text">{{ problem.hint_2 | render_math_text }}</p>
+  </div>
+  {% endif %}
+
+  {% if problem.explanation_base %}
+  <div class="teacher-info-block problem-preview-explanation">
+    <p class="section-label">解説確認</p>
+    <p>{{ problem.explanation_base | render_math_text }}</p>
+  </div>
+  {% endif %}
+</section>
+{% endblock %}

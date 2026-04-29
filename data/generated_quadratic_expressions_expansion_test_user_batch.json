@@ -1,0 +1,304 @@
+{
+  "problems": [
+    {
+      "full_unit_id": "quadratic_expressions_expansion",
+      "unit_id": "quadratic_expressions",
+      "sub_unit": "expansion",
+      "problem_type": "mini_test",
+      "test_scope": "mini_test",
+      "difficulty": "easy",
+      "question_text": "次の式を展開しなさい。\n(x + 3)(x + 5)",
+      "diagram": null,
+      "correct_answer": "x^2 + 8x + 15",
+      "explanation_base": "乗法公式 (x+a)(x+b) = x^2 + (a+b)x + ab を使います。a=3, b=5 をあてはめると、x^2 + (3+5)x + 3×5 = x^2 + 8x + 15 となります。",
+      "error_pattern_candidates": [
+        "careless_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "reinforce_same_pattern"
+      ]
+    },
+    {
+      "full_unit_id": "quadratic_expressions_expansion",
+      "unit_id": "quadratic_expressions",
+      "sub_unit": "expansion",
+      "problem_type": "mini_test",
+      "test_scope": "mini_test",
+      "difficulty": "easy",
+      "question_text": "次の式を展開しなさい。\n(x - 4)^2",
+      "diagram": null,
+      "correct_answer": "x^2 - 8x + 16",
+      "explanation_base": "乗法公式 (x-a)^2 = x^2 - 2ax + a^2 を使います。x^2 - 2×x×4 + 4^2 = x^2 - 8x + 16 となります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "sign_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "retry_with_hint"
+      ]
+    },
+    {
+      "full_unit_id": "quadratic_expressions_expansion",
+      "unit_id": "quadratic_expressions",
+      "sub_unit": "expansion",
+      "problem_type": "mini_test",
+      "test_scope": "mini_test",
+      "difficulty": "normal",
+      "question_text": "次の式を展開しなさい。\n(2x + y)(2x - y)",
+      "diagram": null,
+      "correct_answer": "4x^2 - y^2",
+      "explanation_base": "乗法公式 (a+b)(a-b) = a^2 - b^2 を使います。(2x)^2 - y^2 = 4x^2 - y^2 となります。2x 全体を2乗することに注意しましょう。",
+      "error_pattern_candidates": [
+        "variable_handling_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "reinforce_same_pattern"
+      ]
+    },
+    {
+      "full_unit_id": "quadratic_expressions_expansion",
+      "unit_id": "quadratic_expressions",
+      "sub_unit": "expansion",
+      "problem_type": "mini_test",
+      "test_scope": "mini_test",
+      "difficulty": "normal",
+      "question_text": "次の式を展開しなさい。\n(a - b + 2)(a - b - 2)",
+      "diagram": null,
+      "correct_answer": "a^2 - 2ab + b^2 - 4",
+      "explanation_base": "a - b を1つのまとまり M として考えます。(M + 2)(M - 2) = M^2 - 4 と展開できます。M を a - b に戻すと、(a - b)^2 - 4 = a^2 - 2ab + b^2 - 4 となります。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "variable_handling_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "teacher_intervention_needed"
+      ]
+    },
+    {
+      "full_unit_id": "quadratic_expressions_expansion",
+      "unit_id": "quadratic_expressions",
+      "sub_unit": "expansion",
+      "problem_type": "mini_test",
+      "test_scope": "mini_test",
+      "difficulty": "hard",
+      "question_text": "次の式を展開して、簡単にしなさい。\n3(x + 2)^2 - (x - 1)(x + 5)",
+      "diagram": null,
+      "correct_answer": "2x^2 + 8x + 17",
+      "explanation_base": "それぞれの項を展開してからまとめます。3(x^2 + 4x + 4) - (x^2 + 4x - 5) = 3x^2 + 12x + 12 - x^2 - 4x + 5 = (3-1)x^2 + (12-4)x + (12+5) = 2x^2 + 8x + 17 となります。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "operation_confusion"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "explain_differently"
+      ]
+    },
+    {
+      "full_unit_id": "quadratic_expressions_expansion",
+      "unit_id": "quadratic_expressions",
+      "sub_unit": "expansion",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "easy",
+      "question_text": "次の式を展開しなさい。\n2x(3x - 4y)",
+      "diagram": null,
+      "correct_answer": "6x^2 - 8xy",
+      "explanation_base": "単項式を多項式の各項に掛けます（分配法則）。2x × 3x + 2x × (-4y) = 6x^2 - 8xy となります。",
+      "error_pattern_candidates": [
+        "variable_handling_error",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "reinforce_same_pattern"
+      ]
+    },
+    {
+      "full_unit_id": "quadratic_expressions_expansion",
+      "unit_id": "quadratic_expressions",
+      "sub_unit": "expansion",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "easy",
+      "question_text": "次の式を展開しなさい。\n(x - 6)(x + 2)",
+      "diagram": null,
+      "correct_answer": "x^2 - 4x - 12",
+      "explanation_base": "乗法公式 (x+a)(x+b) = x^2 + (a+b)x + ab を使います。x^2 + (-6+2)x + (-6)×2 = x^2 - 4x - 12 となります。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "retry_with_hint"
+      ]
+    },
+    {
+      "full_unit_id": "quadratic_expressions_expansion",
+      "unit_id": "quadratic_expressions",
+      "sub_unit": "expansion",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "easy",
+      "question_text": "次の式を展開しなさい。\n(x + 7)^2",
+      "diagram": null,
+      "correct_answer": "x^2 + 14x + 49",
+      "explanation_base": "乗法公式 (x+a)^2 = x^2 + 2ax + a^2 を使います。x^2 + 2×x×7 + 7^2 = x^2 + 14x + 49 となります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "reinforce_same_pattern"
+      ]
+    },
+    {
+      "full_unit_id": "quadratic_expressions_expansion",
+      "unit_id": "quadratic_expressions",
+      "sub_unit": "expansion",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "normal",
+      "question_text": "次の式を展開しなさい。\n(3a + 5b)(3a - 5b)",
+      "diagram": null,
+      "correct_answer": "9a^2 - 25b^2",
+      "explanation_base": "乗法公式 (x+y)(x-y) = x^2 - y^2 を使います。xが3a、yが5bにあたります。(3a)^2 - (5b)^2 = 9a^2 - 25b^2 となります。",
+      "error_pattern_candidates": [
+        "variable_handling_error",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "retry_with_hint"
+      ]
+    },
+    {
+      "full_unit_id": "quadratic_expressions_expansion",
+      "unit_id": "quadratic_expressions",
+      "sub_unit": "expansion",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "normal",
+      "question_text": "次の式を展開しなさい。\n(2x - 3)(2x + 5)",
+      "diagram": null,
+      "correct_answer": "4x^2 + 4x - 15",
+      "explanation_base": "2x を1つのまとまり M と考え、(M - 3)(M + 5) と見立てて展開します。M^2 + 2M - 15 となり、M に 2x を戻すと (2x)^2 + 2×(2x) - 15 = 4x^2 + 4x - 15 となります。",
+      "error_pattern_candidates": [
+        "variable_handling_error",
+        "formula_setup_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "quadratic_expressions_expansion",
+      "unit_id": "quadratic_expressions",
+      "sub_unit": "expansion",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "hard",
+      "question_text": "次の式を展開しなさい。\n(x + y - 3)^2",
+      "diagram": null,
+      "correct_answer": "x^2 + 2xy + y^2 - 6x - 6y + 9",
+      "explanation_base": "x + y を1つのまとまり M とします。(M - 3)^2 = M^2 - 6M + 9 となります。M を x + y に戻すと、(x + y)^2 - 6(x + y) + 9 = x^2 + 2xy + y^2 - 6x - 6y + 9 となります。",
+      "error_pattern_candidates": [
+        "operation_confusion",
+        "variable_handling_error"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "explain_differently"
+      ]
+    },
+    {
+      "full_unit_id": "quadratic_expressions_expansion",
+      "unit_id": "quadratic_expressions",
+      "sub_unit": "expansion",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "normal",
+      "question_text": "次の式を展開しなさい。\n(x - 2y + 3)(x - 2y - 4)",
+      "diagram": null,
+      "correct_answer": "x^2 - 4xy + 4y^2 - x + 2y - 12",
+      "explanation_base": "共通部分の x - 2y を M とおきます。(M + 3)(M - 4) = M^2 - M - 12。M を x - 2y に戻して、(x - 2y)^2 - (x - 2y) - 12 = x^2 - 4xy + 4y^2 - x + 2y - 12 となります。",
+      "error_pattern_candidates": [
+        "variable_handling_error",
+        "sign_error"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "teacher_intervention_needed"
+      ]
+    },
+    {
+      "full_unit_id": "quadratic_expressions_expansion",
+      "unit_id": "quadratic_expressions",
+      "sub_unit": "expansion",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "hard",
+      "question_text": "次の式を展開して、簡単にしなさい。\n(x + 3)(x - 3) - (x - 1)^2",
+      "diagram": null,
+      "correct_answer": "2x - 10",
+      "explanation_base": "それぞれを展開すると、(x^2 - 9) - (x^2 - 2x + 1) となります。かっこを外して符号に注意しながらまとめると、x^2 - 9 - x^2 + 2x - 1 = 2x - 10 となります。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "operation_confusion"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "explain_differently"
+      ]
+    },
+    {
+      "full_unit_id": "quadratic_expressions_expansion",
+      "unit_id": "quadratic_expressions",
+      "sub_unit": "expansion",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "normal",
+      "question_text": "乗法公式を利用して、次の計算をしなさい。\n98^2",
+      "diagram": null,
+      "correct_answer": "9604",
+      "explanation_base": "98 を 100 - 2 と考えます。(100 - 2)^2 = 100^2 - 2×100×2 + 2^2 = 10000 - 400 + 4 = 9604 となります。",
+      "error_pattern_candidates": [
+        "prerequisite_gap",
+        "formula_setup_error"
+      ],
+      "intervention_candidates": [
+        "fallback_prerequisite",
+        "explain_differently"
+      ]
+    },
+    {
+      "full_unit_id": "quadratic_expressions_expansion",
+      "unit_id": "quadratic_expressions",
+      "sub_unit": "expansion",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "hard",
+      "question_text": "次の式を展開しなさい。\n(a + b + c)(a - b - c)",
+      "diagram": null,
+      "correct_answer": "a^2 - b^2 - 2bc - c^2",
+      "explanation_base": "後の式のかっこ内を -(b + c) とまとめると、(a + (b + c))(a - (b + c)) となります。b + c を M とすると、(a + M)(a - M) = a^2 - M^2。M を戻して a^2 - (b + c)^2 = a^2 - (b^2 + 2bc + c^2) = a^2 - b^2 - 2bc - c^2 となります。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "sign_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "teacher_intervention_needed"
+      ]
+    }
+  ]
+}

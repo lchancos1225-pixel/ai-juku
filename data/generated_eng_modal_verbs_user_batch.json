@@ -1,0 +1,709 @@
+{
+  "problems": [
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_modal_verbs",
+      "unit_id": "eng_modal_verbs",
+      "sub_unit": "modal_verbs",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に正しい助動詞を書きなさい。\n「You ( ) study harder. (もっと勉強しなければなりません)」",
+      "correct_answer": "must",
+      "hint_1": "「〜しなければならない」は must を使います。",
+      "hint_2": "must + 動詞原形の形です。",
+      "explanation_base": "You must study harder.（義務）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_modal_verbs",
+      "unit_id": "eng_modal_verbs",
+      "sub_unit": "modal_verbs",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に正しい助動詞を書きなさい。\n「She ( ) see a doctor. (医者に行かなければならない)」",
+      "correct_answer": "must",
+      "hint_1": "「〜しなければならない」は must を使います。",
+      "hint_2": "must + 動詞原形の形です。",
+      "explanation_base": "She must see a doctor.（義務）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_modal_verbs",
+      "unit_id": "eng_modal_verbs",
+      "sub_unit": "modal_verbs",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に正しい助動詞を書きなさい。\n「We ( ) be quiet in the library. (静かにしなければならない)」",
+      "correct_answer": "must",
+      "hint_1": "「〜しなければならない」は must を使います。",
+      "hint_2": "must + 動詞原形の形です。",
+      "explanation_base": "We must be quiet in the library.（義務）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_modal_verbs",
+      "unit_id": "eng_modal_verbs",
+      "sub_unit": "modal_verbs",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に正しい助動詞を書きなさい。\n「You ( ) run in the hallway. (廊下で走ってはいけない)」",
+      "correct_answer": "must not",
+      "hint_1": "「〜してはいけない」は must not を使います。",
+      "hint_2": "must not + 動詞原形で禁止を表します。",
+      "explanation_base": "You must not run in the hallway.（禁止）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_modal_verbs",
+      "unit_id": "eng_modal_verbs",
+      "sub_unit": "modal_verbs",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に正しい助動詞を書きなさい。\n「He ( ) exercise more. (もっと運動すべき)」",
+      "correct_answer": "should",
+      "hint_1": "「〜すべきだ・〜した方がよい」は should を使います。",
+      "hint_2": "should + 動詞原形で助言を表します。",
+      "explanation_base": "He should exercise more.（助言）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_modal_verbs",
+      "unit_id": "eng_modal_verbs",
+      "sub_unit": "modal_verbs",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に正しい助動詞を書きなさい。\n「You ( ) sleep early. (早く寝た方がいい)」",
+      "correct_answer": "should",
+      "hint_1": "「〜した方がよい（助言）」は should を使います。",
+      "hint_2": "should + 動詞原形で助言を表します。",
+      "explanation_base": "You should sleep early.（助言）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_modal_verbs",
+      "unit_id": "eng_modal_verbs",
+      "sub_unit": "modal_verbs",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に正しい助動詞を書きなさい。\n「She ( ) be right. (正しいかもしれない)」",
+      "correct_answer": "may",
+      "hint_1": "「〜かもしれない（推量）」は may を使います。",
+      "hint_2": "may + 動詞原形で推量を表します。",
+      "explanation_base": "She may be right.（推量）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_modal_verbs",
+      "unit_id": "eng_modal_verbs",
+      "sub_unit": "modal_verbs",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に正しい助動詞を書きなさい。\n「( ) I use your pen? (使ってもいいですか)」",
+      "correct_answer": "May",
+      "hint_1": "「〜してもよいですか（許可）」は May を文頭に置きます。",
+      "hint_2": "May I + 動詞原形〜? で許可を求めます。",
+      "explanation_base": "May I use your pen?（許可）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_modal_verbs",
+      "unit_id": "eng_modal_verbs",
+      "sub_unit": "modal_verbs",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に正しい助動詞を書きなさい。\n「You ( ) not use your phone here. (使ってはいけない)」",
+      "correct_answer": "must",
+      "hint_1": "「〜してはいけない（禁止）」は must not を使います。",
+      "hint_2": "must not + 動詞原形で禁止を表します。",
+      "explanation_base": "You must not use your phone here.（禁止）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_modal_verbs",
+      "unit_id": "eng_modal_verbs",
+      "sub_unit": "modal_verbs",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に正しい助動詞を書きなさい。\n「She ( ) not go alone. (一人で行かない方がいい)」",
+      "correct_answer": "should",
+      "hint_1": "「〜しない方がよい（否定の助言）」は should not です。",
+      "hint_2": "should not + 動詞原形で否定の助言を表します。",
+      "explanation_base": "She should not go alone.（否定の助言）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_modal_verbs",
+      "unit_id": "eng_modal_verbs",
+      "sub_unit": "modal_verbs",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「あなたは今すぐ出発しなければなりません。」",
+      "correct_answer": "You must leave now.",
+      "hint_1": "must + 動詞原形で義務を表します。",
+      "hint_2": "You must 動詞原形〜 の形にします。",
+      "explanation_base": "You must leave now.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_modal_verbs",
+      "unit_id": "eng_modal_verbs",
+      "sub_unit": "modal_verbs",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「もっと水を飲んだ方がいいですよ。」",
+      "correct_answer": "You should drink more water.",
+      "hint_1": "should + 動詞原形で助言を表します。",
+      "hint_2": "You should 動詞原形〜 の形にします。",
+      "explanation_base": "You should drink more water.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_modal_verbs",
+      "unit_id": "eng_modal_verbs",
+      "sub_unit": "modal_verbs",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「この情報は間違っているかもしれません。」",
+      "correct_answer": "This information may be wrong.",
+      "hint_1": "may + 動詞原形で推量を表します。",
+      "hint_2": "This information may 動詞原形〜 の形にします。",
+      "explanation_base": "This information may be wrong.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_modal_verbs",
+      "unit_id": "eng_modal_verbs",
+      "sub_unit": "modal_verbs",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「ここでは写真を撮ってはいけません。」",
+      "correct_answer": "You must not take pictures here.",
+      "hint_1": "must not + 動詞原形で禁止を表します。",
+      "hint_2": "You must not 動詞原形〜 の形にします。",
+      "explanation_base": "You must not take pictures here.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_modal_verbs",
+      "unit_id": "eng_modal_verbs",
+      "sub_unit": "modal_verbs",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「彼女は今日、学校を休んだ方がよかったかもしれません。」",
+      "correct_answer": "She should have stayed home today.",
+      "hint_1": "should have + 過去分詞で「〜すべきだった」を表します。",
+      "hint_2": "She should have 過去分詞〜 の形にします。",
+      "explanation_base": "She should have stayed home today.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_modal_verbs",
+      "unit_id": "eng_modal_verbs",
+      "sub_unit": "modal_verbs",
+      "problem_type": "mini_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に正しい助動詞を書きなさい。\n「You ( ) be careful on the stairs.」",
+      "correct_answer": "should",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "You should be careful on the stairs.（助言）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_modal_verbs"
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_modal_verbs",
+      "unit_id": "eng_modal_verbs",
+      "sub_unit": "modal_verbs",
+      "problem_type": "mini_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に正しい助動詞を書きなさい。\n「You ( ) not enter this room.」",
+      "correct_answer": "must",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "You must not enter this room.（禁止）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_modal_verbs"
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_modal_verbs",
+      "unit_id": "eng_modal_verbs",
+      "sub_unit": "modal_verbs",
+      "problem_type": "mini_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「私はもっと早く起きなければなりません。」",
+      "correct_answer": "I must wake up earlier.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "I must wake up earlier.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_modal_verbs"
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_modal_verbs",
+      "unit_id": "eng_modal_verbs",
+      "sub_unit": "modal_verbs",
+      "problem_type": "mini_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に正しい助動詞を書きなさい。\n「She ( ) be at home. (家にいるかもしれない)」",
+      "correct_answer": "may",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "She may be at home.（推量）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_modal_verbs"
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_modal_verbs",
+      "unit_id": "eng_modal_verbs",
+      "sub_unit": "modal_verbs",
+      "problem_type": "mini_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「あなたは遅くまで起きているべきではありません。」",
+      "correct_answer": "You should not stay up late.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "You should not stay up late.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_modal_verbs"
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_modal_verbs",
+      "unit_id": "eng_modal_verbs",
+      "sub_unit": "modal_verbs",
+      "problem_type": "unit_test",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に正しい助動詞を書きなさい。\n「We ( ) follow the rules.」",
+      "correct_answer": "must",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "We must follow the rules.（義務）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_modal_verbs"
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_modal_verbs",
+      "unit_id": "eng_modal_verbs",
+      "sub_unit": "modal_verbs",
+      "problem_type": "unit_test",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に正しい助動詞を書きなさい。\n「He ( ) try harder.」",
+      "correct_answer": "should",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "He should try harder.（助言）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_modal_verbs"
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_modal_verbs",
+      "unit_id": "eng_modal_verbs",
+      "sub_unit": "modal_verbs",
+      "problem_type": "unit_test",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に正しい助動詞を書きなさい。\n「It ( ) rain tonight.」",
+      "correct_answer": "may",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "It may rain tonight.（推量）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_modal_verbs"
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_modal_verbs",
+      "unit_id": "eng_modal_verbs",
+      "sub_unit": "modal_verbs",
+      "problem_type": "unit_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「廊下では走ってはいけません。」",
+      "correct_answer": "You must not run in the hallway.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "You must not run in the hallway.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_modal_verbs"
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_modal_verbs",
+      "unit_id": "eng_modal_verbs",
+      "sub_unit": "modal_verbs",
+      "problem_type": "unit_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「彼女は今日、休んだ方がいい。」",
+      "correct_answer": "She should rest today.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "She should rest today.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_modal_verbs"
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_modal_verbs",
+      "unit_id": "eng_modal_verbs",
+      "sub_unit": "modal_verbs",
+      "problem_type": "unit_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「あの話は本当かもしれません。」",
+      "correct_answer": "That story may be true.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "That story may be true.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_modal_verbs"
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_modal_verbs",
+      "unit_id": "eng_modal_verbs",
+      "sub_unit": "modal_verbs",
+      "problem_type": "unit_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に正しい助動詞を書きなさい。\n「You ( ) not smoke here.」",
+      "correct_answer": "must",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "You must not smoke here.（禁止）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_modal_verbs"
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_modal_verbs",
+      "unit_id": "eng_modal_verbs",
+      "sub_unit": "modal_verbs",
+      "problem_type": "unit_test",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「あなたはもっと野菜を食べるべきです。」",
+      "correct_answer": "You should eat more vegetables.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "You should eat more vegetables.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_modal_verbs"
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_modal_verbs",
+      "unit_id": "eng_modal_verbs",
+      "sub_unit": "modal_verbs",
+      "problem_type": "unit_test",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「この薬はあなたの助けになるかもしれません。」",
+      "correct_answer": "This medicine may help you.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "This medicine may help you.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_modal_verbs"
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_modal_verbs",
+      "unit_id": "eng_modal_verbs",
+      "sub_unit": "modal_verbs",
+      "problem_type": "unit_test",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「彼はその会議に出席しなければなりませんか？」",
+      "correct_answer": "Must he attend the meeting?",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "Must he attend the meeting?",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_modal_verbs"
+    }
+  ]
+}

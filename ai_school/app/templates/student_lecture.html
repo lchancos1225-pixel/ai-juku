@@ -1,0 +1,295 @@
+{% extends "base.html" %}
+{% block content %}
+
+{# ステップデータ取り出し #}
+{% set steps = lecture_steps.steps if lecture_steps else [] %}
+{% set total = steps | length %}
+
+<div class="student-top-bar">
+  <div class="student-top-bar__info">
+    <span class="student-top-bar__name">{{ student.display_name }} さん</span>
+    <span class="state-chip">{{ unit.display_name }}</span>
+  </div>
+  <div style="display: flex; gap: 8px;">
+    <button class="btn btn--voice" @click="toggleVoice()" :class="voiceEnabled ? 'is-active' : ''">
+      <span x-show="!voiceEnabled">🔇 音声オフ</span>
+      <span x-show="voiceEnabled">🔊 音声オン</span>
+    </button>
+    <a class="btn btn--back" href="/students/{{ student.student_id }}" aria-label="問題画面に戻る">問題に戻る</a>
+  </div>
+</div>
+
+{# ===== ステップ解説メインUI ===== #}
+<div class="lec-wrapper" id="lec-wrapper"
+     x-data="lectureApp({{ total }})"
+     x-init="init()">
+
+  {# プログレスバー #}
+  <div class="lec-progress">
+    <div class="lec-progress__bar" :style="'width: ' + Math.round((current / total) * 100) + '%'"></div>
+    <span class="lec-progress__label" x-text="current + ' / ' + total + ' ステップ'"></span>
+  </div>
+
+  {# ステップカード（各ステップをJinja2でレンダリング、Alpine.jsで表示制御） #}
+  {% for step in steps %}
+  {% set loop_idx = loop.index %}
+  <div class="lec-step" id="lec-step-{{ loop_idx }}"
+       data-speech-text="{{ step.title | striptags | e }}。{{ step.body | striptags | e }}"
+       x-show="current === {{ loop_idx }}"
+       x-transition:enter="lec-slide-enter"
+       x-transition:enter-start="lec-slide-enter-start"
+       x-transition:enter-end="lec-slide-enter-end">
+
+    {# ステップヘッダー #}
+    <div class="lec-step__header">
+      <span class="lec-step__num">STEP {{ step.id }}</span>
+      <h2 class="lec-step__title">{{ step.title }}</h2>
+    </div>
+
+    {# 本文 #}
+    <p class="lec-step__body">{{ step.body }}</p>
+
+    {# 数式 #}
+    {% if step.formula %}
+    <div class="lec-formula">{{ step.formula }}</div>
+    {% endif %}
+
+    {# SVG図解エリア #}
+    {% set vt = step.visual_type %}
+    {% set vp = step.visual_params %}
+
+    {% if vt == "number_line" and vp %}
+    {# ===== 数直線 SVG ===== #}
+    {% set rmin = vp.range_min | int %}
+    {% set rmax = vp.range_max | int %}
+    {% set rrange = rmax - rmin %}
+    {% set svg_w = 280 %}
+    {% set svg_h = 80 %}
+    <div class="lec-visual" id="lec-visual-{{ loop_idx }}" data-anim="number_line" style="--total-arrows: {{ vp.moves | length }}">
+      <svg viewBox="0 0 {{ svg_w }} {{ svg_h }}" class="lec-svg lec-svg--number-line">
+        {# 軸 #}
+        <line x1="10" y1="40" x2="{{ svg_w - 10 }}" y2="40" stroke="#c9d7ea" stroke-width="2"/>
+        {# 目盛り #}
+        {% for i in range(rmin, rmax + 1) %}
+        {% set x = ((i - rmin) / rrange * (svg_w - 20) + 10) | int %}
+        <line x1="{{ x }}" y1="35" x2="{{ x }}" y2="45" stroke="#c9d7ea" stroke-width="1.5"/>
+        <text x="{{ x }}" y="60" text-anchor="middle" font-size="10" fill="#6b7a8d">{{ i }}</text>
+        {% endfor %}
+        {# 原点マーカー #}
+        {% set origin_x = ((0 - rmin) / rrange * (svg_w - 20) + 10) | int %}
+        <circle cx="{{ origin_x }}" cy="40" r="4" fill="#2b6cb0"/>
+        {# 移動矢印（CSS animation で描画） #}
+        {% for move in vp.moves %}
+        {% set x1 = ((move.from - rmin) / rrange * (svg_w - 20) + 10) | int %}
+        {% set x2 = ((move.to - rmin) / rrange * (svg_w - 20) + 10) | int %}
+        {% set dir = 1 if x2 > x1 else -1 %}
+        <path class="lec-arrow" style="--arrow-idx: {{ loop.index0 }}" d="M {{ x1 }} 32 L {{ x2 }} 32"
+              stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round"
+              fill="none" marker-end="url(#arrow-head)"/>
+        <text x="{{ ((x1 + x2) / 2) | int }}" y="24" text-anchor="middle" font-size="10" fill="#f59e0b" class="lec-arrow-label" style="--arrow-idx: {{ loop.index0 }}">{{ move.label }}</text>
+        {% endfor %}
+        {# 結果マーカー #}
+        {% if vp.result is defined %}
+        {% set res_x = ((vp.result - rmin) / rrange * (svg_w - 20) + 10) | int %}
+        <circle cx="{{ res_x }}" cy="40" fill="#ef4444" class="lec-result-dot"/>
+        <text x="{{ res_x }}" y="20" text-anchor="middle" font-size="11" font-weight="bold" fill="#ef4444">{{ vp.result }}</text>
+        {% endif %}
+        {# 矢印ヘッド定義 #}
+        <defs>
+          <marker id="arrow-head" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+            <polygon points="0 0, 8 3, 0 6" fill="#f59e0b"/>
+          </marker>
+        </defs>
+      </svg>
+    </div>
+
+    {% elif vt == "fraction_bar" and vp %}
+    {# ===== 分数バー SVG ===== #}
+    {% set denom = vp.denominator | int %}
+    {% set nums = vp.numerators %}
+    <div class="lec-visual" id="lec-visual-{{ loop_idx }}" data-anim="fraction_bar">
+      <svg viewBox="0 0 280 90" class="lec-svg lec-svg--fraction-bar">
+        {# バー1 #}
+        <rect x="10" y="10" width="120" height="28" rx="4" fill="#dbeafe" stroke="#93c5fd" stroke-width="1.5"/>
+        {% if nums | length > 0 %}
+        {% set w1 = (nums[0] / denom * 120) | int %}
+        <rect x="10" y="10" height="28" rx="4" fill="#2b6cb0" class="lec-frac-fill" style="--frac-idx: 1; --target-width: {{ w1 }}px; width: {{ w1 }}px"/>
+        <text x="{{ 10 + w1 / 2 }}" y="29" text-anchor="middle" font-size="12" fill="white" font-weight="bold">{{ nums[0] }}/{{ denom }}</text>
+        {% endif %}
+        {# バー2 #}
+        {% if nums | length > 1 %}
+        <rect x="10" y="50" width="120" height="28" rx="4" fill="#dbeafe" stroke="#93c5fd" stroke-width="1.5"/>
+        {% set w2 = (nums[1] / denom * 120) | int %}
+        <rect x="10" y="50" height="28" rx="4" fill="#60a8f0" class="lec-frac-fill" style="--frac-idx: 2; --target-width: {{ w2 }}px; width: {{ w2 }}px"/>
+        <text x="{{ 10 + w2 / 2 }}" y="69" text-anchor="middle" font-size="12" fill="white" font-weight="bold">{{ nums[1] }}/{{ denom }}</text>
+        {% endif %}
+        {# 結果 #}
+        {% if vp.result_num is defined %}
+        <text x="200" y="46" font-size="14" fill="#1e2a39" font-weight="bold">= {{ vp.result_num }}/{{ vp.result_den }}</text>
+        {% endif %}
+      </svg>
+    </div>
+
+    {% elif vt == "area_grid" and vp %}
+    {# ===== 面積グリッド SVG ===== #}
+    {% set rows = vp.rows | int %}
+    {% set cols = vp.cols | int %}
+    {% set cell_w = (220 / cols) | int %}
+    {% set cell_h = (120 / rows) | int %}
+    <div class="lec-visual" id="lec-visual-{{ loop_idx }}" data-anim="area_grid">
+      <svg viewBox="0 0 {{ cols * cell_w + 20 }} {{ rows * cell_h + 20 }}" class="lec-svg lec-svg--area-grid">
+        {% for r in range(rows) %}
+        {% for c in range(cols) %}
+        {% set cx = c * cell_w + 10 %}
+        {% set cy = r * cell_h + 10 %}
+        {% set delay_idx = r * cols + c %}
+        <rect x="{{ cx }}" y="{{ cy }}" width="{{ cell_w - 2 }}" height="{{ cell_h - 2 }}"
+              rx="2"
+              fill="{{ '#bfdbfe' if (r + 1 == vp.highlight_row or c + 1 == vp.highlight_col) else '#eff6ff' }}"
+              stroke="#93c5fd" stroke-width="1"
+              class="lec-grid-cell" style="--delay-idx: {{ delay_idx }}"/>
+        {% endfor %}
+        {% endfor %}
+      </svg>
+    </div>
+
+    {% elif vt == "pen_calc" and vp %}
+    {# ===== 筆算 SVG ===== #}
+    {% set lines = vp.lines %}
+    <div class="lec-visual" id="lec-visual-{{ loop_idx }}" data-anim="pen_calc">
+      <svg viewBox="0 0 200 {{ lines | length * 30 + 10 }}" class="lec-svg lec-svg--pen-calc">
+        {% for line in lines %}
+        <text x="100" y="{{ loop.index * 30 - 5 }}"
+              text-anchor="middle"
+              font-size="18"
+              font-family="monospace"
+              fill="{{ '#ef4444' if loop.last else '#1e2a39' }}"
+              class="lec-pen-line" style="--line-idx: {{ loop.index0 }}">{{ line }}</text>
+        {% endfor %}
+      </svg>
+    </div>
+
+    {% else %}
+    {# text_only または未対応タイプ #}
+    <div class="lec-visual lec-visual--text" id="lec-visual-{{ loop_idx }}">
+      <span class="lec-visual__icon">💡</span>
+    </div>
+    {% endif %}
+
+    {# ハイライト吹き出し #}
+    {% if step.highlight %}
+    <div class="lec-highlight">
+      <span class="lec-highlight__icon">⭐</span>
+      <span class="lec-highlight__text">{{ step.highlight }}</span>
+    </div>
+    {% endif %}
+
+    {# ナビゲーションボタン #}
+    <div class="lec-nav">
+      {% if loop_idx < total %}
+      <button class="lec-nav__next" @click="next()" type="button">次のステップ</button>
+      {% else %}
+      <a class="lec-nav__finish" href="/students/{{ student.student_id }}">
+        🎉 問題に挑戦する！
+      </a>
+      {% endif %}
+    </div>
+
+  </div>
+  {% endfor %}
+
+  {# ステップが0の場合のフォールバック #}
+  {% if not steps %}
+  <section class="card lecture-card">
+    <p class="section-label">単元レクチャー</p>
+    <div class="lecture-body">{{ unit.intro_html | safe if unit.intro_html else "レクチャーを準備中です。" }}</div>
+  </section>
+  <div class="lecture-actions">
+    <a class="primary-button" href="/students/{{ student.student_id }}">⚔️ 問題を解く</a>
+  </div>
+  {% endif %}
+
+  {# 完了オーバーレイ #}
+  <div class="lec-complete-overlay" x-show="completed" x-transition>
+    <div class="lec-complete-box">
+      <img src="/static/characters/mein_y1.png" alt="Mein" class="lec-complete__mein"/>
+      <div class="lec-complete__title">レクチャー完了！</div>
+      <p class="lec-complete__body">解き方がわかったかな？<br>さっそく問題にチャレンジしよう！</p>
+      <a class="lec-nav__finish" href="/students/{{ student.student_id }}">
+        問題を解く →
+      </a>
+    </div>
+  </div>
+
+</div>
+
+<script>
+function lectureApp(total) {
+  return {
+    total: total,
+    current: 1,
+    completed: false,
+    voiceEnabled: false,
+    synth: window.speechSynthesis,
+    
+    init() {
+      this.triggerVisualAnim(1);
+      // Pre-load voices to avoid delay on first click
+      if (this.synth) this.synth.getVoices();
+    },
+    toggleVoice() {
+      this.voiceEnabled = !this.voiceEnabled;
+      if (this.voiceEnabled) {
+        this.speakCurrent();
+      } else {
+        if (this.synth) this.synth.cancel();
+      }
+    },
+    speakCurrent() {
+      if (!this.voiceEnabled || !this.synth) return;
+      this.synth.cancel(); // Stop any ongoing speech
+      
+      const stepEl = document.getElementById('lec-step-' + this.current);
+      if (!stepEl) return;
+      
+      const text = stepEl.getAttribute('data-speech-text');
+      if (!text) return;
+      
+      const utterance = new SpeechSynthesisUtterance(text);
+      utterance.lang = 'ja-JP';
+      utterance.rate = 1.1; // Slightly faster for an energetic AI teacher
+      
+      const voices = this.synth.getVoices();
+      const jaVoices = voices.filter(v => v.lang.includes('ja'));
+      if (jaVoices.length > 0) {
+        // Prefer natural voices if available
+        utterance.voice = jaVoices.find(v => v.name.includes('Google') || v.name.includes('Nanami') || v.name.includes('Keita')) || jaVoices[0];
+      }
+      
+      this.synth.speak(utterance);
+    },
+    next() {
+      if (this.synth) this.synth.cancel(); // Stop speaking when moving to next
+      if (this.current < this.total) {
+        this.current++;
+        this.$nextTick(() => {
+          this.triggerVisualAnim(this.current);
+          this.speakCurrent();
+        });
+      } else {
+        this.completed = true;
+      }
+    },
+    triggerVisualAnim(stepIdx) {
+      const el = document.getElementById('lec-visual-' + stepIdx);
+      if (!el) return;
+      el.classList.remove('lec-visual--animating');
+      requestAnimationFrame(() => {
+        el.classList.add('lec-visual--animating');
+      });
+    }
+  };
+}
+</script>
+
+{% endblock %}

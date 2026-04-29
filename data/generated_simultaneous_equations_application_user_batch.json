@@ -1,0 +1,319 @@
+{
+  "problems": [
+    {
+      "full_unit_id": "simultaneous_equations_application",
+      "unit_id": "simultaneous_equations",
+      "sub_unit": "application",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "question_text": "りんごとみかんを合わせて10個買い、代金の合計が1000円でした。りんご1個の値段は120円、みかん1個の値段は80円です。りんごとみかんをそれぞれ何個買いましたか。",
+      "diagram": null,
+      "correct_answer": "りんご5個, みかん5個",
+      "hint_1": "りんごの個数を x 個、みかんの個数を y 個として、個数と代金について2つの式を作りましょう。",
+      "hint_2": "個数の式は x + y = 10 です。代金の式は 120x + 80y = 1000 になります。",
+      "explanation_base": "りんごを x 個、みかんを y 個とすると、x + y = 10 と 120x + 80y = 1000 の連立方程式になります。下の式を40で割ると 3x + 2y = 25 となり、上の式を2倍して引くと x = 5 となります。x = 5 を代入して y = 5 になります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "comprehension_gap"
+      ],
+      "intervention_candidates": [
+        "confirm_variable_meaning",
+        "explain_differently"
+      ]
+    },
+    {
+      "full_unit_id": "simultaneous_equations_application",
+      "unit_id": "simultaneous_equations",
+      "sub_unit": "application",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "question_text": "ノート1冊を150円、鉛筆1本を50円で売っています。ノートと鉛筆を合わせて8点買ったところ、合計金額は800円でした。ノートと鉛筆をそれぞれいくつ買いましたか。",
+      "diagram": null,
+      "correct_answer": "ノート4冊, 鉛筆4本",
+      "hint_1": "ノートを x 冊、鉛筆を y 本として式を立てましょう。",
+      "hint_2": "x + y = 8 と 150x + 50y = 800 の連立方程式を作ります。",
+      "explanation_base": "ノート x 冊、鉛筆 y 本として、x + y = 8 と 150x + 50y = 800 を作ります。代金の式を50で割ると 3x + y = 16 となり、これと x + y = 8 を引き算して 2x = 8 より x = 4 になります。y も 4 です。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "step_by_step_equation_check",
+        "retry_with_hint"
+      ]
+    },
+    {
+      "full_unit_id": "simultaneous_equations_application",
+      "unit_id": "simultaneous_equations",
+      "sub_unit": "application",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "question_text": "鶴と亀が合わせて15匹います。足の数の合計が46本であるとき、鶴と亀はそれぞれ何匹いますか。ただし、鶴の足は2本、亀の足は4本とします。",
+      "diagram": null,
+      "correct_answer": "鶴7匹, 亀8匹",
+      "hint_1": "鶴を x 匹、亀を y 匹として、匹数と足の数でそれぞれ式を作りましょう。",
+      "hint_2": "匹数の式は x + y = 15、足の数の式は 2x + 4y = 46 になります。",
+      "explanation_base": "鶴 x 匹、亀 y 匹とすると、x + y = 15 と 2x + 4y = 46 となります。匹数の式を2倍して 2x + 2y = 30 とし、足の数の式から引くと 2y = 16 より y = 8 です。代入して x = 7 になります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "comprehension_gap"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "step_by_step_equation_check"
+      ]
+    },
+    {
+      "full_unit_id": "simultaneous_equations_application",
+      "unit_id": "simultaneous_equations",
+      "sub_unit": "application",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "question_text": "ある遊園地の入場料は、大人2人と子供3人で1800円、大人1人と子供4人で1400円です。大人1人と子供1人の入場料はそれぞれいくらですか。",
+      "diagram": null,
+      "correct_answer": "大人600円, 子供200円",
+      "hint_1": "大人の入場料を x 円、子供の入場料を y 円として式を作りましょう。",
+      "hint_2": "2x + 3y = 1800 と x + 4y = 1400 の2つの式を連立させます。",
+      "explanation_base": "大人 x 円、子供 y 円とすると、2x + 3y = 1800 と x + 4y = 1400 の式ができます。下の式を2倍して 2x + 8y = 2800 にし、上の式から引くと 5y = 1000 より y = 200 になります。これを代入して x = 600 です。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "confirm_variable_meaning",
+        "step_by_step_equation_check"
+      ]
+    },
+    {
+      "full_unit_id": "simultaneous_equations_application",
+      "unit_id": "simultaneous_equations",
+      "sub_unit": "application",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "question_text": "あるクラスの生徒数は、男子と女子を合わせて35人です。また、男子の人数は女子の人数より3人多いそうです。男子と女子の人数をそれぞれ求めなさい。",
+      "diagram": null,
+      "correct_answer": "男子19人, 女子16人",
+      "hint_1": "男子を x 人、女子を y 人とします。男子が女子より3人多いことを式に表しましょう。",
+      "hint_2": "x + y = 35 と x - y = 3 (または x = y + 3) の2つの式を使います。",
+      "explanation_base": "男子 x 人、女子 y 人とすると、x + y = 35 と x - y = 3 の連立方程式になります。2つの式を足すと 2x = 38 となり x = 19 です。代入して y = 16 になります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "sign_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "review_sign_rules"
+      ]
+    },
+    {
+      "full_unit_id": "simultaneous_equations_application",
+      "unit_id": "simultaneous_equations",
+      "sub_unit": "application",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "question_text": "家から12km離れた駅まで行きました。最初は時速4kmで歩き、途中から時速8kmで走ったところ、全体で2時間かかりました。歩いた道のりと走った道のりをそれぞれ求めなさい。",
+      "diagram": null,
+      "correct_answer": "歩いた道のり4km, 走った道のり8km",
+      "hint_1": "歩いた道のりを x km、走った道のりを y km とします。距離の式と時間の式を作りましょう。",
+      "hint_2": "距離の式は x + y = 12 です。時間の式は (x/4) + (y/8) = 2 になります。",
+      "explanation_base": "歩いた道のりを x km、走った道のりを y km とすると、x + y = 12 と x/4 + y/8 = 2 になります。時間の式を8倍すると 2x + y = 16 となり、これから距離の式を引くと x = 4 になります。代入して y = 8 です。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "comprehension_gap"
+      ],
+      "intervention_candidates": [
+        "confirm_variable_meaning",
+        "explain_differently"
+      ]
+    },
+    {
+      "full_unit_id": "simultaneous_equations_application",
+      "unit_id": "simultaneous_equations",
+      "sub_unit": "application",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "question_text": "周囲が3000mの池があります。AさんとBさんが同じ地点から反対方向に同時に走り出すと10分で出会い、同じ方向に同時に走り出すとAさんがBさんを50分で追い抜きます。AさんとBさんの走る速さはそれぞれ分速何mですか。",
+      "diagram": null,
+      "correct_answer": "Aさん分速180m, Bさん分速120m",
+      "hint_1": "Aさんの速さを分速 x m、Bさんの速さを分速 y m とします。出会う時は2人の進んだ距離の和が3000m、追い抜く時は2人の進んだ距離の差が3000mになります。",
+      "hint_2": "10x + 10y = 3000 と 50x - 50y = 3000 の2つの式を連立させます。",
+      "explanation_base": "Aさんを分速 x m、Bさんを分速 y m とします。反対方向は 10x + 10y = 3000 より x + y = 300。同じ方向は 50x - 50y = 3000 より x - y = 60 となります。2つの式を足すと 2x = 360 より x = 180 です。代入して y = 120 になります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "sign_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "review_sign_rules"
+      ]
+    },
+    {
+      "full_unit_id": "simultaneous_equations_application",
+      "unit_id": "simultaneous_equations",
+      "sub_unit": "application",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "question_text": "2桁の自然数があります。十の位の数と一の位の数の和は12です。また、十の位の数と一の位の数を入れ替えてできる数は、元の数より18大きくなります。元の自然数を求めなさい。",
+      "diagram": null,
+      "correct_answer": "57",
+      "hint_1": "十の位の数を x、一の位の数を y とすると、元の数は 10x + y、入れ替えた数は 10y + x と表せます。",
+      "hint_2": "x + y = 12 と 10y + x = (10x + y) + 18 の2つの式を作ります。",
+      "explanation_base": "十の位を x、一の位を y とします。x + y = 12 と 10y + x = 10x + y + 18 の連立方程式になります。下の式を整理すると -9x + 9y = 18 より -x + y = 2 となります。上の式と足すと 2y = 14 より y = 7。x = 5 になるため、元の数は 57 です。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "variable_handling_error"
+      ],
+      "intervention_candidates": [
+        "confirm_variable_meaning",
+        "step_by_step_equation_check"
+      ]
+    },
+    {
+      "full_unit_id": "simultaneous_equations_application",
+      "unit_id": "simultaneous_equations",
+      "sub_unit": "application",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "question_text": "ある中学校の昨年の生徒数は、男女合わせて500人でした。今年は昨年に比べて男子が5%減り、女子が10%増えたため、全体の生徒数は505人になりました。昨年の男子と女子の人数をそれぞれ求めなさい。",
+      "diagram": null,
+      "correct_answer": "昨年の男子300人, 昨年の女子200人",
+      "hint_1": "昨年の男子を x 人、女子を y 人とします。増減した人数だけに注目して式を作ると簡単です。",
+      "hint_2": "全体で5人増えているので、-0.05x + 0.1y = 5 という式が作れます。",
+      "explanation_base": "昨年の男子を x 人、女子を y 人とします。x + y = 500 と -0.05x + 0.1y = 5 の連立方程式を作ります。下の式を100倍すると -5x + 10y = 500 となり、-x + 2y = 100 になります。x + y = 500 と足して 3y = 600 より y = 200 です。代入して x = 300 になります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "comprehension_gap"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "step_by_step_equation_check"
+      ]
+    },
+    {
+      "full_unit_id": "simultaneous_equations_application",
+      "unit_id": "simultaneous_equations",
+      "sub_unit": "application",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "question_text": "定価の合計が5000円の品物Aと品物Bがあります。Aは定価の2割引き、Bは定価の1割引きで買ったところ、代金の合計は4300円になりました。品物Aと品物Bの定価をそれぞれ求めなさい。",
+      "diagram": null,
+      "correct_answer": "Aの定価2000円, Bの定価3000円",
+      "hint_1": "Aの定価を x 円、Bの定価を y 円とします。2割引きは元の値段の 0.8 倍（または 80%）になります。",
+      "hint_2": "x + y = 5000 と 0.8x + 0.9y = 4300 の2つの式を連立させます。",
+      "explanation_base": "Aの定価を x 円、Bの定価を y 円とします。x + y = 5000 と 0.8x + 0.9y = 4300 の連立方程式を作ります。下の式を10倍すると 8x + 9y = 43000。上の式を8倍した 8x + 8y = 40000 を引くと y = 3000 になります。代入して x = 2000 です。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "confirm_variable_meaning",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "simultaneous_equations_application",
+      "unit_id": "simultaneous_equations",
+      "sub_unit": "application",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "question_text": "5%の食塩水と10%の食塩水を混ぜて、8%の食塩水を500g作りたいと思います。5%と10%の食塩水をそれぞれ何gずつ混ぜればよいですか。",
+      "diagram": null,
+      "correct_answer": "5%の食塩水200g, 10%の食塩水300g",
+      "hint_1": "5%の食塩水を x g、10%の食塩水を y g とします。全体の重さの式と、含まれる食塩の重さの式の2つを作りましょう。",
+      "hint_2": "食塩の重さの式は 0.05x + 0.1y = 500 × 0.08 になります。",
+      "explanation_base": "5%を x g、10%を y g とします。x + y = 500 と 0.05x + 0.1y = 40 の式になります。下の式を100倍すると 5x + 10y = 4000 となり、5で割ると x + 2y = 800 です。ここから x + y = 500 を引くと y = 300 になります。代入して x = 200 です。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "prerequisite_gap"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "fallback_prerequisite"
+      ]
+    },
+    {
+      "full_unit_id": "simultaneous_equations_application",
+      "unit_id": "simultaneous_equations",
+      "sub_unit": "application",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "question_text": "下の図のような長方形があります。周の長さは50cmで、縦の長さの3倍は横の長さの2倍と等しくなっています。この長方形の縦と横の長さを求めなさい。",
+      "diagram": "  +-----------------+\n  |                 |\n  |                 | 縦 x cm\n  |                 |\n  +-----------------+\n        横 y cm",
+      "correct_answer": "縦10cm, 横15cm",
+      "hint_1": "長方形の周の長さは、(縦 + 横) × 2 で求められます。これが50cmになります。",
+      "hint_2": "2(x + y) = 50 と 3x = 2y の2つの式を作りましょう。",
+      "explanation_base": "縦を x cm、横を y cm とします。周の長さから 2(x + y) = 50 より x + y = 25。長さの関係から 3x = 2y となります。上の式を y = 25 - x にして代入すると 3x = 2(25 - x) となり、3x = 50 - 2x より 5x = 50 で x = 10 です。y = 15 になります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "comprehension_gap"
+      ],
+      "intervention_candidates": [
+        "confirm_variable_meaning",
+        "step_by_step_equation_check"
+      ]
+    },
+    {
+      "full_unit_id": "simultaneous_equations_application",
+      "unit_id": "simultaneous_equations",
+      "sub_unit": "application",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "question_text": "ある列車が、長さ600mの鉄橋を渡り始めてから渡り終わるまでに40秒かかりました。また、同じ速さで長さ1300mのトンネルに入り始めてから完全に出るまでに75秒かかりました。この列車の長さと速さ（秒速）を求めなさい。",
+      "diagram": null,
+      "correct_answer": "列車の長さ200m, 秒速20m",
+      "hint_1": "列車の長さを x m、速さを秒速 y m とします。渡りきるまでに進む距離は、「鉄橋（またはトンネル）の長さ ＋ 列車の長さ」になります。",
+      "hint_2": "x + 600 = 40y と x + 1300 = 75y の2つの式を作ります。",
+      "explanation_base": "列車の長さを x m、速さを秒速 y m とします。x + 600 = 40y と x + 1300 = 75y の連立方程式を作ります。下の式から上の式を引くと 700 = 35y となり y = 20 です。これを上の式に代入して x + 600 = 800 より x = 200 になります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "comprehension_gap"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "step_by_step_equation_check"
+      ]
+    },
+    {
+      "full_unit_id": "simultaneous_equations_application",
+      "unit_id": "simultaneous_equations",
+      "sub_unit": "application",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "question_text": "原価の合計が8000円の2つの品物A, Bがあります。Aには原価の3割、Bには原価の2割の利益を見込んで定価をつけましたが、Aは定価の100円引き、Bは定価の200円引きで売ったため、全体の利益は1700円になりました。品物Aと品物Bの原価をそれぞれ求めなさい。",
+      "diagram": null,
+      "correct_answer": "Aの原価4000円, Bの原価4000円",
+      "hint_1": "Aの原価を x 円、Bの原価を y 円とします。利益についての式を作るか、売れた値段の合計についての式を作りましょう。",
+      "hint_2": "利益の式を作るなら、(0.3x - 100) + (0.2y - 200) = 1700 になります。",
+      "explanation_base": "原価を x 円、y 円とします。x + y = 8000 と 0.3x - 100 + 0.2y - 200 = 1700 の連立方程式になります。下の式を整理して 0.3x + 0.2y = 2000、10倍して 3x + 2y = 20000 となります。上の式を2倍した 2x + 2y = 16000 を引くと x = 4000 です。y も 4000 になります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "step_by_step_equation_check"
+      ]
+    },
+    {
+      "full_unit_id": "simultaneous_equations_application",
+      "unit_id": "simultaneous_equations",
+      "sub_unit": "application",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "question_text": "ある中学校のバスケットボール部とバレーボール部の昨年の部員数は合わせて75人でした。今年は昨年に比べ、バスケ部が20%増え、バレー部が10%減ったため、合わせて78人になりました。今年のバスケ部とバレー部の部員数をそれぞれ求めなさい。",
+      "diagram": null,
+      "correct_answer": "今年のバスケ部42人, 今年のバレー部36人",
+      "hint_1": "「昨年の」バスケ部を x 人、バレー部を y 人として式を作りましょう。答えとして求められているのは「今年の」人数であることに注意しましょう。",
+      "hint_2": "人数の増減について、0.2x - 0.1y = 3 という式が作れます。ここから昨年の人数を出してから計算します。",
+      "explanation_base": "昨年のバスケ部を x 人、バレー部を y 人とします。x + y = 75 と 0.2x - 0.1y = 3 の式を作ります。下の式を10倍すると 2x - y = 30 になり、上の式と足すと 3x = 105 より x = 35 です。y = 40 になります。今年のバスケ部は 35 × 1.2 = 42人、バレー部は 40 × 0.9 = 36人です。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "retry_with_hint"
+      ]
+    }
+  ]
+}

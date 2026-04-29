@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="card weekly-report-page today-progress-page">
+
+  <div class="wr-top-bar">
+    <div>
+      <p class="section-label">今日の進捗</p>
+      <h2>{{ student.display_name }} さん</h2>
+      <p class="meta-note">
+        {{ classroom.classroom_name if classroom else "" }}
+        ／ 中{{ student.grade - 6 }}
+        ／ 診断: {{ diagnostic_label_ja }}
+      </p>
+    </div>
+    <div class="wr-top-actions">
+      {% if has_logs %}
+      <button type="button" class="primary-button wr-copy-btn" id="tp-copy-btn" onclick="copyTodayProgress()">
+        📋 LINEにコピー
+      </button>
+      {% endif %}
+      <a class="secondary-link" href="/teachers/dashboard">← ダッシュボードへ</a>
+    </div>
+  </div>
+
+  <div id="tp-copy-done" class="wr-copy-done" style="display:none">
+    ✅ コピーしました！LINEにそのまま貼り付けてください。
+  </div>
+
+  <p class="tp-date-line">📅 {{ jst_date_header }}</p>
+
+  {% if not has_logs %}
+  <p class="tp-empty">本日の学習記録がありません</p>
+  {% else %}
+
+  <div class="wr-preview-card">
+    <div class="wr-section">
+      <div class="wr-section-title">学習サマリー</div>
+      <p class="tp-summary-line">取り組んだ単元: {{ unit_join or "—" }}</p>
+      <p class="tp-summary-line">問題数: {{ total_count }}問 ／ 正解: {{ correct_count }}問（{{ rate }}%）</p>
+      <p class="tp-summary-line">ヒント使用: {{ hint_total }}回</p>
+      {% if top_error_patterns %}
+      <p class="tp-summary-line">つまずき傾向（不正解より）:
+        {% for pattern, cnt in top_error_patterns %}
+        <span class="wr-error-badge">{{ error_labels.get(pattern, pattern) }} ×{{ cnt }}</span>
+        {% endfor %}
+      </p>
+      {% endif %}
+    </div>
+
+    <div class="wr-section">
+      <div class="wr-section-title">保護者向け文面</div>
+      <textarea class="wr-memo tp-parent-text" id="tp-parent-text" rows="10">{{ parent_message }}</textarea>
+      <p class="meta-note tp-hint">文面は編集してからコピーできます（クリップボードへのコピーのみ。LINE Messaging API による自動送信は未実装です）。</p>
+    </div>
+  </div>
+  {% endif %}
+
+</section>
+
+<script>
+function copyTodayProgress() {
+  const text = document.getElementById('tp-parent-text').value.trim();
+  if (!text) return;
+  navigator.clipboard.writeText(text).then(() => {
+    const done = document.getElementById('tp-copy-done');
+    done.style.display = '';
+    setTimeout(() => { done.style.display = 'none'; }, 4000);
+  }).catch(() => {
+    const ta = document.createElement('textarea');
+    ta.value = text;
+    document.body.appendChild(ta);
+    ta.select();
+    document.execCommand('copy');
+    document.body.removeChild(ta);
+    const done = document.getElementById('tp-copy-done');
+    done.style.display = '';
+    setTimeout(() => { done.style.display = 'none'; }, 4000);
+  });
+}
+</script>
+{% endblock %}

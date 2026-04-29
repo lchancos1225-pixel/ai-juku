@@ -1,0 +1,164 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="ranking-page">
+  <div class="ranking-header">
+    <a class="ranking-back-btn" href="/students/{{ student.student_id }}">← 問題に戻る</a>
+    <h1 class="ranking-title">🏆 今週のランキング</h1>
+    <p class="ranking-period">{{ week_start }}〜 週間 XP ランキング</p>
+  </div>
+
+  <div class="ranking-list">
+    {% for row in ranking_rows %}
+    <div class="ranking-row {% if row.is_me %}ranking-row--me{% endif %}">
+      <div class="ranking-row__rank">
+        {% if row.rank == 1 %}🥇
+        {% elif row.rank == 2 %}🥈
+        {% elif row.rank == 3 %}🥉
+        {% else %}<span class="ranking-row__rank-num">{{ row.rank }}</span>
+        {% endif %}
+      </div>
+      <div class="ranking-row__info">
+        <span class="ranking-row__name">{{ row.student.display_name }}{% if row.is_me %} <span class="ranking-row__you">（あなた）</span>{% endif %}</span>
+        <div class="ranking-row__stats">
+          <span class="ranking-row__stat">🔥 {{ row.streak }}日連続</span>
+          <span class="ranking-row__stat">✅ 今週 {{ row.week_correct }}問正解</span>
+        </div>
+      </div>
+      <div class="ranking-row__xp-wrap">
+        <span class="ranking-row__xp">{{ row.week_xp }} <small>XP</small></span>
+        <div class="ranking-row__xp-bar">
+          {% set max_xp = ranking_rows[0].week_xp if ranking_rows else 1 %}
+          {% set pct = (row.week_xp * 100 // (max_xp if max_xp > 0 else 1)) %}
+          <div class="ranking-row__xp-fill {% if row.rank == 1 %}ranking-row__xp-fill--gold{% endif %}" style="width: {{ [pct, 4] | max }}%"></div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+    {% if not ranking_rows %}
+    <p class="ranking-empty">まだデータがありません。問題を解いてランキングに載ろう！</p>
+    {% endif %}
+  </div>
+
+  <div class="ranking-footer">
+    <a class="primary-button" href="/students/{{ student.student_id }}">問題を解いてXPを稼ごう！</a>
+  </div>
+</div>
+
+<style>
+.ranking-page {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 0 40px;
+}
+.ranking-header {
+  text-align: center;
+  padding: 16px 0 8px;
+}
+.ranking-back-btn {
+  display: inline-block;
+  color: #6366f1;
+  font-size: 0.9rem;
+  text-decoration: none;
+  margin-bottom: 8px;
+}
+.ranking-title {
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: #1e1b4b;
+  margin: 4px 0 2px;
+}
+.ranking-period {
+  font-size: 0.8rem;
+  color: #94a3b8;
+  margin: 0 0 12px;
+}
+.ranking-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.ranking-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #fff;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 12px 14px;
+  transition: transform 0.15s;
+}
+.ranking-row--me {
+  border-color: #6366f1;
+  background: linear-gradient(135deg, #eef2ff, #f0fdf4);
+  box-shadow: 0 2px 12px rgba(99,102,241,0.15);
+}
+.ranking-row__rank {
+  font-size: 1.6rem;
+  min-width: 36px;
+  text-align: center;
+}
+.ranking-row__rank-num {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #94a3b8;
+}
+.ranking-row__info {
+  flex: 1;
+}
+.ranking-row__name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1e2a39;
+}
+.ranking-row__you {
+  font-size: 0.75rem;
+  color: #6366f1;
+  font-weight: 600;
+}
+.ranking-row__stats {
+  display: flex;
+  gap: 10px;
+  margin-top: 3px;
+  flex-wrap: wrap;
+}
+.ranking-row__stat {
+  font-size: 0.75rem;
+  color: #64748b;
+}
+.ranking-row__xp-wrap {
+  text-align: right;
+  min-width: 80px;
+}
+.ranking-row__xp {
+  font-size: 1.1rem;
+  font-weight: 900;
+  color: #4f46e5;
+}
+.ranking-row__xp small { font-size: 0.7rem; font-weight: 400; }
+.ranking-row__xp-bar {
+  height: 6px;
+  background: #e2e8f0;
+  border-radius: 3px;
+  margin-top: 4px;
+  overflow: hidden;
+}
+.ranking-row__xp-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #818cf8, #c084fc);
+  border-radius: 3px;
+  min-width: 4px;
+}
+.ranking-row__xp-fill--gold {
+  background: linear-gradient(90deg, #f59e0b, #fbbf24);
+}
+.ranking-empty {
+  text-align: center;
+  color: #94a3b8;
+  padding: 32px;
+}
+.ranking-footer {
+  text-align: center;
+  margin-top: 24px;
+}
+</style>
+{% endblock %}

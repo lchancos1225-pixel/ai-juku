@@ -1,0 +1,319 @@
+{
+  "problems": [
+    {
+      "full_unit_id": "linear_function_graph",
+      "unit_id": "linear_function",
+      "sub_unit": "graph",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "question_text": "一次関数 y = -3x + 4 のグラフは、右上がりと右下がりのどちらですか。",
+      "diagram": null,
+      "correct_answer": "右下がり",
+      "hint_1": "グラフの傾き（xの係数）の符号に注目しましょう。",
+      "hint_2": "傾きがマイナスのとき、グラフは右下がりになります。",
+      "explanation_base": "一次関数 y = ax + b のグラフは、a > 0 のとき右上がり、a < 0 のとき右下がりになります。この式では a = -3 で 0 より小さいため、右下がりになります。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "variable_handling_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "confirm_variable_meaning"
+      ]
+    },
+    {
+      "full_unit_id": "linear_function_graph",
+      "unit_id": "linear_function",
+      "sub_unit": "graph",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "question_text": "一次関数 y = 2x - 5 のグラフが y軸と交わる点の座標を求めなさい。",
+      "diagram": null,
+      "correct_answer": "(0, -5)",
+      "hint_1": "y軸上の点は、x座標が必ず 0 になります。",
+      "hint_2": "式の x に 0 を代入して y の値を計算するか、切片の部分を読み取りましょう。",
+      "explanation_base": "一次関数 y = ax + b のグラフが y軸と交わる点の y座標は切片 b です。したがって、交点の座標は (0, -5) です。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "confirm_variable_meaning",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "linear_function_graph",
+      "unit_id": "linear_function",
+      "sub_unit": "graph",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "question_text": "次の図で表される直線の切片を答えなさい。",
+      "diagram": "座標平面上に直線が描かれている。直線は y軸と (0, 3) の位置で交わり、x軸と (-3, 0) の位置で交わっている。",
+      "correct_answer": "3",
+      "hint_1": "切片は、グラフが y軸と交わる点の y座標のことです。",
+      "hint_2": "縦の軸（y軸）とグラフがどこで交わっているか読み取りましょう。",
+      "explanation_base": "グラフが y軸と交わる点は (0, 3) なので、切片は 3 になります。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "retry_with_hint"
+      ]
+    },
+    {
+      "full_unit_id": "linear_function_graph",
+      "unit_id": "linear_function",
+      "sub_unit": "graph",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "question_text": "次の図で表される直線の傾きを答えなさい。",
+      "diagram": "座標平面上に直線が描かれている。直線は点 (0, 1) と点 (2, 5) を通っている。",
+      "correct_answer": "2",
+      "hint_1": "傾きは、「yの増加量 ÷ xの増加量」で求められます。",
+      "hint_2": "点(0, 1) から点(2, 5) まで、右にいくつ、上にいくつ進んでいるか確認しましょう。",
+      "explanation_base": "グラフは点(0, 1)から右に 2 進んで上に 4 進む点(2, 5)を通ります。傾きは 4 ÷ 2 = 2 です。",
+      "error_pattern_candidates": [
+        "arithmetic_error",
+        "comprehension_gap"
+      ],
+      "intervention_candidates": [
+        "repeat_same_pattern",
+        "explain_differently"
+      ]
+    },
+    {
+      "full_unit_id": "linear_function_graph",
+      "unit_id": "linear_function",
+      "sub_unit": "graph",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "question_text": "一次関数 y = 4x + 8 のグラフが x軸と交わる点の座標を求めなさい。",
+      "diagram": null,
+      "correct_answer": "(-2, 0)",
+      "hint_1": "x軸上の点は、y座標が必ず 0 になります。",
+      "hint_2": "式の y に 0 を代入して、x についての方程式 0 = 4x + 8 を解きましょう。",
+      "explanation_base": "x軸との交点は y = 0 のときの x の値です。0 = 4x + 8 より 4x = -8、x = -2 となるため、座標は (-2, 0) です。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "sign_error"
+      ],
+      "intervention_candidates": [
+        "step_by_step_equation_check",
+        "review_sign_rules"
+      ]
+    },
+    {
+      "full_unit_id": "linear_function_graph",
+      "unit_id": "linear_function",
+      "sub_unit": "graph",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "question_text": "y軸との交点が (0, -2) で、点(3, 4)を通る直線の式を求めなさい。",
+      "diagram": null,
+      "correct_answer": "y=2x-2",
+      "hint_1": "y軸との交点が (0, -2) なので、切片 b は -2 です。",
+      "hint_2": "式を y = ax - 2 とおいて、x = 3, y = 4 を代入し、傾き a を求めましょう。",
+      "explanation_base": "切片が -2 なので式は y = ax - 2 となります。これに x = 3, y = 4 を代入すると 4 = 3a - 2 より 3a = 6、a = 2 です。よって y = 2x - 2 となります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "step_by_step_equation_check",
+        "confirm_variable_meaning"
+      ]
+    },
+    {
+      "full_unit_id": "linear_function_graph",
+      "unit_id": "linear_function",
+      "sub_unit": "graph",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "question_text": "2つの直線 y = 2x - 1 と y = -x + 5 の交点の座標を求めなさい。",
+      "diagram": null,
+      "correct_answer": "(2, 3)",
+      "hint_1": "2つの直線の交点の座標は、2つの式を連立方程式として解くことで求められます。",
+      "hint_2": "代入法を使って、2x - 1 = -x + 5 という方程式を解きましょう。",
+      "explanation_base": "2つの式を連立させて解きます。2x - 1 = -x + 5 より 3x = 6、x = 2 です。これを y = 2x - 1 に代入すると y = 4 - 1 = 3 となります。交点は (2, 3) です。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "sign_error"
+      ],
+      "intervention_candidates": [
+        "step_by_step_equation_check",
+        "review_sign_rules"
+      ]
+    },
+    {
+      "full_unit_id": "linear_function_graph",
+      "unit_id": "linear_function",
+      "sub_unit": "graph",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "question_text": "点(2, -3)を通り、直線 y = -3x + 4 に平行な直線の式を求めなさい。",
+      "diagram": null,
+      "correct_answer": "y=-3x+3",
+      "hint_1": "平行な直線は、傾きが同じになります。",
+      "hint_2": "求める直線の傾きは -3 になるので、式を y = -3x + b とおいて点(2, -3)を代入しましょう。",
+      "explanation_base": "平行な直線は傾きが等しいため、求める直線の傾きは -3 です。y = -3x + b に x = 2, y = -3 を代入すると、-3 = -6 + b より b = 3 となります。よって y = -3x + 3 です。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "sign_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "step_by_step_equation_check"
+      ]
+    },
+    {
+      "full_unit_id": "linear_function_graph",
+      "unit_id": "linear_function",
+      "sub_unit": "graph",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "question_text": "直線 2x - 3y = 12 のグラフの傾きと切片を答えなさい。",
+      "diagram": null,
+      "correct_answer": "傾き2/3, 切片-4",
+      "hint_1": "式を「y = ax + b」の形に変形しましょう。",
+      "hint_2": "-3y = -2x + 12 と移項し、両辺を -3 で割ります。",
+      "explanation_base": "2x - 3y = 12 を y について解くと、-3y = -2x + 12 より y = (2/3)x - 4 になります。したがって、傾きは 2/3、切片は -4 です。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "sign_error"
+      ],
+      "intervention_candidates": [
+        "step_by_step_equation_check",
+        "review_sign_rules"
+      ]
+    },
+    {
+      "full_unit_id": "linear_function_graph",
+      "unit_id": "linear_function",
+      "sub_unit": "graph",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "question_text": "直線 y = -x + 3 と x軸、y軸で囲まれた三角形の面積を求めなさい。ただし、座標の1目盛りを1cmとします。",
+      "diagram": null,
+      "correct_answer": "4.5cm^2",
+      "hint_1": "直線と x軸、y軸との交点をそれぞれ求め、三角形の底辺と高さを出しましょう。",
+      "hint_2": "y軸との交点は (0, 3)、x軸との交点は y=0 を代入して (3, 0) になります。底辺3cm、高さ3cmの三角形の面積を計算します。",
+      "explanation_base": "y軸との交点は (0, 3) なので高さは 3cm。x軸との交点は 0 = -x + 3 より x = 3 なので (3, 0) となり底辺は 3cm。三角形の面積は 3 × 3 ÷ 2 = 4.5 (または 9/2) cm² です。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "step_by_step_equation_check",
+        "explain_differently"
+      ]
+    },
+    {
+      "full_unit_id": "linear_function_graph",
+      "unit_id": "linear_function",
+      "sub_unit": "graph",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "question_text": "2点(-2, -6), (4, 3)を通る直線のグラフがx軸と交わる点のx座標を求めなさい。",
+      "diagram": null,
+      "correct_answer": "2",
+      "hint_1": "まずは、この2点を通る直線の式を y = ax + b として求めましょう。",
+      "hint_2": "傾き a は (3 - (-6)) / (4 - (-2)) = 9 / 6 = 3/2 です。式を求めた後、y = 0 を代入します。",
+      "explanation_base": "傾きは 9/6 = 3/2。y = (3/2)x + b に (4, 3) を代入すると 3 = 6 + b より b = -3。直線の式は y = (3/2)x - 3 です。x軸との交点は y=0 を代入し、0 = (3/2)x - 3 より (3/2)x = 3、x = 2 となります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "prerequisite_gap"
+      ],
+      "intervention_candidates": [
+        "step_by_step_equation_check",
+        "fallback_prerequisite"
+      ]
+    },
+    {
+      "full_unit_id": "linear_function_graph",
+      "unit_id": "linear_function",
+      "sub_unit": "graph",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "question_text": "3つの直線 y = x - 1, y = -2x + 8, y = ax + 5 が1点で交わるとき、aの値を求めなさい。",
+      "diagram": null,
+      "correct_answer": "-1",
+      "hint_1": "まず、文字 a を含まない2つの直線 y = x - 1 と y = -2x + 8 の交点を求めましょう。",
+      "hint_2": "求めた交点の座標を y = ax + 5 に代入して a についての方程式を解きます。",
+      "explanation_base": "y = x - 1 と y = -2x + 8 を連立させると、x - 1 = -2x + 8 より 3x = 9、x = 3 です。y = 3 - 1 = 2 となり、交点は (3, 2) です。これを y = ax + 5 に代入すると 2 = 3a + 5 より 3a = -3、a = -1 となります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "step_by_step_equation_check",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "linear_function_graph",
+      "unit_id": "linear_function",
+      "sub_unit": "graph",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "question_text": "直線 y = -2x + 8 と y = x + 2 の交点をA、それぞれの直線がx軸と交わる点をそれぞれB, Cとするとき、三角形ABCの面積を求めなさい。ただし、座標の1目盛りを1cmとします。",
+      "diagram": null,
+      "correct_answer": "12cm^2",
+      "hint_1": "点Aは2つの直線の交点、点Bと点Cはそれぞれの式に y = 0 を代入して求めます。",
+      "hint_2": "交点Aは (2, 4)。点Bは y = -2x + 8 の x軸上の交点で (4, 0)。点Cは y = x + 2 の x軸上の交点で (-2, 0)。底辺BCの長さを求めましょう。",
+      "explanation_base": "直線の交点Aは -2x + 8 = x + 2 より 3x = 6、x = 2。y = 4 で A(2, 4)。x軸との交点は、0 = -2x + 8 より B(4, 0)。0 = x + 2 より C(-2, 0)。底辺BCの長さは 4 - (-2) = 6cm、高さはAのy座標より 4cm。面積は 6 × 4 ÷ 2 = 12cm² です。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "comprehension_gap"
+      ],
+      "intervention_candidates": [
+        "separate_terms_visually",
+        "explain_differently"
+      ]
+    },
+    {
+      "full_unit_id": "linear_function_graph",
+      "unit_id": "linear_function",
+      "sub_unit": "graph",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "question_text": "右の図のような長方形ABCDがあります。点PはBを出発して、毎秒1cmの速さで辺BC上をCまで動きます。点PがBを出発してからx秒後の三角形ABPの面積をy cm²とするとき、yをxの式で表しなさい。",
+      "diagram": "長方形ABCD (AB=4cm, BC=6cm)。頂点は左上がA、左下がB、右下がC、右上がD。点PはBからCに向かって移動する。",
+      "correct_answer": "y=2x",
+      "hint_1": "三角形ABPの底辺をBP、高さをABと考えましょう。",
+      "hint_2": "x秒後のBPの長さは x cm です。高さは常に 4 cm です。三角形の面積の公式にあてはめましょう。",
+      "explanation_base": "点Pは毎秒1cmで動くので、x秒後のBPの長さは x cm です。三角形ABPは、底辺が x cm、高さがABの長さ 4 cm の直角三角形です。面積 y は x × 4 ÷ 2 = 2x となるため、y = 2x です。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "comprehension_gap"
+      ],
+      "intervention_candidates": [
+        "confirm_variable_meaning",
+        "explain_differently"
+      ]
+    },
+    {
+      "full_unit_id": "linear_function_graph",
+      "unit_id": "linear_function",
+      "sub_unit": "graph",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "question_text": "兄は家から2000m離れた駅へ向かって歩き出し、その10分後に弟が自転車で同じ道を追いかけました。兄の歩く速さを分速80m、弟の自転車の速さを分速240mとします。兄が家を出発してからx分後の家からの距離をy mとするとき、弟が家を出発してから兄に追いつくまでの弟の進行状況を表す式を求めなさい。",
+      "diagram": null,
+      "correct_answer": "y=240x-2400",
+      "hint_1": "弟は兄の10分後（x=10）に出発するため、点(10, 0)を通ります。また、速さは分速240mなので傾きは240です。",
+      "hint_2": "傾きが240で点(10, 0)を通る直線の式を求めます。y = 240x + b に代入しましょう。",
+      "explanation_base": "弟のグラフは、速さが分速240mなので傾きが 240 になります。また、兄が出発してから10分後に家を出るので、x=10 のとき y=0 となる点(10, 0)を通ります。y = 240x + b に代入すると 0 = 2400 + b より b = -2400。よって弟の式は y = 240x - 2400 です。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "comprehension_gap"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "step_by_step_equation_check"
+      ]
+    }
+  ]
+}

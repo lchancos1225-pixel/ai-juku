@@ -1,0 +1,319 @@
+{
+  "problems": [
+    {
+      "full_unit_id": "factorization_basic",
+      "unit_id": "factorization",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "question_text": "次の式を因数分解しなさい。 x^2 + 5x",
+      "diagram": null,
+      "correct_answer": "x(x + 5)",
+      "hint_1": "各項に共通する文字や数字を探して、かっこの外にくくり出しましょう。",
+      "hint_2": "x^2 と 5x に共通して含まれているのは x です。x をくくり出します。",
+      "explanation_base": "共通因数 x をくくり出して因数分解します。x^2 + 5x = x(x + 5) となります。",
+      "error_pattern_candidates": [
+        "variable_handling_error",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "explain_differently"
+      ]
+    },
+    {
+      "full_unit_id": "factorization_basic",
+      "unit_id": "factorization",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "question_text": "次の式を因数分解しなさい。 x^2 + 7x + 12",
+      "diagram": null,
+      "correct_answer": "(x + 3)(x + 4)",
+      "hint_1": "足して7、かけて12になる2つの数を見つけましょう。",
+      "hint_2": "かけて12になる正の数の組み合わせは (1,12), (2,6), (3,4) です。このうち和が7になるものを選びます。",
+      "explanation_base": "和が7、積が12になる2つの数は3と4です。したがって、(x + 3)(x + 4) と因数分解できます。",
+      "error_pattern_candidates": [
+        "arithmetic_error",
+        "sign_error"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "reinforce_same_pattern"
+      ]
+    },
+    {
+      "full_unit_id": "factorization_basic",
+      "unit_id": "factorization",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "question_text": "次の式を因数分解しなさい。 x^2 + 6x + 9",
+      "diagram": null,
+      "correct_answer": "(x + 3)^2",
+      "hint_1": "x^2 + 2ax + a^2 = (x + a)^2 の公式が使える形です。",
+      "hint_2": "定数項の9は3の2乗で、真ん中の項の係数6は 2 × 3 になっています。",
+      "explanation_base": "9 = 3^2, 6 = 2 × 3 なので、和の平方の公式にあてはまります。(x + 3)^2 となります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "reinforce_same_pattern"
+      ]
+    },
+    {
+      "full_unit_id": "factorization_basic",
+      "unit_id": "factorization",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "question_text": "次の式を因数分解しなさい。 x^2 - 10x + 25",
+      "diagram": null,
+      "correct_answer": "(x - 5)^2",
+      "hint_1": "x^2 - 2ax + a^2 = (x - a)^2 の公式が使えます。",
+      "hint_2": "定数項の25は5の2乗で、真ん中の項の係数 -10 は -2 × 5 になっています。符号に注意しましょう。",
+      "explanation_base": "25 = 5^2, -10 = -2 × 5 なので、差の平方の公式にあてはまります。(x - 5)^2 となります。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "formula_setup_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "factorization_basic",
+      "unit_id": "factorization",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "question_text": "次の式を因数分解しなさい。 x^2 - 16",
+      "diagram": null,
+      "correct_answer": "(x + 4)(x - 4)",
+      "hint_1": "2乗から2乗を引いた形は、x^2 - a^2 = (x + a)(x - a) の和と差の積の公式を使います。",
+      "hint_2": "16は4の2乗なので、x^2 - 4^2 と考えることができます。",
+      "explanation_base": "16 = 4^2 なので、平方の差の公式にあてはめると (x + 4)(x - 4) になります。",
+      "error_pattern_candidates": [
+        "careless_error",
+        "formula_setup_error"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "retry_with_hint"
+      ]
+    },
+    {
+      "full_unit_id": "factorization_basic",
+      "unit_id": "factorization",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "question_text": "次の式を因数分解しなさい。 3x^2 - 12x",
+      "diagram": null,
+      "correct_answer": "3x(x - 4)",
+      "hint_1": "文字だけでなく、数字の共通因数もくくり出しましょう。",
+      "hint_2": "3x^2 と 12x は、どちらも 3x で割ることができます。",
+      "explanation_base": "各項の共通因数は 3x です。3x でくくると 3x(x - 4) になります。",
+      "error_pattern_candidates": [
+        "variable_handling_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "explain_differently"
+      ]
+    },
+    {
+      "full_unit_id": "factorization_basic",
+      "unit_id": "factorization",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "question_text": "次の式を因数分解しなさい。 x^2 - 2x - 15",
+      "diagram": null,
+      "correct_answer": "(x - 5)(x + 3)",
+      "hint_1": "かけてマイナスになるので、探す2つの数は一方がプラス、もう一方がマイナスです。",
+      "hint_2": "足して-2、かけて-15になる2つの数を見つけましょう。5と3の組み合わせで符号を考えます。",
+      "explanation_base": "和が-2、積が-15になる2つの数は -5 と 3 です。したがって、(x - 5)(x + 3) になります。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "factorization_basic",
+      "unit_id": "factorization",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "question_text": "次の式を因数分解しなさい。 x^2 - 64y^2",
+      "diagram": null,
+      "correct_answer": "(x + 8y)(x - 8y)",
+      "hint_1": "x^2 - a^2 = (x + a)(x - a) の公式を使います。y がついていることに注意しましょう。",
+      "hint_2": "64y^2 は (8y)^2 と表すことができます。",
+      "explanation_base": "64y^2 = (8y)^2 なので、x^2 - (8y)^2 として平方の差の公式を適用します。答えは (x + 8y)(x - 8y) になります。",
+      "error_pattern_candidates": [
+        "variable_handling_error",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "factorization_basic",
+      "unit_id": "factorization",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "question_text": "次の式を因数分解しなさい。 2x^2 + 16x + 32",
+      "diagram": null,
+      "correct_answer": "2(x + 4)^2",
+      "hint_1": "まず、すべての項に共通する因数をくくり出しましょう。",
+      "hint_2": "全体を2でくくると、かっこ内は x^2 + 8x + 16 になります。これをさらに因数分解します。",
+      "explanation_base": "共通因数の2でくくると 2(x^2 + 8x + 16) となります。かっこ内は和の平方の公式で因数分解でき、2(x + 4)^2 になります。",
+      "error_pattern_candidates": [
+        "operation_confusion",
+        "formula_setup_error"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "retry_with_hint"
+      ]
+    },
+    {
+      "full_unit_id": "factorization_basic",
+      "unit_id": "factorization",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "question_text": "次の式を因数分解しなさい。 x^2 - 11x + 24",
+      "diagram": null,
+      "correct_answer": "(x - 3)(x - 8)",
+      "hint_1": "足してマイナス、かけてプラスになるので、探す2つの数はどちらもマイナスです。",
+      "hint_2": "足して-11、かけて24になる2つの負の数を見つけましょう。",
+      "explanation_base": "和が-11、積が24になる2つの負の数は -3 と -8 です。したがって、(x - 3)(x - 8) になります。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "factorization_basic",
+      "unit_id": "factorization",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "question_text": "次の式を因数分解しなさい。 5x^2 - 20y^2",
+      "diagram": null,
+      "correct_answer": "5(x + 2y)(x - 2y)",
+      "hint_1": "まず、共通因数の5をくくり出しましょう。",
+      "hint_2": "5(x^2 - 4y^2) となります。かっこ内を平方の差の公式でさらに因数分解します。",
+      "explanation_base": "5でくくると 5(x^2 - 4y^2) になります。4y^2 は (2y)^2 なので、さらに因数分解して 5(x + 2y)(x - 2y) になります。",
+      "error_pattern_candidates": [
+        "variable_handling_error",
+        "formula_setup_error"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "explain_differently"
+      ]
+    },
+    {
+      "full_unit_id": "factorization_basic",
+      "unit_id": "factorization",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "question_text": "次の式を因数分解しなさい。 -x^2 + 8x - 12",
+      "diagram": null,
+      "correct_answer": "-(x - 2)(x - 6)",
+      "hint_1": "まず、全体の符号をマイナスでくくり出してみましょう。",
+      "hint_2": "-(x^2 - 8x + 12) となります。かっこの中を公式を使って因数分解しましょう。",
+      "explanation_base": "マイナスでくくると -(x^2 - 8x + 12) になります。かっこ内の式は、足して-8、かけて12になる -2 と -6 を使って因数分解できます。よって -(x - 2)(x - 6) になります。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "operation_confusion"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "factorization_basic",
+      "unit_id": "factorization",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "question_text": "次の式を因数分解しなさい。 (x + y)^2 - 25",
+      "diagram": null,
+      "correct_answer": "(x + y + 5)(x + y - 5)",
+      "hint_1": "かっこ全体 (x + y) を1つの文字、たとえば M と置き換えてみましょう。",
+      "hint_2": "M^2 - 25 を因数分解してから、M をもとの x + y に戻します。",
+      "explanation_base": "x + y = M とおくと、M^2 - 25 となります。これを因数分解すると (M + 5)(M - 5) になります。M を x + y に戻して、(x + y + 5)(x + y - 5) になります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "comprehension_gap"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "explain_differently"
+      ]
+    },
+    {
+      "full_unit_id": "factorization_basic",
+      "unit_id": "factorization",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "question_text": "縦と横の長さがともに x cmの大きな正方形から、縦と横の長さがともに 4 cmの小さな正方形を切り取りました。残った図形の面積を x を使った式で表し、その式を因数分解した形で答えなさい。",
+      "diagram": null,
+      "correct_answer": "(x + 4)(x - 4)",
+      "hint_1": "もとの正方形の面積から、切り取った正方形の面積を引く式を立てましょう。",
+      "hint_2": "面積の式は x^2 - 16 となります。これを和と差の積の公式で因数分解します。",
+      "explanation_base": "もとの正方形の面積は x^2、切り取った正方形の面積は 4^2 = 16 なので、残った面積は x^2 - 16 です。これを因数分解して (x + 4)(x - 4) になります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "comprehension_gap"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "factorization_basic",
+      "unit_id": "factorization",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "question_text": "次の式を因数分解しなさい。 (x - 2)^2 + 5(x - 2) + 6",
+      "diagram": null,
+      "correct_answer": "x(x + 1)",
+      "hint_1": "共通するかっこ (x - 2) を1つの文字 M と置いてみましょう。",
+      "hint_2": "M^2 + 5M + 6 を因数分解すると (M + 2)(M + 3) になります。M を x - 2 に戻してかっこの中を計算しましょう。",
+      "explanation_base": "x - 2 = M とおくと、M^2 + 5M + 6 になります。因数分解して (M + 2)(M + 3)。M を x - 2 に戻すと (x - 2 + 2)(x - 2 + 3) となり、整理して x(x + 1) になります。",
+      "error_pattern_candidates": [
+        "variable_handling_error",
+        "comprehension_gap"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "explain_differently"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="card">
+  <p class="section-label">教室ダッシュボード</p>
+  <h2>{{ classroom.classroom_name }}</h2>
+  <div class="state-grid">
+    <div><span>classroom_id</span><strong>{{ classroom.classroom_id }}</strong></div>
+    <div><span>login_id</span><strong>{{ classroom.login_id }}</strong></div>
+    <div><span>担当者</span><strong>{{ classroom.contact_name or "-" }}</strong></div>
+    <div><span>状態</span><strong>{{ "active" if classroom.is_active else "inactive" }}</strong></div>
+  </div>
+</section>
+
+<section class="card">
+  <p class="section-label">講師</p>
+  <h2>所属講師</h2>
+  <div class="table-wrap">
+    <table class="teacher-table">
+      <thead>
+        <tr>
+          <th>teacher_id</th>
+          <th>login_id</th>
+          <th>表示名</th>
+          <th>状態</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for teacher in teachers %}
+        <tr>
+          <td>{{ teacher.teacher_id }}</td>
+          <td>{{ teacher.login_id }}</td>
+          <td>{{ teacher.display_name }}</td>
+          <td>{{ "active" if teacher.is_active else "inactive" }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="card">
+  <p class="section-label">生徒</p>
+  <h2>所属生徒</h2>
+  <div class="table-wrap">
+    <table class="teacher-table">
+      <thead>
+        <tr>
+          <th>student_id</th>
+          <th>名前</th>
+          <th>学年</th>
+          <th>状態</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for student in students %}
+        <tr>
+          <td>{{ student.student_id }}</td>
+          <td>{{ student.display_name }}</td>
+          <td>{{ student.grade }}</td>
+          <td>{{ "active" if student.is_active else "inactive" }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="card">
+  <p class="section-label">直近履歴</p>
+  <h2>教室内の学習ログ</h2>
+  <div class="table-wrap">
+    <table class="history-table">
+      <thead>
+        <tr>
+          <th>時刻</th>
+          <th>生徒</th>
+          <th>単元</th>
+          <th>問題</th>
+          <th>正誤</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for log, problem, student in logs %}
+        <tr>
+          <td>{{ log.created_at.strftime("%Y-%m-%d %H:%M:%S") }}</td>
+          <td>{{ student.display_name }}</td>
+          <td>{{ unit_labels.get(problem.full_unit_id or problem.unit, problem.full_unit_id or problem.unit) }}</td>
+          <td>#{{ log.problem_id }}</td>
+          <td>{{ "正解" if log.is_correct else "誤答" }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,164 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="card problem-list-page">
+  <p class="problem-list-back"><a href="/teachers/dashboard" class="secondary-link">← 講師ページに戻る</a></p>
+  <div class="problem-list-top-bar">
+    <div>
+      <p class="section-label">教材確認</p>
+      <h2>問題一覧</h2>
+      <p class="meta-note">講師用の読み取り専用一覧です。ここでは採点や学習状態更新は行いません。</p>
+    </div>
+    <a class="primary-button problem-create-btn" href="/teachers/problems/create">＋ 問題を作成</a>
+  </div>
+  <div class="problem-list-counts">
+    <span>全 {{ counts.total }} 件{% if counts.total > 500 %}（下の表は最大500件）{% endif %}</span>
+    <span>図あり {{ counts.diagram_required }} 件</span>
+    <span>描画OK {{ counts.diagram_renderable }} 件</span>
+  </div>
+
+  {% if counts.pending > 0 %}
+  <div class="approval-queue-banner">
+    <span class="approval-queue-badge">{{ counts.pending }}</span>
+    AI生成問題が承認待ちです
+    <a href="/teachers/problems/pending" class="approval-queue-link">承認キューを開く →</a>
+  </div>
+  {% endif %}
+
+  <section class="problem-list-ready-section">
+    <p class="section-label">優先確認</p>
+    <h3>今すぐ確認できる図問題</h3>
+    {% if ready_rows %}
+    <div class="problem-list-ready-grid">
+      {% for row in ready_rows %}
+      {% set problem = row.problem %}
+      <article class="problem-list-ready-card">
+        <div class="problem-list-ready-top">
+          <span class="problem-list-priority-label">今すぐ確認</span>
+          <span class="problem-list-problem-id">確認ID #{{ problem.problem_id }}</span>
+        </div>
+        <div class="problem-list-unit">{{ row.unit_display_name_ja }}</div>
+        <div class="problem-list-question-preview">{{ row.question_preview }}</div>
+        <a class="secondary-link problem-list-preview-link" href="/teachers/problems/{{ problem.problem_id }}/preview">プレビューを開く</a>
+      </article>
+      {% endfor %}
+    </div>
+    {% else %}
+    <p class="meta-note">現在、すぐに表示確認できる図問題はありません。</p>
+    {% endif %}
+  </section>
+
+  <form method="get" action="/teachers/problems" class="problem-list-filters">
+    <select name="grade">
+      <option value="">学年すべて</option>
+      {% for item in grades %}
+      <option value="{{ item }}" {% if filters.grade == item %}selected{% endif %}>中学{{ item - 6 }}年</option>
+      {% endfor %}
+    </select>
+
+    <select name="unit">
+      <option value="">単元すべて</option>
+      {% for item in units %}
+      <option value="{{ item }}" {% if filters.unit == item %}selected{% endif %}>{{ unit_labels.get(item, item) }}</option>
+      {% endfor %}
+    </select>
+
+    <select name="full_unit_id">
+      <option value="">full_unit_id すべて</option>
+      {% for item in full_unit_ids %}
+      <option value="{{ item }}" {% if filters.full_unit_id == item %}selected{% endif %}>{{ full_unit_labels.get(item, item) }}</option>
+      {% endfor %}
+    </select>
+
+    <select name="problem_type">
+      <option value="">problem_type すべて</option>
+      {% for item in ["practice", "mini_test", "unit_test"] %}
+      <option value="{{ item }}" {% if filters.problem_type == item %}selected{% endif %}>{{ item }}</option>
+      {% endfor %}
+    </select>
+
+    <select name="difficulty">
+      <option value="">難易度すべて</option>
+      {% for item in difficulties %}
+      <option value="{{ item }}" {% if filters.difficulty == item %}selected{% endif %}>{{ item }}</option>
+      {% endfor %}
+    </select>
+
+    <select name="diagram_required">
+      <option value="" {% if not filters.diagram_required %}selected{% endif %}>図の有無すべて</option>
+      <option value="true" {% if filters.diagram_required == "true" %}selected{% endif %}>図ありのみ</option>
+      <option value="false" {% if filters.diagram_required == "false" %}selected{% endif %}>図なしのみ</option>
+    </select>
+
+    <div class="problem-list-filter-actions">
+      <button type="submit">絞り込む</button>
+      <a class="secondary-link" href="/teachers/problems">リセット</a>
+    </div>
+  </form>
+
+  <div class="table-wrap">
+    <table class="problem-list-table">
+      <thead>
+        <tr>
+          <th>問題</th>
+          <th>表示情報</th>
+          <th>補助情報</th>
+          <th>操作</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for row in problem_rows %}
+        {% set problem = row.problem %}
+        <tr class="{% if row.is_priority_preview_target %}problem-list-priority{% endif %}">
+          <td class="problem-list-primary">
+            <div class="problem-list-unit">{{ row.unit_display_name_ja }}</div>
+            <div class="problem-list-question">{{ row.question_preview }}</div>
+          </td>
+          <td>
+            <div class="problem-list-badges">
+              {% if row.priority_label %}
+              <span class="problem-preview-badge problem-list-priority-label-inline">{{ row.priority_label }}</span>
+              {% endif %}
+              <span class="problem-preview-badge">{{ problem.problem_type }}</span>
+              <span class="problem-preview-badge">Lv{{ problem.difficulty }}</span>
+              {% if row.diagram_badge %}
+              <span class="problem-preview-badge problem-preview-badge--diagram">{{ row.diagram_badge }}</span>
+              {% endif %}
+              {% if row.diagram_render_status == "描画OK" %}
+              <span class="problem-preview-badge problem-preview-badge--render-ok">描画OK</span>
+              {% elif row.diagram_render_status == "未対応" %}
+              <span class="problem-preview-badge problem-preview-badge--render-pending">未対応</span>
+              {% endif %}
+            </div>
+            {% if row.diagram_display_name %}
+            <div class="meta-note">図の種類: {{ row.diagram_display_name }}</div>
+            {% if row.diagram_internal_key %}
+            <div class="meta-note">内部キー: {{ row.diagram_internal_key }}</div>
+            {% endif %}
+            {% endif %}
+            {% if problem.test_scope %}
+            <div class="meta-note">test_scope: {{ problem.test_scope }}</div>
+            {% endif %}
+          </td>
+          <td class="problem-list-secondary">
+            <div class="meta-note {% if row.is_priority_preview_target %}problem-list-problem-id{% endif %}">#{{ problem.problem_id }} / 中学{{ problem.grade - 6 }}年</div>
+            <div class="meta-note">full_unit_id: {{ problem.full_unit_id or "-" }}</div>
+            <div class="meta-note">unit_id: {{ problem.unit }}</div>
+          </td>
+          <td><a class="secondary-link problem-list-preview-link" href="/teachers/problems/{{ problem.problem_id }}/preview">preview</a></td>
+        </tr>
+        {% else %}
+        <tr>
+          <td colspan="4">
+            {% if filters.diagram_required == "true" %}
+            図あり条件に一致する問題がありません。
+            {% else %}
+            条件に一致する問題がありません。
+            {% endif %}
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,709 @@
+{
+  "problems": [
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_participle",
+      "unit_id": "eng_participle",
+      "sub_unit": "participle",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に正しい語を入れなさい。\n「The ( sleep ) baby is cute.」",
+      "correct_answer": "sleeping",
+      "hint_1": "現在分詞（動詞-ing形）は名詞の前後に置いて形容詞として使います。",
+      "hint_2": "sleep → sleeping",
+      "explanation_base": "The sleeping baby is cute.（現在分詞の形容詞的用法）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_participle",
+      "unit_id": "eng_participle",
+      "sub_unit": "participle",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に正しい語を入れなさい。\n「Look at the ( fall ) leaves.」",
+      "correct_answer": "falling",
+      "hint_1": "現在分詞（動詞-ing形）は名詞を修飾します。",
+      "hint_2": "fall → falling",
+      "explanation_base": "Look at the falling leaves.（現在分詞の形容詞的用法）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_participle",
+      "unit_id": "eng_participle",
+      "sub_unit": "participle",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に正しい語を入れなさい。\n「The ( break ) window needs to be fixed.」",
+      "correct_answer": "broken",
+      "hint_1": "過去分詞は名詞を修飾して「〜された」の意味を表します。",
+      "hint_2": "break → broken（過去分詞）",
+      "explanation_base": "The broken window needs to be fixed.（過去分詞の形容詞的用法）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_participle",
+      "unit_id": "eng_participle",
+      "sub_unit": "participle",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に正しい語を入れなさい。\n「She is looking for a ( use ) car.」",
+      "correct_answer": "used",
+      "hint_1": "過去分詞 used は「使われた＝中古の」を意味します。",
+      "hint_2": "use → used（過去分詞）",
+      "explanation_base": "She is looking for a used car.（過去分詞の形容詞的用法）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_participle",
+      "unit_id": "eng_participle",
+      "sub_unit": "participle",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に正しい語を入れなさい。\n「The man ( sit ) over there is my father.」",
+      "correct_answer": "sitting",
+      "hint_1": "現在分詞句が名詞の後に置かれて修飾する場合。",
+      "hint_2": "sit → sitting（語末子音重ね）",
+      "explanation_base": "The man sitting over there is my father.（現在分詞の後置修飾）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_participle",
+      "unit_id": "eng_participle",
+      "sub_unit": "participle",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に正しい語を入れなさい。\n「The girl ( dance ) on the stage is my sister.」",
+      "correct_answer": "dancing",
+      "hint_1": "現在分詞句で名詞の後から修飾します。",
+      "hint_2": "dance → dancing",
+      "explanation_base": "The girl dancing on the stage is my sister.（分詞の後置修飾）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_participle",
+      "unit_id": "eng_participle",
+      "sub_unit": "participle",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に正しい語を入れなさい。\n「The cake ( make ) by my mother was delicious.」",
+      "correct_answer": "made",
+      "hint_1": "過去分詞句で名詞の後から修飾します。",
+      "hint_2": "make → made（過去分詞）",
+      "explanation_base": "The cake made by my mother was delicious.（過去分詞の後置修飾）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_participle",
+      "unit_id": "eng_participle",
+      "sub_unit": "participle",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に正しい語を入れなさい。\n「She found a bag ( leave ) on the bench.」",
+      "correct_answer": "left",
+      "hint_1": "過去分詞句で名詞の後から修飾します。",
+      "hint_2": "leave → left（過去分詞）",
+      "explanation_base": "She found a bag left on the bench.（過去分詞の後置修飾）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_participle",
+      "unit_id": "eng_participle",
+      "sub_unit": "participle",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に正しい語を入れなさい。\n「The village ( surround ) by mountains is beautiful.」",
+      "correct_answer": "surrounded",
+      "hint_1": "過去分詞句で名詞の後から修飾します。",
+      "hint_2": "surround → surrounded（過去分詞）",
+      "explanation_base": "The village surrounded by mountains is beautiful.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_participle",
+      "unit_id": "eng_participle",
+      "sub_unit": "participle",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に正しい語を入れなさい。\n「The woman ( wear ) a blue dress is my aunt.」",
+      "correct_answer": "wearing",
+      "hint_1": "現在分詞句で名詞の後から修飾します。",
+      "hint_2": "wear → wearing",
+      "explanation_base": "The woman wearing a blue dress is my aunt.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_participle",
+      "unit_id": "eng_participle",
+      "sub_unit": "participle",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「舞台で歌っている少女は私の友達です。」",
+      "correct_answer": "The girl singing on the stage is my friend.",
+      "hint_1": "現在分詞句で後から修飾します。",
+      "hint_2": "The girl + singing on the stage + is my friend の形にします。",
+      "explanation_base": "The girl singing on the stage is my friend.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_participle",
+      "unit_id": "eng_participle",
+      "sub_unit": "participle",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「彼女は別の国で作られた品物を買いました。」",
+      "correct_answer": "She bought a product made in another country.",
+      "hint_1": "過去分詞句で後から修飾します。",
+      "hint_2": "a product + made in another country の形にします。",
+      "explanation_base": "She bought a product made in another country.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_participle",
+      "unit_id": "eng_participle",
+      "sub_unit": "participle",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「私はその眠っている赤ちゃんを見ると、幸せな気分になりました。」",
+      "correct_answer": "I felt happy when I saw the sleeping baby.",
+      "hint_1": "現在分詞の前置修飾。",
+      "hint_2": "the + sleeping + baby の形にします。",
+      "explanation_base": "I felt happy when I saw the sleeping baby.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_participle",
+      "unit_id": "eng_participle",
+      "sub_unit": "participle",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「彼が書いた手紙は感動的なものでした。」",
+      "correct_answer": "The letter written by him was moving.",
+      "hint_1": "過去分詞句で後から修飾します。",
+      "hint_2": "The letter + written by him の形にします。",
+      "explanation_base": "The letter written by him was moving.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_participle",
+      "unit_id": "eng_participle",
+      "sub_unit": "participle",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「私の隣に座っている人は先生です。」",
+      "correct_answer": "The person sitting next to me is a teacher.",
+      "hint_1": "現在分詞句で後から修飾します。",
+      "hint_2": "The person + sitting next to me の形にします。",
+      "explanation_base": "The person sitting next to me is a teacher.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_participle",
+      "unit_id": "eng_participle",
+      "sub_unit": "participle",
+      "problem_type": "mini_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に正しい語を入れなさい。\n「The woman ( cook ) in the kitchen is my mother.」",
+      "correct_answer": "cooking",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "The woman cooking in the kitchen is my mother.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_participle"
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_participle",
+      "unit_id": "eng_participle",
+      "sub_unit": "participle",
+      "problem_type": "mini_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に正しい語を入れなさい。\n「I received a letter ( write ) in English.」",
+      "correct_answer": "written",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "I received a letter written in English.（過去分詞の後置修飾）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_participle"
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_participle",
+      "unit_id": "eng_participle",
+      "sub_unit": "participle",
+      "problem_type": "mini_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「壊れたおもちゃは廃棄されました。」",
+      "correct_answer": "The broken toy was thrown away.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "The broken toy was thrown away.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_participle"
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_participle",
+      "unit_id": "eng_participle",
+      "sub_unit": "participle",
+      "problem_type": "mini_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に正しい語を入れなさい。\n「He is the scientist ( ) discover ) a new element.」",
+      "correct_answer": "who discovered",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "He is the scientist who discovered a new element.（※分詞・関係代名詞どちらで解釈しても可）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_participle"
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_participle",
+      "unit_id": "eng_participle",
+      "sub_unit": "participle",
+      "problem_type": "mini_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「落ちている葉を見てください。」",
+      "correct_answer": "Look at the fallen leaves.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "Look at the fallen leaves.（過去分詞の形容詞的用法）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_participle"
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_participle",
+      "unit_id": "eng_participle",
+      "sub_unit": "participle",
+      "problem_type": "unit_test",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に正しい語を入れなさい。\n「The ( bark ) dog woke me up.」",
+      "correct_answer": "barking",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "The barking dog woke me up.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_participle"
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_participle",
+      "unit_id": "eng_participle",
+      "sub_unit": "participle",
+      "problem_type": "unit_test",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に正しい語を入れなさい。\n「She wore a ( stitch ) dress.」",
+      "correct_answer": "stitched",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "She wore a stitched dress.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_participle"
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_participle",
+      "unit_id": "eng_participle",
+      "sub_unit": "participle",
+      "problem_type": "unit_test",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に正しい語を入れなさい。\n「The boy ( play ) in the yard is Tom.」",
+      "correct_answer": "playing",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "The boy playing in the yard is Tom.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_participle"
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_participle",
+      "unit_id": "eng_participle",
+      "sub_unit": "participle",
+      "problem_type": "unit_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「冷凍された食べ物は長期間保存できます。」",
+      "correct_answer": "Frozen food can be stored for a long time.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "Frozen food can be stored for a long time.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_participle"
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_participle",
+      "unit_id": "eng_participle",
+      "sub_unit": "participle",
+      "problem_type": "unit_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「ベンチに座って新聞を読んでいる男性は私の父です。」",
+      "correct_answer": "The man sitting on the bench reading a newspaper is my father.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "The man sitting on the bench reading a newspaper is my father.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_participle"
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_participle",
+      "unit_id": "eng_participle",
+      "sub_unit": "participle",
+      "problem_type": "unit_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に正しい語を入れなさい。\n「The house ( build ) in 1800 is still standing.」",
+      "correct_answer": "built",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "The house built in 1800 is still standing.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_participle"
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_participle",
+      "unit_id": "eng_participle",
+      "sub_unit": "participle",
+      "problem_type": "unit_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「彼女が手で作ったバッグは有名です。」",
+      "correct_answer": "The bag made by her by hand is famous.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "The bag made by her by hand is famous.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_participle"
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_participle",
+      "unit_id": "eng_participle",
+      "sub_unit": "participle",
+      "problem_type": "unit_test",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「研究室で働いている科学者は新しい発見をしました。」",
+      "correct_answer": "The scientist working in the laboratory made a new discovery.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "The scientist working in the laboratory made a new discovery.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_participle"
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_participle",
+      "unit_id": "eng_participle",
+      "sub_unit": "participle",
+      "problem_type": "unit_test",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「その修復された絵画は美術館で展示されています。」",
+      "correct_answer": "The restored painting is on display at the museum.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "The restored painting is on display at the museum.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_participle"
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_participle",
+      "unit_id": "eng_participle",
+      "sub_unit": "participle",
+      "problem_type": "unit_test",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「彼女が着ているドレスはとても美しいです。」",
+      "correct_answer": "The dress she is wearing is very beautiful.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "The dress she is wearing is very beautiful.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_participle"
+    }
+  ]
+}

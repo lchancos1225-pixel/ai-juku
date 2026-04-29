@@ -1,0 +1,292 @@
+{
+  "problems": [
+    {
+      "full_unit_id": "positive_negative_numbers_division",
+      "unit_id": "positive_negative_numbers",
+      "sub_unit": "division",
+      "difficulty": "easy",
+      "question_text": "(+15) ÷ (+3) を計算しなさい。",
+      "correct_answer": "5",
+      "hint_1": "どちらもプラスの数なので、同符号の割り算になります。",
+      "hint_2": "同符号の割り算の答えはプラスになります。15を3で割りましょう。",
+      "explanation_base": "同符号の除法なので、絶対値の商にプラスの符号をつけます。+(15 ÷ 3) = 5 です。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "review_sign_rules",
+        "repeat_same_pattern"
+      ]
+    },
+    {
+      "full_unit_id": "positive_negative_numbers_division",
+      "unit_id": "positive_negative_numbers",
+      "sub_unit": "division",
+      "difficulty": "easy",
+      "question_text": "(-18) ÷ (-6) を計算しなさい。",
+      "correct_answer": "3",
+      "hint_1": "どちらもマイナスの数なので、同符号の割り算になります。",
+      "hint_2": "同符号の割り算の答えはプラスになります。18を6で割りましょう。",
+      "explanation_base": "負の数同士（同符号）の除法なので、答えの符号はプラスになります。+(18 ÷ 6) = 3 です。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "operation_confusion"
+      ],
+      "intervention_candidates": [
+        "review_sign_rules",
+        "explain_differently"
+      ]
+    },
+    {
+      "full_unit_id": "positive_negative_numbers_division",
+      "unit_id": "positive_negative_numbers",
+      "sub_unit": "division",
+      "difficulty": "easy",
+      "question_text": "(+24) ÷ (-4) を計算しなさい。",
+      "correct_answer": "-6",
+      "hint_1": "プラスとマイナスの異符号の割り算です。",
+      "hint_2": "異符号の割り算の答えはマイナスになります。24を4で割りましょう。",
+      "explanation_base": "異符号の除法なので、答えの符号はマイナスになります。-(24 ÷ 4) = -6 です。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "review_sign_rules",
+        "repeat_same_pattern"
+      ]
+    },
+    {
+      "full_unit_id": "positive_negative_numbers_division",
+      "unit_id": "positive_negative_numbers",
+      "sub_unit": "division",
+      "difficulty": "easy",
+      "question_text": "(-28) ÷ (+7) を計算しなさい。",
+      "correct_answer": "-4",
+      "hint_1": "マイナスとプラスの異符号の割り算です。符号はどうなるでしょうか。",
+      "hint_2": "異符号の割り算は答えがマイナスになります。28を7で割りましょう。",
+      "explanation_base": "異符号の除法なので、絶対値の商にマイナスの符号をつけます。-(28 ÷ 7) = -4 です。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "review_sign_rules",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "positive_negative_numbers_division",
+      "unit_id": "positive_negative_numbers",
+      "sub_unit": "division",
+      "difficulty": "easy",
+      "question_text": "0 ÷ (-9) を計算しなさい。",
+      "correct_answer": "0",
+      "hint_1": "0をある数で割る計算です。",
+      "hint_2": "0をどんな数（0以外）で割っても、答えは0になります。",
+      "explanation_base": "0を0以外の数で割った結果は、元の数の符号に関わらず必ず 0 になります。",
+      "error_pattern_candidates": [
+        "operation_confusion",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "explain_differently"
+      ]
+    },
+    {
+      "full_unit_id": "positive_negative_numbers_division",
+      "unit_id": "positive_negative_numbers",
+      "sub_unit": "division",
+      "difficulty": "normal",
+      "question_text": "(-4.2) ÷ (+0.6) を計算しなさい。",
+      "correct_answer": "-7",
+      "hint_1": "小数同士の異符号の割り算です。",
+      "hint_2": "異符号なので答えはマイナスになります。4.2 ÷ 0.6 を計算しましょう。",
+      "explanation_base": "異符号の除法なので符号はマイナスになります。-(4.2 ÷ 0.6) = -7 です。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "review_sign_rules",
+        "retry_with_hint"
+      ]
+    },
+    {
+      "full_unit_id": "positive_negative_numbers_division",
+      "unit_id": "positive_negative_numbers",
+      "sub_unit": "division",
+      "difficulty": "normal",
+      "question_text": "(+3/4) ÷ (-9/8) を計算しなさい。",
+      "correct_answer": "-2/3",
+      "hint_1": "分数の割り算は、割る数の逆数をかける計算に直すことができます。",
+      "hint_2": "符号はマイナスになります。(+3/4) × (-8/9) を計算しましょう。",
+      "explanation_base": "異符号の除法なので符号はマイナスになります。除法を乗法に直して逆数をかけると、-(3/4 × 8/9) = -2/3 となります。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "prerequisite_gap"
+      ],
+      "intervention_candidates": [
+        "review_sign_rules",
+        "fallback_prerequisite"
+      ]
+    },
+    {
+      "full_unit_id": "positive_negative_numbers_division",
+      "unit_id": "positive_negative_numbers",
+      "sub_unit": "division",
+      "difficulty": "normal",
+      "question_text": "(-12) ÷ (-3/5) を計算しなさい。",
+      "correct_answer": "20",
+      "hint_1": "整数と分数の割り算です。割る数 (-3/5) を逆数にしてかけ算に直しましょう。",
+      "hint_2": "マイナス同士の割り算なので答えはプラスになります。12 × 5/3 を計算しましょう。",
+      "explanation_base": "同符号の除法なので符号はプラスになります。逆数をかけてかけ算に直すと、+(12 × 5/3) = 20 です。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "operation_confusion"
+      ],
+      "intervention_candidates": [
+        "review_sign_rules",
+        "explain_differently"
+      ]
+    },
+    {
+      "full_unit_id": "positive_negative_numbers_division",
+      "unit_id": "positive_negative_numbers",
+      "sub_unit": "division",
+      "difficulty": "normal",
+      "question_text": "(-5.4) ÷ (-1.8) を計算しなさい。",
+      "correct_answer": "3",
+      "hint_1": "小数同士の同符号の割り算です。符号はどうなるでしょうか。",
+      "hint_2": "マイナス同士を割るので答えはプラスになります。5.4 ÷ 1.8 を計算しましょう。",
+      "explanation_base": "同符号の除法なので符号はプラスになります。+(5.4 ÷ 1.8) = 3 です。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "review_sign_rules",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "positive_negative_numbers_division",
+      "unit_id": "positive_negative_numbers",
+      "sub_unit": "division",
+      "difficulty": "normal",
+      "question_text": "(-7/8) ÷ 14 を計算しなさい。",
+      "correct_answer": "-1/16",
+      "hint_1": "分数を整数で割る計算です。14の逆数をかけてかけ算に直しましょう。",
+      "hint_2": "14は 14/1 と考えられるので、逆数は 1/14 です。異符号なので符号はマイナスになります。",
+      "explanation_base": "異符号の除法なので符号はマイナスになります。14の逆数である 1/14 をかけて計算すると、-(7/8 × 1/14) = -1/16 です。",
+      "error_pattern_candidates": [
+        "prerequisite_gap",
+        "sign_error"
+      ],
+      "intervention_candidates": [
+        "fallback_prerequisite",
+        "review_sign_rules"
+      ]
+    },
+    {
+      "full_unit_id": "positive_negative_numbers_division",
+      "unit_id": "positive_negative_numbers",
+      "sub_unit": "division",
+      "difficulty": "hard",
+      "question_text": "(-16) ÷ (+2) ÷ (-4) を計算しなさい。",
+      "correct_answer": "2",
+      "hint_1": "3つの数の割り算です。前から順番に計算していきましょう。",
+      "hint_2": "まず (-16) ÷ (+2) を計算して -8 にします。次にその結果を (-4) で割りましょう。",
+      "explanation_base": "前から順に計算します。(-16) ÷ (+2) = -8 です。次に、その結果を (-4) で割ります。(-8) ÷ (-4) = 2 となります。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "operation_confusion"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "explain_differently"
+      ]
+    },
+    {
+      "full_unit_id": "positive_negative_numbers_division",
+      "unit_id": "positive_negative_numbers",
+      "sub_unit": "division",
+      "difficulty": "hard",
+      "question_text": "(-3/5) ÷ (+1.2) を計算しなさい。",
+      "correct_answer": "-1/2",
+      "hint_1": "分数と小数の割り算です。小数を分数に直してから計算してみましょう。",
+      "hint_2": "1.2 を分数にすると 12/10、約分して 6/5 になります。式は (-3/5) ÷ (+6/5) となります。",
+      "explanation_base": "小数を分数に直すと 1.2 = 6/5 になります。除法を乗法に直して逆数をかけると、(-3/5) × (+5/6) となり、計算すると -1/2 になります。",
+      "error_pattern_candidates": [
+        "prerequisite_gap",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "fallback_prerequisite",
+        "retry_with_hint"
+      ]
+    },
+    {
+      "full_unit_id": "positive_negative_numbers_division",
+      "unit_id": "positive_negative_numbers",
+      "sub_unit": "division",
+      "difficulty": "hard",
+      "question_text": "(+1.5) ÷ (-5/4) ÷ (-0.6) を計算しなさい。",
+      "correct_answer": "2",
+      "hint_1": "小数と分数が混ざっています。すべて分数に直して、割り算を逆数のかけ算にしましょう。",
+      "hint_2": "1.5 は 3/2、0.6 は 3/5 になります。マイナスが2つあるので全体の符号はプラスになります。",
+      "explanation_base": "小数を分数に直すと 1.5 = 3/2、0.6 = 3/5 です。全体の符号はプラスになり、逆数をかけてかけ算に直すと、+(3/2 × 4/5 × 5/3) = 2 となります。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "prerequisite_gap",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "review_sign_rules",
+        "fallback_prerequisite"
+      ]
+    },
+    {
+      "full_unit_id": "positive_negative_numbers_division",
+      "unit_id": "positive_negative_numbers",
+      "sub_unit": "division",
+      "difficulty": "hard",
+      "question_text": "(-8) ÷ (-2.5) × (-0.5) を計算しなさい。",
+      "correct_answer": "-8/5",
+      "hint_1": "割り算とかけ算が混ざった計算です。割り算を逆数のかけ算に直して全体を一つの式にしましょう。",
+      "hint_2": "マイナスが3つあるので答えの符号はマイナスです。小数を分数に直して計算すると考えやすくなります。",
+      "explanation_base": "全体の符号はマイナスになります。小数を分数に直して除法を乗法に変えると、-(8 × 2/5 × 1/2) となります。計算すると -8/5 になります。",
+      "error_pattern_candidates": [
+        "operation_confusion",
+        "sign_error",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "review_sign_rules"
+      ]
+    },
+    {
+      "full_unit_id": "positive_negative_numbers_division",
+      "unit_id": "positive_negative_numbers",
+      "sub_unit": "division",
+      "difficulty": "hard",
+      "question_text": "(-7/12) ÷ (-14/9) ÷ (-3/4) を計算しなさい。",
+      "correct_answer": "-1/2",
+      "hint_1": "分数の割り算が続いています。すべて逆数のかけ算に直しましょう。",
+      "hint_2": "マイナスが3つあるので全体の符号はマイナスです。(-7/12) × (-9/14) × (-4/3) を計算します。",
+      "explanation_base": "負の数が奇数個（3つ）なので、計算結果の符号はマイナスになります。すべて乗法に直すと -(7/12 × 9/14 × 4/3) となります。約分して計算すると -1/2 になります。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "arithmetic_error",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "repeat_same_pattern"
+      ]
+    }
+  ]
+}

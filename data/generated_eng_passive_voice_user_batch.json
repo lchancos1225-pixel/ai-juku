@@ -1,0 +1,709 @@
+{
+  "problems": [
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_passive_voice",
+      "unit_id": "eng_passive_voice",
+      "sub_unit": "passive_voice",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "受け身の文に書き換えなさい。\n「Tom wrote this book.」",
+      "correct_answer": "This book was written by Tom.",
+      "hint_1": "受け身の形は「be動詞＋過去分詞」です。",
+      "hint_2": "過去の受け身：was/were＋過去分詞（＋by ...）",
+      "explanation_base": "This book was written by Tom.（受け身）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_passive_voice",
+      "unit_id": "eng_passive_voice",
+      "sub_unit": "passive_voice",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "受け身の文に書き換えなさい。\n「She cleaned this room.」",
+      "correct_answer": "This room was cleaned by her.",
+      "hint_1": "受け身の形は「be動詞＋過去分詞」です。",
+      "hint_2": "was + cleaned（規則活用）の形にします。",
+      "explanation_base": "This room was cleaned by her.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_passive_voice",
+      "unit_id": "eng_passive_voice",
+      "sub_unit": "passive_voice",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "受け身の文に書き換えなさい。\n「They use English all over the world.」",
+      "correct_answer": "English is used all over the world.",
+      "hint_1": "現在の受け身：is/are＋過去分詞",
+      "hint_2": "is + used（規則活用）の形にします。",
+      "explanation_base": "English is used all over the world.（現在の受け身）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_passive_voice",
+      "unit_id": "eng_passive_voice",
+      "sub_unit": "passive_voice",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "受け身の文に書き換えなさい。\n「We speak Japanese in Japan.」",
+      "correct_answer": "Japanese is spoken in Japan.",
+      "hint_1": "現在の受け身：is/are＋過去分詞",
+      "hint_2": "is + spoken（speak の過去分詞）の形にします。",
+      "explanation_base": "Japanese is spoken in Japan.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_passive_voice",
+      "unit_id": "eng_passive_voice",
+      "sub_unit": "passive_voice",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "受け身の文に書き換えなさい。\n「She loves him.」",
+      "correct_answer": "He is loved by her.",
+      "hint_1": "現在の受け身：is/are＋過去分詞",
+      "hint_2": "is + loved（規則活用）の形にします。",
+      "explanation_base": "He is loved by her.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_passive_voice",
+      "unit_id": "eng_passive_voice",
+      "sub_unit": "passive_voice",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "受け身の疑問文に書き換えなさい。\n「This cake was made by Mary.」",
+      "correct_answer": "Was this cake made by Mary?",
+      "hint_1": "受け身の疑問文は be動詞を先頭に置きます。",
+      "hint_2": "Was + 主語 + 過去分詞〜? の形にします。",
+      "explanation_base": "Was this cake made by Mary?",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_passive_voice",
+      "unit_id": "eng_passive_voice",
+      "sub_unit": "passive_voice",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "受け身の否定文に書き換えなさい。\n「This letter was written by him.」",
+      "correct_answer": "This letter was not written by him.",
+      "hint_1": "受け身の否定文は be動詞の後に not を置きます。",
+      "hint_2": "was not + 過去分詞〜 の形にします。",
+      "explanation_base": "This letter was not written by him.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_passive_voice",
+      "unit_id": "eng_passive_voice",
+      "sub_unit": "passive_voice",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "受け身の文に書き換えなさい。\n「He broke the window.」",
+      "correct_answer": "The window was broken by him.",
+      "hint_1": "break の過去分詞は broken です。",
+      "hint_2": "The window was + broken（break の過去分詞）の形にします。",
+      "explanation_base": "The window was broken by him.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_passive_voice",
+      "unit_id": "eng_passive_voice",
+      "sub_unit": "passive_voice",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "受け身の文に書き換えなさい。\n「People sell flowers here.」",
+      "correct_answer": "Flowers are sold here.",
+      "hint_1": "現在の受け身で by ... を使わない場合もあります。",
+      "hint_2": "Flowers are + sold（sell の過去分詞）の形にします。",
+      "explanation_base": "Flowers are sold here.（by peopleは省略可）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_passive_voice",
+      "unit_id": "eng_passive_voice",
+      "sub_unit": "passive_voice",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "受け身の文に書き換えなさい。\n「He built this house three years ago.」",
+      "correct_answer": "This house was built three years ago.",
+      "hint_1": "build の過去分詞は built です。",
+      "hint_2": "This house was + built（by himは省略）の形にします。",
+      "explanation_base": "This house was built three years ago.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_passive_voice",
+      "unit_id": "eng_passive_voice",
+      "sub_unit": "passive_voice",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「この歌は多くの人たちに愛されています。」",
+      "correct_answer": "This song is loved by many people.",
+      "hint_1": "現在の受け身：is/are＋過去分詞",
+      "hint_2": "This song is loved by 〜 の形にします。",
+      "explanation_base": "This song is loved by many people.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_passive_voice",
+      "unit_id": "eng_passive_voice",
+      "sub_unit": "passive_voice",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「このコンピューターは彼によって使われました。」",
+      "correct_answer": "This computer was used by him.",
+      "hint_1": "過去の受け身：was/were＋過去分詞",
+      "hint_2": "This computer was used by him の形にします。",
+      "explanation_base": "This computer was used by him.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_passive_voice",
+      "unit_id": "eng_passive_voice",
+      "sub_unit": "passive_voice",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「この橋はいつ作られましたか？」",
+      "correct_answer": "When was this bridge built?",
+      "hint_1": "受け身の疑問文で疑問詞を先頭に置きます。",
+      "hint_2": "When was + 主語(this bridge) + 過去分詞(built)? の形にします。",
+      "explanation_base": "When was this bridge built?",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_passive_voice",
+      "unit_id": "eng_passive_voice",
+      "sub_unit": "passive_voice",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「この本は日本語で書かれていません。」",
+      "correct_answer": "This book is not written in Japanese.",
+      "hint_1": "受け身の否定文：is/are not＋過去分詞",
+      "hint_2": "This book is not written in Japanese の形にします。",
+      "explanation_base": "This book is not written in Japanese.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_passive_voice",
+      "unit_id": "eng_passive_voice",
+      "sub_unit": "passive_voice",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「この写真はあなたによって撮られましたか？」",
+      "correct_answer": "Was this picture taken by you?",
+      "hint_1": "過去の受け身の疑問文：Was＋主語＋過去分詞＋by...?",
+      "hint_2": "Was this picture taken by you? の形にします。",
+      "explanation_base": "Was this picture taken by you?",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_passive_voice",
+      "unit_id": "eng_passive_voice",
+      "sub_unit": "passive_voice",
+      "problem_type": "mini_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "受け身の文に書き換えなさい。\n「He painted this picture.」",
+      "correct_answer": "This picture was painted by him.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "This picture was painted by him.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_passive_voice"
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_passive_voice",
+      "unit_id": "eng_passive_voice",
+      "sub_unit": "passive_voice",
+      "problem_type": "mini_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "受け身の文に書き換えなさい。\n「People admire her.」",
+      "correct_answer": "She is admired by people.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "She is admired by people.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_passive_voice"
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_passive_voice",
+      "unit_id": "eng_passive_voice",
+      "sub_unit": "passive_voice",
+      "problem_type": "mini_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「この国では英語が話されています。」",
+      "correct_answer": "English is spoken in this country.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "English is spoken in this country.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_passive_voice"
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_passive_voice",
+      "unit_id": "eng_passive_voice",
+      "sub_unit": "passive_voice",
+      "problem_type": "mini_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "受け身の疑問文に書き換えなさい。\n「The library was closed.」",
+      "correct_answer": "Was the library closed?",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "Was the library closed?",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_passive_voice"
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_passive_voice",
+      "unit_id": "eng_passive_voice",
+      "sub_unit": "passive_voice",
+      "problem_type": "mini_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「この映画は多くの国々で見られています。」",
+      "correct_answer": "This movie is watched in many countries.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "This movie is watched in many countries.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_passive_voice"
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_passive_voice",
+      "unit_id": "eng_passive_voice",
+      "sub_unit": "passive_voice",
+      "problem_type": "unit_test",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "受け身の文に書き換えなさい。\n「They invite us.」",
+      "correct_answer": "We are invited by them.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "We are invited by them.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_passive_voice"
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_passive_voice",
+      "unit_id": "eng_passive_voice",
+      "sub_unit": "passive_voice",
+      "problem_type": "unit_test",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "受け身の文に書き換えなさい。\n「He fixed the car.」",
+      "correct_answer": "The car was fixed by him.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "The car was fixed by him.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_passive_voice"
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_passive_voice",
+      "unit_id": "eng_passive_voice",
+      "sub_unit": "passive_voice",
+      "problem_type": "unit_test",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "受け身の文に書き換えなさい。\n「She teaches math.」",
+      "correct_answer": "Math is taught by her.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "Math is taught by her.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_passive_voice"
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_passive_voice",
+      "unit_id": "eng_passive_voice",
+      "sub_unit": "passive_voice",
+      "problem_type": "unit_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「この歌は世界中で歌われています。」",
+      "correct_answer": "This song is sung all over the world.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "This song is sung all over the world.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_passive_voice"
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_passive_voice",
+      "unit_id": "eng_passive_voice",
+      "sub_unit": "passive_voice",
+      "problem_type": "unit_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "受け身の否定文に書き換えなさい。\n「This window was broken.」",
+      "correct_answer": "This window was not broken.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "This window was not broken.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_passive_voice"
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_passive_voice",
+      "unit_id": "eng_passive_voice",
+      "sub_unit": "passive_voice",
+      "problem_type": "unit_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「その手紙は昨日彼女によって送られました。」",
+      "correct_answer": "The letter was sent by her yesterday.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "The letter was sent by her yesterday.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_passive_voice"
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_passive_voice",
+      "unit_id": "eng_passive_voice",
+      "sub_unit": "passive_voice",
+      "problem_type": "unit_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "受け身の疑問文に書き換えなさい。\n「The museum was built in 1920.」",
+      "correct_answer": "Was the museum built in 1920?",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "Was the museum built in 1920?",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_passive_voice"
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_passive_voice",
+      "unit_id": "eng_passive_voice",
+      "sub_unit": "passive_voice",
+      "problem_type": "unit_test",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「その事故はテレビで報道されました。」",
+      "correct_answer": "The accident was reported on TV.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "The accident was reported on TV.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_passive_voice"
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_passive_voice",
+      "unit_id": "eng_passive_voice",
+      "sub_unit": "passive_voice",
+      "problem_type": "unit_test",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「この地域ではどんな言語が話されていますか？」",
+      "correct_answer": "What language is spoken in this area?",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "What language is spoken in this area?",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_passive_voice"
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_passive_voice",
+      "unit_id": "eng_passive_voice",
+      "sub_unit": "passive_voice",
+      "problem_type": "unit_test",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「彼の作品は多くの美術館に展示されています。」",
+      "correct_answer": "His works are displayed in many museums.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "His works are displayed in many museums.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_passive_voice"
+    }
+  ]
+}

@@ -1,0 +1,304 @@
+{
+  "problems": [
+    {
+      "full_unit_id": "linear_equations_basic",
+      "unit_id": "linear_equations",
+      "sub_unit": "basic",
+      "problem_type": "mini_test",
+      "test_scope": "mini_test",
+      "difficulty": "easy",
+      "question_text": "次の方程式を解きなさい。\nx + 4 = 9",
+      "diagram": null,
+      "correct_answer": "x = 5",
+      "explanation_base": "左辺の +4 を右辺に移項すると、符号が変わり -4 になります。x = 9 - 4 より x = 5 となります。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "formula_setup_error"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "explain_differently"
+      ]
+    },
+    {
+      "full_unit_id": "linear_equations_basic",
+      "unit_id": "linear_equations",
+      "sub_unit": "basic",
+      "problem_type": "mini_test",
+      "test_scope": "mini_test",
+      "difficulty": "easy",
+      "question_text": "次の方程式を解きなさい。\n3x = -15",
+      "diagram": null,
+      "correct_answer": "x = -5",
+      "explanation_base": "両辺を x の係数である 3 で割ります。x = -15 ÷ 3 より、x = -5 となります。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "reinforce_same_pattern",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "linear_equations_basic",
+      "unit_id": "linear_equations",
+      "sub_unit": "basic",
+      "problem_type": "mini_test",
+      "test_scope": "mini_test",
+      "difficulty": "normal",
+      "question_text": "次の方程式を解きなさい。\n2x - 5 = 7",
+      "diagram": null,
+      "correct_answer": "x = 6",
+      "explanation_base": "-5 を右辺に移項して 2x = 7 + 5 とします。2x = 12 となるので、両辺を2で割って x = 6 となります。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "operation_confusion"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "explain_differently"
+      ]
+    },
+    {
+      "full_unit_id": "linear_equations_basic",
+      "unit_id": "linear_equations",
+      "sub_unit": "basic",
+      "problem_type": "mini_test",
+      "test_scope": "mini_test",
+      "difficulty": "normal",
+      "question_text": "次の方程式を解きなさい。\n5x + 2 = 2x - 10",
+      "diagram": null,
+      "correct_answer": "x = -4",
+      "explanation_base": "x を含む項を左辺へ、数の項を右辺へ移項します。5x - 2x = -10 - 2 となり、3x = -12 です。両辺を3で割って x = -4 となります。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "variable_handling_error"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "reinforce_same_pattern"
+      ]
+    },
+    {
+      "full_unit_id": "linear_equations_basic",
+      "unit_id": "linear_equations",
+      "sub_unit": "basic",
+      "problem_type": "mini_test",
+      "test_scope": "mini_test",
+      "difficulty": "hard",
+      "question_text": "次の方程式を解きなさい。\n3(x - 2) = x + 4",
+      "diagram": null,
+      "correct_answer": "x = 5",
+      "explanation_base": "まず分配法則で左辺のかっこを外します。3x - 6 = x + 4。移項して 3x - x = 4 + 6 となり、2x = 10。両辺を2で割って x = 5 となります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "sign_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "linear_equations_basic",
+      "unit_id": "linear_equations",
+      "sub_unit": "basic",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "easy",
+      "question_text": "次の方程式を解きなさい。\nx - 8 = -3",
+      "diagram": null,
+      "correct_answer": "x = 5",
+      "explanation_base": "-8 を右辺に移項すると +8 になります。x = -3 + 8 より x = 5 となります。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "advance_with_confidence"
+      ]
+    },
+    {
+      "full_unit_id": "linear_equations_basic",
+      "unit_id": "linear_equations",
+      "sub_unit": "basic",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "easy",
+      "question_text": "次の方程式を解きなさい。\n-4x = 24",
+      "diagram": null,
+      "correct_answer": "x = -6",
+      "explanation_base": "両辺を -4 で割ります。x = 24 ÷ (-4) より、x = -6 となります。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "reinforce_same_pattern",
+        "retry_with_hint"
+      ]
+    },
+    {
+      "full_unit_id": "linear_equations_basic",
+      "unit_id": "linear_equations",
+      "sub_unit": "basic",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "easy",
+      "question_text": "次の方程式を解きなさい。\n6x + 5 = -13",
+      "diagram": null,
+      "correct_answer": "x = -3",
+      "explanation_base": "+5 を右辺に移項して 6x = -13 - 5 とします。6x = -18 となるので、両辺を6で割って x = -3 となります。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "formula_setup_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "linear_equations_basic",
+      "unit_id": "linear_equations",
+      "sub_unit": "basic",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "normal",
+      "question_text": "次の方程式を解きなさい。\n4x - 7 = 7x + 8",
+      "diagram": null,
+      "correct_answer": "x = -5",
+      "explanation_base": "x を含む項を左辺へ、数の項を右辺へ移項します。4x - 7x = 8 + 7 となり、-3x = 15 です。両辺を -3 で割って x = -5 となります。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "variable_handling_error"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "reinforce_same_pattern"
+      ]
+    },
+    {
+      "full_unit_id": "linear_equations_basic",
+      "unit_id": "linear_equations",
+      "sub_unit": "basic",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "normal",
+      "question_text": "次の方程式を解きなさい。\n2(3x + 1) = 4x - 6",
+      "diagram": null,
+      "correct_answer": "x = -4",
+      "explanation_base": "かっこを外して 6x + 2 = 4x - 6 とします。移項して 6x - 4x = -6 - 2 となり、2x = -8 です。両辺を2で割って x = -4 となります。",
+      "error_pattern_candidates": [
+        "operation_confusion",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "linear_equations_basic",
+      "unit_id": "linear_equations",
+      "sub_unit": "basic",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "normal",
+      "question_text": "次の方程式を解きなさい。\nx/3 - 2 = 1",
+      "diagram": null,
+      "correct_answer": "x = 9",
+      "explanation_base": "-2 を移項して x/3 = 1 + 2 とし、x/3 = 3 とします。両辺に3を掛けて x = 9 となります。",
+      "error_pattern_candidates": [
+        "prerequisite_gap",
+        "formula_setup_error"
+      ],
+      "intervention_candidates": [
+        "fallback_prerequisite",
+        "explain_differently"
+      ]
+    },
+    {
+      "full_unit_id": "linear_equations_basic",
+      "unit_id": "linear_equations",
+      "sub_unit": "basic",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "normal",
+      "question_text": "次の方程式を解きなさい。\n0.5x - 1.2 = 0.2x + 0.6",
+      "diagram": null,
+      "correct_answer": "x = 6",
+      "explanation_base": "両辺を10倍して小数を整数に直します。5x - 12 = 2x + 6 となります。移項して 5x - 2x = 6 + 12 となり、3x = 18。両辺を3で割って x = 6 となります。",
+      "error_pattern_candidates": [
+        "prerequisite_gap",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "fallback_prerequisite",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "linear_equations_basic",
+      "unit_id": "linear_equations",
+      "sub_unit": "basic",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "hard",
+      "question_text": "次の比例式を満たす x の値を求めなさい。\n(x + 1) : 3 = 2 : 1",
+      "diagram": null,
+      "correct_answer": "x = 5",
+      "explanation_base": "比例式の性質「外側の積＝内側の積」を使います。(x + 1) × 1 = 3 × 2 より、x + 1 = 6 となります。移項して x = 6 - 1 より x = 5 となります。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "formula_setup_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "retry_with_hint"
+      ]
+    },
+    {
+      "full_unit_id": "linear_equations_basic",
+      "unit_id": "linear_equations",
+      "sub_unit": "basic",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "hard",
+      "question_text": "次の方程式を解きなさい。\n(2x - 1)/3 - (x + 2)/2 = 1",
+      "diagram": null,
+      "correct_answer": "x = 14",
+      "explanation_base": "両辺に分母の最小公倍数である6を掛けて分母をはらいます。2(2x - 1) - 3(x + 2) = 6 となります。かっこを外して 4x - 2 - 3x - 6 = 6 とし、同類項をまとめると x - 8 = 6。移項して x = 14 となります。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "prerequisite_gap"
+      ],
+      "intervention_candidates": [
+        "fallback_prerequisite",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "linear_equations_basic",
+      "unit_id": "linear_equations",
+      "sub_unit": "basic",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "hard",
+      "question_text": "x についての方程式 3x - a = x + 5 の解が x = 4 のとき、a の値を求めなさい。",
+      "diagram": null,
+      "correct_answer": "a = 3",
+      "explanation_base": "解が x = 4 なので、方程式の x に 4 を代入します。3 × 4 - a = 4 + 5 となり、12 - a = 9 となります。-a を右辺へ、9 を左辺へ移項すると 12 - 9 = a となり、a = 3 です。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "variable_handling_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "teacher_intervention_needed"
+      ]
+    }
+  ]
+}

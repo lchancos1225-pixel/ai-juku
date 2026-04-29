@@ -1,0 +1,709 @@
+{
+  "problems": [
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_be_verb",
+      "unit_id": "eng_be_verb",
+      "sub_unit": "be_verb",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に入る正しいbe動詞を書きなさい。\n「I ( ) a student.」",
+      "correct_answer": "am",
+      "hint_1": "主語が I のとき、be動詞は1種類しかありません。",
+      "hint_2": "I に対応するbe動詞は am です。",
+      "explanation_base": "主語が I のときは be動詞 am を使います。I am a student.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_be_verb",
+      "unit_id": "eng_be_verb",
+      "sub_unit": "be_verb",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に入る正しいbe動詞を書きなさい。\n「She ( ) a teacher.」",
+      "correct_answer": "is",
+      "hint_1": "主語が She（三人称単数）のとき、be動詞は何になりますか？",
+      "hint_2": "he/she/it に対応するbe動詞は is です。",
+      "explanation_base": "主語が she のときは be動詞 is を使います。She is a teacher.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_be_verb",
+      "unit_id": "eng_be_verb",
+      "sub_unit": "be_verb",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に入る正しいbe動詞を書きなさい。\n「They ( ) students.」",
+      "correct_answer": "are",
+      "hint_1": "主語が They（複数）のとき、be動詞は何になりますか？",
+      "hint_2": "you/they/we など複数に対応するbe動詞は are です。",
+      "explanation_base": "主語が they のときは be動詞 are を使います。They are students.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_be_verb",
+      "unit_id": "eng_be_verb",
+      "sub_unit": "be_verb",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に入る正しいbe動詞を書きなさい。\n「He ( ) my brother.」",
+      "correct_answer": "is",
+      "hint_1": "主語が He（三人称単数男性）のとき、be動詞は？",
+      "hint_2": "he/she/it に対応するbe動詞は is です。",
+      "explanation_base": "主語が he のときは be動詞 is を使います。He is my brother.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_be_verb",
+      "unit_id": "eng_be_verb",
+      "sub_unit": "be_verb",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に入る正しいbe動詞を書きなさい。\n「We ( ) friends.」",
+      "correct_answer": "are",
+      "hint_1": "主語が We（複数）のとき、be動詞は何になりますか？",
+      "hint_2": "we は複数なので are を使います。",
+      "explanation_base": "主語が we のときは be動詞 are を使います。We are friends.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_be_verb",
+      "unit_id": "eng_be_verb",
+      "sub_unit": "be_verb",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に入る正しい語を書きなさい。\n「She ( ) not a doctor.」",
+      "correct_answer": "is",
+      "hint_1": "否定文でも be動詞は主語に合わせます。She に対応するbe動詞は？",
+      "hint_2": "She is not〜 という形になります。",
+      "explanation_base": "She に対応するbe動詞は is なので、否定文は She is not a doctor. となります。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_be_verb",
+      "unit_id": "eng_be_verb",
+      "sub_unit": "be_verb",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に入る正しい語を書きなさい。\n「They ( ) not tired.」",
+      "correct_answer": "are",
+      "hint_1": "否定文でも be動詞は主語に合わせます。They に対応するbe動詞は？",
+      "hint_2": "They are not〜 という形になります。",
+      "explanation_base": "They に対応するbe動詞は are なので、否定文は They are not tired. となります。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_be_verb",
+      "unit_id": "eng_be_verb",
+      "sub_unit": "be_verb",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "疑問文を作りなさい。（　）に入る正しい語を書きなさい。\n「( ) she a nurse?」",
+      "correct_answer": "Is",
+      "hint_1": "疑問文では be動詞を文の先頭に出します。She に対応するbe動詞は？",
+      "hint_2": "Is 〜? という形の疑問文にします。",
+      "explanation_base": "She に対応するbe動詞は is なので、疑問文は Is she a nurse? となります。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_be_verb",
+      "unit_id": "eng_be_verb",
+      "sub_unit": "be_verb",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "疑問文を作りなさい。（　）に入る正しい語を書きなさい。\n「( ) you happy?」",
+      "correct_answer": "Are",
+      "hint_1": "疑問文では be動詞を文の先頭に出します。You に対応するbe動詞は？",
+      "hint_2": "Are 〜? という形の疑問文にします。",
+      "explanation_base": "you に対応するbe動詞は are なので、疑問文は Are you happy? となります。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_be_verb",
+      "unit_id": "eng_be_verb",
+      "sub_unit": "be_verb",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に入る正しい語を書きなさい。\n「I ( ) not busy today.」",
+      "correct_answer": "am",
+      "hint_1": "否定文でも be動詞は主語に合わせます。I に対応するbe動詞は？",
+      "hint_2": "I am not〜 という形になります。",
+      "explanation_base": "I に対応するbe動詞は am なので、否定文は I am not busy today. となります。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_be_verb",
+      "unit_id": "eng_be_verb",
+      "sub_unit": "be_verb",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「私は中学生です。」",
+      "correct_answer": "I am a junior high school student.",
+      "hint_1": "「私は〜です」は I am 〜. の形で書きます。",
+      "hint_2": "「中学生」は junior high school student と書きます。",
+      "explanation_base": "「私は〜です」は I am 〜. なので、I am a junior high school student. となります。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_be_verb",
+      "unit_id": "eng_be_verb",
+      "sub_unit": "be_verb",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「彼女は音楽の先生ではありません。」",
+      "correct_answer": "She is not a music teacher.",
+      "hint_1": "「〜ではありません」は be動詞 + not の形です。",
+      "hint_2": "She is not 〜. という形にします。",
+      "explanation_base": "「彼女は〜ではありません」は She is not 〜. なので、She is not a music teacher. となります。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_be_verb",
+      "unit_id": "eng_be_verb",
+      "sub_unit": "be_verb",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「あなたたちは同じクラスですか？」",
+      "correct_answer": "Are you in the same class?",
+      "hint_1": "「〜ですか？」は be動詞を文の先頭に置きます。",
+      "hint_2": "Are you 〜? という疑問文の形にします。",
+      "explanation_base": "「あなたたちは〜ですか？」は Are you 〜? なので、Are you in the same class? となります。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_be_verb",
+      "unit_id": "eng_be_verb",
+      "sub_unit": "be_verb",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「彼らはとても元気です。」",
+      "correct_answer": "They are very well.",
+      "hint_1": "「彼らは〜です」は They are 〜. の形にします。",
+      "hint_2": "They are very 〜. という形を使います。",
+      "explanation_base": "「彼らは〜です」は They are 〜. なので、They are very well. となります。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_be_verb",
+      "unit_id": "eng_be_verb",
+      "sub_unit": "be_verb",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「私のお気に入りの科目は英語です。」",
+      "correct_answer": "My favorite subject is English.",
+      "hint_1": "「〜は...です」は 主語 + is + 〜 の形です。",
+      "hint_2": "My favorite subject is 〜. という形にします。",
+      "explanation_base": "「私のお気に入りの科目は英語です」は My favorite subject is English. となります。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_be_verb",
+      "unit_id": "eng_be_verb",
+      "sub_unit": "be_verb",
+      "problem_type": "mini_test",
+      "test_scope": "eng_be_verb",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に入る正しいbe動詞を書きなさい。\n「It ( ) a nice day.」",
+      "correct_answer": "is",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "It（三人称単数）に対応するbe動詞は is です。It is a nice day.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_be_verb",
+      "unit_id": "eng_be_verb",
+      "sub_unit": "be_verb",
+      "problem_type": "mini_test",
+      "test_scope": "eng_be_verb",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に入る正しいbe動詞を書きなさい。\n「( ) your sister a student?」",
+      "correct_answer": "Is",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "your sister（三人称単数）に対応するbe動詞は is です。疑問文は Is your sister a student? となります。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_be_verb",
+      "unit_id": "eng_be_verb",
+      "sub_unit": "be_verb",
+      "problem_type": "mini_test",
+      "test_scope": "eng_be_verb",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「私は今、忙しいです。」",
+      "correct_answer": "I am busy now.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "I に対応するbe動詞は am です。I am busy now.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_be_verb",
+      "unit_id": "eng_be_verb",
+      "sub_unit": "be_verb",
+      "problem_type": "mini_test",
+      "test_scope": "eng_be_verb",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に入る正しい語を書きなさい。\n「We ( ) not late.」",
+      "correct_answer": "are",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "We に対応するbe動詞は are です。We are not late.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_be_verb",
+      "unit_id": "eng_be_verb",
+      "sub_unit": "be_verb",
+      "problem_type": "mini_test",
+      "test_scope": "eng_be_verb",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「彼は私の友達です。」",
+      "correct_answer": "He is my friend.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "He に対応するbe動詞は is です。He is my friend.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_be_verb",
+      "unit_id": "eng_be_verb",
+      "sub_unit": "be_verb",
+      "problem_type": "unit_test",
+      "test_scope": "eng_be_verb",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に入る正しいbe動詞を書きなさい。\n「You ( ) kind.」",
+      "correct_answer": "are",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "You に対応するbe動詞は are です。You are kind.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_be_verb",
+      "unit_id": "eng_be_verb",
+      "sub_unit": "be_verb",
+      "problem_type": "unit_test",
+      "test_scope": "eng_be_verb",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に入る正しいbe動詞を書きなさい。\n「I ( ) happy.」",
+      "correct_answer": "am",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "I に対応するbe動詞は am です。I am happy.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_be_verb",
+      "unit_id": "eng_be_verb",
+      "sub_unit": "be_verb",
+      "problem_type": "unit_test",
+      "test_scope": "eng_be_verb",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に入る正しいbe動詞を書きなさい。\n「He ( ) tall.」",
+      "correct_answer": "is",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "He に対応するbe動詞は is です。He is tall.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_be_verb",
+      "unit_id": "eng_be_verb",
+      "sub_unit": "be_verb",
+      "problem_type": "unit_test",
+      "test_scope": "eng_be_verb",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に入る正しい語を書きなさい。\n「( ) they in the park?」",
+      "correct_answer": "Are",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "They に対応するbe動詞は are です。疑問文は Are they in the park? となります。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_be_verb",
+      "unit_id": "eng_be_verb",
+      "sub_unit": "be_verb",
+      "problem_type": "unit_test",
+      "test_scope": "eng_be_verb",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に入る正しい語を書きなさい。\n「She ( ) not at home.」",
+      "correct_answer": "is",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "She に対応するbe動詞は is です。She is not at home.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_be_verb",
+      "unit_id": "eng_be_verb",
+      "sub_unit": "be_verb",
+      "problem_type": "unit_test",
+      "test_scope": "eng_be_verb",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「私たちは同じ学校です。」",
+      "correct_answer": "We are in the same school.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "We に対応するbe動詞は are です。We are in the same school.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_be_verb",
+      "unit_id": "eng_be_verb",
+      "sub_unit": "be_verb",
+      "problem_type": "unit_test",
+      "test_scope": "eng_be_verb",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「それは難しい問題ですか？」",
+      "correct_answer": "Is it a difficult question?",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "It に対応するbe動詞は is です。疑問文は Is it a difficult question? となります。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_be_verb",
+      "unit_id": "eng_be_verb",
+      "sub_unit": "be_verb",
+      "problem_type": "unit_test",
+      "test_scope": "eng_be_verb",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「この映画はとても面白いです。」",
+      "correct_answer": "This movie is very interesting.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "This movie（三人称単数）に対応するbe動詞は is です。This movie is very interesting.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_be_verb",
+      "unit_id": "eng_be_verb",
+      "sub_unit": "be_verb",
+      "problem_type": "unit_test",
+      "test_scope": "eng_be_verb",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「彼らは今、図書館にいません。」",
+      "correct_answer": "They are not in the library now.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "They に対応するbe動詞は are です。否定文は They are not in the library now. となります。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_be_verb",
+      "unit_id": "eng_be_verb",
+      "sub_unit": "be_verb",
+      "problem_type": "unit_test",
+      "test_scope": "eng_be_verb",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「あなたの夢は何ですか？」",
+      "correct_answer": "What is your dream?",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "「何は〜ですか？」は What is 〜? の形です。What is your dream?",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    }
+  ]
+}

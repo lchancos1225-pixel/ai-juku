@@ -1,0 +1,128 @@
+{% extends "base.html" %}
+{% block content %}
+
+{# ===== 上部バー（数学ホームと同仕様） ===== #}
+<div class="student-top-bar">
+  <div class="student-top-bar__info">
+    <span class="student-top-bar__name">{{ student.display_name }} さん</span>
+    <span class="state-chip state-chip--english">英語</span>
+    {% if current_unit_row %}
+    <span class="state-chip">{{ current_unit_row.display_name }}</span>
+    <span class="state-chip">習熟 {{ current_unit_row.mastery_score }}%</span>
+    {% else %}
+    <span class="state-chip">単元未選択</span>
+    {% endif %}
+  </div>
+  <a class="progress-chip-btn" href="/students/{{ student.student_id }}/progress">📊 マイレコード</a>
+</div>
+
+{# ===== 現在の英語単元カード（続きから始める） ===== #}
+{% if current_unit_row %}
+<section class="card eng-current-card">
+  <div class="eng-current-card__inner">
+    <div class="eng-current-card__info">
+      <p class="section-label">現在の英語単元</p>
+      <h2 class="eng-current-card__title">{{ current_unit_row.display_name }}</h2>
+      <div class="eng-unit-card__bar-wrap" role="progressbar"
+           aria-valuenow="{{ current_unit_row.mastery_score }}" aria-valuemax="100">
+        <div class="eng-unit-card__bar" style="width: {{ current_unit_row.mastery_score }}%"></div>
+      </div>
+      <p class="eng-current-card__score">習熟度 {{ current_unit_row.mastery_score }}%</p>
+    </div>
+    <a class="eng-current-start-btn" href="/students/{{ student.student_id }}/english/problem">▶ 続きから始める</a>
+  </div>
+</section>
+{% else %}
+<section class="card eng-current-card eng-current-card--empty">
+  <p class="section-label">英語</p>
+  {% if request.query_params.get('no_problems') %}
+  <p class="eng-current-card__empty-msg" style="color:#b91c1c;">⚠️ この単元にはまだ問題がありません。別の単元を選んでください。</p>
+  {% else %}
+  <p class="eng-current-card__empty-msg">下の単元一覧から最初の単元を選んで始めましょう。</p>
+  {% endif %}
+</section>
+{% endif %}
+
+{# ===== 単元一覧 ===== #}
+<section class="card" style="padding: 20px;">
+  <p class="section-label">単元一覧</p>
+  <h3 style="margin:0 0 16px;">英語の単元を選ぶ</h3>
+
+  <!-- 学年タブ -->
+  <div class="eng-grade-tabs">
+    <button class="eng-grade-tab eng-grade-tab--active" data-grade="all">すべて</button>
+    <button class="eng-grade-tab" data-grade="7">中1</button>
+    <button class="eng-grade-tab" data-grade="8">中2</button>
+    <button class="eng-grade-tab" data-grade="9">中3</button>
+  </div>
+
+  <div class="eng-unit-grid" id="eng-unit-grid">
+  {% for grade, units in grade_groups.items() | sort %}
+    {% for unit in units %}
+    <div class="eng-unit-card {% if not unit.unlocked %}eng-unit-card--locked{% endif %} {% if unit.status == 'mastered' %}eng-unit-card--mastered{% elif unit.status == 'in_progress' %}eng-unit-card--active{% endif %} {% if current_unit_row and unit.unit_id == current_unit_row.unit_id %}eng-unit-card--current{% endif %}" data-grade="{{ unit.grade }}">
+
+      <div class="eng-unit-card__grade-stripe {% if unit.grade == 7 %}stripe--g7{% elif unit.grade == 8 %}stripe--g8{% else %}stripe--g9{% endif %}"></div>
+
+      <div class="eng-unit-card__body">
+        <div class="eng-unit-card__head">
+          <span class="eng-unit-badge {% if unit.grade == 7 %}badge--g7{% elif unit.grade == 8 %}badge--g8{% else %}badge--g9{% endif %}">中{{ unit.grade - 6 }}</span>
+          <span class="eng-unit-icon">
+            {% if not unit.unlocked %}🔒{% elif unit.status == 'mastered' %}✅{% elif unit.status == 'in_progress' %}📖{% else %}🔓{% endif %}
+          </span>
+        </div>
+        <h3 class="eng-unit-card__name">{{ unit.display_name }}</h3>
+
+        {% if unit.mastery_score > 0 %}
+        <div class="eng-unit-card__bar-wrap" role="progressbar" aria-valuenow="{{ unit.mastery_score }}" aria-valuemax="100">
+          <div class="eng-unit-card__bar" style="width: {{ unit.mastery_score }}%"></div>
+        </div>
+        <p class="eng-unit-card__score">習熟度 {{ unit.mastery_score }}%</p>
+        {% else %}
+        <p class="eng-unit-card__score eng-unit-card__score--empty">未着手</p>
+        {% endif %}
+
+        {% if unit.intro_html %}
+        <details class="eng-unit-details">
+          <summary>単元の説明</summary>
+          <div class="eng-unit-details__body">{{ unit.intro_html | safe }}</div>
+        </details>
+        {% endif %}
+      </div>
+
+      <div class="eng-unit-card__footer">
+        {% if unit.unlocked %}
+          <form method="post" action="/students/{{ student.student_id }}/english/switch_unit">
+            <input type="hidden" name="unit_id" value="{{ unit.unit_id }}">
+            <button type="submit" class="eng-unit-btn">📖 この単元を学ぶ</button>
+          </form>
+        {% else %}
+          <button class="eng-unit-btn eng-unit-btn--locked" disabled>🔒 前の単元をクリアしよう</button>
+        {% endif %}
+      </div>
+
+    </div>
+    {% endfor %}
+  {% endfor %}
+  </div>
+</section>
+
+<script>
+(function () {
+  var tabs = document.querySelectorAll('.eng-grade-tab');
+  var cards = document.querySelectorAll('.eng-unit-card');
+
+  tabs.forEach(function (tab) {
+    tab.addEventListener('click', function () {
+      tabs.forEach(function (t) { t.classList.remove('eng-grade-tab--active'); });
+      tab.classList.add('eng-grade-tab--active');
+      var grade = tab.dataset.grade;
+      cards.forEach(function (card) {
+        card.style.display = (grade === 'all' || card.dataset.grade === grade) ? '' : 'none';
+      });
+    });
+  });
+})();
+</script>
+
+{% endblock %}
+

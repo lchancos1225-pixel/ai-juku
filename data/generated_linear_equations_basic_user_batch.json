@@ -1,0 +1,274 @@
+{
+  "problems": [
+    {
+      "unit_id": "linear_equations",
+      "sub_unit": "basic",
+      "difficulty": "easy",
+      "question_text": "次の方程式を解きなさい。 x + 4 = 9",
+      "correct_answer": "5",
+      "hint_1": "左辺の +4 を右辺に移項しましょう。",
+      "hint_2": "移項すると符号が変わり、x = 9 - 4 になります。",
+      "explanation_base": "左辺の +4 を右辺に移項すると -4 になります。x = 9 - 4 を計算して、x = 5 となります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "sign_error"
+      ],
+      "intervention_candidates": [
+        "step_by_step_equation_check",
+        "review_sign_rules"
+      ]
+    },
+    {
+      "unit_id": "linear_equations",
+      "sub_unit": "basic",
+      "difficulty": "easy",
+      "question_text": "次の方程式を解きなさい。 x - 3 = 6",
+      "correct_answer": "9",
+      "hint_1": "左辺の -3 を右辺に移項しましょう。",
+      "hint_2": "移項すると符号が変わるので、x = 6 + 3 となります。",
+      "explanation_base": "左辺の -3 を右辺に移項すると +3 になります。x = 6 + 3 を計算して、x = 9 となります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "sign_error"
+      ],
+      "intervention_candidates": [
+        "step_by_step_equation_check",
+        "review_sign_rules"
+      ]
+    },
+    {
+      "unit_id": "linear_equations",
+      "sub_unit": "basic",
+      "difficulty": "easy",
+      "question_text": "次の方程式を解きなさい。 2x = 10",
+      "correct_answer": "5",
+      "hint_1": "x の係数である 2 で両辺を割りましょう。",
+      "hint_2": "右辺は 10 ÷ 2 の計算になります。",
+      "explanation_base": "両辺を 2 で割ると、x = 10 ÷ 2 となり、x = 5 になります。",
+      "error_pattern_candidates": [
+        "arithmetic_error",
+        "operation_confusion"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "confirm_variable_meaning"
+      ]
+    },
+    {
+      "unit_id": "linear_equations",
+      "sub_unit": "basic",
+      "difficulty": "easy",
+      "question_text": "次の方程式を解きなさい。 -x = -7",
+      "correct_answer": "7",
+      "hint_1": "x の前にあるマイナスを消すために、両辺に -1 をかけましょう（または -1 で割りましょう）。",
+      "hint_2": "両辺の符号が入れ替わります。",
+      "explanation_base": "両辺に -1 をかけると、符号が反転して x = 7 となります。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "variable_handling_error"
+      ],
+      "intervention_candidates": [
+        "review_sign_rules",
+        "confirm_variable_meaning"
+      ]
+    },
+    {
+      "unit_id": "linear_equations",
+      "sub_unit": "basic",
+      "difficulty": "easy",
+      "question_text": "次の方程式を解きなさい。 5 + x = 2",
+      "correct_answer": "-3",
+      "hint_1": "左辺の 5 を右辺に移項しましょう。",
+      "hint_2": "移項すると符号が変わり、x = 2 - 5 になります。",
+      "explanation_base": "左辺の 5 を右辺に移項すると -5 になります。x = 2 - 5 を計算して、x = -3 となります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "sign_error"
+      ],
+      "intervention_candidates": [
+        "step_by_step_equation_check",
+        "absolute_value_comparison"
+      ]
+    },
+    {
+      "unit_id": "linear_equations",
+      "sub_unit": "basic",
+      "difficulty": "normal",
+      "question_text": "次の方程式を解きなさい。 3x + 2 = 14",
+      "correct_answer": "4",
+      "hint_1": "まずは +2 を右辺に移項しましょう。",
+      "hint_2": "3x = 14 - 2 を計算してから、両辺を 3 で割ります。",
+      "explanation_base": "+2 を移項すると 3x = 12 になります。両辺を 3 で割って、x = 4 となります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "step_by_step_equation_check",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "unit_id": "linear_equations",
+      "sub_unit": "basic",
+      "difficulty": "normal",
+      "question_text": "次の方程式を解きなさい。 5x - 4 = 11",
+      "correct_answer": "3",
+      "hint_1": "左辺の -4 を右辺に移項しましょう。",
+      "hint_2": "5x = 11 + 4 を計算してから、両辺を 5 で割ります。",
+      "explanation_base": "-4 を移項すると 5x = 15 になります。両辺を 5 で割って、x = 3 となります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "sign_error"
+      ],
+      "intervention_candidates": [
+        "step_by_step_equation_check",
+        "review_sign_rules"
+      ]
+    },
+    {
+      "unit_id": "linear_equations",
+      "sub_unit": "basic",
+      "difficulty": "normal",
+      "question_text": "次の方程式を解きなさい。 7x = 4x + 12",
+      "correct_answer": "4",
+      "hint_1": "右辺にある 4x を左辺に移項しましょう。",
+      "hint_2": "移項すると 7x - 4x = 12 になります。x の項をまとめましょう。",
+      "explanation_base": "4x を移項すると 7x - 4x = 12 となり、3x = 12 です。両辺を 3 で割って x = 4 になります。",
+      "error_pattern_candidates": [
+        "variable_handling_error",
+        "formula_setup_error"
+      ],
+      "intervention_candidates": [
+        "separate_terms_visually",
+        "step_by_step_equation_check"
+      ]
+    },
+    {
+      "unit_id": "linear_equations",
+      "sub_unit": "basic",
+      "difficulty": "normal",
+      "question_text": "次の方程式を解きなさい。 2x + 5 = x - 3",
+      "correct_answer": "-8",
+      "hint_1": "x の項を左辺に、数字の項を右辺に集めましょう。",
+      "hint_2": "x を左辺へ、+5 を右辺へ移項します。2x - x = -3 - 5 になります。",
+      "explanation_base": "移項すると 2x - x = -3 - 5 になります。同類項をまとめると x = -8 となります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "sign_error"
+      ],
+      "intervention_candidates": [
+        "step_by_step_equation_check",
+        "review_sign_rules"
+      ]
+    },
+    {
+      "unit_id": "linear_equations",
+      "sub_unit": "basic",
+      "difficulty": "normal",
+      "question_text": "次の方程式を解きなさい。 -4x + 1 = 9",
+      "correct_answer": "-2",
+      "hint_1": "まずは +1 を右辺に移項しましょう。",
+      "hint_2": "-4x = 9 - 1 を計算してから、両辺を -4 で割ります。",
+      "explanation_base": "+1 を移項すると -4x = 8 になります。両辺を -4 で割って、x = -2 となります。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "formula_setup_error"
+      ],
+      "intervention_candidates": [
+        "review_sign_rules",
+        "step_by_step_equation_check"
+      ]
+    },
+    {
+      "unit_id": "linear_equations",
+      "sub_unit": "basic",
+      "difficulty": "hard",
+      "question_text": "次の方程式を解きなさい。 2(x + 3) = 14",
+      "correct_answer": "4",
+      "hint_1": "まずは分配法則を使って、左辺のかっこを外しましょう。",
+      "hint_2": "かっこを外すと 2x + 6 = 14 になります。次に +6 を移項しましょう。",
+      "explanation_base": "かっこを外すと 2x + 6 = 14 となります。+6 を移項して 2x = 8 となり、両辺を 2 で割ると x = 4 になります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "step_by_step_equation_check",
+        "repeat_same_pattern"
+      ]
+    },
+    {
+      "unit_id": "linear_equations",
+      "sub_unit": "basic",
+      "difficulty": "hard",
+      "question_text": "次の方程式を解きなさい。 3(2x - 1) = 4x + 7",
+      "correct_answer": "5",
+      "hint_1": "左辺のかっこを外してから、x の項を左に、数字を右に移項しましょう。",
+      "hint_2": "かっこを外すと 6x - 3 = 4x + 7 になります。",
+      "explanation_base": "かっこを外すと 6x - 3 = 4x + 7 となります。移項して 6x - 4x = 7 + 3 を計算すると、2x = 10 となり x = 5 です。",
+      "error_pattern_candidates": [
+        "variable_handling_error",
+        "formula_setup_error"
+      ],
+      "intervention_candidates": [
+        "step_by_step_equation_check",
+        "separate_terms_visually"
+      ]
+    },
+    {
+      "unit_id": "linear_equations",
+      "sub_unit": "basic",
+      "difficulty": "hard",
+      "question_text": "次の方程式を解きなさい。 (x + 1) / 2 = 3",
+      "correct_answer": "5",
+      "hint_1": "分母の 2 を消すために、両辺に 2 をかけましょう。",
+      "hint_2": "両辺に 2 をかけると、左辺は x + 1 になり、右辺は 3 × 2 になります。",
+      "explanation_base": "両辺に 2 をかけると x + 1 = 6 になります。+1 を移項して x = 6 - 1 を計算し、x = 5 になります。",
+      "error_pattern_candidates": [
+        "operation_confusion",
+        "formula_setup_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "step_by_step_equation_check"
+      ]
+    },
+    {
+      "unit_id": "linear_equations",
+      "sub_unit": "basic",
+      "difficulty": "hard",
+      "question_text": "次の方程式を解きなさい。 0.5x + 1.2 = 2.7",
+      "correct_answer": "3",
+      "hint_1": "小数を消すために、両辺を 10 倍してみましょう。",
+      "hint_2": "両辺を 10 倍すると 5x + 12 = 27 になります。移項して計算しましょう。",
+      "explanation_base": "両辺を 10 倍して小数をなくすと、5x + 12 = 27 となります。12 を移項して 5x = 15 となり、両辺を 5 で割ると x = 3 です。",
+      "error_pattern_candidates": [
+        "prerequisite_gap",
+        "formula_setup_error"
+      ],
+      "intervention_candidates": [
+        "fallback_prerequisite",
+        "step_by_step_equation_check"
+      ]
+    },
+    {
+      "unit_id": "linear_equations",
+      "sub_unit": "basic",
+      "difficulty": "hard",
+      "question_text": "次の方程式を解きなさい。 5 - 2(x - 4) = 3x - 2",
+      "correct_answer": "3",
+      "hint_1": "左辺のかっこを分配法則で外します。-2 をかけるので符号の変化に注意しましょう。",
+      "hint_2": "左辺は 5 - 2x + 8 となります。同類項をまとめてから移項しましょう。",
+      "explanation_base": "かっこを外すと 5 - 2x + 8 = 3x - 2 となります。左辺を整理して -2x + 13 = 3x - 2。移項すると -2x - 3x = -2 - 13、-5x = -15 となり x = 3 です。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "formula_setup_error"
+      ],
+      "intervention_candidates": [
+        "review_sign_rules",
+        "step_by_step_equation_check"
+      ]
+    }
+  ]
+}

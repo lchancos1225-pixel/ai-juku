@@ -1,0 +1,194 @@
+{
+  "unit_dependencies": [
+    {
+      "unit_id": "eng_alphabet_basic",
+      "display_name": "アルファベット・基本単語",
+      "subject": "english",
+      "prerequisite_unit_id": null,
+      "next_unit_id": "eng_be_verb",
+      "display_order": 101,
+      "grade": 7,
+      "intro_html": "<p>英語の土台となるアルファベットと基本的な単語を学びます。大文字・小文字のスペルと読み方を正確に覚えましょう。</p>"
+    },
+    {
+      "unit_id": "eng_be_verb",
+      "display_name": "be動詞（am/is/are）・一般動詞（現在形）",
+      "subject": "english",
+      "prerequisite_unit_id": "eng_alphabet_basic",
+      "next_unit_id": "eng_third_person_singular",
+      "display_order": 102,
+      "grade": 7,
+      "intro_html": "<p>I am、You are、He/She isなど、be動詞の使い分けと一般動詞の現在形を学びます。</p>"
+    },
+    {
+      "unit_id": "eng_third_person_singular",
+      "display_name": "三人称単数現在形（He plays）",
+      "subject": "english",
+      "prerequisite_unit_id": "eng_be_verb",
+      "next_unit_id": "eng_question_negative",
+      "display_order": 103,
+      "grade": 7,
+      "intro_html": "<p>主語がhe/she/itのとき動詞に-(e)sをつける規則と例外（have→has など）を学びます。</p>"
+    },
+    {
+      "unit_id": "eng_question_negative",
+      "display_name": "疑問文・否定文の作り方",
+      "subject": "english",
+      "prerequisite_unit_id": "eng_third_person_singular",
+      "next_unit_id": "eng_can_modal",
+      "display_order": 104,
+      "grade": 7,
+      "intro_html": "<p>Do/Does を使った疑問文・否定文の語順を学びます。be動詞文との違いもおさえましょう。</p>"
+    },
+    {
+      "unit_id": "eng_can_modal",
+      "display_name": "助動詞 can（能力・可能）",
+      "subject": "english",
+      "prerequisite_unit_id": "eng_question_negative",
+      "next_unit_id": "eng_present_progressive",
+      "display_order": 105,
+      "grade": 7,
+      "intro_html": "<p>canを使った能力・許可の表現、Can you...? / I can't... などの文型を学びます。</p>"
+    },
+    {
+      "unit_id": "eng_present_progressive",
+      "display_name": "現在進行形（be + -ing）",
+      "subject": "english",
+      "prerequisite_unit_id": "eng_can_modal",
+      "next_unit_id": "eng_past_tense",
+      "display_order": 106,
+      "grade": 7,
+      "intro_html": "<p>「今～している」を表す is/am/are + 動詞ing の形を学びます。動詞の-ing形の作り方もおさえましょう。</p>"
+    },
+    {
+      "unit_id": "eng_past_tense",
+      "display_name": "一般動詞の過去形（規則・不規則）",
+      "subject": "english",
+      "prerequisite_unit_id": "eng_present_progressive",
+      "next_unit_id": "eng_future_tense",
+      "display_order": 201,
+      "grade": 8,
+      "intro_html": "<p>規則動詞（-ed）と不規則動詞（go→went, see→saw など）の過去形を学びます。</p>"
+    },
+    {
+      "unit_id": "eng_future_tense",
+      "display_name": "未来形（will / be going to）",
+      "subject": "english",
+      "prerequisite_unit_id": "eng_past_tense",
+      "next_unit_id": "eng_modal_verbs",
+      "display_order": 202,
+      "grade": 8,
+      "intro_html": "<p>will と be going to の使い分け、疑問文・否定文の作り方を学びます。</p>"
+    },
+    {
+      "unit_id": "eng_modal_verbs",
+      "display_name": "助動詞（must / may / should）",
+      "subject": "english",
+      "prerequisite_unit_id": "eng_future_tense",
+      "next_unit_id": "eng_infinitive",
+      "display_order": 203,
+      "grade": 8,
+      "intro_html": "<p>義務（must）・許可（may）・アドバイス（should）など助動詞の意味と使い方を学びます。</p>"
+    },
+    {
+      "unit_id": "eng_infinitive",
+      "display_name": "不定詞（to＋動詞の原形：名詞・形容詞・副詞的用法）",
+      "subject": "english",
+      "prerequisite_unit_id": "eng_modal_verbs",
+      "next_unit_id": "eng_gerund",
+      "display_order": 204,
+      "grade": 8,
+      "intro_html": "<p>to＋動詞の原形の3つの用法（名詞的・形容詞的・副詞的）を文中での役割ごとに学びます。</p>"
+    },
+    {
+      "unit_id": "eng_gerund",
+      "display_name": "動名詞（動詞＋ing）",
+      "subject": "english",
+      "prerequisite_unit_id": "eng_infinitive",
+      "next_unit_id": "eng_conjunctions",
+      "display_order": 205,
+      "grade": 8,
+      "intro_html": "<p>動名詞（Verb-ing）が名詞として機能する仕組みと、不定詞との使い分けを学びます。</p>"
+    },
+    {
+      "unit_id": "eng_conjunctions",
+      "display_name": "接続詞（that / when / if / because）",
+      "subject": "english",
+      "prerequisite_unit_id": "eng_gerund",
+      "next_unit_id": "eng_sentence_patterns",
+      "display_order": 206,
+      "grade": 8,
+      "intro_html": "<p>that / when / if / because で節をつなぐ方法と、文中での位置・コンマの使い方を学びます。</p>"
+    },
+    {
+      "unit_id": "eng_sentence_patterns",
+      "display_name": "文型（SVOO / SVOC など）",
+      "subject": "english",
+      "prerequisite_unit_id": "eng_conjunctions",
+      "next_unit_id": "eng_passive_voice",
+      "display_order": 207,
+      "grade": 8,
+      "intro_html": "<p>give A B / call A B など、目的語・補語を2つとる文型の構造を学びます。</p>"
+    },
+    {
+      "unit_id": "eng_passive_voice",
+      "display_name": "受け身（be動詞＋過去分詞）",
+      "subject": "english",
+      "prerequisite_unit_id": "eng_sentence_patterns",
+      "next_unit_id": "eng_present_perfect",
+      "display_order": 301,
+      "grade": 9,
+      "intro_html": "<p>能動文を受動文に書き換える手順と、by ～の省略ルールを学びます。</p>"
+    },
+    {
+      "unit_id": "eng_present_perfect",
+      "display_name": "現在完了形（継続・完了・経験）",
+      "subject": "english",
+      "prerequisite_unit_id": "eng_passive_voice",
+      "next_unit_id": "eng_infinitive_advanced",
+      "display_order": 302,
+      "grade": 9,
+      "intro_html": "<p>have/has＋過去分詞の3用法（継続・完了・経験）とそれぞれのキーワードを学びます。</p>"
+    },
+    {
+      "unit_id": "eng_infinitive_advanced",
+      "display_name": "不定詞の発展（疑問詞＋to / It～for A to～）",
+      "subject": "english",
+      "prerequisite_unit_id": "eng_present_perfect",
+      "next_unit_id": "eng_relative_pronoun",
+      "display_order": 303,
+      "grade": 9,
+      "intro_html": "<p>how to do / It is important for me to... など発展的な不定詞構文を学びます。</p>"
+    },
+    {
+      "unit_id": "eng_relative_pronoun",
+      "display_name": "関係代名詞（主格・目的格：who / which / that）",
+      "subject": "english",
+      "prerequisite_unit_id": "eng_infinitive_advanced",
+      "next_unit_id": "eng_participle",
+      "display_order": 304,
+      "grade": 9,
+      "intro_html": "<p>名詞を修飾する who / which / that の使い分けと、関係代名詞節の構造を学びます。</p>"
+    },
+    {
+      "unit_id": "eng_participle",
+      "display_name": "分詞（形容詞的用法）",
+      "subject": "english",
+      "prerequisite_unit_id": "eng_relative_pronoun",
+      "next_unit_id": "eng_subjunctive",
+      "display_order": 305,
+      "grade": 9,
+      "intro_html": "<p>現在分詞（-ing）・過去分詞（-ed/-en）が名詞を修飾する用法を学びます。</p>"
+    },
+    {
+      "unit_id": "eng_subjunctive",
+      "display_name": "仮定法（基礎）",
+      "subject": "english",
+      "prerequisite_unit_id": "eng_participle",
+      "next_unit_id": null,
+      "display_order": 306,
+      "grade": 9,
+      "intro_html": "<p>If I were you, I would... など、現実と異なる仮定を表す仮定法過去の基本構造を学びます。</p>"
+    }
+  ]
+}

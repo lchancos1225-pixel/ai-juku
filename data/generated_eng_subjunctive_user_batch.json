@@ -1,0 +1,709 @@
+{
+  "problems": [
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_subjunctive",
+      "unit_id": "eng_subjunctive",
+      "sub_unit": "subjunctive",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に正しい語を入れなさい。\n「If I ( be ) rich, I would travel the world.」",
+      "correct_answer": "were",
+      "hint_1": "仮定法過去では、be動詞は主語に関係なく were を使います。",
+      "hint_2": "If I were 〜, I would 〜 の形にします。",
+      "explanation_base": "If I were rich, I would travel the world.（仮定法過去）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_subjunctive",
+      "unit_id": "eng_subjunctive",
+      "sub_unit": "subjunctive",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に正しい語を入れなさい。\n「If she ( have ) more time, she would study more.」",
+      "correct_answer": "had",
+      "hint_1": "仮定法過去では、動詞を過去形にします。",
+      "hint_2": "have → had（過去形）",
+      "explanation_base": "If she had more time, she would study more.（仮定法過去）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_subjunctive",
+      "unit_id": "eng_subjunctive",
+      "sub_unit": "subjunctive",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に正しい語を入れなさい。\n「I wish I ( can ) fly.」",
+      "correct_answer": "could",
+      "hint_1": "I wish + 仮定法過去：「〜であればよかった・〜できればよかった」",
+      "hint_2": "can → could（過去形）で仮定を表します。",
+      "explanation_base": "I wish I could fly.（I wishの仮定法）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_subjunctive",
+      "unit_id": "eng_subjunctive",
+      "sub_unit": "subjunctive",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に正しい語を入れなさい。\n「If I ( know ) her address, I would write to her.」",
+      "correct_answer": "knew",
+      "hint_1": "仮定法過去では動詞を過去形にします。",
+      "hint_2": "know → knew（過去形）",
+      "explanation_base": "If I knew her address, I would write to her.（仮定法過去）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_subjunctive",
+      "unit_id": "eng_subjunctive",
+      "sub_unit": "subjunctive",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に正しい語を入れなさい。\n「I wish I ( be ) taller.」",
+      "correct_answer": "were",
+      "hint_1": "I wish + 仮定法過去：be動詞は were",
+      "hint_2": "I wish I were 〜 の形にします。",
+      "explanation_base": "I wish I were taller.（I wishの仮定法）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_subjunctive",
+      "unit_id": "eng_subjunctive",
+      "sub_unit": "subjunctive",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に正しい語を入れなさい。\n「If it ( not rain ) tomorrow, we would go.」",
+      "correct_answer": "didn't rain",
+      "hint_1": "仮定法過去の否定：didn't + 動詞原形",
+      "hint_2": "If it didn't rain 〜, we would 〜 の形にします。",
+      "explanation_base": "If it didn't rain tomorrow, we would go.（仮定法過去・否定）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_subjunctive",
+      "unit_id": "eng_subjunctive",
+      "sub_unit": "subjunctive",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に正しい語を入れなさい。\n「If I ( be ) you, I would apologize.」",
+      "correct_answer": "were",
+      "hint_1": "仮定法で「もし私があなただとしたら」という表現。",
+      "hint_2": "If I were you 〜 の形にします。",
+      "explanation_base": "If I were you, I would apologize.（仮定法過去）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_subjunctive",
+      "unit_id": "eng_subjunctive",
+      "sub_unit": "subjunctive",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に正しい語を入れなさい。\n「I wish I ( have ) a car.」",
+      "correct_answer": "had",
+      "hint_1": "I wish + 仮定法過去：have → had",
+      "hint_2": "I wish I had 〜 の形にします。",
+      "explanation_base": "I wish I had a car.（I wishの仮定法）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_subjunctive",
+      "unit_id": "eng_subjunctive",
+      "sub_unit": "subjunctive",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に正しい語を入れなさい。\n「If he ( study ) harder, he would pass.」",
+      "correct_answer": "studied",
+      "hint_1": "仮定法過去では動詞を過去形にします。",
+      "hint_2": "study → studied（過去形）",
+      "explanation_base": "If he studied harder, he would pass.（仮定法過去）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_subjunctive",
+      "unit_id": "eng_subjunctive",
+      "sub_unit": "subjunctive",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に正しい語を入れなさい。\n「If they ( live ) closer, we would meet often.」",
+      "correct_answer": "lived",
+      "hint_1": "仮定法過去では動詞を過去形にします。",
+      "hint_2": "live → lived（過去形）",
+      "explanation_base": "If they lived closer, we would meet often.（仮定法過去）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_subjunctive",
+      "unit_id": "eng_subjunctive",
+      "sub_unit": "subjunctive",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「もし私が鳥であれば、空を飛ぶのに。」",
+      "correct_answer": "If I were a bird, I would fly in the sky.",
+      "hint_1": "仮定法過去：If + 主語 + were 〜, 主語 + would 動詞原形",
+      "hint_2": "If I were a bird, I would 〜 の形にします。",
+      "explanation_base": "If I were a bird, I would fly in the sky.（仮定法過去）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_subjunctive",
+      "unit_id": "eng_subjunctive",
+      "sub_unit": "subjunctive",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「もっとお金があればいいのに。」",
+      "correct_answer": "I wish I had more money.",
+      "hint_1": "I wish + 仮定法過去",
+      "hint_2": "I wish I had 〜 の形にします。",
+      "explanation_base": "I wish I had more money.（I wishの仮定法）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_subjunctive",
+      "unit_id": "eng_subjunctive",
+      "sub_unit": "subjunctive",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「もし彼が私を助けてくれれば、私はその仕事を終えられるのに。」",
+      "correct_answer": "If he helped me, I would finish the work.",
+      "hint_1": "仮定法過去：If + 主語 + 過去形, 主語 + would 動詞原形",
+      "hint_2": "If he helped me, I would 〜 の形にします。",
+      "explanation_base": "If he helped me, I would finish the work.（仮定法過去）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_subjunctive",
+      "unit_id": "eng_subjunctive",
+      "sub_unit": "subjunctive",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「私があなたなら、彼女に謝ります。」",
+      "correct_answer": "If I were you, I would apologize to her.",
+      "hint_1": "仮定法で「もし私があなたなら」",
+      "hint_2": "If I were you, I would 〜 の形にします。",
+      "explanation_base": "If I were you, I would apologize to her.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_subjunctive",
+      "unit_id": "eng_subjunctive",
+      "sub_unit": "subjunctive",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「もっと上手に英語が話せればよいのに。」",
+      "correct_answer": "I wish I could speak English better.",
+      "hint_1": "I wish + 仮定法過去でcan → could",
+      "hint_2": "I wish I could 〜 の形にします。",
+      "explanation_base": "I wish I could speak English better.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_subjunctive",
+      "unit_id": "eng_subjunctive",
+      "sub_unit": "subjunctive",
+      "problem_type": "mini_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に正しい語を入れなさい。\n「If I ( be ) taller, I could play basketball.」",
+      "correct_answer": "were",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "If I were taller, I could play basketball.（仮定法過去）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_subjunctive"
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_subjunctive",
+      "unit_id": "eng_subjunctive",
+      "sub_unit": "subjunctive",
+      "problem_type": "mini_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に正しい語を入れなさい。\n「I wish I ( speak ) French.」",
+      "correct_answer": "could speak",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "I wish I could speak French.（I wishの仮定法）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_subjunctive"
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_subjunctive",
+      "unit_id": "eng_subjunctive",
+      "sub_unit": "subjunctive",
+      "problem_type": "mini_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「もし時間があれば、美術館に行くのに。」",
+      "correct_answer": "If I had time, I would go to the museum.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "If I had time, I would go to the museum.（仮定法過去）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_subjunctive"
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_subjunctive",
+      "unit_id": "eng_subjunctive",
+      "sub_unit": "subjunctive",
+      "problem_type": "mini_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に正しい語を入れなさい。\n「If she ( know ) the answer, she would tell us.」",
+      "correct_answer": "knew",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "If she knew the answer, she would tell us.（仮定法過去）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_subjunctive"
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_subjunctive",
+      "unit_id": "eng_subjunctive",
+      "sub_unit": "subjunctive",
+      "problem_type": "mini_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「宝くじが当たればよいのに。」",
+      "correct_answer": "I wish I could win the lottery.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "I wish I could win the lottery.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_subjunctive"
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_subjunctive",
+      "unit_id": "eng_subjunctive",
+      "sub_unit": "subjunctive",
+      "problem_type": "unit_test",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に正しい語を入れなさい。\n「If I ( be ) you, I would try again.」",
+      "correct_answer": "were",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "If I were you, I would try again.（仮定法過去）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_subjunctive"
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_subjunctive",
+      "unit_id": "eng_subjunctive",
+      "sub_unit": "subjunctive",
+      "problem_type": "unit_test",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に正しい語を入れなさい。\n「I wish I ( have ) more friends.」",
+      "correct_answer": "had",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "I wish I had more friends.（I wishの仮定法）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_subjunctive"
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_subjunctive",
+      "unit_id": "eng_subjunctive",
+      "sub_unit": "subjunctive",
+      "problem_type": "unit_test",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に正しい語を入れなさい。\n「If she ( live ) nearby, we would meet often.」",
+      "correct_answer": "lived",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "If she lived nearby, we would meet often.（仮定法過去）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_subjunctive"
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_subjunctive",
+      "unit_id": "eng_subjunctive",
+      "sub_unit": "subjunctive",
+      "problem_type": "unit_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「もし彼が来るなら、パーティーは成功するのに。」",
+      "correct_answer": "If he came, the party would be a success.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "If he came, the party would be a success.（仮定法過去）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_subjunctive"
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_subjunctive",
+      "unit_id": "eng_subjunctive",
+      "sub_unit": "subjunctive",
+      "problem_type": "unit_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「もっと上手に歌が歌えたらいいのに。」",
+      "correct_answer": "I wish I could sing better.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "I wish I could sing better.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_subjunctive"
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_subjunctive",
+      "unit_id": "eng_subjunctive",
+      "sub_unit": "subjunctive",
+      "problem_type": "unit_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「もし私が彼女の立場なら、助けを求めます。」",
+      "correct_answer": "If I were in her position, I would ask for help.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "If I were in her position, I would ask for help.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_subjunctive"
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_subjunctive",
+      "unit_id": "eng_subjunctive",
+      "sub_unit": "subjunctive",
+      "problem_type": "unit_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に正しい語を入れなさい。\n「If it ( not snow ), we could play outside.」",
+      "correct_answer": "didn't snow",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "If it didn't snow, we could play outside.（仮定法過去・否定）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_subjunctive"
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_subjunctive",
+      "unit_id": "eng_subjunctive",
+      "sub_unit": "subjunctive",
+      "problem_type": "unit_test",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「もし彼が約束を守れば、みんな喜ぶのに。」",
+      "correct_answer": "If he kept his promise, everyone would be happy.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "If he kept his promise, everyone would be happy.（仮定法過去）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_subjunctive"
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_subjunctive",
+      "unit_id": "eng_subjunctive",
+      "sub_unit": "subjunctive",
+      "problem_type": "unit_test",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「世界平和があればどんなにいいだろうか。」",
+      "correct_answer": "I wish there were world peace.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "I wish there were world peace.（I wishの仮定法）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_subjunctive"
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_subjunctive",
+      "unit_id": "eng_subjunctive",
+      "sub_unit": "subjunctive",
+      "problem_type": "unit_test",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「もし私がその仕事を受けていれば、昇進できたかもしれないのに。」",
+      "correct_answer": "If I had taken the job, I might have been promoted.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "If I had taken the job, I might have been promoted.（仮定法過去完了）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_subjunctive"
+    }
+  ]
+}

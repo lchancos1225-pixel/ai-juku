@@ -1,0 +1,189 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="card weekly-report-page">
+
+  <div class="wr-top-bar">
+    <div>
+      <p class="section-label">週次レポート</p>
+      <h2>{{ student.display_name }} さんの学習レポート</h2>
+      <p class="meta-note">
+        {{ week_start.month }}/{{ week_start.day }}（月）〜 {{ week_end.month }}/{{ week_end.day }}（日）
+        ／ {{ classroom.classroom_name if classroom else "" }}
+        ／ 中{{ student.grade - 6 }}
+      </p>
+    </div>
+    <div class="wr-top-actions">
+      <button class="primary-button wr-copy-btn" id="wr-copy-btn" onclick="copyReport()">
+        📋 LINEにコピー
+      </button>
+      <a class="secondary-link" href="/teachers/dashboard">← ダッシュボードへ</a>
+    </div>
+  </div>
+
+  <div id="wr-copy-done" class="wr-copy-done" style="display:none">
+    ✅ コピーしました！LINEにそのまま貼り付けてください。
+  </div>
+
+  {# ===== プレビューカード（コピーされる内容と同じ） ===== #}
+  <div class="wr-preview-card" id="wr-preview">
+
+    <div class="wr-preview-header">
+      <span class="wr-preview-icon">📊</span>
+      <div>
+        <div class="wr-preview-title">{{ student.display_name }} さんの学習レポート</div>
+        <div class="wr-preview-sub">
+          {{ week_start.month }}/{{ week_start.day }}（月）〜 {{ week_end.month }}/{{ week_end.day }}（日）
+          ／ {{ classroom.classroom_name if classroom else "" }}
+          ／ 中{{ student.grade - 6 }}
+        </div>
+      </div>
+    </div>
+
+    <div class="wr-stats-row">
+      <div class="wr-stat-box">
+        <span class="wr-stat-label">解いた問題数</span>
+        <span class="wr-stat-value">{{ total_problems }}<small>問</small></span>
+      </div>
+      <div class="wr-stat-box">
+        <span class="wr-stat-label">正答率</span>
+        <span class="wr-stat-value {% if correct_rate >= 80 %}wr-stat--good{% elif correct_rate >= 60 %}wr-stat--ok{% else %}wr-stat--low{% endif %}">
+          {{ correct_rate }}<small>%</small>
+        </span>
+        {% if prev_rate is not none %}
+        <span class="wr-trend wr-trend--{{ trend }}">
+          {% if trend == 'up' %}▲ 先週比 +{{ correct_rate - prev_rate }}%
+          {% elif trend == 'down' %}▼ 先週比 {{ correct_rate - prev_rate }}%
+          {% else %}→ 先週と同水準{% endif %}
+        </span>
+        {% endif %}
+      </div>
+      <div class="wr-stat-box">
+        <span class="wr-stat-label">現在の単元</span>
+        <span class="wr-stat-value wr-stat--unit">{{ current_unit_name }}</span>
+      </div>
+    </div>
+
+    {# 単元別サマリー #}
+    {% if unit_summary %}
+    <div class="wr-section">
+      <div class="wr-section-title">📚 単元別の取り組み</div>
+      <div class="wr-unit-list">
+        {% for u in unit_summary %}
+        <div class="wr-unit-row">
+          <span class="wr-unit-name">{{ u.display_name }}</span>
+          <div class="wr-unit-bar-wrap">
+            <div class="wr-unit-bar {% if u.rate >= 80 %}wr-bar--good{% elif u.rate >= 60 %}wr-bar--ok{% else %}wr-bar--low{% endif %}"
+              style="width: {{ u.rate }}%"></div>
+          </div>
+          <span class="wr-unit-rate">{{ u.rate }}%</span>
+          <span class="wr-unit-count">{{ u.correct }}/{{ u.total }}問</span>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+
+    {# 誤答パターン #}
+    {% if error_summary %}
+    <div class="wr-section">
+      <div class="wr-section-title">⚠️ 注意したい傾向</div>
+      <div class="wr-error-list">
+        {% for pattern, cnt in error_summary %}
+        <span class="wr-error-badge">{{ error_labels.get(pattern, pattern) }} ×{{ cnt }}</span>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+
+    {# AI 下書き（講師AI要約と同じ Claude / CLAUDE_API_KEY。失敗時は空。LINE Messaging API 自動送信は未実装） #}
+    <div class="wr-section">
+      <div class="wr-section-title">✨ AI下書き（編集可）</div>
+      <textarea class="wr-memo" id="wr-ai-draft" rows="5"
+        placeholder="AI が生成した週次の下書きです。編集してからコピーに含められます。">{{ ai_weekly_draft }}</textarea>
+    </div>
+
+    {# 講師メモ #}
+    <div class="wr-section">
+      <div class="wr-section-title">💬 先生からのひとこと</div>
+      <textarea class="wr-memo" id="wr-memo" rows="3"
+        placeholder="ここに一言メモを入力できます（コピーに含まれます）"></textarea>
+    </div>
+
+    <div class="wr-footer">🏫 AI塾 QRelDo</div>
+
+  </div>{# /wr-preview-card #}
+
+</section>
+
+<script>
+function copyReport() {
+  const student = "{{ student.display_name }}";
+  const periodStart = "{{ period_start_md }}";
+  const periodEnd = "{{ period_end_md }}";
+  const totalProblems = {{ total_problems }};
+  const correctRate = {{ correct_rate }};
+  const prevRate = {{ prev_rate if prev_rate is not none else 'null' }};
+  const trend = "{{ trend or '' }}";
+  const memo = document.getElementById('wr-memo').value.trim();
+  const aiDraft = document.getElementById('wr-ai-draft').value.trim();
+
+  let trendIcon = "";
+  if (prevRate !== null) {
+    const diff = correctRate - prevRate;
+    if (trend === 'up') trendIcon = `▲ 先週比 +${diff}%`;
+    else if (trend === 'down') trendIcon = `▼ 先週比 ${diff}%`;
+    else trendIcon = "→ 先週と同水準";
+  }
+
+  const unitNames = [
+    {% for u in unit_summary %}
+    "{{ u.display_name }}",
+    {% endfor %}
+  ].join("、") || "（なし）";
+
+  const errorBadges = [
+    {% for pattern, cnt in error_summary %}
+    "{{ error_labels.get(pattern, pattern) }} ×{{ cnt }}",
+    {% endfor %}
+  ].join("  ");
+
+  const teacherParts = [aiDraft, memo].filter(Boolean);
+  const teacherBlock = teacherParts.length ? teacherParts.join("\n\n") : "";
+
+  let lines = [];
+  lines.push(`📊 ${student}さんの学習レポート（${periodStart}〜${periodEnd}）`);
+  lines.push('');
+  lines.push('✏️ 今週の学習');
+  lines.push(`取り組んだ問題: ${totalProblems}問`);
+  lines.push(`正答率: ${correctRate}%${trendIcon ? ' ' + trendIcon : ''}`);
+  lines.push(`学習単元: ${unitNames}`);
+  lines.push('');
+  lines.push('📌 つまずき傾向');
+  lines.push(errorBadges || '（該当なし）');
+  lines.push('');
+  lines.push('💬 先生より');
+  lines.push(teacherBlock);
+  lines.push('');
+  lines.push('---');
+  lines.push('AI塾 QRelDo');
+
+  const text = lines.join('\n');
+
+  navigator.clipboard.writeText(text).then(() => {
+    const done = document.getElementById('wr-copy-done');
+    done.style.display = '';
+    setTimeout(() => { done.style.display = 'none'; }, 4000);
+  }).catch(() => {
+    const ta = document.createElement('textarea');
+    ta.value = text;
+    document.body.appendChild(ta);
+    ta.select();
+    document.execCommand('copy');
+    document.body.removeChild(ta);
+    const done = document.getElementById('wr-copy-done');
+    done.style.display = '';
+    setTimeout(() => { done.style.display = 'none'; }, 4000);
+  });
+}
+</script>
+{% endblock %}

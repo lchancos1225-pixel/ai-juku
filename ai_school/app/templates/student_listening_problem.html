@@ -1,0 +1,166 @@
+﻿{% extends "base.html" %}
+{% block content %}
+<style>
+.listening-top-hint { font-size: 0.85rem; color: #555; margin-bottom: 0.75rem; }
+.listening-header { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 1rem; margin-bottom: 1rem; }
+.listening-badge { background: #eef2ff; color: #3730a3; padding: 0.2rem 0.6rem; border-radius: 999px; font-size: 0.8rem; }
+.listening-play-wrap { display: flex; flex-direction: column; align-items: flex-start; gap: 0.75rem; margin: 2rem 0; }
+.listening-play-btn {
+  width: 72px; height: 72px; border-radius: 50%; border: none; cursor: pointer;
+  background: linear-gradient(145deg, #6366f1, #4f46e5); color: #fff; font-size: 1.6rem;
+  box-shadow: 0 4px 14px rgba(79, 70, 229, 0.35);
+}
+.listening-play-btn:disabled { opacity: 0.45; cursor: not-allowed; }
+.listening-play-btn--playing { animation: listening-pulse 1s ease-in-out infinite; }
+@keyframes listening-pulse { 0%,100%{ transform: scale(1);} 50%{ transform: scale(1.06);} }
+.listening-play-meta { font-size: 0.95rem; color: #444; }
+.listening-choices { display: flex; flex-direction: column; gap: 0.75rem; margin-top: 1.5rem; }
+.listening-choice {
+  display: block; width: 100%; text-align: left; padding: 1rem 1.1rem; border-radius: 12px;
+  border: 2px solid #e5e7eb; background: #fff; font-size: 1.05rem; cursor: pointer;
+}
+.listening-choice--disabled { opacity: 0.45; pointer-events: none; cursor: not-allowed; }
+.listening-hint-panel { margin-top: 1rem; padding: 1rem; background: #f9fafb; border-radius: 12px; font-size: 0.95rem; }
+.listening-progress-bar { height: 8px; background: #e5e7eb; border-radius: 4px; overflow: hidden; margin: 0.5rem 1rem; }
+.listening-progress-bar > span { display: block; height: 100%; background: #4f46e5; border-radius: 4px; }
+</style>
+
+<section class="card">
+  <p class="listening-top-hint">イヤホン推奨・音声は結果画面までスクリプトを表示しません。</p>
+  <div class="listening-header">
+    <span class="listening-badge">中{{ grade_band - 6 }}</span>
+    <h2 style="margin:0;">{{ unit_label }}</h2>
+  </div>
+  <p class="section-label">問題</p>
+  <p style="font-size:1.1rem;">{{ problem.question_text }}</p>
+
+  <div class="listening-progress-bar" aria-hidden="true">
+    <span style="width: {% if progress_total > 0 %}{{ (progress_solved / progress_total * 100)|int }}{% else %}0{% endif %}%;"></span>
+  </div>
+  <p class="listening-play-meta">単元の進み: {{ progress_solved }} / {{ progress_total }} 問（正解カウント）</p>
+
+  <div class="listening-play-wrap">
+    <button type="button" class="listening-play-btn" id="listening-play-btn" aria-label="音声を再生">▶</button>
+    <div class="listening-play-meta" id="listening-play-status">再生してから選択肢を選べます。</div>
+    <div class="listening-play-meta" id="listening-play-count"></div>
+  </div>
+
+  {% if problem.problem_type not in ('mini_test', 'unit_test') and (problem.hint_1 or problem.hint_2) %}
+  <div class="listening-hint-panel">
+    <p><strong>ヒント</strong></p>
+    {% if problem.hint_1 %}<p id="hint1" hidden>{{ problem.hint_1 }}</p>{% endif %}
+    {% if problem.hint_2 %}<p id="hint2" hidden>{{ problem.hint_2 }}</p>{% endif %}
+    <button type="button" class="btn-secondary" id="hint1-btn">ヒント1</button>
+    {% if problem.hint_2 %}<button type="button" class="btn-secondary" id="hint2-btn">ヒント2</button>{% endif %}
+  </div>
+  {% endif %}
+
+  <form id="listening-form" class="listening-choices">
+    {% for c in choices %}
+    <button type="button" class="listening-choice listening-choice--disabled" data-choice="{{ c }}">{{ c }}</button>
+    {% endfor %}
+  </form>
+</section>
+
+<p><a class="btn-secondary" href="/students/{{ student_id }}/listening">単元一覧へ</a></p>
+
+<script>
+(function () {
+  var audioUrl = {{ problem.audio_url | tojson }};
+  var scriptText = {{ problem.audio_script | tojson }};
+  var speed = {{ problem.audio_speed | tojson }};
+  var playLimit = {{ problem.play_limit | int }};
+  var problemId = {{ problem.id | tojson }};
+  var studentId = {{ student_id | int }};
+  var playBtn = document.getElementById("listening-play-btn");
+  var statusEl = document.getElementById("listening-play-status");
+  var countEl = document.getElementById("listening-play-count");
+  var choiceBtns = document.querySelectorAll(".listening-choice");
+  var plays = 0;
+  var audio = null;
+  var unlocked = false;
+
+  function updateCountText() {
+    if (playLimit === 0) {
+      countEl.textContent = "残り: 何回でも";
+    } else {
+      var left = Math.max(0, playLimit - plays);
+      countEl.textContent = "残り " + left + " 回 / 再生済み " + plays + " 回";
+    }
+  }
+  updateCountText();
+
+  function playAudio(url, script, audioSpeed) {
+    var a = new Audio(url);
+    a.onerror = function () {
+      var utter = new SpeechSynthesisUtterance(script);
+      utter.lang = "en-US";
+      utter.rate = audioSpeed === "slow" ? 0.75 : 1.0;
+      window.speechSynthesis.speak(utter);
+    };
+    a.play();
+    return a;
+  }
+
+  function afterPlayStart() {
+    playBtn.classList.add("listening-play-btn--playing");
+  }
+  function afterPlayEnd() {
+    playBtn.classList.remove("listening-play-btn--playing");
+  }
+
+  playBtn.addEventListener("click", function () {
+    if (playLimit > 0 && plays >= playLimit) return;
+    plays += 1;
+    updateCountText();
+    statusEl.textContent = plays + " 回聞きました。選択肢を選べます。";
+    if (!unlocked) {
+      unlocked = true;
+      choiceBtns.forEach(function (b) { b.classList.remove("listening-choice--disabled"); });
+    }
+    if (playLimit > 0 && plays >= playLimit) {
+      playBtn.disabled = true;
+    }
+    afterPlayStart();
+    audio = playAudio(audioUrl, scriptText, speed);
+    if (audio && audio.addEventListener) {
+      audio.addEventListener("ended", afterPlayEnd);
+      audio.addEventListener("error", afterPlayEnd);
+    } else {
+      setTimeout(afterPlayEnd, 2000);
+    }
+  });
+
+  var t0 = Date.now();
+  var hintUsed = 0;
+  var h1 = document.getElementById("hint1");
+  var h2 = document.getElementById("hint2");
+  var h1b = document.getElementById("hint1-btn");
+  var h2b = document.getElementById("hint2-btn");
+  if (h1b && h1) h1b.addEventListener("click", function () { h1.hidden = false; hintUsed = 1; });
+  if (h2b && h2) h2b.addEventListener("click", function () { h2.hidden = false; hintUsed = 2; });
+
+  choiceBtns.forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      if (!unlocked) return;
+      var sel = btn.getAttribute("data-choice");
+      var elapsed = Math.round((Date.now() - t0) / 1000);
+      fetch("/students/" + studentId + "/listening/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          problem_id: problemId,
+          selected_answer: sel,
+          play_count: plays,
+          elapsed_sec: elapsed,
+          hint_used: hintUsed
+        })
+      }).then(function (r) { return r.json(); }).then(function (data) {
+        var q = data.next_problem_id ? ("?next_problem_id=" + encodeURIComponent(data.next_problem_id)) : "";
+        window.location.href = "/students/" + studentId + "/listening/result/" + data.log_id + q;
+      }).catch(function () { alert("送信に失敗しました"); });
+    });
+  });
+})();
+</script>
+{% endblock %}

@@ -1,0 +1,319 @@
+{
+  "problems": [
+    {
+      "full_unit_id": "functions_y_equals_ax2",
+      "unit_id": "functions_y_equals_ax2",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "question_text": "関数 y = ax^2 について、x の値が2倍、3倍になると、y の値はそれぞれ何倍になりますか。",
+      "diagram": null,
+      "correct_answer": "4倍、9倍",
+      "hint_1": "x の部分を 2x や 3x に置き換えて計算してみましょう。",
+      "hint_2": "x が 2 倍になると y は 2 の 2 乗倍になり、x が 3 倍になると y は 3 の 2 乗倍になります。",
+      "explanation_base": "関数 y = ax^2 では、y は x の2乗に比例します。したがって、x の値が2倍、3倍になると、y の値は 2^2 = 4倍、3^2 = 9倍 になります。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "variable_handling_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "explain_differently"
+      ]
+    },
+    {
+      "full_unit_id": "functions_y_equals_ax2",
+      "unit_id": "functions_y_equals_ax2",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "question_text": "次のア〜エの関数のうち、グラフの開き方が最も大きいものはどれですか。記号で答えなさい。\nア: y = 2x^2\nイ: y = x^2\nウ: y = -1/2 x^2\nエ: y = 4x^2",
+      "diagram": null,
+      "correct_answer": "ウ",
+      "hint_1": "グラフの開き方は、x^2 の係数（a の値）に関係します。",
+      "hint_2": "a の値の「絶対値」が小さいほど、グラフの開き方は大きくなります。",
+      "explanation_base": "関数 y = ax^2 のグラフの開き方は、a の絶対値が小さいほど大きくなります。それぞれの絶対値は、アが2、イが1、ウが1/2、エが4です。最も絶対値が小さいウが最も大きく開きます。",
+      "error_pattern_candidates": [
+        "absolute_value_error",
+        "comprehension_gap"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "explain_differently"
+      ]
+    },
+    {
+      "full_unit_id": "functions_y_equals_ax2",
+      "unit_id": "functions_y_equals_ax2",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "question_text": "関数 y = -3x^2 のグラフは、x軸の上側と下側のどちらに開いていますか。",
+      "diagram": null,
+      "correct_answer": "下側",
+      "hint_1": "x^2 の係数（a の値）の符号に注目しましょう。",
+      "hint_2": "a の値がマイナスの場合、グラフは下に凸（下側に開く形）になります。",
+      "explanation_base": "関数 y = ax^2 のグラフは、a > 0 のときは上側に開き（上に凸）、a < 0 のときは下側に開きます（下に凸）。この式では a = -3 で負の数なので、下側に開きます。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "functions_y_equals_ax2",
+      "unit_id": "functions_y_equals_ax2",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "question_text": "y は x の2乗に比例し、x = 2 のとき y = 12 です。y を x の式で表しなさい。",
+      "diagram": null,
+      "correct_answer": "y = 3x^2",
+      "hint_1": "「y は x の2乗に比例する」ので、式は y = ax^2 と表すことができます。",
+      "hint_2": "y = ax^2 の式に、x = 2 と y = 12 を代入して、a の値を計算しましょう。",
+      "explanation_base": "求める式を y = ax^2 とします。これに x = 2, y = 12 を代入すると、12 = a × 2^2 となり、12 = 4a になります。両辺を4で割ると a = 3 です。したがって、式は y = 3x^2 になります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "functions_y_equals_ax2",
+      "unit_id": "functions_y_equals_ax2",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "question_text": "関数 y = 2x^2 について、x = -3 のときの y の値を求めなさい。",
+      "diagram": null,
+      "correct_answer": "18",
+      "hint_1": "式の x の部分に -3 を代入して計算します。",
+      "hint_2": "負の数を2乗するときは符号に注意しましょう。(-3)^2 を先に計算してから 2 をかけます。",
+      "explanation_base": "式の x に -3 を代入すると、y = 2 × (-3)^2 となります。(-3)^2 = 9 なので、y = 2 × 9 = 18 になります。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "functions_y_equals_ax2",
+      "unit_id": "functions_y_equals_ax2",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "question_text": "関数 y = 1/2 x^2 について、y = 8 のときの x の値をすべて求めなさい。",
+      "diagram": null,
+      "correct_answer": "x = 4, -4",
+      "hint_1": "式の y の部分に 8 を代入して方程式を解きます。",
+      "hint_2": "8 = 1/2 x^2 となります。両辺を 2倍 して x^2 の値を求めましょう。解はプラスとマイナスの2つあります。",
+      "explanation_base": "y = 8 を代入すると、8 = 1/2 x^2 となります。両辺を2倍すると 16 = x^2 です。2乗して16になる数は 4 と -4 なので、x = 4, -4 になります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "retry_with_hint"
+      ]
+    },
+    {
+      "full_unit_id": "functions_y_equals_ax2",
+      "unit_id": "functions_y_equals_ax2",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "question_text": "関数 y = 2x^2 について、x の変域が 1 ≦ x ≦ 3 のときの y の変域を求めなさい。",
+      "diagram": null,
+      "correct_answer": "2 ≦ y ≦ 18",
+      "hint_1": "x の変域が 0 を含んでいないので、x = 1 のときと x = 3 のときの y の値を計算するだけで求められます。",
+      "hint_2": "x = 1 のとき y = 2、x = 3 のとき y = 18 になります。これらを使って変域を作りましょう。",
+      "explanation_base": "x = 1 のとき y = 2 × 1^2 = 2。x = 3 のとき y = 2 × 3^2 = 18。x の変域に 0 が含まれておらず、グラフは単調に増加するため、y の変域は 2 ≦ y ≦ 18 になります。",
+      "error_pattern_candidates": [
+        "arithmetic_error",
+        "formula_setup_error"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "explain_differently"
+      ]
+    },
+    {
+      "full_unit_id": "functions_y_equals_ax2",
+      "unit_id": "functions_y_equals_ax2",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "question_text": "関数 y = -x^2 について、x の変域が -2 ≦ x ≦ 3 のときの y の変域を求めなさい。",
+      "diagram": null,
+      "correct_answer": "-9 ≦ y ≦ 0",
+      "hint_1": "x の変域がマイナスからプラスにまたがっているため、グラフの頂点（原点）を通ります。",
+      "hint_2": "グラフは下に開いているので、y の最大値は原点の 0 になります。最小値は、原点から遠い方の x = 3 のときの値を計算します。",
+      "explanation_base": "x の変域に 0 が含まれ、a < 0 のグラフなので、y の最大値は 0 になります。x = -2 のとき y = -4、x = 3 のとき y = -9 となります。最小値は -9 なので、y の変域は -9 ≦ y ≦ 0 になります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "sign_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "explain_differently"
+      ]
+    },
+    {
+      "full_unit_id": "functions_y_equals_ax2",
+      "unit_id": "functions_y_equals_ax2",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "question_text": "関数 y = 2x^2 について、x の値が 1 から 3 まで増加するときの変化の割合を求めなさい。",
+      "diagram": null,
+      "correct_answer": "8",
+      "hint_1": "変化の割合は「y の増加量 ÷ x の増加量」で求められます。",
+      "hint_2": "x = 1 のときの y は 2、x = 3 のときの y は 18 です。増加量をそれぞれ計算して割り算をしましょう。",
+      "explanation_base": "x = 1 のとき y = 2、x = 3 のとき y = 18 です。x の増加量は 3 - 1 = 2、y の増加量は 18 - 2 = 16 です。変化の割合は 16 ÷ 2 = 8 になります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "functions_y_equals_ax2",
+      "unit_id": "functions_y_equals_ax2",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "question_text": "関数 y = ax^2 のグラフが点 (-4, 8) を通るとき、比例定数 a の値を求めなさい。",
+      "diagram": null,
+      "correct_answer": "1/2",
+      "hint_1": "「グラフが点を通る」ということは、式の x と y にその点の座標を代入できるということです。",
+      "hint_2": "x に -4、y に 8 を代入して、8 = a × (-4)^2 という方程式を解きましょう。",
+      "explanation_base": "y = ax^2 に x = -4, y = 8 を代入すると、8 = a × 16 となります。両辺を16で割ると、a = 8 / 16 = 1/2 です。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "formula_setup_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "functions_y_equals_ax2",
+      "unit_id": "functions_y_equals_ax2",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "question_text": "関数 y = ax^2 について、x の変域が -2 ≦ x ≦ 4 のとき、y の変域が -8 ≦ y ≦ 0 となりました。a の値を求めなさい。",
+      "diagram": null,
+      "correct_answer": "-1/2",
+      "hint_1": "y の変域の最大値が 0 であることから、グラフは下側に開いている（a がマイナスである）ことがわかります。",
+      "hint_2": "変域の中で原点から一番遠いのは x = 4 のときです。このとき y が最小値の -8 になるので、x = 4, y = -8 を式に代入しましょう。",
+      "explanation_base": "x の変域が 0 を含み、y の最大値が 0 なので a < 0 です。x の絶対値が最大となる x = 4 のとき、y は最小値 -8 をとります。y = ax^2 に代入して -8 = a × 4^2 より、16a = -8。よって a = -1/2 になります。",
+      "error_pattern_candidates": [
+        "absolute_value_error",
+        "formula_setup_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "explain_differently"
+      ]
+    },
+    {
+      "full_unit_id": "functions_y_equals_ax2",
+      "unit_id": "functions_y_equals_ax2",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "question_text": "関数 y = ax^2 について、x の値が 2 から 6 まで増加するときの変化の割合が 24 でした。a の値を求めなさい。",
+      "diagram": null,
+      "correct_answer": "3",
+      "hint_1": "まず、x = 2 のときと x = 6 のときの y の値を a を使って表し、変化の割合の式を作りましょう。",
+      "hint_2": "x の増加量は 6 - 2 = 4。y の増加量は a(6^2) - a(2^2) = 36a - 4a = 32a です。32a ÷ 4 = 24 という方程式になります。",
+      "explanation_base": "x=2 のとき y=4a、x=6 のとき y=36a です。y の増加量は 36a - 4a = 32a、x の増加量は 6 - 2 = 4。変化の割合は 32a / 4 = 8a となります。これが 24 と等しいので、8a = 24 より a = 3 です。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "variable_handling_error"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "explain_differently"
+      ]
+    },
+    {
+      "full_unit_id": "functions_y_equals_ax2",
+      "unit_id": "functions_y_equals_ax2",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "question_text": "物体を自然に落とすとき、落ち始めてから x 秒間に落ちる距離を y m とすると、y = 5x^2 という関係が成り立ちます。落ち始めてから 2 秒後から 4 秒後までの間に、物体は何 m 落下しますか。",
+      "diagram": null,
+      "correct_answer": "60",
+      "hint_1": "「2秒後から4秒後までの間に落ちた距離」は、4秒間に落ちた距離から、2秒間に落ちた距離を引き算して求めます。",
+      "hint_2": "x = 4 のときの y の値から、x = 2 のときの y の値を引き算しましょう。",
+      "explanation_base": "x = 4 のときの落下距離は y = 5 × 4^2 = 80 m です。x = 2 のときの落下距離は y = 5 × 2^2 = 20 m です。求める距離はその差なので、80 - 20 = 60 m になります。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "operation_confusion"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "functions_y_equals_ax2",
+      "unit_id": "functions_y_equals_ax2",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "question_text": "関数 y = ax^2 と一次関数 y = -4x + 3 について、x の値が -1 から 3 まで増加するときの変化の割合が等しくなりました。a の値を求めなさい。",
+      "diagram": null,
+      "correct_answer": "-2",
+      "hint_1": "一次関数の変化の割合は、常に x の係数（傾き）と等しくなります。つまり、この問題の変化の割合は -4 です。",
+      "hint_2": "関数 y = ax^2 について、x が -1 から 3 まで増加するときの変化の割合を a を使って表し、それが -4 になるという方程式を立てましょう。",
+      "explanation_base": "一次関数 y = -4x + 3 の変化の割合は -4 です。y = ax^2 について、x=-1 のとき y=a、x=3 のとき y=9a。yの増加量は 9a - a = 8a、xの増加量は 3 - (-1) = 4 です。変化の割合は 8a / 4 = 2a となります。2a = -4 より、a = -2 になります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "comprehension_gap"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "explain_differently"
+      ]
+    },
+    {
+      "full_unit_id": "functions_y_equals_ax2",
+      "unit_id": "functions_y_equals_ax2",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "question_text": "関数 y = x^2 のグラフ上に 2点 A, B があり、それぞれの x座標は -2, 3 です。このとき、直線 AB の式を求めなさい。",
+      "diagram": null,
+      "correct_answer": "y = x + 6",
+      "hint_1": "まず、点 A と点 B の y座標をそれぞれ計算して、座標の組を求めましょう。",
+      "hint_2": "A(-2, 4) と B(3, 9) を通る直線の式を求めます。直線の式を y = mx + n として、連立方程式を解くか、変化の割合（傾き）を求めましょう。",
+      "explanation_base": "x=-2 を代入すると y=4、x=3 を代入すると y=9 なので、A(-2, 4), B(3, 9) となります。直線の傾きは (9 - 4) / (3 - (-2)) = 5 / 5 = 1 です。y = x + b に点 B の座標を代入して 9 = 3 + b より b = 6。したがって、直線の式は y = x + 6 になります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "slow_down_and_confirm"
+      ]
+    }
+  ]
+}

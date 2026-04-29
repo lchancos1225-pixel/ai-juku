@@ -1,0 +1,715 @@
+{% extends "base.html" %}
+{% block content %}
+
+{# ===== Phase 2-B: バッジ全画面 overlay ===== #}
+{% if new_badges %}
+<div id="badge-overlay" class="badge-overlay" aria-live="polite">
+  <div class="badge-overlay__inner">
+    <div class="badge-overlay__icon">🏅</div>
+    <div class="badge-overlay__title">バッジ獲得！</div>
+    <div class="badge-overlay__list">
+      {% for badge_key in new_badges %}
+        {% if badge_key == "see_look_watch_discovery" %}<span class="badge-overlay__badge">🔍 観察マスター</span>{% endif %}
+        {% if badge_key == "make_create_discovery" %}<span class="badge-overlay__badge">⚒️ 創造マスター</span>{% endif %}
+        {% if badge_key == "overcome_mistake" %}<span class="badge-overlay__badge">⭐ 克服バッジ</span>{% endif %}
+      {% endfor %}
+    </div>
+    <div class="badge-overlay__sub">タップして進む</div>
+  </div>
+</div>
+{% endif %}
+
+{# ===== 正解エフェクト overlay ===== #}
+{% if result.is_correct and not test_suggestion %}
+<div id="correct-overlay" class="correct-overlay" aria-live="polite">
+  <div class="correct-overlay__inner">
+    <img src="/static/characters/mein_y1.png" alt="mein" class="correct-overlay__chara" id="chara-img">
+    <div class="correct-overlay__badge">正解！</div>
+    {% if unit_clear %}
+    <div class="correct-overlay__unit-clear">🏁 ユニット制覇！</div>
+    {% endif %}
+    {% if level_up %}
+    <div class="correct-overlay__levelup">⬆️ Lv.{{ new_level }} レベルアップ！</div>
+    {% endif %}
+    {% if g_earned is defined and g_earned > 0 %}
+    <div class="correct-overlay__gold">🪙 +{{ g_earned }}G</div>
+    {% endif %}
+    {% if next_problem %}
+    <div class="correct-overlay__next-hint">
+      <span id="auto-countdown">{% if level_up or unit_clear %}2.5{% else %}1.5{% endif %}</span>秒後に次の問題へ…
+    </div>
+    {% endif %}
+  </div>
+</div>
+{% endif %}
+
+{# ===== 不正解 Mein シェイク overlay ===== #}
+{% if not result.is_correct %}
+<div id="wrong-overlay" class="wrong-overlay" aria-live="polite">
+  <div class="wrong-overlay__inner">
+    <img src="/static/characters/mein_y1.png" alt="mein" class="wrong-overlay__chara" id="wrong-chara-img">
+    <div class="wrong-overlay__badge">おしい！</div>
+    {% if socratic_questions %}
+    <div class="wrong-overlay__msg">一緒に考えてみよう 🧠</div>
+    {% else %}
+    <div class="wrong-overlay__msg">もう一度チャレンジしよう 💪</div>
+    {% endif %}
+  </div>
+</div>
+{% endif %}
+
+{# ===== ソクラテス式対話モーダル（不正解時・AI生成時のみ） ===== #}
+{% if not result.is_correct and socratic_questions %}
+<div id="socratic-modal" class="socratic-modal" role="dialog" aria-modal="true" aria-label="一緒に考えよう">
+  <div class="socratic-modal__inner">
+    <div class="socratic-modal__header">
+      <img src="/static/characters/mein_y1.png" alt="mein" class="socratic-modal__chara">
+      <div class="socratic-modal__title">Meinと一緒に考えよう 🧠</div>
+      {% if misconception_detail %}
+      <div class="socratic-modal__hint-tag">💡 {{ misconception_detail }}</div>
+      {% endif %}
+    </div>
+
+    <div class="socratic-modal__progress">
+      <div class="socratic-modal__progress-bar">
+        <div class="socratic-modal__progress-fill" id="socratic-progress-fill"></div>
+      </div>
+      <span class="socratic-modal__progress-label" id="socratic-progress-label">1 / {{ socratic_questions | length }}</span>
+    </div>
+
+    <div class="socratic-modal__questions">
+      {% for q in socratic_questions %}
+      <div class="socratic-modal__question {% if not loop.first %}socratic-modal__question--hidden{% endif %}"
+           data-index="{{ loop.index0 }}" data-type="{{ q.type }}">
+        <p class="socratic-modal__q-text">{{ q.q }}</p>
+        {% if q.type == "choice" and q.choices %}
+        <div class="socratic-modal__choices">
+          {% for choice in q.choices %}
+          <button class="socratic-modal__choice-btn" onclick="socraticChoose(this, {{ loop.index0 }})">{{ choice }}</button>
+          {% endfor %}
+        </div>
+        {% else %}
+        <textarea class="socratic-modal__textarea" placeholder="考えを入力してみよう…" rows="2"></textarea>
+        {% endif %}
+        <button class="socratic-modal__next-btn" id="socratic-next-{{ loop.index0 }}" onclick="socraticNext({{ loop.index0 }}, {{ socratic_questions | length }})">
+          {% if loop.last %}わかった！答えを見る ✓{% else %}次へ →{% endif %}
+        </button>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% endif %}
+
+<div class="result-action-bar">
+    <a class="result-action-btn result-action-btn--record" href="/students/{{ student.student_id }}/progress">📊 マイレコード</a>
+  {% if not test_suggestion and next_problem %}
+    {% if is_adapted %}
+    <a class="result-action-btn result-action-btn--adapted" href="{{ next_url | default('/students/' ~ student.student_id) }}">🤖 専用問題に挑戦</a>
+    {% else %}
+    <a class="result-action-btn result-action-btn--next" href="{{ next_url | default('/students/' ~ student.student_id) }}">次の問題</a>
+    {% endif %}
+  {% endif %}
+  {% if problem.subject == 'english' %}
+    <a class="result-action-btn result-action-btn--units" href="/students/{{ student.student_id }}/english">🇺🇸 英語単元を選ぶ</a>
+  {% else %}
+    <a class="result-action-btn result-action-btn--units" href="/students/{{ student.student_id }}/units">📐 数学単元を選ぶ</a>
+  {% endif %}
+</div>
+{% if g_earned is defined and g_earned > 0 %}
+<div class="g-earned-toast" role="status">
+  🪙 +{{ g_earned }}G 獲得{% if ai_event_text %} &nbsp;{{ ai_event_text }}{% endif %}
+</div>
+{% endif %}
+<section class="card">
+  <p class="section-label">判定結果</p>
+  <h2>{{ "◯ <strong>正答</strong>" if result.is_correct else "✗ <strong>不正解</strong>" }}</h2>
+  <p>{{ unit_labels.get(problem.full_unit_id or problem.unit, problem.full_unit_id or problem.unit) }} / 難易度 {{ problem.difficulty }}</p>
+  <p class="question-text">{{ problem.question_text | render_math_text }}</p>
+  <div class="result-box {{ 'correct' if result.is_correct else 'wrong' }}">
+    <p class="result-answer-line">あなたの答え: <span class="result-answer-main">{{ submitted_display.main | render_math_text }}</span>{% if submitted_display.aux %} <span class="result-answer-unit">単位: {{ submitted_display.aux }}</span>{% endif %}</p>
+    <p class="result-answer-line">正答: <span class="result-answer-main">{{ correct_display.main | render_math_text }}</span>{% if correct_display.aux %} <span class="result-answer-unit">単位: {{ correct_display.aux }}</span>{% endif %}</p>
+    <p>ヒント使用段階: {{ hint_used }}</p>
+  </div>
+  {% if result.explanation %}
+  <p class="explanation">{{ result.explanation | render_math_text }}</p>
+  {% endif %}
+
+  {% if test_suggestion %}
+  <div class="test-suggestion-banner card">
+    <p class="section-label test-label">テスト</p>
+    <h3>{{ test_scope_label }}にチャレンジしよう！</h3>
+    <p>この単元の練習をがんばった成果を確かめましょう。</p>
+    <form method="post" action="/students/{{ student.student_id }}/test/start" class="test-start-form">
+      <input type="hidden" name="test_scope" value="{{ test_suggestion }}">
+      <input type="hidden" name="unit_id" value="{{ test_suggestion_unit_id }}">
+      <button type="submit" class="primary-button test-start-button">テストを始める</button>
+      {% if next_problem %}
+      <a class="btn btn--ghost" href="{{ next_url | default('/students/' ~ student.student_id) }}" aria-label="テストを後回しにする">あとにする</a>
+      {% endif %}
+    </form>
+  </div>
+  {% elif not next_problem %}
+  <p>次の問題がありません。講師画面で問題データを確認してください。</p>
+  {% endif %}
+</section>
+
+{# near_miss ポップアップ #}
+{% if grading_result and grading_result.judgment == "near_miss" %}
+<div id="near-miss-modal" class="modal-overlay" style="display: block;">
+  <div class="modal-content near-miss-modal">
+    <div class="modal-header">
+      <h3>💡 惜しい！</h3>
+      <button type="button" class="modal-close-btn" onclick="closeNearMissModal()">×</button>
+    </div>
+    <div class="modal-body">
+      <div id="synonym-map-content">
+        <p class="loading-text">使い分けマップを読み込み中...</p>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="primary-button" onclick="closeNearMissModal()">わかった！</button>
+    </div>
+  </div>
+</div>
+{% endif %}
+
+<script>
+{% if grading_result and grading_result.judgment == "near_miss" %}
+// near_miss ポップアップの処理
+async function loadSynonymMap() {
+  const contentDiv = document.getElementById('synonym-map-content');
+  const nearMissInfo = {{ grading_result.near_miss_info | tojson }};
+  
+  if (!nearMissInfo) {
+    contentDiv.innerHTML = '<p>マップデータを読み込めませんでした。</p>';
+    return;
+  }
+
+  try {
+    const response = await fetch('/students/{{ student.student_id }}/english/synonym-map', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        submitted_word: nearMissInfo.submitted_word,
+        correct_word: nearMissInfo.correct_word,
+        hint_key: nearMissInfo.hint_key
+      })
+    });
+
+    if (!response.ok) {
+      throw new Error('Failed to load map');
+    }
+
+    const data = await response.json();
+    
+    if (data.status === 'ok' && data.data) {
+      renderSynonymMap(data.data);
+    } else {
+      contentDiv.innerHTML = '<p>マップの生成に失敗しました。</p>';
+    }
+  } catch (error) {
+    console.error('Error loading synonym map:', error);
+    contentDiv.innerHTML = '<p>マップの読み込みに失敗しました。</p>';
+  }
+}
+
+function renderSynonymMap(mapData) {
+  const contentDiv = document.getElementById('synonym-map-content');
+  
+  let html = `<p class="synonym-message">${mapData.message}</p>`;
+  html += '<div class="synonym-comparison">';
+  
+  mapData.comparison.forEach(word => {
+    html += `
+      <div class="synonym-word-item">
+        <div class="synonym-word-header">
+          <span class="synonym-emoji">${word.emoji}</span>
+          <strong class="synonym-word">${word.word}</strong>
+        </div>
+        <p class="synonym-nuance">${word.nuance}</p>
+        <p class="synonym-example">${word.example}</p>
+      </div>
+    `;
+  });
+  
+  html += '</div>';
+  contentDiv.innerHTML = html;
+}
+
+function closeNearMissModal() {
+  const modal = document.getElementById('near-miss-modal');
+  if (modal) {
+    modal.style.display = 'none';
+  }
+}
+
+// ページ読み込み時にマップをロード
+document.addEventListener('DOMContentLoaded', loadSynonymMap);
+{% endif %}
+</script>
+
+<style>
+/* near_miss ポップアップのスタイル */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  border-radius: 12px;
+  max-width: 500px;
+  width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.near-miss-modal .modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.near-miss-modal .modal-header h3 {
+  margin: 0;
+  color: #2c3e50;
+}
+
+.modal-close-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #666;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-body {
+  padding: 20px;
+}
+
+.modal-footer {
+  padding: 20px;
+  border-top: 1px solid #eee;
+  text-align: center;
+}
+
+.synonym-message {
+  font-size: 16px;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.synonym-comparison {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.synonym-word-item {
+  border: 1px solid #e1e8ed;
+  border-radius: 8px;
+  padding: 15px;
+  background: #f8f9fa;
+}
+
+.synonym-word-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.synonym-emoji {
+  font-size: 20px;
+}
+
+.synonym-word {
+  font-size: 18px;
+  color: #2c3e50;
+}
+
+.synonym-nuance {
+  color: #666;
+  margin: 8px 0;
+  font-size: 14px;
+}
+
+.synonym-example {
+  color: #2c3e50;
+  font-style: italic;
+  margin: 0;
+  font-size: 14px;
+}
+
+.loading-text {
+  text-align: center;
+  color: #666;
+  font-style: italic;
+}
+
+/* バッジ獲得トーストのスタイル */
+.badge-earned-toast {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 16px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  z-index: 1001;
+  font-weight: bold;
+  animation: badgeSlideIn 0.5s ease-out;
+  max-width: 300px;
+}
+
+@keyframes badgeSlideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* ===== 正解エフェクト overlay ===== */
+.correct-overlay {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(ellipse at center, rgba(99,102,241,0.85) 0%, rgba(0,0,0,0.7) 100%);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: overlayFadeIn 0.25s ease;
+  cursor: pointer;
+}
+@keyframes overlayFadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+.correct-overlay__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+.correct-overlay__chara {
+  width: 160px;
+  filter: drop-shadow(0 0 24px rgba(255,215,0,0.8));
+  animation: charaJump 0.55s cubic-bezier(.36,1.56,.64,1) both;
+}
+@keyframes charaJump {
+  from { transform: scale(0.2) translateY(80px); opacity: 0; }
+  to   { transform: scale(1) translateY(0);       opacity: 1; }
+}
+@keyframes mein-bounce-idle {
+  0%, 100% { transform: translateY(0)    rotate(0deg); }
+  25%       { transform: translateY(-18px) rotate(-4deg); }
+  75%       { transform: translateY(-10px) rotate(4deg); }
+}
+.correct-overlay__badge {
+  font-size: 3.2rem;
+  font-weight: 900;
+  color: #fff;
+  text-shadow: 0 0 30px #ffd700, 0 0 8px #ff6b6b, 0 2px 8px rgba(0,0,0,0.5);
+  animation: badgePop 0.45s 0.2s cubic-bezier(.36,1.56,.64,1) both;
+}
+@keyframes badgePop {
+  from { transform: scale(0.5); opacity: 0; }
+  to   { transform: scale(1);   opacity: 1; }
+}
+.correct-overlay__gold {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #ffd700;
+  text-shadow: 0 0 16px rgba(255,215,0,0.9), 0 1px 4px rgba(0,0,0,0.6);
+  animation: badgePop 0.4s 0.35s both;
+}
+.correct-overlay__next-hint {
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.85);
+  margin-top: 4px;
+}
+
+/* ===== 不正解 Mein シェイク overlay ===== */
+.wrong-overlay {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(ellipse at center, rgba(220,38,38,0.75) 0%, rgba(0,0,0,0.65) 100%);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: overlayFadeIn 0.2s ease;
+  cursor: pointer;
+}
+.wrong-overlay__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+.wrong-overlay__chara {
+  width: 150px;
+  filter: drop-shadow(0 0 20px rgba(255,100,100,0.8)) grayscale(0.15);
+  animation: mein-shake 0.6s cubic-bezier(.36,.07,.19,.97) both;
+}
+@keyframes mein-shake {
+  0%  { transform: translateX(0)    rotate(0deg); }
+  10% { transform: translateX(-14px) rotate(-8deg); }
+  25% { transform: translateX(14px)  rotate(8deg); }
+  40% { transform: translateX(-12px) rotate(-6deg); }
+  55% { transform: translateX(10px)  rotate(5deg); }
+  70% { transform: translateX(-6px)  rotate(-3deg); }
+  85% { transform: translateX(6px)   rotate(3deg); }
+  100%{ transform: translateX(0)    rotate(0deg); }
+}
+.wrong-overlay__badge {
+  font-size: 2.6rem;
+  font-weight: 900;
+  color: #fff;
+  text-shadow: 0 0 20px rgba(255,100,100,0.9), 0 2px 8px rgba(0,0,0,0.5);
+  animation: badgePop 0.4s 0.15s cubic-bezier(.36,1.56,.64,1) both;
+}
+.wrong-overlay__msg {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: rgba(255,255,255,0.9);
+  animation: badgePop 0.4s 0.3s both;
+}
+
+/* ===== コイン降りエフェクト ===== */
+.coin-particle {
+  position: fixed;
+  top: -48px;
+  font-size: 1.8rem;
+  pointer-events: none;
+  z-index: 3000;
+  will-change: transform, opacity;
+  animation: coinFall linear forwards;
+}
+@keyframes coinFall {
+  0%   { transform: translateY(0)     rotate(0deg);   opacity: 1; }
+  75%  { opacity: 1; }
+  100% { transform: translateY(108vh) rotate(540deg); opacity: 0; }
+}
+</style>
+
+{% if result.is_correct and g_earned is defined and g_earned > 0 %}
+<script>
+(function() {
+  function spawnCoin() {
+    var el = document.createElement('span');
+    el.className = 'coin-particle';
+    el.textContent = '\uD83E\uDE99';
+    var left  = Math.random() * 88 + 4;
+    var dur   = Math.random() * 0.7 + 0.85;
+    var delay = Math.random() * 0.8;
+    el.style.left = left + 'vw';
+    el.style.animationDuration  = dur   + 's';
+    el.style.animationDelay     = delay + 's';
+    el.style.fontSize = (Math.random() * 0.8 + 1.3) + 'rem';
+    document.body.appendChild(el);
+    setTimeout(function() { el.remove(); }, (dur + delay + 0.3) * 1000);
+  }
+  var count = Math.min({{ g_earned }} * 3, 24) + 6;
+  for (var i = 0; i < count; i++) { spawnCoin(); }
+})();
+</script>
+{% endif %}
+
+{% if new_badges %}
+<script>
+(function() {
+  var overlay = document.getElementById('badge-overlay');
+  if (!overlay) return;
+  function dismiss() {
+    overlay.style.transition = 'opacity 0.4s ease';
+    overlay.style.opacity = '0';
+    setTimeout(function() { overlay.style.display = 'none'; }, 420);
+  }
+  setTimeout(dismiss, 2000);
+  overlay.addEventListener('click', dismiss);
+})();
+</script>
+{% endif %}
+
+{% if result.is_correct and not test_suggestion and next_problem %}
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+<script>
+(function() {
+  var nextUrl = {{ (next_url | default('/students/' ~ student.student_id)) | tojson }};
+  var totalMs = {% if level_up or unit_clear %}2500{% else %}1500{% endif %};
+  var startTime = Date.now();
+
+  /* confetti burst */
+  confetti({ particleCount: 120, spread: 80, origin: { y: 0.55 }, colors: ['#ffd700','#ff6b6b','#4ecdc4','#45b7d1','#96e6a1'] });
+  setTimeout(function() {
+    confetti({ particleCount: 60, angle: 60,  spread: 55, origin: { x: 0, y: 0.6 } });
+    confetti({ particleCount: 60, angle: 120, spread: 55, origin: { x: 1, y: 0.6 } });
+  }, 300);
+{% if level_up or unit_clear %}
+  /* level-up / unit-clear 追加confetti */
+  setTimeout(function() {
+    confetti({ particleCount: 200, spread: 120, origin: { y: 0.4 }, colors: ['#ffd700','#fbbf24','#f59e0b','#fff'] });
+  }, 800);
+{% endif %}
+
+  /* character swap */
+  var frames = ['/static/characters/mein_y1.png','/static/characters/mein_y2.png','/static/characters/mein_y3.png','/static/characters/mein_y1.png'];
+  var fi = 0;
+  var charaEl = document.getElementById('chara-img');
+  var charaTimer = setInterval(function() {
+    fi = (fi + 1) % frames.length;
+    if (charaEl) charaEl.src = frames[fi];
+  }, 220);
+
+  /* countdown */
+  var cdEl = document.getElementById('auto-countdown');
+  var cdTimer = setInterval(function() {
+    var elapsed = Date.now() - startTime;
+    var remaining = Math.max(0, (totalMs - elapsed) / 1000);
+    if (cdEl) cdEl.textContent = remaining.toFixed(1);
+  }, 100);
+
+  /* auto-advance */
+  setTimeout(function() {
+    clearInterval(charaTimer);
+    clearInterval(cdTimer);
+    window.location.href = nextUrl;
+  }, totalMs);
+
+  /* continuous bounce after initial jump */
+  setTimeout(function() {
+    var ch = document.getElementById('chara-img');
+    if (ch) ch.style.animation = 'mein-bounce-idle 0.65s ease-in-out infinite';
+  }, 620);
+
+  /* tap to skip */
+  document.getElementById('correct-overlay').addEventListener('click', function() {
+    clearInterval(charaTimer);
+    clearInterval(cdTimer);
+    window.location.href = nextUrl;
+  });
+})();
+</script>
+{% endif %}
+
+{% if not result.is_correct %}
+<script>
+(function() {
+  var overlay = document.getElementById('wrong-overlay');
+  if (!overlay) return;
+
+  var wrongChara = document.getElementById('wrong-chara-img');
+  var shakeTimer = setInterval(function() {
+    if (!wrongChara) return;
+    wrongChara.style.animation = 'none';
+    void wrongChara.offsetWidth;
+    wrongChara.style.animation = 'mein-shake 0.6s cubic-bezier(.36,.07,.19,.97) both';
+  }, 1400);
+
+  var hasSocratic = !!document.getElementById('socratic-modal');
+
+  function dismiss() {
+    clearInterval(shakeTimer);
+    overlay.style.transition = 'opacity 0.3s ease';
+    overlay.style.opacity = '0';
+    setTimeout(function() {
+      overlay.remove();
+      if (hasSocratic) {
+        var sm = document.getElementById('socratic-modal');
+        if (sm) {
+          sm.classList.add('socratic-modal--visible');
+          socraticUpdateProgress(0, {{ socratic_questions | length if socratic_questions else 0 }});
+        }
+      }
+    }, 320);
+  }
+
+  var dismissDelay = hasSocratic ? 1800 : 1500;
+  setTimeout(dismiss, dismissDelay);
+  overlay.addEventListener('click', dismiss);
+})();
+</script>
+
+{% if socratic_questions %}
+<script>
+var _socraticTotal = {{ socratic_questions | length }};
+
+function socraticUpdateProgress(current, total) {
+  var fill = document.getElementById('socratic-progress-fill');
+  var label = document.getElementById('socratic-progress-label');
+  if (fill) fill.style.width = ((current + 1) / total * 100) + '%';
+  if (label) label.textContent = (current + 1) + ' / ' + total;
+}
+
+function socraticChoose(btn, qIndex) {
+  var siblings = btn.parentElement.querySelectorAll('.socratic-modal__choice-btn');
+  siblings.forEach(function(b) { b.classList.remove('socratic-modal__choice-btn--selected'); });
+  btn.classList.add('socratic-modal__choice-btn--selected');
+  var nextBtn = document.getElementById('socratic-next-' + qIndex);
+  if (nextBtn) nextBtn.classList.add('socratic-modal__next-btn--ready');
+}
+
+function socraticNext(currentIndex, total) {
+  var current = document.querySelector('[data-index="' + currentIndex + '"]');
+  if (current) {
+    current.style.opacity = '0';
+    current.style.transform = 'translateX(-20px)';
+    setTimeout(function() {
+      current.classList.add('socratic-modal__question--hidden');
+      var nextIndex = currentIndex + 1;
+      if (nextIndex < total) {
+        var next = document.querySelector('[data-index="' + nextIndex + '"]');
+        if (next) {
+          next.classList.remove('socratic-modal__question--hidden');
+          next.style.opacity = '0';
+          next.style.transform = 'translateX(20px)';
+          setTimeout(function() {
+            next.style.transition = 'opacity 0.3s, transform 0.3s';
+            next.style.opacity = '1';
+            next.style.transform = 'translateX(0)';
+          }, 30);
+          socraticUpdateProgress(nextIndex, total);
+        }
+      } else {
+        var modal = document.getElementById('socratic-modal');
+        if (modal) {
+          modal.style.transition = 'opacity 0.4s';
+          modal.style.opacity = '0';
+          setTimeout(function() { modal.remove(); }, 420);
+        }
+      }
+    }, 250);
+  }
+}
+</script>
+{% endif %}
+{% endif %}
+
+{% endblock %}

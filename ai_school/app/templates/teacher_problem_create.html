@@ -1,0 +1,282 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="card problem-create-page">
+  <div class="problem-create-header">
+    <div>
+      <p class="section-label">教材管理</p>
+      <h2>問題を作成</h2>
+      <p class="meta-note">作成した問題は「承認待ち」として保存されます。承認キューで確認後に生徒へ出題されます。</p>
+    </div>
+    <a class="secondary-link" href="/teachers/problems">← 問題一覧に戻る</a>
+  </div>
+
+  {% if errors %}
+  <div class="problem-create-errors">
+    <strong>入力エラー</strong>
+    <ul>
+      {% for err in errors %}
+      <li>{{ err }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+
+  <form method="post" action="/teachers/problems/create" class="problem-create-form" id="problem-create-form">
+
+    {# ===== 基本情報 ===== #}
+    <section class="pc-section">
+      <h3 class="pc-section__title">基本情報</h3>
+      <div class="pc-field-row">
+
+        <div class="pc-field">
+          <label class="pc-label">教科 <span class="pc-required">必須</span></label>
+          <select name="subject" id="pc-subject" required>
+            <option value="">選択</option>
+            <option value="math" {% if form_values and form_values.subject == 'math' %}selected{% endif %}>数学</option>
+            <option value="english" {% if form_values and form_values.subject == 'english' %}selected{% endif %}>英語</option>
+          </select>
+        </div>
+
+        <div class="pc-field">
+          <label class="pc-label">学年 <span class="pc-required">必須</span></label>
+          <select name="grade" id="pc-grade" required>
+            <option value="">選択</option>
+            <option value="7" {% if form_values and form_values.grade == 7 %}selected{% endif %}>中1</option>
+            <option value="8" {% if form_values and form_values.grade == 8 %}selected{% endif %}>中2</option>
+            <option value="9" {% if form_values and form_values.grade == 9 %}selected{% endif %}>中3</option>
+          </select>
+        </div>
+
+        <div class="pc-field pc-field--wide">
+          <label class="pc-label">単元 <span class="pc-required">必須</span></label>
+          <select name="unit" id="pc-unit" required>
+            <option value="">教科と学年を先に選ぶ</option>
+            {% for u in all_units %}
+            <option
+              value="{{ u.unit_id }}"
+              data-subject="{{ u.subject }}"
+              data-grade="{{ u.grade }}"
+              data-full-unit-id="{{ u.unit_id }}"
+              {% if form_values and form_values.unit == u.unit_id %}selected{% endif %}>
+              {% if u.grade %}中{{ u.grade - 6 }} / {% endif %}{{ u.display_name }}
+            </option>
+            {% endfor %}
+          </select>
+          <input type="hidden" name="full_unit_id" id="pc-full-unit-id" value="{{ form_values.unit if form_values else '' }}">
+        </div>
+
+      </div>
+
+      <div class="pc-field-row">
+
+        <div class="pc-field">
+          <label class="pc-label">問題タイプ <span class="pc-required">必須</span></label>
+          <select name="problem_type" required>
+            <option value="practice" {% if not form_values or form_values.problem_type == 'practice' %}selected{% endif %}>練習問題</option>
+            <option value="unit_test" {% if form_values and form_values.problem_type == 'unit_test' %}selected{% endif %}>単元テスト</option>
+          </select>
+        </div>
+
+        <div class="pc-field">
+          <label class="pc-label">難易度 <span class="pc-required">必須</span></label>
+          <div class="pc-difficulty-group">
+            {% for lv, label in [(1, '1 やさしい'), (2, '2 ふつう'), (3, '3 むずかしい')] %}
+            <label class="pc-difficulty-btn">
+              <input type="radio" name="difficulty" value="{{ lv }}"
+                {% if form_values and form_values.difficulty == lv %}checked{% elif not form_values and lv == 2 %}checked{% endif %}
+                required>
+              <span>{{ label }}</span>
+            </label>
+            {% endfor %}
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    {# ===== 問題内容 ===== #}
+    <section class="pc-section">
+      <h3 class="pc-section__title">問題内容</h3>
+
+      <div class="pc-field">
+        <label class="pc-label">問題文 <span class="pc-required">必須</span></label>
+        <p class="pc-hint">数式は LaTeX 記法で入力できます（例: <code>\frac{1}{2}</code>、<code>x^2</code>）</p>
+        <textarea name="question_text" rows="5" required maxlength="5000" placeholder="問題文を入力してください">{{ form_values.question_text if form_values else '' }}</textarea>
+        <span class="pc-char-count" id="pc-q-count">0 / 5000</span>
+      </div>
+
+      <div class="pc-field-row">
+        <div class="pc-field">
+          <label class="pc-label">解答形式 <span class="pc-required">必須</span></label>
+          <select name="answer_type" id="pc-answer-type" onchange="toggleChoicesField()">
+            <option value="numeric" {% if not form_values or form_values.answer_type == 'numeric' %}selected{% endif %}>数値 (numeric)</option>
+            <option value="text" {% if form_values and form_values.answer_type == 'text' %}selected{% endif %}>テキスト (text)</option>
+            <option value="choice" {% if form_values and form_values.answer_type == 'choice' %}selected{% endif %}>4択選択 (choice)</option>
+            <option value="sort" {% if form_values and form_values.answer_type == 'sort' %}selected{% endif %}>語順並び替え (sort)</option>
+          </select>
+        </div>
+        <div class="pc-field pc-field--wide">
+          <label class="pc-label">正解 <span class="pc-required">必須</span></label>
+          <input type="text" name="correct_answer" required maxlength="100"
+            placeholder="例: 3 / are / I go to school ."
+            value="{{ form_values.correct_answer if form_values else '' }}">
+        </div>
+      </div>
+
+      <div class="pc-field" id="pc-choices-field" style="display:{% if form_values and form_values.answer_type in ('choice','sort') %}block{% else %}none{% endif %}">
+        <label class="pc-label">選択肢 / 並び替え単語 <span class="pc-required">必須</span>
+          <span class="pc-hint">カンマ区切りで入力。4択例: <code>am, is, are, be</code>　並び替え例: <code>go, I, school, to, .</code></span>
+        </label>
+        <input type="text" name="choices_raw" id="pc-choices-raw" maxlength="500"
+          placeholder="am, is, are, be"
+          value="{{ form_values.choices_raw if form_values else '' }}">
+        <p class="pc-hint">並び替え(sort)の場合は正解と同じ単語をシャッフルして入力してください。</p>
+      </div>
+
+      <div class="pc-field pc-field--wide">
+        <label class="pc-label">解答入力仕様 (JSON) <span class="pc-optional">任意</span></label>
+        <p class="pc-hint">数学の空欄とキーパッド種別を指定します。問題文に <code>[[blank:a]]</code> のように空欄を記述し、<code>blanks</code> の <code>id</code> と対応させます。未入力時は正解から推定します（例: <code>1/2</code> は分数キーパッド）。</p>
+        <textarea name="answer_input_spec_raw" rows="6" maxlength="8000" class="pc-mono-textarea" placeholder='{"blanks":[{"id":"a","input_mode":"fraction","label":"空欄ア"}]}'>{{ form_values.answer_input_spec_raw if form_values else '' }}</textarea>
+      </div>
+    </section>
+
+    {# ===== サポート情報 ===== #}
+    <section class="pc-section">
+      <h3 class="pc-section__title">サポート情報 <span class="pc-optional">任意</span></h3>
+
+      <div class="pc-field">
+        <label class="pc-label">ヒント1</label>
+        <textarea name="hint_1" rows="2" maxlength="1000" placeholder="最初のヒント">{{ form_values.hint_1 if form_values else '' }}</textarea>
+      </div>
+      <div class="pc-field">
+        <label class="pc-label">ヒント2</label>
+        <textarea name="hint_2" rows="2" maxlength="1000" placeholder="もう少し詳しいヒント">{{ form_values.hint_2 if form_values else '' }}</textarea>
+      </div>
+      <div class="pc-field">
+        <label class="pc-label">解説</label>
+        <textarea name="explanation_base" rows="3" maxlength="2000" placeholder="正解の解説・解き方">{{ form_values.explanation_base if form_values else '' }}</textarea>
+      </div>
+    </section>
+
+    {# ===== AI分類情報 ===== #}
+    <section class="pc-section">
+      <h3 class="pc-section__title">AI分類情報 <span class="pc-optional">任意</span></h3>
+      <p class="meta-note">この問題でよく起こる誤答パターンと介入タイプを選んでおくと、AI のルーティング精度が上がります。</p>
+
+      <div class="pc-field">
+        <label class="pc-label">誤答パターン候補</label>
+        <div class="pc-checkbox-grid">
+          {% for key in known_error_patterns %}
+          <label class="pc-checkbox-btn">
+            <input type="checkbox" name="error_pattern_candidates" value="{{ key }}"
+              {% if form_values and key in form_values.error_pattern_candidates %}checked{% endif %}>
+            <span>{{ error_pattern_labels.get(key, key) }}</span>
+          </label>
+          {% endfor %}
+        </div>
+      </div>
+
+      <div class="pc-field">
+        <label class="pc-label">介入タイプ候補</label>
+        <div class="pc-checkbox-grid">
+          {% for key in known_intervention_candidates %}
+          <label class="pc-checkbox-btn">
+            <input type="checkbox" name="intervention_candidates" value="{{ key }}"
+              {% if form_values and key in form_values.intervention_candidates %}checked{% endif %}>
+            <span>{{ intervention_labels.get(key, key) }}</span>
+          </label>
+          {% endfor %}
+        </div>
+    </section>
+
+    {# ===== 承認設定 ===== #}
+    <section class="pc-section pc-section--submit">
+      <label class="pc-auto-approve-toggle">
+        <input type="checkbox" name="auto_approve" value="1" id="pc-auto-approve">
+        <span>作成と同時に承認する（すぐ生徒に出題される）</span>
+      </label>
+      <p class="meta-note" id="pc-status-note">チェックなし → 承認キューで確認後に出題</p>
+
+      <div class="pc-submit-row">
+        <button type="submit" class="primary-button pc-submit-btn">問題を作成</button>
+        <a class="secondary-link" href="/teachers/problems">キャンセル</a>
+      </div>
+    </section>
+
+  </form>
+</section>
+
+<script>
+// ===== 単元リストの絞り込み =====
+const subjectEl = document.getElementById('pc-subject');
+const gradeEl = document.getElementById('pc-grade');
+const unitEl = document.getElementById('pc-unit');
+const fullUnitIdEl = document.getElementById('pc-full-unit-id');
+const allOptions = Array.from(unitEl.options).slice(1); // 先頭「選択」除く
+
+function filterUnits() {
+  const subject = subjectEl.value;
+  const grade = gradeEl.value;
+  const currentVal = unitEl.value;
+
+  // 全オプションを一旦除去
+  while (unitEl.options.length > 1) unitEl.remove(1);
+
+  allOptions.forEach(opt => {
+    const matchSubject = !subject || opt.dataset.subject === subject;
+    const matchGrade = !grade || opt.dataset.grade === grade;
+    if (matchSubject && matchGrade) {
+      unitEl.add(opt.cloneNode(true));
+    }
+  });
+
+  // 元の選択値を復元（あれば）
+  if (currentVal) {
+    for (let i = 0; i < unitEl.options.length; i++) {
+      if (unitEl.options[i].value === currentVal) {
+        unitEl.selectedIndex = i;
+        break;
+      }
+    }
+  }
+  syncFullUnitId();
+}
+
+function syncFullUnitId() {
+  const selected = unitEl.options[unitEl.selectedIndex];
+  fullUnitIdEl.value = selected ? (selected.dataset.fullUnitId || selected.value) : '';
+}
+
+subjectEl.addEventListener('change', filterUnits);
+gradeEl.addEventListener('change', filterUnits);
+unitEl.addEventListener('change', syncFullUnitId);
+filterUnits(); // 初期化
+
+// ===== 文字数カウント =====
+const qText = document.querySelector('textarea[name="question_text"]');
+const qCount = document.getElementById('pc-q-count');
+function updateCount() {
+  qCount.textContent = qText.value.length + ' / 5000';
+  qCount.style.color = qText.value.length > 4800 ? '#dc2626' : '';
+}
+qText.addEventListener('input', updateCount);
+updateCount();
+
+// ===== 承認ステータス表示 =====
+const autoApprove = document.getElementById('pc-auto-approve');
+const statusNote = document.getElementById('pc-status-note');
+autoApprove.addEventListener('change', () => {
+  statusNote.textContent = autoApprove.checked
+    ? '✅ 承認済みとして即座に出題されます'
+    : 'チェックなし → 承認キューで確認後に出題';
+  statusNote.style.color = autoApprove.checked ? '#16a34a' : '';
+});
+
+// ===== 選択肢フィールドの表示切替 =====
+function toggleChoicesField() {
+  const at = document.getElementById('pc-answer-type').value;
+  const el = document.getElementById('pc-choices-field');
+  el.style.display = (at === 'choice' || at === 'sort') ? 'block' : 'none';
+}
+</script>
+{% endblock %}

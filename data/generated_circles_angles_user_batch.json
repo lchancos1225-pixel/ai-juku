@@ -1,0 +1,433 @@
+{
+  "problems": [
+    {
+      "full_unit_id": "circles_angles",
+      "unit_id": "circles_angles",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "question_text": "1つの円において、ある弧に対する中心角が100°のとき、その弧に対する円周角の大きさを求めなさい。",
+      "diagram": null,
+      "diagram_required": true,
+      "diagram_params": {
+        "diagram_type": "circle_inscribed_angle",
+        "circle": {
+          "center_label": "O"
+        },
+        "points": [
+          { "name": "A", "angle_deg": 180 },
+          { "name": "B", "angle_deg": 80 },
+          { "name": "C", "angle_deg": 20 }
+        ],
+        "segments": [
+          ["O", "A"],
+          ["O", "B"],
+          ["C", "A"],
+          ["C", "B"]
+        ],
+        "angle_marks": [
+          { "vertex": "O", "from": "A", "to": "B", "label": "100°" },
+          { "vertex": "C", "from": "A", "to": "B", "label": "?" }
+        ],
+        "show_center": true
+      },
+      "correct_answer": "50°",
+      "hint_1": "円周角の定理を思い出しましょう。円周角の大きさは、同じ弧に対する中心角の大きさの半分になります。",
+      "hint_2": "中心角が100°なので、その半分の角度を計算します。",
+      "explanation_base": "円周角の定理より、1つの弧に対する円周角の大きさは、その弧に対する中心角の大きさの半分になります。したがって、100° ÷ 2 = 50° です。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "retry_with_hint"
+      ]
+    },
+    {
+      "full_unit_id": "circles_angles",
+      "unit_id": "circles_angles",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "question_text": "1つの円において、ある弧に対する円周角が35°のとき、その弧に対する中心角の大きさを求めなさい。",
+      "diagram": null,
+      "correct_answer": "70°",
+      "hint_1": "円周角の定理より、中心角の大きさは、同じ弧に対する円周角の大きさの2倍になります。",
+      "hint_2": "円周角が35°なので、それを2倍して計算します。",
+      "explanation_base": "円周角の定理より、1つの弧に対する中心角の大きさは、その弧に対する円周角の大きさの2倍になります。したがって、35° × 2 = 70° です。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "circles_angles",
+      "unit_id": "circles_angles",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "question_text": "円Oの周上に4点A, B, P, Qがあります。点P, Qは直線ABについて同じ側にあります。弧ABに対する円周角∠APBが40°のとき、∠AQBの大きさを求めなさい。",
+      "diagram": null,
+      "diagram_required": true,
+      "diagram_params": {
+        "diagram_type": "circle_inscribed_angle",
+        "circle": {
+          "center_label": "O"
+        },
+        "points": [
+          { "name": "A", "angle_deg": 200 },
+          { "name": "B", "angle_deg": 340 },
+          { "name": "P", "angle_deg": 80 },
+          { "name": "Q", "angle_deg": 120 }
+        ],
+        "segments": [
+          ["P", "A"],
+          ["P", "B"],
+          ["Q", "A"],
+          ["Q", "B"]
+        ],
+        "angle_marks": [
+          { "vertex": "P", "from": "A", "to": "B", "label": "40°" },
+          { "vertex": "Q", "from": "A", "to": "B", "label": "?" }
+        ],
+        "show_center": true
+      },
+      "correct_answer": "40°",
+      "hint_1": "同じ弧に対する円周角の大きさはすべて等しくなります。",
+      "hint_2": "∠APBも∠AQBも、同じ弧ABに対する円周角です。",
+      "explanation_base": "同じ弧に対する円周角の大きさは等しいという定理より、弧ABに対する円周角である∠AQBは∠APBと等しくなります。したがって、∠AQB = 40° です。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "retry_with_hint"
+      ]
+    },
+    {
+      "full_unit_id": "circles_angles",
+      "unit_id": "circles_angles",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "question_text": "線分ABを直径とする円Oがあります。円Oの周上に、点A, Bと異なる点Pをとるとき、∠APBの大きさを求めなさい。",
+      "diagram": null,
+      "diagram_required": true,
+      "diagram_params": {
+        "diagram_type": "circle_inscribed_angle",
+        "circle": {
+          "center_label": "O"
+        },
+        "points": [
+          { "name": "A", "angle_deg": 180 },
+          { "name": "B", "angle_deg": 0 },
+          { "name": "P", "angle_deg": 120 }
+        ],
+        "segments": [
+          ["A", "B"],
+          ["P", "A"],
+          ["P", "B"]
+        ],
+        "angle_marks": [
+          { "vertex": "P", "from": "A", "to": "B", "label": "?" }
+        ],
+        "show_center": true
+      },
+      "correct_answer": "90°",
+      "hint_1": "半円の弧（直径に対する弧）に対する中心角は180°です。",
+      "hint_2": "円周角は中心角の半分になるので、180°の半分を計算します。",
+      "explanation_base": "線分ABは直径なので、弧ABに対する中心角∠AOBは180°です。円周角の定理より、直径に対する円周角∠APBはその半分になるため、180° ÷ 2 = 90° です。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "prerequisite_gap"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "fallback_prerequisite"
+      ]
+    },
+    {
+      "full_unit_id": "circles_angles",
+      "unit_id": "circles_angles",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "question_text": "円Oの周上に3点A, B, Cがあります。∠ACB=55°のとき、点Cを含まない弧ABに対する中心角∠AOBの大きさを求めなさい。",
+      "diagram": null,
+      "correct_answer": "110°",
+      "hint_1": "弧ABに対する円周角が∠ACBです。中心角は円周角の何倍になるか考えましょう。",
+      "hint_2": "中心角は円周角の2倍になります。55°を2倍しましょう。",
+      "explanation_base": "弧ABに対する円周角∠ACBが55°なので、同じ弧に対する中心角∠AOBはその2倍になります。55° × 2 = 110° です。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "circles_angles",
+      "unit_id": "circles_angles",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "question_text": "円Oの周上に4点A, B, C, Dが反時計回りに並んでいます。弦ACと弦BDの交点をPとします。∠ADB=30°、∠DAC=40°のとき、∠APDの大きさを求めなさい。",
+      "diagram": null,
+      "correct_answer": "110°",
+      "hint_1": "三角形の内角の和が180°であることを利用します。△APDの内角に注目しましょう。",
+      "hint_2": "△APDにおいて、∠ADP(∠ADB)は30°、∠DAP(∠DAC)は40°です。残りの角∠APDを計算しましょう。",
+      "explanation_base": "△APDにおいて、内角の和は180°です。∠ADP = 30°、∠DAP = 40° なので、∠APD = 180° - (30° + 40°) = 180° - 70° = 110° になります。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "formula_setup_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "circles_angles",
+      "unit_id": "circles_angles",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "question_text": "円Oの周上に3点A, B, Cがあります。線分ABは円Oの直径です。∠ABC=65°のとき、∠BACの大きさを求めなさい。",
+      "diagram": null,
+      "diagram_required": true,
+      "diagram_params": {
+        "diagram_type": "circle_inscribed_angle",
+        "circle": {
+          "center_label": "O"
+        },
+        "points": [
+          { "name": "A", "angle_deg": 180 },
+          { "name": "B", "angle_deg": 0 },
+          { "name": "C", "angle_deg": 50 }
+        ],
+        "segments": [
+          ["A", "B"],
+          ["B", "C"],
+          ["A", "C"]
+        ],
+        "angle_marks": [
+          { "vertex": "B", "from": "A", "to": "C", "label": "65°" },
+          { "vertex": "A", "from": "B", "to": "C", "label": "?" }
+        ],
+        "show_center": true
+      },
+      "correct_answer": "25°",
+      "hint_1": "線分ABが直径なので、∠BCAの大きさがわかります。直径に対する円周角は何度でしょうか。",
+      "hint_2": "∠BCA=90°です。△ABCの内角の和を利用して∠BACを求めましょう。",
+      "explanation_base": "線分ABが直径であるため、直径に対する円周角∠BCAは90°です。△ABCの内角の和は180°なので、∠BAC = 180° - (90° + 65°) = 25° になります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "circles_angles",
+      "unit_id": "circles_angles",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "question_text": "円Oの周上に4点A, B, C, Dが反時計回りに並んでいます。∠BAC=45°、∠CAD=35°のとき、点Aを含まない弧BDに対する中心角∠BODの大きさを求めなさい。",
+      "diagram": null,
+      "correct_answer": "160°",
+      "hint_1": "まず、円周角である∠BADの大きさを求めましょう。∠BADは2つの角を足し合わせたものです。",
+      "hint_2": "∠BAD = 45° + 35° = 80° です。中心角は円周角の2倍になります。",
+      "explanation_base": "弧BDに対する円周角∠BADは、∠BACと∠CADの和なので 45° + 35° = 80° です。円周角の定理より、中心角∠BODはその2倍になるため、80° × 2 = 160° になります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "retry_with_hint"
+      ]
+    },
+    {
+      "full_unit_id": "circles_angles",
+      "unit_id": "circles_angles",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "question_text": "円Oの周上に3点A, B, Cがあります。弧AB、弧BC、弧CAの長さの比が 2：3：4 のとき、∠ABCの大きさを求めなさい。",
+      "diagram": null,
+      "correct_answer": "80°",
+      "hint_1": "円周全体の中心角は360°です。弧の長さの比は中心角の比と等しくなります。",
+      "hint_2": "∠ABCは弧CAに対する円周角です。まず、弧CAに対する中心角を求めましょう。全体の 4/(2+3+4) にあたります。",
+      "explanation_base": "弧の長さの比は中心角の比に等しいため、弧CAに対する中心角は 360° × 4 / (2 + 3 + 4) = 360° × 4/9 = 160° です。求める∠ABCは弧CAに対する円周角なので、160° ÷ 2 = 80° になります。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "formula_setup_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "circles_angles",
+      "unit_id": "circles_angles",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "question_text": "円Oの周上に4点A, B, C, Dが反時計回りに並んでいます。線分ACは円Oの直径で、∠ADB=25°です。このとき、∠BDCの大きさを求めなさい。",
+      "diagram": null,
+      "diagram_required": true,
+      "diagram_params": {
+        "diagram_type": "circle_inscribed_angle",
+        "circle": {
+          "center_label": "O"
+        },
+        "points": [
+          { "name": "A", "angle_deg": 180 },
+          { "name": "B", "angle_deg": 130 },
+          { "name": "C", "angle_deg": 0 },
+          { "name": "D", "angle_deg": 220 }
+        ],
+        "segments": [
+          ["A", "C"],
+          ["D", "A"],
+          ["D", "B"],
+          ["D", "C"]
+        ],
+        "angle_marks": [
+          { "vertex": "D", "from": "A", "to": "B", "label": "25°" },
+          { "vertex": "D", "from": "B", "to": "C", "label": "?" }
+        ],
+        "show_center": true
+      },
+      "correct_answer": "65°",
+      "hint_1": "線分ACは直径なので、直径に対する円周角∠ADCの大きさがわかります。",
+      "hint_2": "∠ADC = 90°です。∠BDCは、∠ADCから∠ADBを引いた大きさになります。",
+      "explanation_base": "線分ACが直径であるため、直径に対する円周角∠ADCは90°です。図より、∠ADC = ∠ADB + ∠BDC が成り立つので、∠BDC = 90° - 25° = 65° になります。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "circles_angles",
+      "unit_id": "circles_angles",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "question_text": "円Oの周上に4点A, B, C, Dが反時計回りに並んでおり、線分ACと線分BDの交点をPとします。∠APB=80°、∠ABD=30°のとき、点Aを含まない弧BCに対する中心角∠BOCの大きさを求めなさい。",
+      "diagram": null,
+      "correct_answer": "100°",
+      "hint_1": "三角形の外角の性質を使って、∠BACの大きさを求めましょう。△ABPに注目します。",
+      "hint_2": "∠APBは△ABPの外角なので、∠BAC + ∠ABD = 80° です。∠BACを求めたら、それがどの弧に対する円周角か確認しましょう。",
+      "explanation_base": "△ABPにおいて、三角形の外角はそれと隣り合わない2つの内角の和に等しいため、∠BAC + ∠ABD = ∠APB です。∠BAC + 30° = 80° より、∠BAC = 50° となります。∠BACは弧BCに対する円周角なので、中心角∠BOCはその2倍となり、50° × 2 = 100° です。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "comprehension_gap"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "explain_differently"
+      ]
+    },
+    {
+      "full_unit_id": "circles_angles",
+      "unit_id": "circles_angles",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "question_text": "円Oの周上に4点A, B, C, Dが反時計回りに並んでいます。弦ABと弦CDをそれぞれ延長した直線の交点をPとします。点Aを含まない弧BDに対する円周角が50°、点Bを含まない弧ACに対する円周角が20°のとき、∠APCの大きさを求めなさい。",
+      "diagram": null,
+      "correct_answer": "30°",
+      "hint_1": "図を描いて△PBC（または△PAD）を作り、外角の性質を利用しましょう。",
+      "hint_2": "弧BDに対する円周角は∠BCD=50°、弧ACに対する円周角は∠ADC=20°です。△PCDにおいて、外角∠BCDは内角∠Pと∠ADCの和になります。",
+      "explanation_base": "弧BDに対する円周角より∠BCD=50°、弧ACに対する円周角より∠ADC=20°です。△PCDにおいて、三角形の外角の性質から ∠P + ∠ADC = ∠BCD が成り立ちます。したがって、∠P + 20° = 50° より、∠APC(∠P) = 30° になります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "comprehension_gap"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "teacher_intervention_needed"
+      ]
+    },
+    {
+      "full_unit_id": "circles_angles",
+      "unit_id": "circles_angles",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "question_text": "円Oの周上に4点A, B, C, Dが反時計回りに並んでいます。弧AB、弧BC、弧CD、弧DAの長さの比が 3:4:5:6 のとき、弦ACと弦BDの交点をPとしたときの∠APBの大きさを求めなさい。",
+      "diagram": null,
+      "correct_answer": "80°",
+      "hint_1": "弧の長さの比から、それぞれの弧に対する中心角や円周角を求めることができます。円周角の和は180°です。",
+      "hint_2": "弧ABに対する円周角∠ADBと、弧CDに対する円周角∠CADを求めましょう。△APDの外角が∠APBになります。",
+      "explanation_base": "すべての弧に対する円周角の和は180°です。弧の比が3:4:5:6なので、弧ABに対する円周角∠ADBは 180° × 3 / 18 = 30°、弧CDに対する円周角∠CADは 180° × 5 / 18 = 50° です。△APDにおいて、外角∠APB = ∠ADB + ∠CAD なので、30° + 50° = 80° になります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "comprehension_gap"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "circles_angles",
+      "unit_id": "circles_angles",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "question_text": "円Oの周上に4点A, B, C, Dが反時計回りに並んでいます。∠BAC=40°、∠CBD=30°、∠ACD=50°のとき、∠ADBの大きさを求めなさい。",
+      "diagram": null,
+      "correct_answer": "60°",
+      "hint_1": "円周全体を4つの弧AB, BC, CD, DAに分けたとき、それぞれの弧に対する円周角の合計は180°になる性質を利用します。",
+      "hint_2": "弧BCに対する円周角は40°、弧CDに対する円周角は30°、弧DAに対する円周角は50°です。∠ADBはどの弧に対する円周角でしょうか。",
+      "explanation_base": "円周全体の弧に対する円周角の合計は180°です。弧BCに対する円周角∠BAC=40°、弧CDに対する円周角∠CBD=30°、弧DAに対する円周角∠ACD=50°です。求める∠ADBは弧ABに対する円周角なので、180° - (40° + 30° + 50°) = 180° - 120° = 60° になります。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "comprehension_gap"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "teacher_intervention_needed"
+      ]
+    },
+    {
+      "full_unit_id": "circles_angles",
+      "unit_id": "circles_angles",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "question_text": "半径6cmの円Oの周上に3点A, B, Cがあります。∠BAC=30°のとき、点Aを含まない弧BCの長さを求めなさい。ただし、円周率はπとします。",
+      "diagram": null,
+      "correct_answer": "2πcm",
+      "hint_1": "弧の長さは「直径 × π × (中心角/360°)」で求められます。まず中心角を求めましょう。",
+      "hint_2": "円周角∠BACが30°なので、弧BCに対する中心角∠BOCは60°です。",
+      "explanation_base": "円周角の定理より、弧BCに対する中心角∠BOCは 30° × 2 = 60° です。弧の長さは円周の長さに比例するため、12π × (60° / 360°) = 12π × (1/6) = 2π となります。したがって、弧BCの長さは 2π cm です。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "prerequisite_gap"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "fallback_prerequisite"
+      ]
+    }
+  ]
+}

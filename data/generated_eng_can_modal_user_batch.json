@@ -1,0 +1,709 @@
+{
+  "problems": [
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_can_modal",
+      "unit_id": "eng_can_modal",
+      "sub_unit": "can_modal",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に can または can't を書きなさい。\n「I ( ) swim. (泳げる)」",
+      "correct_answer": "can",
+      "hint_1": "「〜できる」を表すときは can を使います。",
+      "hint_2": "能力・可能を表すには can を主語の後に置きます。",
+      "explanation_base": "「〜できる」は can を使います。I can swim.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_can_modal",
+      "unit_id": "eng_can_modal",
+      "sub_unit": "can_modal",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に can または can't を書きなさい。\n「She ( ) drive a car. (運転できない)」",
+      "correct_answer": "can't",
+      "hint_1": "「〜できない」を表すときは can't を使います。",
+      "hint_2": "cannot の短縮形は can't です。",
+      "explanation_base": "「〜できない」は can't を使います。She can't drive a car.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_can_modal",
+      "unit_id": "eng_can_modal",
+      "sub_unit": "can_modal",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に can または can't を書きなさい。\n「He ( ) play the piano. (弾ける)」",
+      "correct_answer": "can",
+      "hint_1": "「〜できる」を表すときは can を使います。",
+      "hint_2": "can は主語に関わらず形が変わりません。",
+      "explanation_base": "「〜できる」は can を使います。He can play the piano.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_can_modal",
+      "unit_id": "eng_can_modal",
+      "sub_unit": "can_modal",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に can または can't を書きなさい。\n「They ( ) speak Chinese. (話せない)」",
+      "correct_answer": "can't",
+      "hint_1": "「〜できない」を表すときは can't を使います。",
+      "hint_2": "can の否定形は cannot または can't です。",
+      "explanation_base": "「〜できない」は can't を使います。They can't speak Chinese.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_can_modal",
+      "unit_id": "eng_can_modal",
+      "sub_unit": "can_modal",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に can または can't を書きなさい。\n「We ( ) see the stars tonight. (見える)」",
+      "correct_answer": "can",
+      "hint_1": "「〜できる（見える）」を表すときは can を使います。",
+      "hint_2": "can は主語に関わらず形が変わりません。",
+      "explanation_base": "「〜できる」は can を使います。We can see the stars tonight.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_can_modal",
+      "unit_id": "eng_can_modal",
+      "sub_unit": "can_modal",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に正しい語を書きなさい。\n「He ( ) not run fast.」",
+      "correct_answer": "cannot",
+      "hint_1": "cannot は「〜できない」という否定の形です。",
+      "hint_2": "cannot は can と not をつなげた1語です（can't と同じ意味）。",
+      "explanation_base": "cannot（= can't）は「〜できない」という意味です。He cannot run fast.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_can_modal",
+      "unit_id": "eng_can_modal",
+      "sub_unit": "can_modal",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に正しい語を書きなさい。\n「( ) you help me?」",
+      "correct_answer": "Can",
+      "hint_1": "「〜できますか？（〜してくれますか？）」は Can を文の先頭に置きます。",
+      "hint_2": "Can + 主語 + 動詞原形〜? の形にします。",
+      "explanation_base": "can の疑問文は Can + 主語 + 動詞原形〜? です。Can you help me?",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_can_modal",
+      "unit_id": "eng_can_modal",
+      "sub_unit": "can_modal",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に正しい語を書きなさい。\n「She ( ) speak three languages.」",
+      "correct_answer": "can",
+      "hint_1": "「〜できる」を表すときは can を使います。主語に関わらず形は変わりません。",
+      "hint_2": "can は三人称単数でも変化しません。",
+      "explanation_base": "can は主語に関わらず変化しません。She can speak three languages.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_can_modal",
+      "unit_id": "eng_can_modal",
+      "sub_unit": "can_modal",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に正しい語を書きなさい。\n「( ) he use chopsticks?」",
+      "correct_answer": "Can",
+      "hint_1": "can の疑問文は Can を文の先頭に置きます。",
+      "hint_2": "Can + 主語 + 動詞原形〜? の形にします。",
+      "explanation_base": "Can の疑問文：Can he use chopsticks?",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_can_modal",
+      "unit_id": "eng_can_modal",
+      "sub_unit": "can_modal",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に正しい語を書きなさい。\n「I ( ) not understand this word.」",
+      "correct_answer": "cannot",
+      "hint_1": "「〜できない」の形は cannot または can't です。",
+      "hint_2": "cannot は can not と書いても can't と書いても同じ意味です。",
+      "explanation_base": "I cannot understand this word. = I can't understand this word.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_can_modal",
+      "unit_id": "eng_can_modal",
+      "sub_unit": "can_modal",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「私は自転車に乗ることができます。」",
+      "correct_answer": "I can ride a bike.",
+      "hint_1": "「〜することができる」は can + 動詞原形の形です。",
+      "hint_2": "I can ride 〜. という形にします。",
+      "explanation_base": "I can ride a bike.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_can_modal",
+      "unit_id": "eng_can_modal",
+      "sub_unit": "can_modal",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「彼は速く走ることができません。」",
+      "correct_answer": "He can't run fast.",
+      "hint_1": "「〜することができない」は can't + 動詞原形の形です。",
+      "hint_2": "He can't 動詞原形〜. という形にします。",
+      "explanation_base": "He can't run fast.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_can_modal",
+      "unit_id": "eng_can_modal",
+      "sub_unit": "can_modal",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「あなたは日本語を読むことができますか？」",
+      "correct_answer": "Can you read Japanese?",
+      "hint_1": "「〜できますか？」は Can を文頭に置きます。",
+      "hint_2": "Can + 主語 + 動詞原形〜? の形にします。",
+      "explanation_base": "Can you read Japanese?",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_can_modal",
+      "unit_id": "eng_can_modal",
+      "sub_unit": "can_modal",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「彼女は上手に歌を歌うことができます。」",
+      "correct_answer": "She can sing well.",
+      "hint_1": "「〜することができる」は can + 動詞原形の形です。",
+      "hint_2": "She can sing 〜. という形にします。",
+      "explanation_base": "She can sing well.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_can_modal",
+      "unit_id": "eng_can_modal",
+      "sub_unit": "can_modal",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「私の祖父はパソコンが使えません。」",
+      "correct_answer": "My grandfather can't use a computer.",
+      "hint_1": "「〜することができない」は can't + 動詞原形の形です。",
+      "hint_2": "My grandfather can't 動詞原形〜. という形にします。",
+      "explanation_base": "My grandfather can't use a computer.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_can_modal",
+      "unit_id": "eng_can_modal",
+      "sub_unit": "can_modal",
+      "problem_type": "mini_test",
+      "test_scope": "eng_can_modal",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に can または can't を書きなさい。\n「I ( ) cook. (料理できる)」",
+      "correct_answer": "can",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "「〜できる」は can です。I can cook.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_can_modal",
+      "unit_id": "eng_can_modal",
+      "sub_unit": "can_modal",
+      "problem_type": "mini_test",
+      "test_scope": "eng_can_modal",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に正しい語を書きなさい。\n「( ) you open the window?」",
+      "correct_answer": "Can",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "can の疑問文は Can + 主語〜? です。Can you open the window?",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_can_modal",
+      "unit_id": "eng_can_modal",
+      "sub_unit": "can_modal",
+      "problem_type": "mini_test",
+      "test_scope": "eng_can_modal",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「彼は泳ぐことができません。」",
+      "correct_answer": "He can't swim.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "He can't swim.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_can_modal",
+      "unit_id": "eng_can_modal",
+      "sub_unit": "can_modal",
+      "problem_type": "mini_test",
+      "test_scope": "eng_can_modal",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に正しい語を書きなさい。\n「She ( ) play the violin very well.」",
+      "correct_answer": "can",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "can は主語に関わらず変化しません。She can play the violin very well.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_can_modal",
+      "unit_id": "eng_can_modal",
+      "sub_unit": "can_modal",
+      "problem_type": "mini_test",
+      "test_scope": "eng_can_modal",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「あなたは自転車を修理できますか？」",
+      "correct_answer": "Can you fix a bike?",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "Can you fix a bike?",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_can_modal",
+      "unit_id": "eng_can_modal",
+      "sub_unit": "can_modal",
+      "problem_type": "unit_test",
+      "test_scope": "eng_can_modal",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に can または can't を書きなさい。\n「Birds ( ) fly. (飛べる)」",
+      "correct_answer": "can",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "Birds can fly.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_can_modal",
+      "unit_id": "eng_can_modal",
+      "sub_unit": "can_modal",
+      "problem_type": "unit_test",
+      "test_scope": "eng_can_modal",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に can または can't を書きなさい。\n「Fish ( ) walk. (歩けない)」",
+      "correct_answer": "can't",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "Fish can't walk.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_can_modal",
+      "unit_id": "eng_can_modal",
+      "sub_unit": "can_modal",
+      "problem_type": "unit_test",
+      "test_scope": "eng_can_modal",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に正しい語を書きなさい。\n「( ) he speak English?」",
+      "correct_answer": "Can",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "Can he speak English?",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_can_modal",
+      "unit_id": "eng_can_modal",
+      "sub_unit": "can_modal",
+      "problem_type": "unit_test",
+      "test_scope": "eng_can_modal",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「私は漢字を書くことができます。」",
+      "correct_answer": "I can write kanji.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "I can write kanji.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_can_modal",
+      "unit_id": "eng_can_modal",
+      "sub_unit": "can_modal",
+      "problem_type": "unit_test",
+      "test_scope": "eng_can_modal",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「あなたのお父さんは料理ができますか？」",
+      "correct_answer": "Can your father cook?",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "Can your father cook?",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_can_modal",
+      "unit_id": "eng_can_modal",
+      "sub_unit": "can_modal",
+      "problem_type": "unit_test",
+      "test_scope": "eng_can_modal",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に正しい語を書きなさい。\n「I ( ) not remember his name.」",
+      "correct_answer": "cannot",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "I cannot remember his name. (= I can't remember his name.)",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_can_modal",
+      "unit_id": "eng_can_modal",
+      "sub_unit": "can_modal",
+      "problem_type": "unit_test",
+      "test_scope": "eng_can_modal",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「彼女はギターが弾けますか？」",
+      "correct_answer": "Can she play the guitar?",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "Can she play the guitar?",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_can_modal",
+      "unit_id": "eng_can_modal",
+      "sub_unit": "can_modal",
+      "problem_type": "unit_test",
+      "test_scope": "eng_can_modal",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「私の弟はまだひとりで電車に乗れません。」",
+      "correct_answer": "My brother can't take the train alone yet.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "My brother can't take the train alone yet.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_can_modal",
+      "unit_id": "eng_can_modal",
+      "sub_unit": "can_modal",
+      "problem_type": "unit_test",
+      "test_scope": "eng_can_modal",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「あなたは何語を話すことができますか？」",
+      "correct_answer": "What language can you speak?",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "What language can you speak?",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_can_modal",
+      "unit_id": "eng_can_modal",
+      "sub_unit": "can_modal",
+      "problem_type": "unit_test",
+      "test_scope": "eng_can_modal",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「この部屋では走ることができません。」",
+      "correct_answer": "You can't run in this room.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "You can't run in this room.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    }
+  ]
+}

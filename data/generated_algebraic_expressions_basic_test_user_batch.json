@@ -1,0 +1,305 @@
+{
+  "problems": [
+    {
+      "full_unit_id": "algebraic_expressions_basic",
+      "unit_id": "algebraic_expressions",
+      "sub_unit": "basic",
+      "problem_type": "mini_test",
+      "test_scope": "mini_test",
+      "difficulty": "easy",
+      "question_text": "次の式を、文字式の表し方の決まりにしたがって表しなさい。\na × (-3) × b",
+      "diagram": null,
+      "correct_answer": "-3ab",
+      "explanation_base": "文字式の表し方では、かけ算の記号「×」を省き、数は文字の前に書きます。文字はアルファベット順に並べるため、-3ab となります。",
+      "error_pattern_candidates": [
+        "variable_handling_error",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "algebraic_expressions_basic",
+      "unit_id": "algebraic_expressions",
+      "sub_unit": "basic",
+      "problem_type": "mini_test",
+      "test_scope": "mini_test",
+      "difficulty": "normal",
+      "question_text": "x = -4 のとき、式 5 - 2x の値を求めなさい。",
+      "diagram": null,
+      "correct_answer": "13",
+      "explanation_base": "式 5 - 2x の x に -4 を代入します。5 - 2 × (-4) = 5 - (-8) = 5 + 8 = 13 となります。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "fallback_prerequisite"
+      ]
+    },
+    {
+      "full_unit_id": "algebraic_expressions_basic",
+      "unit_id": "algebraic_expressions",
+      "sub_unit": "basic",
+      "problem_type": "mini_test",
+      "test_scope": "mini_test",
+      "difficulty": "normal",
+      "question_text": "次の式を計算しなさい。\n4a + 7b - 2a - 3b",
+      "diagram": null,
+      "correct_answer": "2a + 4b",
+      "explanation_base": "文字の部分が同じである同類項をまとめます。(4 - 2)a + (7 - 3)b = 2a + 4b となります。",
+      "error_pattern_candidates": [
+        "variable_handling_error",
+        "sign_error"
+      ],
+      "intervention_candidates": [
+        "reinforce_same_pattern",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "algebraic_expressions_basic",
+      "unit_id": "algebraic_expressions",
+      "sub_unit": "basic",
+      "problem_type": "mini_test",
+      "test_scope": "mini_test",
+      "difficulty": "easy",
+      "question_text": "1個 x 円のケーキを3個と、1個 y 円のプリンを2個買ったときの代金の合計を、文字を使った式で表しなさい。",
+      "diagram": null,
+      "correct_answer": "3x + 2y",
+      "explanation_base": "ケーキの代金は x × 3 = 3x 円、プリンの代金は y × 2 = 2y 円です。合計はこれらを足して 3x + 2y (円) となります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "variable_handling_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "retry_with_hint"
+      ]
+    },
+    {
+      "full_unit_id": "algebraic_expressions_basic",
+      "unit_id": "algebraic_expressions",
+      "sub_unit": "basic",
+      "problem_type": "mini_test",
+      "test_scope": "mini_test",
+      "difficulty": "hard",
+      "question_text": "a km の道のりを時速 4 km で歩き、その後 b km の道のりを時速 3 km で歩いたとき、かかった時間の合計を文字を使った式で表しなさい。",
+      "diagram": null,
+      "correct_answer": "a/4 + b/3",
+      "explanation_base": "時間は「道のり ÷ 速さ」で求められます。前半にかかった時間は a/4 時間、後半にかかった時間は b/3 時間です。合計の時間は a/4 + b/3 となります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "comprehension_gap"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "teacher_intervention_needed"
+      ]
+    },
+    {
+      "full_unit_id": "algebraic_expressions_basic",
+      "unit_id": "algebraic_expressions",
+      "sub_unit": "basic",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "easy",
+      "question_text": "次の式を、文字式の表し方の決まりにしたがって表しなさい。\nx × x × y × (-1)",
+      "diagram": null,
+      "correct_answer": "-x^2y",
+      "explanation_base": "かけ算の記号を省き、数は前に書きます。「-1」の1は省略します。同じ文字の積は累乗を使って表すため、-x^2y となります。",
+      "error_pattern_candidates": [
+        "variable_handling_error",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "algebraic_expressions_basic",
+      "unit_id": "algebraic_expressions",
+      "sub_unit": "basic",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "easy",
+      "question_text": "次の式を、割り算の記号 ÷ を使わずに分数で表しなさい。\n(a + b) ÷ 5",
+      "diagram": null,
+      "correct_answer": "(a + b)/5",
+      "explanation_base": "÷ の後ろにある数が分母になります。分子はかっこを外して a + b となるため、(a + b)/5 または a/5 + b/5 となります。",
+      "error_pattern_candidates": [
+        "variable_handling_error",
+        "formula_setup_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "retry_with_hint"
+      ]
+    },
+    {
+      "full_unit_id": "algebraic_expressions_basic",
+      "unit_id": "algebraic_expressions",
+      "sub_unit": "basic",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "normal",
+      "question_text": "x = 3, y = -2 のとき、式 x^2 - 3y の値を求めなさい。",
+      "diagram": null,
+      "correct_answer": "15",
+      "explanation_base": "式に x = 3, y = -2 を代入します。3^2 - 3 × (-2) = 9 - (-6) = 9 + 6 = 15 となります。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "fallback_prerequisite"
+      ]
+    },
+    {
+      "full_unit_id": "algebraic_expressions_basic",
+      "unit_id": "algebraic_expressions",
+      "sub_unit": "basic",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "easy",
+      "question_text": "次の式を計算しなさい。\n5x - 8 - 2x + 12",
+      "diagram": null,
+      "correct_answer": "3x + 4",
+      "explanation_base": "文字を含む項どうし、数だけの項どうしをまとめます。(5 - 2)x + (-8 + 12) = 3x + 4 となります。",
+      "error_pattern_candidates": [
+        "variable_handling_error",
+        "sign_error"
+      ],
+      "intervention_candidates": [
+        "reinforce_same_pattern",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "algebraic_expressions_basic",
+      "unit_id": "algebraic_expressions",
+      "sub_unit": "basic",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "normal",
+      "question_text": "次の式を計算しなさい。\n3(2x - 5) - 4(x - 2)",
+      "diagram": null,
+      "correct_answer": "2x - 7",
+      "explanation_base": "分配法則を使ってかっこをはずします。6x - 15 - 4x + 8 となり、同類項をまとめると (6 - 4)x + (-15 + 8) = 2x - 7 となります。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "variable_handling_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "explain_differently"
+      ]
+    },
+    {
+      "full_unit_id": "algebraic_expressions_basic",
+      "unit_id": "algebraic_expressions",
+      "sub_unit": "basic",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "normal",
+      "question_text": "1000円を出して、1本 a 円のジュースを b 本買ったときのおつりを、文字を使った式で表しなさい。",
+      "diagram": null,
+      "correct_answer": "1000 - ab",
+      "explanation_base": "ジュースの代金の合計は a × b = ab 円です。おつりは出したお金から代金を引いて求めるので、1000 - ab (円) となります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "comprehension_gap"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "retry_with_hint"
+      ]
+    },
+    {
+      "full_unit_id": "algebraic_expressions_basic",
+      "unit_id": "algebraic_expressions",
+      "sub_unit": "basic",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "hard",
+      "question_text": "男子15人の平均点が x 点、女子18人の平均点が y 点のとき、クラス全員の平均点を式で表しなさい。",
+      "diagram": null,
+      "correct_answer": "(15x + 18y)/33",
+      "explanation_base": "男子の合計点は 15x 点、女子の合計点は 18y 点です。クラス全体の合計点は 15x + 18y 点で、クラスの人数は 15 + 18 = 33 人です。平均点は合計点を人数で割るので、(15x + 18y)/33 となります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "comprehension_gap"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "teacher_intervention_needed"
+      ]
+    },
+    {
+      "full_unit_id": "algebraic_expressions_basic",
+      "unit_id": "algebraic_expressions",
+      "sub_unit": "basic",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "hard",
+      "question_text": "定価 a 円の品物を、定価の2割引きで買ったときの代金を式で表しなさい。",
+      "diagram": null,
+      "correct_answer": "0.8a",
+      "explanation_base": "2割引きとは、定価の (1 - 0.2) = 0.8 倍のことです。したがって、代金は 0.8a (円) または 4/5a (円) となります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "prerequisite_gap"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "fallback_prerequisite"
+      ]
+    },
+    {
+      "full_unit_id": "algebraic_expressions_basic",
+      "unit_id": "algebraic_expressions",
+      "sub_unit": "basic",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "normal",
+      "question_text": "十の位の数が x、一の位の数が y である2桁の自然数を、x と y を用いた式で表しなさい。",
+      "diagram": null,
+      "correct_answer": "10x + y",
+      "explanation_base": "2桁の自然数は、十の位の数に10をかけたものと一の位の数を足したものです。したがって 10x + y と表せます。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "variable_handling_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "algebraic_expressions_basic",
+      "unit_id": "algebraic_expressions",
+      "sub_unit": "basic",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "normal",
+      "question_text": "ある文房具店で、1冊 a 円のノートを5冊と、1本 b 円の鉛筆を8本買いました。このとき、式 5a + 8b は何を表していますか。「〜の合計」という形で答えなさい。",
+      "diagram": null,
+      "correct_answer": "ノート5冊と鉛筆8本の代金の合計",
+      "explanation_base": "5a はノート5冊の代金、8b は鉛筆8本の代金を表します。これらを足しているため、買った品物の代金の合計を表しています。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "variable_handling_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "retry_with_hint"
+      ]
+    }
+  ]
+}

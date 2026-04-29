@@ -1,0 +1,546 @@
+﻿{% extends "base.html" %}
+{% set auth_role = "owner" %}
+{% macro owner_qreldo_tier(c) -%}
+{%- if not c -%}
+<span class="owner-muted">-</span>
+{%- else -%}
+{%- set m = (c.max_students or 0) | int -%}
+{%- set pname = (c.plan_name or '') | lower -%}
+{%- if 'enterprise' in pname or m > 50 -%}
+<span class="owner-plan-badge owner-plan-badge--ent" title="法人・複数教室">Enterprise</span>
+{%- elif m <= 15 -%}
+<span class="owner-plan-badge owner-plan-badge--15" title="スモール">QRelDo 15</span>
+{%- elif m <= 30 -%}
+<span class="owner-plan-badge owner-plan-badge--30" title="スタンダード">QRelDo 30</span>
+{%- elif m <= 50 -%}
+<span class="owner-plan-badge owner-plan-badge--50" title="グロース">QRelDo 50</span>
+{%- else -%}
+<span class="owner-plan-badge owner-plan-badge--ent">Enterprise</span>
+{%- endif -%}
+{%- endif -%}
+{% endmacro %}
+{% macro owner_monthly_cell(c) -%}
+{%- if not c -%}-{% elif (c.monthly_price or 0) | int == 0 -%}<span class="owner-muted">個別</span>{%- else -%}{{ "{:,}".format((c.monthly_price or 0) | int) }}円〜{%- endif -%}
+{% endmacro %}
+{% block content %}
+<style>
+.owner-cap--warn { color: #b45309; font-weight: 600; }
+.owner-cap--full { color: #b91c1c; font-weight: 700; }
+.owner-table-actions { display: flex; flex-wrap: wrap; gap: 0.35rem; align-items: center; }
+.owner-muted { color: #64748b; font-size: 0.9em; }
+</style>
+<section class="card owner-hero">
+  <p class="section-label">Owner</p>
+  <h2>教室運用センター</h2>
+  <p class="meta-note">{{ owner.display_name if owner else "オーナー" }} 向け。QRelDo 契約プランに沿って教室を開設・運用します。</p>
+  <p class="meta-note">オーナーログインID: <code>junsato</code>（以前 <code>owner1</code> で登録されている場合は移行後 <code>junsato</code> になります）</p>
+  <a class="small-btn" href="/owner/feedbacks">フィードバック一覧</a>
+</section>
+
+<section class="owner-grid">
+  <section class="card">
+    <p class="section-label">Classroom + Contract</p>
+    <h3>新規教室（契約）</h3>
+    <form class="answer-form owner-create-classroom-form">
+      <input type="text" name="classroom_name" placeholder="教室名" required>
+      <input type="text" name="login_id" placeholder="ログインID" required>
+      <input type="text" name="password" placeholder="PW（空欄で自動）">
+      <label for="owner-plan-preset" class="owner-muted" style="display:block;margin-bottom:0.35rem;">プラン選択</label>
+      <select id="owner-plan-preset" name="plan_preset" class="owner-plan-preset" style="width:100%;max-width:40rem;margin-bottom:0.75rem;">
+        <option value="15" data-plan-name="QRelDo 15（スモールプラン）" data-max-students="15" data-monthly="15800" data-memo="1教室／生徒15名まで。月額15,800円〜">スモール QRelDo 15（15名・15,800円〜）</option>
+        <option value="30" selected data-plan-name="QRelDo 30（スタンダードプラン）" data-max-students="30" data-monthly="29800" data-memo="1教室／生徒30名まで。月額29,800円〜（税込）">スタンダード QRelDo 30（30名・税込）</option>
+        <option value="50" data-plan-name="QRelDo 50（グロースプラン）" data-max-students="50" data-monthly="49800" data-memo="1教室／生徒50名まで。月額49,800円〜">グロース QRelDo 50（50名）</option>
+        <option value="enterprise" data-plan-name="QRelDo Enterprise" data-max-students="999" data-monthly="0" data-memo="法人・複数教室向け。定員・月額は個別契約（要相談）。">Enterprise（要相談）</option>
+      </select>
+      <label for="owner-allowed-subjects" class="owner-muted" style="display:block;margin-bottom:0.35rem;">教科</label>
+      <select id="owner-allowed-subjects" name="allowed_subjects" required>
+        <option value="math_english">数学+英語</option>
+        <option value="math_english_conversation">数学+英語+英会話（将来用）</option>
+      </select>
+      <p class="section-label" style="margin:0.75rem 0 0.35rem;">契約期間</p>
+      <input type="date" name="contract_start" required>
+      <input type="date" name="contract_end" title="終了（任意）">
+      <label for="owner-contract-status" class="owner-muted" style="display:block;margin:0.75rem 0 0.35rem;">利用〜停止</label>
+      <select id="owner-contract-status" name="contract_status">
+        <option value="active">利用中</option>
+        <option value="paused">停止中</option>
+        <option value="cancel_scheduled">解約予定</option>
+        <option value="cancelled">解約済み</option>
+      </select>
+      <input type="hidden" name="plan_name" value="QRelDo 30（スタンダードプラン）">
+      <input type="hidden" name="max_students" value="30">
+      <input type="hidden" name="monthly_price" value="29800">
+      <input type="hidden" name="yearly_price" value="0">
+      <input type="hidden" name="contract_memo" value="">
+      <button type="submit">教室を追加</button>
+    </form>
+    <p class="meta-note owner-create-classroom-status"></p>
+  </section>
+
+  <section class="card">
+    <p class="section-label">補助</p>
+    <details>
+      <summary style="cursor:pointer;font-weight:600;">生徒・講師の直接追加（任意）</summary>
+      <h4 style="margin-top:0.75rem;">生徒追加</h4>
+      <form class="answer-form owner-create-student-form">
+        <input type="number" name="student_id" min="1" placeholder="生徒ID" required>
+        <input type="text" name="display_name" placeholder="名前" required>
+        <input type="number" name="grade" min="7" max="9" placeholder="学年(7-9)" required>
+        <select name="classroom_id" required>
+          <option value="">所属教室</option>
+          {% for classroom in classrooms %}
+          <option value="{{ classroom.classroom_id }}">{{ classroom.classroom_name }}</option>
+          {% endfor %}
+        </select>
+        <input type="text" name="pin" inputmode="numeric" maxlength="4" placeholder="PIN（空欄で自動）">
+        <button type="submit">生徒を追加</button>
+      </form>
+      <p class="meta-note owner-create-student-status"></p>
+      <h4>講師追加</h4>
+      <form class="answer-form owner-create-teacher-form">
+        <input type="text" name="login_id" placeholder="講師ログインID" required>
+        <input type="text" name="display_name" placeholder="表示名" required>
+        <select name="classroom_id" required>
+          <option value="">所属教室</option>
+          {% for classroom in classrooms %}
+          <option value="{{ classroom.classroom_id }}">{{ classroom.classroom_name }}</option>
+          {% endfor %}
+        </select>
+        <input type="text" name="password" placeholder="パスワード（空欄で自動）">
+        <button type="submit">講師を追加</button>
+      </form>
+      <p class="meta-note owner-create-teacher-status"></p>
+    </details>
+  </section>
+</section>
+
+<section class="card">
+  <p class="section-label">契約教室（QRelDo）</p>
+  <h3>稼働中の教室（プラン区分・定員・月額）</h3>
+  <p class="meta-note owner-muted" style="margin:0 0 0.5rem;">区分は契約の<strong>最大生徒数</strong>とプラン名から QRelDo 15 / 30 / 50 / Enterprise を表示します（上の料金プランと対応）。</p>
+  <div class="table-wrap owner-table-scroll">
+    <table class="teacher-table" id="owner-classroom-table">
+      <thead>
+        <tr>
+          <th>教室名</th>
+          <th>教室ID</th>
+          <th>管理者</th>
+          <th>区分</th>
+          <th>契約プラン（表示名）</th>
+          <th>科目</th>
+          <th>生徒 / 定員</th>
+          <th>月額</th>
+          <th>教室状態</th>
+          <th>契約</th>
+          <th>終了日</th>
+          <th>最終利用</th>
+          <th>メモ</th>
+          <th>操作</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for classroom in classrooms_active %}
+        {% set c = classroom.contract %}
+        {% set cnt = student_counts.get(classroom.classroom_id, 0) %}
+        {% set mx = c.max_students if c else 0 %}
+        {% set pct = (100 * cnt / mx) if mx else 0 %}
+        <tr>
+          <td>{{ classroom.classroom_name }}</td>
+          <td><code>{{ classroom.external_classroom_id or "-" }}</code></td>
+          <td>{{ classroom.contact_name or "-" }}<br><span class="owner-muted">{{ classroom.login_id }}</span></td>
+          <td>{{ owner_qreldo_tier(c) }}</td>
+          <td>{{ c.plan_name if c else "-" }}</td>
+          <td>{% if c %}{% if c.allowed_subjects == "math_english" %}数学+英語{% else %}数学+英語+英会話{% endif %}{% else %}-{% endif %}</td>
+          <td>
+            {{ cnt }} / {{ mx }}
+            {% if mx and cnt >= mx %}<div class="owner-cap--full">上限到達</div>{% elif mx and pct >= 80 %}<div class="owner-cap--warn">80%超（残り {{ mx - cnt }}）</div>{% elif mx %}<div class="owner-muted">残り {{ mx - cnt }}</div>{% endif %}
+          </td>
+          <td>{{ owner_monthly_cell(c) }}</td>
+          <td>{% if classroom.is_archived %}アーカイブ{% elif classroom.is_active %}稼働{% else %}無効{% endif %}</td>
+          <td>{% if c %}{% if c.contract_status == "active" %}利用中{% elif c.contract_status == "paused" %}停止中{% elif c.contract_status == "cancel_scheduled" %}解約予定{% else %}解約済{% endif %}{% else %}-{% endif %}</td>
+          <td>{{ (c.contract_end or "-") if c else "-" }}</td>
+          <td>{{ (classroom.last_activity_at or "")[:10] or "-" }}</td>
+          <td>{% if classroom.note or (c and c.contract_memo) %}有{% else %}-{% endif %}</td>
+          <td class="owner-classroom-actions owner-table-actions">
+            <button type="button" class="owner-edit-classroom-button small-btn"
+              data-classroom-id="{{ classroom.classroom_id }}"
+              data-classroom-name="{{ classroom.classroom_name|e }}"
+              data-external-id="{{ (classroom.external_classroom_id or '')|e }}"
+              data-login-id="{{ classroom.login_id|e }}"
+              data-contact-name="{{ (classroom.contact_name or '')|e }}"
+              data-admin-email="{{ (classroom.admin_email or '')|e }}"
+              data-admin-phone="{{ (classroom.admin_phone or '')|e }}"
+              data-note="{{ (classroom.note or '')|e }}"
+              data-plan-name="{{ (c.plan_name if c else '')|e }}"
+              data-max-students="{{ c.max_students if c else '' }}"
+              data-allowed-subjects="{{ (c.allowed_subjects if c else 'math_english')|e }}"
+              data-monthly="{{ c.monthly_price if c else 0 }}"
+              data-yearly="{{ c.yearly_price if c else 0 }}"
+              data-contract-start="{{ (c.contract_start if c else '')|e }}"
+              data-contract-end="{{ (c.contract_end or '')|e }}"
+              data-contract-status="{{ (c.contract_status if c else 'active')|e }}"
+              data-contract-memo="{{ (c.contract_memo or '')|e }}"
+              >編集</button>
+            <button type="button" class="owner-classroom-active-button small-btn"
+              data-classroom-id="{{ classroom.classroom_id }}"
+              data-next-active="{{ 'false' if classroom.is_active else 'true' }}"
+              {% if classroom.is_archived %}disabled{% endif %}>
+              {{ "無効化" if classroom.is_active else "有効化" }}
+            </button>
+            <button type="button" class="owner-archive-button small-btn" data-classroom-id="{{ classroom.classroom_id }}">アーカイブ</button>
+            <button type="button" class="owner-reset-pw-button small-btn small-btn--warn"
+              data-classroom-id="{{ classroom.classroom_id }}"
+              data-classroom-name="{{ classroom.classroom_name|e }}">PW</button>
+            <button type="button" class="owner-purge-button small-btn small-btn--warn"
+              data-classroom-id="{{ classroom.classroom_id }}"
+              data-classroom-name="{{ classroom.classroom_name|e }}">完全削除</button>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</section>
+
+{% if classrooms_archived %}
+<section class="card">
+  <p class="section-label">アーカイブ</p>
+  <h3>アーカイブ済み教室</h3>
+  <div class="table-wrap owner-table-scroll">
+    <table class="teacher-table" id="owner-archived-table">
+      <thead><tr><th>教室名</th><th>教室ID</th><th>操作</th></tr></thead>
+      <tbody>
+        {% for classroom in classrooms_archived %}
+        <tr>
+          <td>{{ classroom.classroom_name }}</td>
+          <td><code>{{ classroom.external_classroom_id or "-" }}</code></td>
+          <td>
+            <button type="button" class="owner-unarchive-button small-btn" data-classroom-id="{{ classroom.classroom_id }}">復元</button>
+            <button type="button" class="owner-purge-button small-btn small-btn--warn"
+              data-classroom-id="{{ classroom.classroom_id }}"
+              data-classroom-name="{{ classroom.classroom_name|e }}">完全削除</button>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</section>
+{% endif %}
+
+<script>
+  function errDetail(data) {
+    const d = data.detail;
+    if (typeof d === "string") return d;
+    if (Array.isArray(d)) return d.map((x) => x.msg || JSON.stringify(x)).join("; ");
+    return data.message || "request failed";
+  }
+  async function postJson(url, payload) {
+    const response = await fetch(url, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
+    });
+    const data = await response.json();
+    if (!response.ok) throw new Error(errDetail(data));
+    return data;
+  }
+  async function putJson(url, payload) {
+    const response = await fetch(url, {
+      method: "PUT",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
+    });
+    const data = await response.json();
+    if (!response.ok) throw new Error(errDetail(data));
+    return data;
+  }
+  function showPasswordModal(title, password, onClose) {
+    const overlay = document.createElement("div");
+    overlay.className = "pw-modal-overlay";
+    overlay.innerHTML = `
+      <div class="pw-modal">
+        <p class="section-label">${title}</p>
+        <p class="pw-modal__note">パスワードをメモしてから「確認」を押してください。</p>
+        <div class="pw-modal__pw">${password}</div>
+        <button type="button" class="pw-modal__ok">確認しました</button>
+      </div>
+    `;
+    document.body.appendChild(overlay);
+    overlay.querySelector(".pw-modal__ok").addEventListener("click", () => {
+      overlay.remove();
+      if (onClose) onClose();
+    });
+  }
+
+  const classroomForm = document.querySelector(".owner-create-classroom-form");
+  if (classroomForm) {
+    function applyOwnerPlanPreset(form) {
+      const sel = form.querySelector("[name=plan_preset]");
+      if (!sel) return;
+      const opt = sel.selectedOptions[0];
+      if (opt.dataset.planName) form.plan_name.value = opt.dataset.planName;
+      if (opt.dataset.maxStudents) form.max_students.value = opt.dataset.maxStudents;
+      if (opt.dataset.monthly !== undefined) form.monthly_price.value = opt.dataset.monthly;
+      if (opt.dataset.memo !== undefined) form.contract_memo.value = opt.dataset.memo;
+    }
+    const presetSel = classroomForm.querySelector("[name=plan_preset]");
+    if (presetSel) {
+      applyOwnerPlanPreset(classroomForm);
+      presetSel.addEventListener("change", () => applyOwnerPlanPreset(classroomForm));
+    }
+    const today = new Date().toISOString().slice(0, 10);
+    if (!classroomForm.contract_start.value) classroomForm.contract_start.value = today;
+    classroomForm.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      const status = document.querySelector(".owner-create-classroom-status");
+      const payload = {
+        classroom_name: classroomForm.classroom_name.value,
+        external_classroom_id: null,
+        login_id: classroomForm.login_id.value,
+        password: classroomForm.password.value || null,
+        plan_name: classroomForm.plan_name.value || null,
+        max_students: Number(classroomForm.max_students.value),
+        allowed_subjects: classroomForm.allowed_subjects.value,
+        monthly_price: Number(classroomForm.monthly_price.value || 0),
+        yearly_price: Number(classroomForm.yearly_price.value || 0),
+        contract_start: classroomForm.contract_start.value,
+        contract_end: classroomForm.contract_end.value || null,
+        contract_status: classroomForm.contract_status.value,
+        contract_memo: classroomForm.contract_memo.value || null,
+      };
+      try {
+        const data = await postJson("/owner/classrooms/create", payload);
+        classroomForm.reset();
+        if (classroomForm.contract_start) classroomForm.contract_start.value = new Date().toISOString().slice(0, 10);
+        applyOwnerPlanPreset(classroomForm);
+        showPasswordModal("教室追加: " + data.classroom_name, data.new_password_once, () => window.location.reload());
+      } catch (error) {
+        status.textContent = "失敗: " + error.message;
+      }
+    });
+  }
+
+  const studentForm = document.querySelector(".owner-create-student-form");
+  if (studentForm) {
+    studentForm.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      const status = document.querySelector(".owner-create-student-status");
+      const payload = {
+        student_id: Number(studentForm.student_id.value),
+        display_name: studentForm.display_name.value,
+        grade: Number(studentForm.grade.value),
+        classroom_id: Number(studentForm.classroom_id.value),
+        pin: studentForm.pin.value || null,
+      };
+      try {
+        const data = await postJson("/owner/students/create", payload);
+        status.textContent = "完了: " + data.display_name + " PIN: " + data.new_pin_once;
+        studentForm.reset();
+      } catch (error) {
+        status.textContent = "失敗: " + error.message;
+      }
+    });
+  }
+
+  const teacherForm = document.querySelector(".owner-create-teacher-form");
+  if (teacherForm) {
+    teacherForm.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      const status = document.querySelector(".owner-create-teacher-status");
+      const payload = {
+        login_id: teacherForm.login_id.value,
+        display_name: teacherForm.display_name.value,
+        classroom_id: Number(teacherForm.classroom_id.value),
+        password: teacherForm.password.value || null,
+      };
+      try {
+        const data = await postJson("/owner/teachers/create", payload);
+        status.textContent = "完了: " + data.login_id + " PW: " + data.new_password_once;
+        teacherForm.reset();
+      } catch (error) {
+        status.textContent = "失敗: " + error.message;
+      }
+    });
+  }
+
+  async function runPurge(classroomId, classroomName) {
+    let res = await fetch(`/owner/classrooms/${classroomId}/purge_preview`);
+    let data = await res.json();
+    if (!res.ok) {
+      alert(errDetail(data));
+      return;
+    }
+    const d = data.dependencies || {};
+    const summary = `生徒 ${d.students||0} / 講師 ${d.teachers||0} / 学習ログ ${d.learning_logs||0} / 会話 ${d.conversation_logs||0} / リスニング ${d.listening_logs||0}`;
+    if (!confirm(`完全削除しますか？\n${summary}\n\n教室名「${classroomName}」を次で入力してください。`)) return;
+    const n1 = prompt("教室名を正確に入力");
+    if (n1 !== classroomName) {
+      alert("教室名が一致しません");
+      return;
+    }
+    const n2 = prompt('確認のため「完全に削除」と入力してください');
+    if (n2 !== "完全に削除") return;
+    try {
+      await postJson(`/owner/classrooms/${classroomId}/purge`, { confirm_text: "完全に削除", classroom_name: classroomName });
+      window.location.reload();
+    } catch (error) {
+      alert("失敗: " + error.message);
+    }
+  }
+
+  function toggleEditPanel(button) {
+    const classroomId = button.dataset.classroomId;
+    const existing = document.getElementById("edit-classroom-panel-" + classroomId);
+    if (existing) {
+      existing.remove();
+      return;
+    }
+    const panel = document.createElement("tr");
+    panel.id = "edit-classroom-panel-" + classroomId;
+    const esc = (s) => (s || "").replace(/"/g, "&quot;");
+    panel.innerHTML = `
+        <td colspan="14" class="edit-classroom-panel">
+          <form class="answer-form edit-classroom-inline-form" data-classroom-id="${classroomId}">
+            <p class="section-label">教室</p>
+            <input type="text" name="classroom_name" value="${esc(button.dataset.classroomName)}" required>
+            <input type="text" name="external_classroom_id" value="${esc(button.dataset.externalId)}" required>
+            <input type="text" name="login_id" value="${esc(button.dataset.loginId)}" required>
+            <input type="text" name="contact_name" value="${esc(button.dataset.contactName)}" placeholder="管理者名">
+            <input type="email" name="admin_email" value="${esc(button.dataset.adminEmail)}" placeholder="メール">
+            <input type="text" name="admin_phone" value="${esc(button.dataset.adminPhone)}" placeholder="電話">
+            <textarea name="note" rows="2" placeholder="教室メモ">${(button.dataset.note || "").replace(/</g,"&lt;")}</textarea>
+            <p class="section-label">契約</p>
+            <input type="text" name="plan_name" value="${esc(button.dataset.planName)}" required>
+            <input type="number" name="max_students" value="${button.dataset.maxStudents}" min="1" required>
+            <select name="allowed_subjects">
+              <option value="math_english">数学+英語</option>
+              <option value="math_english_conversation">数学+英語+英会話</option>
+            </select>
+            <input type="number" name="monthly_price" value="${button.dataset.monthly}">
+            <input type="number" name="yearly_price" value="${button.dataset.yearly}">
+            <input type="text" name="contract_start" value="${esc(button.dataset.contractStart)}">
+            <input type="text" name="contract_end" value="${esc(button.dataset.contractEnd)}" placeholder="終了日 YYYY-MM-DD">
+            <select name="contract_status">
+              <option value="active">利用中</option>
+              <option value="paused">停止中</option>
+              <option value="cancel_scheduled">解約予定</option>
+              <option value="cancelled">解約済</option>
+            </select>
+            <textarea name="contract_memo" rows="2" placeholder="契約メモ">${(button.dataset.contractMemo || "").replace(/</g,"&lt;")}</textarea>
+            <div class="edit-classroom-actions">
+              <button type="submit">保存</button>
+              <button type="button" class="edit-cancel-btn">キャンセル</button>
+            </div>
+            <div class="meta-note edit-classroom-status"></div>
+          </form>
+        </td>`;
+    const sel = panel.querySelector("select[name=allowed_subjects]");
+    sel.value = button.dataset.allowedSubjects || "math_english";
+    const st = panel.querySelector("select[name=contract_status]");
+    st.value = button.dataset.contractStatus || "active";
+    button.closest("tr").after(panel);
+    panel.querySelector(".edit-cancel-btn").addEventListener("click", () => panel.remove());
+    panel.querySelector(".edit-classroom-inline-form").addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const form = e.currentTarget;
+      const status = form.querySelector(".edit-classroom-status");
+      try {
+        await putJson(`/owner/classrooms/${classroomId}`, {
+          classroom_name: form.classroom_name.value.trim(),
+          external_classroom_id: form.external_classroom_id.value.trim(),
+          login_id: form.login_id.value.trim(),
+          contact_name: form.contact_name.value.trim() || null,
+          admin_email: form.admin_email.value.trim() || null,
+          admin_phone: form.admin_phone.value.trim() || null,
+          note: form.note.value.trim() || null,
+        });
+        await putJson(`/owner/classrooms/${classroomId}/contract`, {
+          plan_name: form.plan_name.value.trim(),
+          max_students: Number(form.max_students.value),
+          allowed_subjects: form.allowed_subjects.value,
+          monthly_price: Number(form.monthly_price.value || 0),
+          yearly_price: Number(form.yearly_price.value || 0),
+          contract_start: form.contract_start.value.trim(),
+          contract_end: form.contract_end.value.trim() || null,
+          contract_status: form.contract_status.value,
+          contract_memo: form.contract_memo.value.trim() || null,
+        });
+        window.location.reload();
+      } catch (error) {
+        status.textContent = "失敗: " + error.message;
+      }
+    });
+  }
+
+  document.body.addEventListener("click", (ev) => {
+    const btn = ev.target.closest("#owner-classroom-table button, #owner-archived-table button");
+    if (!btn) return;
+    if (btn.classList.contains("owner-edit-classroom-button")) {
+      toggleEditPanel(btn);
+      return;
+    }
+    if (btn.classList.contains("owner-classroom-active-button")) {
+      void (async () => {
+        if (btn.disabled) return;
+        const classroomId = btn.dataset.classroomId;
+        const nextActive = btn.dataset.nextActive === "true";
+        try {
+          await postJson(`/owner/classrooms/${classroomId}/set_active`, { is_active: nextActive });
+          window.location.reload();
+        } catch (error) {
+          alert("失敗: " + error.message);
+        }
+      })();
+      return;
+    }
+    if (btn.classList.contains("owner-archive-button")) {
+      void (async () => {
+        if (!confirm("アーカイブしますか？ログイン不可・一覧から外します。")) return;
+        try {
+          await postJson(`/owner/classrooms/${btn.dataset.classroomId}/archive`, {});
+          window.location.reload();
+        } catch (error) {
+          alert("失敗: " + error.message);
+        }
+      })();
+      return;
+    }
+    if (btn.classList.contains("owner-unarchive-button")) {
+      void (async () => {
+        try {
+          await postJson(`/owner/classrooms/${btn.dataset.classroomId}/unarchive`, {});
+          window.location.reload();
+        } catch (error) {
+          alert("失敗: " + error.message);
+        }
+      })();
+      return;
+    }
+    if (btn.classList.contains("owner-purge-button")) {
+      runPurge(btn.dataset.classroomId, btn.dataset.classroomName);
+      return;
+    }
+    if (btn.classList.contains("owner-reset-pw-button")) {
+      void (async () => {
+        const classroomId = btn.dataset.classroomId;
+        const classroomName = btn.dataset.classroomName;
+        const mode = prompt("1: 自動生成 / 2: 手入力（8文字以上）", "1");
+        let body = {};
+        if (mode === "2") {
+          const pw = prompt("新しいパスワード（8文字以上）");
+          if (!pw) return;
+          body = { password: pw };
+        }
+        if (!confirm(`「${classroomName}」の管理者PWを更新しますか？`)) return;
+        try {
+          const data = await postJson(`/owner/classrooms/${classroomId}/reset_password`, body);
+          showPasswordModal("PW 更新: " + classroomName, data.new_password_once, null);
+        } catch (error) {
+          alert("失敗: " + error.message);
+        }
+      })();
+    }
+  });
+</script>
+{% endblock %}

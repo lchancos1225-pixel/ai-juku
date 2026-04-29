@@ -1,0 +1,676 @@
+{
+  "problems": [
+    {
+      "full_unit_id": "geometry_parallel_congruence",
+      "unit_id": "geometry_parallel_congruence",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "question_text": "2つの直線が交わっています。できる4つの角のうち、1つの角の大きさが50°のとき、その対頂角の大きさは何度ですか。",
+      "diagram": null,
+      "correct_answer": "50",
+      "hint_1": "対頂角は、向かい合っている角のことです。",
+      "hint_2": "対頂角の大きさは常に等しくなります。",
+      "explanation_base": "交わる2直線によってできる向かい合った角（対頂角）は大きさが等しいため、50°になります。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "retry_with_hint"
+      ]
+    },
+    {
+      "full_unit_id": "geometry_parallel_congruence",
+      "unit_id": "geometry_parallel_congruence",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "question_text": "平行な2つの直線に、1つの直線が交わっています。できる角のうち、1つの角が70°のとき、その同位角の大きさは何度ですか。",
+      "diagram": null,
+      "diagram_required": true,
+      "diagram_params": {
+        "diagram_type": "parallel_lines_angle",
+        "parallel_lines": [
+          { "y": 90, "label_left": "ℓ", "label_right": "" },
+          { "y": 220, "label_left": "m", "label_right": "" }
+        ],
+        "transversals": [
+          { "x1": 40, "y1": 260, "x2": 270, "y2": 40, "label": "n" }
+        ],
+        "points": [
+          { "name": "A", "x": 222, "y": 90 },
+          { "name": "B", "x": 92, "y": 220 }
+        ],
+        "angle_marks": [
+          {
+            "vertex": { "x": 222, "y": 90 },
+            "from_deg": 180,
+            "to_deg": 224,
+            "label": "70°"
+          },
+          {
+            "vertex": { "x": 92, "y": 220 },
+            "from_deg": 180,
+            "to_deg": 224,
+            "label": "?"
+          }
+        ]
+      },
+      "correct_answer": "70",
+      "hint_1": "平行線の同位角（同じ位置にある角）の大きさは等しくなります。",
+      "hint_2": "70°の角と同じ位置にある角を探しましょう。平行線では大きさは同じになります。",
+      "explanation_base": "平行な2直線において、同位角の大きさは等しくなります。したがって、求める角は70°です。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "operation_confusion"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "reinforce_same_pattern"
+      ]
+    },
+    {
+      "full_unit_id": "geometry_parallel_congruence",
+      "unit_id": "geometry_parallel_congruence",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "question_text": "平行な2つの直線に、1つの直線が交わっています。できる角のうち、1つの角が110°のとき、その錯角の大きさは何度ですか。",
+      "diagram": null,
+      "diagram_required": true,
+      "diagram_params": {
+        "diagram_type": "parallel_lines_angle",
+        "parallel_lines": [
+          { "y": 90, "label_left": "ℓ", "label_right": "" },
+          { "y": 220, "label_left": "m", "label_right": "" }
+        ],
+        "transversals": [
+          { "x1": 40, "y1": 260, "x2": 270, "y2": 40, "label": "n" }
+        ],
+        "points": [
+          { "name": "A", "x": 222, "y": 90 },
+          { "name": "B", "x": 92, "y": 220 }
+        ],
+        "angle_marks": [
+          {
+            "vertex": { "x": 222, "y": 90 },
+            "from_deg": 0,
+            "to_deg": 136,
+            "label": "110°"
+          },
+          {
+            "vertex": { "x": 92, "y": 220 },
+            "from_deg": 44,
+            "to_deg": 180,
+            "label": "?"
+          }
+        ]
+      },
+      "correct_answer": "110",
+      "hint_1": "平行線の錯角（アルファベットの「Z」の形になる位置にある角）の大きさは等しくなります。",
+      "hint_2": "110°の角と錯角の位置にある角を探しましょう。平行線では大きさは同じになります。",
+      "explanation_base": "平行な2直線において、錯角の大きさは等しくなります。したがって、求める角は110°です。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "retry_with_hint"
+      ]
+    },
+    {
+      "full_unit_id": "geometry_parallel_congruence",
+      "unit_id": "geometry_parallel_congruence",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "question_text": "三角形の2つの内角の大きさが、それぞれ60°と80°です。残りの1つの内角の大きさは何度ですか。",
+      "diagram": null,
+      "correct_answer": "40",
+      "hint_1": "三角形の内角の和は180°です。",
+      "hint_2": "180° から、わかっている2つの角の大きさを引き算しましょう。",
+      "explanation_base": "三角形の内角の和は180°です。180° - (60° + 80°) = 180° - 140° = 40° となります。",
+      "error_pattern_candidates": [
+        "arithmetic_error",
+        "formula_setup_error"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "geometry_parallel_congruence",
+      "unit_id": "geometry_parallel_congruence",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "question_text": "五角形の内角の和を求めなさい。",
+      "diagram": null,
+      "correct_answer": "540",
+      "hint_1": "n角形の内角の和は 180° × (n - 2) で求められます。",
+      "hint_2": "五角形なので n = 5 を代入して、180° × (5 - 2) を計算しましょう。",
+      "explanation_base": "五角形は、1つの頂点から対角線を引くと3つの三角形に分けられます。よって、内角の和は 180° × 3 = 540° になります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "retry_with_hint"
+      ]
+    },
+    {
+      "full_unit_id": "geometry_parallel_congruence",
+      "unit_id": "geometry_parallel_congruence",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "question_text": "平行な2直線 l, m があります。直線 l 上に点A、直線 m 上に点Bがあり、2直線 l, m の間に点Pがあります。直線 l と線分 AP のなす角（鋭角側）が30°、直線 m と線分 BP のなす角（鋭角側）が40°のとき、∠APB の大きさは何度ですか。",
+      "diagram": null,
+      "diagram_required": true,
+      "diagram_params": {
+        "diagram_type": "parallel_lines_angle",
+        "parallel_lines": [
+          { "y": 90, "label_left": "l", "label_right": "" },
+          { "y": 220, "label_left": "m", "label_right": "" }
+        ],
+        "transversals": [
+          { "x1": 110, "y1": 90, "x2": 170, "y2": 160, "label": "" },
+          { "x1": 210, "y1": 220, "x2": 170, "y2": 160, "label": "" }
+        ],
+        "points": [
+          { "name": "A", "x": 110, "y": 90 },
+          { "name": "B", "x": 210, "y": 220 },
+          { "name": "P", "x": 170, "y": 160 }
+        ],
+        "angle_marks": [
+          {
+            "vertex": { "x": 110, "y": 90 },
+            "from_deg": 0,
+            "to_deg": 49,
+            "label": "30°"
+          },
+          {
+            "vertex": { "x": 210, "y": 220 },
+            "from_deg": 131,
+            "to_deg": 180,
+            "label": "40°"
+          },
+          {
+            "vertex": { "x": 170, "y": 160 },
+            "from_deg": 229,
+            "to_deg": 311,
+            "label": "?"
+          }
+        ]
+      },
+      "correct_answer": "70",
+      "hint_1": "点Pを通り、直線 l, m に平行な補助線を引いてみましょう。",
+      "hint_2": "補助線を引くと、∠APB は2つの角に分けられます。それぞれ、30°と40°の錯角になります。",
+      "explanation_base": "点Pを通り l, m に平行な補助線を引きます。錯角は等しいので、∠APB の上側は30°、下側は40°となります。よって ∠APB = 30° + 40° = 70° です。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "comprehension_gap"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "geometry_parallel_congruence",
+      "unit_id": "geometry_parallel_congruence",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "question_text": "正八角形の1つの外角の大きさは何度ですか。",
+      "diagram": null,
+      "correct_answer": "45",
+      "hint_1": "多角形の外角の和は、何角形であっても必ず360°になります。",
+      "hint_2": "正八角形は8つの外角があり、その大きさはすべて等しいので、360°を8で割りましょう。",
+      "explanation_base": "多角形における外角の和は常に360°です。正八角形は8つの等しい外角を持つため、360° ÷ 8 = 45° となります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "retry_with_hint"
+      ]
+    },
+    {
+      "full_unit_id": "geometry_parallel_congruence",
+      "unit_id": "geometry_parallel_congruence",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "question_text": "内角の和が1080°になる多角形は何角形ですか。",
+      "diagram": null,
+      "correct_answer": "八角形",
+      "hint_1": "内角の和の公式 180° × (n - 2) = 1080° という方程式を立ててみましょう。",
+      "hint_2": "両辺を180で割ると、n - 2 = 6 になります。",
+      "explanation_base": "180° × (n - 2) = 1080° より、n - 2 = 6、よって n = 8 となります。したがって八角形です。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "geometry_parallel_congruence",
+      "unit_id": "geometry_parallel_congruence",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "question_text": "2つの三角形 △ABC と △DEF があります。AB = DE, BC = EF であることがわかっています。これら2つの三角形が合同になるためには、あとどの角が等しければよいですか。",
+      "diagram": null,
+      "diagram_required": true,
+      "diagram_params": {
+        "diagram_type": "triangle_correspondence",
+        "triangles": [
+          {
+            "name": "triangle_1",
+            "points": [
+              { "name": "A", "x": 70, "y": 240 },
+              { "name": "B", "x": 150, "y": 90 },
+              { "name": "C", "x": 230, "y": 240 }
+            ]
+          },
+          {
+            "name": "triangle_2",
+            "points": [
+              { "name": "D", "x": 300, "y": 240 },
+              { "name": "E", "x": 380, "y": 90 },
+              { "name": "F", "x": 460, "y": 240 }
+            ]
+          }
+        ],
+        "equal_sides": [
+          ["A", "B", "D", "E"],
+          ["B", "C", "E", "F"]
+        ],
+        "equal_angles": [
+          ["B", "E"]
+        ],
+        "highlight_pairs": [
+          ["A", "D"],
+          ["B", "E"],
+          ["C", "F"]
+        ]
+      },
+      "correct_answer": "∠B=∠E",
+      "hint_1": "三角形の合同条件の「2組の辺とその間の角がそれぞれ等しい」を使えるようにします。",
+      "hint_2": "辺ABと辺BCの「間」にある角はどれでしょうか。△DEFについても同じように考えます。",
+      "explanation_base": "2組の辺が等しいことがわかっているので、合同になるためにはその「間の角」が等しい必要があります。ABとBCの間にある∠Bと、DEとEFの間にある∠Eが等しければ合同になります。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "retry_with_hint"
+      ]
+    },
+    {
+      "full_unit_id": "geometry_parallel_congruence",
+      "unit_id": "geometry_parallel_congruence",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "question_text": "平行な2直線に、1つの直線が交わっています。ある角の大きさが65°のとき、その「同位角の対頂角」の大きさは何度ですか。",
+      "diagram": null,
+      "diagram_required": true,
+      "diagram_params": {
+        "diagram_type": "parallel_lines_angle",
+        "parallel_lines": [
+          { "y": 90, "label_left": "ℓ", "label_right": "" },
+          { "y": 220, "label_left": "m", "label_right": "" }
+        ],
+        "transversals": [
+          { "x1": 40, "y1": 260, "x2": 270, "y2": 40, "label": "n" }
+        ],
+        "points": [
+          { "name": "A", "x": 222, "y": 90 },
+          { "name": "B", "x": 92, "y": 220 }
+        ],
+        "angle_marks": [
+          {
+            "vertex": { "x": 222, "y": 90 },
+            "from_deg": 180,
+            "to_deg": 224,
+            "label": "65°"
+          },
+          {
+            "vertex": { "x": 92, "y": 220 },
+            "from_deg": 0,
+            "to_deg": 44,
+            "label": "?"
+          }
+        ]
+      },
+      "correct_answer": "65",
+      "hint_1": "まず、65°の角の「同位角」の大きさを考えます。",
+      "hint_2": "次に、その求めた同位角の「対頂角」の大きさを考えます。実は、それは元の角の「錯角」と同じ位置になります。",
+      "explanation_base": "平行線の同位角は等しいので、同位角も65°です。さらに対頂角も等しいため、その角も65°になります。（結果として錯角を求めているのと同じことになります）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "operation_confusion"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "reinforce_same_pattern"
+      ]
+    },
+    {
+      "full_unit_id": "geometry_parallel_congruence",
+      "unit_id": "geometry_parallel_congruence",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "question_text": "平行な2直線 l, m があります。直線 l 上に点A、直線 m 上に点Bがあり、その間に2点 P, Q があります。線分は A-P-Q-B とつながっています。直線 l と線分 AP のなす角（鋭角側）が40°、∠APQ = 90°、直線 m と線分 BQ のなす角（鋭角側）が20° のとき、∠PQB の大きさは何度ですか。（各角は平行線の内側に配置されています）",
+      "diagram": null,
+      "diagram_required": true,
+      "diagram_params": {
+        "diagram_type": "parallel_lines_angle",
+        "parallel_lines": [
+          { "y": 90, "label_left": "l", "label_right": "" },
+          { "y": 220, "label_left": "m", "label_right": "" }
+        ],
+        "transversals": [
+          { "x1": 105, "y1": 90, "x2": 145, "y2": 145, "label": "" },
+          { "x1": 145, "y1": 145, "x2": 205, "y2": 175, "label": "" },
+          { "x1": 205, "y1": 175, "x2": 245, "y2": 220, "label": "" }
+        ],
+        "points": [
+          { "name": "A", "x": 105, "y": 90, "label_dx": -18, "label_dy": -10 },
+          { "name": "P", "x": 145, "y": 145, "label_dx": -18, "label_dy": 18 },
+          { "name": "Q", "x": 205, "y": 175, "label_dx": 8, "label_dy": 18 },
+          { "name": "B", "x": 245, "y": 220, "label_dx": 8, "label_dy": 16 }
+        ],
+        "angle_marks": [
+          {
+            "vertex": { "x": 105, "y": 90 },
+            "from_deg": 0,
+            "to_deg": 54,
+            "label": "40°",
+            "label_dx": 8,
+            "label_dy": -4
+          },
+          {
+            "vertex": { "x": 145, "y": 145 },
+            "from_deg": 144,
+            "to_deg": 324,
+            "label": "90°",
+            "label_dx": -8,
+            "label_dy": 12
+          },
+          {
+            "vertex": { "x": 245, "y": 220 },
+            "from_deg": 132,
+            "to_deg": 180,
+            "label": "20°",
+            "label_dx": 8,
+            "label_dy": 4
+          },
+          {
+            "vertex": { "x": 205, "y": 175 },
+            "from_deg": 206,
+            "to_deg": 312,
+            "label": "?",
+            "label_dx": 8,
+            "label_dy": 12
+          }
+        ]
+      },
+      "correct_answer": "70",
+      "hint_1": "点Pと点Qを通り、直線 l, m に平行な補助線をそれぞれ引きましょう。",
+      "hint_2": "点Pに引いた補助線で、∠APQ (90°) は 40° と 50° に分かれます。この 50° が点Qの上側の錯角になります。",
+      "explanation_base": "点PとQに平行な補助線を引きます。Pでの錯角により、∠APQ(90°)は上側40°と下側50°に分かれます。Qの補助線との錯角で、∠PQBの上側は50°になります。一方、Bからの錯角により、∠PQBの下側は20°です。よって ∠PQB = 50° + 20° = 70° となります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "comprehension_gap"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "geometry_parallel_congruence",
+      "unit_id": "geometry_parallel_congruence",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "question_text": "1つの内角の大きさが150°である正多角形は、正何角形ですか。",
+      "diagram": null,
+      "correct_answer": "正十二角形",
+      "hint_1": "内角の公式を使うよりも、「外角」に注目する方が簡単に解けます。",
+      "hint_2": "内角と外角を足すと180°になります。1つの外角の大きさは 180° - 150° = 30° です。",
+      "explanation_base": "1つの内角が150°なので、1つの外角は 180° - 150° = 30° です。多角形の外角の和は常に360°なので、360° ÷ 30° = 12 となり、正十二角形であることがわかります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "comprehension_gap"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "retry_with_hint"
+      ]
+    },
+    {
+      "full_unit_id": "geometry_parallel_congruence",
+      "unit_id": "geometry_parallel_congruence",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "question_text": "5つの頂点を持つ星型の図形（五芒星）があります。5つの先端の角の和は何度ですか。",
+      "diagram": null,
+      "correct_answer": "180",
+      "hint_1": "三角形の外角の性質（1つの外角は、それと隣り合わない2つの内角の和に等しい）を利用します。",
+      "hint_2": "星型の線が交差してできる小さな三角形に注目し、先端の角を1つの三角形の内角に集めることができます。",
+      "explanation_base": "三角形の外角の性質を使って、5つの先端の角をすべて1つの三角形の中に移動させることができます。三角形の内角の和は180°なので、5つの角の和も180°になります。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "unknown_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "teacher_intervention_needed"
+      ]
+    },
+    {
+      "full_unit_id": "geometry_parallel_congruence",
+      "unit_id": "geometry_parallel_congruence",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "question_text": "平行な2直線 l, m の間に点Pがあります。直線 l 上の点A、直線 m 上の点Bからそれぞれ線分 AP、BP が引かれています。直線 l と線分 AP のなす角（鈍角側）が130°、直線 m と線分 BP のなす角（鈍角側）が140°のとき、∠APB（鋭角側）の大きさを求めなさい。（点A, Bは点Pから見て互いに反対方向に位置しています）",
+      "diagram": null,
+      "diagram_required": true,
+      "diagram_params": {
+        "diagram_type": "parallel_lines_angle",
+        "parallel_lines": [
+          { "y": 90, "label_left": "l", "label_right": "" },
+          { "y": 220, "label_left": "m", "label_right": "" }
+        ],
+        "transversals": [
+          { "x1": 110, "y1": 90, "x2": 170, "y2": 160, "label": "" },
+          { "x1": 230, "y1": 220, "x2": 170, "y2": 160, "label": "" }
+        ],
+        "points": [
+          { "name": "A", "x": 110, "y": 90, "label_dx": -18, "label_dy": -10 },
+          { "name": "B", "x": 230, "y": 220, "label_dx": 10, "label_dy": 16 },
+          { "name": "P", "x": 170, "y": 160, "label_dx": -18, "label_dy": 18 }
+        ],
+        "angle_marks": [
+          {
+            "vertex": { "x": 110, "y": 90 },
+            "from_deg": 49,
+            "to_deg": 180,
+            "label": "130°",
+            "label_dx": -8,
+            "label_dy": -4
+          },
+          {
+            "vertex": { "x": 230, "y": 220 },
+            "from_deg": 0,
+            "to_deg": 131,
+            "label": "140°",
+            "label_dx": 8,
+            "label_dy": 4
+          },
+          {
+            "vertex": { "x": 170, "y": 160 },
+            "from_deg": 229,
+            "to_deg": 319,
+            "label": "?",
+            "label_dx": -4,
+            "label_dy": 12
+          }
+        ]
+      },
+      "correct_answer": "90",
+      "hint_1": "まず、直線の内側にある鋭角の大きさを求めましょう。一直線は180°です。",
+      "hint_2": "内側の角はそれぞれ 180° - 130° = 50°、180° - 140° = 40° になります。点Pを通り平行な補助線を引いて考えましょう。",
+      "explanation_base": "直線の内側の鋭角はそれぞれ 180°-130°=50°、180°-140°=40° になります。点Pを通り l, m に平行な補助線を引くと、∠APB は錯角の和となるため、50° + 40° = 90° になります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "geometry_parallel_congruence",
+      "unit_id": "geometry_parallel_congruence",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "question_text": "三角形ABCにおいて、∠Bの内角の二等分線と∠Cの内角の二等分線の交点をDとします。∠A = 70°のとき、∠BDCの大きさは何度ですか。",
+      "diagram": null,
+      "correct_answer": "125",
+      "hint_1": "まず、△ABC全体で考えて、∠B と ∠C の合計の大きさを求めましょう。",
+      "hint_2": "∠B + ∠C = 180° - 70° = 110° です。二等分線で分けられているので、△DBCの底角の和（∠DBC + ∠DCB）はその半分になります。",
+      "explanation_base": "△ABCの内角の和から、∠B + ∠C = 180° - 70° = 110° です。点Dは二等分線の交点なので、∠DBC + ∠DCB = 110° ÷ 2 = 55° となります。最後に△DBCの内角の和を使って、∠BDC = 180° - 55° = 125° と求められます。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "comprehension_gap"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "geometry_parallel_congruence",
+      "unit_id": "geometry_parallel_congruence",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "question_text": "△ABC と △DEF が対応しており、A↔D、B↔E、C↔F が対応しています。このとき、辺 AC に対応する辺を答えなさい。",
+      "diagram": null,
+      "diagram_required": true,
+      "diagram_params": {
+        "diagram_type": "triangle_correspondence",
+        "triangles": [
+          {
+            "name": "triangle_1",
+            "points": [
+              { "name": "A", "x": 70, "y": 240 },
+              { "name": "B", "x": 150, "y": 90 },
+              { "name": "C", "x": 230, "y": 240 }
+            ]
+          },
+          {
+            "name": "triangle_2",
+            "points": [
+              { "name": "D", "x": 300, "y": 240 },
+              { "name": "E", "x": 380, "y": 90 },
+              { "name": "F", "x": 460, "y": 240 }
+            ]
+          }
+        ],
+        "highlight_pairs": [
+          ["A", "D"],
+          ["B", "E"],
+          ["C", "F"]
+        ]
+      },
+      "correct_answer": "DF",
+      "hint_1": "対応する頂点の組をそのまま辺にあてはめて考えます。",
+      "hint_2": "A に対応するのは D、C に対応するのは F です。",
+      "explanation_base": "A↔D、C↔F が対応しているので、辺 AC に対応する辺は DF です。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "advance_with_confidence"
+      ]
+    },
+    {
+      "full_unit_id": "geometry_parallel_congruence",
+      "unit_id": "geometry_parallel_congruence",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "question_text": "△ABC と △DEF において、AB = DE、AC = DF、∠A = ∠D です。このとき使える合同条件を答えなさい。",
+      "diagram": null,
+      "diagram_required": true,
+      "diagram_params": {
+        "diagram_type": "triangle_correspondence",
+        "triangles": [
+          {
+            "name": "triangle_1",
+            "points": [
+              { "name": "A", "x": 70, "y": 240 },
+              { "name": "B", "x": 150, "y": 90 },
+              { "name": "C", "x": 230, "y": 240 }
+            ]
+          },
+          {
+            "name": "triangle_2",
+            "points": [
+              { "name": "D", "x": 300, "y": 240 },
+              { "name": "E", "x": 380, "y": 90 },
+              { "name": "F", "x": 460, "y": 240 }
+            ]
+          }
+        ],
+        "equal_sides": [
+          ["A", "B", "D", "E"],
+          ["A", "C", "D", "F"]
+        ],
+        "equal_angles": [
+          ["A", "D"]
+        ],
+        "highlight_pairs": [
+          ["A", "D"],
+          ["B", "E"],
+          ["C", "F"]
+        ]
+      },
+      "correct_answer": "2組の辺とその間の角",
+      "hint_1": "等しいのは2組の辺と、その2辺にはさまれた角です。",
+      "hint_2": "AB と AC の間にある角は ∠A です。DE と DF の間にある角は ∠D です。",
+      "explanation_base": "AB = DE、AC = DF、そしてその間の角である ∠A = ∠D なので、「2組の辺とその間の角がそれぞれ等しい」という合同条件が使えます。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "formula_setup_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "reinforce_same_pattern"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1022 @@
+[
+  {
+    "english": "dog",
+    "japanese": "犬",
+    "part_of_speech": "noun",
+    "phonetics": "/dɔːɡ/",
+    "example_en": "I have a dog.",
+    "example_ja": "私は犬を飼っています。",
+    "grade": 7,
+    "unit_id": "eng_alphabet_basic"
+  },
+  {
+    "english": "cat",
+    "japanese": "猫",
+    "part_of_speech": "noun",
+    "phonetics": "/kæt/",
+    "example_en": "The cat is on the sofa.",
+    "example_ja": "猫はソファの上にいます。",
+    "grade": 7,
+    "unit_id": "eng_alphabet_basic"
+  },
+  {
+    "english": "book",
+    "japanese": "本",
+    "part_of_speech": "noun",
+    "phonetics": "/bʊk/",
+    "example_en": "This is my book.",
+    "example_ja": "これは私の本です。",
+    "grade": 7,
+    "unit_id": "eng_alphabet_basic"
+  },
+  {
+    "english": "pen",
+    "japanese": "ペン",
+    "part_of_speech": "noun",
+    "phonetics": "/pɛn/",
+    "example_en": "I need a pen.",
+    "example_ja": "私はペンが必要です。",
+    "grade": 7,
+    "unit_id": "eng_alphabet_basic"
+  },
+  {
+    "english": "school",
+    "japanese": "学校",
+    "part_of_speech": "noun",
+    "phonetics": "/skuːl/",
+    "example_en": "I go to school every day.",
+    "example_ja": "私は毎日学校に行きます。",
+    "grade": 7,
+    "unit_id": "eng_alphabet_basic"
+  },
+  {
+    "english": "water",
+    "japanese": "水",
+    "part_of_speech": "noun",
+    "phonetics": "/ˈwɔːtər/",
+    "example_en": "I drink water every morning.",
+    "example_ja": "私は毎朝水を飲みます。",
+    "grade": 7,
+    "unit_id": "eng_alphabet_basic"
+  },
+  {
+    "english": "music",
+    "japanese": "音楽",
+    "part_of_speech": "noun",
+    "phonetics": "/ˈmjuːzɪk/",
+    "example_en": "I like music.",
+    "example_ja": "私は音楽が好きです。",
+    "grade": 7,
+    "unit_id": "eng_alphabet_basic"
+  },
+  {
+    "english": "friend",
+    "japanese": "友達",
+    "part_of_speech": "noun",
+    "phonetics": "/frɛnd/",
+    "example_en": "She is my friend.",
+    "example_ja": "彼女は私の友達です。",
+    "grade": 7,
+    "unit_id": "eng_alphabet_basic"
+  },
+  {
+    "english": "apple",
+    "japanese": "りんご",
+    "part_of_speech": "noun",
+    "phonetics": "/ˈæpəl/",
+    "example_en": "I eat an apple every day.",
+    "example_ja": "私は毎日りんごを食べます。",
+    "grade": 7,
+    "unit_id": "eng_alphabet_basic"
+  },
+  {
+    "english": "table",
+    "japanese": "テーブル・机",
+    "part_of_speech": "noun",
+    "phonetics": "/ˈteɪbəl/",
+    "example_en": "Please put it on the table.",
+    "example_ja": "それをテーブルの上に置いてください。",
+    "grade": 7,
+    "unit_id": "eng_alphabet_basic"
+  },
+  {
+    "english": "am",
+    "japanese": "〜です（I am）",
+    "part_of_speech": "verb",
+    "phonetics": "/æm/",
+    "example_en": "I am a student.",
+    "example_ja": "私は生徒です。",
+    "grade": 7,
+    "unit_id": "eng_be_verb"
+  },
+  {
+    "english": "is",
+    "japanese": "〜です（he/she/it）",
+    "part_of_speech": "verb",
+    "phonetics": "/ɪz/",
+    "example_en": "She is tall.",
+    "example_ja": "彼女は背が高い。",
+    "grade": 7,
+    "unit_id": "eng_be_verb"
+  },
+  {
+    "english": "are",
+    "japanese": "〜です（you/we/they）",
+    "part_of_speech": "verb",
+    "phonetics": "/ɑːr/",
+    "example_en": "You are kind.",
+    "example_ja": "あなたは親切です。",
+    "grade": 7,
+    "unit_id": "eng_be_verb"
+  },
+  {
+    "english": "student",
+    "japanese": "生徒・学生",
+    "part_of_speech": "noun",
+    "phonetics": "/ˈstuːdənt/",
+    "example_en": "I am a student.",
+    "example_ja": "私は生徒です。",
+    "grade": 7,
+    "unit_id": "eng_be_verb"
+  },
+  {
+    "english": "teacher",
+    "japanese": "先生",
+    "part_of_speech": "noun",
+    "phonetics": "/ˈtiːtʃər/",
+    "example_en": "She is a teacher.",
+    "example_ja": "彼女は先生です。",
+    "grade": 7,
+    "unit_id": "eng_be_verb"
+  },
+  {
+    "english": "tall",
+    "japanese": "背が高い",
+    "part_of_speech": "adj",
+    "phonetics": "/tɔːl/",
+    "example_en": "He is very tall.",
+    "example_ja": "彼はとても背が高い。",
+    "grade": 7,
+    "unit_id": "eng_be_verb"
+  },
+  {
+    "english": "kind",
+    "japanese": "親切な",
+    "part_of_speech": "adj",
+    "phonetics": "/kaɪnd/",
+    "example_en": "She is kind.",
+    "example_ja": "彼女は親切です。",
+    "grade": 7,
+    "unit_id": "eng_be_verb"
+  },
+  {
+    "english": "happy",
+    "japanese": "幸せな",
+    "part_of_speech": "adj",
+    "phonetics": "/ˈhæpi/",
+    "example_en": "I am happy.",
+    "example_ja": "私は幸せです。",
+    "grade": 7,
+    "unit_id": "eng_be_verb"
+  },
+  {
+    "english": "like",
+    "japanese": "〜が好きだ",
+    "part_of_speech": "verb",
+    "phonetics": "/laɪk/",
+    "example_en": "She likes soccer.",
+    "example_ja": "彼女はサッカーが好きです。",
+    "grade": 7,
+    "unit_id": "eng_third_person_singular"
+  },
+  {
+    "english": "play",
+    "japanese": "〜をする・演奏する",
+    "part_of_speech": "verb",
+    "phonetics": "/pleɪ/",
+    "example_en": "He plays the piano.",
+    "example_ja": "彼はピアノを弾きます。",
+    "grade": 7,
+    "unit_id": "eng_third_person_singular"
+  },
+  {
+    "english": "eat",
+    "japanese": "〜を食べる",
+    "part_of_speech": "verb",
+    "phonetics": "/iːt/",
+    "example_en": "She eats breakfast every day.",
+    "example_ja": "彼女は毎日朝食を食べます。",
+    "grade": 7,
+    "unit_id": "eng_third_person_singular"
+  },
+  {
+    "english": "have",
+    "japanese": "〜を持っている",
+    "part_of_speech": "verb",
+    "phonetics": "/hæv/",
+    "example_en": "He has a bike.",
+    "example_ja": "彼は自転車を持っています。",
+    "grade": 7,
+    "unit_id": "eng_third_person_singular"
+  },
+  {
+    "english": "live",
+    "japanese": "住んでいる",
+    "part_of_speech": "verb",
+    "phonetics": "/lɪv/",
+    "example_en": "She lives in Tokyo.",
+    "example_ja": "彼女は東京に住んでいます。",
+    "grade": 7,
+    "unit_id": "eng_third_person_singular"
+  },
+  {
+    "english": "study",
+    "japanese": "勉強する",
+    "part_of_speech": "verb",
+    "phonetics": "/ˈstʌdi/",
+    "example_en": "He studies English every day.",
+    "example_ja": "彼は毎日英語を勉強します。",
+    "grade": 7,
+    "unit_id": "eng_third_person_singular"
+  },
+  {
+    "english": "question",
+    "japanese": "質問",
+    "part_of_speech": "noun",
+    "phonetics": "/ˈkwɛstʃən/",
+    "example_en": "Do you have any questions?",
+    "example_ja": "何か質問はありますか？",
+    "grade": 7,
+    "unit_id": "eng_question_negative"
+  },
+  {
+    "english": "answer",
+    "japanese": "答え・答える",
+    "part_of_speech": "noun/verb",
+    "phonetics": "/ˈænsər/",
+    "example_en": "Please answer the question.",
+    "example_ja": "質問に答えてください。",
+    "grade": 7,
+    "unit_id": "eng_question_negative"
+  },
+  {
+    "english": "not",
+    "japanese": "〜ない（否定）",
+    "part_of_speech": "adv",
+    "phonetics": "/nɒt/",
+    "example_en": "I do not like spicy food.",
+    "example_ja": "私は辛い食べ物が好きではありません。",
+    "grade": 7,
+    "unit_id": "eng_question_negative"
+  },
+  {
+    "english": "don't",
+    "japanese": "〜しない（短縮形）",
+    "part_of_speech": "verb",
+    "phonetics": "/doʊnt/",
+    "example_en": "I don't know.",
+    "example_ja": "私は知りません。",
+    "grade": 7,
+    "unit_id": "eng_question_negative"
+  },
+  {
+    "english": "can",
+    "japanese": "〜できる",
+    "part_of_speech": "verb",
+    "phonetics": "/kæn/",
+    "example_en": "I can swim.",
+    "example_ja": "私は泳げます。",
+    "grade": 7,
+    "unit_id": "eng_can_modal"
+  },
+  {
+    "english": "swim",
+    "japanese": "泳ぐ",
+    "part_of_speech": "verb",
+    "phonetics": "/swɪm/",
+    "example_en": "Can you swim?",
+    "example_ja": "あなたは泳げますか？",
+    "grade": 7,
+    "unit_id": "eng_can_modal"
+  },
+  {
+    "english": "cook",
+    "japanese": "料理する",
+    "part_of_speech": "verb",
+    "phonetics": "/kʊk/",
+    "example_en": "She can cook well.",
+    "example_ja": "彼女は料理が上手です。",
+    "grade": 7,
+    "unit_id": "eng_can_modal"
+  },
+  {
+    "english": "speak",
+    "japanese": "話す",
+    "part_of_speech": "verb",
+    "phonetics": "/spiːk/",
+    "example_en": "He can speak French.",
+    "example_ja": "彼はフランス語を話せます。",
+    "grade": 7,
+    "unit_id": "eng_can_modal"
+  },
+  {
+    "english": "drive",
+    "japanese": "運転する",
+    "part_of_speech": "verb",
+    "phonetics": "/draɪv/",
+    "example_en": "Can you drive a car?",
+    "example_ja": "あなたは車を運転できますか？",
+    "grade": 7,
+    "unit_id": "eng_can_modal"
+  },
+  {
+    "english": "running",
+    "japanese": "走っている（run の-ing形）",
+    "part_of_speech": "verb",
+    "phonetics": "/ˈrʌnɪŋ/",
+    "example_en": "He is running in the park.",
+    "example_ja": "彼は公園を走っています。",
+    "grade": 7,
+    "unit_id": "eng_present_progressive"
+  },
+  {
+    "english": "reading",
+    "japanese": "読んでいる（read の-ing形）",
+    "part_of_speech": "verb",
+    "phonetics": "/ˈriːdɪŋ/",
+    "example_en": "She is reading a book.",
+    "example_ja": "彼女は本を読んでいます。",
+    "grade": 7,
+    "unit_id": "eng_present_progressive"
+  },
+  {
+    "english": "writing",
+    "japanese": "書いている（write の-ing形）",
+    "part_of_speech": "verb",
+    "phonetics": "/ˈraɪtɪŋ/",
+    "example_en": "I am writing a letter.",
+    "example_ja": "私は手紙を書いています。",
+    "grade": 7,
+    "unit_id": "eng_present_progressive"
+  },
+  {
+    "english": "listening",
+    "japanese": "聴いている（listen の-ing形）",
+    "part_of_speech": "verb",
+    "phonetics": "/ˈlɪsənɪŋ/",
+    "example_en": "He is listening to music.",
+    "example_ja": "彼は音楽を聴いています。",
+    "grade": 7,
+    "unit_id": "eng_present_progressive"
+  },
+  {
+    "english": "watching",
+    "japanese": "見ている（watch の-ing形）",
+    "part_of_speech": "verb",
+    "phonetics": "/ˈwɒtʃɪŋ/",
+    "example_en": "We are watching TV.",
+    "example_ja": "私たちはテレビを見ています。",
+    "grade": 7,
+    "unit_id": "eng_present_progressive"
+  },
+  {
+    "english": "went",
+    "japanese": "行った（go の過去形）",
+    "part_of_speech": "verb",
+    "phonetics": "/wɛnt/",
+    "example_en": "I went to the park yesterday.",
+    "example_ja": "私は昨日公園に行きました。",
+    "grade": 8,
+    "unit_id": "eng_past_tense"
+  },
+  {
+    "english": "ate",
+    "japanese": "食べた（eat の過去形）",
+    "part_of_speech": "verb",
+    "phonetics": "/eɪt/",
+    "example_en": "She ate sushi for dinner.",
+    "example_ja": "彼女は夕食に寿司を食べました。",
+    "grade": 8,
+    "unit_id": "eng_past_tense"
+  },
+  {
+    "english": "saw",
+    "japanese": "見た（see の過去形）",
+    "part_of_speech": "verb",
+    "phonetics": "/sɔː/",
+    "example_en": "I saw a beautiful rainbow.",
+    "example_ja": "私は美しい虹を見ました。",
+    "grade": 8,
+    "unit_id": "eng_past_tense"
+  },
+  {
+    "english": "came",
+    "japanese": "来た（come の過去形）",
+    "part_of_speech": "verb",
+    "phonetics": "/keɪm/",
+    "example_en": "He came to my house.",
+    "example_ja": "彼は私の家に来ました。",
+    "grade": 8,
+    "unit_id": "eng_past_tense"
+  },
+  {
+    "english": "took",
+    "japanese": "取った・撮った（take の過去形）",
+    "part_of_speech": "verb",
+    "phonetics": "/tʊk/",
+    "example_en": "She took a photo.",
+    "example_ja": "彼女は写真を撮りました。",
+    "grade": 8,
+    "unit_id": "eng_past_tense"
+  },
+  {
+    "english": "made",
+    "japanese": "作った（make の過去形）",
+    "part_of_speech": "verb",
+    "phonetics": "/meɪd/",
+    "example_en": "He made a cake.",
+    "example_ja": "彼はケーキを作りました。",
+    "grade": 8,
+    "unit_id": "eng_past_tense"
+  },
+  {
+    "english": "bought",
+    "japanese": "買った（buy の過去形）",
+    "part_of_speech": "verb",
+    "phonetics": "/bɔːt/",
+    "example_en": "I bought new shoes.",
+    "example_ja": "私は新しい靴を買いました。",
+    "grade": 8,
+    "unit_id": "eng_past_tense"
+  },
+  {
+    "english": "yesterday",
+    "japanese": "昨日",
+    "part_of_speech": "adv",
+    "phonetics": "/ˈjɛstərdeɪ/",
+    "example_en": "I studied hard yesterday.",
+    "example_ja": "私は昨日一生懸命勉強しました。",
+    "grade": 8,
+    "unit_id": "eng_past_tense"
+  },
+  {
+    "english": "last",
+    "japanese": "この前の・最後の",
+    "part_of_speech": "adj",
+    "phonetics": "/læst/",
+    "example_en": "I watched a movie last night.",
+    "example_ja": "私は昨晩映画を見ました。",
+    "grade": 8,
+    "unit_id": "eng_past_tense"
+  },
+  {
+    "english": "will",
+    "japanese": "〜するだろう・〜するつもり",
+    "part_of_speech": "verb",
+    "phonetics": "/wɪl/",
+    "example_en": "I will visit Kyoto next week.",
+    "example_ja": "私は来週京都を訪れます。",
+    "grade": 8,
+    "unit_id": "eng_future_tense"
+  },
+  {
+    "english": "tomorrow",
+    "japanese": "明日",
+    "part_of_speech": "adv",
+    "phonetics": "/təˈmɒrəʊ/",
+    "example_en": "She will come tomorrow.",
+    "example_ja": "彼女は明日来ます。",
+    "grade": 8,
+    "unit_id": "eng_future_tense"
+  },
+  {
+    "english": "next",
+    "japanese": "次の",
+    "part_of_speech": "adj",
+    "phonetics": "/nɛkst/",
+    "example_en": "We will meet next Monday.",
+    "example_ja": "私たちは次の月曜日に会います。",
+    "grade": 8,
+    "unit_id": "eng_future_tense"
+  },
+  {
+    "english": "plan",
+    "japanese": "計画・計画する",
+    "part_of_speech": "noun/verb",
+    "phonetics": "/plæn/",
+    "example_en": "I am going to make a plan.",
+    "example_ja": "私は計画を立てるつもりです。",
+    "grade": 8,
+    "unit_id": "eng_future_tense"
+  },
+  {
+    "english": "should",
+    "japanese": "〜すべきだ",
+    "part_of_speech": "verb",
+    "phonetics": "/ʃʊd/",
+    "example_en": "You should eat more vegetables.",
+    "example_ja": "あなたはもっと野菜を食べるべきです。",
+    "grade": 8,
+    "unit_id": "eng_modal_verbs"
+  },
+  {
+    "english": "must",
+    "japanese": "〜しなければならない",
+    "part_of_speech": "verb",
+    "phonetics": "/mʌst/",
+    "example_en": "You must study for the exam.",
+    "example_ja": "あなたは試験のために勉強しなければなりません。",
+    "grade": 8,
+    "unit_id": "eng_modal_verbs"
+  },
+  {
+    "english": "may",
+    "japanese": "〜してもよい・〜かもしれない",
+    "part_of_speech": "verb",
+    "phonetics": "/meɪ/",
+    "example_en": "May I use your phone?",
+    "example_ja": "あなたの電話を使ってもいいですか？",
+    "grade": 8,
+    "unit_id": "eng_modal_verbs"
+  },
+  {
+    "english": "could",
+    "japanese": "〜できた（can の過去形）",
+    "part_of_speech": "verb",
+    "phonetics": "/kʊd/",
+    "example_en": "He could run very fast.",
+    "example_ja": "彼はとても速く走れました。",
+    "grade": 8,
+    "unit_id": "eng_modal_verbs"
+  },
+  {
+    "english": "would",
+    "japanese": "〜するでしょう（will の過去形）",
+    "part_of_speech": "verb",
+    "phonetics": "/wʊd/",
+    "example_en": "She said she would come.",
+    "example_ja": "彼女は来ると言いました。",
+    "grade": 8,
+    "unit_id": "eng_modal_verbs"
+  },
+  {
+    "english": "want",
+    "japanese": "〜したい",
+    "part_of_speech": "verb",
+    "phonetics": "/wɒnt/",
+    "example_en": "I want to travel abroad.",
+    "example_ja": "私は海外旅行がしたいです。",
+    "grade": 8,
+    "unit_id": "eng_infinitive"
+  },
+  {
+    "english": "hope",
+    "japanese": "〜を望む・希望する",
+    "part_of_speech": "verb",
+    "phonetics": "/hoʊp/",
+    "example_en": "I hope to become a doctor.",
+    "example_ja": "私は医師になりたいです。",
+    "grade": 8,
+    "unit_id": "eng_infinitive"
+  },
+  {
+    "english": "try",
+    "japanese": "〜しようとする・試みる",
+    "part_of_speech": "verb",
+    "phonetics": "/traɪ/",
+    "example_en": "I tried to finish the homework.",
+    "example_ja": "私は宿題を終わらせようとしました。",
+    "grade": 8,
+    "unit_id": "eng_infinitive"
+  },
+  {
+    "english": "decide",
+    "japanese": "決める",
+    "part_of_speech": "verb",
+    "phonetics": "/dɪˈsaɪd/",
+    "example_en": "She decided to study abroad.",
+    "example_ja": "彼女は留学することにしました。",
+    "grade": 8,
+    "unit_id": "eng_infinitive"
+  },
+  {
+    "english": "begin",
+    "japanese": "始める",
+    "part_of_speech": "verb",
+    "phonetics": "/bɪˈɡɪn/",
+    "example_en": "He began to play tennis.",
+    "example_ja": "彼はテニスを始めました。",
+    "grade": 8,
+    "unit_id": "eng_infinitive"
+  },
+  {
+    "english": "enjoy",
+    "japanese": "〜を楽しむ",
+    "part_of_speech": "verb",
+    "phonetics": "/ɪnˈdʒɔɪ/",
+    "example_en": "I enjoy reading books.",
+    "example_ja": "私は本を読むことを楽しんでいます。",
+    "grade": 8,
+    "unit_id": "eng_gerund"
+  },
+  {
+    "english": "stop",
+    "japanese": "やめる・止まる",
+    "part_of_speech": "verb",
+    "phonetics": "/stɒp/",
+    "example_en": "Please stop talking.",
+    "example_ja": "話すのをやめてください。",
+    "grade": 8,
+    "unit_id": "eng_gerund"
+  },
+  {
+    "english": "finish",
+    "japanese": "〜を終える",
+    "part_of_speech": "verb",
+    "phonetics": "/ˈfɪnɪʃ/",
+    "example_en": "Have you finished eating?",
+    "example_ja": "食べ終わりましたか？",
+    "grade": 8,
+    "unit_id": "eng_gerund"
+  },
+  {
+    "english": "practice",
+    "japanese": "練習する・練習",
+    "part_of_speech": "verb/noun",
+    "phonetics": "/ˈpræktɪs/",
+    "example_en": "She practices singing every day.",
+    "example_ja": "彼女は毎日歌の練習をします。",
+    "grade": 8,
+    "unit_id": "eng_gerund"
+  },
+  {
+    "english": "because",
+    "japanese": "なぜなら〜だから",
+    "part_of_speech": "conj",
+    "phonetics": "/bɪˈkɒz/",
+    "example_en": "I stayed home because it was raining.",
+    "example_ja": "雨が降っていたので、私は家にいました。",
+    "grade": 8,
+    "unit_id": "eng_conjunctions"
+  },
+  {
+    "english": "although",
+    "japanese": "〜にもかかわらず・〜だけれど",
+    "part_of_speech": "conj",
+    "phonetics": "/ɔːlˈðoʊ/",
+    "example_en": "Although it was cold, we went out.",
+    "example_ja": "寒かったけれど、私たちは外出しました。",
+    "grade": 8,
+    "unit_id": "eng_conjunctions"
+  },
+  {
+    "english": "when",
+    "japanese": "〜するとき",
+    "part_of_speech": "conj",
+    "phonetics": "/wɛn/",
+    "example_en": "When I was young, I liked soccer.",
+    "example_ja": "若いころ、私はサッカーが好きでした。",
+    "grade": 8,
+    "unit_id": "eng_conjunctions"
+  },
+  {
+    "english": "if",
+    "japanese": "もし〜ならば",
+    "part_of_speech": "conj",
+    "phonetics": "/ɪf/",
+    "example_en": "If it rains, we will cancel the event.",
+    "example_ja": "雨が降れば、イベントを中止します。",
+    "grade": 8,
+    "unit_id": "eng_conjunctions"
+  },
+  {
+    "english": "that",
+    "japanese": "〜ということ（接続詞）",
+    "part_of_speech": "conj",
+    "phonetics": "/ðæt/",
+    "example_en": "I think that he is right.",
+    "example_ja": "私は彼が正しいと思います。",
+    "grade": 8,
+    "unit_id": "eng_conjunctions"
+  },
+  {
+    "english": "give",
+    "japanese": "与える・あげる",
+    "part_of_speech": "verb",
+    "phonetics": "/ɡɪv/",
+    "example_en": "Please give me a pen.",
+    "example_ja": "ペンをください。",
+    "grade": 8,
+    "unit_id": "eng_sentence_patterns"
+  },
+  {
+    "english": "tell",
+    "japanese": "伝える・話す",
+    "part_of_speech": "verb",
+    "phonetics": "/tɛl/",
+    "example_en": "She told me the news.",
+    "example_ja": "彼女は私にニュースを伝えました。",
+    "grade": 8,
+    "unit_id": "eng_sentence_patterns"
+  },
+  {
+    "english": "show",
+    "japanese": "見せる・示す",
+    "part_of_speech": "verb",
+    "phonetics": "/ʃoʊ/",
+    "example_en": "Can you show me the way?",
+    "example_ja": "道を教えてもらえますか？",
+    "grade": 8,
+    "unit_id": "eng_sentence_patterns"
+  },
+  {
+    "english": "call",
+    "japanese": "呼ぶ・電話する",
+    "part_of_speech": "verb",
+    "phonetics": "/kɔːl/",
+    "example_en": "We call him Tom.",
+    "example_ja": "私たちは彼をトムと呼びます。",
+    "grade": 8,
+    "unit_id": "eng_sentence_patterns"
+  },
+  {
+    "english": "make",
+    "japanese": "作る・〜にする",
+    "part_of_speech": "verb",
+    "phonetics": "/meɪk/",
+    "example_en": "The news made her happy.",
+    "example_ja": "そのニュースは彼女を幸せにしました。",
+    "grade": 8,
+    "unit_id": "eng_sentence_patterns"
+  },
+  {
+    "english": "built",
+    "japanese": "建てられた（build の過去分詞）",
+    "part_of_speech": "verb",
+    "phonetics": "/bɪlt/",
+    "example_en": "This castle was built 500 years ago.",
+    "example_ja": "この城は500年前に建てられました。",
+    "grade": 9,
+    "unit_id": "eng_passive_voice"
+  },
+  {
+    "english": "written",
+    "japanese": "書かれた（write の過去分詞）",
+    "part_of_speech": "verb",
+    "phonetics": "/ˈrɪtən/",
+    "example_en": "The letter was written in English.",
+    "example_ja": "その手紙は英語で書かれていました。",
+    "grade": 9,
+    "unit_id": "eng_passive_voice"
+  },
+  {
+    "english": "spoken",
+    "japanese": "話される（speak の過去分詞）",
+    "part_of_speech": "verb",
+    "phonetics": "/ˈspoʊkən/",
+    "example_en": "English is spoken all over the world.",
+    "example_ja": "英語は世界中で話されています。",
+    "grade": 9,
+    "unit_id": "eng_passive_voice"
+  },
+  {
+    "english": "known",
+    "japanese": "知られている（know の過去分詞）",
+    "part_of_speech": "verb",
+    "phonetics": "/noʊn/",
+    "example_en": "Mt. Fuji is known all over the world.",
+    "example_ja": "富士山は世界中に知られています。",
+    "grade": 9,
+    "unit_id": "eng_passive_voice"
+  },
+  {
+    "english": "used",
+    "japanese": "使われる（use の過去分詞）",
+    "part_of_speech": "verb",
+    "phonetics": "/juːzd/",
+    "example_en": "This tool is used by many people.",
+    "example_ja": "この道具は多くの人に使われています。",
+    "grade": 9,
+    "unit_id": "eng_passive_voice"
+  },
+  {
+    "english": "ever",
+    "japanese": "今までに",
+    "part_of_speech": "adv",
+    "phonetics": "/ˈɛvər/",
+    "example_en": "Have you ever been to Tokyo?",
+    "example_ja": "あなたは東京に行ったことがありますか？",
+    "grade": 9,
+    "unit_id": "eng_present_perfect"
+  },
+  {
+    "english": "never",
+    "japanese": "一度も〜ない",
+    "part_of_speech": "adv",
+    "phonetics": "/ˈnɛvər/",
+    "example_en": "I have never seen snow.",
+    "example_ja": "私は一度も雪を見たことがありません。",
+    "grade": 9,
+    "unit_id": "eng_present_perfect"
+  },
+  {
+    "english": "already",
+    "japanese": "すでに・もう",
+    "part_of_speech": "adv",
+    "phonetics": "/ɔːlˈrɛdi/",
+    "example_en": "I have already finished dinner.",
+    "example_ja": "私はすでに夕食を終えました。",
+    "grade": 9,
+    "unit_id": "eng_present_perfect"
+  },
+  {
+    "english": "just",
+    "japanese": "ちょうど・たった今",
+    "part_of_speech": "adv",
+    "phonetics": "/dʒʌst/",
+    "example_en": "She has just left the office.",
+    "example_ja": "彼女はたった今オフィスを出ました。",
+    "grade": 9,
+    "unit_id": "eng_present_perfect"
+  },
+  {
+    "english": "yet",
+    "japanese": "まだ（〜していない）",
+    "part_of_speech": "adv",
+    "phonetics": "/jɛt/",
+    "example_en": "Have you found your key yet?",
+    "example_ja": "もう鍵は見つかりましたか？",
+    "grade": 9,
+    "unit_id": "eng_present_perfect"
+  },
+  {
+    "english": "since",
+    "japanese": "〜から・〜以来",
+    "part_of_speech": "prep/conj",
+    "phonetics": "/sɪns/",
+    "example_en": "I have lived here since 2020.",
+    "example_ja": "私は2020年からここに住んでいます。",
+    "grade": 9,
+    "unit_id": "eng_present_perfect"
+  },
+  {
+    "english": "for",
+    "japanese": "〜の間",
+    "part_of_speech": "prep",
+    "phonetics": "/fɔːr/",
+    "example_en": "She has studied English for three years.",
+    "example_ja": "彼女は3年間英語を勉強しています。",
+    "grade": 9,
+    "unit_id": "eng_present_perfect"
+  },
+  {
+    "english": "who",
+    "japanese": "〜する人（関係代名詞）",
+    "part_of_speech": "pron",
+    "phonetics": "/huː/",
+    "example_en": "The woman who lives next door is kind.",
+    "example_ja": "隣に住んでいる女性は親切です。",
+    "grade": 9,
+    "unit_id": "eng_relative_pronoun"
+  },
+  {
+    "english": "which",
+    "japanese": "〜するもの（関係代名詞）",
+    "part_of_speech": "pron",
+    "phonetics": "/wɪtʃ/",
+    "example_en": "This is the book which I bought.",
+    "example_ja": "これは私が買った本です。",
+    "grade": 9,
+    "unit_id": "eng_relative_pronoun"
+  },
+  {
+    "english": "that",
+    "japanese": "〜する（関係代名詞・物・人両方）",
+    "part_of_speech": "pron",
+    "phonetics": "/ðæt/",
+    "example_en": "The song that she sang was beautiful.",
+    "example_ja": "彼女が歌った歌は美しかった。",
+    "grade": 9,
+    "unit_id": "eng_relative_pronoun"
+  },
+  {
+    "english": "enough",
+    "japanese": "十分に",
+    "part_of_speech": "adv/adj",
+    "phonetics": "/ɪˈnʌf/",
+    "example_en": "She is old enough to drive.",
+    "example_ja": "彼女は運転できる年齢です。",
+    "grade": 9,
+    "unit_id": "eng_infinitive_advanced"
+  },
+  {
+    "english": "too",
+    "japanese": "〜すぎて",
+    "part_of_speech": "adv",
+    "phonetics": "/tuː/",
+    "example_en": "He was too tired to continue.",
+    "example_ja": "彼は疲れすぎて続けられませんでした。",
+    "grade": 9,
+    "unit_id": "eng_infinitive_advanced"
+  },
+  {
+    "english": "how",
+    "japanese": "どのように〜するか",
+    "part_of_speech": "adv",
+    "phonetics": "/haʊ/",
+    "example_en": "I don't know how to use this.",
+    "example_ja": "私はこれの使い方がわかりません。",
+    "grade": 9,
+    "unit_id": "eng_infinitive_advanced"
+  },
+  {
+    "english": "where",
+    "japanese": "どこに〜するか",
+    "part_of_speech": "adv",
+    "phonetics": "/wɛr/",
+    "example_en": "She told me where to go.",
+    "example_ja": "彼女はどこに行けばよいか教えてくれました。",
+    "grade": 9,
+    "unit_id": "eng_infinitive_advanced"
+  },
+  {
+    "english": "exciting",
+    "japanese": "わくわくさせるような",
+    "part_of_speech": "adj",
+    "phonetics": "/ɪkˈsaɪtɪŋ/",
+    "example_en": "It was an exciting match.",
+    "example_ja": "それはわくわくする試合でした。",
+    "grade": 9,
+    "unit_id": "eng_participle"
+  },
+  {
+    "english": "broken",
+    "japanese": "壊れた",
+    "part_of_speech": "adj",
+    "phonetics": "/ˈbroʊkən/",
+    "example_en": "The broken window needs to be fixed.",
+    "example_ja": "壊れた窓は修理が必要です。",
+    "grade": 9,
+    "unit_id": "eng_participle"
+  },
+  {
+    "english": "sleeping",
+    "japanese": "眠っている",
+    "part_of_speech": "adj",
+    "phonetics": "/ˈsliːpɪŋ/",
+    "example_en": "Don't wake the sleeping baby.",
+    "example_ja": "眠っている赤ちゃんを起こさないでください。",
+    "grade": 9,
+    "unit_id": "eng_participle"
+  },
+  {
+    "english": "interested",
+    "japanese": "興味を持っている",
+    "part_of_speech": "adj",
+    "phonetics": "/ˈɪntrɪstɪd/",
+    "example_en": "Are you interested in art?",
+    "example_ja": "あなたは芸術に興味がありますか？",
+    "grade": 9,
+    "unit_id": "eng_participle"
+  },
+  {
+    "english": "surprised",
+    "japanese": "驚いた",
+    "part_of_speech": "adj",
+    "phonetics": "/sərˈpraɪzd/",
+    "example_en": "I was surprised to hear the news.",
+    "example_ja": "私はそのニュースを聞いて驚きました。",
+    "grade": 9,
+    "unit_id": "eng_participle"
+  },
+  {
+    "english": "wish",
+    "japanese": "〜であればいいと思う",
+    "part_of_speech": "verb",
+    "phonetics": "/wɪʃ/",
+    "example_en": "I wish I could fly.",
+    "example_ja": "飛べたらいいのになあ。",
+    "grade": 9,
+    "unit_id": "eng_subjunctive"
+  },
+  {
+    "english": "were",
+    "japanese": "〜であれば（仮定法過去）",
+    "part_of_speech": "verb",
+    "phonetics": "/wɜːr/",
+    "example_en": "If I were you, I would study harder.",
+    "example_ja": "もし私があなたなら、もっと一生懸命勉強するのに。",
+    "grade": 9,
+    "unit_id": "eng_subjunctive"
+  },
+  {
+    "english": "would",
+    "japanese": "〜するでしょうに（仮定法）",
+    "part_of_speech": "verb",
+    "phonetics": "/wʊd/",
+    "example_en": "If I had money, I would travel.",
+    "example_ja": "お金があれば、旅行するのに。",
+    "grade": 9,
+    "unit_id": "eng_subjunctive"
+  }
+]

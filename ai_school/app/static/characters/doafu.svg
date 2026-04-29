@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_6" data-name="レイヤー 6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #6a3906;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6 {
+        stroke: #231815;
+        stroke-miterlimit: 10;
+        stroke-width: 18px;
+      }
+
+      .cls-7 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        fill: #c9a063;
+      }
+
+      .cls-3 {
+        fill: #7a6a56;
+      }
+
+      .cls-4 {
+        fill: #b28247;
+      }
+
+      .cls-5 {
+        fill: #f0d4af;
+      }
+
+      .cls-6 {
+        fill: #3e3a39;
+      }
+    </style>
+  </defs>
+  <rect class="cls-5" x="411.86" y="298.47" width="71.95" height="150.06" rx="35.97" ry="35.97" transform="translate(-134.81 349.15) rotate(-37.44)"/>
+  <rect class="cls-5" x="125.62" y="294.88" width="71.95" height="150.06" rx="35.48" ry="35.48" transform="translate(225.04 -28.74) rotate(32.64)"/>
+  <path class="cls-5" d="M402.98,574.31l-56.39,4.7c-4.24.35-7.94-3.12-8.26-7.76l-3.95-56.74c-.32-4.64,2.85-8.69,7.09-9.04l56.39-4.7c4.24-.35,7.94,3.12,8.26,7.76l3.95,56.74c.32,4.64-2.85,8.69-7.09,9.04Z"/>
+  <path class="cls-5" d="M262.89,581.47l-56.49-7.44c-4.13-.54-7.07-4.65-6.57-9.16l6.25-56.87c.5-4.52,4.24-7.74,8.37-7.2l56.49,7.44c4.13.54,7.07,4.65,6.57,9.16l-6.25,56.87c-.5,4.52-4.24,7.74-8.37,7.2Z"/>
+  <rect class="cls-5" x="138.46" y="22" width="324.78" height="313.48" rx="21.24" ry="21.24"/>
+  <rect class="cls-3" x="205.27" y="335.48" width="201.45" height="180.89"/>
+  <rect class="cls-4" x="210.72" y="139.09" width="64.4" height="113.94"/>
+  <rect class="cls-4" x="328.63" y="139.09" width="64.4" height="113.94"/>
+  <path class="cls-1" d="M160.19,21.72h279.95c12.37,0,22.41,10.04,22.41,22.41v55.32H139.25v-56.79c0-11.56,9.38-20.94,20.94-20.94Z"/>
+  <rect class="cls-2" x="207.75" y="415.53" width="194.2" height="38.64"/>
+  <rect class="cls-6" x="280.08" y="411.56" width="55.49" height="44.59"/>
+  <rect class="cls-7" x="342.61" y="152.49" width="21.22" height="39.79"/>
+  <rect class="cls-7" x="223.72" y="151.81" width="21.22" height="39.79"/>
+  <polygon class="cls-1" points="365.53 283.3 236.73 283.3 236.73 348.69 271.41 348.69 271.41 366.47 330.85 366.47 330.85 348.69 365.53 348.69 365.53 283.3"/>
+  <g>
+    <rect class="cls-2" x="112.81" y="283.04" width="21.95" height="168.14" transform="translate(-153.07 96.11) rotate(-26.98)"/>
+    <rect class="cls-6" x="53.2" y="310.22" width="113.94" height="62.82" transform="translate(-142.99 87.16) rotate(-26.98)"/>
+  </g>
+</svg>

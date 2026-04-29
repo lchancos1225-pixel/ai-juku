@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% set auth_role = "owner" %}
+{% block content %}
+<section class="card">
+  <p class="section-label">Owner / Feedback</p>
+  <h2>フィードバック一覧</h2>
+  <p class="meta-note">未対応: <strong>{{ unresolved }}</strong> 件 / 全 {{ feedbacks | length }} 件</p>
+  <a class="small-btn" href="/owner/dashboard">← ダッシュボードに戻る</a>
+</section>
+
+<section class="card">
+  {% if not feedbacks %}
+  <p class="meta-note">まだフィードバックはありません。</p>
+  {% else %}
+  <div class="feedback-list" id="feedback-list">
+    {% for fb in feedbacks %}
+    <div class="feedback-card {% if fb.is_resolved %}feedback-card--resolved{% endif %}" id="fb-{{ fb.feedback_id }}">
+      <span class="feedback-card__badge feedback-card__badge--{{ fb.category }}">
+        {{ category_labels.get(fb.category, fb.category) }}
+      </span>
+      <p class="feedback-card__message">{{ fb.message }}</p>
+      <button class="feedback-card__resolve-btn"
+        data-id="{{ fb.feedback_id }}"
+        data-resolved="{{ 'true' if fb.is_resolved else 'false' }}">
+        {{ "✅ 対応済" if fb.is_resolved else "未対応" }}
+      </button>
+      <p class="feedback-card__meta">
+        {{ fb.created_at[:16] | replace("T", " ") }}
+        {% if fb.page_url %} · {{ fb.page_url }}{% endif %}
+      </p>
+    </div>
+    {% endfor %}
+  </div>
+  {% endif %}
+</section>
+
+<script>
+  document.querySelectorAll('.feedback-card__resolve-btn').forEach(function (btn) {
+    btn.addEventListener('click', async function () {
+      const id = this.dataset.id;
+      const res = await fetch('/owner/feedbacks/' + id + '/resolve', { method: 'POST' });
+      const json = await res.json();
+      if (!json.ok) return;
+      const card = document.getElementById('fb-' + id);
+      if (json.is_resolved) {
+        card.classList.add('feedback-card--resolved');
+        this.textContent = '✅ 対応済';
+        this.dataset.resolved = 'true';
+      } else {
+        card.classList.remove('feedback-card--resolved');
+        this.textContent = '未対応';
+        this.dataset.resolved = 'false';
+      }
+    });
+  });
+</script>
+{% endblock %}

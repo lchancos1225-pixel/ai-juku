@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="student-top-bar">
+  <div class="student-top-bar__info">
+    <span class="student-top-bar__name">{{ student.display_name }} さん</span>
+  </div>
+  <a class="progress-chip-btn" href="/students/{{ student.student_id }}/progress">Myレコード →</a>
+</div>
+
+<section class="card unit-list-card">
+  <p class="section-label">Unit Select</p>
+  <h2>単元を選ぶ</h2>
+  <p class="unit-list-lead">やりたい単元を選んでください。前の単元でちょっと練習すると次が解放されます。</p>
+
+  {# ═══ 数学 ═══ #}
+  <div class="unit-section-header unit-section-header--math">
+    <span>📐 数学</span>
+    <!-- 学年タブ -->
+    <div class="grade-tabs">
+      <button class="grade-tab active" data-grade="all" data-section="math">すべて</button>
+      <button class="grade-tab" data-grade="7" data-section="math">中1</button>
+      <button class="grade-tab" data-grade="8" data-section="math">中2</button>
+      <button class="grade-tab" data-grade="9" data-section="math">中3</button>
+    </div>
+  </div>
+
+  <div class="unit-list-grid" id="math-grid">
+    {% for unit in units %}
+    <div class="unit-list-item {% if not unit.unlocked %}unit-list-item--locked{% endif %} {% if unit.unit_id == current_unit_id %}unit-list-item--current{% endif %}" data-grade="{{ unit.grade }}" data-section="math">
+      <div class="unit-list-item__head">
+        <span class="unit-list-item__name">
+          {% if unit.unit_id == current_unit_id %}📍{% elif unit.status == 'mastered' %}✅{% elif unit.status == 'in_progress' %}📖{% elif unit.unlocked %}🔓{% else %}🔒{% endif %}
+          {{ unit.display_name }}
+        </span>
+        <div class="unit-list-item__meta">
+          <span class="unit-grade-badge grade-badge--{{ unit.grade }}">中{{ unit.grade - 6 }}</span>
+          <span class="unit-list-item__score {% if unit.status == 'mastered' %}score--mastered{% elif unit.status == 'in_progress' %}score--progress{% else %}score--empty{% endif %}">
+            {% if unit.status != 'not_started' %}{{ unit.mastery_score }}%{% else %}未着手{% endif %}
+          </span>
+        </div>
+      </div>
+      {% if unit.mastery_score > 0 %}
+      <div class="unit-list-item__bar">
+        <span style="width: {{ unit.mastery_score }}%"></span>
+      </div>
+      {% endif %}
+      {% if unit.unlocked %}
+        {% if unit.unit_id == current_unit_id %}
+        <a class="unit-select-btn unit-select-btn--current" href="/students/{{ student.student_id }}">▶ この単元を続ける</a>
+        {% else %}
+        <form method="post" action="/students/{{ student.student_id }}/switch_unit">
+          <input type="hidden" name="unit_id" value="{{ unit.unit_id }}">
+          <button type="submit" class="unit-select-btn">この単元へ切り替え</button>
+        </form>
+        {% endif %}
+      {% else %}
+      <button class="unit-select-btn unit-select-btn--locked" disabled>🔒 ロック中</button>
+      {% endif %}
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<div class="unit-list-back">
+  <a href="/students/{{ student.student_id }}" class="btn btn--back" aria-label="問題画面に戻る">問題に戻る</a>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const tabs = document.querySelectorAll('.grade-tab');
+  const items = document.querySelectorAll('#math-grid .unit-list-item');
+
+  tabs.forEach(function (tab) {
+    tab.addEventListener('click', function () {
+      tabs.forEach(function (t) { t.classList.remove('active'); });
+      tab.classList.add('active');
+
+      const grade = tab.dataset.grade;
+      items.forEach(function (item) {
+        if (grade === 'all' || item.dataset.grade === grade) {
+          item.style.display = '';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    });
+  });
+});
+</script>
+
+{% endblock %}

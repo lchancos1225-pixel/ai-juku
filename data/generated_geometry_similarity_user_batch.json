@@ -1,0 +1,588 @@
+{
+  "problems": [
+    {
+      "full_unit_id": "geometry_similarity",
+      "unit_id": "geometry_similarity",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "question_text": "△ABCと△DEFは相似です。△ABCの辺ABの長さが4cm、それに対応する△DEFの辺DEの長さが12cmのとき、△ABCと△DEFの相似比を求めなさい。",
+      "diagram": null,
+      "diagram_required": true,
+      "diagram_params": {
+        "diagram_type": "similar_triangles_basic",
+        "triangles": [
+          {
+            "name": "small",
+            "points": [
+              { "name": "A", "x": 80, "y": 240 },
+              { "name": "B", "x": 150, "y": 120 },
+              { "name": "C", "x": 240, "y": 240 }
+            ]
+          },
+          {
+            "name": "large",
+            "points": [
+              { "name": "D", "x": 300, "y": 260 },
+              { "name": "E", "x": 390, "y": 90 },
+              { "name": "F", "x": 500, "y": 260 }
+            ]
+          }
+        ],
+        "highlight_pairs": [
+          ["A", "D"],
+          ["B", "E"],
+          ["C", "F"]
+        ],
+        "side_labels": [
+          { "from": "A", "to": "B", "label": "4" },
+          { "from": "D", "to": "E", "label": "12" }
+        ]
+      },
+      "correct_answer": "1:3",
+      "hint_1": "相似比は、対応する辺の長さの比になります。",
+      "hint_2": "AB : DE の比を最も簡単な整数の比で表しましょう。",
+      "explanation_base": "対応する辺の長さの比が相似比になります。AB : DE = 4 : 12 = 1 : 3 です。",
+      "error_pattern_candidates": [
+        "arithmetic_error",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "geometry_similarity",
+      "unit_id": "geometry_similarity",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "question_text": "四角形ABCDと四角形EFGHは相似です。∠A = 70°、∠B = 100°、∠C = 80°のとき、四角形EFGHの∠Hの大きさを求めなさい。",
+      "diagram": null,
+      "correct_answer": "110°",
+      "hint_1": "相似な図形では、対応する角の大きさは等しくなります。また、四角形の内角の和は360°です。",
+      "hint_2": "まず、四角形ABCDの∠Dの大きさを求めましょう。それが対応する∠Hの大きさと同じになります。",
+      "explanation_base": "相似な図形の対応する角の大きさは等しいです。四角形ABCDの内角の和は360°なので、∠D = 360° - (70° + 100° + 80°) = 110° です。対応する∠Hも110°になります。",
+      "error_pattern_candidates": [
+        "arithmetic_error",
+        "comprehension_gap"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "geometry_similarity",
+      "unit_id": "geometry_similarity",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "question_text": "△ABC ∽ △PQR で、その相似比は 2:5 です。△ABCの辺BCの長さが6cmのとき、対応する△PQRの辺QRの長さを求めなさい。",
+      "diagram": null,
+      "correct_answer": "15cm",
+      "hint_1": "相似比を使って、BC : QR = 2 : 5 という比例式を作りましょう。",
+      "hint_2": "6 : QR = 2 : 5 になります。内側の項の積と外側の項の積が等しいことを利用して解きましょう。",
+      "explanation_base": "相似比が2:5なので、対応する辺の比も BC : QR = 2 : 5 です。BC = 6 を代入すると、6 : QR = 2 : 5。内項の積と外項の積は等しいので、2 × QR = 6 × 5 = 30 より、QR = 15cm になります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "explain_differently"
+      ]
+    },
+    {
+      "full_unit_id": "geometry_similarity",
+      "unit_id": "geometry_similarity",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "question_text": "次の2つの三角形は相似です。その相似条件を答えなさい。1つ目の三角形は、3つの辺の長さが3cm, 4cm, 5cmです。2つ目の三角形は、3つの辺の長さが6cm, 8cm, 10cmです。",
+      "diagram": null,
+      "correct_answer": "3組の辺の比がすべて等しい",
+      "hint_1": "2つの三角形の対応する辺の長さの比をそれぞれ比べてみましょう。",
+      "hint_2": "3:6、4:8、5:10 の比をそれぞれ簡単にすると、すべて 1:2 になります。",
+      "explanation_base": "対応する3組の辺の長さの比がすべて 1:2 で等しいため、「3組の辺の比がすべて等しい」という相似条件に当てはまります。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "retry_with_hint"
+      ]
+    },
+    {
+      "full_unit_id": "geometry_similarity",
+      "unit_id": "geometry_similarity",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "question_text": "実際の長さが5kmの直線の道路があります。これを縮尺 1/50000 の地図に描くとき、地図上での道路の長さは何cmになりますか。",
+      "diagram": null,
+      "correct_answer": "10cm",
+      "hint_1": "まず、実際の長さ 5km を cm の単位に直しましょう。",
+      "hint_2": "1km = 1000m、1m = 100cm なので、5km = 500000cm です。これに縮尺の 1/50000 をかけます。",
+      "explanation_base": "5km = 5000m = 500000cm です。これを 1/50000 に縮小するので、500000 × (1 / 50000) = 10cm になります。",
+      "error_pattern_candidates": [
+        "arithmetic_error",
+        "formula_setup_error"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "explain_differently"
+      ]
+    },
+    {
+      "full_unit_id": "geometry_similarity",
+      "unit_id": "geometry_similarity",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "question_text": "△ABCと△DEFがあります。AB=6cm, BC=8cm, ∠B=50°、DE=9cm, EF=12cm, ∠E=50° です。この2つの三角形が相似であることを示すときに使う相似条件を答えなさい。",
+      "diagram": null,
+      "diagram_required": true,
+      "diagram_params": {
+        "diagram_type": "similar_triangles_basic",
+        "triangles": [
+          {
+            "name": "small",
+            "points": [
+              { "name": "A", "x": 80, "y": 240 },
+              { "name": "B", "x": 150, "y": 120 },
+              { "name": "C", "x": 240, "y": 240 }
+            ]
+          },
+          {
+            "name": "large",
+            "points": [
+              { "name": "D", "x": 300, "y": 260 },
+              { "name": "E", "x": 390, "y": 90 },
+              { "name": "F", "x": 500, "y": 260 }
+            ]
+          }
+        ],
+        "highlight_pairs": [
+          ["A", "D"],
+          ["B", "E"],
+          ["C", "F"]
+        ],
+        "equal_angles": [
+          ["B", "E"]
+        ],
+        "side_labels": [
+          { "from": "A", "to": "B", "label": "6" },
+          { "from": "B", "to": "C", "label": "8" },
+          { "from": "D", "to": "E", "label": "9" },
+          { "from": "E", "to": "F", "label": "12" }
+        ]
+      },
+      "correct_answer": "2組の辺の比とその間の角がそれぞれ等しい",
+      "hint_1": "対応する辺の長さの比と、角の大きさに注目しましょう。",
+      "hint_2": "AB:DE の比と BC:EF の比を計算し、その間の角の大きさを比べます。",
+      "explanation_base": "AB:DE = 6:9 = 2:3。BC:EF = 8:12 = 2:3。また、その間の角である ∠B と ∠E がともに50°で等しいです。したがって、「2組の辺の比とその間の角がそれぞれ等しい」という相似条件にあてはまります。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "retry_with_hint"
+      ]
+    },
+    {
+      "full_unit_id": "geometry_similarity",
+      "unit_id": "geometry_similarity",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "question_text": "△ABCにおいて、辺AB上の点Dと辺AC上の点Eを結ぶ線分DEが辺BCと平行です。AD=4cm, DB=2cm, DE=5cmのとき、辺BCの長さを求めなさい。",
+      "diagram": null,
+      "diagram_required": true,
+      "diagram_params": {
+        "diagram_type": "similar_triangles_basic",
+        "triangles": [
+          {
+            "name": "small",
+            "points": [
+              { "name": "A", "x": 120, "y": 90, "label_dx": -20, "label_dy": -12 },
+              { "name": "D", "x": 92, "y": 150, "label_dx": -18, "label_dy": 16 },
+              { "name": "E", "x": 172, "y": 150, "label_dx": 10, "label_dy": 16 }
+            ]
+          },
+          {
+            "name": "large",
+            "points": [
+              { "name": "A2", "x": 120, "y": 90, "label_dx": 10, "label_dy": 14 },
+              { "name": "B", "x": 60, "y": 240, "label_dx": -18, "label_dy": 16 },
+              { "name": "C", "x": 240, "y": 240, "label_dx": 10, "label_dy": 16 }
+            ]
+          }
+        ],
+        "highlight_pairs": [
+          ["A", "A2"],
+          ["D", "B"],
+          ["E", "C"]
+        ],
+        "equal_angles": [
+          ["A", "A2"]
+        ],
+        "parallel_marks": [
+          ["D", "E", "B", "C"]
+        ],
+        "side_labels": [
+          { "from": "A", "to": "D", "label": "4", "offset": 14, "dx": -10, "dy": -2 },
+          { "from": "D", "to": "B", "label": "2", "offset": 14, "dx": -14, "dy": 8 },
+          { "from": "D", "to": "E", "label": "5", "offset": -16, "dy": -4 }
+        ]
+      },
+      "correct_answer": "7.5cm",
+      "hint_1": "DE//BCなので、△ADE ∽ △ABC となります。対応する辺の比を使って比例式を作りましょう。",
+      "hint_2": "ABの長さは AD + DB = 4 + 2 = 6cm です。AD : AB = DE : BC という比例式を解きます。",
+      "explanation_base": "DE//BCより、同位角が等しくなるため △ADE ∽ △ABC です。相似比は AD : AB = 4 : (4 + 2) = 4 : 6 = 2 : 3 となります。DE : BC = 2 : 3 なので、5 : BC = 2 : 3 となり、2 × BC = 15 から BC = 7.5cm になります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "comprehension_gap"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "explain_differently"
+      ]
+    },
+    {
+      "full_unit_id": "geometry_similarity",
+      "unit_id": "geometry_similarity",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "question_text": "△ABC ∽ △DEF で、相似比が 3:4 です。△ABCの面積が 27cm² のとき、△DEFの面積を求めなさい。",
+      "diagram": null,
+      "correct_answer": "48cm²",
+      "hint_1": "相似な図形の面積比は、相似比の2乗の比になります。",
+      "hint_2": "相似比が 3:4 なので、面積比は 3^2 : 4^2 = 9 : 16 になります。",
+      "explanation_base": "相似比が m:n のとき、面積比は m^2 : n^2 になります。この問題では相似比が 3:4 なので、面積比は 9:16 です。△DEFの面積を x とすると、27 : x = 9 : 16 となり、9x = 27 × 16 から x = 48cm² となります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "geometry_similarity",
+      "unit_id": "geometry_similarity",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "question_text": "2つの線分ABとCDが点Oで交わっています。AO=3cm, OB=6cm, CO=2cm, OD=4cmです。このとき、△AOC ∽ △BOD であることを示すために、辺の比のほかに用いる角の性質は何ですか。「〜が等しい」という形で答えなさい。",
+      "diagram": null,
+      "correct_answer": "対頂角が等しい",
+      "hint_1": "点Oの周りの角に注目します。交差する2直線によってできる向かい合った角の性質を使います。",
+      "hint_2": "∠AOCと∠BODの関係を何と呼ぶか思い出しましょう。",
+      "explanation_base": "AO:BO = 3:6 = 1:2、CO:DO = 2:4 = 1:2 より、2組の辺の比が等しいです。その間の角である ∠AOC と ∠BOD は対頂角なので大きさが等しいです。これで「2組の辺の比とその間の角がそれぞれ等しい」が成り立ちます。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "retry_with_hint"
+      ]
+    },
+    {
+      "full_unit_id": "geometry_similarity",
+      "unit_id": "geometry_similarity",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "question_text": "△ABCの辺AB, ACの中点をそれぞれM, Nとします。MNの長さが5cmのとき、辺BCの長さを求めなさい。",
+      "diagram": null,
+      "correct_answer": "10cm",
+      "hint_1": "中点連結定理を使いましょう。",
+      "hint_2": "三角形の2辺の中点を結ぶ線分は、残りの1辺に平行で、長さはその半分になります。",
+      "explanation_base": "辺AB, ACの中点を結んでいるため、中点連結定理により MN は BC の半分の長さになります。よって、BC = MN × 2 = 5 × 2 = 10cm です。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "comprehension_gap"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "geometry_similarity",
+      "unit_id": "geometry_similarity",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "question_text": "平行な2直線 l, m にはさまれた線分ABとCDが点Oで交わっています。点A, Cは直線 l 上、点B, Dは直線 m 上にあります。CO=4cm, OD=6cm, AB=15cmのとき、線分AOの長さを求めなさい。",
+      "diagram": null,
+      "correct_answer": "6cm",
+      "hint_1": "l // m より、錯角が等しいことを使って相似な三角形を見つけます。△AOC ∽ △BOD となります。",
+      "hint_2": "相似比は CO : DO = 4 : 6 = 2 : 3 です。AO : BO も 2 : 3 になることを利用し、AOを x として方程式を作りましょう。",
+      "explanation_base": "l // m より錯角が等しいため、△AOC ∽ △BOD です。相似比は CO : DO = 4 : 6 = 2 : 3 となります。したがって AO : BO = 2 : 3 です。AO = x とすると、BO = 15 - x となります。x : (15 - x) = 2 : 3 より、3x = 2(15 - x)。3x = 30 - 2x となり、5x = 30 から x = 6cm になります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "variable_handling_error"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "explain_differently"
+      ]
+    },
+    {
+      "full_unit_id": "geometry_similarity",
+      "unit_id": "geometry_similarity",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "question_text": "直角三角形ABCにおいて、∠A=90°で、頂点Aから斜辺BCに垂線ADを下ろします。BD=4cm, DC=9cmのとき、ADの長さを求めなさい。",
+      "diagram": null,
+      "correct_answer": "6cm",
+      "hint_1": "△DBA と △DAC が相似であることを利用します。",
+      "hint_2": "対応する辺の比から、BD : AD = AD : DC という比例式を作りましょう。",
+      "explanation_base": "∠BAC=90°、AD⊥BC より、△DBA ∽ △DAC ∽ △ABC となります。△DBA ∽ △DAC において、対応する辺の比は等しいので、BD : AD = AD : CD が成り立ちます。4 : AD = AD : 9 より、AD^2 = 36 となり、AD > 0 なので AD = 6cm になります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "comprehension_gap"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "geometry_similarity",
+      "unit_id": "geometry_similarity",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "question_text": "台形ABCDで、AD // BC です。辺AB, DCの中点をそれぞれE, Fとします。AD=6cm, BC=10cmのとき、線分EFの長さを求めなさい。",
+      "diagram": null,
+      "correct_answer": "8cm",
+      "hint_1": "対角線ACを引き、EFとの交点をGとして、2つの三角形で中点連結定理を使いましょう。",
+      "hint_2": "△ABCにおいてEGの長さを求め、△ACDにおいてGFの長さを求めます。",
+      "explanation_base": "対角線ACを引き、EFとの交点をGとします。△ABCにおいて点E, GはそれぞれAB, ACの中点なので、中点連結定理より EG = BC / 2 = 10 / 2 = 5cm。同様に△ACDにおいて G, FはAC, DCの中点なので GF = AD / 2 = 6 / 2 = 3cm。よって EF = EG + GF = 5 + 3 = 8cm になります。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "formula_setup_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "teacher_intervention_needed"
+      ]
+    },
+    {
+      "full_unit_id": "geometry_similarity",
+      "unit_id": "geometry_similarity",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "question_text": "△ABCの辺AB, AC上に点D, Eがあり、DE // BC です。また、△ADEの面積と四角形DBCEの面積が等しいとき、AD : AB の比を求めなさい。",
+      "diagram": null,
+      "correct_answer": "1:√2",
+      "hint_1": "面積が等しいということは、△ADE の面積は △ABC の面積の半分（1/2）になっているということです。",
+      "hint_2": "△ADE と △ABC は相似です。面積比が 1 : 2 のとき、相似比はどうなるか考えましょう。",
+      "explanation_base": "△ADEと四角形DBCEの面積が等しいので、△ADEの面積は△ABCの面積の 1/2 です。よって、△ADE と △ABC の面積比は 1 : 2 です。面積比が m^2 : n^2 のとき相似比は m : n になるため、相似比は √1 : √2、つまり 1 : √2 となります。したがって、対応する辺の比 AD : AB も 1 : √2 です。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "geometry_similarity",
+      "unit_id": "geometry_similarity",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "question_text": "∠A=90°の直角三角形ABCがあります。辺AB上に点D、辺AC上に点Eをとり、DE//BCとなるようにします。DE=6cm, BC=10cmで、四角形DBCEの面積が32cm²のとき、△ADEの面積を求めなさい。",
+      "diagram": null,
+      "correct_answer": "18cm²",
+      "hint_1": "△ADE ∽ △ABC であり、相似比は DE : BC です。ここから面積比を求めましょう。",
+      "hint_2": "相似比が 6 : 10 = 3 : 5 なので、面積比は 3^2 : 5^2 = 9 : 25 です。四角形DBCEの面積は、全体(25)から△ADE(9)を引いた割合(16)にあたります。",
+      "explanation_base": "DE // BC より △ADE ∽ △ABC です。相似比は DE : BC = 6 : 10 = 3 : 5 となります。面積比は 3^2 : 5^2 = 9 : 25 です。四角形DBCEの面積は、△ABCから△ADEを引いたものなので、比で表すと 25 - 9 = 16 になります。△ADEの面積を x cm² とすると、x : 32 = 9 : 16 となり、16x = 32 × 9 より x = 18cm² となります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "comprehension_gap"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "explain_differently"
+      ]
+    },
+    {
+      "full_unit_id": "geometry_similarity",
+      "unit_id": "geometry_similarity",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "question_text": "△ABC ∽ △PQR で、その相似比は 2:5 です。△ABCの辺BCの長さが6cmのとき、対応する△PQRの辺QRの長さを求めなさい。",
+      "diagram": null,
+      "diagram_required": true,
+      "diagram_params": {
+        "diagram_type": "similar_triangles_basic",
+        "triangles": [
+          {
+            "name": "small",
+            "points": [
+              { "name": "B", "x": 80, "y": 240 },
+              { "name": "A", "x": 150, "y": 120 },
+              { "name": "C", "x": 240, "y": 240 }
+            ]
+          },
+          {
+            "name": "large",
+            "points": [
+              { "name": "Q", "x": 300, "y": 260 },
+              { "name": "P", "x": 390, "y": 90 },
+              { "name": "R", "x": 500, "y": 260 }
+            ]
+          }
+        ],
+        "highlight_pairs": [
+          ["A", "P"],
+          ["B", "Q"],
+          ["C", "R"]
+        ],
+        "side_labels": [
+          { "from": "B", "to": "C", "label": "6" },
+          { "from": "Q", "to": "R", "label": "?" }
+        ]
+      },
+      "correct_answer": "15cm",
+      "hint_1": "相似比を使って、BC : QR = 2 : 5 という比例式を作りましょう。",
+      "hint_2": "6 : QR = 2 : 5 になります。内側の項の積と外側の項の積が等しいことを利用して解きましょう。",
+      "explanation_base": "相似比が2:5なので、対応する辺の比も BC : QR = 2 : 5 です。BC = 6 を代入すると、6 : QR = 2 : 5。内項の積と外項の積は等しいので、2 × QR = 6 × 5 = 30 より、QR = 15cm になります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "explain_differently"
+      ]
+    },
+    {
+      "full_unit_id": "geometry_similarity",
+      "unit_id": "geometry_similarity",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "question_text": "次の2つの三角形は相似です。その相似条件を答えなさい。1つ目の三角形は、3つの辺の長さが3cm, 4cm, 5cmです。2つ目の三角形は、3つの辺の長さが6cm, 8cm, 10cmです。",
+      "diagram": null,
+      "diagram_required": true,
+      "diagram_params": {
+        "diagram_type": "similar_triangles_basic",
+        "triangles": [
+          {
+            "name": "small",
+            "points": [
+              { "name": "A", "x": 80, "y": 240, "label_dx": -18, "label_dy": 16 },
+              { "name": "B", "x": 150, "y": 120, "label_dx": -10, "label_dy": -12 },
+              { "name": "C", "x": 240, "y": 240, "label_dx": 10, "label_dy": 16 }
+            ]
+          },
+          {
+            "name": "large",
+            "points": [
+              { "name": "D", "x": 300, "y": 260, "label_dx": -18, "label_dy": 16 },
+              { "name": "E", "x": 390, "y": 90, "label_dx": -10, "label_dy": -12 },
+              { "name": "F", "x": 500, "y": 260, "label_dx": 10, "label_dy": 16 }
+            ]
+          }
+        ],
+        "highlight_pairs": [
+          ["A", "D"],
+          ["B", "E"],
+          ["C", "F"]
+        ],
+        "side_labels": [
+          { "from": "A", "to": "B", "label": "3", "offset": 14, "dx": -10, "dy": -2 },
+          { "from": "B", "to": "C", "label": "4", "offset": 14, "dx": 10, "dy": -2 },
+          { "from": "A", "to": "C", "label": "5", "offset": -18, "dy": -2 },
+          { "from": "D", "to": "E", "label": "6", "offset": 14, "dx": -12, "dy": -2 },
+          { "from": "E", "to": "F", "label": "8", "offset": 14, "dx": 10, "dy": -2 },
+          { "from": "D", "to": "F", "label": "10", "offset": -20 }
+        ]
+      },
+      "correct_answer": "3組の辺の比がすべて等しい",
+      "hint_1": "2つの三角形の対応する辺の長さの比をそれぞれ比べてみましょう。",
+      "hint_2": "3:6、4:8、5:10 の比をそれぞれ簡単にすると、すべて 1:2 になります。",
+      "explanation_base": "対応する3組の辺の長さの比がすべて 1:2 で等しいため、「3組の辺の比がすべて等しい」という相似条件に当てはまります。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "retry_with_hint"
+      ]
+    },
+    {
+      "full_unit_id": "geometry_similarity",
+      "unit_id": "geometry_similarity",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "question_text": "2つの線分ABとCDが点Oで交わっています。AO=3cm, OB=6cm, CO=2cm, OD=4cmです。このとき、△AOC ∽ △BOD であることを示すために、辺の比のほかに用いる角の性質は何ですか。「〜が等しい」という形で答えなさい。",
+      "diagram": null,
+      "diagram_required": true,
+      "diagram_params": {
+        "diagram_type": "similar_triangles_basic",
+        "triangles": [
+          {
+            "name": "small",
+            "points": [
+              { "name": "A", "x": 90, "y": 90, "label_dx": -18, "label_dy": -8 },
+              { "name": "O", "x": 180, "y": 180, "label_dx": 10, "label_dy": 14 },
+              { "name": "C", "x": 90, "y": 270, "label_dx": -18, "label_dy": 16 }
+            ]
+          },
+          {
+            "name": "large",
+            "points": [
+              { "name": "B", "x": 270, "y": 90, "label_dx": 8, "label_dy": -8 },
+              { "name": "O2", "x": 360, "y": 180, "label_dx": 10, "label_dy": 14 },
+              { "name": "D", "x": 270, "y": 270, "label_dx": 8, "label_dy": 16 }
+            ]
+          }
+        ],
+        "highlight_pairs": [
+          ["A", "B"],
+          ["C", "D"]
+        ],
+        "equal_angles": [
+          ["O", "O2"]
+        ],
+        "side_labels": [
+          { "from": "A", "to": "O", "label": "3", "offset": 16, "dx": -10, "dy": -2 },
+          { "from": "O", "to": "C", "label": "2", "offset": 16, "dx": -10, "dy": 8 },
+          { "from": "B", "to": "O2", "label": "6", "offset": -16, "dx": 10, "dy": -2 },
+          { "from": "O2", "to": "D", "label": "4", "offset": -16, "dx": 10, "dy": 8 }
+        ]
+      },
+      "correct_answer": "対頂角が等しい",
+      "hint_1": "点Oの周りの角に注目します。交差する2直線によってできる向かい合った角の性質を使います。",
+      "hint_2": "∠AOCと∠BODの関係を何と呼ぶか思い出しましょう。",
+      "explanation_base": "AO:BO = 3:6 = 1:2、CO:DO = 2:4 = 1:2 より、2組の辺の比が等しいです。その間の角である ∠AOC と ∠BOD は対頂角なので大きさが等しいです。これで「2組の辺の比とその間の角がそれぞれ等しい」が成り立ちます。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "retry_with_hint"
+      ]
+    }
+  ]
+}

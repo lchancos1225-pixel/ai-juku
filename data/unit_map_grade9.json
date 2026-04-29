@@ -1,0 +1,82 @@
+[
+  {
+    "full_unit_id": "quadratic_expressions_expansion",
+    "grade": 9,
+    "display_name": "式の展開",
+    "parent_unit": "quadratic_expressions",
+    "sub_unit": "expansion",
+    "prerequisite_full_unit_id": "probability_basic",
+    "next_full_unit_id": "factorization_basic",
+    "display_order": 1
+  },
+  {
+    "full_unit_id": "factorization_basic",
+    "grade": 9,
+    "display_name": "因数分解（基本）",
+    "parent_unit": "factorization",
+    "sub_unit": "basic",
+    "prerequisite_full_unit_id": "quadratic_expressions_expansion",
+    "next_full_unit_id": "quadratic_equations_basic",
+    "display_order": 2
+  },
+  {
+    "full_unit_id": "quadratic_equations_basic",
+    "grade": 9,
+    "display_name": "二次方程式（基本）",
+    "parent_unit": "quadratic_equations",
+    "sub_unit": "basic",
+    "prerequisite_full_unit_id": "factorization_basic",
+    "next_full_unit_id": "quadratic_equations_application",
+    "display_order": 3
+  },
+  {
+    "full_unit_id": "quadratic_equations_application",
+    "grade": 9,
+    "display_name": "二次方程式（応用）",
+    "parent_unit": "quadratic_equations",
+    "sub_unit": "application",
+    "prerequisite_full_unit_id": "quadratic_equations_basic",
+    "next_full_unit_id": "functions_y_equals_ax2",
+    "display_order": 4
+  },
+  {
+    "full_unit_id": "functions_y_equals_ax2",
+    "grade": 9,
+    "display_name": "関数 y=ax^2",
+    "parent_unit": "functions_y_equals_ax2",
+    "sub_unit": "basic",
+    "prerequisite_full_unit_id": "quadratic_equations_application",
+    "next_full_unit_id": "geometry_similarity",
+    "display_order": 5
+  },
+  {
+    "full_unit_id": "geometry_similarity",
+    "grade": 9,
+    "display_name": "相似",
+    "parent_unit": "geometry_similarity",
+    "sub_unit": "basic",
+    "prerequisite_full_unit_id": "functions_y_equals_ax2",
+    "next_full_unit_id": "circles_angles",
+    "display_order": 6
+  },
+  {
+    "full_unit_id": "circles_angles",
+    "grade": 9,
+    "display_name": "円と角",
+    "parent_unit": "circles_angles",
+    "sub_unit": "basic",
+    "prerequisite_full_unit_id": "geometry_similarity",
+    "next_full_unit_id": "sample_survey_basic",
+    "display_order": 7
+  },
+  {
+    "full_unit_id": "sample_survey_basic",
+    "grade": 9,
+    "display_name": "標本調査（基本）",
+    "parent_unit": "sample_survey",
+    "sub_unit": "basic",
+    "prerequisite_full_unit_id": "circles_angles",
+    "next_full_unit_id": null,
+    "display_order": 8
+  }
+]

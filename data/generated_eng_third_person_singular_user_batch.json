@@ -1,0 +1,709 @@
+{
+  "problems": [
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_third_person_singular",
+      "unit_id": "eng_third_person_singular",
+      "sub_unit": "third_person_singular",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に動詞の正しい形を書きなさい。\n「She ( play ) soccer every day.」",
+      "correct_answer": "plays",
+      "hint_1": "主語が She のとき、一般動詞には -s をつけます。",
+      "hint_2": "play に -s を加えた形は何ですか？",
+      "explanation_base": "主語が三人称単数（She）のとき、動詞に -s をつけます。play → plays",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_third_person_singular",
+      "unit_id": "eng_third_person_singular",
+      "sub_unit": "third_person_singular",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に動詞の正しい形を書きなさい。\n「He ( like ) music.」",
+      "correct_answer": "likes",
+      "hint_1": "主語が He のとき、一般動詞には -s をつけます。",
+      "hint_2": "like に -s を加えた形は何ですか？",
+      "explanation_base": "主語が三人称単数（He）のとき、動詞に -s をつけます。like → likes",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_third_person_singular",
+      "unit_id": "eng_third_person_singular",
+      "sub_unit": "third_person_singular",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に動詞の正しい形を書きなさい。\n「She ( have ) a dog.」",
+      "correct_answer": "has",
+      "hint_1": "have は三人称単数現在形で特別な形になります。",
+      "hint_2": "have → h? という不規則変化です。",
+      "explanation_base": "have は三人称単数現在形で has になります。She has a dog.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_third_person_singular",
+      "unit_id": "eng_third_person_singular",
+      "sub_unit": "third_person_singular",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に動詞の正しい形を書きなさい。\n「He ( swim ) very fast.」",
+      "correct_answer": "swims",
+      "hint_1": "主語が He のとき、一般動詞には -s をつけます。",
+      "hint_2": "swim に -s を加えた形は何ですか？",
+      "explanation_base": "主語が三人称単数（He）のとき、動詞に -s をつけます。swim → swims",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_third_person_singular",
+      "unit_id": "eng_third_person_singular",
+      "sub_unit": "third_person_singular",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に動詞の正しい形を書きなさい。\n「It ( live ) in Africa.」",
+      "correct_answer": "lives",
+      "hint_1": "主語が It のとき、動詞には -s をつけます。live の場合は？",
+      "hint_2": "live + s = lives になります。",
+      "explanation_base": "主語が三人称単数（It）のとき、動詞に -s をつけます。live → lives",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_third_person_singular",
+      "unit_id": "eng_third_person_singular",
+      "sub_unit": "third_person_singular",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に動詞の正しい形を書きなさい。\n「She ( study ) math every night.」",
+      "correct_answer": "studies",
+      "hint_1": "study は語末が子音＋y なので、y を i に変えて -es をつけます。",
+      "hint_2": "study → studi- + es = ?",
+      "explanation_base": "語末が「子音+y」で終わる動詞は y を i に変えて -es をつけます。study → studies",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_third_person_singular",
+      "unit_id": "eng_third_person_singular",
+      "sub_unit": "third_person_singular",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に動詞の正しい形を書きなさい。\n「He ( go ) to school by bike.」",
+      "correct_answer": "goes",
+      "hint_1": "go は -es をつける動詞の一つです。",
+      "hint_2": "go + es = ?",
+      "explanation_base": "go は三人称単数現在形で goes になります。He goes to school by bike.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_third_person_singular",
+      "unit_id": "eng_third_person_singular",
+      "sub_unit": "third_person_singular",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に動詞の正しい形を書きなさい。\n「She ( watch ) TV after dinner.」",
+      "correct_answer": "watches",
+      "hint_1": "watch は語末が -ch なので -es をつけます。",
+      "hint_2": "watch + es = ?",
+      "explanation_base": "語末が -ch/-sh/-x/-o で終わる動詞は -es をつけます。watch → watches",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_third_person_singular",
+      "unit_id": "eng_third_person_singular",
+      "sub_unit": "third_person_singular",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に動詞の正しい形を書きなさい。\n「He ( fix ) bikes on weekends.」",
+      "correct_answer": "fixes",
+      "hint_1": "fix は語末が -x なので -es をつけます。",
+      "hint_2": "fix + es = ?",
+      "explanation_base": "語末が -x で終わる動詞は -es をつけます。fix → fixes",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_third_person_singular",
+      "unit_id": "eng_third_person_singular",
+      "sub_unit": "third_person_singular",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に動詞の正しい形を書きなさい。\n「She ( carry ) a heavy bag.」",
+      "correct_answer": "carries",
+      "hint_1": "carry は語末が子音＋y なので、y を i に変えて -es をつけます。",
+      "hint_2": "carry → carri- + es = ?",
+      "explanation_base": "語末が「子音+y」で終わる動詞は y を i に変えて -es。carry → carries",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_third_person_singular",
+      "unit_id": "eng_third_person_singular",
+      "sub_unit": "third_person_singular",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「彼は毎朝6時に起きます。」",
+      "correct_answer": "He gets up at six every morning.",
+      "hint_1": "「起きる」は get up です。三人称単数現在形に変えます。",
+      "hint_2": "get up → gets up に変えて、He gets up 〜 という形にします。",
+      "explanation_base": "三人称単数現在形なので get → gets です。He gets up at six every morning.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_third_person_singular",
+      "unit_id": "eng_third_person_singular",
+      "sub_unit": "third_person_singular",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「彼女は英語をとても上手に話します。」",
+      "correct_answer": "She speaks English very well.",
+      "hint_1": "「話す」は speak です。三人称単数現在形に変えます。",
+      "hint_2": "speak → speaks に変えて、She speaks 〜 という形にします。",
+      "explanation_base": "三人称単数現在形なので speak → speaks です。She speaks English very well.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_third_person_singular",
+      "unit_id": "eng_third_person_singular",
+      "sub_unit": "third_person_singular",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「私の父は車を運転しません。」",
+      "correct_answer": "My father does not drive a car.",
+      "hint_1": "三人称単数の否定文では does not を使います。",
+      "hint_2": "My father does not 動詞の原形〜 という形にします。",
+      "explanation_base": "三人称単数の否定文は does not + 動詞原形です。My father does not drive a car.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_third_person_singular",
+      "unit_id": "eng_third_person_singular",
+      "sub_unit": "third_person_singular",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「あなたのお姉さんはピアノを弾きますか？」",
+      "correct_answer": "Does your sister play the piano?",
+      "hint_1": "三人称単数の疑問文では Does を文の先頭に置きます。",
+      "hint_2": "Does + 主語 + 動詞原形〜? という形にします。",
+      "explanation_base": "三人称単数の疑問文は Does + 主語 + 動詞原形〜? です。Does your sister play the piano?",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_third_person_singular",
+      "unit_id": "eng_third_person_singular",
+      "sub_unit": "third_person_singular",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「田中先生は数学を教えています。」",
+      "correct_answer": "Mr. Tanaka teaches math.",
+      "hint_1": "「教える」は teach。三人称単数現在形の変化に注意してください。",
+      "hint_2": "teach は語末が -ch なので teaches になります。",
+      "explanation_base": "teach の三人称単数現在形は teaches。Mr. Tanaka teaches math.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_third_person_singular",
+      "unit_id": "eng_third_person_singular",
+      "sub_unit": "third_person_singular",
+      "problem_type": "mini_test",
+      "test_scope": "eng_third_person_singular",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に動詞の正しい形を書きなさい。\n「She ( read ) books every day.」",
+      "correct_answer": "reads",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "三人称単数（She）なので read → reads となります。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_third_person_singular",
+      "unit_id": "eng_third_person_singular",
+      "sub_unit": "third_person_singular",
+      "problem_type": "mini_test",
+      "test_scope": "eng_third_person_singular",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に動詞の正しい形を書きなさい。\n「He ( do ) his homework after school.」",
+      "correct_answer": "does",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "do の三人称単数現在形は does です。He does his homework after school.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_third_person_singular",
+      "unit_id": "eng_third_person_singular",
+      "sub_unit": "third_person_singular",
+      "problem_type": "mini_test",
+      "test_scope": "eng_third_person_singular",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「私の母は料理が得意です。（料理する＝cook）」",
+      "correct_answer": "My mother cooks well.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "My mother（三人称単数）なので cook → cooks となります。My mother cooks well.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_third_person_singular",
+      "unit_id": "eng_third_person_singular",
+      "sub_unit": "third_person_singular",
+      "problem_type": "mini_test",
+      "test_scope": "eng_third_person_singular",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に動詞の正しい形を書きなさい。\n「She ( try ) her best every day.」",
+      "correct_answer": "tries",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "try → 語末が子音+y なので tries になります。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_third_person_singular",
+      "unit_id": "eng_third_person_singular",
+      "sub_unit": "third_person_singular",
+      "problem_type": "mini_test",
+      "test_scope": "eng_third_person_singular",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「彼はサッカーをしません。」",
+      "correct_answer": "He does not play soccer.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "三人称単数の否定文は does not + 動詞原形です。He does not play soccer.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_third_person_singular",
+      "unit_id": "eng_third_person_singular",
+      "sub_unit": "third_person_singular",
+      "problem_type": "unit_test",
+      "test_scope": "eng_third_person_singular",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に動詞の正しい形を書きなさい。\n「He ( eat ) lunch at noon.」",
+      "correct_answer": "eats",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "三人称単数（He）なので eat → eats となります。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_third_person_singular",
+      "unit_id": "eng_third_person_singular",
+      "sub_unit": "third_person_singular",
+      "problem_type": "unit_test",
+      "test_scope": "eng_third_person_singular",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に動詞の正しい形を書きなさい。\n「She ( know ) the answer.」",
+      "correct_answer": "knows",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "三人称単数（She）なので know → knows となります。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_third_person_singular",
+      "unit_id": "eng_third_person_singular",
+      "sub_unit": "third_person_singular",
+      "problem_type": "unit_test",
+      "test_scope": "eng_third_person_singular",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に動詞の正しい形を書きなさい。\n「He ( run ) in the park.」",
+      "correct_answer": "runs",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "三人称単数（He）なので run → runs となります。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_third_person_singular",
+      "unit_id": "eng_third_person_singular",
+      "sub_unit": "third_person_singular",
+      "problem_type": "unit_test",
+      "test_scope": "eng_third_person_singular",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に動詞の正しい形を書きなさい。\n「She ( wash ) her hands before dinner.」",
+      "correct_answer": "washes",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "wash の三人称単数現在形は washes（語末 -sh に -es）です。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_third_person_singular",
+      "unit_id": "eng_third_person_singular",
+      "sub_unit": "third_person_singular",
+      "problem_type": "unit_test",
+      "test_scope": "eng_third_person_singular",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に動詞の正しい形を書きなさい。\n「He ( fly ) to Tokyo once a month.」",
+      "correct_answer": "flies",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "fly → 語末が子音+y なので flies（y→i+es）となります。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_third_person_singular",
+      "unit_id": "eng_third_person_singular",
+      "sub_unit": "third_person_singular",
+      "problem_type": "unit_test",
+      "test_scope": "eng_third_person_singular",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「彼女は毎日日記を書きます。」",
+      "correct_answer": "She writes a diary every day.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "write の三人称単数現在形は writes です。She writes a diary every day.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_third_person_singular",
+      "unit_id": "eng_third_person_singular",
+      "sub_unit": "third_person_singular",
+      "problem_type": "unit_test",
+      "test_scope": "eng_third_person_singular",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「私の兄は野球が好きですか？」",
+      "correct_answer": "Does my brother like baseball?",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "三人称単数の疑問文は Does + 主語 + 動詞原形〜? です。Does my brother like baseball?",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_third_person_singular",
+      "unit_id": "eng_third_person_singular",
+      "sub_unit": "third_person_singular",
+      "problem_type": "unit_test",
+      "test_scope": "eng_third_person_singular",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「彼女はその映画を見ません。」",
+      "correct_answer": "She does not watch the movie.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "三人称単数の否定文は does not + 動詞原形です。She does not watch the movie.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_third_person_singular",
+      "unit_id": "eng_third_person_singular",
+      "sub_unit": "third_person_singular",
+      "problem_type": "unit_test",
+      "test_scope": "eng_third_person_singular",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「鈴木先生は歴史を教えていますか？」",
+      "correct_answer": "Does Ms. Suzuki teach history?",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "三人称単数の疑問文は Does + 主語 + 動詞原形〜? です。Does Ms. Suzuki teach history?",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_third_person_singular",
+      "unit_id": "eng_third_person_singular",
+      "sub_unit": "third_person_singular",
+      "problem_type": "unit_test",
+      "test_scope": "eng_third_person_singular",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「私の猫は魚を食べません。」",
+      "correct_answer": "My cat does not eat fish.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "三人称単数の否定文は does not + 動詞原形です。My cat does not eat fish.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    }
+  ]
+}

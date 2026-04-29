@@ -1,0 +1,44 @@
+{
+  "grades": {
+    "grade7": [
+      "positive_negative_numbers_addition",
+      "positive_negative_numbers_subtraction",
+      "positive_negative_numbers_multiplication",
+      "positive_negative_numbers_division",
+      "algebraic_expressions_basic",
+      "algebraic_expressions_terms",
+      "algebraic_expressions_substitution",
+      "linear_equations_basic",
+      "linear_equations_transposition",
+      "linear_equations_word_problem"
+    ],
+    "grade8": [
+      "simultaneous_equations_basic",
+      "simultaneous_equations_application",
+      "linear_function_basic",
+      "linear_function_graph",
+      "geometry_parallel_congruence",
+      "probability_basic"
+    ],
+    "grade9": [
+      "quadratic_expressions_expansion",
+      "factorization_basic",
+      "quadratic_equations_basic",
+      "quadratic_equations_application",
+      "functions_y_equals_ax2",
+      "geometry_similarity",
+      "circles_angles",
+      "sample_survey_basic"
+    ]
+  },
+  "practice_rule": {
+    "easy": 5,
+    "normal": 5,
+    "hard": 5,
+    "problem_type": "practice"
+  },
+  "test_rule": {
+    "mini_test": 5,
+    "unit_test": 10
+  }
+}

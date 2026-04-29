@@ -1,0 +1,293 @@
+{
+  "problems": [
+    {
+      "full_unit_id": "positive_negative_numbers_multiplication",
+      "unit_id": "positive_negative_numbers",
+      "sub_unit": "multiplication",
+      "difficulty": "easy",
+      "question_text": "(+4) × (+5) を計算しなさい。",
+      "correct_answer": "20",
+      "hint_1": "どちらもプラスの数なので、同符号のかけ算です。",
+      "hint_2": "同符号のかけ算は答えがプラスになります。4と5をかけましょう。",
+      "explanation_base": "同符号の乗法なので、絶対値の積にプラスの符号をつけます。+(4 × 5) = 20 です。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "review_sign_rules",
+        "repeat_same_pattern"
+      ]
+    },
+    {
+      "full_unit_id": "positive_negative_numbers_multiplication",
+      "unit_id": "positive_negative_numbers",
+      "sub_unit": "multiplication",
+      "difficulty": "easy",
+      "question_text": "(-3) × (-6) を計算しなさい。",
+      "correct_answer": "18",
+      "hint_1": "どちらもマイナスの数なので、同符号のかけ算です。",
+      "hint_2": "同符号のかけ算の答えはプラスになります。3と6をかけましょう。",
+      "explanation_base": "負の数同士（同符号）の乗法なので、答えの符号はプラスになります。+(3 × 6) = 18 です。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "operation_confusion"
+      ],
+      "intervention_candidates": [
+        "review_sign_rules",
+        "explain_differently"
+      ]
+    },
+    {
+      "full_unit_id": "positive_negative_numbers_multiplication",
+      "unit_id": "positive_negative_numbers",
+      "sub_unit": "multiplication",
+      "difficulty": "easy",
+      "question_text": "(+8) × (-2) を計算しなさい。",
+      "correct_answer": "-16",
+      "hint_1": "プラスとマイナスの数なので、異符号のかけ算です。",
+      "hint_2": "異符号のかけ算の答えはマイナスになります。8と2をかけましょう。",
+      "explanation_base": "異符号の乗法なので、答えの符号はマイナスになります。-(8 × 2) = -16 です。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "review_sign_rules",
+        "repeat_same_pattern"
+      ]
+    },
+    {
+      "full_unit_id": "positive_negative_numbers_multiplication",
+      "unit_id": "positive_negative_numbers",
+      "sub_unit": "multiplication",
+      "difficulty": "easy",
+      "question_text": "(-7) × (+3) を計算しなさい。",
+      "correct_answer": "-21",
+      "hint_1": "マイナスとプラスの異符号のかけ算です。符号はどうなるでしょうか。",
+      "hint_2": "異符号のかけ算は答えがマイナスになります。7と3をかけましょう。",
+      "explanation_base": "異符号の乗法なので、絶対値の積にマイナスの符号をつけます。-(7 × 3) = -21 です。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "review_sign_rules",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "positive_negative_numbers_multiplication",
+      "unit_id": "positive_negative_numbers",
+      "sub_unit": "multiplication",
+      "difficulty": "easy",
+      "question_text": "(-9) × 0 を計算しなさい。",
+      "correct_answer": "0",
+      "hint_1": "どんな数に0をかけても、答えは決まっています。",
+      "hint_2": "0をかけると、元の数の符号に関わらず答えは0になります。",
+      "explanation_base": "どんな数に0をかけても、結果は必ず 0 になります。",
+      "error_pattern_candidates": [
+        "operation_confusion",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "explain_differently"
+      ]
+    },
+    {
+      "full_unit_id": "positive_negative_numbers_multiplication",
+      "unit_id": "positive_negative_numbers",
+      "sub_unit": "multiplication",
+      "difficulty": "normal",
+      "question_text": "(-2) × (+4) × (-5) を計算しなさい。",
+      "correct_answer": "40",
+      "hint_1": "3つの数のかけ算です。計算の順番を工夫してみましょう。",
+      "hint_2": "(-2) と (-5) を先にかけると、計算が簡単になります。",
+      "explanation_base": "乗法の交換法則を利用して、(-2) × (-5) を先に計算します。同符号の積なので +10 となり、これに (+4) をかけて 40 になります。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "review_sign_rules",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "positive_negative_numbers_multiplication",
+      "unit_id": "positive_negative_numbers",
+      "sub_unit": "multiplication",
+      "difficulty": "normal",
+      "question_text": "(-1.5) × (+4) を計算しなさい。",
+      "correct_answer": "-6",
+      "hint_1": "小数と整数の異符号のかけ算です。",
+      "hint_2": "異符号の積なので符号はマイナスになります。1.5 × 4 を計算しましょう。",
+      "explanation_base": "異符号の乗法なので符号はマイナスになります。-(1.5 × 4) = -6 です。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "review_sign_rules",
+        "retry_with_hint"
+      ]
+    },
+    {
+      "full_unit_id": "positive_negative_numbers_multiplication",
+      "unit_id": "positive_negative_numbers",
+      "sub_unit": "multiplication",
+      "difficulty": "normal",
+      "question_text": "(+2/3) × (-9/4) を計算しなさい。",
+      "correct_answer": "-3/2",
+      "hint_1": "分数の異符号のかけ算です。符号を決めてから、分母同士・分子同士をかけましょう。",
+      "hint_2": "符号はマイナスになります。計算する前に約分できるところは約分しましょう。",
+      "explanation_base": "異符号の乗法なので符号はマイナスになります。約分をしてから計算すると、-( (2×9)/(3×4) ) = -3/2 となります。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "prerequisite_gap"
+      ],
+      "intervention_candidates": [
+        "review_sign_rules",
+        "fallback_prerequisite"
+      ]
+    },
+    {
+      "full_unit_id": "positive_negative_numbers_multiplication",
+      "unit_id": "positive_negative_numbers",
+      "sub_unit": "multiplication",
+      "difficulty": "normal",
+      "question_text": "(-2.5) × (-0.4) を計算しなさい。",
+      "correct_answer": "1",
+      "hint_1": "小数同士の同符号のかけ算です。符号はどうなるでしょうか。",
+      "hint_2": "マイナス同士をかけるのでプラスになります。2.5 × 0.4 を計算しましょう。",
+      "explanation_base": "同符号の乗法なので符号はプラスになります。+(2.5 × 0.4) = 1 です。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "review_sign_rules",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "positive_negative_numbers_multiplication",
+      "unit_id": "positive_negative_numbers",
+      "sub_unit": "multiplication",
+      "difficulty": "normal",
+      "question_text": "(-5/6) × 12 を計算しなさい。",
+      "correct_answer": "-10",
+      "hint_1": "分数と整数のかけ算です。符号を決めてから、約分してみましょう。",
+      "hint_2": "異符号なので答えはマイナスになります。12 を 12/1 と考えて計算しましょう。",
+      "explanation_base": "異符号の乗法なので符号はマイナスになります。-(5/6 × 12) = -10 です。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "prerequisite_gap"
+      ],
+      "intervention_candidates": [
+        "review_sign_rules",
+        "fallback_prerequisite"
+      ]
+    },
+    {
+      "full_unit_id": "positive_negative_numbers_multiplication",
+      "unit_id": "positive_negative_numbers",
+      "sub_unit": "multiplication",
+      "difficulty": "hard",
+      "question_text": "(-0.5) × (-3/4) × (-8) を計算しなさい。",
+      "correct_answer": "-3",
+      "hint_1": "小数と分数が混ざった3つの数のかけ算です。全体でマイナスがいくつあるか確認して符号を決めましょう。",
+      "hint_2": "マイナスが3つあるので、答えの符号はマイナスになります。(-0.5) を分数にするか、分数を小数にして計算しましょう。",
+      "explanation_base": "負の数が奇数個（3つ）なので、積の符号はマイナスになります。0.5 を 1/2 に直して計算すると、-(1/2 × 3/4 × 8) = -3 になります。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "arithmetic_error",
+        "prerequisite_gap"
+      ],
+      "intervention_candidates": [
+        "review_sign_rules",
+        "explain_differently"
+      ]
+    },
+    {
+      "full_unit_id": "positive_negative_numbers_multiplication",
+      "unit_id": "positive_negative_numbers",
+      "sub_unit": "multiplication",
+      "difficulty": "hard",
+      "question_text": "(+1.2) × (-5/6) × (-2.5) を計算しなさい。",
+      "correct_answer": "2.5",
+      "hint_1": "小数と分数のかけ算です。マイナスが2つあるので、答えの符号はどうなるでしょうか。",
+      "hint_2": "マイナスが偶数個なので答えはプラスになります。1.2を分数に直すと計算しやすくなります。",
+      "explanation_base": "負の数が偶数個（2つ）なので積の符号はプラスになります。1.2 を 6/5、2.5 を 5/2 に直して計算すると、+(6/5 × 5/6 × 5/2) = 5/2 (または 2.5) となります。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "prerequisite_gap",
+        "operation_confusion"
+      ],
+      "intervention_candidates": [
+        "review_sign_rules",
+        "fallback_prerequisite"
+      ]
+    },
+    {
+      "full_unit_id": "positive_negative_numbers_multiplication",
+      "unit_id": "positive_negative_numbers",
+      "sub_unit": "multiplication",
+      "difficulty": "hard",
+      "question_text": "(-4/7) × (+1.4) × (-5) を計算しなさい。",
+      "correct_answer": "4",
+      "hint_1": "小数 1.4 を分数に直して、すべての数をかけ合わせましょう。",
+      "hint_2": "1.4 は 14/10、約分して 7/5 です。全体の符号を決めてから約分しましょう。",
+      "explanation_base": "負の数が2つなので符号はプラスになります。1.4 を分数 7/5 に直すと、+(4/7 × 7/5 × 5) = 4 となります。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "arithmetic_error",
+        "prerequisite_gap"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "fallback_prerequisite"
+      ]
+    },
+    {
+      "full_unit_id": "positive_negative_numbers_multiplication",
+      "unit_id": "positive_negative_numbers",
+      "sub_unit": "multiplication",
+      "difficulty": "hard",
+      "question_text": "(-2) × (-1.5) × (-3) × (-0.5) を計算しなさい。",
+      "correct_answer": "4.5",
+      "hint_1": "4つの数のかけ算です。マイナスの数が4つあるので符号はどうなるでしょうか。",
+      "hint_2": "負の数が偶数個なので答えはプラスになります。計算しやすい2つの数のペアを作ってみましょう。",
+      "explanation_base": "負の数が4つ（偶数個）なので積の符号はプラスになります。(-2) × (-0.5) = 1 と (-1.5) × (-3) = 4.5 を別々に計算してからかけると、1 × 4.5 = 4.5 になります。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "review_sign_rules",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "positive_negative_numbers_multiplication",
+      "unit_id": "positive_negative_numbers",
+      "sub_unit": "multiplication",
+      "difficulty": "hard",
+      "question_text": "(+3/8) × (-16/9) × (-0.75) を計算しなさい。",
+      "correct_answer": "1/2",
+      "hint_1": "小数と分数が混ざっています。-0.75を分数に直してみましょう。",
+      "hint_2": "-0.75は-3/4です。負の数が2つあるので全体の符号はプラスになります。",
+      "explanation_base": "負の数が2つなので符号はプラスになります。0.75を分数3/4に直し、約分して計算します。+(3/8 × 16/9 × 3/4) = 1/2 になります。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "prerequisite_gap",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "review_sign_rules",
+        "fallback_prerequisite"
+      ]
+    }
+  ]
+}

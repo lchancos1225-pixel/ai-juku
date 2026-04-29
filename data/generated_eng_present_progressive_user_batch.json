@@ -1,0 +1,709 @@
+{
+  "problems": [
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_present_progressive",
+      "unit_id": "eng_present_progressive",
+      "sub_unit": "present_progressive",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に動詞を現在進行形にして入れなさい。\n「He ( play ) soccer now.」",
+      "correct_answer": "is playing",
+      "hint_1": "現在進行形は be動詞＋動詞ing形の組み合わせです。",
+      "hint_2": "He に対応するbe動詞 is と、play に -ing を加えた形を組み合わせます。",
+      "explanation_base": "現在進行形：be動詞＋動詞-ing形。He is playing soccer now.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_present_progressive",
+      "unit_id": "eng_present_progressive",
+      "sub_unit": "present_progressive",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に動詞を現在進行形にして入れなさい。\n「She ( study ) now.」",
+      "correct_answer": "is studying",
+      "hint_1": "現在進行形は be動詞＋動詞ing形の組み合わせです。",
+      "hint_2": "She に対応するbe動詞は is。study → studying。",
+      "explanation_base": "She is studying now.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_present_progressive",
+      "unit_id": "eng_present_progressive",
+      "sub_unit": "present_progressive",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に動詞を現在進行形にして入れなさい。\n「They ( watch ) TV.」",
+      "correct_answer": "are watching",
+      "hint_1": "現在進行形は be動詞＋動詞ing形の組み合わせです。",
+      "hint_2": "They に対応するbe動詞は are。watch → watching。",
+      "explanation_base": "They are watching TV.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_present_progressive",
+      "unit_id": "eng_present_progressive",
+      "sub_unit": "present_progressive",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に動詞を現在進行形にして入れなさい。\n「I ( read ) a book.」",
+      "correct_answer": "am reading",
+      "hint_1": "現在進行形は be動詞＋動詞ing形の組み合わせです。",
+      "hint_2": "I に対応するbe動詞は am。read → reading。",
+      "explanation_base": "I am reading a book.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_present_progressive",
+      "unit_id": "eng_present_progressive",
+      "sub_unit": "present_progressive",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に動詞を現在進行形にして入れなさい。\n「We ( eat ) lunch now.」",
+      "correct_answer": "are eating",
+      "hint_1": "現在進行形は be動詞＋動詞ing形の組み合わせです。",
+      "hint_2": "We に対応するbe動詞は are。eat + ing = eating。",
+      "explanation_base": "We are eating lunch now.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_present_progressive",
+      "unit_id": "eng_present_progressive",
+      "sub_unit": "present_progressive",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に動詞を現在進行形にして入れなさい。\n「He ( swim ) in the pool.」",
+      "correct_answer": "is swimming",
+      "hint_1": "swim のように語末が「短母音＋子音」の場合、子音を重ねて -ing をつけます。",
+      "hint_2": "swim → swi-mm-ing のように最後の m を重ねます。",
+      "explanation_base": "swim → swimming（語末子音重ね）。He is swimming in the pool.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_present_progressive",
+      "unit_id": "eng_present_progressive",
+      "sub_unit": "present_progressive",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に動詞を現在進行形にして入れなさい。\n「She ( make ) a cake.」",
+      "correct_answer": "is making",
+      "hint_1": "make のように語末が e で終わる場合、e を取って -ing をつけます。",
+      "hint_2": "make の e を取り、-ing をつけます。",
+      "explanation_base": "make → making（語末 e 削除）。She is making a cake.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_present_progressive",
+      "unit_id": "eng_present_progressive",
+      "sub_unit": "present_progressive",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に動詞を現在進行形にして入れなさい。\n「He ( run ) in the park.」",
+      "correct_answer": "is running",
+      "hint_1": "run のように語末が「短母音＋子音」の場合、子音を重ねます。",
+      "hint_2": "run → ru-nn-ing のように n を重ねます。",
+      "explanation_base": "run → running（語末子音重ね）。He is running in the park.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_present_progressive",
+      "unit_id": "eng_present_progressive",
+      "sub_unit": "present_progressive",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "現在進行形の疑問文に書き換えなさい。\n「She is cooking dinner.」",
+      "correct_answer": "Is she cooking dinner?",
+      "hint_1": "疑問文では be動詞を文の先頭に出します。",
+      "hint_2": "Is + 主語 + 動詞ing〜? の形にします。",
+      "explanation_base": "現在進行形の疑問文：Is she cooking dinner?",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_present_progressive",
+      "unit_id": "eng_present_progressive",
+      "sub_unit": "present_progressive",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "現在進行形の否定文に書き換えなさい。\n「He is sleeping.」",
+      "correct_answer": "He is not sleeping.",
+      "hint_1": "現在進行形の否定文は be動詞の直後に not を置きます。",
+      "hint_2": "He is not 〜ing. の形にします。",
+      "explanation_base": "現在進行形の否定文：He is not sleeping.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_present_progressive",
+      "unit_id": "eng_present_progressive",
+      "sub_unit": "present_progressive",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「私は今、宿題をやっているところです。」",
+      "correct_answer": "I am doing my homework now.",
+      "hint_1": "「今〜しているところ」は現在進行形で表します。",
+      "hint_2": "I am + 動詞ing 〜 now. の形にします。",
+      "explanation_base": "I am doing my homework now.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_present_progressive",
+      "unit_id": "eng_present_progressive",
+      "sub_unit": "present_progressive",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「彼女は今、電話で話していますか？」",
+      "correct_answer": "Is she talking on the phone now?",
+      "hint_1": "疑問文では be動詞を文の先頭に出します。",
+      "hint_2": "Is she 〜ing? の形にします。",
+      "explanation_base": "Is she talking on the phone now?",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_present_progressive",
+      "unit_id": "eng_present_progressive",
+      "sub_unit": "present_progressive",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「彼らは今、音楽を聴いていません。」",
+      "correct_answer": "They are not listening to music now.",
+      "hint_1": "「〜していません」は be動詞 + not + 動詞ing の形です。",
+      "hint_2": "They are not 〜ing. の形にします。",
+      "explanation_base": "They are not listening to music now.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_present_progressive",
+      "unit_id": "eng_present_progressive",
+      "sub_unit": "present_progressive",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「私の兄は今、部屋で寝ています。」",
+      "correct_answer": "My brother is sleeping in his room now.",
+      "hint_1": "My brother（三人称単数）なので is を使います。",
+      "hint_2": "My brother is 〜ing 〜. の形にします。",
+      "explanation_base": "My brother is sleeping in his room now.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_present_progressive",
+      "unit_id": "eng_present_progressive",
+      "sub_unit": "present_progressive",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「子どもたちは今、公園で遊んでいます。」",
+      "correct_answer": "The children are playing in the park now.",
+      "hint_1": "children は複数なので are を使います。",
+      "hint_2": "The children are 〜ing 〜. の形にします。",
+      "explanation_base": "The children are playing in the park now.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_present_progressive",
+      "unit_id": "eng_present_progressive",
+      "sub_unit": "present_progressive",
+      "problem_type": "mini_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に動詞を現在進行形にして入れなさい。\n「She ( write ) a letter now.」",
+      "correct_answer": "is writing",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "write → writing（語末 e 削除）。She is writing a letter now.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_present_progressive"
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_present_progressive",
+      "unit_id": "eng_present_progressive",
+      "sub_unit": "present_progressive",
+      "problem_type": "mini_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に動詞を現在進行形にして入れなさい。\n「They ( dance ) on stage.」",
+      "correct_answer": "are dancing",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "dance → dancing（語末 e 削除）。They are dancing on stage.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_present_progressive"
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_present_progressive",
+      "unit_id": "eng_present_progressive",
+      "sub_unit": "present_progressive",
+      "problem_type": "mini_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "現在進行形の疑問文に書き換えなさい。\n「You are listening to music.」",
+      "correct_answer": "Are you listening to music?",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "Are you listening to music?",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_present_progressive"
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_present_progressive",
+      "unit_id": "eng_present_progressive",
+      "sub_unit": "present_progressive",
+      "problem_type": "mini_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "現在進行形の否定文に書き換えなさい。\n「I am watching TV.」",
+      "correct_answer": "I am not watching TV.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "I am not watching TV.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_present_progressive"
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_present_progressive",
+      "unit_id": "eng_present_progressive",
+      "sub_unit": "present_progressive",
+      "problem_type": "mini_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「彼は今、歌っています。」",
+      "correct_answer": "He is singing now.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "He is singing now.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_present_progressive"
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_present_progressive",
+      "unit_id": "eng_present_progressive",
+      "sub_unit": "present_progressive",
+      "problem_type": "unit_test",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に動詞を現在進行形にして入れなさい。\n「He ( draw ) a picture.」",
+      "correct_answer": "is drawing",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "draw → drawing。He is drawing a picture.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_present_progressive"
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_present_progressive",
+      "unit_id": "eng_present_progressive",
+      "sub_unit": "present_progressive",
+      "problem_type": "unit_test",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に動詞を現在進行形にして入れなさい。\n「We ( talk ) now.」",
+      "correct_answer": "are talking",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "talk → talking。We are talking now.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_present_progressive"
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_present_progressive",
+      "unit_id": "eng_present_progressive",
+      "sub_unit": "present_progressive",
+      "problem_type": "unit_test",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に動詞を現在進行形にして入れなさい。\n「She ( sit ) on the chair.」",
+      "correct_answer": "is sitting",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "sit → sitting（語末子音重ね）。She is sitting on the chair.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_present_progressive"
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_present_progressive",
+      "unit_id": "eng_present_progressive",
+      "sub_unit": "present_progressive",
+      "problem_type": "unit_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "現在進行形の疑問文に書き換えなさい。\n「He is reading the newspaper.」",
+      "correct_answer": "Is he reading the newspaper?",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "Is he reading the newspaper?",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_present_progressive"
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_present_progressive",
+      "unit_id": "eng_present_progressive",
+      "sub_unit": "present_progressive",
+      "problem_type": "unit_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「私の妹は今、ピアノを練習しています。」",
+      "correct_answer": "My sister is practicing the piano now.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "My sister is practicing the piano now.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_present_progressive"
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_present_progressive",
+      "unit_id": "eng_present_progressive",
+      "sub_unit": "present_progressive",
+      "problem_type": "unit_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「あなたは今、何をしていますか？」",
+      "correct_answer": "What are you doing now?",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "What are you doing now?",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_present_progressive"
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_present_progressive",
+      "unit_id": "eng_present_progressive",
+      "sub_unit": "present_progressive",
+      "problem_type": "unit_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "現在進行形の否定文に書き換えなさい。\n「They are playing basketball.」",
+      "correct_answer": "They are not playing basketball.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "They are not playing basketball.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_present_progressive"
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_present_progressive",
+      "unit_id": "eng_present_progressive",
+      "sub_unit": "present_progressive",
+      "problem_type": "unit_test",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「彼は今、友達と話していますか？」",
+      "correct_answer": "Is he talking with his friend now?",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "Is he talking with his friend now?",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_present_progressive"
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_present_progressive",
+      "unit_id": "eng_present_progressive",
+      "sub_unit": "present_progressive",
+      "problem_type": "unit_test",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「私の両親は今、台所で料理をしています。」",
+      "correct_answer": "My parents are cooking in the kitchen now.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "My parents are cooking in the kitchen now.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_present_progressive"
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_present_progressive",
+      "unit_id": "eng_present_progressive",
+      "sub_unit": "present_progressive",
+      "problem_type": "unit_test",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「彼女たちは今、何について話し合っていますか？」",
+      "correct_answer": "What are they talking about now?",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "What are they talking about now?",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_present_progressive"
+    }
+  ]
+}

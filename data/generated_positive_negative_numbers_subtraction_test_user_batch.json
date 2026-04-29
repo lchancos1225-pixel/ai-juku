@@ -1,0 +1,304 @@
+{
+  "problems": [
+    {
+      "full_unit_id": "positive_negative_numbers_subtraction",
+      "unit_id": "positive_negative_numbers",
+      "sub_unit": "subtraction",
+      "problem_type": "mini_test",
+      "test_scope": "mini_test",
+      "difficulty": "easy",
+      "question_text": "次の計算をしなさい。\n(+4) - (+7)",
+      "diagram": null,
+      "correct_answer": "-3",
+      "explanation_base": "減法は、引く数の符号を変えて加法（足し算）に直して計算します。(+4) + (-7) = -3 となります。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "operation_confusion"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "positive_negative_numbers_subtraction",
+      "unit_id": "positive_negative_numbers",
+      "sub_unit": "subtraction",
+      "problem_type": "mini_test",
+      "test_scope": "mini_test",
+      "difficulty": "easy",
+      "question_text": "次の計算をしなさい。\n(-3) - (-5)",
+      "diagram": null,
+      "correct_answer": "2",
+      "explanation_base": "引く数 (-5) の符号を変えて、加法に直します。(-3) + (+5) となり、答えは 2 になります。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "reinforce_same_pattern"
+      ]
+    },
+    {
+      "full_unit_id": "positive_negative_numbers_subtraction",
+      "unit_id": "positive_negative_numbers",
+      "sub_unit": "subtraction",
+      "problem_type": "mini_test",
+      "test_scope": "mini_test",
+      "difficulty": "normal",
+      "question_text": "次の計算をしなさい。\n(+2.5) - (-1.4)",
+      "diagram": null,
+      "correct_answer": "3.9",
+      "explanation_base": "小数の減法も、引く数の符号を変えて加法にします。(+2.5) + (+1.4) = 3.9 となります。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "reinforce_same_pattern"
+      ]
+    },
+    {
+      "full_unit_id": "positive_negative_numbers_subtraction",
+      "unit_id": "positive_negative_numbers",
+      "sub_unit": "subtraction",
+      "problem_type": "mini_test",
+      "test_scope": "mini_test",
+      "difficulty": "normal",
+      "question_text": "次の計算をしなさい。\n(-1/3) - (+1/2)",
+      "diagram": null,
+      "correct_answer": "-5/6",
+      "explanation_base": "分数の減法です。引く数の符号を変えて加法にし、分母を通分して計算します。(-1/3) + (-1/2) = (-2/6) + (-3/6) = -5/6 となります。",
+      "error_pattern_candidates": [
+        "prerequisite_gap",
+        "sign_error"
+      ],
+      "intervention_candidates": [
+        "fallback_prerequisite",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "positive_negative_numbers_subtraction",
+      "unit_id": "positive_negative_numbers",
+      "sub_unit": "subtraction",
+      "problem_type": "mini_test",
+      "test_scope": "mini_test",
+      "difficulty": "hard",
+      "question_text": "次の計算をしなさい。\n(-5) - (+2) - (-8)",
+      "diagram": null,
+      "correct_answer": "1",
+      "explanation_base": "減法をすべて加法に直して計算します。(-5) + (-2) + (+8) となります。負の数をまとめて (-7) + (+8) = 1 となります。",
+      "error_pattern_candidates": [
+        "operation_confusion",
+        "sign_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "positive_negative_numbers_subtraction",
+      "unit_id": "positive_negative_numbers",
+      "sub_unit": "subtraction",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "easy",
+      "question_text": "次の計算をしなさい。\n(+8) - (+2)",
+      "diagram": null,
+      "correct_answer": "6",
+      "explanation_base": "引く数の符号を変えて加法にします。(+8) + (-2) = 6 となります。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "advance_with_confidence",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "positive_negative_numbers_subtraction",
+      "unit_id": "positive_negative_numbers",
+      "sub_unit": "subtraction",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "easy",
+      "question_text": "次の計算をしなさい。\n(-6) - (+3)",
+      "diagram": null,
+      "correct_answer": "-9",
+      "explanation_base": "引く数の符号を変えて足し算にします。(-6) + (-3) = -9 となります。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "operation_confusion"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "reinforce_same_pattern"
+      ]
+    },
+    {
+      "full_unit_id": "positive_negative_numbers_subtraction",
+      "unit_id": "positive_negative_numbers",
+      "sub_unit": "subtraction",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "easy",
+      "question_text": "次の計算をしなさい。\n0 - (-7)",
+      "diagram": null,
+      "correct_answer": "7",
+      "explanation_base": "0 からある数を引くときは、引く数の符号が変わります。0 + (+7) = 7 となります。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "sign_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "positive_negative_numbers_subtraction",
+      "unit_id": "positive_negative_numbers",
+      "sub_unit": "subtraction",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "normal",
+      "question_text": "次の計算をしなさい。\n(-4.2) - (-3.8)",
+      "diagram": null,
+      "correct_answer": "-0.4",
+      "explanation_base": "引く数の符号を変えて加法にします。(-4.2) + (+3.8) = -0.4 となります。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "reinforce_same_pattern"
+      ]
+    },
+    {
+      "full_unit_id": "positive_negative_numbers_subtraction",
+      "unit_id": "positive_negative_numbers",
+      "sub_unit": "subtraction",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "normal",
+      "question_text": "次の計算をしなさい。\n(+1/4) - (-3/4)",
+      "diagram": null,
+      "correct_answer": "1",
+      "explanation_base": "減法を加法に直します。(+1/4) + (+3/4) = 4/4 となり、約分して 1 になります。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "reinforce_same_pattern"
+      ]
+    },
+    {
+      "full_unit_id": "positive_negative_numbers_subtraction",
+      "unit_id": "positive_negative_numbers",
+      "sub_unit": "subtraction",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "normal",
+      "question_text": "次の計算をしなさい。\n(+5) - (-3) - (+6)",
+      "diagram": null,
+      "correct_answer": "2",
+      "explanation_base": "減法をすべて加法に直します。(+5) + (+3) + (-6) となります。正の数をまとめて (+8) + (-6) = 2 となります。",
+      "error_pattern_candidates": [
+        "operation_confusion",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "positive_negative_numbers_subtraction",
+      "unit_id": "positive_negative_numbers",
+      "sub_unit": "subtraction",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "normal",
+      "question_text": "次の計算をしなさい。\n(-8) - (-10) - (+5)",
+      "diagram": null,
+      "correct_answer": "-3",
+      "explanation_base": "減法を加法に直します。(-8) + (+10) + (-5) となります。負の数をまとめると (-13) になり、(-13) + (+10) = -3 となります。",
+      "error_pattern_candidates": [
+        "operation_confusion",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "positive_negative_numbers_subtraction",
+      "unit_id": "positive_negative_numbers",
+      "sub_unit": "subtraction",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "hard",
+      "question_text": "次の計算をしなさい。\n(-2/5) - (+1/3) - (-1/2)",
+      "diagram": null,
+      "correct_answer": "-7/30",
+      "explanation_base": "加法に直すと (-2/5) + (-1/3) + (+1/2) となります。分母を30で通分し、(-12/30) + (-10/30) + (+15/30) を計算します。負の数をまとめて (-22/30) + (+15/30) = -7/30 となります。",
+      "error_pattern_candidates": [
+        "prerequisite_gap",
+        "sign_error"
+      ],
+      "intervention_candidates": [
+        "fallback_prerequisite",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "positive_negative_numbers_subtraction",
+      "unit_id": "positive_negative_numbers",
+      "sub_unit": "subtraction",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "hard",
+      "question_text": "今日の気温は -2℃、昨日の気温は 3℃ です。今日の気温から昨日の気温を引いた温度差を求めなさい。",
+      "diagram": null,
+      "correct_answer": "-5℃",
+      "explanation_base": "言葉の通りに式を立てると (-2) - (+3) となります。加法に直して (-2) + (-3) = -5 となり、答えは -5℃ です。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "formula_setup_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "retry_with_hint"
+      ]
+    },
+    {
+      "full_unit_id": "positive_negative_numbers_subtraction",
+      "unit_id": "positive_negative_numbers",
+      "sub_unit": "subtraction",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "hard",
+      "question_text": "ある数から -4 を引くところを、誤って -4 を足してしまったため、答えが -1 になりました。正しく計算したときの答えを求めなさい。",
+      "diagram": null,
+      "correct_answer": "7",
+      "explanation_base": "ある数を x とすると、誤った計算は x + (-4) = -1 です。これを解くと元の数は 3 になります。正しい計算は 3 から -4 を引くので、3 - (-4) = 3 + (+4) = 7 になります。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "formula_setup_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "teacher_intervention_needed"
+      ]
+    }
+  ]
+}

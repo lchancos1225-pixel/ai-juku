@@ -1,0 +1,319 @@
+{
+  "problems": [
+    {
+      "full_unit_id": "quadratic_equations_basic",
+      "unit_id": "quadratic_equations",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "question_text": "次の二次方程式を解きなさい。\n x^2 = 25",
+      "diagram": null,
+      "correct_answer": "x = ±5",
+      "hint_1": "2乗して25になる数を探しましょう。",
+      "hint_2": "正の数だけでなく、負の数も忘れずに書きましょう。",
+      "explanation_base": "x^2 = 25 より、x は 25 の平方根です。よって x = ±5 となります。",
+      "error_pattern_candidates": [
+        "careless_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "reinforce_same_pattern"
+      ]
+    },
+    {
+      "full_unit_id": "quadratic_equations_basic",
+      "unit_id": "quadratic_equations",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "question_text": "次の二次方程式を解きなさい。\n 3x^2 = 27",
+      "diagram": null,
+      "correct_answer": "x = ±3",
+      "hint_1": "まず、両辺を3で割って x^2 = の形にしましょう。",
+      "hint_2": "x^2 = 9 になります。2乗して9になる数を探しましょう。",
+      "explanation_base": "両辺を3で割ると x^2 = 9 となります。9の平方根を求めて、x = ±3 となります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "quadratic_equations_basic",
+      "unit_id": "quadratic_equations",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "question_text": "次の二次方程式を解きなさい。\n (x - 2)^2 = 16",
+      "diagram": null,
+      "correct_answer": "x = 6, -2",
+      "hint_1": "(x - 2) をひとつのまとまりと見て、平方根をとりましょう。",
+      "hint_2": "x - 2 = ±4 となります。ここから2つの x の値を求めましょう。",
+      "explanation_base": "x - 2 = ±4 より、x = 2 + 4 = 6 と x = 2 - 4 = -2 の2つが解になります。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "formula_setup_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "quadratic_equations_basic",
+      "unit_id": "quadratic_equations",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "question_text": "次の二次方程式を解きなさい。\n x(x - 5) = 0",
+      "diagram": null,
+      "correct_answer": "x = 0, 5",
+      "hint_1": "かけて0になるということは、どちらかが0になるということです。",
+      "hint_2": "x = 0 または x - 5 = 0 のどちらかが成り立ちます。",
+      "explanation_base": "積が0になるため、x = 0 または x - 5 = 0 です。よって解は x = 0, 5 となります。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "formula_setup_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "quadratic_equations_basic",
+      "unit_id": "quadratic_equations",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "question_text": "次の二次方程式を解きなさい。\n x^2 + 7x + 10 = 0",
+      "diagram": null,
+      "correct_answer": "x = -2, -5",
+      "hint_1": "左辺を因数分解しましょう。足して7、かけて10になる2つの数を見つけます。",
+      "hint_2": "(x + 2)(x + 5) = 0 と因数分解できます。かっこが0になる x の値が答えです。",
+      "explanation_base": "左辺を因数分解すると (x + 2)(x + 5) = 0 となります。x + 2 = 0 または x + 5 = 0 より、x = -2, -5 となります。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "reinforce_same_pattern"
+      ]
+    },
+    {
+      "full_unit_id": "quadratic_equations_basic",
+      "unit_id": "quadratic_equations",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "question_text": "次の二次方程式を解きなさい。\n x^2 - 4x = 0",
+      "diagram": null,
+      "correct_answer": "x = 0, 4",
+      "hint_1": "共通因数 x で左辺をくくりましょう。",
+      "hint_2": "x(x - 4) = 0 となります。それぞれの因数が0になる x を求めます。",
+      "explanation_base": "左辺を x でくくると x(x - 4) = 0 となります。よって、x = 0 または x - 4 = 0 となり、x = 0, 4 です。",
+      "error_pattern_candidates": [
+        "careless_error",
+        "formula_setup_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "quadratic_equations_basic",
+      "unit_id": "quadratic_equations",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "question_text": "次の二次方程式を解きなさい。\n x^2 - 8x + 16 = 0",
+      "diagram": null,
+      "correct_answer": "x = 4",
+      "hint_1": "左辺を因数分解しましょう。(x - a)^2 = 0 の形になります。",
+      "hint_2": "(x - 4)^2 = 0 になります。2乗して0になる数は0だけです。",
+      "explanation_base": "左辺を因数分解すると (x - 4)^2 = 0 となります。x - 4 = 0 より、解は x = 4 の1つだけになります。",
+      "error_pattern_candidates": [
+        "arithmetic_error",
+        "formula_setup_error"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "reinforce_same_pattern"
+      ]
+    },
+    {
+      "full_unit_id": "quadratic_equations_basic",
+      "unit_id": "quadratic_equations",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "question_text": "次の二次方程式を解きなさい。\n (x + 3)^2 - 7 = 0",
+      "diagram": null,
+      "correct_answer": "x = -3 ± √7",
+      "hint_1": "-7 を右辺に移項して、(x + 3)^2 = 7 の形にしましょう。",
+      "hint_2": "両辺の平方根をとると、x + 3 = ±√7 になります。",
+      "explanation_base": "-7を移項すると (x + 3)^2 = 7 になります。平方根をとって x + 3 = ±√7 となり、3を移項して x = -3 ± √7 です。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "formula_setup_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "quadratic_equations_basic",
+      "unit_id": "quadratic_equations",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "question_text": "次の二次方程式を解きなさい。\n x^2 - 49 = 0",
+      "diagram": null,
+      "correct_answer": "x = ±7",
+      "hint_1": "2つの解き方があります。49を移項するか、和と差の積で因数分解しましょう。",
+      "hint_2": "移項すると x^2 = 49 になります。",
+      "explanation_base": "x^2 = 49 と変形し、平方根をとって x = ±7 となります。または (x+7)(x-7)=0 より因数分解から解くこともできます。",
+      "error_pattern_candidates": [
+        "careless_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "reinforce_same_pattern"
+      ]
+    },
+    {
+      "full_unit_id": "quadratic_equations_basic",
+      "unit_id": "quadratic_equations",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "question_text": "次の二次方程式を解きなさい。\n x^2 + 2x - 15 = 0",
+      "diagram": null,
+      "correct_answer": "x = 3, -5",
+      "hint_1": "足して2、かけて-15になる2つの数を見つけて因数分解しましょう。",
+      "hint_2": "2つの数は -3 と 5 です。因数分解すると (x - 3)(x + 5) = 0 になります。",
+      "explanation_base": "左辺を因数分解すると (x - 3)(x + 5) = 0 となります。よって x - 3 = 0 または x + 5 = 0 から、x = 3, -5 となります。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "quadratic_equations_basic",
+      "unit_id": "quadratic_equations",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "question_text": "次の二次方程式を解きなさい。\n (x - 1)(x + 4) = 14",
+      "diagram": null,
+      "correct_answer": "x = 3, -6",
+      "hint_1": "一度左辺を展開し、14を左辺に移項して = 0 の形に整理しましょう。",
+      "hint_2": "左辺を展開すると x^2 + 3x - 4 です。14を移項して引くと x^2 + 3x - 18 = 0 となります。",
+      "explanation_base": "左辺を展開すると x^2 + 3x - 4 = 14 となります。14を左辺に移項して x^2 + 3x - 18 = 0 とし、これを因数分解して (x - 3)(x + 6) = 0 より、x = 3, -6 です。",
+      "error_pattern_candidates": [
+        "operation_confusion",
+        "formula_setup_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "quadratic_equations_basic",
+      "unit_id": "quadratic_equations",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "question_text": "次の二次方程式を解の公式を用いて解きなさい。\n x^2 + 5x + 3 = 0",
+      "diagram": null,
+      "correct_answer": "x = (-5 ± √13) / 2",
+      "hint_1": "解の公式 x = (-b ± √(b^2 - 4ac)) / 2a に a=1, b=5, c=3 を代入しましょう。",
+      "hint_2": "ルートの中身は 5^2 - 4 × 1 × 3 になります。",
+      "explanation_base": "解の公式に a=1, b=5, c=3 を代入します。x = (-5 ± √(5^2 - 4×1×3)) / (2×1) = (-5 ± √(25 - 12)) / 2 = (-5 ± √13) / 2 です。",
+      "error_pattern_candidates": [
+        "arithmetic_error",
+        "formula_setup_error"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "quadratic_equations_basic",
+      "unit_id": "quadratic_equations",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "question_text": "次の二次方程式を解きなさい。\n 3x^2 - 4x - 2 = 0",
+      "diagram": null,
+      "correct_answer": "x = (2 ± √10) / 3",
+      "hint_1": "因数分解できないので、解の公式を使いましょう。a=3, b=-4, c=-2 です。",
+      "hint_2": "分母は 2 × 3 = 6、ルートの中身は (-4)^2 - 4 × 3 × (-2) = 40 です。最後に約分に注意しましょう。",
+      "explanation_base": "解の公式に代入すると、x = (4 ± √(16 + 24)) / 6 = (4 ± √40) / 6 となります。√40 = 2√10 なので、x = (4 ± 2√10) / 6 となり、分母分子を2で割って x = (2 ± √10) / 3 になります。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "quadratic_equations_basic",
+      "unit_id": "quadratic_equations",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "question_text": "縦と横の長さの差が3cmで、面積が28cm²の長方形があります。この長方形の短い方の辺の長さを求めなさい。",
+      "diagram": null,
+      "correct_answer": "4cm",
+      "hint_1": "短い方の辺の長さを x cmとして、長い方の辺の長さを x を使って表しましょう。",
+      "hint_2": "長い方の辺は (x + 3) cmになります。面積が28なので、x(x + 3) = 28 という方程式を作ります。",
+      "explanation_base": "短い方の辺を x cmとすると、長い方の辺は (x + 3) cmです。面積の式は x(x + 3) = 28 となり、整理すると x^2 + 3x - 28 = 0 となります。因数分解して (x - 4)(x + 7) = 0 より x = 4, -7。長さは正の数なので x = 4 です。よって4cm。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "comprehension_gap"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "explain_differently"
+      ]
+    },
+    {
+      "full_unit_id": "quadratic_equations_basic",
+      "unit_id": "quadratic_equations",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "question_text": "連続する2つの正の整数があります。それぞれの平方の和が41であるとき、この2つの整数を求めなさい。",
+      "diagram": null,
+      "correct_answer": "4, 5",
+      "hint_1": "小さい方の整数を x とすると、大きい方の整数は x + 1 と表せます。",
+      "hint_2": "平方（2乗）の和が41なので、x^2 + (x + 1)^2 = 41 という方程式を立てます。",
+      "explanation_base": "2つの整数を x、x + 1 とします。x^2 + (x + 1)^2 = 41 を展開して整理すると x^2 + x^2 + 2x + 1 = 41、2x^2 + 2x - 40 = 0、両辺を2で割って x^2 + x - 20 = 0 となります。因数分解して (x - 4)(x + 5) = 0、x = 4, -5。正の整数なので x = 4。よって2つの整数は4と5です。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "comprehension_gap"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "slow_down_and_confirm"
+      ]
+    }
+  ]
+}

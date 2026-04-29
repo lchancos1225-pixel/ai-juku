@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="card login-card owner-login-card">
+  <p class="section-label">System Login</p>
+  <h2>OS ログイン</h2>
+  <p class="meta-note">一般の生徒・講師は使用できません。</p>
+  {% if error %}
+  <div class="result-box wrong">{{ error }}</div>
+  {% endif %}
+  <form class="answer-form" method="post" action="/login/owner">
+    <input type="text" name="login_id" placeholder="owner login_id" required>
+    <input type="password" name="password" placeholder="password" required>
+    <button type="submit">OSログイン</button>
+  </form>
+  <a class="owner-back-link" href="/login">← 戻る</a>
+</section>
+{% endblock %}

@@ -1,0 +1,709 @@
+{
+  "problems": [
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_future_tense",
+      "unit_id": "eng_future_tense",
+      "sub_unit": "future_tense",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に正しい語句を入れなさい。\n「I ( ) go to the park tomorrow.」",
+      "correct_answer": "will",
+      "hint_1": "「〜するつもりです（意志）」や「〜でしょう（推量）」を表すときは will を使います。",
+      "hint_2": "I will 動詞原形〜 の形にします。",
+      "explanation_base": "will + 動詞原形で未来を表します。I will go to the park tomorrow.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_future_tense",
+      "unit_id": "eng_future_tense",
+      "sub_unit": "future_tense",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に正しい語句を入れなさい。\n「She ( ) be a doctor.」",
+      "correct_answer": "will",
+      "hint_1": "「〜になるでしょう」と未来のことを言うときは will を使います。",
+      "hint_2": "She will 動詞原形〜 の形にします。",
+      "explanation_base": "She will be a doctor.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_future_tense",
+      "unit_id": "eng_future_tense",
+      "sub_unit": "future_tense",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に正しい語句を入れなさい。\n「They ( ) play basketball next Sunday.」",
+      "correct_answer": "will",
+      "hint_1": "「〜する予定です」は will または be going to を使います。",
+      "hint_2": "They will 動詞原形〜 の形にします。",
+      "explanation_base": "They will play basketball next Sunday.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_future_tense",
+      "unit_id": "eng_future_tense",
+      "sub_unit": "future_tense",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に正しい語句を入れなさい。\n「He ( ) come to the party.」",
+      "correct_answer": "will",
+      "hint_1": "will + 動詞原形で「〜するでしょう」を表します。",
+      "hint_2": "He will 動詞原形〜 の形にします。",
+      "explanation_base": "He will come to the party.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_future_tense",
+      "unit_id": "eng_future_tense",
+      "sub_unit": "future_tense",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に正しい語句を入れなさい。\n「We ( ) have dinner together.」",
+      "correct_answer": "will",
+      "hint_1": "will + 動詞原形で未来を表します。",
+      "hint_2": "We will 動詞原形〜 の形にします。",
+      "explanation_base": "We will have dinner together.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_future_tense",
+      "unit_id": "eng_future_tense",
+      "sub_unit": "future_tense",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に正しい語句を入れなさい。\n「I ( ) visit my grandmother next week.」",
+      "correct_answer": "am going to",
+      "hint_1": "「すでに決まっている予定・計画」は be going to を使います。",
+      "hint_2": "I am going to 動詞原形〜 の形にします。",
+      "explanation_base": "be going to + 動詞原形で「〜する予定」を表します。I am going to visit my grandmother next week.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_future_tense",
+      "unit_id": "eng_future_tense",
+      "sub_unit": "future_tense",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に正しい語句を入れなさい。\n「She ( ) study abroad next year.」",
+      "correct_answer": "is going to",
+      "hint_1": "be going to で計画を表します。She に対応する be動詞は？",
+      "hint_2": "She に対応するbe動詞は is です。She is going to study abroad.",
+      "explanation_base": "She is going to study abroad next year.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_future_tense",
+      "unit_id": "eng_future_tense",
+      "sub_unit": "future_tense",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に正しい語句を入れなさい。\n「They ( ) go camping this weekend.」",
+      "correct_answer": "are going to",
+      "hint_1": "be going to で予定を表します。They に対応する be動詞は？",
+      "hint_2": "They に対応するbe動詞は are です。They are going to go camping.",
+      "explanation_base": "They are going to go camping this weekend.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_future_tense",
+      "unit_id": "eng_future_tense",
+      "sub_unit": "future_tense",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "will の否定文に書き換えなさい。\n「She will come to the meeting.」",
+      "correct_answer": "She won't come to the meeting.",
+      "hint_1": "will の否定形は won't（= will not）です。",
+      "hint_2": "She won't 動詞原形〜 の形にします。",
+      "explanation_base": "will not の短縮形は won't です。She won't come to the meeting.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_future_tense",
+      "unit_id": "eng_future_tense",
+      "sub_unit": "future_tense",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "will の疑問文に書き換えなさい。\n「He will help you.」",
+      "correct_answer": "Will he help you?",
+      "hint_1": "will の疑問文は Will を文の先頭に置きます。",
+      "hint_2": "Will + 主語 + 動詞原形〜? の形にします。",
+      "explanation_base": "Will he help you?",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_future_tense",
+      "unit_id": "eng_future_tense",
+      "sub_unit": "future_tense",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「明日、雨が降るでしょう。」",
+      "correct_answer": "It will rain tomorrow.",
+      "hint_1": "「〜でしょう」は will を使います。",
+      "hint_2": "It will 動詞原形〜 の形にします。",
+      "explanation_base": "It will rain tomorrow.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_future_tense",
+      "unit_id": "eng_future_tense",
+      "sub_unit": "future_tense",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「私たちは来月、京都に行く予定です。」",
+      "correct_answer": "We are going to go to Kyoto next month.",
+      "hint_1": "「〜する予定」は be going to で表します。",
+      "hint_2": "We are going to 動詞原形〜 の形にします。",
+      "explanation_base": "We are going to go to Kyoto next month.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_future_tense",
+      "unit_id": "eng_future_tense",
+      "sub_unit": "future_tense",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「彼女は明日のパーティーに来ないでしょうか？」",
+      "correct_answer": "Won't she come to the party tomorrow?",
+      "hint_1": "will not の疑問文は Won't 〜? の形です。",
+      "hint_2": "Won't + 主語 + 動詞原形〜? の形にします。",
+      "explanation_base": "Won't she come to the party tomorrow?",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_future_tense",
+      "unit_id": "eng_future_tense",
+      "sub_unit": "future_tense",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「あなたは将来何になりたいですか？」",
+      "correct_answer": "What do you want to be in the future?",
+      "hint_1": "「将来何になりたいですか？」は want to be を使います。",
+      "hint_2": "What do you want to be 〜? の形にします。",
+      "explanation_base": "What do you want to be in the future?",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_future_tense",
+      "unit_id": "eng_future_tense",
+      "sub_unit": "future_tense",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「彼は来週から新しい仕事を始める予定です。」",
+      "correct_answer": "He is going to start a new job next week.",
+      "hint_1": "「〜する予定」は be going to を使います。",
+      "hint_2": "He is going to start 〜 の形にします。",
+      "explanation_base": "He is going to start a new job next week.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_future_tense",
+      "unit_id": "eng_future_tense",
+      "sub_unit": "future_tense",
+      "problem_type": "mini_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に正しい語句を入れなさい。\n「I ( ) call you later.」",
+      "correct_answer": "will",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "will + 動詞原形で未来を表します。I will call you later.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_future_tense"
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_future_tense",
+      "unit_id": "eng_future_tense",
+      "sub_unit": "future_tense",
+      "problem_type": "mini_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に正しい語句を入れなさい。\n「She ( ) join our team.」",
+      "correct_answer": "is going to",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "She is going to join our team.（予定）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_future_tense"
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_future_tense",
+      "unit_id": "eng_future_tense",
+      "sub_unit": "future_tense",
+      "problem_type": "mini_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「明日は晴れるでしょう。」",
+      "correct_answer": "It will be sunny tomorrow.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "It will be sunny tomorrow.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_future_tense"
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_future_tense",
+      "unit_id": "eng_future_tense",
+      "sub_unit": "future_tense",
+      "problem_type": "mini_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "will の疑問文に書き換えなさい。\n「You will help him.」",
+      "correct_answer": "Will you help him?",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "Will you help him?",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_future_tense"
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_future_tense",
+      "unit_id": "eng_future_tense",
+      "sub_unit": "future_tense",
+      "problem_type": "mini_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「私は今夜早く寝るつもりです。」",
+      "correct_answer": "I am going to sleep early tonight.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "I am going to sleep early tonight.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_future_tense"
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_future_tense",
+      "unit_id": "eng_future_tense",
+      "sub_unit": "future_tense",
+      "problem_type": "unit_test",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に正しい語を入れなさい。\n「She ( ) call us tomorrow.」",
+      "correct_answer": "will",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "She will call us tomorrow.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_future_tense"
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_future_tense",
+      "unit_id": "eng_future_tense",
+      "sub_unit": "future_tense",
+      "problem_type": "unit_test",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に正しい語句を入れなさい。\n「We ( ) go to the zoo next Sunday.」",
+      "correct_answer": "are going to",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "We are going to go to the zoo next Sunday.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_future_tense"
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_future_tense",
+      "unit_id": "eng_future_tense",
+      "sub_unit": "future_tense",
+      "problem_type": "unit_test",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "will の否定文に書き換えなさい。\n「He will play tennis.」",
+      "correct_answer": "He won't play tennis.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "He won't play tennis.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_future_tense"
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_future_tense",
+      "unit_id": "eng_future_tense",
+      "sub_unit": "future_tense",
+      "problem_type": "unit_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「彼女は来月新しい学校に入学する予定です。」",
+      "correct_answer": "She is going to enter a new school next month.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "She is going to enter a new school next month.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_future_tense"
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_future_tense",
+      "unit_id": "eng_future_tense",
+      "sub_unit": "future_tense",
+      "problem_type": "unit_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "will の疑問文に書き換えなさい。\n「They will finish the work.」",
+      "correct_answer": "Will they finish the work?",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "Will they finish the work?",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_future_tense"
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_future_tense",
+      "unit_id": "eng_future_tense",
+      "sub_unit": "future_tense",
+      "problem_type": "unit_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「あなたは明日何をしますか？」",
+      "correct_answer": "What will you do tomorrow?",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "What will you do tomorrow?",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_future_tense"
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_future_tense",
+      "unit_id": "eng_future_tense",
+      "sub_unit": "future_tense",
+      "problem_type": "unit_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に正しい語句を入れなさい。\n「I ( ) not come to the party.」",
+      "correct_answer": "will",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "I will not come to the party.（will notで否定）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_future_tense"
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_future_tense",
+      "unit_id": "eng_future_tense",
+      "sub_unit": "future_tense",
+      "problem_type": "unit_test",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「私たちは来年、新しい家に引っ越す予定です。」",
+      "correct_answer": "We are going to move to a new house next year.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "We are going to move to a new house next year.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_future_tense"
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_future_tense",
+      "unit_id": "eng_future_tense",
+      "sub_unit": "future_tense",
+      "problem_type": "unit_test",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「彼は将来、科学者になるでしょう。」",
+      "correct_answer": "He will be a scientist in the future.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "He will be a scientist in the future.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_future_tense"
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_future_tense",
+      "unit_id": "eng_future_tense",
+      "sub_unit": "future_tense",
+      "problem_type": "unit_test",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「彼女は今夜、その仕事を終わらせられないかもしれません。」",
+      "correct_answer": "She won't be able to finish the work tonight.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "She won't be able to finish the work tonight.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_future_tense"
+    }
+  ]
+}

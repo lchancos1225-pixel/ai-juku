@@ -1,0 +1,304 @@
+{
+  "problems": [
+    {
+      "full_unit_id": "quadratic_equations_application",
+      "unit_id": "quadratic_equations",
+      "sub_unit": "application",
+      "problem_type": "mini_test",
+      "test_scope": "mini_test",
+      "difficulty": "easy",
+      "question_text": "ある数 x に 3 を加えてから 2 乗するところを、誤って x に 3 を加えてから 2 倍してしまいましたが、結果は同じになりました。ある数 x をすべて求めなさい。",
+      "diagram": null,
+      "correct_answer": "x = -1, -3",
+      "explanation_base": "方程式を立てると (x + 3)^2 = 2(x + 3) になります。展開して x^2 + 6x + 9 = 2x + 6 とし、移項して整理すると x^2 + 4x + 3 = 0 となります。これを因数分解すると (x + 1)(x + 3) = 0 になるため、x = -1, -3 です。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "quadratic_equations_application",
+      "unit_id": "quadratic_equations",
+      "sub_unit": "application",
+      "problem_type": "mini_test",
+      "test_scope": "mini_test",
+      "difficulty": "easy",
+      "question_text": "連続する2つの正の整数があります。それぞれを2乗した数の和が 41 になるとき、これら2つの正の整数を求めなさい。",
+      "diagram": null,
+      "correct_answer": "4, 5",
+      "explanation_base": "小さい方の整数を x とすると、大きい方は x + 1 と表せます。x^2 + (x + 1)^2 = 41 となり、整理すると 2x^2 + 2x - 40 = 0、両辺を2で割って x^2 + x - 20 = 0 となります。これを解くと x = 4, -5 になりますが、x は正の整数なので x = 4 です。よって2つの数は 4, 5 となります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "comprehension_gap"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "full_unit_id": "quadratic_equations_application",
+      "unit_id": "quadratic_equations",
+      "sub_unit": "application",
+      "problem_type": "mini_test",
+      "test_scope": "mini_test",
+      "difficulty": "normal",
+      "question_text": "縦の長さが横の長さより 4cm 短い長方形があります。この長方形の面積が 96cm² のとき、縦の長さを求めなさい。",
+      "diagram": null,
+      "correct_answer": "8cm",
+      "explanation_base": "縦の長さを x cm とすると、横の長さは (x + 4) cm です。面積の式は x(x + 4) = 96 となり、展開して整理すると x^2 + 4x - 96 = 0 となります。これを解くと (x + 12)(x - 8) = 0 より x = -12, 8 となります。長さは正の数なので、縦の長さは 8cm です。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "sign_error"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "reinforce_same_pattern"
+      ]
+    },
+    {
+      "full_unit_id": "quadratic_equations_application",
+      "unit_id": "quadratic_equations",
+      "sub_unit": "application",
+      "problem_type": "mini_test",
+      "test_scope": "mini_test",
+      "difficulty": "normal",
+      "question_text": "縦 10m、横 14m の長方形の土地に、辺に平行に縦と横に同じ幅の道を1本ずつ作り、残りの部分を花壇にします。花壇の面積が 96m² になるとき、道の幅を求めなさい。",
+      "diagram": null,
+      "correct_answer": "2m",
+      "explanation_base": "道の幅を x m とします。道を端に寄せて考えると、花壇は縦 (10 - x) m、横 (14 - x) m の長方形になります。面積の式は (10 - x)(14 - x) = 96 となり、整理すると x^2 - 24x + 44 = 0 になります。これを解くと (x - 2)(x - 22) = 0 より x = 2, 22 となります。道幅は 10m より狭くなければならないため、x = 2 です。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "variable_handling_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "teacher_intervention_needed"
+      ]
+    },
+    {
+      "full_unit_id": "quadratic_equations_application",
+      "unit_id": "quadratic_equations",
+      "sub_unit": "application",
+      "problem_type": "mini_test",
+      "test_scope": "mini_test",
+      "difficulty": "hard",
+      "question_text": "AB=8cm、BC=12cm の長方形ABCDがあります。点PはAを出発して辺AB上をBまで毎秒1cmの速さで動き、点QはBを出発して辺BC上をCまで毎秒2cmの速さで動きます。P, Qが同時に出発するとき、△PBQの面積が 16cm² になるのは出発してから何秒後か求めなさい。",
+      "diagram": "長方形ABCDがあり、辺AB上をAからBへ向かう点P、辺BC上をBからCへ向かう点Qがある図。",
+      "correct_answer": "4秒後",
+      "explanation_base": "出発してから t 秒後とします。PBの長さは (8 - t) cm、BQの長さは 2t cm です。面積の式は 1/2 × (8 - t) × 2t = 16 となり、整理すると t(8 - t) = 16、t^2 - 8t + 16 = 0 となります。これを因数分解すると (t - 4)^2 = 0 となり、t = 4 です。4秒後は条件に適しています。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "quadratic_equations_application",
+      "unit_id": "quadratic_equations",
+      "sub_unit": "application",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "easy",
+      "question_text": "差が 5 で、積が 84 となる 2つの正の整数を求めなさい。",
+      "diagram": null,
+      "correct_answer": "7, 12",
+      "explanation_base": "小さい方の整数を x とすると、大きい方は x + 5 と表せます。方程式は x(x + 5) = 84 となり、整理すると x^2 + 5x - 84 = 0 になります。これを因数分解すると (x + 12)(x - 7) = 0 となり、x = -12, 7 です。正の整数なので x = 7 となり、2つの数は 7, 12 になります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "comprehension_gap"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "full_unit_id": "quadratic_equations_application",
+      "unit_id": "quadratic_equations",
+      "sub_unit": "application",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "easy",
+      "question_text": "ある正方形の縦を 3cm 長くし、横を 2cm 短くして長方形を作ったところ、その面積は 36cm² になりました。もとの正方形の1辺の長さを求めなさい。",
+      "diagram": null,
+      "correct_answer": "6cm",
+      "explanation_base": "もとの正方形の1辺の長さを x cm とします。新しくできた長方形の縦は (x + 3) cm、横は (x - 2) cm となります。面積の式は (x + 3)(x - 2) = 36 となり、整理して x^2 + x - 42 = 0 になります。これを解くと (x + 7)(x - 6) = 0 より x = -7, 6 です。長さは正の数なので x = 6 となります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "reinforce_same_pattern"
+      ]
+    },
+    {
+      "full_unit_id": "quadratic_equations_application",
+      "unit_id": "quadratic_equations",
+      "sub_unit": "application",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "easy",
+      "question_text": "ある数 x を2乗するところを、誤って2倍してしまったため、正しい答えより 15 小さくなりました。ある数 x を求めなさい。（ただし x > 0 とします）",
+      "diagram": null,
+      "correct_answer": "5",
+      "explanation_base": "誤った答え(2x)は、正しい答え(x^2)より 15 小さいので、方程式は x^2 - 15 = 2x となります。整理して x^2 - 2x - 15 = 0 を解くと、(x - 5)(x + 3) = 0 より x = 5, -3 です。x > 0 なので、x = 5 になります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "sign_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "quadratic_equations_application",
+      "unit_id": "quadratic_equations",
+      "sub_unit": "application",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "normal",
+      "question_text": "縦 20cm、横 24cm の長方形の厚紙があります。この四隅から1辺の長さが等しい正方形を切り取り、ふたのない直方体の箱を作ったところ、底面の面積が 192cm² になりました。切り取った正方形の1辺の長さを求めなさい。",
+      "diagram": null,
+      "correct_answer": "4cm",
+      "explanation_base": "切り取った正方形の1辺の長さを x cm とします。底面の縦は (20 - 2x) cm、横は (24 - 2x) cm となります。面積の式は (20 - 2x)(24 - 2x) = 192 となり、展開して 4x^2 - 88x + 480 = 192 とします。整理して両辺を4で割ると x^2 - 22x + 72 = 0 となり、これを解くと (x - 4)(x - 18) = 0 より x = 4, 18 です。2x < 20 より x < 10 なので、x = 4 が適しています。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "teacher_intervention_needed"
+      ]
+    },
+    {
+      "full_unit_id": "quadratic_equations_application",
+      "unit_id": "quadratic_equations",
+      "sub_unit": "application",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "normal",
+      "question_text": "斜辺の長さが 13cm、他の2辺の長さの和が 17cm の直角三角形があります。この直角三角形の最も短い辺の長さを求めなさい。",
+      "diagram": null,
+      "correct_answer": "5cm",
+      "explanation_base": "短い方の辺を x cm とすると、もう一方の辺は (17 - x) cm です。三平方の定理より x^2 + (17 - x)^2 = 13^2 となります。展開して 2x^2 - 34x + 289 = 169、整理すると 2x^2 - 34x + 120 = 0 となり、x^2 - 17x + 60 = 0 になります。これを解くと (x - 5)(x - 12) = 0 より x = 5, 12 です。短い辺なので 5cm となります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "prerequisite_gap"
+      ],
+      "intervention_candidates": [
+        "fallback_prerequisite",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "quadratic_equations_application",
+      "unit_id": "quadratic_equations",
+      "sub_unit": "application",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "normal",
+      "question_text": "連続する3つの正の整数があります。いちばん大きい数の2乗は、他の2つの数の2乗の和に等しくなります。これら3つの整数を求めなさい。",
+      "diagram": null,
+      "correct_answer": "3, 4, 5",
+      "explanation_base": "真ん中の整数を x とすると、3つの数は x - 1, x, x + 1 と表せます。(x + 1)^2 = (x - 1)^2 + x^2 となり、展開して x^2 + 2x + 1 = x^2 - 2x + 1 + x^2 となります。整理すると x^2 - 4x = 0 になり、x(x - 4) = 0 より x = 0, 4 です。正の整数なので x = 4 となり、3つの数は 3, 4, 5 です。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "comprehension_gap"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "retry_with_hint"
+      ]
+    },
+    {
+      "full_unit_id": "quadratic_equations_application",
+      "unit_id": "quadratic_equations",
+      "sub_unit": "application",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "normal",
+      "question_text": "原価 1000 円の品物に x 割の利益を見込んで定価をつけましたが、売れなかったので定価の x 割引きで売ったところ、90 円の損をしました。x の値を求めなさい。（ただし、x > 0 とします）",
+      "diagram": null,
+      "correct_answer": "3",
+      "explanation_base": "定価は 1000(1 + x/10) 円、売値は 1000(1 + x/10)(1 - x/10) 円です。90円の損をしたということは売値が 1000 - 90 = 910 円になったということです。方程式は 1000(1 - x^2/100) = 910 となり、1000 - 10x^2 = 910 から 10x^2 = 90 となります。x^2 = 9 を解くと x = ±3 となり、x > 0 より x = 3 です。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "prerequisite_gap"
+      ],
+      "intervention_candidates": [
+        "fallback_prerequisite",
+        "explain_differently"
+      ]
+    },
+    {
+      "full_unit_id": "quadratic_equations_application",
+      "unit_id": "quadratic_equations",
+      "sub_unit": "application",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "hard",
+      "question_text": "1辺が 10cm の正方形ABCDがあります。点PはAを出発して辺AB上を毎秒 1cm の速さでBまで動き、点QはAを出発して辺AD上を毎秒 2cm の速さでDまで動きます。P, Qが同時に出発するとき、△APQの面積が 16cm² になるのは、出発してから何秒後か求めなさい。",
+      "diagram": "正方形ABCDがあり、辺AB上をAからBへ向かう点P、辺AD上をAからDへ向かう点Qがある図。",
+      "correct_answer": "4秒後",
+      "explanation_base": "出発してから t 秒後とします。APの長さは t cm、AQの長さは 2t cm です。△APQの面積は 1/2 × t × 2t = 16 となり、t^2 = 16 となります。t > 0 なので t = 4 となり、4秒後が答えです。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "comprehension_gap"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "explain_differently"
+      ]
+    },
+    {
+      "full_unit_id": "quadratic_equations_application",
+      "unit_id": "quadratic_equations",
+      "sub_unit": "application",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "hard",
+      "question_text": "半径が r cmの円があります。この円の半径を 4cm 長くしたところ、面積がもとの円の面積の 9倍 になりました。もとの円の半径 r を求めなさい。",
+      "diagram": null,
+      "correct_answer": "2cm",
+      "explanation_base": "もとの円の面積は πr²、新しい円の面積は π(r + 4)² です。方程式は π(r + 4)² = 9πr² となります。両辺を π で割り、(r + 4)² = (3r)² と見なせます。r > 0 なので r + 4 = 3r となり、2r = 4 より r = 2 となります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "operation_confusion"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "quadratic_equations_application",
+      "unit_id": "quadratic_equations",
+      "sub_unit": "application",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "hard",
+      "question_text": "横が縦より 5cm 長い長方形の厚紙があります。この四隅から1辺が 2cm の正方形を切り取り、ふたのない箱を作ったところ、容積が 100cm³ になりました。もとの厚紙の縦の長さを求めなさい。",
+      "diagram": null,
+      "correct_answer": "9cm",
+      "explanation_base": "もとの厚紙の縦の長さを x cm とすると、横の長さは (x + 5) cm です。箱の底面の縦は (x - 4) cm、横は (x + 1) cm、高さは 2cm となります。容積の式は 2(x - 4)(x + 1) = 100 となり、両辺を2で割って (x - 4)(x + 1) = 50 とします。展開して x^2 - 3x - 4 - 50 = 0 より x^2 - 3x - 54 = 0 になります。これを解くと (x - 9)(x + 6) = 0 より x = 9, -6 です。辺の長さから x > 4 なので x = 9 となります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "comprehension_gap"
+      ],
+      "intervention_candidates": [
+        "teacher_intervention_needed",
+        "explain_differently"
+      ]
+    }
+  ]
+}

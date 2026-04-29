@@ -1,0 +1,319 @@
+{
+  "problems": [
+    {
+      "full_unit_id": "quadratic_expressions_expansion",
+      "unit_id": "quadratic_expressions",
+      "sub_unit": "expansion",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "question_text": "次の式を展開しなさい。 (x + 2)(x + 5)",
+      "diagram": null,
+      "correct_answer": "x^2 + 7x + 10",
+      "hint_1": "(x + a)(x + b) = x^2 + (a + b)x + ab の乗法公式を使いましょう。",
+      "hint_2": "aにあたるのが2、bにあたるのが5です。和と積を計算します。",
+      "explanation_base": "乗法公式 (x + a)(x + b) = x^2 + (a + b)x + ab に a=2, b=5 をあてはめます。和は 2+5 = 7、積は 2×5 = 10 なので、x^2 + 7x + 10 になります。",
+      "error_pattern_candidates": [
+        "variable_handling_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "quadratic_expressions_expansion",
+      "unit_id": "quadratic_expressions",
+      "sub_unit": "expansion",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "question_text": "次の式を展開しなさい。 (x - 3)(x + 8)",
+      "diagram": null,
+      "correct_answer": "x^2 + 5x - 24",
+      "hint_1": "(x + a)(x + b) = x^2 + (a + b)x + ab の公式で、符号に注意して計算しましょう。",
+      "hint_2": "a = -3, b = 8 として和と積を計算します。-3 + 8 = 5, -3 × 8 = -24 です。",
+      "explanation_base": "a = -3, b = 8 として公式にあてはめます。xの係数は -3 + 8 = 5、定数項は -3 × 8 = -24 となるため、x^2 + 5x - 24 になります。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "explain_differently"
+      ]
+    },
+    {
+      "full_unit_id": "quadratic_expressions_expansion",
+      "unit_id": "quadratic_expressions",
+      "sub_unit": "expansion",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "question_text": "次の式を展開しなさい。 (x + 4)^2",
+      "diagram": null,
+      "correct_answer": "x^2 + 8x + 16",
+      "hint_1": "和の平方の公式 (x + a)^2 = x^2 + 2ax + a^2 を使いましょう。",
+      "hint_2": "展開すると、x^2 + 2 × 4 × x + 4^2 になります。",
+      "explanation_base": "公式 (x + a)^2 = x^2 + 2ax + a^2 に a = 4 をあてはめます。x^2 + 2 × 4 × x + 4^2 = x^2 + 8x + 16 になります。",
+      "error_pattern_candidates": [
+        "variable_handling_error",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "reinforce_same_pattern",
+        "explain_differently"
+      ]
+    },
+    {
+      "full_unit_id": "quadratic_expressions_expansion",
+      "unit_id": "quadratic_expressions",
+      "sub_unit": "expansion",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "question_text": "次の式を展開しなさい。 (x - 6)^2",
+      "diagram": null,
+      "correct_answer": "x^2 - 12x + 36",
+      "hint_1": "差の平方の公式 (x - a)^2 = x^2 - 2ax + a^2 を使いましょう。",
+      "hint_2": "真ん中の項は -2 × 6 × x、最後の項は (-6)^2 になります。",
+      "explanation_base": "公式 (x - a)^2 = x^2 - 2ax + a^2 に a = 6 をあてはめます。x^2 - 2 × 6 × x + 6^2 = x^2 - 12x + 36 になります。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "quadratic_expressions_expansion",
+      "unit_id": "quadratic_expressions",
+      "sub_unit": "expansion",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "question_text": "次の式を展開しなさい。 (x + 7)(x - 7)",
+      "diagram": null,
+      "correct_answer": "x^2 - 49",
+      "hint_1": "和と差の積の公式 (x + a)(x - a) = x^2 - a^2 を使いましょう。",
+      "hint_2": "a = 7 なので、x^2 - 7^2 を計算します。",
+      "explanation_base": "公式 (x + a)(x - a) = x^2 - a^2 に a = 7 をあてはめます。xの項が消えて、x^2 - 49 になります。",
+      "error_pattern_candidates": [
+        "variable_handling_error",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "reinforce_same_pattern"
+      ]
+    },
+    {
+      "full_unit_id": "quadratic_expressions_expansion",
+      "unit_id": "quadratic_expressions",
+      "sub_unit": "expansion",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "question_text": "次の式を展開しなさい。 (x - 4)(x - 9)",
+      "diagram": null,
+      "correct_answer": "x^2 - 13x + 36",
+      "hint_1": "(x + a)(x + b) = x^2 + (a + b)x + ab の公式で、aとbがともにマイナスの場合です。",
+      "hint_2": "a = -4, b = -9 です。和は (-4) + (-9)、積は (-4) × (-9) です。",
+      "explanation_base": "xの係数は (-4) + (-9) = -13、定数項は (-4) × (-9) = 36 となります。したがって、x^2 - 13x + 36 になります。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "quadratic_expressions_expansion",
+      "unit_id": "quadratic_expressions",
+      "sub_unit": "expansion",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "question_text": "次の式を展開しなさい。 (2x + 3)(x - 5)",
+      "diagram": null,
+      "correct_answer": "2x^2 - 7x - 15",
+      "hint_1": "この式は x の係数が 1 ではないため、分配法則を使って1つずつ順番にかけて展開しましょう。",
+      "hint_2": "2x を x と -5 にかけ、次に 3 を x と -5 にかけて、同類項をまとめます。",
+      "explanation_base": "分配法則を使って展開すると、2x×x + 2x×(-5) + 3×x + 3×(-5) = 2x^2 - 10x + 3x - 15 になります。同類項をまとめて 2x^2 - 7x - 15 です。",
+      "error_pattern_candidates": [
+        "variable_handling_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "explain_differently"
+      ]
+    },
+    {
+      "full_unit_id": "quadratic_expressions_expansion",
+      "unit_id": "quadratic_expressions",
+      "sub_unit": "expansion",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "question_text": "次の式を展開しなさい。 (3x - 2)^2",
+      "diagram": null,
+      "correct_answer": "9x^2 - 12x + 4",
+      "hint_1": "差の平方の公式 (A - B)^2 = A^2 - 2AB + B^2 で、A = 3x, B = 2 と考えて展開します。",
+      "hint_2": "最初の項は (3x)^2 なので 9x^2 になります。真ん中の項は -2 × 3x × 2 です。",
+      "explanation_base": "公式にあてはめると、(3x)^2 - 2 × 3x × 2 + 2^2 となります。計算して 9x^2 - 12x + 4 になります。",
+      "error_pattern_candidates": [
+        "variable_handling_error",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "quadratic_expressions_expansion",
+      "unit_id": "quadratic_expressions",
+      "sub_unit": "expansion",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "question_text": "次の式を展開しなさい。 (4x + 5y)(4x - 5y)",
+      "diagram": null,
+      "correct_answer": "16x^2 - 25y^2",
+      "hint_1": "和と差の積の公式 (A + B)(A - B) = A^2 - B^2 を使います。",
+      "hint_2": "A = 4x, B = 5y として、(4x)^2 - (5y)^2 を計算します。",
+      "explanation_base": "公式 (A + B)(A - B) = A^2 - B^2 に A = 4x, B = 5y をあてはめます。(4x)^2 - (5y)^2 = 16x^2 - 25y^2 になります。",
+      "error_pattern_candidates": [
+        "variable_handling_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "reinforce_same_pattern"
+      ]
+    },
+    {
+      "full_unit_id": "quadratic_expressions_expansion",
+      "unit_id": "quadratic_expressions",
+      "sub_unit": "expansion",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "question_text": "次の式を展開しなさい。 (a - 6b)^2",
+      "diagram": null,
+      "correct_answer": "a^2 - 12ab + 36b^2",
+      "hint_1": "(A - B)^2 = A^2 - 2AB + B^2 の公式を使います。文字が2種類あることに注意しましょう。",
+      "hint_2": "A = a, B = 6b としてあてはめると、真ん中の項は -2 × a × 6b になります。",
+      "explanation_base": "公式にあてはめると、a^2 - 2 × a × 6b + (6b)^2 となります。計算して a^2 - 12ab + 36b^2 になります。",
+      "error_pattern_candidates": [
+        "variable_handling_error",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "explain_differently"
+      ]
+    },
+    {
+      "full_unit_id": "quadratic_expressions_expansion",
+      "unit_id": "quadratic_expressions",
+      "sub_unit": "expansion",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "question_text": "次の式を展開しなさい。 (x + y + 3)(x + y - 3)",
+      "diagram": null,
+      "correct_answer": "x^2 + 2xy + y^2 - 9",
+      "hint_1": "x + y を1つの文字（例えば M）に置き換えて考えてみましょう。",
+      "hint_2": "(M + 3)(M - 3) を展開して M^2 - 9 にした後、M を x + y に戻してさらに展開します。",
+      "explanation_base": "x + y = M とおくと、(M + 3)(M - 3) = M^2 - 9 になります。M を x + y に戻すと (x + y)^2 - 9 となり、これを展開して x^2 + 2xy + y^2 - 9 になります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "variable_handling_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "quadratic_expressions_expansion",
+      "unit_id": "quadratic_expressions",
+      "sub_unit": "expansion",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "question_text": "次の式を展開して、簡単にしなさい。 2(x - 4)^2 - (x + 3)(x - 5)",
+      "diagram": null,
+      "correct_answer": "x^2 - 14x + 47",
+      "hint_1": "前半の 2(x - 4)^2 と、後半の (x + 3)(x - 5) をそれぞれ先に展開しましょう。",
+      "hint_2": "後半の引き算は、展開した式全体にかかるため、符号が変わることに注意してかっこを外します。",
+      "explanation_base": "前半は 2(x^2 - 8x + 16) = 2x^2 - 16x + 32。後半は (x^2 - 2x - 15) となります。これらを引き算するので、2x^2 - 16x + 32 - x^2 + 2x + 15 となり、同類項をまとめて x^2 - 14x + 47 になります。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "operation_confusion"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "explain_differently"
+      ]
+    },
+    {
+      "full_unit_id": "quadratic_expressions_expansion",
+      "unit_id": "quadratic_expressions",
+      "sub_unit": "expansion",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "question_text": "次の式を展開して、簡単にしなさい。 (2x + 1)(2x - 1) - 3(x - 2)^2",
+      "diagram": null,
+      "correct_answer": "x^2 + 12x - 13",
+      "hint_1": "(2x + 1)(2x - 1) は和と差の積の公式で展開し、(x - 2)^2 は差の平方の公式で展開します。",
+      "hint_2": "展開すると (4x^2 - 1) - 3(x^2 - 4x + 4) になります。分配法則でかっこを外して整理しましょう。",
+      "explanation_base": "(4x^2 - 1) - 3(x^2 - 4x + 4) = 4x^2 - 1 - 3x^2 + 12x - 12 になります。同類項をまとめて x^2 + 12x - 13 となります。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "variable_handling_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "quadratic_expressions_expansion",
+      "unit_id": "quadratic_expressions",
+      "sub_unit": "expansion",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "question_text": "縦の長さが a+3 cm、横の長さが a+6 cm の長方形があります。この長方形の面積を a を使った式で表しなさい。",
+      "diagram": "縦が a+3、横が a+6 の長方形の図。",
+      "correct_answer": "a^2 + 9a + 18",
+      "hint_1": "長方形の面積は「縦 × 横」で求められます。",
+      "hint_2": "(a+3)(a+6) の式を立てて、乗法公式を使って展開しましょう。",
+      "explanation_base": "面積は (a+3)(a+6) となります。乗法公式 (x+a)(x+b) = x^2+(a+b)x+ab にあてはめて展開すると、a^2 + 9a + 18 になります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "comprehension_gap"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "explain_differently"
+      ]
+    },
+    {
+      "full_unit_id": "quadratic_expressions_expansion",
+      "unit_id": "quadratic_expressions",
+      "sub_unit": "expansion",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "question_text": "一辺の長さが x cm の正方形があります。この正方形の縦を 2 cm 短くし、横を 5 cm 長くして新しい長方形を作りました。新しい長方形の面積から、もとの正方形の面積を引いた式を求め、展開して簡単にしなさい。",
+      "diagram": "もとの一辺 x の正方形と、縦が x-2、横が x+5 になった新しい長方形の比較図。",
+      "correct_answer": "3x - 10",
+      "hint_1": "新しい長方形の縦は (x - 2) cm、横は (x + 5) cm です。もとの正方形の面積は x^2 cm^2 です。",
+      "hint_2": "(x - 2)(x + 5) - x^2 の式を立てて、計算しましょう。",
+      "explanation_base": "新しい長方形の面積は (x - 2)(x + 5) = x^2 + 3x - 10 です。もとの正方形の面積 x^2 を引くので、(x^2 + 3x - 10) - x^2 = 3x - 10 となります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "explain_differently"
+      ]
+    }
+  ]
+}

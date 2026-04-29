@@ -1,0 +1,289 @@
+{
+  "problems": [
+    {
+      "full_unit_id": "positive_negative_numbers_subtraction",
+      "unit_id": "positive_negative_numbers",
+      "sub_unit": "subtraction",
+      "difficulty": "easy",
+      "question_text": "(+5) - (+3) を計算しなさい。",
+      "correct_answer": "2",
+      "hint_1": "引き算は、足し算に直して計算することができます。",
+      "hint_2": "引く数の符号を変えて、(+5) + (-3) として計算しましょう。",
+      "explanation_base": "減法は、加法に直して後ろの数の符号を変えます。(+5) - (+3) = (+5) + (-3) = 2 となります。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "operation_confusion"
+      ],
+      "intervention_candidates": [
+        "review_sign_rules",
+        "repeat_basic_subtraction"
+      ]
+    },
+    {
+      "full_unit_id": "positive_negative_numbers_subtraction",
+      "unit_id": "positive_negative_numbers",
+      "sub_unit": "subtraction",
+      "difficulty": "easy",
+      "question_text": "(+2) - (+6) を計算しなさい。",
+      "correct_answer": "-4",
+      "hint_1": "引き算を足し算に直してみましょう。引く数の符号が変わります。",
+      "hint_2": "(+2) + (-6) の計算になります。絶対値が大きい方の符号はどうなるでしょうか。",
+      "explanation_base": "加法に直すと (+2) + (-6) となります。異符号の加法なので、絶対値の大きいほうの符号をつけて -(6 - 2) = -4 です。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "absolute_value_error"
+      ],
+      "intervention_candidates": [
+        "absolute_value_comparison",
+        "review_sign_rules"
+      ]
+    },
+    {
+      "full_unit_id": "positive_negative_numbers_subtraction",
+      "unit_id": "positive_negative_numbers",
+      "sub_unit": "subtraction",
+      "difficulty": "easy",
+      "question_text": "(-4) - (+5) を計算しなさい。",
+      "correct_answer": "-9",
+      "hint_1": "マイナスの数からプラスの数を引く計算です。足し算に直しましょう。",
+      "hint_2": "(-4) + (-5) と同じ計算になります。同符号の足し算のルールを思い出しましょう。",
+      "explanation_base": "加法に直すと (-4) + (-5) になります。同符号の足し算なので、絶対値の和に共通の符号をつけ、-(4 + 5) = -9 となります。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "show_number_line",
+        "repeat_basic_subtraction"
+      ]
+    },
+    {
+      "full_unit_id": "positive_negative_numbers_subtraction",
+      "unit_id": "positive_negative_numbers",
+      "sub_unit": "subtraction",
+      "difficulty": "easy",
+      "question_text": "(-3) - (-7) を計算しなさい。",
+      "correct_answer": "4",
+      "hint_1": "マイナスの数を引くときは、符号がどう変わるか注意しましょう。",
+      "hint_2": "引く数である (-7) の符号を変えて足すので、(-3) + (+7) となります。",
+      "explanation_base": "負の数を引くことは、正の数を足すことと同じです。(-3) + (+7) となり、異符号の加法として計算して +(7 - 3) = 4 となります。",
+      "error_pattern_candidates": [
+        "operation_confusion",
+        "sign_error"
+      ],
+      "intervention_candidates": [
+        "review_sign_rules",
+        "explain_differently"
+      ]
+    },
+    {
+      "full_unit_id": "positive_negative_numbers_subtraction",
+      "unit_id": "positive_negative_numbers",
+      "sub_unit": "subtraction",
+      "difficulty": "easy",
+      "question_text": "0 - (-8) を計算しなさい。",
+      "correct_answer": "8",
+      "hint_1": "0から数を引く計算です。引き算を足し算に直してみましょう。",
+      "hint_2": "(-8) を引くので、符号を変えて 0 + (+8) になります。",
+      "explanation_base": "負の数を引くことは正の数を足すことと同じなので、0 + (+8) = 8 となります。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "show_number_line",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "positive_negative_numbers_subtraction",
+      "unit_id": "positive_negative_numbers",
+      "sub_unit": "subtraction",
+      "difficulty": "normal",
+      "question_text": "(+4) - (-2) - (+7) を計算しなさい。",
+      "correct_answer": "-1",
+      "hint_1": "引き算はすべて足し算に直してから計算しましょう。",
+      "hint_2": "式を (+4) + (+2) + (-7) に直して、前から順番に計算してみましょう。",
+      "explanation_base": "減法を加法に直すと (+4) + (+2) + (-7) となります。前から順番に計算すると、(+6) + (-7) = -1 です。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "operation_confusion"
+      ],
+      "intervention_candidates": [
+        "review_sign_rules",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "positive_negative_numbers_subtraction",
+      "unit_id": "positive_negative_numbers",
+      "sub_unit": "subtraction",
+      "difficulty": "normal",
+      "question_text": "(-3.5) - (+1.2) を計算しなさい。",
+      "correct_answer": "-4.7",
+      "hint_1": "小数の引き算です。まずは足し算の式に直してみましょう。",
+      "hint_2": "(-3.5) + (-1.2) の計算になります。同符号の計算ルールを使いましょう。",
+      "explanation_base": "加法に直すと (-3.5) + (-1.2) となります。同符号なので絶対値を足して共通のマイナスをつけ、-(3.5 + 1.2) = -4.7 となります。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "review_sign_rules",
+        "repeat_basic_subtraction"
+      ]
+    },
+    {
+      "full_unit_id": "positive_negative_numbers_subtraction",
+      "unit_id": "positive_negative_numbers",
+      "sub_unit": "subtraction",
+      "difficulty": "normal",
+      "question_text": "(+1/2) - (-1/3) を計算しなさい。",
+      "correct_answer": "5/6",
+      "hint_1": "分数の引き算です。足し算に直してから、分母を通分しましょう。",
+      "hint_2": "足し算に直すと (+1/2) + (+1/3) になります。分母を6で揃えましょう。",
+      "explanation_base": "加法に直すと (+1/2) + (+1/3) になります。分母を6にそろえて通分すると (+3/6) + (+2/6) = 5/6 となります。",
+      "error_pattern_candidates": [
+        "prerequisite_gap",
+        "sign_error"
+      ],
+      "intervention_candidates": [
+        "fallback_prerequisite",
+        "review_sign_rules"
+      ]
+    },
+    {
+      "full_unit_id": "positive_negative_numbers_subtraction",
+      "unit_id": "positive_negative_numbers",
+      "sub_unit": "subtraction",
+      "difficulty": "normal",
+      "question_text": "(-6) + (+2) - (-5) を計算しなさい。",
+      "correct_answer": "1",
+      "hint_1": "加法と減法が混ざった式です。減法を加法に直して、すべての項を足し算にしましょう。",
+      "hint_2": "(-5)を引く部分は (+5)を足すことに変わります。(-6) + (+2) + (+5) を計算しましょう。",
+      "explanation_base": "減法を加法に直すと (-6) + (+2) + (+5) となります。正の数を先にまとめると (-6) + (+7) = 1 となります。",
+      "error_pattern_candidates": [
+        "operation_confusion",
+        "sign_error"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "explain_differently"
+      ]
+    },
+    {
+      "full_unit_id": "positive_negative_numbers_subtraction",
+      "unit_id": "positive_negative_numbers",
+      "sub_unit": "subtraction",
+      "difficulty": "normal",
+      "question_text": "(-2/5) - (+3/5) を計算しなさい。",
+      "correct_answer": "-1",
+      "hint_1": "分母が同じ分数の引き算です。足し算に直して分子の計算をしましょう。",
+      "hint_2": "(-2/5) + (-3/5) になります。分子は -2 と -3 を合わせます。",
+      "explanation_base": "加法に直すと (-2/5) + (-3/5) になります。同符号の加法として計算し、-(2/5 + 3/5) = -5/5 = -1 となります。",
+      "error_pattern_candidates": [
+        "arithmetic_error",
+        "sign_error"
+      ],
+      "intervention_candidates": [
+        "repeat_basic_subtraction",
+        "review_sign_rules"
+      ]
+    },
+    {
+      "full_unit_id": "positive_negative_numbers_subtraction",
+      "unit_id": "positive_negative_numbers",
+      "sub_unit": "subtraction",
+      "difficulty": "hard",
+      "question_text": "(-1.5) - (+3/4) - (-0.25) を計算しなさい。",
+      "correct_answer": "-2",
+      "hint_1": "小数と分数が混ざっています。すべて小数に直すか、すべて分数に直して計算しましょう。",
+      "hint_2": "分数 3/4 は小数で 0.75 です。式を (-1.5) - (+0.75) + (+0.25) にして計算してみましょう。",
+      "explanation_base": "3/4 = 0.75 なので、加法に直すと (-1.5) + (-0.75) + (+0.25) になります。後ろの2つを先に計算すると (-0.5) となり、(-1.5) + (-0.5) = -2 となります。",
+      "error_pattern_candidates": [
+        "prerequisite_gap",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "fallback_prerequisite",
+        "explain_differently"
+      ]
+    },
+    {
+      "full_unit_id": "positive_negative_numbers_subtraction",
+      "unit_id": "positive_negative_numbers",
+      "sub_unit": "subtraction",
+      "difficulty": "hard",
+      "question_text": "(+5/6) - (-1/4) + (-2/3) を計算しなさい。",
+      "correct_answer": "5/12",
+      "hint_1": "分母が異なる3つの分数の加減です。すべて加法に直してから通分しましょう。",
+      "hint_2": "加法に直すと (+5/6) + (+1/4) + (-2/3) になります。分母を12に揃えて計算しましょう。",
+      "explanation_base": "減法を加法に直し、分母を12で通分します。(+10/12) + (+3/12) + (-8/12) となり、(13/12) + (-8/12) = 5/12 となります。",
+      "error_pattern_candidates": [
+        "prerequisite_gap",
+        "sign_error"
+      ],
+      "intervention_candidates": [
+        "fallback_prerequisite",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "positive_negative_numbers_subtraction",
+      "unit_id": "positive_negative_numbers",
+      "sub_unit": "subtraction",
+      "difficulty": "hard",
+      "question_text": "(-2.8) - (+4.5) - (-2.8) を計算しなさい。",
+      "correct_answer": "-4.5",
+      "hint_1": "3つの数の引き算ですが、式の形をよく見ると計算を簡単にする工夫ができます。",
+      "hint_2": "すべて足し算に直すと (-2.8) + (-4.5) + (+2.8) になります。同じ絶対値の数がありますね。",
+      "explanation_base": "すべて加法に直すと (-2.8) + (-4.5) + (+2.8) となります。(-2.8) と (+2.8) を足すと0になるので、残った -4.5 が答えになります。",
+      "error_pattern_candidates": [
+        "careless_error",
+        "operation_confusion"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "explain_differently"
+      ]
+    },
+    {
+      "full_unit_id": "positive_negative_numbers_subtraction",
+      "unit_id": "positive_negative_numbers",
+      "sub_unit": "subtraction",
+      "difficulty": "hard",
+      "question_text": "3 - (-2/5) - 1.4 を計算しなさい。",
+      "correct_answer": "2",
+      "hint_1": "整数、分数、小数が混ざった式です。足し算に直した上で、分数か小数のどちらかに統一しましょう。",
+      "hint_2": "2/5 を小数にすると 0.4 になります。式は (+3) + (+0.4) + (-1.4) になります。",
+      "explanation_base": "分数を小数に直すと 2/5 = 0.4 になります。すべて加法に直して (+3) + (+0.4) + (-1.4) を計算すると、3 + (-1) = 2 になります。",
+      "error_pattern_candidates": [
+        "prerequisite_gap",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "fallback_prerequisite",
+        "retry_with_hint"
+      ]
+    },
+    {
+      "full_unit_id": "positive_negative_numbers_subtraction",
+      "unit_id": "positive_negative_numbers",
+      "sub_unit": "subtraction",
+      "difficulty": "hard",
+      "question_text": "(-1/2) - (-1/3) - (-1/6) を計算しなさい。",
+      "correct_answer": "0",
+      "hint_1": "すべて加法に直して、分母を6で通分しましょう。",
+      "hint_2": "(-1/2) + (+1/3) + (+1/6) になります。通分して分子を計算してみましょう。",
+      "explanation_base": "すべて加法に直すと (-1/2) + (+1/3) + (+1/6) になります。通分すると (-3/6) + (+2/6) + (+1/6) となり、正の数をまとめると (-3/6) + (+3/6) = 0 になります。",
+      "error_pattern_candidates": [
+        "arithmetic_error",
+        "sign_error"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "repeat_same_pattern"
+      ]
+    }
+  ]
+}

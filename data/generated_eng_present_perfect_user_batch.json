@@ -1,0 +1,709 @@
+{
+  "problems": [
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_present_perfect",
+      "unit_id": "eng_present_perfect",
+      "sub_unit": "present_perfect",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に動詞を現在完了形にして入れなさい。\n「I ( have ) breakfast.」",
+      "correct_answer": "have had",
+      "hint_1": "現在完了形は have/has + 過去分詞の形です。",
+      "hint_2": "have ＋ have の過去分詞(had)",
+      "explanation_base": "I have had breakfast.（完了）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_present_perfect",
+      "unit_id": "eng_present_perfect",
+      "sub_unit": "present_perfect",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に動詞を現在完了形にして入れなさい。\n「She ( finish ) her homework.」",
+      "correct_answer": "has finished",
+      "hint_1": "現在完了形：has + 過去分詞（三人称単数）",
+      "hint_2": "has + finished（規則活用）",
+      "explanation_base": "She has finished her homework.（完了）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_present_perfect",
+      "unit_id": "eng_present_perfect",
+      "sub_unit": "present_perfect",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に動詞を現在完了形にして入れなさい。\n「I ( live ) here for ten years.」",
+      "correct_answer": "have lived",
+      "hint_1": "現在完了形の継続：have/has + 過去分詞（for / since とともに）",
+      "hint_2": "have + lived の形にします。",
+      "explanation_base": "I have lived here for ten years.（継続）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_present_perfect",
+      "unit_id": "eng_present_perfect",
+      "sub_unit": "present_perfect",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に動詞を現在完了形にして入れなさい。\n「She ( be ) sick since Monday.」",
+      "correct_answer": "has been",
+      "hint_1": "現在完了形の継続：has + 過去分詞（since とともに）",
+      "hint_2": "has + been の形にします。",
+      "explanation_base": "She has been sick since Monday.（継続）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_present_perfect",
+      "unit_id": "eng_present_perfect",
+      "sub_unit": "present_perfect",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に動詞を現在完了形にして入れなさい。\n「He ( see ) this movie twice.」",
+      "correct_answer": "has seen",
+      "hint_1": "現在完了形の経験：have/has + 過去分詞（twice などとともに）",
+      "hint_2": "has + seen（see の過去分詞）の形にします。",
+      "explanation_base": "He has seen this movie twice.（経験）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_present_perfect",
+      "unit_id": "eng_present_perfect",
+      "sub_unit": "present_perfect",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に動詞を現在完了形にして入れなさい。\n「They ( visit ) this museum before.」",
+      "correct_answer": "have visited",
+      "hint_1": "現在完了形の経験：have + 過去分詞＋before",
+      "hint_2": "have + visited（規則活用）の形にします。",
+      "explanation_base": "They have visited this museum before.（経験）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_present_perfect",
+      "unit_id": "eng_present_perfect",
+      "sub_unit": "present_perfect",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "現在完了形の疑問文に書き換えなさい。\n「She has read that book.」",
+      "correct_answer": "Has she read that book?",
+      "hint_1": "現在完了形の疑問文は Have/Has を先頭に置きます。",
+      "hint_2": "Has + 主語 + 過去分詞〜? の形にします。",
+      "explanation_base": "Has she read that book?（現在完了形の疑問文）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_present_perfect",
+      "unit_id": "eng_present_perfect",
+      "sub_unit": "present_perfect",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "現在完了形の否定文に書き換えなさい。\n「I have eaten sushi.」",
+      "correct_answer": "I have not eaten sushi.",
+      "hint_1": "現在完了形の否定文は have/has の後に not を置きます。",
+      "hint_2": "have not + 過去分詞〜 の形にします。",
+      "explanation_base": "I have not eaten sushi.（現在完了形の否定文）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_present_perfect",
+      "unit_id": "eng_present_perfect",
+      "sub_unit": "present_perfect",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に正しい語を入れなさい。\n「Have you ever ( be ) to America?」",
+      "correct_answer": "been",
+      "hint_1": "現在完了形の経験の疑問文：Have you ever + 過去分詞?",
+      "hint_2": "be の過去分詞は been です。",
+      "explanation_base": "Have you ever been to America?（経験の疑問文）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_present_perfect",
+      "unit_id": "eng_present_perfect",
+      "sub_unit": "present_perfect",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に正しい語を入れなさい。\n「I have ( know ) him for five years.」",
+      "correct_answer": "known",
+      "hint_1": "know の過去分詞は known です。",
+      "hint_2": "I have + known（know の過去分詞）の形にします。",
+      "explanation_base": "I have known him for five years.（継続）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_present_perfect",
+      "unit_id": "eng_present_perfect",
+      "sub_unit": "present_perfect",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「私は以前にこの映画を見たことがあります。」",
+      "correct_answer": "I have seen this movie before.",
+      "hint_1": "現在完了形の経験：have + 過去分詞 + before",
+      "hint_2": "I have seen 〜 before の形にします。",
+      "explanation_base": "I have seen this movie before.（経験）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_present_perfect",
+      "unit_id": "eng_present_perfect",
+      "sub_unit": "present_perfect",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「彼女は3年間東京に住んでいます。」",
+      "correct_answer": "She has lived in Tokyo for three years.",
+      "hint_1": "現在完了形の継続：has + 過去分詞 + for〜",
+      "hint_2": "She has lived in Tokyo for 〜 の形にします。",
+      "explanation_base": "She has lived in Tokyo for three years.（継続）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_present_perfect",
+      "unit_id": "eng_present_perfect",
+      "sub_unit": "present_perfect",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「あなたはこれまでに富士山に登ったことがありますか？」",
+      "correct_answer": "Have you ever climbed Mt. Fuji?",
+      "hint_1": "現在完了形の経験の疑問文：Have you ever + 過去分詞?",
+      "hint_2": "Have you ever climbed 〜? の形にします。",
+      "explanation_base": "Have you ever climbed Mt. Fuji?（経験の疑問文）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_present_perfect",
+      "unit_id": "eng_present_perfect",
+      "sub_unit": "present_perfect",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「私はまだ宿題を終えていません。」",
+      "correct_answer": "I have not finished my homework yet.",
+      "hint_1": "現在完了形の否定：have not + 過去分詞 + yet",
+      "hint_2": "I have not finished 〜 yet の形にします。",
+      "explanation_base": "I have not finished my homework yet.（完了の否定）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_present_perfect",
+      "unit_id": "eng_present_perfect",
+      "sub_unit": "present_perfect",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「彼女はちょうどその本を読み終えたところです。」",
+      "correct_answer": "She has just finished reading the book.",
+      "hint_1": "現在完了形＋just：have/has + just + 過去分詞",
+      "hint_2": "She has just finished 〜 の形にします。",
+      "explanation_base": "She has just finished reading the book.（完了＋just）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_present_perfect",
+      "unit_id": "eng_present_perfect",
+      "sub_unit": "present_perfect",
+      "problem_type": "mini_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に動詞を現在完了形にして入れなさい。\n「He ( go ) to France twice.」",
+      "correct_answer": "has gone",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "has gone（go の過去分詞）。He has gone to France twice.（経験）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_present_perfect"
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_present_perfect",
+      "unit_id": "eng_present_perfect",
+      "sub_unit": "present_perfect",
+      "problem_type": "mini_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に動詞を現在完了形にして入れなさい。\n「I ( study ) English since last year.」",
+      "correct_answer": "have studied",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "I have studied English since last year.（継続）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_present_perfect"
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_present_perfect",
+      "unit_id": "eng_present_perfect",
+      "sub_unit": "present_perfect",
+      "problem_type": "mini_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「彼女は一度もその映画を見たことがありません。」",
+      "correct_answer": "She has never seen the movie.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "She has never seen the movie.（経験の否定）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_present_perfect"
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_present_perfect",
+      "unit_id": "eng_present_perfect",
+      "sub_unit": "present_perfect",
+      "problem_type": "mini_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "現在完了形の疑問文に書き換えなさい。\n「You have met him before.」",
+      "correct_answer": "Have you met him before?",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "Have you met him before?",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_present_perfect"
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_present_perfect",
+      "unit_id": "eng_present_perfect",
+      "sub_unit": "present_perfect",
+      "problem_type": "mini_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「私はちょうど手紙を書き終えました。」",
+      "correct_answer": "I have just finished writing the letter.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "I have just finished writing the letter.（完了）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_present_perfect"
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_present_perfect",
+      "unit_id": "eng_present_perfect",
+      "sub_unit": "present_perfect",
+      "problem_type": "unit_test",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に動詞を現在完了形にして入れなさい。\n「She ( eat ) sushi before.」",
+      "correct_answer": "has eaten",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "She has eaten sushi before.（経験）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_present_perfect"
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_present_perfect",
+      "unit_id": "eng_present_perfect",
+      "sub_unit": "present_perfect",
+      "problem_type": "unit_test",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に動詞を現在完了形にして入れなさい。\n「They ( live ) here for 20 years.」",
+      "correct_answer": "have lived",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "They have lived here for 20 years.（継続）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_present_perfect"
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_present_perfect",
+      "unit_id": "eng_present_perfect",
+      "sub_unit": "present_perfect",
+      "problem_type": "unit_test",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に動詞を現在完了形にして入れなさい。\n「He ( already finish ) his work.」",
+      "correct_answer": "has already finished",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "He has already finished his work.（完了＋already）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_present_perfect"
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_present_perfect",
+      "unit_id": "eng_present_perfect",
+      "sub_unit": "present_perfect",
+      "problem_type": "unit_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「あなたはこれまでに外国に行ったことがありますか？」",
+      "correct_answer": "Have you ever been abroad?",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "Have you ever been abroad?",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_present_perfect"
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_present_perfect",
+      "unit_id": "eng_present_perfect",
+      "sub_unit": "present_perfect",
+      "problem_type": "unit_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "現在完了形の否定文に書き換えなさい。\n「She has finished the project.」",
+      "correct_answer": "She has not finished the project.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "She has not finished the project.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_present_perfect"
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_present_perfect",
+      "unit_id": "eng_present_perfect",
+      "sub_unit": "present_perfect",
+      "problem_type": "unit_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「彼は10年間医者として働いています。」",
+      "correct_answer": "He has worked as a doctor for ten years.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "He has worked as a doctor for ten years.（継続）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_present_perfect"
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_present_perfect",
+      "unit_id": "eng_present_perfect",
+      "sub_unit": "present_perfect",
+      "problem_type": "unit_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に正しい語を入れなさい。\n「Have you ( eat ) lunch yet?」",
+      "correct_answer": "eaten",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "Have you eaten lunch yet?（完了の疑問）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_present_perfect"
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_present_perfect",
+      "unit_id": "eng_present_perfect",
+      "sub_unit": "present_perfect",
+      "problem_type": "unit_test",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「私はまだ彼女から返事をもらっていません。」",
+      "correct_answer": "I have not received a reply from her yet.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "I have not received a reply from her yet.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_present_perfect"
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_present_perfect",
+      "unit_id": "eng_present_perfect",
+      "sub_unit": "present_perfect",
+      "problem_type": "unit_test",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「彼女はこれまでに何度も世界一周旅行をしました。」",
+      "correct_answer": "She has traveled around the world many times.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "She has traveled around the world many times.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_present_perfect"
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_present_perfect",
+      "unit_id": "eng_present_perfect",
+      "sub_unit": "present_perfect",
+      "problem_type": "unit_test",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「私たちは出会ってからずっと友達です。」",
+      "correct_answer": "We have been friends since we met.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "We have been friends since we met.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_present_perfect"
+    }
+  ]
+}

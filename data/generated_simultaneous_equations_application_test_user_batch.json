@@ -1,0 +1,304 @@
+{
+  "problems": [
+    {
+      "full_unit_id": "simultaneous_equations_application",
+      "unit_id": "simultaneous_equations",
+      "sub_unit": "application",
+      "problem_type": "mini_test",
+      "test_scope": "mini_test",
+      "difficulty": "easy",
+      "question_text": "1個120円のりんごと1個80円のみかんを合わせて15個買い、代金の合計が1520円になりました。買ったりんごとみかんの個数をそれぞれ求めなさい。",
+      "diagram": null,
+      "correct_answer": "りんご8個、みかん7個",
+      "explanation_base": "りんごを x個、みかんを y個として連立方程式を立てます。個数の関係から x + y = 15、代金の関係から 120x + 80y = 1520 となります。これを解くと x = 8, y = 7 になります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "simultaneous_equations_application",
+      "unit_id": "simultaneous_equations",
+      "sub_unit": "application",
+      "problem_type": "mini_test",
+      "test_scope": "mini_test",
+      "difficulty": "easy",
+      "question_text": "現在、父親の年齢は子供の年齢の3倍です。10年後には、父親の年齢が子供の年齢の2倍になります。現在の父親と子供の年齢をそれぞれ求めなさい。",
+      "diagram": null,
+      "correct_answer": "父親30歳、子供10歳",
+      "explanation_base": "現在の父親の年齢を x歳、子供の年齢を y歳とします。現在の関係から x = 3y、10年後の関係から x + 10 = 2(y + 10) となります。これを解くと x = 30, y = 10 になります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "comprehension_gap"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "simultaneous_equations_application",
+      "unit_id": "simultaneous_equations",
+      "sub_unit": "application",
+      "problem_type": "mini_test",
+      "test_scope": "mini_test",
+      "difficulty": "normal",
+      "question_text": "A地点からB地点まで12kmの道のりを、はじめは時速4kmで歩き、途中から時速3kmで歩いたところ、全体で3時間30分かかりました。時速4kmで歩いた道のりと時速3kmで歩いた道のりをそれぞれ求めなさい。",
+      "diagram": null,
+      "correct_answer": "時速4kmで歩いた道のり6km、時速3kmで歩いた道のり6km",
+      "explanation_base": "時速4kmで歩いた道のりを x km、時速3kmで歩いた道のりを y kmとします。道のりの関係から x + y = 12、時間の関係から x/4 + y/3 = 7/2（3時間30分は7/2時間）となります。これを解くと x = 6, y = 6 になります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "comprehension_gap"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "explain_differently"
+      ]
+    },
+    {
+      "full_unit_id": "simultaneous_equations_application",
+      "unit_id": "simultaneous_equations",
+      "sub_unit": "application",
+      "problem_type": "mini_test",
+      "test_scope": "mini_test",
+      "difficulty": "normal",
+      "question_text": "ある中学校の今年度の生徒数は、昨年度に比べて男子が5%減り、女子が10%増えたため、全体で昨年度より2人増えて412人になりました。今年度の男子と女子の生徒数をそれぞれ求めなさい。",
+      "diagram": null,
+      "correct_answer": "男子247人、女子165人",
+      "explanation_base": "昨年度の男子生徒を x人、女子生徒を y人とします。昨年度の合計は410人なので x + y = 410、増減の関係から -0.05x + 0.1y = 2 となります。これを解くと x = 260, y = 150 となります。今年度の男子は 260 × 0.95 = 247人、女子は 150 × 1.1 = 165人です。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "simultaneous_equations_application",
+      "unit_id": "simultaneous_equations",
+      "sub_unit": "application",
+      "problem_type": "mini_test",
+      "test_scope": "mini_test",
+      "difficulty": "hard",
+      "question_text": "2けたの正の整数があります。その十の位の数と一の位の数の和は11です。また、十の位の数と一の位の数を入れかえてできる数は、もとの数より45大きくなります。もとの整数を求めなさい。",
+      "diagram": null,
+      "correct_answer": "38",
+      "explanation_base": "十の位の数を x、一の位の数を y とします。位の数の和から x + y = 11、入れかえた数の関係から 10y + x = (10x + y) + 45 となります。後者の式を整理すると -9x + 9y = 45 より -x + y = 5。これらを連立して解くと x = 3, y = 8 となります。したがって、もとの整数は38です。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "comprehension_gap"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "simultaneous_equations_application",
+      "unit_id": "simultaneous_equations",
+      "sub_unit": "application",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "easy",
+      "question_text": "1本50円の鉛筆と1本80円のボールペンを合わせて12本買い、750円支払いました。鉛筆とボールペンをそれぞれ何本買いましたか。",
+      "diagram": null,
+      "correct_answer": "鉛筆7本、ボールペン5本",
+      "explanation_base": "鉛筆を x本、ボールペンを y本とします。本数の関係から x + y = 12、代金の関係から 50x + 80y = 750 となります。これを解くと x = 7, y = 5 になります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "simultaneous_equations_application",
+      "unit_id": "simultaneous_equations",
+      "sub_unit": "application",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "easy",
+      "question_text": "ツルとカメが合わせて20匹います。足の数の合計が56本のとき、ツルとカメはそれぞれ何匹いますか。",
+      "diagram": null,
+      "correct_answer": "ツル12匹、カメ8匹",
+      "explanation_base": "ツルを x匹、カメを y匹とします。頭数の関係から x + y = 20、足の数の関係から 2x + 4y = 56 となります。これを解くと x = 12, y = 8 になります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "simultaneous_equations_application",
+      "unit_id": "simultaneous_equations",
+      "sub_unit": "application",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "normal",
+      "question_text": "兄と弟の持っている金額の合計は3000円です。兄が弟に300円渡すと、兄の金額は弟の金額の2倍になります。はじめに兄と弟が持っていた金額をそれぞれ求めなさい。",
+      "diagram": null,
+      "correct_answer": "兄2300円、弟700円",
+      "explanation_base": "はじめに兄が持っていた金額を x円、弟を y円とします。合計金額から x + y = 3000、やり取り後の関係から x - 300 = 2(y + 300) となります。後者の式を整理すると x - 2y = 900。これらを連立して解くと x = 2300, y = 700 になります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "comprehension_gap"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "simultaneous_equations_application",
+      "unit_id": "simultaneous_equations",
+      "sub_unit": "application",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "normal",
+      "question_text": "8%の食塩水と3%の食塩水を混ぜて、5%の食塩水を500g作りたい。それぞれ何gずつ混ぜればよいか求めなさい。",
+      "diagram": null,
+      "correct_answer": "8%の食塩水を200g、3%の食塩水を300g",
+      "explanation_base": "8%の食塩水を x g、3%の食塩水を y gとします。重さの関係から x + y = 500、含まれる食塩の重さの関係から 0.08x + 0.03y = 500 × 0.05 となります。これを解くと x = 200, y = 300 になります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "simultaneous_equations_application",
+      "unit_id": "simultaneous_equations",
+      "sub_unit": "application",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "normal",
+      "question_text": "ある美術館の入館料は、大人2人と子供3人で1600円、大人3人と子供1人で1700円です。大人1人と子供1人の入館料をそれぞれ求めなさい。",
+      "diagram": null,
+      "correct_answer": "大人500円、子供200円",
+      "explanation_base": "大人1人の入館料を x円、子供1人を y円とします。条件から 2x + 3y = 1600 と 3x + y = 1700 という2つの式が成り立ちます。これらを連立して解くと x = 500, y = 200 になります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "simultaneous_equations_application",
+      "unit_id": "simultaneous_equations",
+      "sub_unit": "application",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "normal",
+      "question_text": "家から駅までの道のりを行くのに、自転車で時速15kmで行くと、歩いて時速5kmで行くよりも20分早く着きます。家から駅までの道のりと、歩いて行ったときにかかる時間を求めなさい。",
+      "diagram": null,
+      "correct_answer": "道のり2.5km、歩く時間0.5時間（30分）",
+      "explanation_base": "家から駅までの道のりを x km、歩いて行く時間を y 時間とします。道のりの関係から x = 5y、自転車で行く時間の関係から x = 15(y - 1/3) （20分は1/3時間）となります。これらを連立して解くと x = 2.5, y = 0.5 となります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "comprehension_gap"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "explain_differently"
+      ]
+    },
+    {
+      "full_unit_id": "simultaneous_equations_application",
+      "unit_id": "simultaneous_equations",
+      "sub_unit": "application",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "hard",
+      "question_text": "周囲が3000mある池の周りを、AさんとBさんが同じ場所から同時に出発します。反対方向に走ると10分で出会い、同じ方向に走るとAさんがBさんを30分で1周追い抜きます。AさんとBさんの走る速さはそれぞれ分速何mか求めなさい。",
+      "diagram": null,
+      "correct_answer": "Aさんは分速200m、Bさんは分速100m",
+      "explanation_base": "Aさんの速さを分速 x m、Bさんの速さを分速 y mとします。反対方向に走ると10分で出会うので 10x + 10y = 3000、同じ方向に走ると30分で追いつくので 30x - 30y = 3000 となります。これらを解くと x = 200, y = 100 になります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "comprehension_gap"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "simultaneous_equations_application",
+      "unit_id": "simultaneous_equations",
+      "sub_unit": "application",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "hard",
+      "question_text": "ある品物を仕入れ、原価の3割の利益を見込んで定価をつけましたが、売れなかったので定価の2割引で売ったところ、200円の利益がありました。この品物の原価と定価を求めなさい。",
+      "diagram": null,
+      "correct_answer": "原価5000円、定価6500円",
+      "explanation_base": "原価を x円、定価を y円とします。定価の決め方から y = 1.3x、実際の利益の関係から 0.8y - x = 200（0.8yは定価の2割引を表します）となります。これらを連立して解くと x = 5000, y = 6500 になります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "comprehension_gap"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "explain_differently"
+      ]
+    },
+    {
+      "full_unit_id": "simultaneous_equations_application",
+      "unit_id": "simultaneous_equations",
+      "sub_unit": "application",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "hard",
+      "question_text": "ある中学校の陸上部は、男子と女子合わせて45人います。そのうち、男子の20%と女子の25%が県大会に出場することになり、その人数の合計は10人でした。陸上部の男子と女子の人数をそれぞれ求めなさい。",
+      "diagram": null,
+      "correct_answer": "男子25人、女子20人",
+      "explanation_base": "男子部員を x人、女子部員を y人とします。全体の人数から x + y = 45、出場者の人数から 0.2x + 0.25y = 10 となります。これを解くと x = 25, y = 20 になります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "explain_differently"
+      ]
+    },
+    {
+      "full_unit_id": "simultaneous_equations_application",
+      "unit_id": "simultaneous_equations",
+      "sub_unit": "application",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "hard",
+      "question_text": "濃度が異なる2つの食塩水A, Bがあります。Aを200g、Bを300g混ぜると8%の食塩水になり、Aを300g、Bを200g混ぜると7%の食塩水になります。食塩水A, Bの濃度をそれぞれ求めなさい。",
+      "diagram": null,
+      "correct_answer": "食塩水Aは5%、食塩水Bは10%",
+      "explanation_base": "食塩水Aの濃度を x%、食塩水Bの濃度を y%とします。それぞれに含まれる食塩の重さから、200(x/100) + 300(y/100) = 500 × 0.08、および 300(x/100) + 200(y/100) = 500 × 0.07 となります。整理すると 2x + 3y = 40, 3x + 2y = 35 となり、これを解くと x = 5, y = 10 になります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "comprehension_gap"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "teacher_intervention_needed"
+      ]
+    }
+  ]
+}

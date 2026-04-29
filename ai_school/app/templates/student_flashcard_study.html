@@ -1,0 +1,163 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="student-top-bar">
+  <div class="student-top-bar__info">
+    <span class="student-top-bar__name">{{ student.display_name }} さん</span>
+    <span class="state-chip state-chip--english">
+      {% if is_review %}🔁 復習{% elif stage == 1 %}Stage 1 インプット{% elif stage == 2 %}Stage 2 認識{% elif stage == 3 %}Stage 3 定着{% else %}Stage 4 実践{% endif %}
+    </span>
+  </div>
+  <a class="progress-chip-btn" href="/students/{{ student.student_id }}/flashcards">セット一覧</a>
+</div>
+
+{# ── ステージ説明バナー ── #}
+<section class="card" style="margin-bottom: 16px; background:
+  {% if stage == 1 %}#f0fdf4{% elif stage == 2 %}#eff6ff{% elif stage == 3 %}#fefce8{% else %}#fdf4ff{% endif %};
+  border-left: 4px solid
+  {% if stage == 1 %}#10b981{% elif stage == 2 %}#3b82f6{% elif stage == 3 %}#eab308{% else %}#a855f7{% endif %};">
+  <p class="section-label" style="color:{% if stage==1 %}#059669{% elif stage==2 %}#2563eb{% elif stage==3 %}#ca8a04{% else %}#9333ea{% endif %};">
+    {% if is_review %}復習モード{% elif stage == 1 %}Step 1: まず眺めよう{% elif stage == 2 %}Step 2: 意味を選ぼう{% elif stage == 3 %}Step 3: スペルを書こう{% else %}Step 4: 音だけで当てよう{% endif %}
+  </p>
+  <p style="margin: 4px 0 0; font-size: 0.9rem; color: #475569;">
+    {% if stage == 1 %}音声を聞きながら、単語と意味・例文を確認しましょう。{% elif stage == 2 %}音声を聞いて、正しい日本語の意味を4つの中から選びましょう。{% elif stage == 3 %}日本語の意味を見て、英単語を正確にタイピングしましょう。{% else %}音声だけを聞いて、正しい日本語の意味を選びましょう。{% endif %}
+  </p>
+</section>
+
+<section class="card">
+  <form method="post" action="/students/{{ student.student_id }}/flashcards/answer" id="fc-form">
+    <input type="hidden" name="flashcard_id" value="{{ card.flashcard_id }}">
+    <input type="hidden" name="stage" value="{{ stage }}">
+    <input type="hidden" name="is_review" value="{{ 1 if is_review else 0 }}">
+    {% if unit_id %}<input type="hidden" name="unit_id" value="{{ unit_id }}">{% endif %}
+    {% if grade %}<input type="hidden" name="grade" value="{{ grade }}">{% endif %}
+
+    {# ─────────────────────────── Stage 1: インプット ─────────────────────────── #}
+    {% if stage == 1 %}
+    <div style="text-align: center; padding: 16px 0;">
+      <p style="font-size: 0.85rem; color: #64748b; margin-bottom: 4px;">
+        {% if card.part_of_speech %}<span style="background:#e0f2fe; color:#0369a1; padding:2px 8px; border-radius:99px; font-size:0.78rem; font-weight:700;">{{ card.part_of_speech }}</span>{% endif %}
+      </p>
+      <p style="font-size: 3rem; font-weight: 800; letter-spacing: 0.03em; margin: 12px 0 4px;">{{ card.english }}</p>
+      {% if card.phonetics %}
+      <p style="font-size: 1.1rem; color: #64748b; margin-bottom: 16px;">{{ card.phonetics }}</p>
+      {% endif %}
+      <button type="button" id="play-btn"
+        onclick="speakWord('{{ card.english | e }}')"
+        style="background:#f0fdf4; border:2px solid #10b981; color:#065f46; padding:10px 24px; border-radius:99px; font-size:1rem; cursor:pointer; font-weight:700; margin-bottom: 24px;">
+        🔊 発音を聞く
+      </button>
+      <div style="background:#f8fafc; border-radius:12px; padding:16px; text-align:left; margin-bottom: 20px;">
+        <p style="font-size: 1.15rem; color: #1e293b; font-weight: 700; margin: 0 0 4px;">{{ card.japanese }}</p>
+        {% if card.example_en %}
+        <p style="font-size: 0.9rem; color: #475569; margin: 10px 0 2px; font-style: italic;">{{ card.example_en }}</p>
+        <p style="font-size: 0.85rem; color: #64748b; margin: 0;">{{ card.example_ja }}</p>
+        {% endif %}
+      </div>
+      <input type="hidden" name="answer" value="seen">
+      <button type="submit" class="submit-answer-btn" style="width: 100%;">覚えた！次へ →</button>
+    </div>
+
+    {# ─────────────────────────── Stage 2: 認識（4択） ─────────────────────────── #}
+    {% elif stage == 2 %}
+    <div style="text-align: center; padding: 8px 0 0;">
+      <p style="font-size: 0.85rem; color: #64748b; margin-bottom: 4px;">
+        {% if card.part_of_speech %}<span style="background:#e0f2fe; color:#0369a1; padding:2px 8px; border-radius:99px; font-size:0.78rem; font-weight:700;">{{ card.part_of_speech }}</span>{% endif %}
+      </p>
+      <p style="font-size: 2.4rem; font-weight: 800; margin: 8px 0 4px;">{{ card.english }}</p>
+      {% if card.phonetics %}<p style="font-size: 0.95rem; color: #64748b; margin-bottom: 10px;">{{ card.phonetics }}</p>{% endif %}
+      <button type="button" onclick="speakWord('{{ card.english | e }}')"
+        style="background:#f0fdf4; border:1px solid #10b981; color:#065f46; padding:6px 18px; border-radius:99px; font-size:0.88rem; cursor:pointer; margin-bottom: 20px;">
+        🔊 発音
+      </button>
+    </div>
+    <p style="font-weight:700; margin-bottom: 12px;">この単語の意味は？</p>
+    <input type="hidden" name="answer" id="fc-answer" value="">
+    <div style="display:flex; flex-direction:column; gap:10px;">
+      {% for ch in choices %}
+      <button type="button" class="eng-choice-btn" style="text-align:left; padding: 12px 16px;"
+        onclick="selectFCChoice(this, '{{ ch | e }}')">{{ ch }}</button>
+      {% endfor %}
+    </div>
+    <button type="submit" class="submit-answer-btn" id="submit-btn" disabled style="margin-top: 20px; width: 100%;">答えを送る →</button>
+
+    {# ─────────────────────────── Stage 3: 定着（タイピング） ─────────────────────────── #}
+    {% elif stage == 3 %}
+    <div style="text-align: center; padding: 8px 0 20px;">
+      <p style="font-size: 1.3rem; font-weight: 700; color: #1e293b; margin-bottom: 6px;">{{ card.japanese }}</p>
+      {% if card.part_of_speech %}
+      <span style="background:#e0f2fe; color:#0369a1; padding:2px 8px; border-radius:99px; font-size:0.78rem; font-weight:700;">{{ card.part_of_speech }}</span>
+      {% endif %}
+      {% if card.example_ja %}
+      <p style="font-size:0.85rem; color:#64748b; margin-top:10px; font-style:italic;">{{ card.example_ja }}</p>
+      {% endif %}
+    </div>
+    <label for="fc-typing" style="font-weight:700; display:block; margin-bottom: 8px;">英語でスペルを入力してください</label>
+    <input id="fc-typing" name="answer" type="text" inputmode="text" autocomplete="off"
+      placeholder="英単語を入力..."
+      style="width:100%; padding:12px 16px; font-size:1.1rem; border:2px solid #e2e8f0; border-radius:10px; box-sizing:border-box;"
+      required>
+    <p style="font-size:0.82rem; color:#94a3b8; margin-top:6px;">大文字・小文字はどちらでもOK</p>
+    <button type="submit" class="submit-answer-btn" style="margin-top: 20px; width: 100%;">答えを送る →</button>
+
+    {# ─────────────────────────── Stage 4: 実践（リスニング） ─────────────────────────── #}
+    {% elif stage == 4 %}
+    <div style="text-align: center; padding: 16px 0 28px;">
+      <p style="font-size: 0.95rem; color: #64748b; margin-bottom: 16px;">音声を聞いて、正しい日本語の意味を選びましょう</p>
+      <button type="button" id="play-btn"
+        onclick="speakWord('{{ card.english | e }}')"
+        style="background:#fdf4ff; border:2px solid #a855f7; color:#7e22ce; padding:16px 40px; border-radius:99px; font-size:1.2rem; cursor:pointer; font-weight:800; margin-bottom: 12px;">
+        🔊 音声を聞く
+      </button>
+      <p style="font-size:0.82rem; color:#94a3b8;">（何度でも再生できます）</p>
+    </div>
+    <p style="font-weight:700; margin-bottom: 12px;">聞こえた単語の意味は？</p>
+    <input type="hidden" name="answer" id="fc-answer" value="">
+    <div style="display:flex; flex-direction:column; gap:10px;">
+      {% for ch in choices %}
+      <button type="button" class="eng-choice-btn" style="text-align:left; padding: 12px 16px;"
+        onclick="selectFCChoice(this, '{{ ch | e }}')">{{ ch }}</button>
+      {% endfor %}
+    </div>
+    <button type="submit" class="submit-answer-btn" id="submit-btn" disabled style="margin-top: 20px; width: 100%;">答えを送る →</button>
+    {% endif %}
+
+  </form>
+</section>
+
+<script>
+function speakWord(word) {
+  if (!window.speechSynthesis) return;
+  window.speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance(word);
+  u.lang = 'en-US';
+  u.rate = 0.85;
+  window.speechSynthesis.speak(u);
+}
+
+function selectFCChoice(btn, value) {
+  document.querySelectorAll('.eng-choice-btn').forEach(b => {
+    b.setAttribute('aria-pressed', 'false');
+    b.style.background = '';
+    b.style.border = '';
+  });
+  btn.setAttribute('aria-pressed', 'true');
+  btn.style.background = '#dbeafe';
+  btn.style.border = '2px solid #3b82f6';
+  document.getElementById('fc-answer').value = value;
+  const submitBtn = document.getElementById('submit-btn');
+  if (submitBtn) submitBtn.disabled = false;
+}
+
+// Stage 4: ページ読み込み時に自動再生
+{% if stage == 4 %}
+window.addEventListener('load', () => setTimeout(() => speakWord('{{ card.english | e }}'), 400));
+{% endif %}
+
+// Stage 1: ページ読み込み時に自動再生
+{% if stage == 1 %}
+window.addEventListener('load', () => setTimeout(() => speakWord('{{ card.english | e }}'), 400));
+{% endif %}
+</script>
+
+{% endblock %}

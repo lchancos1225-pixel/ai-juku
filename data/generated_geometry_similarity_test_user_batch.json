@@ -1,0 +1,573 @@
+{
+  "problems": [
+    {
+      "full_unit_id": "geometry_similarity",
+      "unit_id": "geometry_similarity",
+      "sub_unit": "basic",
+      "problem_type": "mini_test",
+      "test_scope": "mini_test",
+      "difficulty": "easy",
+      "question_text": "△ABC∽△DEFであり、AB=4cm、DE=6cmです。このとき、△ABCと△DEFの相似比を求めなさい。",
+      "diagram": null,
+      "diagram_required": true,
+      "diagram_params": {
+        "diagram_type": "similar_triangles_basic",
+        "triangles": [
+          {
+            "name": "small",
+            "points": [
+              { "name": "A", "x": 80, "y": 240 },
+              { "name": "B", "x": 150, "y": 120 },
+              { "name": "C", "x": 240, "y": 240 }
+            ]
+          },
+          {
+            "name": "large",
+            "points": [
+              { "name": "D", "x": 300, "y": 260 },
+              { "name": "E", "x": 390, "y": 90 },
+              { "name": "F", "x": 500, "y": 260 }
+            ]
+          }
+        ],
+        "highlight_pairs": [
+          ["A", "D"],
+          ["B", "E"],
+          ["C", "F"]
+        ],
+        "side_labels": [
+          { "from": "A", "to": "B", "label": "4" },
+          { "from": "D", "to": "E", "label": "6" }
+        ]
+      },
+      "correct_answer": "2:3",
+      "explanation_base": "相似な図形では、対応する線分の長さの比が相似比になります。ABとDEが対応しているので、相似比は 4:6 = 2:3 となります。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "advance_with_confidence"
+      ]
+    },
+    {
+      "full_unit_id": "geometry_similarity",
+      "unit_id": "geometry_similarity",
+      "sub_unit": "basic",
+      "problem_type": "mini_test",
+      "test_scope": "mini_test",
+      "difficulty": "easy",
+      "question_text": "四角形ABCD∽四角形EFGHです。∠A=70°、∠B=85°、∠D=110°のとき、∠Gの大きさを求めなさい。",
+      "diagram": null,
+      "correct_answer": "95°",
+      "explanation_base": "四角形の内角の和は360°なので、∠C = 360° - (70° + 85° + 110°) = 95° です。相似な図形では対応する角の大きさが等しいため、∠Cに対応する∠Gも95°になります。",
+      "error_pattern_candidates": [
+        "arithmetic_error",
+        "formula_setup_error"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "explain_differently"
+      ]
+    },
+    {
+      "full_unit_id": "geometry_similarity",
+      "unit_id": "geometry_similarity",
+      "sub_unit": "basic",
+      "problem_type": "mini_test",
+      "test_scope": "mini_test",
+      "difficulty": "normal",
+      "question_text": "△ABC∽△PQRで、その相似比は 3:5 です。BC=12cmのとき、対応する辺QRの長さを求めなさい。",
+      "diagram": null,
+      "diagram_required": true,
+      "diagram_params": {
+        "diagram_type": "similar_triangles_basic",
+        "triangles": [
+          {
+            "name": "small",
+            "points": [
+              { "name": "B", "x": 80, "y": 240 },
+              { "name": "A", "x": 150, "y": 120 },
+              { "name": "C", "x": 240, "y": 240 }
+            ]
+          },
+          {
+            "name": "large",
+            "points": [
+              { "name": "Q", "x": 300, "y": 260 },
+              { "name": "P", "x": 390, "y": 90 },
+              { "name": "R", "x": 500, "y": 260 }
+            ]
+          }
+        ],
+        "highlight_pairs": [
+          ["A", "P"],
+          ["B", "Q"],
+          ["C", "R"]
+        ],
+        "side_labels": [
+          { "from": "B", "to": "C", "label": "12" },
+          { "from": "Q", "to": "R", "label": "?" }
+        ]
+      },
+      "correct_answer": "20cm",
+      "explanation_base": "相似比が 3:5 なので、BC : QR = 3 : 5 となります。12 : QR = 3 : 5 という比例式を解くと、3 × QR = 60 より QR = 20cm となります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "reinforce_same_pattern"
+      ]
+    },
+    {
+      "full_unit_id": "geometry_similarity",
+      "unit_id": "geometry_similarity",
+      "sub_unit": "basic",
+      "problem_type": "mini_test",
+      "test_scope": "mini_test",
+      "difficulty": "normal",
+      "question_text": "次のア〜ウのうち、2つの三角形が常に相似になる条件として正しいものを1つ選びなさい。\nア：2組の辺の長さが等しい\nイ：2組の角がそれぞれ等しい\nウ：面積が等しい",
+      "diagram": null,
+      "correct_answer": "イ",
+      "explanation_base": "三角形の相似条件は、「3組の辺の比がすべて等しい」「2組の辺の比とその間の角がそれぞれ等しい」「2組の角がそれぞれ等しい」のいずれかです。したがって「イ」が正解です。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "prerequisite_gap"
+      ],
+      "intervention_candidates": [
+        "fallback_prerequisite",
+        "explain_differently"
+      ]
+    },
+    {
+      "full_unit_id": "geometry_similarity",
+      "unit_id": "geometry_similarity",
+      "sub_unit": "basic",
+      "problem_type": "mini_test",
+      "test_scope": "mini_test",
+      "difficulty": "hard",
+      "question_text": "図のように、AB // CD である四角形ABCDの対角線の交点をOとします。AB=6cm、CD=9cm、BO=4cmのとき、DOの長さを求めなさい。",
+      "diagram": "平行な線分ABとCDがあり、AとC、BとDを結んだ線分の交点がOである図（砂時計型の相似）。",
+      "correct_answer": "6cm",
+      "explanation_base": "AB // CD より錯角が等しいため、△OAB∽△OCD となります。相似比は AB : CD = 6 : 9 = 2 : 3 です。対応する辺の比も 2 : 3 になるため、BO : DO = 2 : 3 となり、4 : DO = 2 : 3 より DO = 6cm となります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "operation_confusion"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "teacher_intervention_needed"
+      ]
+    },
+    {
+      "full_unit_id": "geometry_similarity",
+      "unit_id": "geometry_similarity",
+      "sub_unit": "basic",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "easy",
+      "question_text": "△ABCと△DEFが相似であることを、記号を使って「△ABC∽△DEF」と表します。このとき、頂点Aに対応する頂点を答えなさい。",
+      "diagram": null,
+      "diagram_required": true,
+      "diagram_params": {
+        "diagram_type": "similar_triangles_basic",
+        "triangles": [
+          {
+            "name": "small",
+            "points": [
+              { "name": "A", "x": 80, "y": 240 },
+              { "name": "B", "x": 150, "y": 120 },
+              { "name": "C", "x": 240, "y": 240 }
+            ]
+          },
+          {
+            "name": "large",
+            "points": [
+              { "name": "D", "x": 300, "y": 260 },
+              { "name": "E", "x": 390, "y": 90 },
+              { "name": "F", "x": 500, "y": 260 }
+            ]
+          }
+        ],
+        "highlight_pairs": [
+          ["A", "D"],
+          ["B", "E"],
+          ["C", "F"]
+        ]
+      },
+      "correct_answer": "頂点D",
+      "explanation_base": "相似の記号「∽」を使って表すとき、対応する頂点は同じ順番に並べる決まりがあります。Aは最初の文字なので、対応するのはDEFの最初の文字であるDです。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "advance_with_confidence"
+      ]
+    },
+    {
+      "full_unit_id": "geometry_similarity",
+      "unit_id": "geometry_similarity",
+      "sub_unit": "basic",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "easy",
+      "question_text": "△ABC∽△DEFであり、AB=5cm、BC=7cm、DE=10cmです。このとき、EFの長さを求めなさい。",
+      "diagram": null,
+      "diagram_required": true,
+      "diagram_params": {
+        "diagram_type": "similar_triangles_basic",
+        "triangles": [
+          {
+            "name": "small",
+            "points": [
+              { "name": "A", "x": 80, "y": 240 },
+              { "name": "B", "x": 150, "y": 120 },
+              { "name": "C", "x": 240, "y": 240 }
+            ]
+          },
+          {
+            "name": "large",
+            "points": [
+              { "name": "D", "x": 300, "y": 260 },
+              { "name": "E", "x": 390, "y": 90 },
+              { "name": "F", "x": 500, "y": 260 }
+            ]
+          }
+        ],
+        "highlight_pairs": [
+          ["A", "D"],
+          ["B", "E"],
+          ["C", "F"]
+        ],
+        "side_labels": [
+          { "from": "A", "to": "B", "label": "5" },
+          { "from": "B", "to": "C", "label": "7" },
+          { "from": "D", "to": "E", "label": "10" },
+          { "from": "E", "to": "F", "label": "?" }
+        ]
+      },
+      "correct_answer": "14cm",
+      "explanation_base": "対応する辺ABとDEから、相似比は 5 : 10 = 1 : 2 とわかります。BCに対応する辺はEFなので、7 : EF = 1 : 2 より EF = 14cm となります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "reinforce_same_pattern",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "geometry_similarity",
+      "unit_id": "geometry_similarity",
+      "sub_unit": "basic",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "easy",
+      "question_text": "△ABC∽△DEFで、∠A=45°、∠E=60°です。このとき、∠Cの大きさを求めなさい。",
+      "diagram": null,
+      "diagram_required": true,
+      "diagram_params": {
+        "diagram_type": "similar_triangles_basic",
+        "triangles": [
+          {
+            "name": "small",
+            "points": [
+              { "name": "A", "x": 80, "y": 240 },
+              { "name": "B", "x": 150, "y": 120 },
+              { "name": "C", "x": 240, "y": 240 }
+            ]
+          },
+          {
+            "name": "large",
+            "points": [
+              { "name": "D", "x": 300, "y": 260 },
+              { "name": "E", "x": 390, "y": 90 },
+              { "name": "F", "x": 500, "y": 260 }
+            ]
+          }
+        ],
+        "highlight_pairs": [
+          ["A", "D"],
+          ["B", "E"],
+          ["C", "F"]
+        ],
+        "equal_angles": [
+          ["A", "D"],
+          ["B", "E"]
+        ]
+      },
+      "correct_answer": "75°",
+      "explanation_base": "相似な図形では対応する角の大きさが等しいので、∠B = ∠E = 60° です。三角形の内角の和は180°なので、∠C = 180° - (45° + 60°) = 75° となります。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "full_unit_id": "geometry_similarity",
+      "unit_id": "geometry_similarity",
+      "sub_unit": "basic",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "normal",
+      "question_text": "次のア〜ウの三角形のうち、△ABC（AB=4cm, BC=6cm, CA=5cm）と相似であるものを1つ選びなさい。\nア：3辺が 6cm, 8cm, 10cm の三角形\nイ：3辺が 8cm, 10cm, 12cm の三角形\nウ：3辺が 8cm, 12cm, 14cm の三角形",
+      "diagram": null,
+      "correct_answer": "イ",
+      "explanation_base": "△ABCの3辺の比は、小さい順に 4 : 5 : 6 です。これと同じ比になる三角形を探します。イの三角形は小さい順に 8 : 10 : 12 で、すべてを2で割ると 4 : 5 : 6 となり「3組の辺の比がすべて等しい」という条件を満たします。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "comprehension_gap"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "retry_with_hint"
+      ]
+    },
+    {
+      "full_unit_id": "geometry_similarity",
+      "unit_id": "geometry_similarity",
+      "sub_unit": "basic",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "normal",
+      "question_text": "図のように、△ABCの辺AB上に点D、辺AC上に点Eがあります。AD=3cm、DB=1cm、AE=2cm、EC=4cm、DE=2.5cmのとき、BCの長さを求めなさい。",
+      "diagram": "△ABCの辺AB上に点D、辺AC上に点Eがある図。",
+      "correct_answer": "5cm",
+      "explanation_base": "AB = 3+1 = 4cm、AC = 2+4 = 6cm です。△ADEと△ACBにおいて、AD:AC = 3:6 = 1:2、AE:AB = 2:4 = 1:2 となり、間の∠Aが共通なので、△ADE∽△ACB（2組の辺の比とその間の角がそれぞれ等しい）になります。よって相似比は 1:2 で、BC = DE × 2 = 5cm となります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "operation_confusion"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "teacher_intervention_needed"
+      ]
+    },
+    {
+      "full_unit_id": "geometry_similarity",
+      "unit_id": "geometry_similarity",
+      "sub_unit": "basic",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "normal",
+      "question_text": "図のように、長さ1.5mの棒の影の長さが2mのとき、木の高さを測るために木の影の長さを測ると8mありました。この木の高さを求めなさい。ただし、太陽の光は平行に差しているものとします。",
+      "diagram": "棒と影で作る直角三角形と、木と影で作る直角三角形が描かれている図。",
+      "correct_answer": "6m",
+      "explanation_base": "太陽の光が平行に差すため、棒と影、木と影が作る直角三角形はそれぞれ相似になります。影の長さの比が 2m : 8m = 1 : 4 なので、高さの比も 1 : 4 になります。よって木の高さは 1.5m × 4 = 6m となります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "geometry_similarity",
+      "unit_id": "geometry_similarity",
+      "sub_unit": "basic",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "hard",
+      "question_text": "図のように、∠C=90°の直角三角形ABCで、頂点Cから斜辺ABに垂線CHを下ろします。AC=8cm、BC=6cm、AB=10cmのとき、CHの長さを求めなさい。",
+      "diagram": "直角三角形ABC（∠C=90°）の頂点Cから、斜辺ABへ垂線CHを下ろした図。",
+      "correct_answer": "4.8cm",
+      "explanation_base": "∠Aが共通、∠C=∠AHC=90°より、△ABC∽△ACH となります。相似な図形では対応する辺の比が等しいので、AB : AC = BC : CH となります。10 : 8 = 6 : CH より、10 × CH = 48 となり、CH = 4.8cm です。（面積を利用して解くこともできます）",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "comprehension_gap"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "teacher_intervention_needed"
+      ]
+    },
+    {
+      "full_unit_id": "geometry_similarity",
+      "unit_id": "geometry_similarity",
+      "sub_unit": "basic",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "hard",
+      "question_text": "平行四辺形ABCDで、辺BC上に点Eをとります。直線AEと対角線BDの交点をF、直線AEと辺DCの延長との交点をGとします。AF=4cm、FE=2cmのとき、EGの長さを求めなさい。",
+      "diagram": "平行四辺形ABCDの辺BC上に点Eがあり、直線AEと対角線BDの交点がF、AEの延長と辺DCの延長の交点がGである図。",
+      "correct_answer": "6cm",
+      "explanation_base": "AD//BC より △ADF∽△EBF で、相似比は AF : EF = 4 : 2 = 2 : 1 です。これより DF : BF = 2 : 1 となります。次に AB//DG より △ABF∽△GDF で、相似比は BF : DF = 1 : 2 です。よって AF : GF = 1 : 2 となり、GF = 4 × 2 = 8cm となります。EG = GF - FE = 8 - 2 = 6cm です。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "operation_confusion"
+      ],
+      "intervention_candidates": [
+        "teacher_intervention_needed",
+        "explain_differently"
+      ]
+    },
+    {
+      "full_unit_id": "geometry_similarity",
+      "unit_id": "geometry_similarity",
+      "sub_unit": "basic",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "normal",
+      "question_text": "次のア〜ウの三角形のうち、△ABC（AB=4cm, BC=6cm, CA=5cm）と相似であるものを1つ選びなさい。\nア：3辺が 6cm, 8cm, 10cm の三角形\nイ：3辺が 8cm, 10cm, 12cm の三角形\nウ：3辺が 8cm, 12cm, 14cm の三角形",
+      "diagram": null,
+      "diagram_required": true,
+      "diagram_params": {
+        "diagram_type": "similar_triangles_basic",
+        "triangles": [
+          {
+            "name": "small",
+            "points": [
+              { "name": "A", "x": 80, "y": 240 },
+              { "name": "B", "x": 150, "y": 120 },
+              { "name": "C", "x": 240, "y": 240 }
+            ]
+          },
+          {
+            "name": "large",
+            "points": [
+              { "name": "D", "x": 300, "y": 260 },
+              { "name": "E", "x": 390, "y": 90 },
+              { "name": "F", "x": 500, "y": 260 }
+            ]
+          }
+        ],
+        "highlight_pairs": [
+          ["A", "D"],
+          ["B", "E"],
+          ["C", "F"]
+        ],
+        "side_labels": [
+          { "from": "A", "to": "B", "label": "4" },
+          { "from": "B", "to": "C", "label": "6" },
+          { "from": "A", "to": "C", "label": "5" },
+          { "from": "D", "to": "E", "label": "8" },
+          { "from": "E", "to": "F", "label": "12" },
+          { "from": "D", "to": "F", "label": "10" }
+        ]
+      },
+      "correct_answer": "イ",
+      "explanation_base": "△ABCの3辺の比は、小さい順に 4 : 5 : 6 です。これと同じ比になる三角形を探します。イの三角形は小さい順に 8 : 10 : 12 で、すべてを2で割ると 4 : 5 : 6 となり「3組の辺の比がすべて等しい」という条件を満たします。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "comprehension_gap"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "retry_with_hint"
+      ]
+    },
+    {
+      "full_unit_id": "geometry_similarity",
+      "unit_id": "geometry_similarity",
+      "sub_unit": "basic",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "normal",
+      "question_text": "図のように、△ABCの辺AB上に点D、辺AC上に点Eがあります。AD=3cm、DB=1cm、AE=2cm、EC=4cm、DE=2.5cmのとき、BCの長さを求めなさい。",
+      "diagram": "△ABCの辺AB上に点D、辺AC上に点Eがある図。",
+      "diagram_required": true,
+      "diagram_params": {
+        "diagram_type": "similar_triangles_basic",
+        "triangles": [
+          {
+            "name": "small",
+            "points": [
+              { "name": "A", "x": 120, "y": 90 },
+              { "name": "D", "x": 90, "y": 165 },
+              { "name": "E", "x": 170, "y": 165 }
+            ]
+          },
+          {
+            "name": "large",
+            "points": [
+              { "name": "A2", "x": 120, "y": 90 },
+              { "name": "B", "x": 60, "y": 240 },
+              { "name": "C", "x": 240, "y": 240 }
+            ]
+          }
+        ],
+        "highlight_pairs": [
+          ["A", "A2"],
+          ["D", "B"],
+          ["E", "C"]
+        ],
+        "equal_angles": [
+          ["A", "A2"]
+        ],
+        "parallel_marks": [
+          ["D", "E", "B", "C"]
+        ],
+        "side_labels": [
+          { "from": "A", "to": "D", "label": "3" },
+          { "from": "D", "to": "B", "label": "1" },
+          { "from": "A", "to": "E", "label": "2" },
+          { "from": "E", "to": "C", "label": "4" },
+          { "from": "D", "to": "E", "label": "2.5" },
+          { "from": "B", "to": "C", "label": "?" }
+        ]
+      },
+      "correct_answer": "5cm",
+      "explanation_base": "AB = 3+1 = 4cm、AC = 2+4 = 6cm です。△ADEと△ACBにおいて、AD:AC = 3:6 = 1:2、AE:AB = 2:4 = 1:2 となり、間の∠Aが共通なので、△ADE∽△ACB（2組の辺の比とその間の角がそれぞれ等しい）になります。よって相似比は 1:2 で、BC = DE × 2 = 5cm となります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "operation_confusion"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "teacher_intervention_needed"
+      ]
+    },
+    {
+      "full_unit_id": "geometry_similarity",
+      "unit_id": "geometry_similarity",
+      "sub_unit": "basic",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "normal",
+      "question_text": "2つの相似な円柱AとBがあり、その相似比は 2:3 です。円柱Aの底面の半径が 4cm のとき、円柱Bの底面の半径を求めなさい。",
+      "diagram": null,
+      "correct_answer": "6cm",
+      "explanation_base": "相似な立体では、対応する長さ（高さや半径など）の比がすべて相似比と同じになります。AとBの半径の比も 2:3 なので、4 : Bの半径 = 2 : 3 より、Bの半径は 6cm になります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "reinforce_same_pattern"
+      ]
+    },
+    {
+      "full_unit_id": "geometry_similarity",
+      "unit_id": "geometry_similarity",
+      "sub_unit": "basic",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "hard",
+      "question_text": "図のように、平行四辺形ABCDがあります。辺ADの中点をMとし、BMとACの交点をPとします。このとき、AP:PC の比を最も簡単な整数の比で答えなさい。",
+      "diagram": "平行四辺形ABCDの辺ADの中点をMとし、線分BMと対角線ACの交点をPとした図。",
+      "correct_answer": "1:2",
+      "explanation_base": "AD//BC より、△APM∽△CPB となります。MはADの中点なので AM = 1/2 AD です。また平行四辺形なので AD = BC です。したがって、相似比は AM : BC = 1 : 2 となります。対応する辺である AP と PC の比も 1 : 2 になります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "prerequisite_gap"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "fallback_prerequisite"
+      ]
+    }
+  ]
+}

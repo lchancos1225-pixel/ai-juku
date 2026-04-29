@@ -1,0 +1,304 @@
+{
+  "problems": [
+    {
+      "full_unit_id": "linear_equations_word_problem",
+      "unit_id": "linear_equations",
+      "sub_unit": "word_problem",
+      "problem_type": "mini_test",
+      "test_scope": "mini_test",
+      "difficulty": "easy",
+      "question_text": "りんごを5個と100円のジュースを1本買ったら、代金の合計が700円でした。りんご1個の値段を求めなさい。",
+      "diagram": null,
+      "correct_answer": "120円",
+      "explanation_base": "りんご1個の値段をx円とすると、5x + 100 = 700 という方程式ができます。これを解くと 5x = 600 となり、x = 120 となります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "comprehension_gap"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "retry_with_hint"
+      ]
+    },
+    {
+      "full_unit_id": "linear_equations_word_problem",
+      "unit_id": "linear_equations",
+      "sub_unit": "word_problem",
+      "problem_type": "mini_test",
+      "test_scope": "mini_test",
+      "difficulty": "easy",
+      "question_text": "ある数xから3を引いて2倍すると14になります。ある数xを求めなさい。",
+      "diagram": null,
+      "correct_answer": "10",
+      "explanation_base": "問題文から 2(x - 3) = 14 という方程式ができます。両辺を2で割ると x - 3 = 7 となり、x = 10 になります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "explain_differently"
+      ]
+    },
+    {
+      "full_unit_id": "linear_equations_word_problem",
+      "unit_id": "linear_equations",
+      "sub_unit": "word_problem",
+      "problem_type": "mini_test",
+      "test_scope": "mini_test",
+      "difficulty": "normal",
+      "question_text": "1個80円のクッキーと1個120円のケーキを合わせて10個買ったら、代金の合計は1040円でした。クッキーは何個買いましたか。",
+      "diagram": null,
+      "correct_answer": "4個",
+      "explanation_base": "クッキーの個数をx個とすると、ケーキの個数は(10 - x)個と表せます。80x + 120(10 - x) = 1040 となり、これを解くと -40x + 1200 = 1040 より -40x = -160 で x = 4 になります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "variable_handling_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "linear_equations_word_problem",
+      "unit_id": "linear_equations",
+      "sub_unit": "word_problem",
+      "problem_type": "mini_test",
+      "test_scope": "mini_test",
+      "difficulty": "normal",
+      "question_text": "何人かの生徒に画用紙を配ります。1人に5枚ずつ配ると8枚余り、1人に7枚ずつ配ると4枚足りません。生徒の人数を求めなさい。",
+      "diagram": null,
+      "correct_answer": "6人",
+      "explanation_base": "生徒の人数をx人とすると、画用紙の総数は 5x + 8 とも 7x - 4 とも表せます。よって 5x + 8 = 7x - 4 という方程式ができます。これを解くと -2x = -12 より x = 6 になります。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "formula_setup_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "retry_with_hint"
+      ]
+    },
+    {
+      "full_unit_id": "linear_equations_word_problem",
+      "unit_id": "linear_equations",
+      "sub_unit": "word_problem",
+      "problem_type": "mini_test",
+      "test_scope": "mini_test",
+      "difficulty": "hard",
+      "question_text": "弟が家を出発してから10分後に、兄が自転車で弟を追いかけました。弟の歩く速さを毎分60m、兄の自転車の速さを毎分210mとします。兄は出発してから何分後に弟に追いつきますか。",
+      "diagram": null,
+      "correct_answer": "4分後",
+      "explanation_base": "兄が出発してからx分後に追いつくとします。弟が歩いた時間は(x + 10)分です。2人の進んだ道のりが等しくなるので、60(x + 10) = 210x となります。60x + 600 = 210x より -150x = -600 となり、x = 4 になります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "comprehension_gap"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "teacher_intervention_needed"
+      ]
+    },
+    {
+      "full_unit_id": "linear_equations_word_problem",
+      "unit_id": "linear_equations",
+      "sub_unit": "word_problem",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "easy",
+      "question_text": "1冊150円のノートを何冊か買い、500円の筆箱を1つ買ったところ、代金は1400円でした。ノートは何冊買いましたか。",
+      "diagram": null,
+      "correct_answer": "6冊",
+      "explanation_base": "ノートをx冊買ったとすると、150x + 500 = 1400 となります。移項して 150x = 900、両辺を150で割って x = 6 になります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "reinforce_same_pattern"
+      ]
+    },
+    {
+      "full_unit_id": "linear_equations_word_problem",
+      "unit_id": "linear_equations",
+      "sub_unit": "word_problem",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "easy",
+      "question_text": "連続する3つの整数の和が45のとき、最も小さい整数を求めなさい。",
+      "diagram": null,
+      "correct_answer": "14",
+      "explanation_base": "最も小さい整数をxとすると、連続する3つの整数は x, x+1, x+2 と表せます。x + (x + 1) + (x + 2) = 45 より 3x + 3 = 45、3x = 42 で x = 14 になります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "comprehension_gap"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "retry_with_hint"
+      ]
+    },
+    {
+      "full_unit_id": "linear_equations_word_problem",
+      "unit_id": "linear_equations",
+      "sub_unit": "word_problem",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "easy",
+      "question_text": "現在、父親は42歳、子供は12歳です。父親の年齢が子供の年齢の3倍になるのは、今から何年後ですか。",
+      "diagram": null,
+      "correct_answer": "3年後",
+      "explanation_base": "x年後に父親が子供の3倍の年齢になるとします。42 + x = 3(12 + x) という方程式ができます。42 + x = 36 + 3x より -2x = -6 で x = 3 になります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "variable_handling_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "linear_equations_word_problem",
+      "unit_id": "linear_equations",
+      "sub_unit": "word_problem",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "normal",
+      "question_text": "長さのわからないリボンがあります。このリボンを20cmずつ切ると5cm余り、25cmずつ切ると10cm足りません。このリボンの長さを求めなさい。",
+      "diagram": null,
+      "correct_answer": "65cm",
+      "explanation_base": "リボンを切る本数をx本とすると、リボンの長さは 20x + 5、または 25x - 10 と表せます。20x + 5 = 25x - 10 を解くと -5x = -15 より x = 3 となります。リボンの長さは 20 × 3 + 5 = 65cm です。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "formula_setup_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "teacher_intervention_needed"
+      ]
+    },
+    {
+      "full_unit_id": "linear_equations_word_problem",
+      "unit_id": "linear_equations",
+      "sub_unit": "word_problem",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "normal",
+      "question_text": "1個60円のみかんと1個100円のりんごを合わせて15個買い、代金が1140円になりました。みかんは何個買いましたか。",
+      "diagram": null,
+      "correct_answer": "9個",
+      "explanation_base": "みかんをx個買ったとすると、りんごは(15 - x)個です。60x + 100(15 - x) = 1140 を解きます。60x + 1500 - 100x = 1140 より -40x = -360 で x = 9 になります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "variable_handling_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "linear_equations_word_problem",
+      "unit_id": "linear_equations",
+      "sub_unit": "word_problem",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "normal",
+      "question_text": "ある中学校の生徒数は男女合わせて350人です。男子の人数は女子の人数より10人多いです。男子の人数を求めなさい。",
+      "diagram": null,
+      "correct_answer": "180人",
+      "explanation_base": "男子の人数をx人とすると、女子の人数は(x - 10)人です。x + (x - 10) = 350 より 2x = 360 で x = 180 となります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "comprehension_gap"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "retry_with_hint"
+      ]
+    },
+    {
+      "full_unit_id": "linear_equations_word_problem",
+      "unit_id": "linear_equations",
+      "sub_unit": "word_problem",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "normal",
+      "question_text": "A地点からB地点まで行くのに、時速4kmで歩くのと、時速12kmで自転車に乗るのとでは、かかる時間が2時間違います。A地点からB地点までの道のりを求めなさい。",
+      "diagram": null,
+      "correct_answer": "12km",
+      "explanation_base": "道のりをx kmとすると、歩く時間は x/4 時間、自転車の時間は x/12 時間です。その差が2時間なので、x/4 - x/12 = 2 となります。両辺に12を掛けて 3x - x = 24 より 2x = 24 で x = 12 です。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "prerequisite_gap"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "fallback_prerequisite"
+      ]
+    },
+    {
+      "full_unit_id": "linear_equations_word_problem",
+      "unit_id": "linear_equations",
+      "sub_unit": "word_problem",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "hard",
+      "question_text": "10%の食塩水が200gあります。これに水を加えて8%の食塩水にするには、何gの水を加えればよいですか。",
+      "diagram": null,
+      "correct_answer": "50g",
+      "explanation_base": "加える水の量を x gとします。食塩の量は 200 × 0.1 = 20g です。水を加えた後の食塩水は (200 + x)g で、濃度が8%になるので、20 = (200 + x) × 0.08 という方程式ができます。これを解くと 20 = 16 + 0.08x より 0.08x = 4 で x = 50 になります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "prerequisite_gap"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "fallback_prerequisite"
+      ]
+    },
+    {
+      "full_unit_id": "linear_equations_word_problem",
+      "unit_id": "linear_equations",
+      "sub_unit": "word_problem",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "hard",
+      "question_text": "クラスの生徒でお金を出し合って記念品を買うことにしました。1人300円ずつ集めると500円不足し、1人350円ずつ集めると1200円余ります。記念品の値段を求めなさい。",
+      "diagram": null,
+      "correct_answer": "10700円",
+      "explanation_base": "クラスの人数をx人とすると、記念品の値段は 300x + 500、または 350x - 1200 と表せます。300x + 500 = 350x - 1200 を解くと -50x = -1700 より x = 34 です。値段は 300 × 34 + 500 = 10700円 になります。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "formula_setup_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "teacher_intervention_needed"
+      ]
+    },
+    {
+      "full_unit_id": "linear_equations_word_problem",
+      "unit_id": "linear_equations",
+      "sub_unit": "word_problem",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "hard",
+      "question_text": "A君は自宅から駅まで向かいます。毎分80mで歩くと予定の電車の時刻より3分遅れ、毎分120mで走ると予定の時刻より2分早く着きます。自宅から駅までの道のりを求めなさい。",
+      "diagram": null,
+      "correct_answer": "1200m",
+      "explanation_base": "自宅から駅までの道のりを x mとします。予定の時刻に対して、歩いた場合にかかる時間 x/80 と、走った場合にかかる時間 x/120 の差は 3 + 2 = 5分 です。よって x/80 - x/120 = 5 となります。両辺に240を掛けて 3x - 2x = 1200 より x = 1200 になります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "comprehension_gap"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "teacher_intervention_needed"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+﻿{% extends "base.html" %}
+{% block content %}
+<section class="card">
+  {% if log.is_correct %}
+  <h2 style="color:#059669;">正解！</h2>
+  {% else %}
+  <h2 style="color:#dc2626;">不正解</h2>
+  {% endif %}
+  <p>正解の選択肢: <strong>{{ problem.correct_answer }}</strong></p>
+  <p>あなたの解答: {{ log.selected_answer }}</p>
+</section>
+
+<section class="card">
+  <h3>解説</h3>
+  <p>{{ problem.explanation_base }}</p>
+</section>
+
+<section class="card">
+  <h3>スクリプト全文</h3>
+  <p style="white-space:pre-wrap;">{{ problem.audio_script }}</p>
+  <button type="button" class="listening-play-btn" id="result-replay" style="margin-top:1rem;">もう一度聞く</button>
+</section>
+
+<section class="card">
+  <h3>サポートメッセージ</h3>
+  <p>{{ intervention_message }}</p>
+</section>
+
+<p style="margin-top:1.5rem;">
+  {% if next_problem_id %}
+  <a class="hero-cta-btn" href="/students/{{ student_id }}/listening/problem?unit_id={{ next_unit_id }}&problem_id={{ next_problem_id }}">次の問題へ</a>
+  {% else %}
+  <a class="result-action-btn" href="/students/{{ student_id }}/listening">単元選択に戻る</a>
+  {% endif %}
+</p>
+
+<script>
+(function () {
+  var url = {{ problem.audio_url | tojson }};
+  var script = {{ problem.audio_script | tojson }};
+  var speed = {{ problem.audio_speed | tojson }};
+  document.getElementById("result-replay").addEventListener("click", function () {
+    var a = new Audio(url);
+    a.onerror = function () {
+      var u = new SpeechSynthesisUtterance(script);
+      u.lang = "en-US";
+      u.rate = speed === "slow" ? 0.75 : 1.0;
+      window.speechSynthesis.speak(u);
+    };
+    a.play();
+  });
+})();
+</script>
+{% endblock %}

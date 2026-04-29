@@ -1,0 +1,319 @@
+{
+  "problems": [
+    {
+      "full_unit_id": "probability_basic",
+      "unit_id": "probability",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "question_text": "1つのサイコロを投げるとき、3の倍数の目が出る確率を求めなさい。",
+      "diagram": null,
+      "correct_answer": "1/3",
+      "hint_1": "サイコロの目は全部で6通りあります。そのうち、3の倍数は何通りでしょうか。",
+      "hint_2": "3の倍数の目は3と6の2通りです。確率を分数で表して約分しましょう。",
+      "explanation_base": "起こりうるすべての場合は6通りで、3の倍数の目が出る場合は3, 6の2通りです。確率は 2/6 = 1/3 となります。",
+      "error_pattern_candidates": [
+        "careless_error",
+        "comprehension_gap"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "explain_differently"
+      ]
+    },
+    {
+      "full_unit_id": "probability_basic",
+      "unit_id": "probability",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "question_text": "ジョーカーを除く52枚のトランプから1枚を引くとき、スペードのカードが出る確率を求めなさい。",
+      "diagram": null,
+      "correct_answer": "1/4",
+      "hint_1": "トランプは全部で52枚あり、マークはスペード、ハート、ダイヤ、クラブの4種類が同じ枚数ずつあります。",
+      "hint_2": "スペードのカードは13枚あります。確率を求めて約分しましょう。",
+      "explanation_base": "すべての場合は52通りで、スペードのカードは13通りです。確率は 13/52 = 1/4 となります。",
+      "error_pattern_candidates": [
+        "prerequisite_gap",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "fallback_prerequisite",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "probability_basic",
+      "unit_id": "probability",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "question_text": "赤玉4個、白玉5個が入っている袋があります。ここから玉を1個取り出すとき、白玉が出る確率を求めなさい。",
+      "diagram": null,
+      "correct_answer": "5/9",
+      "hint_1": "袋の中に入っている玉は全部で何個か確認しましょう。",
+      "hint_2": "全部で9個あり、そのうち白玉は5個です。",
+      "explanation_base": "玉の総数は 4 + 5 = 9 個なので、すべての場合は9通りです。白玉が出る場合は5通りなので、確率は 5/9 となります。",
+      "error_pattern_candidates": [
+        "careless_error",
+        "formula_setup_error"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "explain_differently"
+      ]
+    },
+    {
+      "full_unit_id": "probability_basic",
+      "unit_id": "probability",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "question_text": "当たりが2本、はずれが8本入っているくじがあります。この中から1本を引くとき、当たりを引く確率を求めなさい。",
+      "diagram": null,
+      "correct_answer": "1/5",
+      "hint_1": "くじは全部で何本あるか計算しましょう。",
+      "hint_2": "全部で10本あり、そのうち当たりは2本です。分数にして約分しましょう。",
+      "explanation_base": "くじの総数は 2 + 8 = 10本なので、すべての場合は10通りです。当たりを引く場合は2通りなので、確率は 2/10 = 1/5 となります。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "retry_with_hint"
+      ]
+    },
+    {
+      "full_unit_id": "probability_basic",
+      "unit_id": "probability",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "question_text": "1枚の硬貨を投げるとき、裏が出る確率を求めなさい。",
+      "diagram": null,
+      "correct_answer": "1/2",
+      "hint_1": "硬貨を投げたときに出る面は、表か裏のどちらかです。",
+      "hint_2": "全部で2通りあり、裏が出るのはそのうちの1通りです。",
+      "explanation_base": "起こりうるすべての場合は表と裏の2通りで、裏が出る場合は1通りです。確率は 1/2 となります。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "retry_with_hint"
+      ]
+    },
+    {
+      "full_unit_id": "probability_basic",
+      "unit_id": "probability",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "question_text": "2つのサイコロを同時に投げるとき、出た目の和が7になる確率を求めなさい。",
+      "diagram": null,
+      "correct_answer": "1/6",
+      "hint_1": "2つのサイコロの目の出方は、全部で 6 × 6 = 36通りあります。",
+      "hint_2": "目の和が7になる組み合わせをすべて書き出してみましょう。(1, 6)、(2, 5) などがあります。",
+      "explanation_base": "すべての場合は36通りです。目の和が7になる組み合わせは、(1, 6), (2, 5), (3, 4), (4, 3), (5, 2), (6, 1) の6通りです。したがって、確率は 6/36 = 1/6 となります。",
+      "error_pattern_candidates": [
+        "careless_error",
+        "formula_setup_error"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "explain_differently"
+      ]
+    },
+    {
+      "full_unit_id": "probability_basic",
+      "unit_id": "probability",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "question_text": "2枚の硬貨を同時に投げるとき、1枚が表で1枚が裏になる確率を求めなさい。",
+      "diagram": null,
+      "correct_answer": "1/2",
+      "hint_1": "2枚の硬貨の出方は (表, 表)、(表, 裏)、(裏, 表)、(裏, 裏) の全部で4通りあります。",
+      "hint_2": "1枚が表で1枚が裏になるのは、上の4つのうち何通りでしょうか。",
+      "explanation_base": "すべての出方は4通りです。そのうち、1枚が表で1枚が裏になるのは (表, 裏) と (裏, 表) の2通りです。確率は 2/4 = 1/2 となります。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "probability_basic",
+      "unit_id": "probability",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "question_text": "赤玉3個、白玉2個が入っている袋から、同時に2個の玉を取り出すとき、2個とも赤玉である確率を求めなさい。",
+      "diagram": null,
+      "correct_answer": "3/10",
+      "hint_1": "全部で5個の玉から2個を取り出す組み合わせが何通りあるか求めましょう。",
+      "hint_2": "全部の選び方は (5 × 4) / 2 = 10通りです。赤玉3個から2個を取り出す組み合わせは何通りでしょうか。",
+      "explanation_base": "5個の玉から2個を取り出すすべての組み合わせは 10 通りです。赤玉3個から2個を取り出す組み合わせは 3 通りです。したがって、確率は 3/10 となります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "explain_differently"
+      ]
+    },
+    {
+      "full_unit_id": "probability_basic",
+      "unit_id": "probability",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "question_text": "A, B, C, Dの4人が1列に並ぶとき、AとBが隣り合う確率を求めなさい。",
+      "diagram": null,
+      "correct_answer": "1/2",
+      "hint_1": "4人の並び順は全部で 4 × 3 × 2 × 1 = 24通りあります。",
+      "hint_2": "AとBを1つのセットと考えて3人の並び順を計算し、AとBの入れ替わり（2通り）をかけ算します。",
+      "explanation_base": "すべての並び方は24通りです。AとBをセットで考えると、3つのものの並び方は 3 × 2 × 1 = 6通り。AとBの並び方はABとBAの2通りあるので、6 × 2 = 12通りになります。確率は 12/24 = 1/2 です。",
+      "error_pattern_candidates": [
+        "prerequisite_gap",
+        "comprehension_gap"
+      ],
+      "intervention_candidates": [
+        "fallback_prerequisite",
+        "explain_differently"
+      ]
+    },
+    {
+      "full_unit_id": "probability_basic",
+      "unit_id": "probability",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "question_text": "2つのサイコロを同時に投げるとき、同じ目が出る（ゾロ目になる）確率を求めなさい。",
+      "diagram": null,
+      "correct_answer": "1/6",
+      "hint_1": "サイコロの目の出方は全部で36通りです。同じ目が出るのは何通りあるか数えましょう。",
+      "hint_2": "同じ目になるのは (1, 1), (2, 2) などの6通りです。",
+      "explanation_base": "すべての場合は36通りです。同じ目が出る組み合わせは (1, 1), (2, 2), (3, 3), (4, 4), (5, 5), (6, 6) の6通りです。確率は 6/36 = 1/6 となります。",
+      "error_pattern_candidates": [
+        "careless_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "reinforce_same_pattern"
+      ]
+    },
+    {
+      "full_unit_id": "probability_basic",
+      "unit_id": "probability",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "question_text": "2つのサイコロを同時に投げるとき、少なくとも一方は奇数の目が出る確率を求めなさい。",
+      "diagram": null,
+      "correct_answer": "3/4",
+      "hint_1": "「少なくとも一方は奇数」の反対は、「両方とも偶数」になることです。",
+      "hint_2": "全体（1）から、両方とも偶数になる確率を引き算すると簡単に求められます。",
+      "explanation_base": "「少なくとも一方が奇数」である事象の余事象は「両方とも偶数」です。両方とも偶数になるのは 3 × 3 = 9通りで、確率は 9/36 = 1/4 です。求める確率は 1 - 1/4 = 3/4 となります。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "formula_setup_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "probability_basic",
+      "unit_id": "probability",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "question_text": "正五角形ABCDEの頂点Aにコマがあります。1つのサイコロを投げ、出た目の数だけコマを頂点B、C、D、E、Aの順に反時計回りに1つの頂点ずつ進めます。コマが頂点Cに止まる確率を求めなさい。",
+      "diagram": null,
+      "correct_answer": "1/6",
+      "hint_1": "頂点Aから出発して、サイコロの目がいくつ出れば頂点Cに止まるか数えてみましょう。",
+      "hint_2": "2つ進むと頂点Cに止まります。一周してさらに進む場合も考えますが、サイコロの目は6までです。",
+      "explanation_base": "頂点Cに止まるには、Aから2つ進むか、一周して7つ進む必要があります。サイコロの目で該当するのは2のみなので、止まる場合は1通りです。確率は 1/6 となります。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "probability_basic",
+      "unit_id": "probability",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "question_text": "当たりが3本、はずれが5本入っているくじの中から、同時に2本を引くとき、少なくとも1本は当たりである確率を求めなさい。",
+      "diagram": null,
+      "correct_answer": "9/14",
+      "hint_1": "全体から「2本ともはずれである確率」を引く方法を使うと簡単です。",
+      "hint_2": "8本から2本を引く選び方は28通りです。はずれ5本から2本を引く選び方は10通りになります。",
+      "explanation_base": "8本から2本引くすべての組み合わせは 28 通りです。余事象である「2本ともはずれ」の組み合わせは、5本から2本引く 10 通りです。2本ともはずれの確率は 10/28 = 5/14。求める確率は 1 - 5/14 = 9/14 となります。",
+      "error_pattern_candidates": [
+        "prerequisite_gap",
+        "formula_setup_error"
+      ],
+      "intervention_candidates": [
+        "fallback_prerequisite",
+        "explain_differently"
+      ]
+    },
+    {
+      "full_unit_id": "probability_basic",
+      "unit_id": "probability",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "question_text": "2つのサイコロを同時に投げるとき、出た目の積（かけ算の答え）が奇数になる確率を求めなさい。",
+      "diagram": null,
+      "correct_answer": "1/4",
+      "hint_1": "かけ算の答えが奇数になるのは、2つの数がどのような組み合わせのときでしょうか。",
+      "hint_2": "両方とも奇数の場合のみ、積が奇数になります。それぞれのサイコロで奇数が出るのは3通りずつあります。",
+      "explanation_base": "積が奇数になるのは、2つのサイコロがともに奇数の目を出したときのみです。ともに奇数になる組み合わせは 3 × 3 = 9 通りです。確率は 9/36 = 1/4 となります。",
+      "error_pattern_candidates": [
+        "careless_error",
+        "comprehension_gap"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "explain_differently"
+      ]
+    },
+    {
+      "full_unit_id": "probability_basic",
+      "unit_id": "probability",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "question_text": "3枚の硬貨を同時に投げるとき、表が裏より多く出る確率を求めなさい。",
+      "diagram": null,
+      "correct_answer": "1/2",
+      "hint_1": "3枚の硬貨の出方は全部で8通りあります。「表が裏より多く出る」のは、表が2枚のときと、表が3枚のときです。",
+      "hint_2": "表が2枚の場合は3通り、表が3枚の場合は1通りです。",
+      "explanation_base": "すべての出方は8通りです。表が裏より多くなるのは、表が2枚（3通り）か、表が3枚（1通り）のときです。合計4通りなので、確率は 4/8 = 1/2 となります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "slow_down_and_confirm"
+      ]
+    }
+  ]
+}

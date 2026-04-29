@@ -1,0 +1,102 @@
+[
+  {
+    "full_unit_id": "positive_negative_numbers_addition",
+    "grade": 7,
+    "display_name": "正負の数（加法）",
+    "parent_unit": "positive_negative_numbers",
+    "sub_unit": "addition",
+    "prerequisite_full_unit_id": null,
+    "next_full_unit_id": "positive_negative_numbers_subtraction",
+    "display_order": 1
+  },
+  {
+    "full_unit_id": "positive_negative_numbers_subtraction",
+    "grade": 7,
+    "display_name": "正負の数（減法）",
+    "parent_unit": "positive_negative_numbers",
+    "sub_unit": "subtraction",
+    "prerequisite_full_unit_id": "positive_negative_numbers_addition",
+    "next_full_unit_id": "positive_negative_numbers_multiplication",
+    "display_order": 2
+  },
+  {
+    "full_unit_id": "positive_negative_numbers_multiplication",
+    "grade": 7,
+    "display_name": "正負の数（乗法）",
+    "parent_unit": "positive_negative_numbers",
+    "sub_unit": "multiplication",
+    "prerequisite_full_unit_id": "positive_negative_numbers_subtraction",
+    "next_full_unit_id": "positive_negative_numbers_division",
+    "display_order": 3
+  },
+  {
+    "full_unit_id": "positive_negative_numbers_division",
+    "grade": 7,
+    "display_name": "正負の数（除法）",
+    "parent_unit": "positive_negative_numbers",
+    "sub_unit": "division",
+    "prerequisite_full_unit_id": "positive_negative_numbers_multiplication",
+    "next_full_unit_id": "algebraic_expressions_basic",
+    "display_order": 4
+  },
+  {
+    "full_unit_id": "algebraic_expressions_basic",
+    "grade": 7,
+    "display_name": "文字式（基本）",
+    "parent_unit": "algebraic_expressions",
+    "sub_unit": "basic",
+    "prerequisite_full_unit_id": "positive_negative_numbers_division",
+    "next_full_unit_id": "algebraic_expressions_terms",
+    "display_order": 5
+  },
+  {
+    "full_unit_id": "algebraic_expressions_terms",
+    "grade": 7,
+    "display_name": "文字式（項と係数）",
+    "parent_unit": "algebraic_expressions",
+    "sub_unit": "terms",
+    "prerequisite_full_unit_id": "algebraic_expressions_basic",
+    "next_full_unit_id": "algebraic_expressions_substitution",
+    "display_order": 6
+  },
+  {
+    "full_unit_id": "algebraic_expressions_substitution",
+    "grade": 7,
+    "display_name": "文字式（代入）",
+    "parent_unit": "algebraic_expressions",
+    "sub_unit": "substitution",
+    "prerequisite_full_unit_id": "algebraic_expressions_terms",
+    "next_full_unit_id": "linear_equations_basic",
+    "display_order": 7
+  },
+  {
+    "full_unit_id": "linear_equations_basic",
+    "grade": 7,
+    "display_name": "一次方程式（基本）",
+    "parent_unit": "linear_equations",
+    "sub_unit": "basic",
+    "prerequisite_full_unit_id": "algebraic_expressions_substitution",
+    "next_full_unit_id": "linear_equations_transposition",
+    "display_order": 8
+  },
+  {
+    "full_unit_id": "linear_equations_transposition",
+    "grade": 7,
+    "display_name": "一次方程式（移項）",
+    "parent_unit": "linear_equations",
+    "sub_unit": "transposition",
+    "prerequisite_full_unit_id": "linear_equations_basic",
+    "next_full_unit_id": "linear_equations_word_problem",
+    "display_order": 9
+  },
+  {
+    "full_unit_id": "linear_equations_word_problem",
+    "grade": 7,
+    "display_name": "一次方程式（文章題）",
+    "parent_unit": "linear_equations",
+    "sub_unit": "word_problem",
+    "prerequisite_full_unit_id": "linear_equations_transposition",
+    "next_full_unit_id": null,
+    "display_order": 10
+  }
+]

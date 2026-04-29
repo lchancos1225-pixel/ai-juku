@@ -1,0 +1,274 @@
+{
+  "problems": [
+    {
+      "unit_id": "algebraic_expressions",
+      "sub_unit": "terms",
+      "difficulty": "easy",
+      "question_text": "次の式を簡単にしなさい。 3x + 4x",
+      "correct_answer": "7x",
+      "hint_1": "同じ文字 x がついている項（同類項）は、文字の前にある数字（係数）同士を足し算することができます。",
+      "hint_2": "(3 + 4) を計算して、そのうしろに x をつけましょう。",
+      "explanation_base": "同類項をまとめます。係数同士を足して、(3 + 4)x = 7x となります。",
+      "error_pattern_candidates": [
+        "variable_handling_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "confirm_variable_meaning",
+        "separate_terms_visually"
+      ]
+    },
+    {
+      "unit_id": "algebraic_expressions",
+      "sub_unit": "terms",
+      "difficulty": "easy",
+      "question_text": "次の式を簡単にしなさい。 8y - 3y",
+      "correct_answer": "5y",
+      "hint_1": "同じ文字 y がついている項の引き算です。係数同士の計算をしましょう。",
+      "hint_2": "係数の 8 から 3 を引いて、y をつけます。",
+      "explanation_base": "同類項をまとめます。係数同士を引いて、(8 - 3)y = 5y となります。",
+      "error_pattern_candidates": [
+        "variable_handling_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "confirm_variable_meaning",
+        "separate_terms_visually"
+      ]
+    },
+    {
+      "unit_id": "algebraic_expressions",
+      "sub_unit": "terms",
+      "difficulty": "easy",
+      "question_text": "次の式を簡単にしなさい。 a + 5a",
+      "correct_answer": "6a",
+      "hint_1": "文字 a の前には、省略されている数字があります。",
+      "hint_2": "a は 1a のことなので、1 + 5 を計算しましょう。",
+      "explanation_base": "a の係数は 1 です。(1 + 5)a = 6a となります。",
+      "error_pattern_candidates": [
+        "variable_handling_error",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "confirm_variable_meaning",
+        "retry_with_hint"
+      ]
+    },
+    {
+      "unit_id": "algebraic_expressions",
+      "sub_unit": "terms",
+      "difficulty": "easy",
+      "question_text": "次の式を簡単にしなさい。 -2m + 7m",
+      "correct_answer": "5m",
+      "hint_1": "同じ文字 m の項をまとめます。マイナスを含めた係数の計算に注意しましょう。",
+      "hint_2": "係数は -2 と +7 です。(-2 + 7) を計算しましょう。",
+      "explanation_base": "同類項をまとめます。係数の計算をして、(-2 + 7)m = 5m となります。",
+      "error_pattern_candidates": [
+        "variable_handling_error",
+        "sign_error"
+      ],
+      "intervention_candidates": [
+        "confirm_variable_meaning",
+        "review_sign_rules"
+      ]
+    },
+    {
+      "unit_id": "algebraic_expressions",
+      "sub_unit": "terms",
+      "difficulty": "easy",
+      "question_text": "次の式を簡単にしなさい。 4b - 4b",
+      "correct_answer": "0",
+      "hint_1": "同じ文字 b がついている項の引き算です。",
+      "hint_2": "係数を計算すると 4 - 4 = 0 になります。0b はどう書くでしょうか。",
+      "explanation_base": "係数を引くと 0 になります。0 にどんな数をかけても 0 なので、0b ではなく 0 と書きます。",
+      "error_pattern_candidates": [
+        "variable_handling_error",
+        "operation_confusion"
+      ],
+      "intervention_candidates": [
+        "confirm_variable_meaning",
+        "explain_differently"
+      ]
+    },
+    {
+      "unit_id": "algebraic_expressions",
+      "sub_unit": "terms",
+      "difficulty": "normal",
+      "question_text": "次の式を簡単にしなさい。 5x + 2 + 3x - 7",
+      "correct_answer": "8x-5",
+      "hint_1": "文字 x のついている項と、数字だけの項をそれぞれ分けて計算します。",
+      "hint_2": "5x + 3x を計算した結果と、2 - 7 を計算した結果を並べましょう。",
+      "explanation_base": "xの項と数の項をそれぞれまとめます。(5 + 3)x + (2 - 7) = 8x - 5 になります。",
+      "error_pattern_candidates": [
+        "variable_handling_error",
+        "sign_error"
+      ],
+      "intervention_candidates": [
+        "separate_terms_visually",
+        "review_sign_rules"
+      ]
+    },
+    {
+      "unit_id": "algebraic_expressions",
+      "sub_unit": "terms",
+      "difficulty": "normal",
+      "question_text": "次の式を簡単にしなさい。 6a - 4b - 2a + b",
+      "correct_answer": "4a-3b",
+      "hint_1": "文字 a の項と文字 b の項を別々にまとめます。",
+      "hint_2": "6a - 2a を計算した結果と、-4b + b を計算した結果を並べましょう。b の係数は 1 です。",
+      "explanation_base": "同類項ごとにまとめます。a の項は 6a - 2a = 4a、b の項は -4b + 1b = -3b となり、合わせて 4a - 3b になります。",
+      "error_pattern_candidates": [
+        "variable_handling_error",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "separate_terms_visually",
+        "confirm_variable_meaning"
+      ]
+    },
+    {
+      "unit_id": "algebraic_expressions",
+      "sub_unit": "terms",
+      "difficulty": "normal",
+      "question_text": "次の式を簡単にしなさい。 -3x + 8 + 3x - 5",
+      "correct_answer": "3",
+      "hint_1": "文字 x のついている項と、数字だけの項をそれぞれ計算します。",
+      "hint_2": "x の項は -3x + 3x = 0x となります。0x は 0 になるので、数字の項の計算結果だけが残ります。",
+      "explanation_base": "xの項をまとめると (-3 + 3)x = 0 となり消えます。数の項は 8 - 5 = 3 なので、答えは 3 になります。",
+      "error_pattern_candidates": [
+        "variable_handling_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "separate_terms_visually",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "unit_id": "algebraic_expressions",
+      "sub_unit": "terms",
+      "difficulty": "normal",
+      "question_text": "次の式を簡単にしなさい。 1.5x - 0.8x",
+      "correct_answer": "0.7x",
+      "hint_1": "係数が小数の場合でも、同類項のまとめ方は同じです。",
+      "hint_2": "(1.5 - 0.8) を計算して x をつけましょう。",
+      "explanation_base": "係数の引き算をします。(1.5 - 0.8)x = 0.7x になります。",
+      "error_pattern_candidates": [
+        "variable_handling_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "confirm_variable_meaning",
+        "retry_with_hint"
+      ]
+    },
+    {
+      "unit_id": "algebraic_expressions",
+      "sub_unit": "terms",
+      "difficulty": "normal",
+      "question_text": "次の式を簡単にしなさい。 2/3y - 1/4y",
+      "correct_answer": "5/12y",
+      "hint_1": "係数が分数の場合も同類項をまとめられます。分母を通分しましょう。",
+      "hint_2": "3と4の最小公倍数は12です。通分して (8/12 - 3/12) を計算しましょう。",
+      "explanation_base": "分数の係数を通分して計算します。(8/12 - 3/12)y = 5/12y になります。",
+      "error_pattern_candidates": [
+        "prerequisite_gap",
+        "variable_handling_error"
+      ],
+      "intervention_candidates": [
+        "fallback_prerequisite",
+        "confirm_variable_meaning"
+      ]
+    },
+    {
+      "unit_id": "algebraic_expressions",
+      "sub_unit": "terms",
+      "difficulty": "hard",
+      "question_text": "次の式を簡単にしなさい。 3(x + 2) + 2(2x - 1)",
+      "correct_answer": "7x+4",
+      "hint_1": "まずは分配法則を使って、それぞれのかっこを外しましょう。",
+      "hint_2": "かっこを外すと 3x + 6 + 4x - 2 になります。同類項をまとめましょう。",
+      "explanation_base": "かっこを外して 3x + 6 + 4x - 2 とします。xの項は 3x + 4x = 7x、数の項は 6 - 2 = 4 となり、合わせて 7x + 4 になります。",
+      "error_pattern_candidates": [
+        "variable_handling_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "step_by_step_equation_check",
+        "separate_terms_visually"
+      ]
+    },
+    {
+      "unit_id": "algebraic_expressions",
+      "sub_unit": "terms",
+      "difficulty": "hard",
+      "question_text": "次の式を簡単にしなさい。 2(3a - b) - 4(a - 2b)",
+      "correct_answer": "2a+6b",
+      "hint_1": "分配法則を使ってかっこを外します。後ろのかっこを外すとき、-4 をかけるので符号に注意しましょう。",
+      "hint_2": "かっこを外すと 6a - 2b - 4a + 8b になります。a と b それぞれの項をまとめましょう。",
+      "explanation_base": "分配法則でかっこを外します。6a - 2b - 4a + 8b となり、a の項は 6a - 4a = 2a、b の項は -2b + 8b = 6b で、合わせて 2a + 6b になります。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "variable_handling_error"
+      ],
+      "intervention_candidates": [
+        "review_sign_rules",
+        "step_by_step_equation_check"
+      ]
+    },
+    {
+      "unit_id": "algebraic_expressions",
+      "sub_unit": "terms",
+      "difficulty": "hard",
+      "question_text": "次の式を簡単にしなさい。 (x - 3)/2 + (2x + 1)/3",
+      "correct_answer": "(7x-7)/6",
+      "hint_1": "分数の足し算です。分母の2と3を通分して6に揃えましょう。",
+      "hint_2": "分子全体をかっこで囲んで考えます。3(x - 3)/6 + 2(2x + 1)/6 になります。分子を展開してまとめましょう。",
+      "explanation_base": "分母を6で通分します。{3(x - 3) + 2(2x + 1)} / 6 = (3x - 9 + 4x + 2) / 6 = (7x - 7) / 6 となります。（7/6x - 7/6 と書いても正解です）",
+      "error_pattern_candidates": [
+        "prerequisite_gap",
+        "sign_error"
+      ],
+      "intervention_candidates": [
+        "fallback_prerequisite",
+        "step_by_step_equation_check"
+      ]
+    },
+    {
+      "unit_id": "algebraic_expressions",
+      "sub_unit": "terms",
+      "difficulty": "hard",
+      "question_text": "次の式を簡単にしなさい。 0.5(4x - 2) - 0.2(5x - 3)",
+      "correct_answer": "x-0.4",
+      "hint_1": "分配法則を使ってかっこを外します。小数のかけ算に注意しましょう。",
+      "hint_2": "かっこを外すと 2x - 1 - x + 0.6 になります。同類項をまとめましょう。",
+      "explanation_base": "分配法則で展開すると 2x - 1 - x + 0.6 となります。x の項は 2x - x = x、数の項は -1 + 0.6 = -0.4 となり、合わせて x - 0.4 になります。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "review_sign_rules",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "unit_id": "algebraic_expressions",
+      "sub_unit": "terms",
+      "difficulty": "hard",
+      "question_text": "次の式を簡単にしなさい。 4x - 2(x - 3y) - 5y",
+      "correct_answer": "2x+y",
+      "hint_1": "まずはかっこを外します。-2 をかっこの中の x と -3y の両方にかけます。",
+      "hint_2": "かっこを外すと 4x - 2x + 6y - 5y になります。x と y それぞれの項をまとめましょう。",
+      "explanation_base": "分配法則を使ってかっこを外します。-2 をかけるので符号が変わり、4x - 2x + 6y - 5y となります。同類項を整理して 2x + y になります。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "variable_handling_error"
+      ],
+      "intervention_candidates": [
+        "review_sign_rules",
+        "separate_terms_visually"
+      ]
+    }
+  ]
+}

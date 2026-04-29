@@ -1,0 +1,709 @@
+{
+  "problems": [
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_conjunctions",
+      "unit_id": "eng_conjunctions",
+      "sub_unit": "conjunctions",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に正しい接続詞を書きなさい。\n「I think ( ) you are right.」",
+      "correct_answer": "that",
+      "hint_1": "「〜だと思う」の that は接続詞です。",
+      "hint_2": "think の後に that 節が続きます。",
+      "explanation_base": "think that〜：「〜だと思う」（接続詞 that）。I think that you are right.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_conjunctions",
+      "unit_id": "eng_conjunctions",
+      "sub_unit": "conjunctions",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に正しい接続詞を書きなさい。\n「I know ( ) she is busy.」",
+      "correct_answer": "that",
+      "hint_1": "know の後に that 節が続きます。",
+      "hint_2": "「〜ということを知っている」は know that〜。",
+      "explanation_base": "I know that she is busy.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_conjunctions",
+      "unit_id": "eng_conjunctions",
+      "sub_unit": "conjunctions",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に正しい接続詞を書きなさい。\n「Call me ( ) you need help.」",
+      "correct_answer": "when",
+      "hint_1": "「〜のとき」は when を使います。",
+      "hint_2": "when＋文で時を表します。",
+      "explanation_base": "Call me when you need help.（接続詞 when）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_conjunctions",
+      "unit_id": "eng_conjunctions",
+      "sub_unit": "conjunctions",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に正しい接続詞を書きなさい。\n「( ) it rains, we will stay inside.」",
+      "correct_answer": "If",
+      "hint_1": "「もし〜ならば」は if を使います。",
+      "hint_2": "if の節には現在形を使います（条件節）。",
+      "explanation_base": "If it rains, we will stay inside.（条件の接続詞 if）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_conjunctions",
+      "unit_id": "eng_conjunctions",
+      "sub_unit": "conjunctions",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に正しい接続詞を書きなさい。\n「I was tired ( ) I went to bed early.」",
+      "correct_answer": "because",
+      "hint_1": "「〜だから」は because を使います。",
+      "hint_2": "because の後に理由を示す節が続きます。",
+      "explanation_base": "I was tired because I went to bed early.（接続詞 because）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_conjunctions",
+      "unit_id": "eng_conjunctions",
+      "sub_unit": "conjunctions",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に正しい接続詞を書きなさい。\n「She was happy ( ) she passed the exam.」",
+      "correct_answer": "because",
+      "hint_1": "「〜だから（理由）」は because を使います。",
+      "hint_2": "She was happy because 彼女が試験に合格したから。",
+      "explanation_base": "She was happy because she passed the exam.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_conjunctions",
+      "unit_id": "eng_conjunctions",
+      "sub_unit": "conjunctions",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に正しい接続詞を書きなさい。\n「( ) you study hard, you will pass.」",
+      "correct_answer": "If",
+      "hint_1": "「もし〜ならば（条件）」は if を使います。",
+      "hint_2": "If の節では現在形を使います。",
+      "explanation_base": "If you study hard, you will pass.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_conjunctions",
+      "unit_id": "eng_conjunctions",
+      "sub_unit": "conjunctions",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に正しい接続詞を書きなさい。\n「I was watching TV ( ) my mom came home.」",
+      "correct_answer": "when",
+      "hint_1": "「〜のとき（時）」は when を使います。",
+      "hint_2": "when の後に時の節が続きます。",
+      "explanation_base": "I was watching TV when my mom came home.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_conjunctions",
+      "unit_id": "eng_conjunctions",
+      "sub_unit": "conjunctions",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に正しい接続詞を書きなさい。\n「He said ( ) he would come.」",
+      "correct_answer": "that",
+      "hint_1": "「〜と言った」の that は接続詞です。",
+      "hint_2": "said の後に that 節が続きます。",
+      "explanation_base": "He said that he would come.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_conjunctions",
+      "unit_id": "eng_conjunctions",
+      "sub_unit": "conjunctions",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に正しい接続詞を書きなさい。\n「I hope ( ) you enjoy the trip.」",
+      "correct_answer": "that",
+      "hint_1": "「〜であることを願う」は hope that〜。",
+      "hint_2": "hope の後に that 節が続きます。",
+      "explanation_base": "I hope that you enjoy the trip.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_conjunctions",
+      "unit_id": "eng_conjunctions",
+      "sub_unit": "conjunctions",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「もし明日晴れなら、私たちは公園に行きます。」",
+      "correct_answer": "If it is sunny tomorrow, we will go to the park.",
+      "hint_1": "「もし〜ならば」は if を使います（条件節は現在形）。",
+      "hint_2": "If it is 〜, we will 〜 の形にします。",
+      "explanation_base": "If it is sunny tomorrow, we will go to the park.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_conjunctions",
+      "unit_id": "eng_conjunctions",
+      "sub_unit": "conjunctions",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「彼が帰ってきたとき、夕食を食べました。」",
+      "correct_answer": "When he came home, I had dinner.",
+      "hint_1": "「〜のとき」は when を使います。",
+      "hint_2": "When 〜, の形にします。",
+      "explanation_base": "When he came home, I had dinner.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_conjunctions",
+      "unit_id": "eng_conjunctions",
+      "sub_unit": "conjunctions",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「疲れていたので彼女は早くに寝ました。」",
+      "correct_answer": "She went to bed early because she was tired.",
+      "hint_1": "「〜だから」は because を使います。",
+      "hint_2": "because のあとに理由を書きます。",
+      "explanation_base": "She went to bed early because she was tired.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_conjunctions",
+      "unit_id": "eng_conjunctions",
+      "sub_unit": "conjunctions",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「私は彼が来るとは思いませんでした。」",
+      "correct_answer": "I didn't think that he would come.",
+      "hint_1": "「〜だとは思わなかった」は didn't think that〜。",
+      "hint_2": "I didn't think that 〜 の形にします。",
+      "explanation_base": "I didn't think that he would come.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_conjunctions",
+      "unit_id": "eng_conjunctions",
+      "sub_unit": "conjunctions",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「勉強しなければ、テストに合格できません。」",
+      "correct_answer": "If you don't study, you won't pass the test.",
+      "hint_1": "「もし〜しなければ」は if を使います。",
+      "hint_2": "If you don't 〜, you won't 〜 の形にします。",
+      "explanation_base": "If you don't study, you won't pass the test.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_conjunctions",
+      "unit_id": "eng_conjunctions",
+      "sub_unit": "conjunctions",
+      "problem_type": "mini_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に正しい接続詞を書きなさい。\n「She said ( ) she was okay.」",
+      "correct_answer": "that",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "She said that she was okay.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_conjunctions"
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_conjunctions",
+      "unit_id": "eng_conjunctions",
+      "sub_unit": "conjunctions",
+      "problem_type": "mini_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に正しい接続詞を書きなさい。\n「( ) you are free, let's go out.」",
+      "correct_answer": "If",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "If you are free, let's go out.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_conjunctions"
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_conjunctions",
+      "unit_id": "eng_conjunctions",
+      "sub_unit": "conjunctions",
+      "problem_type": "mini_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に正しい接続詞を書きなさい。\n「He smiled ( ) he heard the news.」",
+      "correct_answer": "when",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "He smiled when he heard the news.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_conjunctions"
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_conjunctions",
+      "unit_id": "eng_conjunctions",
+      "sub_unit": "conjunctions",
+      "problem_type": "mini_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「彼が怒っていたのは、その話を信じなかったからです。」",
+      "correct_answer": "He was angry because he didn't believe the story.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "He was angry because he didn't believe the story.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_conjunctions"
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_conjunctions",
+      "unit_id": "eng_conjunctions",
+      "sub_unit": "conjunctions",
+      "problem_type": "mini_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に正しい接続詞を書きなさい。\n「I believe ( ) she will succeed.」",
+      "correct_answer": "that",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "I believe that she will succeed.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_conjunctions"
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_conjunctions",
+      "unit_id": "eng_conjunctions",
+      "sub_unit": "conjunctions",
+      "problem_type": "unit_test",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に正しい接続詞を書きなさい。\n「I know ( ) he is kind.」",
+      "correct_answer": "that",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "I know that he is kind.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_conjunctions"
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_conjunctions",
+      "unit_id": "eng_conjunctions",
+      "sub_unit": "conjunctions",
+      "problem_type": "unit_test",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に正しい接続詞を書きなさい。\n「( ) you are late, call me.」",
+      "correct_answer": "If",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "If you are late, call me.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_conjunctions"
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_conjunctions",
+      "unit_id": "eng_conjunctions",
+      "sub_unit": "conjunctions",
+      "problem_type": "unit_test",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に正しい接続詞を書きなさい。\n「She was happy ( ) she won.」",
+      "correct_answer": "because",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "She was happy because she won.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_conjunctions"
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_conjunctions",
+      "unit_id": "eng_conjunctions",
+      "sub_unit": "conjunctions",
+      "problem_type": "unit_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「彼女が電話したとき、私は寝ていました。」",
+      "correct_answer": "I was sleeping when she called.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "I was sleeping when she called.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_conjunctions"
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_conjunctions",
+      "unit_id": "eng_conjunctions",
+      "sub_unit": "conjunctions",
+      "problem_type": "unit_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「もし問題があれば、知らせてください。」",
+      "correct_answer": "If you have any problems, please let me know.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "If you have any problems, please let me know.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_conjunctions"
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_conjunctions",
+      "unit_id": "eng_conjunctions",
+      "sub_unit": "conjunctions",
+      "problem_type": "unit_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「私は彼女がそこにいたことを知りませんでした。」",
+      "correct_answer": "I didn't know that she was there.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "I didn't know that she was there.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_conjunctions"
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_conjunctions",
+      "unit_id": "eng_conjunctions",
+      "sub_unit": "conjunctions",
+      "problem_type": "unit_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に正しい接続詞を書きなさい。\n「I hope ( ) you feel better soon.」",
+      "correct_answer": "that",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "I hope that you feel better soon.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_conjunctions"
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_conjunctions",
+      "unit_id": "eng_conjunctions",
+      "sub_unit": "conjunctions",
+      "problem_type": "unit_test",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「彼が戻ってきたとき、みんながびっくりしました。」",
+      "correct_answer": "Everyone was surprised when he came back.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "Everyone was surprised when he came back.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_conjunctions"
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_conjunctions",
+      "unit_id": "eng_conjunctions",
+      "sub_unit": "conjunctions",
+      "problem_type": "unit_test",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「雨が降っていたので試合は中止になりました。」",
+      "correct_answer": "The game was canceled because it was raining.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "The game was canceled because it was raining.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_conjunctions"
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_conjunctions",
+      "unit_id": "eng_conjunctions",
+      "sub_unit": "conjunctions",
+      "problem_type": "unit_test",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「もし十分な時間があれば、彼女はその本を読み終えるでしょう。」",
+      "correct_answer": "If she has enough time, she will finish reading the book.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "If she has enough time, she will finish reading the book.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_conjunctions"
+    }
+  ]
+}

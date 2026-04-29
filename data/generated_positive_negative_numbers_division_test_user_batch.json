@@ -1,0 +1,304 @@
+{
+  "problems": [
+    {
+      "full_unit_id": "positive_negative_numbers_division",
+      "unit_id": "positive_negative_numbers",
+      "sub_unit": "division",
+      "problem_type": "mini_test",
+      "test_scope": "mini_test",
+      "difficulty": "easy",
+      "question_text": "次の計算をしなさい。\n(+12) ÷ (+3)",
+      "diagram": null,
+      "correct_answer": "4",
+      "explanation_base": "同符号の2つの数の商は、絶対値の商に正の符号をつけます。12 ÷ 3 = 4 となります。",
+      "error_pattern_candidates": [
+        "arithmetic_error",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "advance_with_confidence"
+      ]
+    },
+    {
+      "full_unit_id": "positive_negative_numbers_division",
+      "unit_id": "positive_negative_numbers",
+      "sub_unit": "division",
+      "problem_type": "mini_test",
+      "test_scope": "mini_test",
+      "difficulty": "easy",
+      "question_text": "次の計算をしなさい。\n(-18) ÷ (+6)",
+      "diagram": null,
+      "correct_answer": "-3",
+      "explanation_base": "異符号の2つの数の商は、絶対値の商に負の符号をつけます。-(18 ÷ 6) = -3 となります。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "reinforce_same_pattern"
+      ]
+    },
+    {
+      "full_unit_id": "positive_negative_numbers_division",
+      "unit_id": "positive_negative_numbers",
+      "sub_unit": "division",
+      "problem_type": "mini_test",
+      "test_scope": "mini_test",
+      "difficulty": "normal",
+      "question_text": "次の計算をしなさい。\n(-4/5) ÷ (-8/15)",
+      "diagram": null,
+      "correct_answer": "3/2",
+      "explanation_base": "分数の除法は、割る数の逆数を掛けます。同符号の計算なので符号はプラスになり、(4/5) × (15/8) = 3/2 となります。",
+      "error_pattern_candidates": [
+        "prerequisite_gap",
+        "sign_error"
+      ],
+      "intervention_candidates": [
+        "fallback_prerequisite",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "positive_negative_numbers_division",
+      "unit_id": "positive_negative_numbers",
+      "sub_unit": "division",
+      "problem_type": "mini_test",
+      "test_scope": "mini_test",
+      "difficulty": "normal",
+      "question_text": "次の計算をしなさい。\n(-2) × (+6) ÷ (-4)",
+      "diagram": null,
+      "correct_answer": "3",
+      "explanation_base": "乗除の混じった計算は、左から順に計算するか、すべて乗法に直して計算します。全体の符号はマイナスが2つなのでプラスになります。2 × 6 ÷ 4 = 12 ÷ 4 = 3 となります。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "operation_confusion"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "positive_negative_numbers_division",
+      "unit_id": "positive_negative_numbers",
+      "sub_unit": "division",
+      "problem_type": "mini_test",
+      "test_scope": "mini_test",
+      "difficulty": "hard",
+      "question_text": "次の計算をしなさい。\n(-3)^2 ÷ (-9)",
+      "diagram": null,
+      "correct_answer": "-1",
+      "explanation_base": "累乗を先に計算します。(-3)^2 = 9 です。次に 9 ÷ (-9) を計算し、異符号の除法なので -1 となります。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "sign_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "full_unit_id": "positive_negative_numbers_division",
+      "unit_id": "positive_negative_numbers",
+      "sub_unit": "division",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "easy",
+      "question_text": "次の計算をしなさい。\n(-20) ÷ (+4)",
+      "diagram": null,
+      "correct_answer": "-5",
+      "explanation_base": "異符号の除法なので、商の符号はマイナスになります。-(20 ÷ 4) = -5 です。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "reinforce_same_pattern",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "positive_negative_numbers_division",
+      "unit_id": "positive_negative_numbers",
+      "sub_unit": "division",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "easy",
+      "question_text": "次の計算をしなさい。\n(-36) ÷ (-9)",
+      "diagram": null,
+      "correct_answer": "4",
+      "explanation_base": "同符号の除法なので、商の符号はプラスになります。36 ÷ 9 = 4 です。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "operation_confusion"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "reinforce_same_pattern"
+      ]
+    },
+    {
+      "full_unit_id": "positive_negative_numbers_division",
+      "unit_id": "positive_negative_numbers",
+      "sub_unit": "division",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "easy",
+      "question_text": "次の計算をしなさい。\n0 ÷ (-7)",
+      "diagram": null,
+      "correct_answer": "0",
+      "explanation_base": "0を0以外のどんな数で割っても、商は必ず0になります。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "monitor_only"
+      ]
+    },
+    {
+      "full_unit_id": "positive_negative_numbers_division",
+      "unit_id": "positive_negative_numbers",
+      "sub_unit": "division",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "normal",
+      "question_text": "次の計算をしなさい。\n(+3.2) ÷ (-0.8)",
+      "diagram": null,
+      "correct_answer": "-4",
+      "explanation_base": "異符号の除法なので商はマイナスになります。小数の割り算は 3.2 ÷ 0.8 = 32 ÷ 8 = 4 なので、答えは -4 となります。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "explain_differently"
+      ]
+    },
+    {
+      "full_unit_id": "positive_negative_numbers_division",
+      "unit_id": "positive_negative_numbers",
+      "sub_unit": "division",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "normal",
+      "question_text": "次の計算をしなさい。\n(-5/6) ÷ (+5/12)",
+      "diagram": null,
+      "correct_answer": "-2",
+      "explanation_base": "分数の除法は割る数の逆数を掛けます。異符号なので符号はマイナスになり、-(5/6) × (12/5) = -2 となります。",
+      "error_pattern_candidates": [
+        "prerequisite_gap",
+        "sign_error"
+      ],
+      "intervention_candidates": [
+        "fallback_prerequisite",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "positive_negative_numbers_division",
+      "unit_id": "positive_negative_numbers",
+      "sub_unit": "division",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "normal",
+      "question_text": "次の計算をしなさい。\n(+15) ÷ (-3) × (-2)",
+      "diagram": null,
+      "correct_answer": "10",
+      "explanation_base": "左から順に計算します。(+15) ÷ (-3) = -5。次に (-5) × (-2) = 10 となります。",
+      "error_pattern_candidates": [
+        "operation_confusion",
+        "sign_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "positive_negative_numbers_division",
+      "unit_id": "positive_negative_numbers",
+      "sub_unit": "division",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "normal",
+      "question_text": "次の計算をしなさい。\n(-8) ÷ (-2/3)",
+      "diagram": null,
+      "correct_answer": "12",
+      "explanation_base": "割る数の逆数を掛けます。同符号なので符号はプラスになり、8 × (3/2) = 12 となります。",
+      "error_pattern_candidates": [
+        "prerequisite_gap",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "fallback_prerequisite",
+        "reinforce_same_pattern"
+      ]
+    },
+    {
+      "full_unit_id": "positive_negative_numbers_division",
+      "unit_id": "positive_negative_numbers",
+      "sub_unit": "division",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "hard",
+      "question_text": "次の計算をしなさい。\n(-2)^3 ÷ (-4)",
+      "diagram": null,
+      "correct_answer": "2",
+      "explanation_base": "累乗を先に計算します。(-2)^3 = -8 です。次に (-8) ÷ (-4) = 2 となります。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "sign_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "positive_negative_numbers_division",
+      "unit_id": "positive_negative_numbers",
+      "sub_unit": "division",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "hard",
+      "question_text": "次の計算をしなさい。\n12 - (-18) ÷ (+3)",
+      "diagram": null,
+      "correct_answer": "18",
+      "explanation_base": "四則混合の計算では、乗法・除法を先に計算します。(-18) ÷ (+3) = -6。次に減法を計算し、12 - (-6) = 12 + 6 = 18 となります。",
+      "error_pattern_candidates": [
+        "operation_confusion",
+        "sign_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "positive_negative_numbers_division",
+      "unit_id": "positive_negative_numbers",
+      "sub_unit": "division",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "hard",
+      "question_text": "次の計算をしなさい。\n(-3/4) ÷ (-9/8) ÷ (-2/3)",
+      "diagram": null,
+      "correct_answer": "-1",
+      "explanation_base": "すべて乗法に直して計算します。(-3/4) × (-8/9) × (-3/2) となります。負の数が3個なので符号はマイナスになり、絶対値は (3/4) × (8/9) × (3/2) = (2/3) × (3/2) = 1。よって答えは -1 となります。",
+      "error_pattern_candidates": [
+        "prerequisite_gap",
+        "sign_error"
+      ],
+      "intervention_candidates": [
+        "fallback_prerequisite",
+        "teacher_intervention_needed"
+      ]
+    }
+  ]
+}

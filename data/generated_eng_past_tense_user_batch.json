@@ -1,0 +1,709 @@
+{
+  "problems": [
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_past_tense",
+      "unit_id": "eng_past_tense",
+      "sub_unit": "past_tense",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に動詞の過去形を入れなさい。\n「She ( play ) the piano yesterday.」",
+      "correct_answer": "played",
+      "hint_1": "規則変化の動詞は -ed をつけます。",
+      "hint_2": "play → play + ed = played",
+      "explanation_base": "played（規則変化）。She played the piano yesterday.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_past_tense",
+      "unit_id": "eng_past_tense",
+      "sub_unit": "past_tense",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に動詞の過去形を入れなさい。\n「They ( watch ) a movie last night.」",
+      "correct_answer": "watched",
+      "hint_1": "規則変化の動詞は -ed をつけます。",
+      "hint_2": "watch → water + ed = watched",
+      "explanation_base": "watched（規則変化）。They watched a movie last night.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_past_tense",
+      "unit_id": "eng_past_tense",
+      "sub_unit": "past_tense",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に動詞の過去形を入れなさい。\n「I ( study ) English this morning.」",
+      "correct_answer": "studied",
+      "hint_1": "語末が子音+y の場合は y を i に変えて -ed をつけます。",
+      "hint_2": "study → studi + ed = studied",
+      "explanation_base": "studied（y→i+ed）。I studied English this morning.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_past_tense",
+      "unit_id": "eng_past_tense",
+      "sub_unit": "past_tense",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に動詞の過去形を入れなさい。\n「He ( live ) in Osaka.」",
+      "correct_answer": "lived",
+      "hint_1": "語末が e の場合は d だけをつけます。",
+      "hint_2": "live → live + d = lived",
+      "explanation_base": "lived（語末 e + d）。He lived in Osaka.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_past_tense",
+      "unit_id": "eng_past_tense",
+      "sub_unit": "past_tense",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に動詞の過去形を入れなさい。\n「We ( stop ) at the station.」",
+      "correct_answer": "stopped",
+      "hint_1": "語末が「短母音+子音」の場合は子音を重ねて -ed をつけます。",
+      "hint_2": "stop → stop + p + ed = stopped",
+      "explanation_base": "stopped（語末子音重ね）。We stopped at the station.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_past_tense",
+      "unit_id": "eng_past_tense",
+      "sub_unit": "past_tense",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に動詞の過去形を入れなさい。\n「She ( go ) to the library.」",
+      "correct_answer": "went",
+      "hint_1": "go は不規則変化です。",
+      "hint_2": "go の過去形は went です。",
+      "explanation_base": "went（不規則変化）。She went to the library.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_past_tense",
+      "unit_id": "eng_past_tense",
+      "sub_unit": "past_tense",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に動詞の過去形を入れなさい。\n「I ( have ) a cold last week.」",
+      "correct_answer": "had",
+      "hint_1": "have は不規則変化です。",
+      "hint_2": "have の過去形は had です。",
+      "explanation_base": "had（不規則変化）。I had a cold last week.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_past_tense",
+      "unit_id": "eng_past_tense",
+      "sub_unit": "past_tense",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に動詞の過去形を入れなさい。\n「They ( see ) a rainbow.」",
+      "correct_answer": "saw",
+      "hint_1": "see は不規則変化です。",
+      "hint_2": "see の過去形は saw です。",
+      "explanation_base": "saw（不規則変化）。They saw a rainbow.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_past_tense",
+      "unit_id": "eng_past_tense",
+      "sub_unit": "past_tense",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に動詞の過去形を入れなさい。\n「He ( come ) home early.」",
+      "correct_answer": "came",
+      "hint_1": "come は不規則変化です。",
+      "hint_2": "come の過去形は came です。",
+      "explanation_base": "came（不規則変化）。He came home early.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_past_tense",
+      "unit_id": "eng_past_tense",
+      "sub_unit": "past_tense",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に動詞の過去形を入れなさい。\n「She ( buy ) a new bag.」",
+      "correct_answer": "bought",
+      "hint_1": "buy は不規則変化です。",
+      "hint_2": "buy の過去形は bought です。",
+      "explanation_base": "bought（不規則変化）。She bought a new bag.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_past_tense",
+      "unit_id": "eng_past_tense",
+      "sub_unit": "past_tense",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "過去の否定文に書き換えなさい。\n「He played basketball.」",
+      "correct_answer": "He did not play basketball.",
+      "hint_1": "過去の否定文は did not + 動詞原形の形です。",
+      "hint_2": "He did not + 動詞原形〜. の形にします。",
+      "explanation_base": "He did not play basketball.（動詞は原形に戻す）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_past_tense",
+      "unit_id": "eng_past_tense",
+      "sub_unit": "past_tense",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "過去の疑問文に書き換えなさい。\n「She saw a movie yesterday.」",
+      "correct_answer": "Did she see a movie yesterday?",
+      "hint_1": "過去の疑問文は Did を文頭に置き、動詞を原形にします。",
+      "hint_2": "Did + 主語 + 動詞原形〜? の形にします。",
+      "explanation_base": "Did she see a movie yesterday?（動詞は原形に戻す）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_past_tense",
+      "unit_id": "eng_past_tense",
+      "sub_unit": "past_tense",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「彼女は昨日、図書館に行きました。」",
+      "correct_answer": "She went to the library yesterday.",
+      "hint_1": "go の過去形は went です。",
+      "hint_2": "She went 〜 yesterday. の形にします。",
+      "explanation_base": "She went to the library yesterday.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_past_tense",
+      "unit_id": "eng_past_tense",
+      "sub_unit": "past_tense",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「あなたは昨夜何を食べましたか？」",
+      "correct_answer": "What did you eat last night?",
+      "hint_1": "疑問文は What + did を使います。",
+      "hint_2": "What did you 動詞原形〜? の形にします。",
+      "explanation_base": "What did you eat last night?",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_past_tense",
+      "unit_id": "eng_past_tense",
+      "sub_unit": "past_tense",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「私は先週、友達に手紙を書きました。」",
+      "correct_answer": "I wrote a letter to my friend last week.",
+      "hint_1": "write の過去形は wrote です。",
+      "hint_2": "I wrote 〜 last week. の形にします。",
+      "explanation_base": "I wrote a letter to my friend last week.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_past_tense",
+      "unit_id": "eng_past_tense",
+      "sub_unit": "past_tense",
+      "problem_type": "mini_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に動詞の過去形を入れなさい。\n「He ( write ) a letter.」",
+      "correct_answer": "wrote",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "write→wrote（不規則変化）。He wrote a letter.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_past_tense"
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_past_tense",
+      "unit_id": "eng_past_tense",
+      "sub_unit": "past_tense",
+      "problem_type": "mini_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に動詞の過去形を入れなさい。\n「She ( visit ) Kyoto last month.」",
+      "correct_answer": "visited",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "visited（規則変化）。She visited Kyoto last month.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_past_tense"
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_past_tense",
+      "unit_id": "eng_past_tense",
+      "sub_unit": "past_tense",
+      "problem_type": "mini_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "過去の疑問文に書き換えなさい。\n「They ate lunch together.」",
+      "correct_answer": "Did they eat lunch together?",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "Did they eat lunch together?",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_past_tense"
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_past_tense",
+      "unit_id": "eng_past_tense",
+      "sub_unit": "past_tense",
+      "problem_type": "mini_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「私は昨日、6時間寝ました。」",
+      "correct_answer": "I slept for six hours yesterday.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "sleep→slept（不規則変化）。I slept for six hours yesterday.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_past_tense"
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_past_tense",
+      "unit_id": "eng_past_tense",
+      "sub_unit": "past_tense",
+      "problem_type": "mini_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "過去の否定文に書き換えなさい。\n「I liked that movie.」",
+      "correct_answer": "I did not like that movie.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "I did not like that movie.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_past_tense"
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_past_tense",
+      "unit_id": "eng_past_tense",
+      "sub_unit": "past_tense",
+      "problem_type": "unit_test",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に動詞の過去形を入れなさい。\n「She ( clean ) her room.」",
+      "correct_answer": "cleaned",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "cleaned（規則変化）。She cleaned her room.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_past_tense"
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_past_tense",
+      "unit_id": "eng_past_tense",
+      "sub_unit": "past_tense",
+      "problem_type": "unit_test",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に動詞の過去形を入れなさい。\n「He ( run ) in the race.」",
+      "correct_answer": "ran",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "run→ran（不規則変化）。He ran in the race.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_past_tense"
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_past_tense",
+      "unit_id": "eng_past_tense",
+      "sub_unit": "past_tense",
+      "problem_type": "unit_test",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に動詞の過去形を入れなさい。\n「I ( take ) a picture.」",
+      "correct_answer": "took",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "take→took（不規則変化）。I took a picture.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_past_tense"
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_past_tense",
+      "unit_id": "eng_past_tense",
+      "sub_unit": "past_tense",
+      "problem_type": "unit_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に動詞の過去形を入れなさい。\n「They ( speak ) Spanish.」",
+      "correct_answer": "spoke",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "speak→spoke（不規則変化）。They spoke Spanish.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_past_tense"
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_past_tense",
+      "unit_id": "eng_past_tense",
+      "sub_unit": "past_tense",
+      "problem_type": "unit_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「彼は昨日、何時間勉強しましたか？」",
+      "correct_answer": "How many hours did he study yesterday?",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "How many hours did he study yesterday?",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_past_tense"
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_past_tense",
+      "unit_id": "eng_past_tense",
+      "sub_unit": "past_tense",
+      "problem_type": "unit_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "過去の否定文に書き換えなさい。\n「She came to school yesterday.」",
+      "correct_answer": "She did not come to school yesterday.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "She did not come to school yesterday.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_past_tense"
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_past_tense",
+      "unit_id": "eng_past_tense",
+      "sub_unit": "past_tense",
+      "problem_type": "unit_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「私たちは先週、博物館を訪れました。」",
+      "correct_answer": "We visited the museum last week.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "We visited the museum last week.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_past_tense"
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_past_tense",
+      "unit_id": "eng_past_tense",
+      "sub_unit": "past_tense",
+      "problem_type": "unit_test",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「彼女はそのパーティーに来なかったのですか？」",
+      "correct_answer": "Didn't she come to the party?",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "Didn't she come to the party?",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_past_tense"
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_past_tense",
+      "unit_id": "eng_past_tense",
+      "sub_unit": "past_tense",
+      "problem_type": "unit_test",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「あなたは昨夜どこへ行きましたか？」",
+      "correct_answer": "Where did you go last night?",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "Where did you go last night?",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_past_tense"
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "full_unit_id": "eng_past_tense",
+      "unit_id": "eng_past_tense",
+      "sub_unit": "past_tense",
+      "problem_type": "unit_test",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「彼らは3時間かけてそのプロジェクトを終えました。」",
+      "correct_answer": "They finished the project in three hours.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "They finished the project in three hours.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_past_tense"
+    }
+  ]
+}

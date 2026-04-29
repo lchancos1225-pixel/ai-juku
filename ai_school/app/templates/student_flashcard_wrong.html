@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="student-top-bar">
+  <div class="student-top-bar__info">
+    <span class="student-top-bar__name">不正解</span>
+  </div>
+  <a class="progress-chip-btn" href="{{ next_url }}">次の問題へ →</a>
+</div>
+
+<section class="card" style="text-align: center; padding: 32px 24px;">
+  <p style="font-size: 3rem; margin: 0 0 8px;">❌</p>
+  <h2 style="color: #dc2626; margin: 0 0 24px;">残念！もう一度覚えよう</h2>
+
+  <div style="background: #f8fafc; border-radius: 14px; padding: 20px; text-align: left; margin-bottom: 24px;">
+    <p style="font-size: 2rem; font-weight: 800; margin: 0 0 4px; text-align: center;">{{ card.english }}</p>
+    {% if card.phonetics %}
+    <p style="color: #64748b; text-align: center; margin: 0 0 16px;">{{ card.phonetics }}</p>
+    {% endif %}
+    <button type="button" onclick="speakWord('{{ card.english | e }}')"
+      style="display:block; margin: 0 auto 16px; background:#f0fdf4; border:2px solid #10b981; color:#065f46; padding:8px 24px; border-radius:99px; font-size:0.95rem; cursor:pointer; font-weight:700;">
+      🔊 発音を聞く
+    </button>
+    <div style="border-top: 1px solid #e2e8f0; padding-top: 14px;">
+      <p style="font-size: 1.15rem; font-weight: 700; color: #1e293b; margin: 0 0 6px;">{{ card.japanese }}</p>
+      {% if card.part_of_speech %}
+      <span style="background:#e0f2fe; color:#0369a1; padding:2px 8px; border-radius:99px; font-size:0.78rem; font-weight:700;">{{ card.part_of_speech }}</span>
+      {% endif %}
+      {% if card.example_en %}
+      <p style="font-size: 0.9rem; color: #475569; margin: 12px 0 2px; font-style: italic;">{{ card.example_en }}</p>
+      <p style="font-size: 0.85rem; color: #64748b; margin: 0;">{{ card.example_ja }}</p>
+      {% endif %}
+    </div>
+  </div>
+
+  {% if stage == 3 %}
+  <p style="color: #64748b; font-size: 0.9rem; margin-bottom: 20px;">正しいスペル: <strong style="color: #1e293b;">{{ card.english }}</strong></p>
+  {% endif %}
+
+  <a href="{{ next_url }}" class="submit-answer-btn" style="display: inline-block; text-decoration: none;">次の単語へ</a>
+</section>
+
+<script>
+function speakWord(word) {
+  if (!window.speechSynthesis) return;
+  window.speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance(word);
+  u.lang = 'en-US';
+  u.rate = 0.85;
+  window.speechSynthesis.speak(u);
+}
+window.addEventListener('load', () => setTimeout(() => speakWord('{{ card.english | e }}'), 300));
+</script>
+
+{% endblock %}

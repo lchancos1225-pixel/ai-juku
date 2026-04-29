@@ -1,0 +1,304 @@
+{
+  "problems": [
+    {
+      "full_unit_id": "algebraic_expressions_terms",
+      "unit_id": "algebraic_expressions",
+      "sub_unit": "terms",
+      "problem_type": "mini_test",
+      "test_scope": "mini_test",
+      "difficulty": "easy",
+      "question_text": "式 3x - 5y + 2 の項をすべて答えなさい。（カンマで区切って答えること）",
+      "diagram": null,
+      "correct_answer": "3x, -5y, 2",
+      "explanation_base": "式を＋の記号で結んだ形に直したときの、それぞれの部分を項といいます。3x + (-5y) + 2 となるため、項は 3x, -5y, 2 です。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "sign_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "retry_with_hint"
+      ]
+    },
+    {
+      "full_unit_id": "algebraic_expressions_terms",
+      "unit_id": "algebraic_expressions",
+      "sub_unit": "terms",
+      "problem_type": "mini_test",
+      "test_scope": "mini_test",
+      "difficulty": "easy",
+      "question_text": "式 -x + 4 における x の係数を答えなさい。",
+      "diagram": null,
+      "correct_answer": "-1",
+      "explanation_base": "文字を含む項で、文字に掛けられている数を係数といいます。-x は -1 × x のことなので、xの係数は -1 です。",
+      "error_pattern_candidates": [
+        "variable_handling_error",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "explain_differently"
+      ]
+    },
+    {
+      "full_unit_id": "algebraic_expressions_terms",
+      "unit_id": "algebraic_expressions",
+      "sub_unit": "terms",
+      "problem_type": "mini_test",
+      "test_scope": "mini_test",
+      "difficulty": "normal",
+      "question_text": "次の式を簡単にしなさい。\n5a - 3 + 2a + 7",
+      "diagram": null,
+      "correct_answer": "7a + 4",
+      "explanation_base": "文字の部分が同じ項（同類項）と、数の項をそれぞれまとめます。(5 + 2)a + (-3 + 7) = 7a + 4 となります。",
+      "error_pattern_candidates": [
+        "variable_handling_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "reinforce_same_pattern",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "algebraic_expressions_terms",
+      "unit_id": "algebraic_expressions",
+      "sub_unit": "terms",
+      "problem_type": "mini_test",
+      "test_scope": "mini_test",
+      "difficulty": "normal",
+      "question_text": "次の計算をしなさい。\n(4x - 5) - (2x - 3)",
+      "diagram": null,
+      "correct_answer": "2x - 2",
+      "explanation_base": "ひき算は、引く式の各項の符号を変えて足し算に直します。4x - 5 - 2x + 3 = (4 - 2)x + (-5 + 3) = 2x - 2 となります。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "operation_confusion"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "explain_differently"
+      ]
+    },
+    {
+      "full_unit_id": "algebraic_expressions_terms",
+      "unit_id": "algebraic_expressions",
+      "sub_unit": "terms",
+      "problem_type": "mini_test",
+      "test_scope": "mini_test",
+      "difficulty": "hard",
+      "question_text": "次の式を簡単にしなさい。\n1/2x - 2/3y - 1/4x + y",
+      "diagram": null,
+      "correct_answer": "1/4x + 1/3y",
+      "explanation_base": "同類項をまとめます。xの項は 1/2 - 1/4 = 2/4 - 1/4 = 1/4、yの項は -2/3 + 1 = -2/3 + 3/3 = 1/3 です。よって 1/4x + 1/3y となります。",
+      "error_pattern_candidates": [
+        "prerequisite_gap",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "fallback_prerequisite",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "algebraic_expressions_terms",
+      "unit_id": "algebraic_expressions",
+      "sub_unit": "terms",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "easy",
+      "question_text": "次のア〜ウの式の中で、項が2つある1次式はどれですか。\nア：5x\nイ：-2a + 3\nウ：4x^2 - x + 1",
+      "diagram": null,
+      "correct_answer": "イ",
+      "explanation_base": "アは項が1つ、イは項が「-2a」と「3」の2つ、ウは項が3つあります。また、イは文字の最大次数が1なので1次式です。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "retry_with_hint"
+      ]
+    },
+    {
+      "full_unit_id": "algebraic_expressions_terms",
+      "unit_id": "algebraic_expressions",
+      "sub_unit": "terms",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "easy",
+      "question_text": "式 a/3 - 2b - 1 の項をすべて答えなさい。（カンマで区切って答えること）",
+      "diagram": null,
+      "correct_answer": "a/3, -2b, -1",
+      "explanation_base": "式を加法だけの形に直すと、a/3 + (-2b) + (-1) となります。したがって、項は a/3, -2b, -1 です。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "comprehension_gap"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "explain_differently"
+      ]
+    },
+    {
+      "full_unit_id": "algebraic_expressions_terms",
+      "unit_id": "algebraic_expressions",
+      "sub_unit": "terms",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "easy",
+      "question_text": "式 -y/4 + 5 における y の係数を答えなさい。",
+      "diagram": null,
+      "correct_answer": "-1/4",
+      "explanation_base": "-y/4 は -1/4 × y を表しています。文字に掛けられている数が係数なので、yの係数は -1/4 です。",
+      "error_pattern_candidates": [
+        "variable_handling_error",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "algebraic_expressions_terms",
+      "unit_id": "algebraic_expressions",
+      "sub_unit": "terms",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "normal",
+      "question_text": "次の式を簡単にしなさい。\n-8x + 5y + 3x - 2y",
+      "diagram": null,
+      "correct_answer": "-5x + 3y",
+      "explanation_base": "xの項、yの項をそれぞれまとめます。(-8 + 3)x + (5 - 2)y = -5x + 3y となります。",
+      "error_pattern_candidates": [
+        "variable_handling_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "reinforce_same_pattern",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "algebraic_expressions_terms",
+      "unit_id": "algebraic_expressions",
+      "sub_unit": "terms",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "normal",
+      "question_text": "次の計算をしなさい。\n2(3a - 4) + 5(a + 2)",
+      "diagram": null,
+      "correct_answer": "11a + 2",
+      "explanation_base": "分配法則を使ってかっこを外します。6a - 8 + 5a + 10 となり、同類項をまとめると (6 + 5)a + (-8 + 10) = 11a + 2 となります。",
+      "error_pattern_candidates": [
+        "operation_confusion",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "explain_differently"
+      ]
+    },
+    {
+      "full_unit_id": "algebraic_expressions_terms",
+      "unit_id": "algebraic_expressions",
+      "sub_unit": "terms",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "normal",
+      "question_text": "次の計算をしなさい。\n3(x + 2) - 4(2x - 1)",
+      "diagram": null,
+      "correct_answer": "-5x + 10",
+      "explanation_base": "分配法則を使ってかっこを外すとき、マイナスの符号に注意します。3x + 6 - 8x + 4 となり、同類項をまとめると -5x + 10 となります。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "variable_handling_error"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "explain_differently"
+      ]
+    },
+    {
+      "full_unit_id": "algebraic_expressions_terms",
+      "unit_id": "algebraic_expressions",
+      "sub_unit": "terms",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "normal",
+      "question_text": "次の計算をしなさい。\n(3x - 1)/2 + (x + 5)/4",
+      "diagram": null,
+      "correct_answer": "(7x + 3)/4",
+      "explanation_base": "分母を4に通分して計算します。2(3x - 1)/4 + (x + 5)/4 = (6x - 2 + x + 5)/4 = (7x + 3)/4 となります。",
+      "error_pattern_candidates": [
+        "prerequisite_gap",
+        "formula_setup_error"
+      ],
+      "intervention_candidates": [
+        "fallback_prerequisite",
+        "explain_differently"
+      ]
+    },
+    {
+      "full_unit_id": "algebraic_expressions_terms",
+      "unit_id": "algebraic_expressions",
+      "sub_unit": "terms",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "hard",
+      "question_text": "次の計算をしなさい。\n5a - {2a - 3(a - 1)}",
+      "diagram": null,
+      "correct_answer": "6a - 3",
+      "explanation_base": "内側のかっこから外します。5a - (2a - 3a + 3) = 5a - (-a + 3) = 5a + a - 3 = 6a - 3 となります。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "operation_confusion"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "teacher_intervention_needed"
+      ]
+    },
+    {
+      "full_unit_id": "algebraic_expressions_terms",
+      "unit_id": "algebraic_expressions",
+      "sub_unit": "terms",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "hard",
+      "question_text": "ある多項式から 2x - 5 を引くところを、誤って足してしまったため、答えが -x + 8 になりました。正しく計算したときの答えを求めなさい。",
+      "diagram": null,
+      "correct_answer": "-5x + 18",
+      "explanation_base": "ある多項式をAとすると、A + (2x - 5) = -x + 8 です。A = (-x + 8) - (2x - 5) = -3x + 13 となります。正しい計算は A - (2x - 5) なので、(-3x + 13) - (2x - 5) = -5x + 18 になります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "comprehension_gap"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "teacher_intervention_needed"
+      ]
+    },
+    {
+      "full_unit_id": "algebraic_expressions_terms",
+      "unit_id": "algebraic_expressions",
+      "sub_unit": "terms",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "hard",
+      "question_text": "次の計算をしなさい。\n0.3(2x - 5) - 0.2(x + 4)",
+      "diagram": null,
+      "correct_answer": "0.4x - 2.3",
+      "explanation_base": "分配法則を使ってかっこを外します。0.6x - 1.5 - 0.2x - 0.8 となり、同類項をまとめると (0.6 - 0.2)x + (-1.5 - 0.8) = 0.4x - 2.3 となります。",
+      "error_pattern_candidates": [
+        "arithmetic_error",
+        "sign_error"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "retry_with_hint"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,196 @@
+[
+  {
+    "id": "lis_g7_word_001",
+    "grade_band": 7,
+    "full_unit_id": "lis_g7_alphabet",
+    "unit_id": "english_basics",
+    "problem_type": "practice",
+    "difficulty": 1,
+    "listening_type": "word_discrimination",
+    "listening_focus": "phonics",
+    "audio_url": "/static/audio/lis_g7_word_001.mp3",
+    "audio_script": "cat",
+    "audio_speed": "slow",
+    "play_limit": 2,
+    "question_text": "聞こえた単語を選んでください。",
+    "choices": [
+      "cat",
+      "cap",
+      "cup",
+      "cut"
+    ],
+    "correct_answer": "cat",
+    "hint_1": "最初の文字は c、最後の文字は t です。",
+    "hint_2": "真ん中の母音に注目してください。",
+    "explanation_base": "cat（猫）です。 cap・cup・cut と聞き分けましょう。",
+    "script_keyword": "cat",
+    "error_pattern_candidates": [
+      "sound_discrimination_error"
+    ],
+    "intervention_candidates": [
+      "retry_with_keyword_hint"
+    ],
+    "status": "approved"
+  },
+  {
+    "id": "lis_g7_word_002",
+    "grade_band": 7,
+    "full_unit_id": "lis_g7_alphabet",
+    "unit_id": "english_basics",
+    "problem_type": "practice",
+    "difficulty": 1,
+    "listening_type": "word_discrimination",
+    "listening_focus": "phonics",
+    "audio_url": "/static/audio/lis_g7_word_002.mp3",
+    "audio_script": "pen",
+    "audio_speed": "slow",
+    "play_limit": 2,
+    "question_text": "聞こえた単語を選んでください。",
+    "choices": [
+      "pen",
+      "pan",
+      "pin",
+      "ten"
+    ],
+    "correct_answer": "pen",
+    "hint_1": "母音は短い e の音です。",
+    "hint_2": "文房具の名前です。",
+    "explanation_base": "pen（ペン）です。",
+    "script_keyword": "pen",
+    "error_pattern_candidates": [
+      "sound_discrimination_error"
+    ],
+    "intervention_candidates": [
+      "monitor_only"
+    ],
+    "status": "approved"
+  },
+  {
+    "id": "lis_g7_sent_001",
+    "grade_band": 7,
+    "full_unit_id": "lis_g7_be_verb",
+    "unit_id": "english_basics",
+    "problem_type": "practice",
+    "difficulty": 1,
+    "listening_type": "short_sentence",
+    "listening_focus": "grammar",
+    "audio_url": "/static/audio/lis_g7_sent_001.mp3",
+    "audio_script": "I am a student.",
+    "audio_speed": "slow",
+    "play_limit": 2,
+    "question_text": "内容に合う英文を選んでください。",
+    "choices": [
+      "I am a student.",
+      "I is a student.",
+      "I are a student."
+    ],
+    "correct_answer": "I am a student.",
+    "hint_1": "I のあとに続く be 動詞を思い出しましょう。",
+    "hint_2": "一人称単数では am を使います。",
+    "explanation_base": "I am が正しいです。",
+    "script_keyword": "am",
+    "error_pattern_candidates": [
+      "grammar_listening_gap"
+    ],
+    "intervention_candidates": [
+      "monitor_only"
+    ],
+    "status": "approved"
+  },
+  {
+    "id": "lis_g7_dlg_001",
+    "grade_band": 7,
+    "full_unit_id": "lis_g7_greetings",
+    "unit_id": "english_basics",
+    "problem_type": "practice",
+    "difficulty": 1,
+    "listening_type": "dialog_response",
+    "listening_focus": "meaning",
+    "audio_url": "/static/audio/lis_g7_dlg_001.mp3",
+    "audio_script": "A: Good morning. B: Good morning.",
+    "audio_speed": "slow",
+    "play_limit": 2,
+    "question_text": "あいさつに続く適切な応答はどれですか。",
+    "choices": [
+      "Good morning.",
+      "Good night.",
+      "See you."
+    ],
+    "correct_answer": "Good morning.",
+    "hint_1": "同じあいさつを返します。",
+    "hint_2": null,
+    "explanation_base": "朝のあいさつには Good morning.",
+    "script_keyword": "morning",
+    "error_pattern_candidates": [
+      "meaning_capture_error"
+    ],
+    "intervention_candidates": [
+      "monitor_only"
+    ],
+    "status": "approved"
+  },
+  {
+    "id": "lis_g7_info_001",
+    "grade_band": 7,
+    "full_unit_id": "lis_g7_numbers",
+    "unit_id": "english_basics",
+    "problem_type": "practice",
+    "difficulty": 1,
+    "listening_type": "info_capture",
+    "listening_focus": "info_capture",
+    "audio_url": "/static/audio/lis_g7_info_001.mp3",
+    "audio_script": "The meeting is at three pm.",
+    "audio_speed": "slow",
+    "play_limit": 2,
+    "question_text": "何時の予定ですか。",
+    "choices": [
+      "At 3 pm.",
+      "At 3 am.",
+      "On Monday."
+    ],
+    "correct_answer": "At 3 pm.",
+    "hint_1": "午後の時刻に注目。",
+    "hint_2": null,
+    "explanation_base": "three pm は午後3時です。",
+    "script_keyword": "three",
+    "error_pattern_candidates": [
+      "info_capture_error"
+    ],
+    "intervention_candidates": [
+      "monitor_only"
+    ],
+    "status": "approved"
+  },
+  {
+    "id": "lis_g7_q_001",
+    "grade_band": 7,
+    "full_unit_id": "lis_g7_question",
+    "unit_id": "english_basics",
+    "problem_type": "practice",
+    "difficulty": 2,
+    "listening_type": "dialog_response",
+    "listening_focus": "meaning",
+    "audio_url": "/static/audio/lis_g7_q_001.mp3",
+    "audio_script": "Do you like apples? Yes, I do.",
+    "audio_speed": "normal",
+    "play_limit": 2,
+    "question_text": "応答として適切なものはどれですか。",
+    "choices": [
+      "Yes, I do.",
+      "Yes, I am.",
+      "Yes, I can."
+    ],
+    "correct_answer": "Yes, I do.",
+    "hint_1": "Do で始まる疑問文の短い答えを考えます。",
+    "hint_2": null,
+    "explanation_base": "Do you...? には Yes, I do.",
+    "script_keyword": "do",
+    "error_pattern_candidates": [
+      "grammar_listening_gap"
+    ],
+    "intervention_candidates": [
+      "monitor_only"
+    ],
+    "status": "approved"
+  }
+]

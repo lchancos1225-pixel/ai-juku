@@ -1,0 +1,44 @@
+{
+  "problems": [
+    {
+      "full_unit_id": "positive_negative_numbers_addition",
+      "unit_id": "positive_negative_numbers",
+      "sub_unit": "addition",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "hard",
+      "question_text": "ある地点の現在の気温は -3℃ です。ここから気温が 5℃ 上がったとすると、気温は何度になりますか。",
+      "diagram": null,
+      "correct_answer": "2℃",
+      "explanation_base": "気温が上がることは正の数を足すことで表せます。式は (-3) + (+5) となり、これを計算すると 2 となります。したがって答えは 2℃ です。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "comprehension_gap"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "retry_with_hint"
+      ]
+    },
+    {
+      "full_unit_id": "positive_negative_numbers_addition",
+      "unit_id": "positive_negative_numbers",
+      "sub_unit": "addition",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "hard",
+      "question_text": "あるゲームで、1回戦は -5点、2回戦は +8点、3回戦は -6点 でした。3回戦が終わった時点での合計得点を求めなさい。",
+      "diagram": null,
+      "correct_answer": "-3点",
+      "explanation_base": "合計得点はすべての得点を足し合わせて求めます。(-5) + (+8) + (-6) を計算します。負の数をまとめると (-11) になり、(-11) + (+8) = -3 となるため、合計得点は -3点 です。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "teacher_intervention_needed"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,319 @@
+{
+  "problems": [
+    {
+      "full_unit_id": "sample_survey_basic",
+      "unit_id": "sample_survey",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "question_text": "ある工場で1日に製造される10000個の電球から、50個を抜き取って点灯時間を調べました。この調査において、調査の対象となる1日に製造される10000個の電球全体のことを何といいますか。",
+      "diagram": null,
+      "correct_answer": "母集団",
+      "hint_1": "調査の対象となる集団全体を指す言葉です。",
+      "hint_2": "「母」という漢字が使われます。",
+      "explanation_base": "標本調査において、調査の対象となる集団全体を「母集団」といいます。これに対して、調査のために選び出された一部の集団を「標本」といいます。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "retry_with_hint"
+      ]
+    },
+    {
+      "full_unit_id": "sample_survey_basic",
+      "unit_id": "sample_survey",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "question_text": "次のア〜ウの調査のうち、全数調査を行うのが最も適切なものはどれですか。ア：テレビ番組の視聴率調査、イ：学校の全校生徒の健康診断、ウ：川の水質調査",
+      "diagram": null,
+      "correct_answer": "イ",
+      "hint_1": "全数調査は、対象となる集団のすべてを調べる調査のことです。",
+      "hint_2": "テレビの視聴率や川の水質はすべてを調べることは困難です。健康診断は全員受ける必要があります。",
+      "explanation_base": "健康診断のように、対象者全員の状態を把握する必要があるものは「全数調査」が適しています。視聴率や水質調査はすべてを調べることが不可能または非効率なため、一部を調べる「標本調査」が行われます。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "unknown_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "retry_with_hint"
+      ]
+    },
+    {
+      "full_unit_id": "sample_survey_basic",
+      "unit_id": "sample_survey",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "question_text": "ある調査で、母集団の傾向を推定するために選び出された、一部の集団のことを何といいますか。",
+      "diagram": null,
+      "correct_answer": "標本",
+      "hint_1": "母集団から抽出された一部のことを指します。",
+      "hint_2": "「ひょう」から始まる2文字の言葉です。",
+      "explanation_base": "調査対象の全体である「母集団」から、実際に調査するために選び出された一部の集団を「標本（サンプル）」といいます。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "retry_with_hint"
+      ]
+    },
+    {
+      "full_unit_id": "sample_survey_basic",
+      "unit_id": "sample_survey",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "question_text": "標本調査において、母集団のそれぞれのものが標本として選ばれる確率がすべて同じになるように選び出すことを「何に抽出する」といいますか。",
+      "diagram": null,
+      "correct_answer": "無作為",
+      "hint_1": "偏りがないように、くじ引きや乱数表などを使って選ぶことです。",
+      "hint_2": "「む」から始まる3文字の言葉です。「作為（意図）」がないことを意味します。",
+      "explanation_base": "調査する人の意思や意図を入れず、すべてが同じ確率で選ばれるように抽出することを「無作為に抽出する」といいます。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "unknown_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "retry_with_hint"
+      ]
+    },
+    {
+      "full_unit_id": "sample_survey_basic",
+      "unit_id": "sample_survey",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "question_text": "ある市の中学生8000人の中から、500人を選んでアンケート調査を行いました。このとき、選ばれた「500」という数のことを標本の何といいますか。",
+      "diagram": null,
+      "correct_answer": "大きさ",
+      "hint_1": "選び出された個体の数のことを指す用語です。",
+      "hint_2": "標本の「サイズ」を日本語で表します。",
+      "explanation_base": "母集団から抽出された標本に含まれる個体の数を、「標本の大きさ」といいます。この問題では、500人選ばれたので標本の大きさは500です。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "retry_with_hint"
+      ]
+    },
+    {
+      "full_unit_id": "sample_survey_basic",
+      "unit_id": "sample_survey",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "question_text": "袋の中にたくさんの白い玉が入っています。そこへ同じ大きさの赤い玉を50個入れてよく混ぜました。その後、袋の中から無作為に40個の玉を取り出したところ、赤い玉が5個含まれていました。はじめに袋の中に入っていた白い玉はおよそ何個と推定できますか。",
+      "diagram": null,
+      "correct_answer": "350個",
+      "hint_1": "まず、袋の中にある玉の全体数をおよそ何個か推定しましょう。",
+      "hint_2": "「全体 : 50個(赤) = 40個(標本) : 5個(赤)」という比例式が成り立ちます。全体数を求めたら、そこから赤い玉の50個を引きます。",
+      "explanation_base": "取り出した40個のうち赤玉が5個だったので、袋の中の赤玉の割合は 5/40 = 1/8 と推定できます。袋の中の玉の全体数をx個とすると、x × (1/8) = 50 となり、x = 400個になります。はじめに入っていた白玉の数は、全体から後で入れた赤玉を引いて、400 - 50 = 350個 と推定できます。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "explain_differently"
+      ]
+    },
+    {
+      "full_unit_id": "sample_survey_basic",
+      "unit_id": "sample_survey",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "question_text": "ある工場で製造された5000個の製品から、無作為に200個を抽出して検査したところ、不良品が4個ありました。この5000個の製品の中に、不良品はおよそ何個含まれていると推定できますか。",
+      "diagram": null,
+      "correct_answer": "100個",
+      "hint_1": "標本の中の不良品の割合を求め、それを全体の数（母集団）にかけます。",
+      "hint_2": "標本の不良品の割合は 4/200 です。5000 × (4/200) を計算しましょう。",
+      "explanation_base": "200個のうち4個が不良品なので、不良品の割合は 4 / 200 = 1 / 50 です。母集団である5000個にも同じ割合で不良品が含まれていると推定できるため、5000 × (1 / 50) = 100個 になります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "sample_survey_basic",
+      "unit_id": "sample_survey",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "question_text": "ある池にいる魚の数を調べるために、網で捕まえた60匹の魚すべてに印をつけて、池に戻しました。数日後、再び網で80匹の魚を捕まえたところ、印のついた魚が12匹含まれていました。この池にはおよそ何匹の魚がいると推定できますか。",
+      "diagram": null,
+      "correct_answer": "400匹",
+      "hint_1": "再び捕まえた80匹を標本として、その中の「印のついた魚」の割合を求めましょう。",
+      "hint_2": "池全体の魚の数をx匹とすると、「x匹中の60匹」が印のついた魚の割合です。これが標本の割合 12/80 と等しいと考えます。",
+      "explanation_base": "再び捕まえた80匹のうち12匹に印がついていたので、池全体の魚に対する印のついた魚の割合は 12/80 = 3/20 と推定できます。池全体の魚の数をx匹とすると、x × (3/20) = 60 が成り立ちます。これを解いて x = 60 × (20/3) = 400匹 と推定できます。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "explain_differently"
+      ]
+    },
+    {
+      "full_unit_id": "sample_survey_basic",
+      "unit_id": "sample_survey",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "question_text": "箱の中に同じ大きさの青い玉がたくさん入っています。この箱の中に、青い玉と同じ大きさの黄色い玉を100個入れてよくかき混ぜました。そこから無作為に50個の玉を取り出すと、黄色い玉が10個含まれていました。取り出した50個の玉を箱に戻さず、そのままにした場合、箱の中に残っている玉は全体でおよそ何個と推定できますか。",
+      "diagram": null,
+      "correct_answer": "450個",
+      "hint_1": "まず、玉を取り出す前の時点で、箱の中にあった玉の全体数（青と黄色の合計）を推定します。",
+      "hint_2": "全体の数をxとすると、標本の割合から x × (10/50) = 100 となります。全体数を求めた後、取り出した50個を引くことを忘れないでください。",
+      "explanation_base": "標本50個のうち黄色が10個なので、黄色の割合は 10/50 = 1/5 です。取り出す前の箱の中の全体数をx個とすると、x × (1/5) = 100 より x = 500個と推定できます。その後50個を取り出して戻さないので、残っている玉は 500 - 50 = 450個 になります。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "formula_setup_error"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "sample_survey_basic",
+      "unit_id": "sample_survey",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "question_text": "ある中学校の全校生徒600人の中から、無作為に50人を選んで通学時間を調べたところ、通学時間が30分以上の生徒は15人でした。この中学校の全校生徒のうち、通学時間が30分以上の生徒はおよそ何人と推定できますか。",
+      "diagram": null,
+      "correct_answer": "180人",
+      "hint_1": "選んだ50人の中で、通学時間が30分以上の生徒の割合を計算しましょう。",
+      "hint_2": "割合は 15/50 です。これを全校生徒の600人にかけ合わせます。",
+      "explanation_base": "標本である50人のうち、通学時間が30分以上の生徒は15人なので、その割合は 15/50 = 3/10 です。母集団である全校生徒600人に対してもこの割合が成り立つと推定できるので、600 × (3/10) = 180人 となります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "reinforce_same_pattern"
+      ]
+    },
+    {
+      "full_unit_id": "sample_survey_basic",
+      "unit_id": "sample_survey",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "question_text": "袋の中に黒い石がたくさん入っています。この中の黒い石の数を推定するために、同じ大きさの白い石を200個入れてよく混ぜ合わせました。そこから無作為に30個の石を取り出したところ、白い石と黒い石の数の比が 2：3 でした。袋の中に最初に入っていた黒い石はおよそ何個と推定できますか。",
+      "diagram": null,
+      "correct_answer": "300個",
+      "hint_1": "標本の中での白と黒の比が 2：3 であれば、袋全体の中での白と黒の比も 2：3 であると推定できます。",
+      "hint_2": "袋全体の白い石は200個です。200個の白い石が「比の2」にあたるとき、「比の3」にあたる黒い石は何個になるか比例式を立てましょう。",
+      "explanation_base": "取り出した石における「白：黒」の比が 2：3 であるため、袋全体でも「白：黒」の比は 2：3 と推定できます。白い石の実際の数は200個なので、黒い石の数をx個とすると 200 : x = 2 : 3 という比例式になります。2x = 600 より x = 300 となり、黒い石は300個と推定できます。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "comprehension_gap"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "sample_survey_basic",
+      "unit_id": "sample_survey",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "question_text": "ある農園で収穫されたリンゴから無作為に100個を抽出して重さを測ったところ、標本の平均が250gでした。この農園で収穫されたリンゴの総重量が約800kgであるとき、収穫されたリンゴの総数はおよそ何個と推定できますか。",
+      "diagram": null,
+      "correct_answer": "3200個",
+      "hint_1": "リンゴ1個あたりの平均の重さが250gであると推定できます。単位をg（グラム）にそろえましょう。",
+      "hint_2": "総重量の800kgは 800000g です。総重量を1個あたりの重さで割り算します。",
+      "explanation_base": "標本の平均から、リンゴ1個あたりの重さは約250gであると推定できます。総重量をg（グラム）に直すと 800kg = 800000g になります。したがって、リンゴの総数は 800000 ÷ 250 = 3200個 と推定できます。",
+      "error_pattern_candidates": [
+        "arithmetic_error",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "explain_differently"
+      ]
+    },
+    {
+      "full_unit_id": "sample_survey_basic",
+      "unit_id": "sample_survey",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "question_text": "ある市の有権者数は120000人です。無作為に抽出した400人に対してA候補の支持を調査したところ、支持すると答えた人は140人でした。この結果から、市全体でA候補を支持する人はおよそ何人と推定できますか。また、標本の大きさを大きくすると、推定値の信頼性はどうなりますか。「◯人、高くなる（または低くなる）」の形式で答えなさい。",
+      "diagram": null,
+      "correct_answer": "42000人、高くなる",
+      "hint_1": "支持する人の人数は、120000人に標本での支持の割合（140/400）をかけて求めます。",
+      "hint_2": "標本（調査する対象）の人数を増やすほど、母集団（全体）の本当の傾向に近づきます。",
+      "explanation_base": "標本での支持の割合は 140 / 400 = 7 / 20 です。これを母集団120000人に適用すると、120000 × (7 / 20) = 42000人 になります。また、標本の大きさを大きくするほど偏りが少なくなり、推定値の信頼性は高くなります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "comprehension_gap"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "explain_differently"
+      ]
+    },
+    {
+      "full_unit_id": "sample_survey_basic",
+      "unit_id": "sample_survey",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "question_text": "ある地域の中学生を対象に、読書時間の標本調査を行いました。標本として無作為に抽出した200人のうち、1日の読書時間が1時間以上の生徒は60人でした。この地域の「1日の読書時間が1時間以上の中学生」がおよそ1500人と推定されるとき、この地域の中学生の総数はおよそ何人と推定できますか。",
+      "diagram": null,
+      "correct_answer": "5000人",
+      "hint_1": "中学生の総数をx人として、「総数のうち読書時間が1時間以上の生徒の割合」の方程式を立てましょう。",
+      "hint_2": "標本での割合は 60/200 = 3/10 です。x × (3/10) = 1500 という方程式を解きます。",
+      "explanation_base": "標本の中で読書時間が1時間以上の生徒の割合は 60/200 = 3/10 です。この地域の中学生の総数をx人とすると、そのうちの 3/10 が1500人にあたると推定できます。したがって、x × (3/10) = 1500 となり、x = 1500 × (10/3) = 5000人 になります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "explain_differently"
+      ]
+    },
+    {
+      "full_unit_id": "sample_survey_basic",
+      "unit_id": "sample_survey",
+      "sub_unit": "basic",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "question_text": "袋の中に赤玉と白玉が合わせて1000個入っています。この袋から無作為に40個の玉を取り出し、赤玉の数を数えてから袋に戻すという実験を5回行いました。5回の赤玉の数はそれぞれ、8個、12個、9個、11個、10個でした。この結果から、袋の中に入っている赤玉はおよそ何個と推定できますか。",
+      "diagram": null,
+      "correct_answer": "250個",
+      "hint_1": "複数回実験を行った場合は、その平均値を使って推定します。5回分の赤玉の平均を求めましょう。",
+      "hint_2": "平均は (8+12+9+11+10) ÷ 5 = 10個 です。40個中に10個の赤玉が含まれる割合を使って、1000個の中の赤玉の数を求めます。",
+      "explanation_base": "5回の実験で出た赤玉の平均は (8+12+9+11+10) ÷ 5 = 50 ÷ 5 = 10個 です。つまり、40個中平均10個が赤玉であり、その割合は 10/40 = 1/4 となります。全体1000個にこの割合を適用して、1000 × (1/4) = 250個 と推定できます。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "explain_differently"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,614 @@
+{
+  "problems": [
+    {
+      "full_unit_id": "geometry_parallel_congruence",
+      "unit_id": "geometry_parallel_congruence",
+      "sub_unit": "basic",
+      "problem_type": "mini_test",
+      "test_scope": "mini_test",
+      "difficulty": "easy",
+      "question_text": "2つの直線が交わってできる4つの角のうち、1つの角が65°のとき、その対頂角の大きさを求めなさい。",
+      "diagram": null,
+      "correct_answer": "65°",
+      "explanation_base": "対頂角は向かい合う角であり、その大きさは常に等しくなります。したがって、65°です。",
+      "error_pattern_candidates": [
+        "careless_error",
+        "comprehension_gap"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "retry_with_hint"
+      ]
+    },
+    {
+      "full_unit_id": "geometry_parallel_congruence",
+      "unit_id": "geometry_parallel_congruence",
+      "sub_unit": "basic",
+      "problem_type": "mini_test",
+      "test_scope": "mini_test",
+      "difficulty": "easy",
+      "question_text": "平行な2直線 ℓ, m に1つの直線が交わっています。ある角の大きさが 115° のとき、その同位角の大きさを求めなさい。",
+      "diagram": null,
+      "diagram_required": true,
+      "diagram_params": {
+        "diagram_type": "parallel_lines_angle",
+        "parallel_lines": [
+          { "y": 90, "label_left": "ℓ", "label_right": "" },
+          { "y": 220, "label_left": "m", "label_right": "" }
+        ],
+        "transversals": [
+          { "x1": 40, "y1": 260, "x2": 270, "y2": 40, "label": "n" }
+        ],
+        "points": [
+          { "name": "A", "x": 222, "y": 90 },
+          { "name": "B", "x": 92, "y": 220 }
+        ],
+        "angle_marks": [
+          {
+            "vertex": { "x": 222, "y": 90 },
+            "from_deg": 0,
+            "to_deg": 136,
+            "label": "115°"
+          },
+          {
+            "vertex": { "x": 92, "y": 220 },
+            "from_deg": 0,
+            "to_deg": 136,
+            "label": "?"
+          }
+        ]
+      },
+      "correct_answer": "115°",
+      "explanation_base": "平行な2直線に1つの直線が交わるとき、同位角の大きさは等しくなります。したがって、同位角も115°です。",
+      "error_pattern_candidates": [
+        "careless_error",
+        "comprehension_gap"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "geometry_parallel_congruence",
+      "unit_id": "geometry_parallel_congruence",
+      "sub_unit": "basic",
+      "problem_type": "mini_test",
+      "test_scope": "mini_test",
+      "difficulty": "normal",
+      "question_text": "△ABC において、∠A = 55°、∠B = 75° のとき、頂点Cにおける外角の大きさを求めなさい。",
+      "diagram": null,
+      "correct_answer": "130°",
+      "explanation_base": "三角形の1つの外角は、それと隣り合わない2つの内角の和に等しいです。したがって、頂点Cにおける外角は 55° + 75° = 130° になります。",
+      "error_pattern_candidates": [
+        "arithmetic_error",
+        "formula_setup_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "geometry_parallel_congruence",
+      "unit_id": "geometry_parallel_congruence",
+      "sub_unit": "basic",
+      "problem_type": "mini_test",
+      "test_scope": "mini_test",
+      "difficulty": "normal",
+      "question_text": "六角形の内角の和を求めなさい。",
+      "diagram": null,
+      "correct_answer": "720°",
+      "explanation_base": "n角形の内角の和は 180° × (n - 2) で求められます。六角形なので、180° × (6 - 2) = 180° × 4 = 720° となります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "retry_with_hint"
+      ]
+    },
+    {
+      "full_unit_id": "geometry_parallel_congruence",
+      "unit_id": "geometry_parallel_congruence",
+      "sub_unit": "basic",
+      "problem_type": "mini_test",
+      "test_scope": "mini_test",
+      "difficulty": "hard",
+      "question_text": "△ABC と △DEF において、AB = DE、BC = EF です。この2つの三角形が合同になるためには、あとどの角が等しければよいですか。「∠〜と∠〜」の形で答えなさい。",
+      "diagram": null,
+      "diagram_required": true,
+      "diagram_params": {
+        "diagram_type": "triangle_correspondence",
+        "triangles": [
+          {
+            "name": "triangle_1",
+            "points": [
+              { "name": "A", "x": 70, "y": 240, "label_dx": -18, "label_dy": 16 },
+              { "name": "B", "x": 150, "y": 90, "label_dx": -10, "label_dy": -12 },
+              { "name": "C", "x": 230, "y": 240, "label_dx": 10, "label_dy": 16 }
+            ]
+          },
+          {
+            "name": "triangle_2",
+            "points": [
+              { "name": "D", "x": 315, "y": 240, "label_dx": -18, "label_dy": 16 },
+              { "name": "E", "x": 395, "y": 90, "label_dx": -10, "label_dy": -12 },
+              { "name": "F", "x": 475, "y": 240, "label_dx": 10, "label_dy": 16 }
+            ]
+          }
+        ],
+        "equal_sides": [
+          ["A", "B", "D", "E"],
+          ["B", "C", "E", "F"]
+        ],
+        "equal_angles": [
+          ["B", "E"]
+        ],
+        "highlight_pairs": [
+          ["A", "D"],
+          ["B", "E"]
+        ]
+      },
+      "correct_answer": "∠Bと∠E",
+      "explanation_base": "2組の辺が等しいので、「2組の辺とその間の角がそれぞれ等しい」という合同条件を使うためには、2つの辺の間にある角が等しい必要があります。ABとBCの間にある角は∠B、DEとEFの間にある角は∠Eです。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "teacher_intervention_needed"
+      ]
+    },
+    {
+      "full_unit_id": "geometry_parallel_congruence",
+      "unit_id": "geometry_parallel_congruence",
+      "sub_unit": "basic",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "easy",
+      "question_text": "平行な2直線 ℓ, m に1つの直線が交わっています。ある角の大きさが 48° のとき、その錯角の大きさを求めなさい。",
+      "diagram": null,
+      "diagram_required": true,
+      "diagram_params": {
+        "diagram_type": "parallel_lines_angle",
+        "parallel_lines": [
+          { "y": 90, "label_left": "ℓ", "label_right": "" },
+          { "y": 220, "label_left": "m", "label_right": "" }
+        ],
+        "transversals": [
+          { "x1": 40, "y1": 260, "x2": 270, "y2": 40, "label": "n" }
+        ],
+        "points": [
+          { "name": "A", "x": 222, "y": 90 },
+          { "name": "B", "x": 92, "y": 220 }
+        ],
+        "angle_marks": [
+          {
+            "vertex": { "x": 222, "y": 90 },
+            "from_deg": 180,
+            "to_deg": 228,
+            "label": "48°"
+          },
+          {
+            "vertex": { "x": 92, "y": 220 },
+            "from_deg": 48,
+            "to_deg": 180,
+            "label": "?"
+          }
+        ]
+      },
+      "correct_answer": "48°",
+      "explanation_base": "平行な2直線に1つの直線が交わるとき、錯角の大きさは等しくなります。したがって、錯角も48°です。",
+      "error_pattern_candidates": [
+        "careless_error",
+        "comprehension_gap"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "geometry_parallel_congruence",
+      "unit_id": "geometry_parallel_congruence",
+      "sub_unit": "basic",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "easy",
+      "question_text": "△ABC で、∠A = 62°、∠C = 45° のとき、∠B の大きさを求めなさい。",
+      "diagram": null,
+      "correct_answer": "73°",
+      "explanation_base": "三角形の内角の和は180°です。∠B = 180° - (62° + 45°) = 180° - 107° = 73° となります。",
+      "error_pattern_candidates": [
+        "arithmetic_error",
+        "formula_setup_error"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "retry_with_hint"
+      ]
+    },
+    {
+      "full_unit_id": "geometry_parallel_congruence",
+      "unit_id": "geometry_parallel_congruence",
+      "sub_unit": "basic",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "easy",
+      "question_text": "十角形の外角の和を求めなさい。",
+      "diagram": null,
+      "correct_answer": "360°",
+      "explanation_base": "どのような多角形でも、外角の和は常に360°です。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "reinforce_same_pattern"
+      ]
+    },
+    {
+      "full_unit_id": "geometry_parallel_congruence",
+      "unit_id": "geometry_parallel_congruence",
+      "sub_unit": "basic",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "normal",
+      "question_text": "1つの外角の大きさが 24° になる正多角形は正何角形ですか。",
+      "diagram": null,
+      "correct_answer": "正十五角形",
+      "explanation_base": "多角形の外角の和は常に360°です。1つの外角が24°なので、角の数は 360 ÷ 24 = 15 となり、正十五角形だとわかります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "geometry_parallel_congruence",
+      "unit_id": "geometry_parallel_congruence",
+      "sub_unit": "basic",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "normal",
+      "question_text": "△ABCにおいて、∠A = x°、∠B = 2x°、頂点Cにおける外角が 126° のとき、x の値を求めなさい。",
+      "diagram": null,
+      "correct_answer": "42",
+      "explanation_base": "三角形の1つの外角は、それと隣り合わない2つの内角の和に等しいため、x + 2x = 126 が成り立ちます。3x = 126 より x = 42 です。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "variable_handling_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "geometry_parallel_congruence",
+      "unit_id": "geometry_parallel_congruence",
+      "sub_unit": "basic",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "normal",
+      "question_text": "内角の和が 1260° になる多角形は何角形ですか。",
+      "diagram": null,
+      "correct_answer": "九角形",
+      "explanation_base": "n角形の内角の和は 180° × (n - 2) です。180 × (n - 2) = 1260 の両辺を 180 で割ると n - 2 = 7。よって n = 9 となり、九角形です。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "geometry_parallel_congruence",
+      "unit_id": "geometry_parallel_congruence",
+      "sub_unit": "basic",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "normal",
+      "question_text": "正八角形の1つの内角の大きさを求めなさい。",
+      "diagram": null,
+      "correct_answer": "135°",
+      "explanation_base": "正八角形の外角の和は360°なので、1つの外角は 360° ÷ 8 = 45° です。内角と外角の和は180°なので、1つの内角は 180° - 45° = 135° になります。または、内角の和 180° × (8 - 2) = 1080° を8で割って 135° と求めることもできます。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "retry_with_hint"
+      ]
+    },
+    {
+      "full_unit_id": "geometry_parallel_congruence",
+      "unit_id": "geometry_parallel_congruence",
+      "sub_unit": "basic",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "easy",
+      "question_text": "2つの三角形において、「3組の辺がそれぞれ等しい」とき、2つの三角形は合同であるといえます。この合同条件を使って△ABC ≡ △DEFを説明したいとき、AB=DE、AC=DFに加えて、あと何が必要ですか。「〜＝〜」の形で答えなさい。",
+      "diagram": null,
+      "diagram_required": true,
+      "diagram_params": {
+        "diagram_type": "triangle_correspondence",
+        "triangles": [
+          {
+            "name": "triangle_1",
+            "points": [
+              { "name": "A", "x": 70, "y": 240, "label_dx": -18, "label_dy": 16 },
+              { "name": "B", "x": 150, "y": 90, "label_dx": -10, "label_dy": -12 },
+              { "name": "C", "x": 230, "y": 240, "label_dx": 10, "label_dy": 16 }
+            ]
+          },
+          {
+            "name": "triangle_2",
+            "points": [
+              { "name": "D", "x": 315, "y": 240, "label_dx": -18, "label_dy": 16 },
+              { "name": "E", "x": 395, "y": 90, "label_dx": -10, "label_dy": -12 },
+              { "name": "F", "x": 475, "y": 240, "label_dx": 10, "label_dy": 16 }
+            ]
+          }
+        ],
+        "equal_sides": [
+          ["A", "B", "D", "E"],
+          ["A", "C", "D", "F"],
+          ["B", "C", "E", "F"]
+        ],
+        "highlight_pairs": [
+          ["A", "D"],
+          ["C", "F"]
+        ]
+      },
+      "correct_answer": "BC=EF",
+      "explanation_base": "「3組の辺」がすべて等しいことを示すため、残りの1組の辺である BC と EF が等しいという条件が必要です。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "reinforce_same_pattern"
+      ]
+    },
+    {
+      "full_unit_id": "geometry_parallel_congruence",
+      "unit_id": "geometry_parallel_congruence",
+      "sub_unit": "basic",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "hard",
+      "question_text": "線分ABと線分CDが点Oで交わっており、AO = BO、CO = DO です。△AOC ≡ △BOD を証明するときに、角について用いる根拠は何ですか。「〜は等しい」という形で答えなさい。",
+      "diagram": null,
+      "diagram_required": true,
+      "diagram_params": {
+        "diagram_type": "triangle_correspondence",
+        "triangles": [
+          {
+            "name": "triangle_1",
+            "points": [
+              { "name": "A", "x": 90, "y": 90 },
+              { "name": "O", "x": 180, "y": 180 },
+              { "name": "C", "x": 90, "y": 270 }
+            ]
+          },
+          {
+            "name": "triangle_2",
+            "points": [
+              { "name": "B", "x": 270, "y": 90 },
+              { "name": "O2", "x": 360, "y": 180 },
+              { "name": "D", "x": 270, "y": 270 }
+            ]
+          }
+        ],
+        "equal_sides": [
+          ["A", "O", "B", "O2"],
+          ["C", "O", "D", "O2"]
+        ],
+        "equal_angles": [
+          ["O", "O2"]
+        ],
+        "highlight_pairs": [
+          ["A", "B"],
+          ["C", "D"]
+        ]
+      },
+      "correct_answer": "対頂角は等しい",
+      "explanation_base": "2つの線分が交わってできる向かい合う角は対頂角であり、常に大きさが等しくなります。この場合、∠AOC = ∠BOD の根拠として「対頂角は等しい」を用います。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "unknown_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "retry_with_hint"
+      ]
+    },
+    {
+      "full_unit_id": "geometry_parallel_congruence",
+      "unit_id": "geometry_parallel_congruence",
+      "sub_unit": "basic",
+      "problem_type": "mini_test",
+      "test_scope": "mini_test",
+      "difficulty": "normal",
+      "question_text": "△ABC と △DEF が対応しており、A↔D、B↔E、C↔F が対応しています。このとき、∠B に対応する角を答えなさい。",
+      "diagram": null,
+      "diagram_required": true,
+      "diagram_params": {
+        "diagram_type": "triangle_correspondence",
+        "triangles": [
+          {
+            "name": "triangle_1",
+            "points": [
+              { "name": "A", "x": 70, "y": 240 },
+              { "name": "B", "x": 150, "y": 90 },
+              { "name": "C", "x": 230, "y": 240 }
+            ]
+          },
+          {
+            "name": "triangle_2",
+            "points": [
+              { "name": "D", "x": 300, "y": 240 },
+              { "name": "E", "x": 380, "y": 90 },
+              { "name": "F", "x": 460, "y": 240 }
+            ]
+          }
+        ],
+        "highlight_pairs": [
+          ["A", "D"],
+          ["B", "E"],
+          ["C", "F"]
+        ]
+      },
+      "correct_answer": "∠E",
+      "explanation_base": "B に対応する頂点は E なので、∠B に対応する角は ∠E です。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "advance_with_confidence"
+      ]
+    },
+    {
+      "full_unit_id": "geometry_parallel_congruence",
+      "unit_id": "geometry_parallel_congruence",
+      "sub_unit": "basic",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "normal",
+      "question_text": "△ABC と △DEF において、∠A = ∠D、∠B = ∠E、AB = DE です。このとき使える合同条件を答えなさい。",
+      "diagram": null,
+      "diagram_required": true,
+      "diagram_params": {
+        "diagram_type": "triangle_correspondence",
+        "triangles": [
+          {
+            "name": "triangle_1",
+            "points": [
+              { "name": "A", "x": 70, "y": 240 },
+              { "name": "B", "x": 150, "y": 90 },
+              { "name": "C", "x": 230, "y": 240 }
+            ]
+          },
+          {
+            "name": "triangle_2",
+            "points": [
+              { "name": "D", "x": 300, "y": 240 },
+              { "name": "E", "x": 380, "y": 90 },
+              { "name": "F", "x": 460, "y": 240 }
+            ]
+          }
+        ],
+        "equal_sides": [
+          ["A", "B", "D", "E"]
+        ],
+        "equal_angles": [
+          ["A", "D"],
+          ["B", "E"]
+        ],
+        "highlight_pairs": [
+          ["A", "D"],
+          ["B", "E"],
+          ["C", "F"]
+        ]
+      },
+      "correct_answer": "1組の辺とその両端の角",
+      "explanation_base": "AB = DE に加えて、その両端の角である ∠A = ∠D、∠B = ∠E がわかっているので、「1組の辺とその両端の角がそれぞれ等しい」という合同条件が使えます。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "formula_setup_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "geometry_parallel_congruence",
+      "unit_id": "geometry_parallel_congruence",
+      "sub_unit": "basic",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "hard",
+      "question_text": "△ABC と △DEF において、∠A = ∠D、∠C = ∠F、AC = DF です。このとき使える合同条件を答えなさい。",
+      "diagram": null,
+      "diagram_required": true,
+      "diagram_params": {
+        "diagram_type": "triangle_correspondence",
+        "triangles": [
+          {
+            "name": "triangle_1",
+            "points": [
+              { "name": "A", "x": 70, "y": 240 },
+              { "name": "B", "x": 150, "y": 90 },
+              { "name": "C", "x": 230, "y": 240 }
+            ]
+          },
+          {
+            "name": "triangle_2",
+            "points": [
+              { "name": "D", "x": 300, "y": 240 },
+              { "name": "E", "x": 380, "y": 90 },
+              { "name": "F", "x": 460, "y": 240 }
+            ]
+          }
+        ],
+        "equal_sides": [
+          ["A", "C", "D", "F"]
+        ],
+        "equal_angles": [
+          ["A", "D"],
+          ["C", "F"]
+        ],
+        "highlight_pairs": [
+          ["A", "D"],
+          ["B", "E"],
+          ["C", "F"]
+        ]
+      },
+      "correct_answer": "1組の辺とその両端の角",
+      "explanation_base": "AC = DF に加えて、その両端の角である ∠A = ∠D、∠C = ∠F がわかっているので、「1組の辺とその両端の角がそれぞれ等しい」という合同条件が使えます。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "formula_setup_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "teacher_intervention_needed"
+      ]
+    },
+    {
+      "full_unit_id": "geometry_parallel_congruence",
+      "unit_id": "geometry_parallel_congruence",
+      "sub_unit": "basic",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "hard",
+      "question_text": "星型（五芒星）の先端にある5つの角の和を求めなさい。",
+      "diagram": "5つの頂点を持つ一般的な星型（五芒星）の図。",
+      "correct_answer": "180°",
+      "explanation_base": "星型の先端の5つの角の和は、三角形の外角の性質を使うことで、1つの三角形の内角の和に集めることができます。したがって和は 180° になります。",
+      "error_pattern_candidates": [
+        "prerequisite_gap",
+        "comprehension_gap"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "teacher_intervention_needed"
+      ]
+    }
+  ]
+}

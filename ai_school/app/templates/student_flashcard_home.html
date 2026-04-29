@@ -1,0 +1,113 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="student-top-bar">
+  <div class="student-top-bar__info">
+    <span class="student-top-bar__name">{{ student.display_name }} さん</span>
+    <span class="state-chip state-chip--english">📚 単語帳</span>
+  </div>
+  <a class="progress-chip-btn" href="/students/{{ student.student_id }}/progress">📊 マイレコード</a>
+</div>
+
+{# ── 全体進捗サマリー ── #}
+<section class="card" style="margin-bottom: 20px; background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%); border: 1px solid #bbf7d0;">
+  <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;">
+    <div>
+      <p class="section-label" style="color: #059669;">全体の進捗</p>
+      <p style="font-size: 1.5rem; font-weight: 800; color: #065f46; margin: 2px 0;">
+        {{ done_all }} <span style="font-size: 1rem; font-weight: 500; color: #47b881;">/ {{ total_all }} 語</span>
+      </p>
+    </div>
+    <div style="text-align: right;">
+      {% if review_all > 0 %}
+      <p style="background: #fef3c7; color: #92400e; padding: 6px 14px; border-radius: 999px; font-size: 0.88rem; font-weight: 700; display: inline-block;">
+        🔁 復習待ち {{ review_all }}語
+      </p>
+      {% endif %}
+      <p style="font-size: 0.85rem; color: #4b5563; margin-top: 4px;">
+        達成率 {{ ((done_all / total_all) * 100) | int if total_all > 0 else 0 }}%
+      </p>
+    </div>
+  </div>
+  <div style="margin-top: 12px; height: 8px; background: #d1fae5; border-radius: 99px;">
+    <div style="width: {{ ((done_all / total_all) * 100) | int if total_all > 0 else 0 }}%; height: 100%; background: #10b981; border-radius: 99px; transition: width 0.4s;"></div>
+  </div>
+</section>
+
+{# ── 自分の学年のセット ── #}
+<section class="card" style="margin-bottom: 20px;">
+  <p class="section-label">中{{ student_grade - 6 }}年のセット</p>
+  <h2 style="margin: 4px 0 16px;">単元を選んで始めよう</h2>
+  {% set my_sets = sets | selectattr("grade", "equalto", student_grade) | list %}
+  {% if my_sets %}
+  <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px;">
+    {% for s in my_sets %}
+    <a href="/students/{{ student.student_id }}/flashcards/study?unit_id={{ s.unit_id }}"
+       style="display: flex; flex-direction: column; gap: 6px; padding: 14px 16px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; text-decoration: none; color: inherit; transition: box-shadow 0.15s, border-color 0.15s;"
+       onmouseover="this.style.boxShadow='0 4px 14px rgba(0,0,0,0.10)';this.style.borderColor='#94a3b8'" onmouseout="this.style.boxShadow='';this.style.borderColor='#e2e8f0'">
+      <span style="font-weight: 700; font-size: 0.95rem; color: #1e293b;">{{ s.display_name }}</span>
+      <span style="font-size: 0.82rem; color: #64748b;">{{ s.done }} / {{ s.total }} 語 完了</span>
+      {% if s.review > 0 %}
+      <span style="font-size: 0.78rem; background: #fef3c7; color: #92400e; padding: 2px 8px; border-radius: 999px; width: fit-content;">🔁 復習 {{ s.review }}語</span>
+      {% elif s.done == s.total and s.total > 0 %}
+      <span style="font-size: 0.78rem; background: #dcfce7; color: #15803d; padding: 2px 8px; border-radius: 999px; width: fit-content;">✅ 完了</span>
+      {% endif %}
+      <div style="height: 5px; background: #e2e8f0; border-radius: 99px; margin-top: 4px;">
+        <div style="width: {{ ((s.done / s.total) * 100) | int if s.total > 0 else 0 }}%; height: 100%; background: {% if s.done == s.total and s.total > 0 %}#10b981{% else %}#3b82f6{% endif %}; border-radius: 99px;"></div>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+  {% else %}
+  <p style="color: #94a3b8;">この学年のセットはまだありません。</p>
+  {% endif %}
+</section>
+
+{# ── 他の学年のセット（折りたたみ） ── #}
+{% for grade_val in [7, 8, 9] %}
+  {% if grade_val != student_grade %}
+  {% set other_sets = sets | selectattr("grade", "equalto", grade_val) | list %}
+  {% if other_sets %}
+  <section class="card" style="margin-bottom: 16px;">
+    <details>
+      <summary style="cursor: pointer; list-style: none; display: flex; align-items: center; justify-content: space-between; user-select: none;">
+        <div>
+          <p class="section-label" style="margin: 0;">中{{ grade_val - 6 }}年のセット</p>
+          <span style="font-size: 0.85rem; color: #64748b; margin-top: 2px; display: block;">{{ other_sets | length }} セット
+            /
+            {% set grade_done = other_sets | sum(attribute='done') %}
+            {% set grade_total = other_sets | sum(attribute='total') %}
+            {{ grade_done }} / {{ grade_total }} 語
+          </span>
+        </div>
+        <span style="font-size: 1.2rem; color: #94a3b8; transition: transform 0.2s;" class="details-arrow">▼</span>
+      </summary>
+      <div style="margin-top: 16px; display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px;">
+        {% for s in other_sets %}
+        <a href="/students/{{ student.student_id }}/flashcards/study?unit_id={{ s.unit_id }}"
+           style="display: flex; flex-direction: column; gap: 6px; padding: 14px 16px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; text-decoration: none; color: inherit; transition: box-shadow 0.15s;"
+           onmouseover="this.style.boxShadow='0 4px 14px rgba(0,0,0,0.10)'" onmouseout="this.style.boxShadow=''">
+          <span style="font-weight: 700; font-size: 0.95rem; color: #1e293b;">{{ s.display_name }}</span>
+          <span style="font-size: 0.82rem; color: #64748b;">{{ s.done }} / {{ s.total }} 語 完了</span>
+          {% if s.review > 0 %}
+          <span style="font-size: 0.78rem; background: #fef3c7; color: #92400e; padding: 2px 8px; border-radius: 999px; width: fit-content;">🔁 復習 {{ s.review }}語</span>
+          {% elif s.done == s.total and s.total > 0 %}
+          <span style="font-size: 0.78rem; background: #dcfce7; color: #15803d; padding: 2px 8px; border-radius: 999px; width: fit-content;">✅ 完了</span>
+          {% endif %}
+          <div style="height: 5px; background: #e2e8f0; border-radius: 99px; margin-top: 4px;">
+            <div style="width: {{ ((s.done / s.total) * 100) | int if s.total > 0 else 0 }}%; height: 100%; background: #10b981; border-radius: 99px;"></div>
+          </div>
+        </a>
+        {% endfor %}
+      </div>
+    </details>
+  </section>
+  {% endif %}
+  {% endif %}
+{% endfor %}
+
+<style>
+details[open] .details-arrow { transform: rotate(180deg); }
+</style>
+
+{% endblock %}

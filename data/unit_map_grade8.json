@@ -1,0 +1,62 @@
+[
+  {
+    "full_unit_id": "simultaneous_equations_basic",
+    "grade": 8,
+    "display_name": "連立方程式（基本）",
+    "parent_unit": "simultaneous_equations",
+    "sub_unit": "basic",
+    "prerequisite_full_unit_id": "linear_equations_word_problem",
+    "next_full_unit_id": "simultaneous_equations_application",
+    "display_order": 1
+  },
+  {
+    "full_unit_id": "simultaneous_equations_application",
+    "grade": 8,
+    "display_name": "連立方程式（応用）",
+    "parent_unit": "simultaneous_equations",
+    "sub_unit": "application",
+    "prerequisite_full_unit_id": "simultaneous_equations_basic",
+    "next_full_unit_id": "linear_function_basic",
+    "display_order": 2
+  },
+  {
+    "full_unit_id": "linear_function_basic",
+    "grade": 8,
+    "display_name": "一次関数（基本）",
+    "parent_unit": "linear_function",
+    "sub_unit": "basic",
+    "prerequisite_full_unit_id": "simultaneous_equations_application",
+    "next_full_unit_id": "linear_function_graph",
+    "display_order": 3
+  },
+  {
+    "full_unit_id": "linear_function_graph",
+    "grade": 8,
+    "display_name": "一次関数（グラフ）",
+    "parent_unit": "linear_function",
+    "sub_unit": "graph",
+    "prerequisite_full_unit_id": "linear_function_basic",
+    "next_full_unit_id": "geometry_parallel_congruence",
+    "display_order": 4
+  },
+  {
+    "full_unit_id": "geometry_parallel_congruence",
+    "grade": 8,
+    "display_name": "平行と合同",
+    "parent_unit": "geometry_parallel_congruence",
+    "sub_unit": "basic",
+    "prerequisite_full_unit_id": "linear_function_graph",
+    "next_full_unit_id": "probability_basic",
+    "display_order": 5
+  },
+  {
+    "full_unit_id": "probability_basic",
+    "grade": 8,
+    "display_name": "確率（基本）",
+    "parent_unit": "probability",
+    "sub_unit": "basic",
+    "prerequisite_full_unit_id": "geometry_parallel_congruence",
+    "next_full_unit_id": null,
+    "display_order": 6
+  }
+]

@@ -1,0 +1,268 @@
+[
+  {
+    "unit_id": "eng_alphabet_basic",
+    "display_name": "アルファベット・基本単語",
+    "subject": "english",
+    "grade": 7,
+    "problem_count": 103,
+    "by_problem_type": {
+      "mini_test": 5,
+      "practice": 88,
+      "unit_test": 10
+    },
+    "listening_count": 0,
+    "shortage_flag": false
+  },
+  {
+    "unit_id": "eng_be_verb",
+    "display_name": "be動詞（am/is/are）・一般動詞（現在形）",
+    "subject": "english",
+    "grade": 7,
+    "problem_count": 34,
+    "by_problem_type": {
+      "mini_test": 5,
+      "practice": 19,
+      "unit_test": 10
+    },
+    "listening_count": 0,
+    "shortage_flag": false
+  },
+  {
+    "unit_id": "eng_can_modal",
+    "display_name": "助動詞 can（能力・可能）",
+    "subject": "english",
+    "grade": 7,
+    "problem_count": 30,
+    "by_problem_type": {
+      "mini_test": 5,
+      "practice": 15,
+      "unit_test": 10
+    },
+    "listening_count": 0,
+    "shortage_flag": false
+  },
+  {
+    "unit_id": "eng_conjunctions",
+    "display_name": "接続詞（that / when / if / because）",
+    "subject": "english",
+    "grade": 8,
+    "problem_count": 30,
+    "by_problem_type": {
+      "mini_test": 5,
+      "practice": 15,
+      "unit_test": 10
+    },
+    "listening_count": 0,
+    "shortage_flag": false
+  },
+  {
+    "unit_id": "eng_future_tense",
+    "display_name": "未来形（will / be going to）",
+    "subject": "english",
+    "grade": 8,
+    "problem_count": 30,
+    "by_problem_type": {
+      "mini_test": 5,
+      "practice": 15,
+      "unit_test": 10
+    },
+    "listening_count": 0,
+    "shortage_flag": false
+  },
+  {
+    "unit_id": "eng_gerund",
+    "display_name": "動名詞（動詞＋ing）",
+    "subject": "english",
+    "grade": 8,
+    "problem_count": 30,
+    "by_problem_type": {
+      "mini_test": 5,
+      "practice": 15,
+      "unit_test": 10
+    },
+    "listening_count": 0,
+    "shortage_flag": false
+  },
+  {
+    "unit_id": "eng_infinitive",
+    "display_name": "不定詞（to＋動詞の原形：名詞・形容詞・副詞的用法）",
+    "subject": "english",
+    "grade": 8,
+    "problem_count": 30,
+    "by_problem_type": {
+      "mini_test": 5,
+      "practice": 15,
+      "unit_test": 10
+    },
+    "listening_count": 0,
+    "shortage_flag": false
+  },
+  {
+    "unit_id": "eng_infinitive_advanced",
+    "display_name": "不定詞の発展（疑問詞＋to / It～for A to～）",
+    "subject": "english",
+    "grade": 9,
+    "problem_count": 30,
+    "by_problem_type": {
+      "mini_test": 5,
+      "practice": 15,
+      "unit_test": 10
+    },
+    "listening_count": 0,
+    "shortage_flag": false
+  },
+  {
+    "unit_id": "eng_modal_verbs",
+    "display_name": "助動詞（must / may / should）",
+    "subject": "english",
+    "grade": 8,
+    "problem_count": 30,
+    "by_problem_type": {
+      "mini_test": 5,
+      "practice": 15,
+      "unit_test": 10
+    },
+    "listening_count": 0,
+    "shortage_flag": false
+  },
+  {
+    "unit_id": "eng_participle",
+    "display_name": "分詞（形容詞的用法）",
+    "subject": "english",
+    "grade": 9,
+    "problem_count": 30,
+    "by_problem_type": {
+      "mini_test": 5,
+      "practice": 15,
+      "unit_test": 10
+    },
+    "listening_count": 0,
+    "shortage_flag": false
+  },
+  {
+    "unit_id": "eng_passive_voice",
+    "display_name": "受け身（be動詞＋過去分詞）",
+    "subject": "english",
+    "grade": 9,
+    "problem_count": 30,
+    "by_problem_type": {
+      "mini_test": 5,
+      "practice": 15,
+      "unit_test": 10
+    },
+    "listening_count": 0,
+    "shortage_flag": false
+  },
+  {
+    "unit_id": "eng_past_tense",
+    "display_name": "一般動詞の過去形（規則・不規則）",
+    "subject": "english",
+    "grade": 8,
+    "problem_count": 30,
+    "by_problem_type": {
+      "mini_test": 5,
+      "practice": 15,
+      "unit_test": 10
+    },
+    "listening_count": 0,
+    "shortage_flag": false
+  },
+  {
+    "unit_id": "eng_present_perfect",
+    "display_name": "現在完了形（継続・完了・経験）",
+    "subject": "english",
+    "grade": 9,
+    "problem_count": 30,
+    "by_problem_type": {
+      "mini_test": 5,
+      "practice": 15,
+      "unit_test": 10
+    },
+    "listening_count": 0,
+    "shortage_flag": false
+  },
+  {
+    "unit_id": "eng_present_progressive",
+    "display_name": "現在進行形（be + -ing）",
+    "subject": "english",
+    "grade": 7,
+    "problem_count": 30,
+    "by_problem_type": {
+      "mini_test": 5,
+      "practice": 15,
+      "unit_test": 10
+    },
+    "listening_count": 0,
+    "shortage_flag": false
+  },
+  {
+    "unit_id": "eng_question_negative",
+    "display_name": "疑問文・否定文の作り方",
+    "subject": "english",
+    "grade": 7,
+    "problem_count": 32,
+    "by_problem_type": {
+      "mini_test": 5,
+      "practice": 17,
+      "unit_test": 10
+    },
+    "listening_count": 0,
+    "shortage_flag": false
+  },
+  {
+    "unit_id": "eng_relative_pronoun",
+    "display_name": "関係代名詞（主格・目的格：who / which / that）",
+    "subject": "english",
+    "grade": 9,
+    "problem_count": 30,
+    "by_problem_type": {
+      "mini_test": 5,
+      "practice": 15,
+      "unit_test": 10
+    },
+    "listening_count": 0,
+    "shortage_flag": false
+  },
+  {
+    "unit_id": "eng_sentence_patterns",
+    "display_name": "文型（SVOO / SVOC など）",
+    "subject": "english",
+    "grade": 8,
+    "problem_count": 30,
+    "by_problem_type": {
+      "mini_test": 5,
+      "practice": 15,
+      "unit_test": 10
+    },
+    "listening_count": 0,
+    "shortage_flag": false
+  },
+  {
+    "unit_id": "eng_subjunctive",
+    "display_name": "仮定法（基礎）",
+    "subject": "english",
+    "grade": 9,
+    "problem_count": 30,
+    "by_problem_type": {
+      "mini_test": 5,
+      "practice": 15,
+      "unit_test": 10
+    },
+    "listening_count": 0,
+    "shortage_flag": false
+  },
+  {
+    "unit_id": "eng_third_person_singular",
+    "display_name": "三人称単数現在形（He plays）",
+    "subject": "english",
+    "grade": 7,
+    "problem_count": 30,
+    "by_problem_type": {
+      "mini_test": 5,
+      "practice": 15,
+      "unit_test": 10
+    },
+    "listening_count": 0,
+    "shortage_flag": false
+  }
+]

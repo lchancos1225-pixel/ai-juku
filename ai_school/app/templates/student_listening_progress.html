@@ -1,0 +1,26 @@
+﻿{% extends "base.html" %}
+{% block content %}
+<section class="card">
+  <h2>リスニングの記録</h2>
+  <p>あなたの学年（中{{ (student.grade or 7) - 6 }}）の単元別です。</p>
+</section>
+
+<section class="card progress-section">
+  {% if listening_rows %}
+    {% for unit in listening_rows %}
+    <div class="unit-mastery-row">
+      <span class="unit-name">{{ unit.display_name }}</span>
+      <div class="mastery-bar">
+        <div class="mastery-fill" style="width: {{ (unit.mastery_score * 100)|int }}%"></div>
+      </div>
+      <span class="mastery-pct">{{ (unit.mastery_score * 100)|int }}%</span>
+    </div>
+    {% endfor %}
+  {% else %}
+    <p class="no-data">まだリスニング学習記録がありません。</p>
+  {% endif %}
+  <a href="/students/{{ student_id }}/listening" class="btn-secondary" style="display:inline-block;margin-top:1rem;">リスニングを始める</a>
+</section>
+
+<p><a class="btn-secondary" href="/students/{{ student_id }}/progress">← Myレコードに戻る</a></p>
+{% endblock %}

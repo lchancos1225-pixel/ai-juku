@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title or "AI塾 QRelDo" }}</title>
+  <link rel="stylesheet" href="{{ url_for('static', path='/style.css') }}?v=20260425p2">
+  <script src="https://unpkg.com/htmx.org@1.9.12" defer></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.1/dist/cdn.min.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header__brand">
+      <span class="eyebrow">AI塾 QRelDo（クエルド）</span>
+      <span class="site-subheading">Adaptive Learning Maker</span>
+    </div>
+    <nav class="top-nav">
+      {% if auth_role or is_student_view %}
+      <form method="post" action="/logout" onsubmit="try { localStorage.removeItem('qreldo_user'); } catch (e) {}">
+        <button type="submit" class="logout-btn">ログアウト</button>
+      </form>
+      {% endif %}
+    </nav>
+  </header>
+  <main class="page-shell">
+    {% block content %}{% endblock %}
+  </main>
+
+  {% if auth_role or is_student_view %}
+  <!-- 繝輔ぅ繝ｼ繝峨ヰ繝・け繝懊ち繝ｳ -->
+  <button class="fb-trigger-btn" id="fb-trigger-btn" title="繝輔ぅ繝ｼ繝峨ヰ繝・け繧帝√ｋ" aria-label="繝輔ぅ繝ｼ繝峨ヰ繝・け繧帝√ｋ">
+    町
+  </button>
+
+  <!-- 繝輔ぅ繝ｼ繝峨ヰ繝・け繝｢繝ｼ繝繝ｫ -->
+  <div class="fb-overlay" id="fb-overlay" hidden></div>
+  <div class="fb-modal" id="fb-modal" role="dialog" aria-modal="true" aria-labelledby="fb-modal-title" hidden>
+    <h3 class="fb-modal__title" id="fb-modal-title">繝輔ぅ繝ｼ繝峨ヰ繝・け騾∽ｿ｡</h3>
+    <p class="fb-modal__desc">繝舌げ繝ｻ謾ｹ蝟・ｦ∵悍繝ｻ縺疲э隕九ｒ縺企√ｊ縺上□縺輔＞縲・/p>
+    <form class="fb-modal__form" id="fb-form">
+      <input type="hidden" name="page_url" id="fb-page-url">
+      <div class="fb-modal__radio-group">
+        <label class="fb-modal__radio-label">
+          <input type="radio" name="category" value="bug" required> 菅 繝舌げ蝣ｱ蜻・
+        </label>
+        <label class="fb-modal__radio-label">
+          <input type="radio" name="category" value="improvement"> 庁 謾ｹ蝟・ｦ∵悍
+        </label>
+        <label class="fb-modal__radio-label">
+          <input type="radio" name="category" value="other"> 町 縺昴・莉・
+        </label>
+      </div>
+      <textarea class="fb-modal__textarea" name="message" id="fb-message" rows="4"
+        placeholder="蜀・ｮｹ繧貞・蜉帙＠縺ｦ縺上□縺輔＞..." required maxlength="1000"></textarea>
+      <p class="fb-modal__charcount"><span id="fb-charcount">0</span>/1000</p>
+      <div class="fb-modal__actions">
+        <button type="button" class="fb-modal__cancel" id="fb-cancel">繧ｭ繝｣繝ｳ繧ｻ繝ｫ</button>
+        <button type="submit" class="fb-modal__submit" id="fb-submit">騾∽ｿ｡</button>
+      </div>
+      <p class="fb-modal__status" id="fb-status" hidden></p>
+    </form>
+  </div>
+
+  <script>
+    (function () {
+      const btn = document.getElementById('fb-trigger-btn');
+      const overlay = document.getElementById('fb-overlay');
+      const modal = document.getElementById('fb-modal');
+      const cancelBtn = document.getElementById('fb-cancel');
+      const form = document.getElementById('fb-form');
+      const pageUrlInput = document.getElementById('fb-page-url');
+      const messageArea = document.getElementById('fb-message');
+      const charCount = document.getElementById('fb-charcount');
+      const statusEl = document.getElementById('fb-status');
+
+      function openModal() {
+        pageUrlInput.value = window.location.pathname;
+        overlay.hidden = false;
+        modal.hidden = false;
+        messageArea.focus();
+      }
+      function closeModal() {
+        overlay.hidden = true;
+        modal.hidden = true;
+        form.reset();
+        charCount.textContent = '0';
+        statusEl.hidden = true;
+      }
+
+      btn.addEventListener('click', openModal);
+      overlay.addEventListener('click', closeModal);
+      cancelBtn.addEventListener('click', closeModal);
+      messageArea.addEventListener('input', function () {
+        charCount.textContent = this.value.length;
+      });
+
+      form.addEventListener('submit', async function (e) {
+        e.preventDefault();
+        const submitBtn = document.getElementById('fb-submit');
+        submitBtn.disabled = true;
+        const data = new FormData(form);
+        try {
+          const res = await fetch('/feedback', { method: 'POST', body: data });
+          const json = await res.json();
+          statusEl.hidden = false;
+          if (json.ok) {
+            statusEl.textContent = '笨・騾∽ｿ｡縺励∪縺励◆・√≠繧翫′縺ｨ縺・＃縺悶＞縺ｾ縺吶・;
+            statusEl.className = 'fb-modal__status fb-modal__status--ok';
+            setTimeout(closeModal, 1500);
+          } else {
+            statusEl.textContent = '笶・騾∽ｿ｡縺ｫ螟ｱ謨励＠縺ｾ縺励◆縲・;
+            statusEl.className = 'fb-modal__status fb-modal__status--error';
+          }
+        } catch {
+          statusEl.hidden = false;
+          statusEl.textContent = '笶・騾壻ｿ｡繧ｨ繝ｩ繝ｼ縺檎匱逕溘＠縺ｾ縺励◆縲・;
+          statusEl.className = 'fb-modal__status fb-modal__status--error';
+        }
+        submitBtn.disabled = false;
+      });
+    })();
+  </script>
+  {% endif %}
+</body>
+</html>
+

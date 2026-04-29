@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="student-top-bar">
+  <div class="student-top-bar__info">
+    <span class="student-top-bar__name">単語帳</span>
+  </div>
+  <a class="progress-chip-btn" href="/students/{{ student.student_id }}/flashcards">← セット一覧</a>
+</div>
+
+<section class="card" style="text-align: center; padding: 48px 24px;">
+  <p style="font-size: 4rem; margin: 0 0 12px;">🎉</p>
+  <h2 style="margin: 0 0 12px;">このセットは全部クリア！</h2>
+  <p style="color: #64748b; margin-bottom: 32px;">すべての単語を4ステージ学習しました。<br>復習は忘却曲線に基づいて自動で出題されます。</p>
+  <a href="/students/{{ student.student_id }}/flashcards" class="submit-answer-btn" style="display: inline-block; text-decoration: none; margin-right: 12px;">他のセットを選ぶ</a>
+  <a href="/students/{{ student.student_id }}" class="progress-chip-btn" style="display: inline-block;">ホームに戻る</a>
+</section>
+
+{% endblock %}

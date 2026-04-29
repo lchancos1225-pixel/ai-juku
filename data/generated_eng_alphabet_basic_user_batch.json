@@ -1,0 +1,709 @@
+{
+  "problems": [
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_alphabet_basic",
+      "unit_id": "eng_alphabet_basic",
+      "sub_unit": "alphabet_basic",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "「犬」を英語で書きなさい。",
+      "correct_answer": "dog",
+      "hint_1": "3文字の単語です。d で始まります。",
+      "hint_2": "d-o-? と続きます。",
+      "explanation_base": "「犬」は英語で dog です。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_alphabet_basic",
+      "unit_id": "eng_alphabet_basic",
+      "sub_unit": "alphabet_basic",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "「猫」を英語で書きなさい。",
+      "correct_answer": "cat",
+      "hint_1": "3文字の単語です。c で始まります。",
+      "hint_2": "c-a-? と続きます。",
+      "explanation_base": "「猫」は英語で cat です。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_alphabet_basic",
+      "unit_id": "eng_alphabet_basic",
+      "sub_unit": "alphabet_basic",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "「本」を英語で書きなさい。",
+      "correct_answer": "book",
+      "hint_1": "4文字の単語です。b で始まります。",
+      "hint_2": "b-o-o-? と続きます。",
+      "explanation_base": "「本」は英語で book です。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_alphabet_basic",
+      "unit_id": "eng_alphabet_basic",
+      "sub_unit": "alphabet_basic",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "「ペン」を英語で書きなさい。",
+      "correct_answer": "pen",
+      "hint_1": "3文字の単語です。p で始まります。",
+      "hint_2": "p-e-? と続きます。",
+      "explanation_base": "「ペン」は英語で pen です。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_alphabet_basic",
+      "unit_id": "eng_alphabet_basic",
+      "sub_unit": "alphabet_basic",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "「地図」を英語で書きなさい。",
+      "correct_answer": "map",
+      "hint_1": "3文字の単語です。m で始まります。",
+      "hint_2": "m-a-? と続きます。",
+      "explanation_base": "「地図」は英語で map です。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_alphabet_basic",
+      "unit_id": "eng_alphabet_basic",
+      "sub_unit": "alphabet_basic",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "「学校」を英語で書きなさい。",
+      "correct_answer": "school",
+      "hint_1": "6文字の単語です。sch で始まります。",
+      "hint_2": "s-c-h-o-o-? と続きます。",
+      "explanation_base": "「学校」は英語で school です。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_alphabet_basic",
+      "unit_id": "eng_alphabet_basic",
+      "sub_unit": "alphabet_basic",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "「音楽」を英語で書きなさい。",
+      "correct_answer": "music",
+      "hint_1": "5文字の単語です。m で始まります。",
+      "hint_2": "m-u-s-i-? と続きます。",
+      "explanation_base": "「音楽」は英語で music です。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_alphabet_basic",
+      "unit_id": "eng_alphabet_basic",
+      "sub_unit": "alphabet_basic",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "「友達」を英語で書きなさい。",
+      "correct_answer": "friend",
+      "hint_1": "6文字の単語です。f で始まります。",
+      "hint_2": "f-r-i-e-n-? と続きます。",
+      "explanation_base": "「友達」は英語で friend です。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_alphabet_basic",
+      "unit_id": "eng_alphabet_basic",
+      "sub_unit": "alphabet_basic",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "「水」を英語で書きなさい。",
+      "correct_answer": "water",
+      "hint_1": "5文字の単語です。w で始まります。",
+      "hint_2": "w-a-t-e-? と続きます。",
+      "explanation_base": "「水」は英語で water です。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_alphabet_basic",
+      "unit_id": "eng_alphabet_basic",
+      "sub_unit": "alphabet_basic",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "「スポーツ」を英語で書きなさい。",
+      "correct_answer": "sport",
+      "hint_1": "5文字の単語です。s で始まります。",
+      "hint_2": "s-p-o-r-? と続きます。",
+      "explanation_base": "「スポーツ」は英語で sport です。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_alphabet_basic",
+      "unit_id": "eng_alphabet_basic",
+      "sub_unit": "alphabet_basic",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "「野菜」を英語で書きなさい。",
+      "correct_answer": "vegetable",
+      "hint_1": "9文字の単語です。veg で始まります。",
+      "hint_2": "v-e-g-e-t-a-b-l-? と続きます。",
+      "explanation_base": "「野菜」は英語で vegetable です。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_alphabet_basic",
+      "unit_id": "eng_alphabet_basic",
+      "sub_unit": "alphabet_basic",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "「美しい」を英語で書きなさい。",
+      "correct_answer": "beautiful",
+      "hint_1": "9文字の単語です。beau で始まります。",
+      "hint_2": "b-e-a-u-t-i-f-u-? と続きます。",
+      "explanation_base": "「美しい」は英語で beautiful です。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_alphabet_basic",
+      "unit_id": "eng_alphabet_basic",
+      "sub_unit": "alphabet_basic",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "「病院」を英語で書きなさい。",
+      "correct_answer": "hospital",
+      "hint_1": "8文字の単語です。hosp で始まります。",
+      "hint_2": "h-o-s-p-i-t-a-? と続きます。",
+      "explanation_base": "「病院」は英語で hospital です。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_alphabet_basic",
+      "unit_id": "eng_alphabet_basic",
+      "sub_unit": "alphabet_basic",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "「辞書」を英語で書きなさい。",
+      "correct_answer": "dictionary",
+      "hint_1": "10文字の単語です。dict で始まります。",
+      "hint_2": "d-i-c-t-i-o-n-a-r-? と続きます。",
+      "explanation_base": "「辞書」は英語で dictionary です。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_alphabet_basic",
+      "unit_id": "eng_alphabet_basic",
+      "sub_unit": "alphabet_basic",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "「環境」を英語で書きなさい。",
+      "correct_answer": "environment",
+      "hint_1": "11文字の単語です。envir で始まります。",
+      "hint_2": "e-n-v-i-r-o-n-m-e-n-? と続きます。",
+      "explanation_base": "「環境」は英語で environment です。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_alphabet_basic",
+      "unit_id": "eng_alphabet_basic",
+      "sub_unit": "alphabet_basic",
+      "problem_type": "mini_test",
+      "test_scope": "eng_alphabet_basic",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "「りんご」を英語で書きなさい。",
+      "correct_answer": "apple",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "「りんご」は英語で apple です。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_alphabet_basic",
+      "unit_id": "eng_alphabet_basic",
+      "sub_unit": "alphabet_basic",
+      "problem_type": "mini_test",
+      "test_scope": "eng_alphabet_basic",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "「テーブル」を英語で書きなさい。",
+      "correct_answer": "table",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "「テーブル」は英語で table です。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_alphabet_basic",
+      "unit_id": "eng_alphabet_basic",
+      "sub_unit": "alphabet_basic",
+      "problem_type": "mini_test",
+      "test_scope": "eng_alphabet_basic",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "「電話」を英語で書きなさい。",
+      "correct_answer": "phone",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "「電話」は英語で phone です。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_alphabet_basic",
+      "unit_id": "eng_alphabet_basic",
+      "sub_unit": "alphabet_basic",
+      "problem_type": "mini_test",
+      "test_scope": "eng_alphabet_basic",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "「図書館」を英語で書きなさい。",
+      "correct_answer": "library",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "「図書館」は英語で library です。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_alphabet_basic",
+      "unit_id": "eng_alphabet_basic",
+      "sub_unit": "alphabet_basic",
+      "problem_type": "mini_test",
+      "test_scope": "eng_alphabet_basic",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "「コンピュータ」を英語で書きなさい。",
+      "correct_answer": "computer",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "「コンピュータ」は英語で computer です。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_alphabet_basic",
+      "unit_id": "eng_alphabet_basic",
+      "sub_unit": "alphabet_basic",
+      "problem_type": "unit_test",
+      "test_scope": "eng_alphabet_basic",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "「鳥」を英語で書きなさい。",
+      "correct_answer": "bird",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "「鳥」は英語で bird です。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_alphabet_basic",
+      "unit_id": "eng_alphabet_basic",
+      "sub_unit": "alphabet_basic",
+      "problem_type": "unit_test",
+      "test_scope": "eng_alphabet_basic",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "「魚」を英語で書きなさい。",
+      "correct_answer": "fish",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "「魚」は英語で fish です。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_alphabet_basic",
+      "unit_id": "eng_alphabet_basic",
+      "sub_unit": "alphabet_basic",
+      "problem_type": "unit_test",
+      "test_scope": "eng_alphabet_basic",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "「木」を英語で書きなさい。",
+      "correct_answer": "tree",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "「木」は英語で tree です。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_alphabet_basic",
+      "unit_id": "eng_alphabet_basic",
+      "sub_unit": "alphabet_basic",
+      "problem_type": "unit_test",
+      "test_scope": "eng_alphabet_basic",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "「窓」を英語で書きなさい。",
+      "correct_answer": "window",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "「窓」は英語で window です。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_alphabet_basic",
+      "unit_id": "eng_alphabet_basic",
+      "sub_unit": "alphabet_basic",
+      "problem_type": "unit_test",
+      "test_scope": "eng_alphabet_basic",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "「橋」を英語で書きなさい。",
+      "correct_answer": "bridge",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "「橋」は英語で bridge です。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_alphabet_basic",
+      "unit_id": "eng_alphabet_basic",
+      "sub_unit": "alphabet_basic",
+      "problem_type": "unit_test",
+      "test_scope": "eng_alphabet_basic",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "「月」を英語で書きなさい。",
+      "correct_answer": "moon",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "「月」は英語で moon です。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_alphabet_basic",
+      "unit_id": "eng_alphabet_basic",
+      "sub_unit": "alphabet_basic",
+      "problem_type": "unit_test",
+      "test_scope": "eng_alphabet_basic",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "「花」を英語で書きなさい。",
+      "correct_answer": "flower",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "「花」は英語で flower です。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_alphabet_basic",
+      "unit_id": "eng_alphabet_basic",
+      "sub_unit": "alphabet_basic",
+      "problem_type": "unit_test",
+      "test_scope": "eng_alphabet_basic",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "「勉強する」を英語で書きなさい。",
+      "correct_answer": "study",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "「勉強する」は英語で study です。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_alphabet_basic",
+      "unit_id": "eng_alphabet_basic",
+      "sub_unit": "alphabet_basic",
+      "problem_type": "unit_test",
+      "test_scope": "eng_alphabet_basic",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "「乗り物」を英語で書きなさい。",
+      "correct_answer": "vehicle",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "「乗り物」は英語で vehicle です。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_alphabet_basic",
+      "unit_id": "eng_alphabet_basic",
+      "sub_unit": "alphabet_basic",
+      "problem_type": "unit_test",
+      "test_scope": "eng_alphabet_basic",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "「科学」を英語で書きなさい。",
+      "correct_answer": "science",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "「科学」は英語で science です。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    }
+  ]
+}

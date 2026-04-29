@@ -1,0 +1,709 @@
+{
+  "problems": [
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_infinitive_advanced",
+      "unit_id": "eng_infinitive_advanced",
+      "sub_unit": "infinitive_advanced",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に正しい語を入れなさい。\n「It is important ( ) study English.」",
+      "correct_answer": "to",
+      "hint_1": "「It is 形容詞 to 動詞」：「〜することは〜だ」（形式主語構文）",
+      "hint_2": "It is important to 動詞原形 の形にします。",
+      "explanation_base": "It is important to study English.（形式主語構文）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_infinitive_advanced",
+      "unit_id": "eng_infinitive_advanced",
+      "sub_unit": "infinitive_advanced",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に正しい語を入れなさい。\n「It is fun ( ) play with children.」",
+      "correct_answer": "to",
+      "hint_1": "形式主語構文：It is 形容詞 to 動詞",
+      "hint_2": "It is fun to 動詞原形 の形にします。",
+      "explanation_base": "It is fun to play with children.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_infinitive_advanced",
+      "unit_id": "eng_infinitive_advanced",
+      "sub_unit": "infinitive_advanced",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に正しい語を入れなさい。\n「It is easy ( ) forget things.」",
+      "correct_answer": "to",
+      "hint_1": "形式主語構文：It is 形容詞 to 動詞",
+      "hint_2": "It is easy to 動詞原形 の形にします。",
+      "explanation_base": "It is easy to forget things.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_infinitive_advanced",
+      "unit_id": "eng_infinitive_advanced",
+      "sub_unit": "infinitive_advanced",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に正しい語を入れなさい。\n「Do you know ( ) to go there?」",
+      "correct_answer": "how",
+      "hint_1": "「how to + 動詞原形」：「〜の仕方」（疑問詞＋to不定詞）",
+      "hint_2": "how to 動詞原形 = 「〜の仕方」",
+      "explanation_base": "Do you know how to go there?（疑問詞＋to不定詞）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_infinitive_advanced",
+      "unit_id": "eng_infinitive_advanced",
+      "sub_unit": "infinitive_advanced",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に正しい語を入れなさい。\n「Tell me ( ) to do next.」",
+      "correct_answer": "what",
+      "hint_1": "「what to + 動詞原形」：「何を〜すればいいか」",
+      "hint_2": "what to 動詞原形 = 「何を〜すればよいか」",
+      "explanation_base": "Tell me what to do next.（疑問詞＋to不定詞）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_infinitive_advanced",
+      "unit_id": "eng_infinitive_advanced",
+      "sub_unit": "infinitive_advanced",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に正しい語を入れなさい。\n「I don't know ( ) to say.」",
+      "correct_answer": "what",
+      "hint_1": "「what to 動詞」：「何を〜すればよいか」",
+      "hint_2": "what to 動詞原形 の形にします。",
+      "explanation_base": "I don't know what to say.（疑問詞＋to不定詞）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_infinitive_advanced",
+      "unit_id": "eng_infinitive_advanced",
+      "sub_unit": "infinitive_advanced",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に正しい語を入れなさい。\n「He told me ( ) to do.」",
+      "correct_answer": "what",
+      "hint_1": "「what to 動詞」：「何を〜すればよいか」",
+      "hint_2": "what to 動詞原形 の形にします。",
+      "explanation_base": "He told me what to do.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_infinitive_advanced",
+      "unit_id": "eng_infinitive_advanced",
+      "sub_unit": "infinitive_advanced",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に正しい語を入れなさい。\n「She showed me ( ) to cook.」",
+      "correct_answer": "how",
+      "hint_1": "「how to 動詞」：「〜の仕方」",
+      "hint_2": "how to 動詞原形 の形にします。",
+      "explanation_base": "She showed me how to cook.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_infinitive_advanced",
+      "unit_id": "eng_infinitive_advanced",
+      "sub_unit": "infinitive_advanced",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「この問題を解くのは難しいです。」",
+      "correct_answer": "It is difficult to solve this problem.",
+      "hint_1": "形式主語構文：It is 形容詞 to 動詞",
+      "hint_2": "It is difficult to 動詞原形 の形にします。",
+      "explanation_base": "It is difficult to solve this problem.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_infinitive_advanced",
+      "unit_id": "eng_infinitive_advanced",
+      "sub_unit": "infinitive_advanced",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「どこへ行けばいいかわかりません。」",
+      "correct_answer": "I don't know where to go.",
+      "hint_1": "「where to 動詞」：「どこへ〜すればいいか」",
+      "hint_2": "where to 動詞原形 の形にします。",
+      "explanation_base": "I don't know where to go.（疑問詞＋to不定詞）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_infinitive_advanced",
+      "unit_id": "eng_infinitive_advanced",
+      "sub_unit": "infinitive_advanced",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「このゲームのやり方を教えてください。」",
+      "correct_answer": "Please tell me how to play this game.",
+      "hint_1": "「how to 動詞」：「〜の仕方」",
+      "hint_2": "Please tell me how to 動詞〜 の形にします。",
+      "explanation_base": "Please tell me how to play this game.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_infinitive_advanced",
+      "unit_id": "eng_infinitive_advanced",
+      "sub_unit": "infinitive_advanced",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「友達を作ることは大切です。」",
+      "correct_answer": "It is important to make friends.",
+      "hint_1": "形式主語構文：It is 形容詞 to 動詞",
+      "hint_2": "It is important to make friends. の形にします。",
+      "explanation_base": "It is important to make friends.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_infinitive_advanced",
+      "unit_id": "eng_infinitive_advanced",
+      "sub_unit": "infinitive_advanced",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「彼女はいつ出発すればいいか知っています。」",
+      "correct_answer": "She knows when to leave.",
+      "hint_1": "「when to 動詞」：「いつ〜すればよいか」",
+      "hint_2": "She knows when to 動詞原形 の形にします。",
+      "explanation_base": "She knows when to leave.（疑問詞＋to不定詞）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_infinitive_advanced",
+      "unit_id": "eng_infinitive_advanced",
+      "sub_unit": "infinitive_advanced",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「毎日運動することは健康に良いです。」",
+      "correct_answer": "It is good for your health to exercise every day.",
+      "hint_1": "「It is 形容詞 for 人 to 動詞」：「人にとって〜することは〜だ」",
+      "hint_2": "It is good for your health to 動詞〜 の形にします。",
+      "explanation_base": "It is good for your health to exercise every day.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_infinitive_advanced",
+      "unit_id": "eng_infinitive_advanced",
+      "sub_unit": "infinitive_advanced",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「どちらを選べばよいかわかりません。」",
+      "correct_answer": "I don't know which to choose.",
+      "hint_1": "「which to 動詞」：「どちらを〜すればよいか」",
+      "hint_2": "I don't know which to 動詞原形 の形にします。",
+      "explanation_base": "I don't know which to choose.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_infinitive_advanced",
+      "unit_id": "eng_infinitive_advanced",
+      "sub_unit": "infinitive_advanced",
+      "problem_type": "mini_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に正しい語を入れなさい。\n「It is hard ( ) wake up early.」",
+      "correct_answer": "to",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "It is hard to wake up early.（形式主語）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_infinitive_advanced"
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_infinitive_advanced",
+      "unit_id": "eng_infinitive_advanced",
+      "sub_unit": "infinitive_advanced",
+      "problem_type": "mini_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に正しい語を入れなさい。\n「I don't know ( ) to start.」",
+      "correct_answer": "where",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "I don't know where to start.（疑問詞＋to不定詞）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_infinitive_advanced"
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_infinitive_advanced",
+      "unit_id": "eng_infinitive_advanced",
+      "sub_unit": "infinitive_advanced",
+      "problem_type": "mini_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「ここでテニスをするのは楽しいです。」",
+      "correct_answer": "It is fun to play tennis here.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "It is fun to play tennis here.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_infinitive_advanced"
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_infinitive_advanced",
+      "unit_id": "eng_infinitive_advanced",
+      "sub_unit": "infinitive_advanced",
+      "problem_type": "mini_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に正しい語を入れなさい。\n「She asked me ( ) to open the box.」",
+      "correct_answer": "how",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "She asked me how to open the box.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_infinitive_advanced"
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_infinitive_advanced",
+      "unit_id": "eng_infinitive_advanced",
+      "sub_unit": "infinitive_advanced",
+      "problem_type": "mini_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「彼はその計画を実行する方法を学んでいます。」",
+      "correct_answer": "He is learning how to carry out the plan.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "He is learning how to carry out the plan.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_infinitive_advanced"
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_infinitive_advanced",
+      "unit_id": "eng_infinitive_advanced",
+      "sub_unit": "infinitive_advanced",
+      "problem_type": "unit_test",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に正しい語を入れなさい。\n「It is necessary ( ) sleep well.」",
+      "correct_answer": "to",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "It is necessary to sleep well.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_infinitive_advanced"
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_infinitive_advanced",
+      "unit_id": "eng_infinitive_advanced",
+      "sub_unit": "infinitive_advanced",
+      "problem_type": "unit_test",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に正しい語を入れなさい。\n「I know ( ) to use this tool.」",
+      "correct_answer": "how",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "I know how to use this tool.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_infinitive_advanced"
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_infinitive_advanced",
+      "unit_id": "eng_infinitive_advanced",
+      "sub_unit": "infinitive_advanced",
+      "problem_type": "unit_test",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に正しい語を入れなさい。\n「She asked me ( ) to buy.」",
+      "correct_answer": "what",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "She asked me what to buy.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_infinitive_advanced"
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_infinitive_advanced",
+      "unit_id": "eng_infinitive_advanced",
+      "sub_unit": "infinitive_advanced",
+      "problem_type": "unit_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「ここで喫煙することは禁止されています。」",
+      "correct_answer": "It is prohibited to smoke here.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "It is prohibited to smoke here.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_infinitive_advanced"
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_infinitive_advanced",
+      "unit_id": "eng_infinitive_advanced",
+      "sub_unit": "infinitive_advanced",
+      "problem_type": "unit_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「親切にすることは大切だと私は思います。」",
+      "correct_answer": "I think it is important to be kind.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "I think it is important to be kind.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_infinitive_advanced"
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_infinitive_advanced",
+      "unit_id": "eng_infinitive_advanced",
+      "sub_unit": "infinitive_advanced",
+      "problem_type": "unit_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「彼女はどこで助けを求めればよいかわかりません。」",
+      "correct_answer": "She doesn't know where to ask for help.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "She doesn't know where to ask for help.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_infinitive_advanced"
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_infinitive_advanced",
+      "unit_id": "eng_infinitive_advanced",
+      "sub_unit": "infinitive_advanced",
+      "problem_type": "unit_test",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に正しい語を入れなさい。\n「Can you tell me ( ) to get to the station?」",
+      "correct_answer": "how",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "Can you tell me how to get to the station?",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_infinitive_advanced"
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_infinitive_advanced",
+      "unit_id": "eng_infinitive_advanced",
+      "sub_unit": "infinitive_advanced",
+      "problem_type": "unit_test",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「新しい言語を学ぶことはとても楽しいです。」",
+      "correct_answer": "It is very enjoyable to learn a new language.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "It is very enjoyable to learn a new language.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_infinitive_advanced"
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_infinitive_advanced",
+      "unit_id": "eng_infinitive_advanced",
+      "sub_unit": "infinitive_advanced",
+      "problem_type": "unit_test",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「彼は何を言えばいいかわかりませんでした。」",
+      "correct_answer": "He didn't know what to say.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "He didn't know what to say.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_infinitive_advanced"
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "full_unit_id": "eng_infinitive_advanced",
+      "unit_id": "eng_infinitive_advanced",
+      "sub_unit": "infinitive_advanced",
+      "problem_type": "unit_test",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「毎日日記をつけることは英語の上達に役立ちます。」",
+      "correct_answer": "It is helpful to keep a diary every day for improving your English.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "It is helpful to keep a diary every day for improving your English.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ],
+      "test_scope": "eng_infinitive_advanced"
+    }
+  ]
+}

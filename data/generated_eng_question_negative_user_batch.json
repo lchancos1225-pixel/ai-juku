@@ -1,0 +1,709 @@
+{
+  "problems": [
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_question_negative",
+      "unit_id": "eng_question_negative",
+      "sub_unit": "question_negative",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に正しい語を書きなさい。\n「( ) you play tennis?」",
+      "correct_answer": "Do",
+      "hint_1": "主語が you のとき、疑問文の先頭に来る語は Do または Does のどちらですか？",
+      "hint_2": "you は三人称単数ではないので Do を使います。",
+      "explanation_base": "主語が you/I/we/they のときは Do を使います。Do you play tennis?",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_question_negative",
+      "unit_id": "eng_question_negative",
+      "sub_unit": "question_negative",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に正しい語を書きなさい。\n「( ) she speak French?」",
+      "correct_answer": "Does",
+      "hint_1": "主語が she（三人称単数）のとき、疑問文の先頭に来る語は？",
+      "hint_2": "she は三人称単数なので Does を使います。",
+      "explanation_base": "主語が he/she/it のときは Does を使います。Does she speak French?",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_question_negative",
+      "unit_id": "eng_question_negative",
+      "sub_unit": "question_negative",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に正しい語を書きなさい。\n「( ) they live in Tokyo?」",
+      "correct_answer": "Do",
+      "hint_1": "主語が they（複数）のとき、疑問文の先頭に来る語は？",
+      "hint_2": "they は三人称単数ではないので Do を使います。",
+      "explanation_base": "主語が they のときは Do を使います。Do they live in Tokyo?",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_question_negative",
+      "unit_id": "eng_question_negative",
+      "sub_unit": "question_negative",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に正しい語を書きなさい。\n「( ) he like cats?」",
+      "correct_answer": "Does",
+      "hint_1": "主語が he（三人称単数）のとき、疑問文の先頭に来る語は？",
+      "hint_2": "he は三人称単数なので Does を使います。",
+      "explanation_base": "主語が he のときは Does を使います。Does he like cats?",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_question_negative",
+      "unit_id": "eng_question_negative",
+      "sub_unit": "question_negative",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に正しい語を書きなさい。\n「( ) your parents work in Tokyo?」",
+      "correct_answer": "Do",
+      "hint_1": "主語が your parents（複数）のとき、疑問文の先頭に来る語は？",
+      "hint_2": "your parents は複数なので Do を使います。",
+      "explanation_base": "主語が複数（your parents）のときは Do を使います。Do your parents work in Tokyo?",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_question_negative",
+      "unit_id": "eng_question_negative",
+      "sub_unit": "question_negative",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に正しい語を書きなさい。\n「I ( ) like spicy food.」",
+      "correct_answer": "don't",
+      "hint_1": "I の否定文では don't または doesn't のどちらを使いますか？",
+      "hint_2": "I は三人称単数ではないので don't を使います。",
+      "explanation_base": "主語が I のときの否定は don't（do not）を使います。I don't like spicy food.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_question_negative",
+      "unit_id": "eng_question_negative",
+      "sub_unit": "question_negative",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に正しい語を書きなさい。\n「She ( ) play video games.」",
+      "correct_answer": "doesn't",
+      "hint_1": "She（三人称単数）の否定文では don't または doesn't のどちらを使いますか？",
+      "hint_2": "she は三人称単数なので doesn't を使います。",
+      "explanation_base": "主語が she（三人称単数）のときの否定は doesn't（does not）を使います。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_question_negative",
+      "unit_id": "eng_question_negative",
+      "sub_unit": "question_negative",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に正しい語を書きなさい。\n「They ( ) understand the question.」",
+      "correct_answer": "don't",
+      "hint_1": "They（複数）の否定文では don't または doesn't のどちらを使いますか？",
+      "hint_2": "they は複数なので don't を使います。",
+      "explanation_base": "主語が they のときの否定は don't（do not）を使います。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_question_negative",
+      "unit_id": "eng_question_negative",
+      "sub_unit": "question_negative",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に正しい語を書きなさい。\n「He ( ) drink coffee.」",
+      "correct_answer": "doesn't",
+      "hint_1": "He（三人称単数）の否定文では don't または doesn't のどちらを使いますか？",
+      "hint_2": "he は三人称単数なので doesn't を使います。",
+      "explanation_base": "主語が he（三人称単数）のときの否定は doesn't（does not）を使います。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_question_negative",
+      "unit_id": "eng_question_negative",
+      "sub_unit": "question_negative",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に正しい語を書きなさい。\n「We ( ) go to school on Sundays.」",
+      "correct_answer": "don't",
+      "hint_1": "We（複数）の否定文では don't または doesn't のどちらを使いますか？",
+      "hint_2": "we は複数なので don't を使います。",
+      "explanation_base": "主語が we のときの否定は don't（do not）を使います。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_question_negative",
+      "unit_id": "eng_question_negative",
+      "sub_unit": "question_negative",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "次の文を疑問文に書き換えなさい。\n「You study English every day.」",
+      "correct_answer": "Do you study English every day?",
+      "hint_1": "一般動詞の疑問文は Do/Does を文頭に置き、動詞は原形にします。",
+      "hint_2": "主語が you なので Do you 〜? の形にします。",
+      "explanation_base": "一般動詞の疑問文：Do you study English every day?",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_question_negative",
+      "unit_id": "eng_question_negative",
+      "sub_unit": "question_negative",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "次の文を否定文に書き換えなさい。\n「She watches TV at night.」",
+      "correct_answer": "She doesn't watch TV at night.",
+      "hint_1": "三人称単数の否定文は doesn't + 動詞原形の形にします。",
+      "hint_2": "She doesn't 動詞原形〜 という形にします。",
+      "explanation_base": "三人称単数の否定文：She doesn't watch TV at night.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_question_negative",
+      "unit_id": "eng_question_negative",
+      "sub_unit": "question_negative",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「あなたは毎朝ジョギングしますか？」",
+      "correct_answer": "Do you jog every morning?",
+      "hint_1": "一般動詞の疑問文は Do/Does を文頭に置きます。",
+      "hint_2": "Do you 〜? の形で書きます。",
+      "explanation_base": "Do you jog every morning?",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_question_negative",
+      "unit_id": "eng_question_negative",
+      "sub_unit": "question_negative",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「彼は野菜を食べません。」",
+      "correct_answer": "He doesn't eat vegetables.",
+      "hint_1": "三人称単数の否定文は doesn't + 動詞原形を使います。",
+      "hint_2": "He doesn't 動詞原形〜 という形にします。",
+      "explanation_base": "He doesn't eat vegetables.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_question_negative",
+      "unit_id": "eng_question_negative",
+      "sub_unit": "question_negative",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「彼女のお父さんは車を運転しますか？」",
+      "correct_answer": "Does her father drive a car?",
+      "hint_1": "三人称単数（her father）の疑問文は Does を文頭に置きます。",
+      "hint_2": "Does + 主語 + 動詞原形〜? の形にします。",
+      "explanation_base": "Does her father drive a car?",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_question_negative",
+      "unit_id": "eng_question_negative",
+      "sub_unit": "question_negative",
+      "problem_type": "mini_test",
+      "test_scope": "eng_question_negative",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に正しい語を書きなさい。\n「( ) your dog like fish?」",
+      "correct_answer": "Does",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "your dog（三人称単数）なので Does を使います。Does your dog like fish?",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_question_negative",
+      "unit_id": "eng_question_negative",
+      "sub_unit": "question_negative",
+      "problem_type": "mini_test",
+      "test_scope": "eng_question_negative",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に正しい語を書きなさい。\n「I ( ) know his name.」",
+      "correct_answer": "don't",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "主語が I のときの否定は don't です。I don't know his name.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_question_negative",
+      "unit_id": "eng_question_negative",
+      "sub_unit": "question_negative",
+      "problem_type": "mini_test",
+      "test_scope": "eng_question_negative",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「彼女はテニスをしますか？」",
+      "correct_answer": "Does she play tennis?",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "三人称単数（she）の疑問文は Does she 〜? です。Does she play tennis?",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_question_negative",
+      "unit_id": "eng_question_negative",
+      "sub_unit": "question_negative",
+      "problem_type": "mini_test",
+      "test_scope": "eng_question_negative",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に正しい語を書きなさい。\n「He ( ) like cold weather.」",
+      "correct_answer": "doesn't",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "主語が he（三人称単数）のときの否定は doesn't です。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_question_negative",
+      "unit_id": "eng_question_negative",
+      "sub_unit": "question_negative",
+      "problem_type": "mini_test",
+      "test_scope": "eng_question_negative",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「あなたは毎日牛乳を飲みますか？」",
+      "correct_answer": "Do you drink milk every day?",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "Do you drink milk every day?",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_question_negative",
+      "unit_id": "eng_question_negative",
+      "sub_unit": "question_negative",
+      "problem_type": "unit_test",
+      "test_scope": "eng_question_negative",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に正しい語を書きなさい。\n「( ) you speak Japanese?」",
+      "correct_answer": "Do",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "主語が you なので Do を使います。Do you speak Japanese?",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_question_negative",
+      "unit_id": "eng_question_negative",
+      "sub_unit": "question_negative",
+      "problem_type": "unit_test",
+      "test_scope": "eng_question_negative",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に正しい語を書きなさい。\n「He ( ) play baseball.」",
+      "correct_answer": "doesn't",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "主語が he（三人称単数）のときの否定は doesn't です。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_question_negative",
+      "unit_id": "eng_question_negative",
+      "sub_unit": "question_negative",
+      "problem_type": "unit_test",
+      "test_scope": "eng_question_negative",
+      "difficulty": "easy",
+      "answer_type": "text",
+      "question_text": "（　）に正しい語を書きなさい。\n「( ) she live near here?」",
+      "correct_answer": "Does",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "主語が she（三人称単数）なので Does を使います。Does she live near here?",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_question_negative",
+      "unit_id": "eng_question_negative",
+      "sub_unit": "question_negative",
+      "problem_type": "unit_test",
+      "test_scope": "eng_question_negative",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "（　）に正しい語を書きなさい。\n「We ( ) watch TV at night.」",
+      "correct_answer": "don't",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "主語が we（複数）のときの否定は don't です。",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_question_negative",
+      "unit_id": "eng_question_negative",
+      "sub_unit": "question_negative",
+      "problem_type": "unit_test",
+      "test_scope": "eng_question_negative",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「彼らはその映画を知っていますか？」",
+      "correct_answer": "Do they know the movie?",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "Do they know the movie?",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_question_negative",
+      "unit_id": "eng_question_negative",
+      "sub_unit": "question_negative",
+      "problem_type": "unit_test",
+      "test_scope": "eng_question_negative",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "次の文を疑問文に書き換えなさい。\n「He plays the guitar.」",
+      "correct_answer": "Does he play the guitar?",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "三人称単数の疑問文は Does + 主語 + 動詞原形〜? です。Does he play the guitar?",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_question_negative",
+      "unit_id": "eng_question_negative",
+      "sub_unit": "question_negative",
+      "problem_type": "unit_test",
+      "test_scope": "eng_question_negative",
+      "difficulty": "normal",
+      "answer_type": "text",
+      "question_text": "次の文を否定文に書き換えなさい。\n「They eat breakfast every morning.」",
+      "correct_answer": "They don't eat breakfast every morning.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "主語が they（複数）なので don't を使います。They don't eat breakfast every morning.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_question_negative",
+      "unit_id": "eng_question_negative",
+      "sub_unit": "question_negative",
+      "problem_type": "unit_test",
+      "test_scope": "eng_question_negative",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「私の妹はピアノが弾けません。」",
+      "correct_answer": "My sister doesn't play the piano.",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "My sister（三人称単数）の否定文なので doesn't です。My sister doesn't play the piano.",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_question_negative",
+      "unit_id": "eng_question_negative",
+      "sub_unit": "question_negative",
+      "problem_type": "unit_test",
+      "test_scope": "eng_question_negative",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「あなたのお兄さんはどんなスポーツをしますか？」",
+      "correct_answer": "What sport does your brother play?",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "What sport does your brother play? （三人称単数の疑問文形式）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "full_unit_id": "eng_question_negative",
+      "unit_id": "eng_question_negative",
+      "sub_unit": "question_negative",
+      "problem_type": "unit_test",
+      "test_scope": "eng_question_negative",
+      "difficulty": "hard",
+      "answer_type": "text",
+      "question_text": "日本語を英語に直しなさい。\n「彼女は夕食後に勉強しますか？」",
+      "correct_answer": "Does she study after dinner?",
+      "hint_1": "",
+      "hint_2": "",
+      "explanation_base": "Does she study after dinner? （三人称単数の疑問文）",
+      "error_pattern_candidates": [
+        "comprehension_gap",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    }
+  ]
+}

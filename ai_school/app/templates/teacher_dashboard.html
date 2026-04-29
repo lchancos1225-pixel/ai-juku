@@ -1,0 +1,736 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="card teacher-dashboard-summary">
+  <p class="section-label">Teacher Dashboard</p>
+  <h2>{{ classroom.classroom_name if classroom else "講師ダッシュボード" }}</h2>
+  <div class="state-grid">
+    <div><span>担当教室</span><strong>{{ classroom.classroom_name if classroom else "-" }}</strong></div>
+    <div><span>所属講師</span><strong>{{ teachers|length }}人</strong></div>
+    <div><span>所属生徒</span><strong>{{ students|length }}人</strong></div>
+  </div>
+</section>
+
+{# ===== 今すぐ声かけアラート ===== #}
+{% set alert_students = students | selectattr('student_id', 'defined') | list %}
+{% set ns = namespace(alerts=[]) %}
+{% for student in students %}
+  {% set metric = metrics.get(student.student_id) %}
+  {% if metric and metric.teacher_intervention_needed %}
+    {% set ns.alerts = ns.alerts + [{'student': student, 'metric': metric}] %}
+  {% endif %}
+{% endfor %}
+{% if ns.alerts %}
+<section class="card alert-summary-card">
+  <div class="alert-summary-header">
+    <span class="alert-summary-icon">🚨</span>
+    <div>
+      <p class="section-label alert-label">今すぐ声かけを</p>
+      <h2>介入が必要な生徒 {{ ns.alerts | length }}人</h2>
+    </div>
+  </div>
+  <div class="alert-summary-list">
+    {% for item in ns.alerts %}
+    {% set student = item.student %}
+    {% set metric = item.metric %}
+    <div class="alert-summary-item">
+      <span class="alert-student-name">{{ student.display_name }}</span>
+      <span class="alert-unit">{{ unit_labels.get(states.get(student.student_id).current_unit, '単元不明') if states.get(student.student_id) else '単元不明' }}</span>
+      <span class="alert-reason">{{ metric.intervention_reason or 'AIが介入必要と判断' }}</span>
+      <a class="alert-jump-btn" href="#student-{{ student.student_id }}">詳細へ ↓</a>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+
+
+{# ===== 神システム: 誤概念テレパシーヒートマップ ===== #}
+{% if misconception_heatmap %}
+<section class="card misconception-telepathy-card">
+  <div class="misconception-telepathy-header">
+    <span class="misconception-telepathy-icon">🧠</span>
+    <div>
+      <p class="section-label">AI誤概念分析（過去7日間）</p>
+      <h2>クラス共通の誤概念 TOP{{ misconception_heatmap | length }}</h2>
+    </div>
+  </div>
+  <p class="misconception-telepathy-desc">生徒が間違えた回答からAIが推論した「思考ルールの誤り」です。授業で重点的に扱う単元の参考にしてください。</p>
+  <div class="misconception-heatmap">
+    {% for item in misconception_heatmap %}
+    <div class="misconception-heatmap__row">
+      <div class="misconception-heatmap__label" title="{{ item.tag }}">{{ item.detail }}</div>
+      <div class="misconception-heatmap__bar">
+        <div class="misconception-heatmap__bar-fill" style="width: {{ item.pct }}%"></div>
+      </div>
+      <div class="misconception-heatmap__count">{{ item.count }}件</div>
+      <div class="misconception-heatmap__students">
+        {% for name in item.student_names[:3] %}
+        <span class="misconception-chip">{{ name }}</span>
+        {% endfor %}
+        {% if item.student_count > 3 %}
+        <span class="misconception-chip">+{{ item.student_count - 3 }}人</span>
+        {% endif %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  <p class="misconception-telepathy-action">
+    💡 上位の誤概念が多い場合、次の授業で「{{ misconception_heatmap[0].detail }}」について補足説明することを推奨します。
+  </p>
+</section>
+{% endif %}
+
+<section class="card teacher-preview-links">
+  <p class="section-label">Materials</p>
+  <h2>教材確認</h2>
+  <div class="teacher-preview-link-row" style="display: flex; gap: 1em; flex-wrap: wrap;">
+    <a class="btn btn-primary" href="/teachers/problems">🗂 問題一覧を見る</a>
+    <a class="btn btn-primary" href="/teachers/problems?diagram_required=true">🖼 図あり問題を探す</a>
+    <a class="btn btn-primary" href="/teachers/problems?problem_type=unit_test">📚 教材プレビューへ</a>
+    <a class="btn btn-primary" href="/teachers/problems/print_set">📄 問題プリント作成</a>
+  </div>
+</section>
+
+<section class="card teacher-unit-unlock-card" id="teacher-unit-unlock">
+  <h2 class="teacher-unit-unlock-card__title">単元ロック</h2>
+  <p class="meta-note teacher-unit-unlock-card__intro">入塾時期が異なり、取り組める単元の開始位置も生徒ごとに異なります。まず<strong>設定対象</strong>で教室全体か生徒を選び、「開始単元」または「全開放」を選んで保存してください。</p>
+  <form id="teacher-unit-unlock-form" method="post" action="/teachers/unit_unlock" class="unit-unlock-form unit-unlock-form--compact">
+    <div class="unit-unlock-target-wrap">
+      <label for="unlock_target">設定対象</label>
+      <select id="unlock_target" autocomplete="off">
+        <option value="__classroom__"
+          data-override-mode=""
+          data-override-up-to=""
+          data-has-override="0"
+          data-effective-mode="{{ (classroom.unit_unlock_mode if classroom else None) or 'progressive' }}"
+          data-effective-up-to="{{ classroom.unit_unlock_up_to if classroom and classroom.unit_unlock_up_to else '' }}"
+          data-cm="{{ (classroom.unit_unlock_mode if classroom else None) or 'progressive' }}"
+          data-cu="{{ classroom.unit_unlock_up_to if classroom and classroom.unit_unlock_up_to else '' }}">教室全体（デフォルト）</option>
+        {% for student in students %}
+        {% set state = states.get(student.student_id) %}
+        {% set eff = effective_unlock_by_student.get(student.student_id) %}
+        <option value="{{ student.student_id }}"
+          data-override-mode="{{ state.unit_unlock_mode if state and state.unit_unlock_mode else '' }}"
+          data-override-up-to="{{ state.unit_unlock_up_to if state and state.unit_unlock_up_to else '' }}"
+          data-has-override="{{ '1' if state and state.unit_unlock_mode else '0' }}"
+          data-effective-mode="{{ eff[0] if eff else 'progressive' }}"
+          data-effective-up-to="{{ eff[1] if eff and eff[1] else '' }}"
+          data-cm="{{ (classroom.unit_unlock_mode if classroom else None) or 'progressive' }}"
+          data-cu="{{ classroom.unit_unlock_up_to if classroom and classroom.unit_unlock_up_to else '' }}">{{ student.display_name }}（ID {{ student.student_id }}・中{{ student.grade }}）</option>
+        {% endfor %}
+      </select>
+    </div>
+    <p class="meta-note teacher-unit-unlock-legacy" id="unit-unlock-legacy-note" hidden>※いまの保存内容は「学習の進みに応じて次の単元を開放する」方式です。別の方式に変えるときは、下の「開始単元」または「全開放」を選んで保存してください。</p>
+    <p class="meta-note" id="unit-unlock-inherit-note" hidden>この生徒は教室のデフォルトに従っています。個別に変える場合は下から選んで保存してください。</p>
+    <p class="meta-note" id="unit-unlock-override-note" hidden>この生徒には個別の単元ロックが保存されています。教室のデフォルトに戻す場合は「個別設定を解除」を押してください。</p>
+    <div class="unit-unlock-options">
+      <label class="unit-unlock-option">
+        <input type="radio" name="unit_unlock_mode" value="up_to" id="unlock_mode_up_to">
+        <span><strong>開始単元（指定した単元まで開放）</strong></span>
+      </label>
+      <label class="unit-unlock-option">
+        <input type="radio" name="unit_unlock_mode" value="full" id="unlock_mode_full">
+        <span><strong>全開放（全ての単元を開放）</strong></span>
+      </label>
+    </div>
+    <div class="unit-unlock-select-wrap" id="unit-unlock-select-wrap" style="display:none">
+      <label for="unit_unlock_up_to">開始単元（この単元まで学習可能）</label>
+      <select name="unit_unlock_up_to" id="unit_unlock_up_to">
+        <option value="">選択してください</option>
+        {% for u in all_units %}
+        {% if u.subject == 'math' %}
+        <option value="{{ u.unit_id }}">{{ u.display_name }}（中{{ u.grade - 6 if u.grade else '?' }}）</option>
+        {% endif %}
+        {% endfor %}
+      </select>
+    </div>
+    <div class="unit-unlock-actions">
+      <button type="submit" class="primary-button unit-unlock-submit">保存</button>
+      <button type="button" class="btn-secondary unit-unlock-clear-override" id="unit-unlock-clear-override" hidden>個別設定を解除</button>
+    </div>
+  </form>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var form = document.getElementById('teacher-unit-unlock-form');
+  if (!form) return;
+  var target = document.getElementById('unlock_target');
+  var wrap = document.getElementById('unit-unlock-select-wrap');
+  var sel = document.getElementById('unit_unlock_up_to');
+  var rUp = document.getElementById('unlock_mode_up_to');
+  var rFull = document.getElementById('unlock_mode_full');
+  var legacyNote = document.getElementById('unit-unlock-legacy-note');
+  var inheritNote = document.getElementById('unit-unlock-inherit-note');
+  var overrideNote = document.getElementById('unit-unlock-override-note');
+  var clearBtn = document.getElementById('unit-unlock-clear-override');
+
+  function syncWrapAndRequired() {
+    var show = rUp.checked;
+    if (wrap) wrap.style.display = show ? '' : 'none';
+    if (sel) sel.required = show;
+  }
+
+  function applyModeToRadios(mode, upTo) {
+    rUp.checked = mode === 'up_to';
+    rFull.checked = mode === 'full';
+    if (sel) {
+      if (mode === 'up_to' && upTo) sel.value = upTo;
+      else sel.value = '';
+    }
+    syncWrapAndRequired();
+  }
+
+  function syncFromTarget() {
+    var opt = target.selectedOptions[0];
+    if (!opt) return;
+    var isClassroom = target.value === '__classroom__';
+    var effMode = (isClassroom ? opt.dataset.cm : opt.dataset.effectiveMode) || 'progressive';
+    var effUp = (isClassroom ? opt.dataset.cu : opt.dataset.effectiveUpTo) || '';
+    var hasOv = opt.dataset.hasOverride === '1';
+
+    legacyNote.hidden = effMode !== 'progressive';
+    inheritNote.hidden = isClassroom || hasOv;
+    overrideNote.hidden = isClassroom || !hasOv;
+    clearBtn.hidden = isClassroom || !hasOv;
+
+    if (effMode === 'full') {
+      applyModeToRadios('full', '');
+    } else if (effMode === 'up_to' && effUp) {
+      applyModeToRadios('up_to', effUp);
+    } else {
+      rUp.checked = false;
+      rFull.checked = false;
+      if (sel) sel.value = '';
+      if (wrap) wrap.style.display = 'none';
+      if (sel) sel.required = false;
+    }
+  }
+
+  target.addEventListener('change', syncFromTarget);
+  rUp.addEventListener('change', syncWrapAndRequired);
+  rFull.addEventListener('change', syncWrapAndRequired);
+
+  form.addEventListener('submit', function(ev) {
+    if (!rUp.checked && !rFull.checked) {
+      ev.preventDefault();
+      alert('「開始単元」または「全開放」を選んでください。');
+      return;
+    }
+    if (target.value === '__classroom__') {
+      form.action = '/teachers/unit_unlock';
+    } else {
+      form.action = '/teachers/students/' + target.value + '/unit_unlock';
+    }
+  });
+
+  if (clearBtn) {
+    clearBtn.addEventListener('click', function(ev) {
+      ev.preventDefault();
+      var sid = target.value;
+      if (sid === '__classroom__') return;
+      var fd = new FormData();
+      fd.append('unit_unlock_mode', 'inherit');
+      fd.append('unit_unlock_up_to', '');
+      fetch('/teachers/students/' + sid + '/unit_unlock', { method: 'POST', body: fd })
+        .then(function(r) {
+          if (!r.ok) throw new Error('解除に失敗しました');
+          window.location.href = '/teachers/dashboard#teacher-unit-unlock';
+        })
+        .catch(function(e) { alert(e.message); });
+    });
+  }
+
+  syncFromTarget();
+});
+</script>
+
+<section class="card add-student-card">
+  <p class="section-label">生徒管理</p>
+  <h2>生徒を追加</h2>
+  <p class="meta-note">同じ教室（{{ classroom.classroom_name if classroom else "-" }}）に新しい生徒を登録します。PINは自動生成されます（空欄の場合）。</p>
+  <form class="add-student-form" id="add-student-form">
+    <div class="add-student-fields">
+      <input type="text" name="display_name" placeholder="生徒の名前" required maxlength="100" autocomplete="off">
+      <select name="grade" required>
+        <option value="">学年を選ぶ</option>
+        <option value="7">中1</option>
+        <option value="8">中2</option>
+        <option value="9">中3</option>
+      </select>
+      <input type="text" name="pin" placeholder="PIN（4桁・空欄=自動）" maxlength="4" pattern="\d{4}" inputmode="numeric" autocomplete="off">
+      <button type="submit" class="primary-button">追加する</button>
+    </div>
+    <div class="add-student-result" id="add-student-result" style="display:none"></div>
+  </form>
+</section>
+
+<section class="card teacher-dashboard-panel">
+  <p class="section-label">Students</p>
+  <h2>自教室の生徒一覧</h2>
+  <div class="teacher-student-list">
+    {% for student in students %}
+    {% set state = states.get(student.student_id) %}
+    {% set metric = metrics.get(student.student_id) %}
+    {% set ai = teacher_ai.get(student.student_id) %}
+    {% set options = problem_options.get(student.student_id, []) %}
+    <details class="teacher-student-card{% if metric and metric.teacher_intervention_needed %} teacher-student-card--alert{% endif %}" id="student-{{ student.student_id }}">
+      <summary class="teacher-student-card__summary">
+        <span class="teacher-student-card__summary-name">{{ student.display_name }}</span>
+        <span class="teacher-student-card__summary-id">#{{ student.student_id }}</span>
+        <span class="teacher-student-meta teacher-student-meta--compact">
+          <span>中{{ student.grade }}</span>
+          <span>{{ "有効" if student.is_active else "無効" }}</span>
+          <span>{{ unit_labels.get(state.current_unit, state.current_unit) if state and state.current_unit else "単元未設定" }}</span>
+          {% if metric and metric.teacher_intervention_needed %}<span class="teacher-student-meta__alert">要声かけ</span>{% endif %}
+        </span>
+      </summary>
+      <div class="teacher-student-card__body">
+      <div class="teacher-student-card__links">
+        <a href="/teachers/students/{{ student.student_id }}/today_progress" class="wr-report-link">📅 今日の進捗</a>
+        <a href="/teachers/students/{{ student.student_id }}/weekly_report" class="wr-report-link">📊 週次レポート</a>
+        <a href="#teacher-unit-unlock" class="wr-report-link">単元ロック（設定は上部）</a>
+      </div>
+      {% if metric and metric.teacher_intervention_needed %}
+      <div class="student-alert-banner">
+        <span class="student-alert-banner__icon">🚨</span>
+        <div class="student-alert-banner__body">
+          <strong>今すぐ声かけをしてください</strong>
+          <p>{{ metric.intervention_reason or 'AIが短時間の講師介入が必要と判断しました。' }}</p>
+        </div>
+        <span class="student-alert-banner__tag">{{ intervention_labels_ja.get(metric.recommended_intervention, metric.recommended_intervention) if metric else '' }}</span>
+      </div>
+      {% endif %}
+
+      <div class="teacher-student-grid">
+        <section class="teacher-info-block teacher-info-block--primary">
+          <h4>重要情報</h4>
+          <div class="info-pairs">
+            <div>
+              <span class="meta-note">学習現在地</span>
+              <strong>{{ metric.current_position_summary or "-" if metric else "-" }}</strong>
+            </div>
+            <div>
+              <span class="meta-note">今</span>
+              <strong>{{ metric.current_full_unit_display_name or "-" if metric else "-" }}</strong>
+            </div>
+            <div>
+              <span class="meta-note">前</span>
+              <strong>{{ metric.prerequisite_full_unit_display_name or "-" if metric else "-" }}</strong>
+            </div>
+            <div>
+              <span class="meta-note">次</span>
+              <strong>{{ metric.next_full_unit_display_name or "-" if metric else "-" }}</strong>
+            </div>
+            <div>
+              <span class="meta-note">診断</span>
+              <strong>{{ diagnostic_labels_ja.get(metric.diagnostic_label, metric.diagnostic_label) if metric else "-" }}</strong>
+            </div>
+            <div>
+              <span class="meta-note">推奨ルート</span>
+              <strong>{{ route_labels_ja.get(metric.recommended_route, metric.recommended_route) if metric else "-" }}</strong>
+            </div>
+            <div>
+              <span class="meta-note">推奨介入</span>
+              <strong>{{ intervention_labels_ja.get(metric.recommended_intervention, metric.recommended_intervention) if metric else "-" }}</strong>
+            </div>
+            <div>
+              <span class="meta-note">要講師介入</span>
+              <strong>{{ "はい" if metric and metric.teacher_intervention_needed else "いいえ" }}</strong>
+            </div>
+          </div>
+          {% if metric %}
+          <div class="teacher-insight-strip">
+            <span>習熟度 {{ state.mastery_score if state else "-" }}</span>
+            <span>難易度 Lv{{ state.current_level if state else "-" }}</span>
+            <span>苦手候補 {{ unit_labels.get(state.weak_unit, state.weak_unit) if state and state.weak_unit else "-" }}</span>
+          </div>
+          <div class="teacher-ai-summary" id="ai-summary-{{ student.student_id }}">
+            <div class="teacher-ai-summary__head">
+              <strong>AI要約</strong>
+              <button type="button" class="btn-summary-refresh"
+                hx-post="/teachers/students/{{ student.student_id }}/ai_summary/refresh"
+                hx-target="#ai-summary-{{ student.student_id }}"
+                hx-swap="outerHTML"
+                hx-indicator="#ai-summary-indicator-{{ student.student_id }}">AI要約を更新</button>
+            </div>
+            {% if ai and ai.summary %}
+            <p>{{ ai.summary | e }}</p>
+            <div class="meta-note">最終更新：{{ ai.updated_at or "—" }}</div>
+            {% else %}
+            <p class="meta-note">未生成です。「AI要約を更新」で生成できます。</p>
+            {% endif %}
+            <span id="ai-summary-indicator-{{ student.student_id }}" class="htmx-indicator">更新中…</span>
+          </div>
+
+          {# ===== つまずきマップ ===== #}
+          {% set emap = error_maps.get(student.student_id, {}) %}
+          {% if emap %}
+          <div class="stumble-map">
+            <strong class="stumble-map-title">つまずきマップ（直近20問）</strong>
+            <div class="stumble-map-badges">
+              {% for pattern, cnt in emap.items() | sort(attribute='1', reverse=true) %}
+              <span class="stumble-badge stumble-{{ pattern.replace('_','-') }} {% if cnt >= 3 %}stumble-alert{% endif %}">
+                {{ {
+                  'sign_error': '符号エラー',
+                  'arithmetic_error': '計算ミス',
+                  'formula_setup_error': '式の立て方',
+                  'variable_handling_error': '文字の扱い',
+                  'operation_confusion': '演算混同',
+                  'careless_error': 'ケアレスミス',
+                  'comprehension_gap': '理解不足',
+                  'prerequisite_gap': '前提知識',
+                  'absolute_value_error': '絶対値エラー',
+                  'unknown_error': 'その他'
+                }.get(pattern, pattern) }} ×{{ cnt }}{% if cnt >= 3 %} ⚠{% endif %}
+              </span>
+              {% endfor %}
+            </div>
+          </div>
+          {% endif %}
+          {# ===== /つまずきマップ ===== #}
+          {% endif %}
+        </section>
+
+        <section class="teacher-info-block teacher-info-block--actions">
+          <h4>操作</h4>
+          <div class="teacher-action-group">
+            <strong>次の問題を指定</strong>
+            <div class="meta-note">
+              {% if state and state.teacher_override_problem_id %}
+              上書き待機中: 問題 #{{ state.teacher_override_problem_id }}
+              {% else %}
+              上書きなし
+              {% endif %}
+            </div>
+            <form class="override-form" data-student-id="{{ student.student_id }}">
+              <select name="problem_id" required>
+                <option value="">問題候補を選択</option>
+                {% for option in options %}
+                <option value="{{ option.problem_id }}" {% if state and state.teacher_override_problem_id == option.problem_id %}selected{% endif %}>{{ option.label }}</option>
+                {% endfor %}
+              </select>
+              {% if not options %}
+              <div class="meta-note">候補問題がまだ算出できていません。</div>
+              {% endif %}
+              <input type="text" name="reason" placeholder="指定理由（任意）">
+              <button type="submit">この問題を指定</button>
+            </form>
+            <div class="meta-note override-status"></div>
+          </div>
+
+          <div class="teacher-action-group">
+            <strong>診断を補正</strong>
+            <div class="meta-note">
+              {% if metric and metric.teacher_annotation.active %}
+              補正中: {{ diagnostic_labels_ja.get(metric.teacher_annotation.diagnostic_correction, metric.teacher_annotation.diagnostic_correction) }}{% if metric.teacher_annotation.expires_at %}（〜{{ metric.teacher_annotation.expires_at }}）{% endif %}
+              {% else %}
+              補正なし
+              {% endif %}
+            </div>
+            <form class="annotation-form" data-student-id="{{ student.student_id }}">
+              <select name="diagnostic_correction" required>
+                <option value="stable_mastery">安定習熟</option>
+                <option value="hint_dependent">ヒント依存</option>
+                <option value="slow_but_correct">時間はかかるが正答</option>
+                <option value="unstable_understanding">理解が不安定</option>
+                <option value="fallback_risk">つまずき再発リスク</option>
+                <option value="prerequisite_gap">前提単元の抜け</option>
+                <option value="in_progress">学習途中</option>
+              </select>
+              <select name="reason_code">
+                <option value="">補正理由を選択</option>
+                <option value="teacher_observed_mastery">講師観察で習熟確認</option>
+                <option value="temporary_state">一時的な状態変化</option>
+                <option value="home_study_reflected">家庭学習の反映</option>
+                <option value="system_misdiagnosis">AI診断のずれ補正</option>
+                <option value="other_teacher_judgment">その他の講師判断</option>
+              </select>
+              <input type="text" name="note" placeholder="補足メモ">
+              <input type="date" name="expires_at">
+              <button type="submit">補正を登録</button>
+            </form>
+            <div class="meta-note annotation-status"></div>
+          </div>
+        </section>
+      </div>
+
+      <details class="teacher-student-details">
+        <summary>詳細を見る</summary>
+        <div class="teacher-student-details__grid">
+          <section class="teacher-info-block">
+            <h4>直近3問</h4>
+            {% if metric and metric.recent_three_results %}
+              {% for result in metric.recent_three_results %}
+              <div>{{ "○" if result.is_correct else "×" }} / {{ unit_labels.get(result.unit_id, result.unit_id) }} / Lv{{ result.difficulty }}</div>
+              {% endfor %}
+            {% else %}
+              <div>-</div>
+            {% endif %}
+          </section>
+
+          <section class="teacher-info-block teacher-info-block--test-history">
+            <h4>テスト履歴</h4>
+            {% set ts_list = student_test_sessions.get(student.student_id, []) %}
+            {% if ts_list %}
+              {% for ts in ts_list %}
+              {% set tm = test_session_meta.get(ts.session_id) %}
+              <div class="test-history-row test-history-row--{{ 'pass' if (ts.score_correct / ts.score_total * 100) >= 80 else ('partial' if (ts.score_correct / ts.score_total * 100) >= 60 else 'fail') }}">
+                <span class="test-scope-badge">{{ test_scope_label(ts.test_scope) }}</span>
+                <span>{{ unit_labels.get(ts.unit_id, ts.unit_id) }}</span>
+                <strong>{{ ts.score_correct }}/{{ ts.score_total }}</strong>
+                <span class="meta-note">{{ ts.started_at.strftime("%m/%d") }}</span>
+                {% if tm %}
+                <span class="meta-note">誤{{ tm.wrong_count }} 未{{ tm.unanswered_count }}{% if tm.time_expired %} 時間切れ{% endif %} あとで解く{{ tm.defer_count }}回{% if tm.time_limit_sec %} / {{ (tm.time_limit_sec // 60) }}分{% endif %}</span>
+                {% endif %}
+              </div>
+              {% endfor %}
+            {% else %}
+              <div>-</div>
+            {% endif %}
+          </section>
+
+          <section class="teacher-info-block">
+            <h4>診断信号</h4>
+            {% if metric %}
+            <div>速度傾向: {{ speed_profile_labels_ja.get(metric.speed_profile, metric.speed_profile) }}</div>
+            <div>戻りリスク: {{ fallback_risk_labels_ja.get(metric.fallback_risk_level, metric.fallback_risk_level) }}</div>
+            <div>ヒント依存: {{ hint_level_labels_ja.get(metric.hint_dependency_level, metric.hint_dependency_level) }}</div>
+            <div>直近信号: 正答率 {{ metric.recent_signal_summary.recent_correct_rate }} / 平均ヒント {{ metric.recent_signal_summary.recent_hint_avg }} / 平均秒 {{ metric.recent_signal_summary.recent_elapsed_avg }}</div>
+            {% else %}
+            <div>-</div>
+            {% endif %}
+          </section>
+
+          <section class="teacher-info-block">
+            <h4>誤答傾向</h4>
+            {% if metric and metric.wrong_tendency %}
+              {% for weak in metric.wrong_tendency %}
+              <div>{{ unit_labels.get(weak.unit_id, weak.unit_id) }} Lv{{ weak.difficulty }}: 誤答{{ weak.wrong_count }} / ヒント正解{{ weak.hinted_correct_count }}</div>
+              {% endfor %}
+            {% else %}
+              <div>-</div>
+            {% endif %}
+          </section>
+
+          <section class="teacher-info-block">
+            <h4>単元別進捗</h4>
+            {% if metric and metric.unit_progress %}
+              {% for item in metric.unit_progress %}
+              <div>{{ item.display_name }}: 習熟度 {{ item.mastery_score }} / 正答率 {{ item.accuracy }}</div>
+              {% endfor %}
+            {% else %}
+              <div>-</div>
+            {% endif %}
+          </section>
+        </div>
+      </details>
+      </div>
+    </details>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="card">
+  <h2>直近履歴</h2>
+  <div class="table-wrap">
+    <table class="history-table">
+      <thead>
+        <tr>
+          <th>時刻</th>
+          <th>生徒</th>
+          <th>単元</th>
+          <th>問題</th>
+          <th>回答</th>
+          <th>ヒント</th>
+          <th>正誤</th>
+          <th>誤答分類</th>
+          <th>介入</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for log, problem, student in logs %}
+        <tr>
+          <td>{{ log.created_at.strftime("%Y-%m-%d %H:%M:%S") }}</td>
+          <td>{{ student.display_name }}</td>
+          <td>{{ unit_labels.get(problem.full_unit_id or problem.unit, problem.full_unit_id or problem.unit) }}</td>
+          <td>#{{ problem.problem_id }}</td>
+          <td>{{ log.answer_payload }}</td>
+          <td>H{{ log.hint_used }}</td>
+          <td>{{ "正解" if log.is_correct else "誤答" }}</td>
+          <td>{{ log.error_pattern or "-" }}</td>
+          <td>{{ log.intervention_type or "-" }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="card">
+  <p class="section-label">テスト</p>
+  <h2>テスト結果 直近一覧</h2>
+  <div class="table-wrap">
+    <table class="history-table">
+      <thead>
+        <tr>
+          <th>日時</th>
+          <th>生徒</th>
+          <th>種別</th>
+          <th>単元</th>
+          <th>正解</th>
+          <th>合計</th>
+          <th>得点率</th>
+          <th>判定</th>
+          <th>誤/未</th>
+          <th>テスト情報</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for ts, stu in classroom_test_sessions %}
+        {% set pct = (ts.score_correct / ts.score_total * 100) | int if ts.score_total > 0 else 0 %}
+        <tr class="test-result-row test-result-row--{{ 'pass' if pct >= 80 else ('partial' if pct >= 60 else 'fail') }}">
+          <td>{{ ts.started_at.strftime("%m/%d %H:%M") }}</td>
+          <td>{{ stu.display_name }}</td>
+          <td>{{ test_scope_label(ts.test_scope) }}</td>
+          <td>{{ unit_labels.get(ts.unit_id, ts.unit_id) }}</td>
+          <td>{{ ts.score_correct }}</td>
+          <td>{{ ts.score_total }}</td>
+          <td>{{ pct }}%</td>
+          <td>{{ "合格" if pct >= 80 else ("もう少し" if pct >= 60 else "要復習") }}</td>
+          {% set tm = test_session_meta.get(ts.session_id) %}
+          <td>{% if tm %}{{ tm.wrong_count }}/{{ tm.unanswered_count }}{% else %}-{% endif %}</td>
+          <td class="meta-note">{% if tm %}{% if tm.time_expired %}時間切れ {% endif %}制限{% if tm.time_limit_sec %} {{ (tm.time_limit_sec // 60) }}分{% else %}-{% endif %}{% if tm.time_spent_sec is not none %} / 使用 {{ (tm.time_spent_sec // 60) }}:{% if (tm.time_spent_sec % 60) < 10 %}0{% endif %}{{ tm.time_spent_sec % 60 }}{% endif %} / あとで解く{{ tm.defer_count }}回{% else %}-{% endif %}</td>
+        </tr>
+        {% else %}
+        <tr><td colspan="10">まだテスト結果がありません。</td></tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</section>
+
+
+<section class="card">
+  <p class="section-label">Listening</p>
+  <h2>リスニング集計（教室）</h2>
+  {% if listening_stats and listening_stats.attempts_week > 0 %}
+  <ul style="list-style:none;padding:0;">
+    <li>実施回数（今週）: <strong>{{ listening_stats.attempts_week }}</strong></li>
+    <li>正答率: {% if listening_stats.accuracy_week is not none %}<strong>{{ (listening_stats.accuracy_week * 100) | int }}%</strong>{% else %}—{% endif %}</li>
+    <li>再生上限まで聞いた割合: {% if listening_stats.replay_limit_rate is not none %}<strong>{{ (listening_stats.replay_limit_rate * 100) | int }}%</strong>{% else %}—{% endif %}</li>
+  </ul>
+  <h3>単元別弱点トップ3</h3>
+  {% if listening_stats.weak_units_top3 %}
+  <ul>
+    {% for w in listening_stats.weak_units_top3 %}
+    <li>{{ w.display_name }} — 正答率 {{ (w.accuracy * 100) | int }}%（{{ w.n }}回）</li>
+    {% endfor %}
+  </ul>
+  {% else %}
+  <p>データがありません。</p>
+  {% endif %}
+  <h3>要介入（リスニング）</h3>
+  {% if listening_stats.teacher_flag_detail %}
+  <ul>
+    {% for row in listening_stats.teacher_flag_detail %}
+    <li>{{ row.display_name }}（ID {{ row.student_id }}）</li>
+    {% endfor %}
+  </ul>
+  {% else %}
+  <p>該当なし</p>
+  {% endif %}
+  {% elif listening_stats %}
+  <p>今週のリスニング実施はまだありません。</p>
+  {% else %}
+  <p>集計を表示できません。</p>
+  {% endif %}
+  {% if classroom %}
+  <p style="margin-top:0.75rem;"><a class="btn-secondary" href="/teachers/listening/stats?classroom_id={{ classroom.classroom_id }}">JSON</a></p>
+  {% endif %}
+</section>
+
+<script>
+  async function postJson(url, payload) {
+    const response = await fetch(url, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
+    });
+    const data = await response.json();
+    if (!response.ok) {
+      throw new Error(data.detail || data.message || "request failed");
+    }
+    return data;
+  }
+
+  if (location.hash && location.hash.startsWith("#student-")) {
+    var d = document.querySelector("details" + location.hash);
+    if (d) d.open = true;
+  }
+
+  document.querySelectorAll(".override-form").forEach((form) => {
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      const studentId = form.dataset.studentId;
+      const status = form.parentElement.querySelector(".override-status");
+      const payload = {
+        problem_id: Number(form.problem_id.value),
+        reason: form.reason.value || null,
+      };
+      try {
+        await postJson(`/teachers/override/${studentId}/next_problem`, payload);
+        status.textContent = "問題指定を登録しました。画面を更新します。";
+        window.location.reload();
+      } catch (error) {
+        status.textContent = `失敗: ${error.message}`;
+      }
+    });
+  });
+
+  document.querySelectorAll(".annotation-form").forEach((form) => {
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      const studentId = form.dataset.studentId;
+      const status = form.parentElement.querySelector(".annotation-status");
+      const payload = {
+        diagnostic_correction: form.diagnostic_correction.value,
+        reason_code: form.reason_code.value || null,
+        note: form.note.value || null,
+        expires_at: form.expires_at.value || null,
+      };
+      try {
+        await postJson(`/teachers/annotation/${studentId}`, payload);
+        status.textContent = "診断補正を登録しました。画面を更新します。";
+        window.location.reload();
+      } catch (error) {
+        status.textContent = `失敗: ${error.message}`;
+      }
+    });
+  });
+
+  // ===== 生徒追加フォーム =====
+  document.getElementById("add-student-form").addEventListener("submit", async (event) => {
+    event.preventDefault();
+    const form = event.target;
+    const result = document.getElementById("add-student-result");
+    const fd = new FormData(form);
+    result.style.display = "none";
+    try {
+      const response = await fetch("/teachers/students/add", { method: "POST", body: fd });
+      const data = await response.json();
+      if (!response.ok) throw new Error(data.detail || "追加に失敗しました");
+      result.innerHTML = `<div class="add-student-success">
+        <strong>${data.display_name}</strong>（生徒ID: ${data.student_id} / 中${data.grade_label || ""}）を追加しました。<br>
+        <span class="add-student-pin-label">初回ログインPIN：</span><code class="add-student-pin">${data.new_pin_once}</code>
+        <span class="meta-note">このPINは一度だけ表示されます。メモしてください。</span>
+      </div>`;
+      result.style.display = "";
+      form.reset();
+    } catch (error) {
+      result.innerHTML = `<div class="add-student-error">失敗: ${error.message}</div>`;
+      result.style.display = "";
+    }
+  });
+</script>
+{% endblock %}

@@ -1,0 +1,323 @@
+{
+  "problems": [
+    {
+      "full_unit_id": "algebraic_expressions_substitution",
+      "unit_id": "algebraic_expressions",
+      "sub_unit": "substitution",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "question_text": "x = 2 のとき、式 3x の値を求めなさい。",
+      "diagram": null,
+      "correct_answer": "6",
+      "hint_1": "3x は 3 × x を表しています。",
+      "hint_2": "x = 2 を代入して 3 × 2 を計算してみましょう。",
+      "explanation_base": "3x に x = 2 を代入します。3 × 2 = 6 となります。",
+      "error_pattern_candidates": [
+        "variable_handling_error",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "advance_with_confidence"
+      ]
+    },
+    {
+      "full_unit_id": "algebraic_expressions_substitution",
+      "unit_id": "algebraic_expressions",
+      "sub_unit": "substitution",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "question_text": "x = 5 のとき、式 x + 4 の値を求めなさい。",
+      "diagram": null,
+      "correct_answer": "9",
+      "hint_1": "x のところに 5 を当てはめて計算します。",
+      "hint_2": "5 + 4 を計算しましょう。",
+      "explanation_base": "x + 4 に x = 5 を代入すると、5 + 4 = 9 となります。",
+      "error_pattern_candidates": [
+        "careless_error",
+        "variable_handling_error"
+      ],
+      "intervention_candidates": [
+        "advance_with_confidence",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "algebraic_expressions_substitution",
+      "unit_id": "algebraic_expressions",
+      "sub_unit": "substitution",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "question_text": "x = 3 のとき、式 2x − 1 の値を求めなさい。",
+      "diagram": null,
+      "correct_answer": "5",
+      "hint_1": "2x = 2 × x として代入します。",
+      "hint_2": "2 × 3 = 6 を先に計算してから、6 − 1 を求めましょう。",
+      "explanation_base": "2x − 1 に x = 3 を代入します。2 × 3 − 1 = 6 − 1 = 5 となります。",
+      "error_pattern_candidates": [
+        "arithmetic_error",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "advance_with_confidence",
+        "retry_with_hint"
+      ]
+    },
+    {
+      "full_unit_id": "algebraic_expressions_substitution",
+      "unit_id": "algebraic_expressions",
+      "sub_unit": "substitution",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "question_text": "x = 4 のとき、式 10 − x の値を求めなさい。",
+      "diagram": null,
+      "correct_answer": "6",
+      "hint_1": "x のところに 4 を代入して引き算をします。",
+      "hint_2": "10 − 4 を計算しましょう。",
+      "explanation_base": "10 − x に x = 4 を代入すると、10 − 4 = 6 となります。",
+      "error_pattern_candidates": [
+        "operation_confusion",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "advance_with_confidence",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "algebraic_expressions_substitution",
+      "unit_id": "algebraic_expressions",
+      "sub_unit": "substitution",
+      "problem_type": "practice",
+      "difficulty": "easy",
+      "question_text": "a = 3 のとき、式 4a + 2 の値を求めなさい。",
+      "diagram": null,
+      "correct_answer": "14",
+      "hint_1": "4a = 4 × a に a = 3 を代入してみましょう。",
+      "hint_2": "4 × 3 = 12 を計算してから、12 + 2 を求めましょう。",
+      "explanation_base": "4a + 2 に a = 3 を代入します。4 × 3 + 2 = 12 + 2 = 14 となります。",
+      "error_pattern_candidates": [
+        "arithmetic_error",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "advance_with_confidence",
+        "retry_with_hint"
+      ]
+    },
+    {
+      "full_unit_id": "algebraic_expressions_substitution",
+      "unit_id": "algebraic_expressions",
+      "sub_unit": "substitution",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "question_text": "x = −3 のとき、式 2x + 5 の値を求めなさい。",
+      "diagram": null,
+      "correct_answer": "-1",
+      "hint_1": "x に負の数 −3 を代入します。2 × (−3) を先に計算しましょう。",
+      "hint_2": "2 × (−3) = −6 なので、−6 + 5 を計算します。",
+      "explanation_base": "2x + 5 に x = −3 を代入します。2 × (−3) + 5 = −6 + 5 = −1 となります。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "retry_with_hint"
+      ]
+    },
+    {
+      "full_unit_id": "algebraic_expressions_substitution",
+      "unit_id": "algebraic_expressions",
+      "sub_unit": "substitution",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "question_text": "x = −2 のとき、式 x² の値を求めなさい。",
+      "diagram": null,
+      "correct_answer": "4",
+      "hint_1": "x² は x × x です。x に −2 を代入して (−2) × (−2) を計算します。",
+      "hint_2": "負の数 × 負の数 の答えは正の数になります。",
+      "explanation_base": "x² に x = −2 を代入します。(−2)² = (−2) × (−2) = 4 となります。符号に注意しましょう。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "formula_setup_error"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "explain_differently"
+      ]
+    },
+    {
+      "full_unit_id": "algebraic_expressions_substitution",
+      "unit_id": "algebraic_expressions",
+      "sub_unit": "substitution",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "question_text": "x = 2 のとき、式 3x² − 4 の値を求めなさい。",
+      "diagram": null,
+      "correct_answer": "8",
+      "hint_1": "x² を先に計算して、それを 3 倍してから −4 します。",
+      "hint_2": "x² = 2² = 4 → 3 × 4 = 12 → 12 − 4 の順に計算しましょう。",
+      "explanation_base": "3x² − 4 に x = 2 を代入します。3 × 2² − 4 = 3 × 4 − 4 = 12 − 4 = 8 となります。",
+      "error_pattern_candidates": [
+        "formula_setup_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "retry_with_hint"
+      ]
+    },
+    {
+      "full_unit_id": "algebraic_expressions_substitution",
+      "unit_id": "algebraic_expressions",
+      "sub_unit": "substitution",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "question_text": "x = 3、y = 2 のとき、式 2x + y の値を求めなさい。",
+      "diagram": null,
+      "correct_answer": "8",
+      "hint_1": "2 つの文字にそれぞれの数を代入します。",
+      "hint_2": "2 × 3 + 2 = ? を計算しましょう。",
+      "explanation_base": "2x + y に x = 3、y = 2 を代入します。2 × 3 + 2 = 6 + 2 = 8 となります。",
+      "error_pattern_candidates": [
+        "variable_handling_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "retry_with_hint"
+      ]
+    },
+    {
+      "full_unit_id": "algebraic_expressions_substitution",
+      "unit_id": "algebraic_expressions",
+      "sub_unit": "substitution",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "question_text": "a = −1、b = 3 のとき、式 ab の値を求めなさい。",
+      "diagram": null,
+      "correct_answer": "-3",
+      "hint_1": "ab は a × b を表します。",
+      "hint_2": "(−1) × 3 の計算をしましょう。負の数 × 正の数 の答えに注意！",
+      "explanation_base": "ab に a = −1、b = 3 を代入します。(−1) × 3 = −3 となります。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "variable_handling_error"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "explain_differently"
+      ]
+    },
+    {
+      "full_unit_id": "algebraic_expressions_substitution",
+      "unit_id": "algebraic_expressions",
+      "sub_unit": "substitution",
+      "problem_type": "practice",
+      "difficulty": "normal",
+      "question_text": "x = −4 のとき、式 −x + 7 の値を求めなさい。",
+      "diagram": null,
+      "correct_answer": "11",
+      "hint_1": "−x は −1 × x と同じです。",
+      "hint_2": "x = −4 のとき、−(−4) = +4 になります。4 + 7 を計算しましょう。",
+      "explanation_base": "−x + 7 に x = −4 を代入します。−(−4) + 7 = 4 + 7 = 11 となります。負号の符号変化に注意しましょう。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "operation_confusion"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "retry_with_hint"
+      ]
+    },
+    {
+      "full_unit_id": "algebraic_expressions_substitution",
+      "unit_id": "algebraic_expressions",
+      "sub_unit": "substitution",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "question_text": "x = −2 のとき、式 2x² + 3x − 1 の値を求めなさい。",
+      "diagram": null,
+      "correct_answer": "1",
+      "hint_1": "まず x² を計算してから、各項を順番に求めましょう。",
+      "hint_2": "x² = (−2)² = 4 → 2×4 = 8、3×(−2) = −6 → 8 + (−6) − 1 = ?",
+      "explanation_base": "2x² + 3x − 1 に x = −2 を代入します。2×(−2)² + 3×(−2) − 1 = 2×4 + (−6) − 1 = 8 − 6 − 1 = 1 となります。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "formula_setup_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "explain_differently",
+        "retry_with_hint"
+      ]
+    },
+    {
+      "full_unit_id": "algebraic_expressions_substitution",
+      "unit_id": "algebraic_expressions",
+      "sub_unit": "substitution",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "question_text": "a = 3、b = −1 のとき、式 a² − 2ab + b² の値を求めなさい。",
+      "diagram": null,
+      "correct_answer": "16",
+      "hint_1": "各項を分けて計算します。a² = 9、2ab = 2×3×(−1) = −6、b² = 1 を求めましょう。",
+      "hint_2": "a² − 2ab + b² = 9 − (−6) + 1 です。−(−6) は +6 になります。",
+      "explanation_base": "a = 3、b = −1 を代入します。a² − 2ab + b² = 9 − 2×3×(−1) + 1 = 9 − (−6) + 1 = 9 + 6 + 1 = 16 となります。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "formula_setup_error"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "explain_differently"
+      ]
+    },
+    {
+      "full_unit_id": "algebraic_expressions_substitution",
+      "unit_id": "algebraic_expressions",
+      "sub_unit": "substitution",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "question_text": "x = −3 のとき、式 −(x + 1)² の値を求めなさい。",
+      "diagram": null,
+      "correct_answer": "-4",
+      "hint_1": "まずカッコ内の x + 1 を計算してから、2乗して、最後に −1 を掛けます。",
+      "hint_2": "x + 1 = −3 + 1 = −2 → (−2)² = 4 → −4",
+      "explanation_base": "−(x + 1)² に x = −3 を代入します。x + 1 = −3 + 1 = −2。(−2)² = 4。−4 となります。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "formula_setup_error",
+        "operation_confusion"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "full_unit_id": "algebraic_expressions_substitution",
+      "unit_id": "algebraic_expressions",
+      "sub_unit": "substitution",
+      "problem_type": "practice",
+      "difficulty": "hard",
+      "question_text": "x = 1/2 のとき、式 4x − 3 の値を求めなさい。",
+      "diagram": null,
+      "correct_answer": "-1",
+      "hint_1": "x = 1/2 を代入するので、4 × 1/2 を先に計算します。",
+      "hint_2": "4 × 1/2 = 2 なので、2 − 3 を計算しましょう。",
+      "explanation_base": "4x − 3 に x = 1/2 を代入します。4 × 1/2 − 3 = 2 − 3 = −1 となります。",
+      "error_pattern_candidates": [
+        "arithmetic_error",
+        "formula_setup_error"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "retry_with_hint"
+      ]
+    }
+  ]
+}

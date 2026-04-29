@@ -1,0 +1,276 @@
+{
+  "problems": [
+    {
+      "unit_id": "algebraic_expressions",
+      "sub_unit": "basic",
+      "difficulty": "easy",
+      "question_text": "文字式の表し方の決まりにしたがって、3 × x を書きなさい。",
+      "correct_answer": "3x",
+      "hint_1": "掛け算の記号（×）を省略して書きます。",
+      "hint_2": "数字を先に、文字をその後に並べましょう。",
+      "explanation_base": "文字式では、乗法の記号「×」を省略し、数字を文字の前に書く決まりがあります。したがって 3x となります。",
+      "error_pattern_candidates": [
+        "variable_handling_error",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "confirm_variable_meaning",
+        "retry_with_hint"
+      ]
+    },
+    {
+      "unit_id": "algebraic_expressions",
+      "sub_unit": "basic",
+      "difficulty": "easy",
+      "question_text": "文字式の表し方の決まりにしたがって、y × 7 を書きなさい。",
+      "correct_answer": "7y",
+      "hint_1": "掛け算の順序が文字が先になっていても、答えを書くときは数字を文字の前に書きます。",
+      "hint_2": "×を省いて、7をyの前に書きましょう。",
+      "explanation_base": "文字の前に数字を書くのが文字式の決まりです。×を省略して 7y となります。",
+      "error_pattern_candidates": [
+        "variable_handling_error",
+        "formula_setup_error"
+      ],
+      "intervention_candidates": [
+        "confirm_variable_meaning",
+        "repeat_same_pattern"
+      ]
+    },
+    {
+      "unit_id": "algebraic_expressions",
+      "sub_unit": "basic",
+      "difficulty": "easy",
+      "question_text": "同類項をまとめて、次の式を計算しなさい。 4a + 5a",
+      "correct_answer": "9a",
+      "hint_1": "同じ文字 a がついている項は、係数（文字の前にある数字）同士を足し算できます。",
+      "hint_2": "(4 + 5) の計算をして、そのうしろに a をつけましょう。",
+      "explanation_base": "同じ文字を持つ項（同類項）は係数同士を計算してまとめます。4 + 5 = 9 なので、9a となります。",
+      "error_pattern_candidates": [
+        "variable_handling_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "confirm_variable_meaning",
+        "separate_terms_visually"
+      ]
+    },
+    {
+      "unit_id": "algebraic_expressions",
+      "sub_unit": "basic",
+      "difficulty": "easy",
+      "question_text": "同類項をまとめて、次の式を計算しなさい。 8x - 2x",
+      "correct_answer": "6x",
+      "hint_1": "同じ文字 x がついている項の引き算です。",
+      "hint_2": "係数の 8 から 2 を引いて、x をつけましょう。",
+      "explanation_base": "同類項の引き算は、係数同士を引きます。8 - 2 = 6 なので、6x となります。",
+      "error_pattern_candidates": [
+        "variable_handling_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "confirm_variable_meaning",
+        "repeat_same_pattern"
+      ]
+    },
+    {
+      "unit_id": "algebraic_expressions",
+      "sub_unit": "basic",
+      "difficulty": "easy",
+      "question_text": "文字式の表し方の決まりにしたがって、a × b を書きなさい。",
+      "correct_answer": "ab",
+      "hint_1": "文字同士の掛け算でも、×の記号を省略して並べて書きます。",
+      "hint_2": "aとbをそのままくっつけて書きましょう。",
+      "explanation_base": "文字同士の乗法でも「×」を省略して並べて書きます。したがって ab となります。",
+      "error_pattern_candidates": [
+        "variable_handling_error",
+        "operation_confusion"
+      ],
+      "intervention_candidates": [
+        "confirm_variable_meaning",
+        "explain_differently"
+      ]
+    },
+    {
+      "unit_id": "algebraic_expressions",
+      "sub_unit": "basic",
+      "difficulty": "normal",
+      "question_text": "文字式の表し方の決まりにしたがって、x × (-1) を書きなさい。",
+      "correct_answer": "-x",
+      "hint_1": "1や-1を文字にかけるとき、文字の前にある「1」は省略する決まりがあります。",
+      "hint_2": "-1x とは書かずに、マイナスの記号だけを書きます。",
+      "explanation_base": "文字式では、係数の 1 や -1 の「1」は省略して書きます。したがって x × (-1) は -1x ではなく -x となります。",
+      "error_pattern_candidates": [
+        "variable_handling_error",
+        "sign_error"
+      ],
+      "intervention_candidates": [
+        "confirm_variable_meaning",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "unit_id": "algebraic_expressions",
+      "sub_unit": "basic",
+      "difficulty": "normal",
+      "question_text": "文字式の表し方の決まりにしたがって、a × a × a を書きなさい。",
+      "correct_answer": "a^3",
+      "hint_1": "同じ文字の掛け算は、文字の右上に小さく数字（指数）を書いて表します。",
+      "hint_2": "a が3つ掛けられているので、aの右上に3を書きます。",
+      "explanation_base": "同じ文字を繰り返し掛ける場合は、累乗の指数を使って a^3 のように表します。",
+      "error_pattern_candidates": [
+        "variable_handling_error",
+        "operation_confusion"
+      ],
+      "intervention_candidates": [
+        "confirm_variable_meaning",
+        "repeat_same_pattern"
+      ]
+    },
+    {
+      "unit_id": "algebraic_expressions",
+      "sub_unit": "basic",
+      "difficulty": "normal",
+      "question_text": "同類項をまとめて、次の式を簡単にしなさい。 3x + 4 + 2x - 7",
+      "correct_answer": "5x-3",
+      "hint_1": "文字が含まれる項（3x と +2x）と、数字だけの項（+4 と -7）をそれぞれまとめましょう。",
+      "hint_2": "3x + 2x を計算した結果と、4 - 7 を計算した結果を並べます。",
+      "explanation_base": "同類項である文字の項と数の項をそれぞれ別にまとめます。3x + 2x = 5x、4 - 7 = -3 となるので、5x - 3 になります。",
+      "error_pattern_candidates": [
+        "variable_handling_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "separate_terms_visually",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "unit_id": "algebraic_expressions",
+      "sub_unit": "basic",
+      "difficulty": "normal",
+      "question_text": "文字式の表し方の決まりにしたがって、y × x × 5 を書きなさい。",
+      "correct_answer": "5xy",
+      "hint_1": "数字を文字の前に書き、文字はアルファベット順に並べる決まりがあります。",
+      "hint_2": "5を一番前に書き、x、yの順番に並べましょう。",
+      "explanation_base": "数字は文字の前に書き、複数の文字はアルファベット順に書くのが文字式の決まりです。したがって 5xy となります。",
+      "error_pattern_candidates": [
+        "variable_handling_error",
+        "careless_error"
+      ],
+      "intervention_candidates": [
+        "confirm_variable_meaning",
+        "explain_differently"
+      ]
+    },
+    {
+      "unit_id": "algebraic_expressions",
+      "sub_unit": "basic",
+      "difficulty": "normal",
+      "question_text": "次の式を、文字式の表し方の決まりにしたがって書きなさい。 a ÷ 3",
+      "correct_answer": "a/3",
+      "hint_1": "割り算の記号（÷）は使わずに、分数の形で表します。",
+      "hint_2": "割る数である 3 が分母になり、割られる数である a が分子になります。",
+      "explanation_base": "文字式では、除法の記号 ÷ を使わずに分数で表します。割る数が分母にくるため、a/3（または 1/3a）となります。",
+      "error_pattern_candidates": [
+        "variable_handling_error",
+        "operation_confusion"
+      ],
+      "intervention_candidates": [
+        "confirm_variable_meaning",
+        "retry_with_hint"
+      ]
+    },
+    {
+      "unit_id": "algebraic_expressions",
+      "sub_unit": "basic",
+      "difficulty": "hard",
+      "question_text": "同類項をまとめて、次の式を簡単にしなさい。 -2a + 5b + 6a - 8b",
+      "correct_answer": "4a-3b",
+      "hint_1": "a の項（-2a と +6a）と、b の項（+5b と -8b）をそれぞれまとめます。",
+      "hint_2": "-2a + 6a を計算した結果と、5b - 8b を計算した結果を並べましょう。",
+      "explanation_base": "文字が同じ同類項ごとにまとめます。a の項は -2a + 6a = 4a、b の項は 5b - 8b = -3b となるため、4a - 3b になります。",
+      "error_pattern_candidates": [
+        "variable_handling_error",
+        "sign_error"
+      ],
+      "intervention_candidates": [
+        "separate_terms_visually",
+        "review_sign_rules"
+      ]
+    },
+    {
+      "unit_id": "algebraic_expressions",
+      "sub_unit": "basic",
+      "difficulty": "hard",
+      "question_text": "次の式を、文字式の表し方の決まりにしたがって書きなさい。 (x + y) × (-3)",
+      "correct_answer": "-3(x+y)",
+      "hint_1": "かっこを使った式と数の掛け算でも、数字を一番前に書きます。",
+      "hint_2": "×の記号を省き、-3 をかっこの前に書きましょう。",
+      "explanation_base": "かっこのある式と数の乗法では、数をかっこの前に書き、×を省略します。したがって -3(x+y) となります。",
+      "error_pattern_candidates": [
+        "variable_handling_error",
+        "formula_setup_error"
+      ],
+      "intervention_candidates": [
+        "confirm_variable_meaning",
+        "explain_differently"
+      ]
+    },
+    {
+      "unit_id": "algebraic_expressions",
+      "sub_unit": "basic",
+      "difficulty": "hard",
+      "question_text": "次の式を計算しなさい。 3(2x - 1) - 4x",
+      "correct_answer": "2x-3",
+      "hint_1": "まずはかっこを外すために、3 をかっこの中の 2x と -1 の両方に掛けましょう（分配法則）。",
+      "hint_2": "かっこを外すと 6x - 3 になります。そのあとに -4x と同類項をまとめましょう。",
+      "explanation_base": "分配法則を使ってかっこを外すと、3 × 2x + 3 × (-1) - 4x = 6x - 3 - 4x となります。次に同類項をまとめて、6x - 4x - 3 = 2x - 3 になります。",
+      "error_pattern_candidates": [
+        "variable_handling_error",
+        "arithmetic_error",
+        "sign_error"
+      ],
+      "intervention_candidates": [
+        "separate_terms_visually",
+        "step_by_step_equation_check"
+      ]
+    },
+    {
+      "unit_id": "algebraic_expressions",
+      "sub_unit": "basic",
+      "difficulty": "hard",
+      "question_text": "次の式を計算しなさい。 (8x - 6) ÷ 2",
+      "correct_answer": "4x-3",
+      "hint_1": "かっこの中のすべての項を 2 で割ります（分配法則）。",
+      "hint_2": "8x ÷ 2 と -6 ÷ 2 をそれぞれ計算しましょう。",
+      "explanation_base": "それぞれの項を直接割ります。(8x ÷ 2) - (6 ÷ 2) = 4x - 3 になります。除法を乗法に直して (8x - 6) × 1/2 と計算しても同じ結果になります。",
+      "error_pattern_candidates": [
+        "variable_handling_error",
+        "operation_confusion"
+      ],
+      "intervention_candidates": [
+        "confirm_variable_meaning",
+        "step_by_step_equation_check"
+      ]
+    },
+    {
+      "unit_id": "algebraic_expressions",
+      "sub_unit": "basic",
+      "difficulty": "hard",
+      "question_text": "次の式を計算しなさい。 - (a - 5) + 2(3a + 1)",
+      "correct_answer": "5a+7",
+      "hint_1": "かっこの前にあるマイナスは、-1 が掛けられているのと同じです。それぞれの項の符号を変えてかっこを外しましょう。",
+      "hint_2": "かっこを外すと -a + 5 + 6a + 2 になります。同類項をまとめましょう。",
+      "explanation_base": "分配法則を使ってかっこを外します。- (a - 5) は符号が反転して -a + 5 になり、2(3a + 1) は 6a + 2 になります。合わせて -a + 5 + 6a + 2 となり、同類項を整理すると 5a + 7 になります。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "variable_handling_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "review_sign_rules",
+        "step_by_step_equation_check"
+      ]
+    }
+  ]
+}

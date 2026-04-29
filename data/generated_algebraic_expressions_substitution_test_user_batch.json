@@ -1,0 +1,304 @@
+{
+  "problems": [
+    {
+      "full_unit_id": "algebraic_expressions_substitution",
+      "unit_id": "algebraic_expressions",
+      "sub_unit": "substitution",
+      "problem_type": "mini_test",
+      "test_scope": "mini_test",
+      "difficulty": "easy",
+      "question_text": "x = 3 のとき、式 5x の値を求めなさい。",
+      "diagram": null,
+      "correct_answer": "15",
+      "explanation_base": "5x は 5 × x を表します。x に 3 を代入して、5 × 3 = 15 となります。",
+      "error_pattern_candidates": [
+        "careless_error",
+        "variable_handling_error"
+      ],
+      "intervention_candidates": [
+        "advance_with_confidence",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "algebraic_expressions_substitution",
+      "unit_id": "algebraic_expressions",
+      "sub_unit": "substitution",
+      "problem_type": "mini_test",
+      "test_scope": "mini_test",
+      "difficulty": "easy",
+      "question_text": "x = -2 のとき、式 4 - x の値を求めなさい。",
+      "diagram": null,
+      "correct_answer": "6",
+      "explanation_base": "x に -2 を代入します。4 - (-2) = 4 + 2 = 6 となります。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "operation_confusion"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "explain_differently"
+      ]
+    },
+    {
+      "full_unit_id": "algebraic_expressions_substitution",
+      "unit_id": "algebraic_expressions",
+      "sub_unit": "substitution",
+      "problem_type": "mini_test",
+      "test_scope": "mini_test",
+      "difficulty": "normal",
+      "question_text": "a = -3 のとき、式 a^2 の値を求めなさい。",
+      "diagram": null,
+      "correct_answer": "9",
+      "explanation_base": "a^2 は a × a を表します。(-3) × (-3) = 9 となります。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "comprehension_gap"
+      ],
+      "intervention_candidates": [
+        "retry_with_hint",
+        "explain_differently"
+      ]
+    },
+    {
+      "full_unit_id": "algebraic_expressions_substitution",
+      "unit_id": "algebraic_expressions",
+      "sub_unit": "substitution",
+      "problem_type": "mini_test",
+      "test_scope": "mini_test",
+      "difficulty": "normal",
+      "question_text": "x = 2, y = -5 のとき、式 3x + 2y の値を求めなさい。",
+      "diagram": null,
+      "correct_answer": "-4",
+      "explanation_base": "x に 2、y に -5 を代入します。3 × 2 + 2 × (-5) = 6 - 10 = -4 となります。",
+      "error_pattern_candidates": [
+        "arithmetic_error",
+        "sign_error"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "reinforce_same_pattern"
+      ]
+    },
+    {
+      "full_unit_id": "algebraic_expressions_substitution",
+      "unit_id": "algebraic_expressions",
+      "sub_unit": "substitution",
+      "problem_type": "mini_test",
+      "test_scope": "mini_test",
+      "difficulty": "hard",
+      "question_text": "x = -4 のとき、式 -x^2 + 3x の値を求めなさい。",
+      "diagram": null,
+      "correct_answer": "-28",
+      "explanation_base": "x に -4 を代入します。-(-4)^2 + 3 × (-4) = -(16) - 12 = -16 - 12 = -28 となります。累乗の計算と符号に注意しましょう。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "operation_confusion"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "teacher_intervention_needed"
+      ]
+    },
+    {
+      "full_unit_id": "algebraic_expressions_substitution",
+      "unit_id": "algebraic_expressions",
+      "sub_unit": "substitution",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "easy",
+      "question_text": "x = 5 のとき、式 2x + 1 の値を求めなさい。",
+      "diagram": null,
+      "correct_answer": "11",
+      "explanation_base": "x に 5 を代入します。2 × 5 + 1 = 10 + 1 = 11 となります。",
+      "error_pattern_candidates": [
+        "careless_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "advance_with_confidence",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "algebraic_expressions_substitution",
+      "unit_id": "algebraic_expressions",
+      "sub_unit": "substitution",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "easy",
+      "question_text": "a = -4 のとき、式 12/a の値を求めなさい。",
+      "diagram": null,
+      "correct_answer": "-3",
+      "explanation_base": "a に -4 を代入します。12 / (-4) = -3 となります。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "reinforce_same_pattern",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "algebraic_expressions_substitution",
+      "unit_id": "algebraic_expressions",
+      "sub_unit": "substitution",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "easy",
+      "question_text": "y = -3 のとき、式 -5y の値を求めなさい。",
+      "diagram": null,
+      "correct_answer": "15",
+      "explanation_base": "y に -3 を代入します。-5 × (-3) = 15 となります。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "variable_handling_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "retry_with_hint"
+      ]
+    },
+    {
+      "full_unit_id": "algebraic_expressions_substitution",
+      "unit_id": "algebraic_expressions",
+      "sub_unit": "substitution",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "normal",
+      "question_text": "x = 1/2 のとき、式 4x - 3 の値を求めなさい。",
+      "diagram": null,
+      "correct_answer": "-1",
+      "explanation_base": "x に 1/2 を代入します。4 × (1/2) - 3 = 2 - 3 = -1 となります。",
+      "error_pattern_candidates": [
+        "prerequisite_gap",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "fallback_prerequisite",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "algebraic_expressions_substitution",
+      "unit_id": "algebraic_expressions",
+      "sub_unit": "substitution",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "normal",
+      "question_text": "a = -2 のとき、式 -a^3 の値を求めなさい。",
+      "diagram": null,
+      "correct_answer": "8",
+      "explanation_base": "まず a^3 を計算すると、(-2)^3 = -8 です。したがって、-(-8) = 8 となります。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "comprehension_gap"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "algebraic_expressions_substitution",
+      "unit_id": "algebraic_expressions",
+      "sub_unit": "substitution",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "normal",
+      "question_text": "x = -3, y = 4 のとき、式 -2x + y の値を求めなさい。",
+      "diagram": null,
+      "correct_answer": "10",
+      "explanation_base": "x に -3、y に 4 を代入します。-2 × (-3) + 4 = 6 + 4 = 10 となります。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "reinforce_same_pattern",
+        "retry_with_hint"
+      ]
+    },
+    {
+      "full_unit_id": "algebraic_expressions_substitution",
+      "unit_id": "algebraic_expressions",
+      "sub_unit": "substitution",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "normal",
+      "question_text": "x = -5, y = 2 のとき、式 x^2 - y^2 の値を求めなさい。",
+      "diagram": null,
+      "correct_answer": "21",
+      "explanation_base": "x に -5、y に 2 を代入します。(-5)^2 - 2^2 = 25 - 4 = 21 となります。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "explain_differently"
+      ]
+    },
+    {
+      "full_unit_id": "algebraic_expressions_substitution",
+      "unit_id": "algebraic_expressions",
+      "sub_unit": "substitution",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "hard",
+      "question_text": "x = -2 のとき、式 x^2 - 3x + 2 の値を求めなさい。",
+      "diagram": null,
+      "correct_answer": "12",
+      "explanation_base": "x に -2 を代入します。(-2)^2 - 3 × (-2) + 2 = 4 - (-6) + 2 = 4 + 6 + 2 = 12 となります。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "operation_confusion"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "teacher_intervention_needed"
+      ]
+    },
+    {
+      "full_unit_id": "algebraic_expressions_substitution",
+      "unit_id": "algebraic_expressions",
+      "sub_unit": "substitution",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "hard",
+      "question_text": "a = -3, b = -4 のとき、式 (2a - b) / 5 の値を求めなさい。",
+      "diagram": null,
+      "correct_answer": "-2/5",
+      "explanation_base": "分子を計算すると、2 × (-3) - (-4) = -6 + 4 = -2 となります。したがって、式の値は -2/5 になります。",
+      "error_pattern_candidates": [
+        "sign_error",
+        "arithmetic_error"
+      ],
+      "intervention_candidates": [
+        "explain_differently",
+        "slow_down_and_confirm"
+      ]
+    },
+    {
+      "full_unit_id": "algebraic_expressions_substitution",
+      "unit_id": "algebraic_expressions",
+      "sub_unit": "substitution",
+      "problem_type": "unit_test",
+      "test_scope": "unit_test",
+      "difficulty": "hard",
+      "question_text": "x = 2, y = -3 のとき、式 3(x - 2y) - 2(2x - 3y) の値を求めなさい。",
+      "diagram": null,
+      "correct_answer": "-2",
+      "explanation_base": "まず式を分配法則を使って展開し、簡単にします。3x - 6y - 4x + 6y = -x となります。ここに x = 2 を代入すると、-2 となります。",
+      "error_pattern_candidates": [
+        "variable_handling_error",
+        "formula_setup_error"
+      ],
+      "intervention_candidates": [
+        "slow_down_and_confirm",
+        "teacher_intervention_needed"
+      ]
+    }
+  ]
+}

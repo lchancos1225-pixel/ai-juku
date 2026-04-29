@@ -1,0 +1,349 @@
+﻿{% extends "base.html" %}
+{% block content %}
+<style>
+.login-student-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 10px;
+  margin: 12px 0 16px;
+}
+.login-student-btn {
+  padding: 14px 8px;
+  border: 2px solid #c7d2fe;
+  border-radius: 14px;
+  background: #f0f4ff;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #3730a3;
+  cursor: pointer;
+  text-align: center;
+  transition: background 0.15s, border-color 0.15s, transform 0.1s;
+  touch-action: manipulation;
+}
+.login-student-btn:hover, .login-student-btn:active {
+  background: #e0e7ff;
+  border-color: #6366f1;
+  transform: scale(1.04);
+}
+.login-back-btn {
+  background: none;
+  border: none;
+  color: #6366f1;
+  font-size: 0.9rem;
+  cursor: pointer;
+  padding: 4px 0;
+  margin-top: 4px;
+}
+.login-pin-note {
+  font-size: 0.8rem;
+  color: #64748b;
+  margin: 4px 0 10px;
+}
+</style>
+
+<section class="login-home">
+  <a class="owner-dial-link" href="/login/owner" aria-label="オーナーログイン">⚙</a>
+
+  {# ===== Step 1: 教室コード入力 ===== #}
+  <section class="card login-card login-card-main" id="panel-code" hidden>
+    <p class="section-label">AI塾 QRelDo</p>
+    <h2>Adaptive Learning Maker</h2>
+    <div class="result-box wrong" id="err-code" hidden></div>
+    <form class="answer-form" id="form-code" novalidate>
+      <label class="field-label">教室コード</label>
+      <input type="text" id="input-code" autocomplete="username" maxlength="16"
+             placeholder="例: CLASSROOM1" style="text-transform:uppercase; letter-spacing: 0.1em;">
+      <p class="field-error" id="code-err" hidden></p>
+      <button type="submit" id="btn-code-submit">次へ →</button>
+    </form>
+    <p class="login-alt"><a href="/login?role=teacher">教師の方はこちら</a></p>
+  </section>
+
+  {# ===== Step 2: 生徒名タップ ===== #}
+  <section class="card login-card login-card-main" id="panel-students" hidden>
+    <p class="section-label" id="p2-label">教室名</p>
+    <h2>なまえをタップ！</h2>
+    <div class="login-student-grid" id="student-grid"></div>
+    <button type="button" class="login-back-btn" id="btn-back-to-code">← 教室コードを変える</button>
+  </section>
+
+  {# ===== Step 3: PIN入力 ===== #}
+  <section class="card login-card login-card-main" id="panel-pin" hidden>
+    <p class="section-label">ログイン</p>
+    <h2 id="p3-name">—</h2>
+    <div class="result-box wrong" id="err-pin" hidden></div>
+    <form class="answer-form" id="form-pin" novalidate>
+      <label class="field-label">PIN（設定していなければ空欄でOK）</label>
+      <input type="password" id="input-pin" inputmode="numeric" maxlength="4"
+             autocomplete="current-password" placeholder="空欄でもOK">
+      <p class="login-pin-note">PINを設定していない場合は何も入力せずにログインを押してください。</p>
+      <label class="login-remember">
+        <input type="checkbox" id="chk-remember"> この端末に記憶する
+      </label>
+      <button type="submit">ログイン 🚀</button>
+    </form>
+    <button type="button" class="login-back-btn" id="btn-back-to-students">← 名前を選び直す</button>
+  </section>
+
+  {# ===== クイックログイン（記憶済み） ===== #}
+  <section class="card login-card login-card-main" id="panel-quick" hidden>
+    <p class="section-label">おかえりなさい 👋</p>
+    <h2 id="q-name">—</h2>
+    <p class="meta-note" id="q-classroom">—</p>
+    <div class="result-box wrong" id="err-quick" hidden></div>
+    <form class="answer-form" id="form-quick" novalidate>
+      <label class="field-label">PIN（空欄でもOK）</label>
+      <input type="password" id="q-pin" inputmode="numeric" maxlength="4"
+             autocomplete="current-password" placeholder="空欄でもOK">
+      <button type="submit">ログイン 🚀</button>
+    </form>
+    <p class="login-alt">
+      <button type="button" class="link-button" id="btn-other-account">別のアカウントでログイン</button>
+    </p>
+  </section>
+
+  {# ===== 教師ログイン（変更なし） ===== #}
+  <section class="card login-card login-card-main" id="login-panel-teacher" hidden>
+    <p class="section-label">教師ログイン</p>
+    <h2>教室・教師IDでログイン</h2>
+    <div class="result-box wrong" id="err-teacher" hidden></div>
+    <form class="answer-form" id="form-teacher" novalidate>
+      <label class="field-label">教室コード</label>
+      <input type="text" name="classroom_code" id="tf-code" autocomplete="username" maxlength="8">
+      <p class="field-error" id="tf-err-code" hidden></p>
+      <label class="field-label">教師ID</label>
+      <input type="text" name="identifier" id="tf-id" autocomplete="username">
+      <p class="field-error" id="tf-err-id" hidden></p>
+      <label class="field-label">パスワード</label>
+      <input type="password" name="password" id="tf-pass" autocomplete="current-password">
+      <p class="field-error" id="tf-err-pass" hidden></p>
+      <button type="submit">ログイン</button>
+    </form>
+    <p class="login-alt"><a href="/login">生徒の方はこちら</a></p>
+  </section>
+</section>
+
+<script>
+(function () {
+  var LS_KEY = "qreldo_user";
+  var isTeacher = new URLSearchParams(location.search).get("role") === "teacher";
+
+  var state = { classroom_code: "", classroom_name: "", student_name: "" };
+
+  var panelCode     = document.getElementById("panel-code");
+  var panelStudents = document.getElementById("panel-students");
+  var panelPin      = document.getElementById("panel-pin");
+  var panelQuick    = document.getElementById("panel-quick");
+  var panelTeacher  = document.getElementById("login-panel-teacher");
+
+  function showOnly(el) {
+    [panelCode, panelStudents, panelPin, panelQuick, panelTeacher].forEach(function (p) {
+      p.hidden = true;
+    });
+    el.hidden = false;
+  }
+
+  function parseSaved() {
+    try {
+      var raw = localStorage.getItem(LS_KEY);
+      if (!raw) return null;
+      var o = JSON.parse(raw);
+      if (!o || !o.classroom_code || !o.student_name) return null;
+      return o;
+    } catch (e) { return null; }
+  }
+
+  function postLogin(body) {
+    return fetch("/login", {
+      method: "POST",
+      headers: { "Content-Type": "application/json", "Accept": "application/json" },
+      credentials: "same-origin",
+      body: JSON.stringify(body),
+    }).then(function (r) {
+      return r.json().then(function (j) { return { ok: r.ok, json: j }; });
+    });
+  }
+
+  function setBtn(id, loading) {
+    var btn = document.getElementById(id);
+    if (btn) btn.disabled = loading;
+  }
+
+  /* ── 初期表示 ── */
+  if (isTeacher) {
+    showOnly(panelTeacher);
+  } else {
+    var saved = parseSaved();
+    if (saved) {
+      document.getElementById("q-name").textContent = "👤 " + saved.student_name;
+      document.getElementById("q-classroom").textContent = saved.classroom_name || "";
+      state = { classroom_code: saved.classroom_code, classroom_name: saved.classroom_name || "", student_name: saved.student_name };
+      showOnly(panelQuick);
+    } else {
+      showOnly(panelCode);
+    }
+  }
+
+  /* ── Step 1: 教室コード入力 → 生徒一覧取得 ── */
+  document.getElementById("form-code").addEventListener("submit", function (e) {
+    e.preventDefault();
+    var errBox = document.getElementById("err-code");
+    errBox.hidden = true;
+    var code = (document.getElementById("input-code").value || "").trim().toUpperCase();
+    if (!code) {
+      document.getElementById("code-err").textContent = "教室コードを入力してください。";
+      document.getElementById("code-err").hidden = false;
+      return;
+    }
+    setBtn("btn-code-submit", true);
+    fetch("/login/classroom-students?code=" + encodeURIComponent(code), {
+      credentials: "same-origin",
+    }).then(function (r) { return r.json(); }).then(function (data) {
+      setBtn("btn-code-submit", false);
+      if (!data.ok) {
+        errBox.textContent = data.detail || "教室コードが見つかりません。";
+        errBox.hidden = false;
+        return;
+      }
+      state.classroom_code = code;
+      state.classroom_name = data.classroom_name || "";
+      document.getElementById("p2-label").textContent = data.classroom_name || "教室";
+
+      var grid = document.getElementById("student-grid");
+      grid.innerHTML = "";
+      (data.students || []).forEach(function (s) {
+        var btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "login-student-btn";
+        btn.textContent = s.display_name;
+        btn.addEventListener("click", function () {
+          state.student_name = s.display_name;
+          document.getElementById("p3-name").textContent = "👤 " + s.display_name;
+          document.getElementById("input-pin").value = "";
+          document.getElementById("err-pin").hidden = true;
+          showOnly(panelPin);
+          document.getElementById("input-pin").focus();
+        });
+        grid.appendChild(btn);
+      });
+
+      if (data.students.length === 0) {
+        grid.innerHTML = "<p style='color:#64748b;'>この教室にはまだ生徒がいません。</p>";
+      }
+      showOnly(panelStudents);
+    }).catch(function () {
+      setBtn("btn-code-submit", false);
+      errBox.textContent = "通信エラーが発生しました。";
+      errBox.hidden = false;
+    });
+  });
+
+  /* ── Step 2 → 1 戻るボタン ── */
+  document.getElementById("btn-back-to-code").addEventListener("click", function () {
+    showOnly(panelCode);
+  });
+
+  /* ── Step 3 → 2 戻るボタン ── */
+  document.getElementById("btn-back-to-students").addEventListener("click", function () {
+    showOnly(panelStudents);
+  });
+
+  /* ── Step 3: PIN入力 → ログイン ── */
+  document.getElementById("form-pin").addEventListener("submit", function (e) {
+    e.preventDefault();
+    var errBox = document.getElementById("err-pin");
+    errBox.hidden = true;
+    var pin = (document.getElementById("input-pin").value || "").trim();
+    postLogin({
+      classroom_code: state.classroom_code,
+      identifier: state.student_name,
+      pin: pin,
+      role: "student",
+    }).then(function (res) {
+      if (res.ok && res.json && res.json.ok) {
+        if (document.getElementById("chk-remember").checked) {
+          localStorage.setItem(LS_KEY, JSON.stringify({
+            classroom_code: state.classroom_code,
+            classroom_name: state.classroom_name,
+            student_name: state.student_name,
+          }));
+        }
+        location.href = res.json.redirect;
+        return;
+      }
+      errBox.textContent = (res.json && res.json.detail) ? res.json.detail : "ログインに失敗しました。";
+      errBox.hidden = false;
+    }).catch(function () {
+      errBox.textContent = "通信エラーが発生しました。";
+      errBox.hidden = false;
+    });
+  });
+
+  /* ── クイックログイン（記憶済み） ── */
+  document.getElementById("form-quick").addEventListener("submit", function (e) {
+    e.preventDefault();
+    var errBox = document.getElementById("err-quick");
+    errBox.hidden = true;
+    var pin = (document.getElementById("q-pin").value || "").trim();
+    postLogin({
+      classroom_code: state.classroom_code,
+      identifier: state.student_name,
+      pin: pin,
+      role: "student",
+    }).then(function (res) {
+      if (res.ok && res.json && res.json.ok) {
+        location.href = res.json.redirect;
+        return;
+      }
+      errBox.textContent = (res.json && res.json.detail) ? res.json.detail : "ログインに失敗しました。";
+      errBox.hidden = false;
+    }).catch(function () {
+      errBox.textContent = "通信エラーが発生しました。";
+      errBox.hidden = false;
+    });
+  });
+
+  document.getElementById("btn-other-account").addEventListener("click", function () {
+    localStorage.removeItem(LS_KEY);
+    document.getElementById("input-code").value = "";
+    showOnly(panelCode);
+  });
+
+  /* ── 教師ログイン（変更なし） ── */
+  function validateCode(v) {
+    v = (v || "").trim();
+    if (!v) return "教室コードを入力してください。";
+    if (!/^[A-Za-z0-9]{4,8}$/.test(v)) return "教室コードは英数字4〜8文字です。";
+    return "";
+  }
+
+  document.getElementById("form-teacher").addEventListener("submit", function (e) {
+    e.preventDefault();
+    var errBox = document.getElementById("err-teacher");
+    errBox.hidden = true;
+    ["tf-err-code", "tf-err-id", "tf-err-pass"].forEach(function (id) {
+      var n = document.getElementById(id); if (n) { n.hidden = true; n.textContent = ""; }
+    });
+    var code = document.getElementById("tf-code").value;
+    var tid  = document.getElementById("tf-id").value;
+    var pw   = document.getElementById("tf-pass").value;
+    var ec = validateCode(code);
+    var ei = (!(tid || "").trim()) ? "教師IDを入力してください。" : "";
+    var ep = (!(pw  || "").trim()) ? "パスワードを入力してください。" : "";
+    var bad = false;
+    if (ec) { bad = true; var n = document.getElementById("tf-err-code"); n.textContent = ec; n.hidden = false; }
+    if (ei) { bad = true; var n2 = document.getElementById("tf-err-id");   n2.textContent = ei; n2.hidden = false; }
+    if (ep) { bad = true; var n3 = document.getElementById("tf-err-pass"); n3.textContent = ep; n3.hidden = false; }
+    if (bad) return;
+    postLogin({ classroom_code: code.trim(), identifier: tid.trim(), password: pw, role: "teacher" }).then(function (res) {
+      if (res.ok && res.json && res.json.ok) { location.href = res.json.redirect; return; }
+      errBox.textContent = (res.json && res.json.detail) ? res.json.detail : "ログインに失敗しました。";
+      errBox.hidden = false;
+    }).catch(function () {
+      errBox.textContent = "通信エラーが発生しました。";
+      errBox.hidden = false;
+    });
+  });
+})();
+</script>
+{% endblock %}

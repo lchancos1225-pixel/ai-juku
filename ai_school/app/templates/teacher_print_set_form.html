@@ -1,0 +1,152 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="card problem-create-page">
+  <div class="problem-create-header">
+    <div>
+      <p class="section-label">教材管理</p>
+      <h2>📄 問題プリント作成</h2>
+      <p class="meta-note">単元・難易度・問題数を設定して、生徒用または解答付き（講師用）プリントを出力します。</p>
+    </div>
+    <a class="secondary-link" href="/teachers/dashboard">← 講師ページに戻る</a>
+  </div>
+
+  <form method="post" action="/teachers/problems/print_set/preview" target="_blank" class="print-set-form" id="print-set-form">
+
+    {# ===== 学年フィルタ（JS絞り込み用） ===== #}
+    <section class="pc-section">
+      <h3 class="pc-section__title">学年で絞り込み（任意）</h3>
+      <div class="ps-grade-filter">
+        <label class="ps-grade-btn">
+          <input type="radio" name="_grade_filter" value="" checked class="ps-grade-radio">
+          <span>全学年</span>
+        </label>
+        <label class="ps-grade-btn">
+          <input type="radio" name="_grade_filter" value="7" class="ps-grade-radio">
+          <span>中1</span>
+        </label>
+        <label class="ps-grade-btn">
+          <input type="radio" name="_grade_filter" value="8" class="ps-grade-radio">
+          <span>中2</span>
+        </label>
+        <label class="ps-grade-btn">
+          <input type="radio" name="_grade_filter" value="9" class="ps-grade-radio">
+          <span>中3</span>
+        </label>
+      </div>
+    </section>
+
+    {# ===== 単元選択 ===== #}
+    <section class="pc-section">
+      <h3 class="pc-section__title">単元を選ぶ <span class="pc-required">1つ以上必須</span></h3>
+      <div class="ps-unit-select-actions">
+        <button type="button" class="secondary-btn" id="ps-select-all">すべて選択</button>
+        <button type="button" class="secondary-btn" id="ps-deselect-all">すべて解除</button>
+      </div>
+      <div class="ps-unit-grid" id="ps-unit-grid">
+        {% for unit in units %}
+        <label class="ps-unit-item" data-grade="{{ unit.grade }}">
+          <input type="checkbox" name="selected_units" value="{{ unit.unit_id }}" class="ps-unit-check">
+          <span class="ps-unit-name">{{ unit.display_name }}</span>
+          <span class="ps-unit-grade">中{{ unit.grade - 6 }}</span>
+        </label>
+        {% endfor %}
+      </div>
+    </section>
+
+    {# ===== 難易度 ===== #}
+    <section class="pc-section">
+      <h3 class="pc-section__title">難易度 <span class="pc-required">1つ以上必須</span></h3>
+      <div class="ps-diff-row">
+        <label class="ps-check-label">
+          <input type="checkbox" name="difficulties" value="1" checked>
+          <span class="diff-badge diff-1">易 (1)</span>
+        </label>
+        <label class="ps-check-label">
+          <input type="checkbox" name="difficulties" value="2" checked>
+          <span class="diff-badge diff-2">標準 (2)</span>
+        </label>
+        <label class="ps-check-label">
+          <input type="checkbox" name="difficulties" value="3">
+          <span class="diff-badge diff-3">難 (3)</span>
+        </label>
+      </div>
+    </section>
+
+    {# ===== 問題数 ===== #}
+    <section class="pc-section">
+      <h3 class="pc-section__title">問題数</h3>
+      <div class="ps-count-row">
+        <label class="ps-radio-label">
+          <input type="radio" name="count" value="5">
+          <span>5問</span>
+        </label>
+        <label class="ps-radio-label">
+          <input type="radio" name="count" value="10" checked>
+          <span>10問</span>
+        </label>
+        <label class="ps-radio-label">
+          <input type="radio" name="count" value="15">
+          <span>15問</span>
+        </label>
+      </div>
+    </section>
+
+    {# ===== 出力タイプ ===== #}
+    <section class="pc-section">
+      <h3 class="pc-section__title">出力種別</h3>
+      <div class="ps-output-row">
+        <label class="ps-radio-label">
+          <input type="radio" name="output_type" value="student" checked>
+          <span>生徒用のみ（解答欄空白）</span>
+        </label>
+        <label class="ps-radio-label">
+          <input type="radio" name="output_type" value="teacher">
+          <span>講師用のみ（解答付き）</span>
+        </label>
+        <label class="ps-radio-label">
+          <input type="radio" name="output_type" value="both">
+          <span>両方（生徒用 → 改ページ → 講師用）</span>
+        </label>
+      </div>
+    </section>
+
+    <div class="problem-create-actions">
+      <button type="submit" class="primary-btn">📄 プレビュー・印刷（別タブで開く）</button>
+    </div>
+
+  </form>
+</section>
+
+<script>
+(function () {
+  const gradeRadios = document.querySelectorAll('.ps-grade-radio');
+  const unitItems  = document.querySelectorAll('.ps-unit-item');
+  const unitChecks = document.querySelectorAll('.ps-unit-check');
+
+  function filterUnits() {
+    const selected = document.querySelector('.ps-grade-radio:checked').value;
+    unitItems.forEach(item => {
+      if (!selected || item.dataset.grade === selected) {
+        item.style.display = '';
+      } else {
+        item.style.display = 'none';
+      }
+    });
+  }
+
+  gradeRadios.forEach(r => r.addEventListener('change', filterUnits));
+
+  document.getElementById('ps-select-all').addEventListener('click', function () {
+    unitItems.forEach(item => {
+      if (item.style.display !== 'none') {
+        item.querySelector('input[type=checkbox]').checked = true;
+      }
+    });
+  });
+
+  document.getElementById('ps-deselect-all').addEventListener('click', function () {
+    unitChecks.forEach(c => c.checked = false);
+  });
+})();
+</script>
+{% endblock %}
