@@ -17,14 +17,4 @@ jobs:
         host: ${{ secrets.VPS_HOST }}
         username: ${{ secrets.VPS_USER }}
         password: ${{ secrets.VPS_PASSWORD }}
-        script: |
-          Set-Location C:/Users/Administrator/ai-juku
-          git fetch origin
-          git reset --hard origin/main
-          Copy-Item C:/Users/Administrator/ai-juku-data/*.db ai_school/app/ -ErrorAction SilentlyContinue
-          Copy-Item C:/Users/Administrator/ai-juku-data/.env ./ -ErrorAction SilentlyContinue
-          if (-Not (Test-Path .venv)) { python -m venv .venv }
-          .venv/Scripts/Activate.ps1
-          pip install -r requirements.txt
-          taskkill /F /IM python.exe 2>$null
-          Start-Process -NoNewWindow -FilePath "python" -ArgumentList "-m uvicorn ai_school.app.main:app --host 0.0.0.0 --port 8000"
+        script: powershell C:/Users/Administrator/deploy.ps1
