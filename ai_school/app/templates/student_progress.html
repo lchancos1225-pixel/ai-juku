@@ -165,52 +165,126 @@
 {# ===== Row 4: 単元成長(左) + 単語帳/リスニング(右) ===== #}
 <div class="pr-grid-2--half">
 
-  {# ── 単元成長記録（CSS-only タブ切替）── #}
+  {# ── ステータス別サマリーカード ── #}
   <section class="card">
-    <input class="pr-tab-radio" type="radio" name="pr-unit-tab" id="pr-tab-math" checked>
-    <input class="pr-tab-radio" type="radio" name="pr-unit-tab" id="pr-tab-eng">
     <p class="section-label">Units</p>
-    <h3 style="margin:0 0 10px;">🌿 単元ごとの成長記録</h3>
-    <div class="pr-tabs">
-      <label class="pr-tab-label" for="pr-tab-math">📐 数学</label>
-      <label class="pr-tab-label" for="pr-tab-eng">🇺🇸 英語</label>
-    </div>
-    <div class="pr-panels">
-      <div id="pr-panel-math" class="pr-tab-panel">
-        <div class="pr-unit-list">
-          {% for unit in progress.math_unit_progress %}
-          <article class="pr-unit-card {{ unit.tone_class }} {{ 'is-current' if unit.is_current else '' }}">
-            <div class="pr-unit-head">
-              <h4>{% if unit.progress_percent >= 75 %}💎{% elif unit.progress_percent >= 40 %}🌿{% else %}🌱{% endif %} {{ unit.display_name }}</h4>
-              <strong>{{ unit.progress_percent }}%</strong>
-            </div>
-            <p class="pr-unit-status">{{ unit.status_label }}</p>
-            <div class="pr-bar-track" aria-hidden="true">
-              <span class="pr-bar-fill {{ bar_map.get(unit.tone_class, 'pr-bar-fill--growing') }}" data-progress="{{ unit.progress_percent }}"></span>
-            </div>
-            <p class="pr-unit-note">{{ unit.message }}</p>
-          </article>
+    <h3 style="margin:0 0 10px;">🚇 単元の進み具合</h3>
+    <div class="pr-status-cards">
+      {# 💪 できている #}
+      <div class="pr-status-card pr-status-card--strong">
+        <div class="pr-status-card__head"><span class="pr-status-card__badge">💪</span> できている</div>
+        <div class="pr-status-card__stations">
+          {% set strong_units = progress.math_unit_progress | selectattr('tone_class', 'equalto', 'progress-strong') | list + progress.eng_unit_progress | selectattr('tone_class', 'equalto', 'progress-strong') | list %}
+          {% for unit in strong_units %}
+          <span class="pr-mini-station {{ 'pr-mini-station--current' if unit.is_current else '' }}">💎 {{ unit.display_name }}</span>
           {% endfor %}
+          {% if not strong_units %}<span style="font-size:0.75rem;color:#64748b;">まだないよ</span>{% endif %}
         </div>
       </div>
-      <div id="pr-panel-eng" class="pr-tab-panel">
-        <div class="pr-unit-list">
-          {% for unit in progress.eng_unit_progress %}
-          <article class="pr-unit-card {{ unit.tone_class }} {{ 'is-current' if unit.is_current else '' }}">
-            <div class="pr-unit-head">
-              <h4>{% if unit.progress_percent >= 75 %}💎{% elif unit.progress_percent >= 40 %}🌿{% else %}🌱{% endif %} {{ unit.display_name }}</h4>
-              <strong>{{ unit.progress_percent }}%</strong>
-            </div>
-            <p class="pr-unit-status">{{ unit.status_label }}</p>
-            <div class="pr-bar-track" aria-hidden="true">
-              <span class="pr-bar-fill {{ bar_map.get(unit.tone_class, 'pr-bar-fill--growing') }}" data-progress="{{ unit.progress_percent }}"></span>
-            </div>
-            <p class="pr-unit-note">{{ unit.message }}</p>
-          </article>
+      {# 🌿 成長中 #}
+      <div class="pr-status-card pr-status-card--growing">
+        <div class="pr-status-card__head"><span class="pr-status-card__badge">🌿</span> 成長中</div>
+        <div class="pr-status-card__stations">
+          {% set growing_units = progress.math_unit_progress | selectattr('tone_class', 'equalto', 'progress-growing') | list + progress.eng_unit_progress | selectattr('tone_class', 'equalto', 'progress-growing') | list %}
+          {% for unit in growing_units %}
+          <span class="pr-mini-station {{ 'pr-mini-station--current' if unit.is_current else '' }}">🌿 {{ unit.display_name }}</span>
           {% endfor %}
-          {% if not progress.eng_unit_progress %}
-          <p class="unit-progress-empty">まだ英語の履歴がありません。</p>
-          {% endif %}
+          {% if not growing_units %}<span style="font-size:0.75rem;color:#64748b;">まだないよ</span>{% endif %}
+        </div>
+      </div>
+      {# 🌱 これから #}
+      <div class="pr-status-card pr-status-card--waiting">
+        <div class="pr-status-card__head"><span class="pr-status-card__badge">🌱</span> これから</div>
+        <div class="pr-status-card__stations">
+          {% set waiting_units = progress.math_unit_progress | rejectattr('tone_class', 'in', ['progress-strong', 'progress-growing']) | list + progress.eng_unit_progress | rejectattr('tone_class', 'in', ['progress-strong', 'progress-growing']) | list %}
+          {% for unit in waiting_units %}
+          <span class="pr-mini-station {{ 'pr-mini-station--current' if unit.is_current else '' }}">🌱 {{ unit.display_name }}</span>
+          {% endfor %}
+          {% if not waiting_units %}<span style="font-size:0.75rem;color:#64748b;">なし</span>{% endif %}
+        </div>
+      </div>
+    </div>
+
+    {# ── 桃鉄風 蛇行路線図 ── #}
+    <input class="pr-tab-radio" type="radio" name="pr-rail-tab" id="pr-rail-math" checked>
+    <input class="pr-tab-radio" type="radio" name="pr-rail-tab" id="pr-rail-eng">
+    <div class="pr-rail-tabs">
+      <label class="pr-rail-tab-label" for="pr-rail-math">📐 数学路線</label>
+      <label class="pr-rail-tab-label" for="pr-rail-eng">🇺🇸 英語路線</label>
+    </div>
+    <div class="pr-rail-panels">
+      {# 数学路線 #}
+      <div id="pr-rail-panel-math" class="pr-rail-panel">
+        <div class="pr-rail-map">
+          {% set per_row = 6 %}
+          {% for unit in progress.math_unit_progress %}
+            {% set row_idx = loop.index0 // per_row %}
+            {% set is_even = row_idx % 2 == 1 %}
+            {% set is_row_start = loop.index0 % per_row == 0 %}
+            {% set is_row_end = loop.index0 % per_row == per_row - 1 or loop.last %}
+            {% if is_row_start %}
+          <div class="pr-rail-row {{ 'pr-rail-row--even' if is_even else '' }}">
+            <div class="pr-rail-track-line"></div>
+            {% endif %}
+            <div class="pr-rail-station-wrap" style="animation-delay:{{ loop.index0 * 40 }}ms">
+              <div class="pr-rail-station
+                {% if unit.progress_percent >= 75 %}pr-rail-station--mastered
+                {% elif unit.progress_percent >= 40 %}pr-rail-station--progress
+                {% elif unit.progress_percent > 0 %}pr-rail-station--progress
+                {% else %}pr-rail-station--waiting{% endif %}
+                {{ 'pr-rail-station--current' if unit.is_current else '' }}">
+                <span class="pr-rail-station__icon">
+                  {% if unit.progress_percent >= 75 %}💎{% elif unit.progress_percent >= 40 %}🌿{% elif unit.progress_percent > 0 %}�{% else %}�🌱{% endif %}
+                </span>
+                <span class="pr-rail-station__pct">{{ unit.progress_percent }}%</span>
+              </div>
+              <span class="pr-rail-label">{{ unit.display_name }}</span>
+            </div>
+            {% if is_row_end %}
+          </div>
+              {% if not loop.last %}
+          <div class="pr-rail-turn">{% if is_even %}← 折り返し{% else %}→ 折り返し{% endif %}</div>
+              {% endif %}
+            {% endif %}
+          {% endfor %}
+          {% if progress.math_unit_progress %}{% set last = progress.math_unit_progress | length %}{% set last_row_end = (last - 1) % per_row == per_row - 1 %}{% if not last_row_end %}</div>{% endif %}{% endif %}
+        </div>
+      </div>
+      {# 英語路線 #}
+      <div id="pr-rail-panel-eng" class="pr-rail-panel">
+        <div class="pr-rail-map">
+          {% for unit in progress.eng_unit_progress %}
+            {% set row_idx = loop.index0 // per_row %}
+            {% set is_even = row_idx % 2 == 1 %}
+            {% set is_row_start = loop.index0 % per_row == 0 %}
+            {% set is_row_end = loop.index0 % per_row == per_row - 1 or loop.last %}
+            {% if is_row_start %}
+          <div class="pr-rail-row {{ 'pr-rail-row--even' if is_even else '' }}">
+            <div class="pr-rail-track-line"></div>
+            {% endif %}
+            <div class="pr-rail-station-wrap" style="animation-delay:{{ loop.index0 * 40 }}ms">
+              <div class="pr-rail-station
+                {% if unit.progress_percent >= 75 %}pr-rail-station--mastered
+                {% elif unit.progress_percent >= 40 %}pr-rail-station--progress
+                {% elif unit.progress_percent > 0 %}pr-rail-station--progress
+                {% else %}pr-rail-station--waiting{% endif %}
+                {{ 'pr-rail-station--current' if unit.is_current else '' }}">
+                <span class="pr-rail-station__icon">
+                  {% if unit.progress_percent >= 75 %}💎{% elif unit.progress_percent >= 40 %}🌿{% elif unit.progress_percent > 0 %}�{% else %}�🌱{% endif %}
+                </span>
+                <span class="pr-rail-station__pct">{{ unit.progress_percent }}%</span>
+              </div>
+              <span class="pr-rail-label">{{ unit.display_name }}</span>
+            </div>
+            {% if is_row_end %}
+          </div>
+              {% if not loop.last %}
+          <div class="pr-rail-turn">{% if is_even %}← 折り返し{% else %}→ 折り返し{% endif %}</div>
+              {% endif %}
+            {% endif %}
+          {% endfor %}
+          {% if progress.eng_unit_progress %}{% set last = progress.eng_unit_progress | length %}{% set last_row_end = (last - 1) % per_row == per_row - 1 %}{% if not last_row_end %}</div>{% endif %}{% endif %}
+          {% if not progress.eng_unit_progress %}<p style="color:#64748b;font-size:0.85rem;text-align:center;padding:20px;">まだ英語の駅がありません。</p>{% endif %}
         </div>
       </div>
     </div>

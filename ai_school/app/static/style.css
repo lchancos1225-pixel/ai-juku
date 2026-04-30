@@ -7619,3 +7619,51 @@ td {
     padding: 14px 16px;
   }
 }
+
+/* === Myレコード v2 === */
+.pr-status-cards { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-top:12px; }
+.pr-status-card { border-radius:14px; padding:12px 14px; border:1.5px solid var(--border); background:#fff; }
+.pr-status-card--strong { border-color:#6ee7b7; background:linear-gradient(135deg,#f0fdf4,#ecfdf5); }
+.pr-status-card--growing { border-color:#93c5fd; background:linear-gradient(135deg,#eff6ff,#f5f9ff); }
+.pr-status-card--waiting { border-color:#cbd5e1; background:linear-gradient(135deg,#f8fafc,#f1f5f9); }
+.pr-status-card__head { display:flex; align-items:center; gap:6px; font-weight:700; font-size:.82rem; margin-bottom:8px; color:var(--base-deep); }
+.pr-status-card__stations { display:flex; flex-wrap:wrap; gap:4px; margin-top:6px; }
+.pr-mini-station { display:inline-flex; align-items:center; gap:3px; padding:3px 7px; border-radius:20px; font-size:.68rem; font-weight:600; border:1px solid var(--border); background:#fff; color:#4b5563; }
+.pr-mini-station--current { border-color:#f59e0b; background:linear-gradient(135deg,#fffbeb,#fef3c7); color:#92400e; }
+
+/* 路線タブ */
+.pr-rail-tabs { display:flex; gap:8px; margin-bottom:14px; }
+.pr-rail-tab-label { padding:5px 16px; border-radius:20px; border:1.5px solid var(--border); font-size:.84rem; font-weight:700; cursor:pointer; color:#5f6c7b; user-select:none; display:inline-flex; align-items:center; gap:4px; }
+.pr-rail-tab-label:hover { border-color:var(--base); color:var(--base); }
+#pr-rail-math:checked ~ .pr-rail-tabs .pr-rail-tab-label[for="pr-rail-math"], #pr-rail-eng:checked ~ .pr-rail-tabs .pr-rail-tab-label[for="pr-rail-eng"] { background:var(--base); color:#fff; border-color:var(--base); }
+.pr-rail-panel { display:none; }
+#pr-rail-math:checked ~ .pr-rail-panels #pr-rail-panel-math, #pr-rail-eng:checked ~ .pr-rail-panels #pr-rail-panel-eng { display:block; }
+
+/* 蛇行路線図 */
+.pr-rail-map { padding:14px; border-radius:16px; background:linear-gradient(160deg,#f8fbff,#edf4ff); border:1px solid rgba(201,215,234,0.6); overflow-x:auto; }
+.pr-rail-row { display:flex; gap:2px; position:relative; align-items:center; justify-content:space-between; padding:4px 0; }
+.pr-rail-row--even { flex-direction:row-reverse; }
+.pr-rail-station-wrap { display:flex; flex-direction:column; align-items:center; padding:4px 2px; position:relative; flex-shrink:0; }
+.pr-rail-station { width:44px; height:44px; border-radius:50%; display:flex; flex-direction:column; align-items:center; justify-content:center; font-size:.62rem; font-weight:700; line-height:1.1; border:2.5px solid; background:#fff; position:relative; z-index:2; transition:transform .2s var(--ease-spring); cursor:default; }
+.pr-rail-station:hover { transform:scale(1.12); }
+.pr-rail-station--mastered { border-color:#34d399; background:linear-gradient(135deg,#f0fdf4,#d1fae5); color:#065f46; }
+.pr-rail-station--progress { border-color:#60a5fa; background:linear-gradient(135deg,#eff6ff,#dbeafe); color:#1e40af; }
+.pr-rail-station--waiting { border-color:#cbd5e1; background:linear-gradient(135deg,#f8fafc,#f1f5f9); color:#64748b; }
+.pr-rail-station--current { border-color:#f59e0b; background:linear-gradient(135deg,#fffbeb,#fef3c7); color:#92400e; box-shadow:0 0 0 3px rgba(245,158,11,0.25); }
+.pr-rail-station__pct { font-size:.55rem; font-weight:800; margin-top:1px; }
+.pr-rail-station__icon { font-size:1rem; line-height:1; }
+.pr-rail-label { font-size:.6rem; color:#4b5563; margin-top:3px; text-align:center; max-width:56px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; font-weight:600; }
+.pr-rail-track-line { position:absolute; top:50%; left:0; right:0; height:3px; background:linear-gradient(90deg,#94a3b8,#60a5fa,#94a3b8); z-index:1; border-radius:999px; }
+.pr-rail-row--even .pr-rail-track-line { background:linear-gradient(90deg,#94a3b8,#f59e0b,#94a3b8); }
+.pr-rail-turn { display:flex; align-items:center; justify-content:center; padding:2px 0; font-size:.75rem; color:#94a3b8; font-weight:700; }
+
+/* アニメーション */
+@keyframes pr-pulse-glow { 0%,100%{box-shadow:0 0 0 0 rgba(245,158,11,0.3);} 50%{box-shadow:0 0 0 4px rgba(245,158,11,0);} }
+@keyframes pr-station-pop { from{opacity:0;transform:scale(.4) translateY(10px);} to{opacity:1;transform:scale(1) translateY(0);} }
+.pr-rail-station-wrap { animation:pr-station-pop .32s ease-out both; }
+
+@media (max-width:700px) {
+  .pr-status-cards { grid-template-columns:1fr; }
+  .pr-rail-station { width:38px; height:38px; font-size:.58rem; }
+  .pr-rail-label { max-width:48px; }
+}
