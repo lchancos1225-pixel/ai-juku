@@ -165,52 +165,17 @@
 {# ===== Row 4: 単元成長(左) + 単語帳/リスニング(右) ===== #}
 <div class="pr-grid-2--half">
 
-  {# ── ステータス別サマリーカード ── #}
+  {# ── 単元路線図 ── #}
   <section class="card">
     <p class="section-label">Units</p>
-    <h3 style="margin:0 0 10px;">🚇 単元の進み具合</h3>
-    <div class="pr-status-cards">
-      {# 💪 できている #}
-      <div class="pr-status-card pr-status-card--strong">
-        <div class="pr-status-card__head"><span class="pr-status-card__badge">💪</span> できている</div>
-        <div class="pr-status-card__stations">
-          {% set strong_units = progress.math_unit_progress | selectattr('tone_class', 'equalto', 'progress-strong') | list + progress.eng_unit_progress | selectattr('tone_class', 'equalto', 'progress-strong') | list %}
-          {% for unit in strong_units %}
-          <span class="pr-mini-station {{ 'pr-mini-station--current' if unit.is_current else '' }}">💎 {{ unit.display_name }}</span>
-          {% endfor %}
-          {% if not strong_units %}<span style="font-size:0.75rem;color:#64748b;">まだないよ</span>{% endif %}
-        </div>
-      </div>
-      {# 🌿 成長中 #}
-      <div class="pr-status-card pr-status-card--growing">
-        <div class="pr-status-card__head"><span class="pr-status-card__badge">🌿</span> 成長中</div>
-        <div class="pr-status-card__stations">
-          {% set growing_units = progress.math_unit_progress | selectattr('tone_class', 'equalto', 'progress-growing') | list + progress.eng_unit_progress | selectattr('tone_class', 'equalto', 'progress-growing') | list %}
-          {% for unit in growing_units %}
-          <span class="pr-mini-station {{ 'pr-mini-station--current' if unit.is_current else '' }}">🌿 {{ unit.display_name }}</span>
-          {% endfor %}
-          {% if not growing_units %}<span style="font-size:0.75rem;color:#64748b;">まだないよ</span>{% endif %}
-        </div>
-      </div>
-      {# 🌱 これから #}
-      <div class="pr-status-card pr-status-card--waiting">
-        <div class="pr-status-card__head"><span class="pr-status-card__badge">🌱</span> これから</div>
-        <div class="pr-status-card__stations">
-          {% set waiting_units = progress.math_unit_progress | rejectattr('tone_class', 'in', ['progress-strong', 'progress-growing']) | list + progress.eng_unit_progress | rejectattr('tone_class', 'in', ['progress-strong', 'progress-growing']) | list %}
-          {% for unit in waiting_units %}
-          <span class="pr-mini-station {{ 'pr-mini-station--current' if unit.is_current else '' }}">🌱 {{ unit.display_name }}</span>
-          {% endfor %}
-          {% if not waiting_units %}<span style="font-size:0.75rem;color:#64748b;">なし</span>{% endif %}
-        </div>
-      </div>
-    </div>
+    <h3 style="margin:0 0 10px;">数学路線・英語路線</h3>
 
     {# ── 桃鉄風 蛇行路線図 ── #}
     <input class="pr-tab-radio" type="radio" name="pr-rail-tab" id="pr-rail-math" checked>
     <input class="pr-tab-radio" type="radio" name="pr-rail-tab" id="pr-rail-eng">
     <div class="pr-rail-tabs">
-      <label class="pr-rail-tab-label" for="pr-rail-math">📐 数学路線</label>
-      <label class="pr-rail-tab-label" for="pr-rail-eng">🇺🇸 英語路線</label>
+      <label class="pr-rail-tab-label" for="pr-rail-math">&#128208; 数学</label>
+      <label class="pr-rail-tab-label" for="pr-rail-eng">&#127468;&#127463; 英語</label>
     </div>
     <div class="pr-rail-panels">
       {# 数学路線 #}
@@ -234,7 +199,7 @@
                 {% else %}pr-rail-station--waiting{% endif %}
                 {{ 'pr-rail-station--current' if unit.is_current else '' }}">
                 <span class="pr-rail-station__icon">
-                  {% if unit.progress_percent >= 75 %}💎{% elif unit.progress_percent >= 40 %}🌿{% elif unit.progress_percent > 0 %}�{% else %}�🌱{% endif %}
+                  {% if unit.progress_percent >= 75 %}<span class="pr-icon pr-icon--master">&#9670;</span>{% elif unit.progress_percent >= 40 %}<span class="pr-icon pr-icon--grow">&#10022;</span>{% elif unit.progress_percent > 0 %}<span class="pr-icon pr-icon--grow">&#10022;</span>{% else %}<span class="pr-icon pr-icon--wait">&#9671;</span>{% endif %}
                 </span>
                 <span class="pr-rail-station__pct">{{ unit.progress_percent }}%</span>
               </div>
@@ -270,7 +235,7 @@
                 {% else %}pr-rail-station--waiting{% endif %}
                 {{ 'pr-rail-station--current' if unit.is_current else '' }}">
                 <span class="pr-rail-station__icon">
-                  {% if unit.progress_percent >= 75 %}💎{% elif unit.progress_percent >= 40 %}🌿{% elif unit.progress_percent > 0 %}�{% else %}�🌱{% endif %}
+                  {% if unit.progress_percent >= 75 %}<span class="pr-icon pr-icon--master">&#9670;</span>{% elif unit.progress_percent >= 40 %}<span class="pr-icon pr-icon--grow">&#10022;</span>{% elif unit.progress_percent > 0 %}<span class="pr-icon pr-icon--grow">&#10022;</span>{% else %}<span class="pr-icon pr-icon--wait">&#9671;</span>{% endif %}
                 </span>
                 <span class="pr-rail-station__pct">{{ unit.progress_percent }}%</span>
               </div>
