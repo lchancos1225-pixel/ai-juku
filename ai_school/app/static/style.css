@@ -7172,3 +7172,450 @@ td {
     font-size: 0.75rem;
   }
 }
+
+/* ============================================================
+   MyレコードUI 2026 — Compact & Playful Redesign
+   ============================================================ */
+
+/* ── ページ全体のギャップ縮小 ── */
+.progress-page {
+  display: grid;
+  gap: 14px;
+}
+
+/* ── progress-page 内のカード共通コンパクト化 ── */
+.progress-page .card {
+  padding: 18px 20px;
+  border-radius: 16px;
+  animation: pr-card-rise 0.38s ease-out both;
+}
+
+@keyframes pr-card-rise {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.progress-page .card:nth-child(1) { animation-delay: 0.00s; }
+.progress-page .card:nth-child(2) { animation-delay: 0.05s; }
+.progress-page .card:nth-child(3) { animation-delay: 0.10s; }
+.progress-page .card:nth-child(4) { animation-delay: 0.14s; }
+.progress-page .card:nth-child(5) { animation-delay: 0.18s; }
+
+/* ── 2カラムレイアウト行 ── */
+.pr-grid-2 {
+  display: grid;
+  grid-template-columns: 1.4fr 0.6fr;
+  gap: 14px;
+  align-items: start;
+}
+
+.pr-grid-2--half {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  align-items: start;
+}
+
+.pr-right-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* ── ヒーローカード スリム化 ── */
+.sugoroku-hero.card {
+  padding: 14px 20px;
+}
+
+/* ── ゴールドチップ シマーアニメーション ── */
+@keyframes pr-gold-shine {
+  0%   { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+.gold-chip {
+  background: linear-gradient(
+    105deg,
+    #f59e0b 0%,
+    #fbbf24 35%,
+    #fef3a0 50%,
+    #fbbf24 65%,
+    #f59e0b 100%
+  );
+  background-size: 200% auto;
+  animation: pr-gold-shine 2.8s linear infinite;
+}
+
+/* ── ヒーローカードのホバーリフト ── */
+.progress-page .sugoroku-hero.card {
+  transition: transform 0.2s var(--ease-spring), box-shadow 0.2s;
+}
+.progress-page .sugoroku-hero.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 44px rgba(31, 79, 133, 0.16);
+}
+
+/* ── 今日のStats グリッド ── */
+.pr-today-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.pr-today-card {
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  padding: 10px 12px;
+  background: linear-gradient(160deg, #ffffff 0%, #f4f8ff 100%);
+  text-align: center;
+  transition: transform 0.22s var(--ease-spring), box-shadow 0.22s;
+}
+
+.pr-today-card:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 10px 24px rgba(31, 79, 133, 0.13);
+}
+
+.pr-today-emoji {
+  font-size: 1.4rem;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.pr-today-value {
+  display: block;
+  font-size: 1.55rem;
+  font-weight: 800;
+  color: var(--base-deep);
+  line-height: 1.1;
+}
+
+.pr-today-label {
+  display: block;
+  font-size: 0.68rem;
+  color: #5f6c7b;
+  margin-top: 4px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+/* ── プログレスバー CSS アニメーション ── */
+.pr-bar-track {
+  margin: 8px 0 6px;
+  height: 8px;
+  border-radius: 999px;
+  background: rgba(201, 215, 234, 0.5);
+  overflow: hidden;
+}
+
+.pr-bar-fill {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  width: 0;
+  transition: width 0.9s cubic-bezier(0.34, 1.2, 0.64, 1);
+}
+
+/* 系統別カラー */
+.pr-bar-fill--strong  { background: linear-gradient(90deg, #38bdf8, #0f766e); }
+.pr-bar-fill--growing { background: linear-gradient(90deg, #60a5fa, #2563eb); }
+.pr-bar-fill--support { background: linear-gradient(90deg, #f59e0b, #f97316); }
+.pr-bar-fill--waiting { background: linear-gradient(90deg, #cbd5e1, #94a3b8); }
+.pr-bar-fill--green   { background: linear-gradient(90deg, #34d399, #059669); }
+.pr-bar-fill--vocab   { background: linear-gradient(90deg, #6ee7b7, #059669); }
+
+/* ── 単元カード 薄型 ── */
+.pr-unit-card {
+  padding: 10px 14px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: #fff;
+  transition: transform 0.2s var(--ease-spring), box-shadow 0.2s;
+}
+
+.pr-unit-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(31, 79, 133, 0.10);
+}
+
+.pr-unit-card.is-current {
+  border-color: #93c5fd;
+  background: linear-gradient(135deg, #eff6ff 0%, #f8fbff 100%);
+  box-shadow: inset 0 0 0 1.5px rgba(59, 130, 246, 0.15);
+}
+
+.pr-unit-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.pr-unit-head h4 {
+  margin: 0;
+  font-size: 0.92rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.pr-unit-head strong {
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--base-deep);
+  white-space: nowrap;
+}
+
+.pr-unit-status {
+  font-size: 0.72rem;
+  color: #5f6c7b;
+  margin: 0;
+}
+
+.pr-unit-note {
+  font-size: 0.72rem;
+  color: #6b7280;
+  margin: 4px 0 0;
+  line-height: 1.4;
+}
+
+.pr-unit-list {
+  display: grid;
+  gap: 8px;
+}
+
+/* ── 単元タブ切替（CSS-only input:checked） ── */
+.pr-tab-radio { display: none; }
+
+.pr-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.pr-tab-label {
+  padding: 5px 18px;
+  border-radius: 20px;
+  border: 1.5px solid var(--border);
+  font-size: 0.84rem;
+  font-weight: 700;
+  cursor: pointer;
+  color: #5f6c7b;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+  user-select: none;
+}
+
+.pr-tab-label:hover {
+  border-color: var(--base);
+  color: var(--base);
+}
+
+#pr-tab-math:checked ~ .pr-tabs .pr-tab-label[for="pr-tab-math"],
+#pr-tab-eng:checked  ~ .pr-tabs .pr-tab-label[for="pr-tab-eng"] {
+  background: var(--base);
+  color: #fff;
+  border-color: var(--base);
+}
+
+.pr-tab-panel { display: none; }
+
+#pr-tab-math:checked ~ .pr-panels #pr-panel-math,
+#pr-tab-eng:checked  ~ .pr-panels #pr-panel-eng {
+  display: block;
+}
+
+/* ── ストリーク炎アニメーション ── */
+.pr-streak-fire {
+  display: inline-block;
+  animation: pr-fire-wobble 0.55s ease-in-out infinite alternate;
+}
+
+@keyframes pr-fire-wobble {
+  from { transform: rotate(-8deg) scale(1); }
+  to   { transform: rotate(8deg) scale(1.18); }
+}
+
+/* ── ボードセル pop-in ── */
+@keyframes pr-cell-pop {
+  from { opacity: 0; transform: scale(0.65) translateY(8px); }
+  to   { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.board-track .board-cell {
+  animation: pr-cell-pop 0.28s ease-out both;
+}
+
+/* ── 単語帳＋リスニング統合カード ── */
+.pr-vocab-listen-tabs {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.pr-vl-tab-btn {
+  flex: 1;
+  padding: 6px 10px;
+  border-radius: 10px;
+  border: 1.5px solid var(--border);
+  background: #f8fafc;
+  font-size: 0.82rem;
+  font-weight: 700;
+  cursor: pointer;
+  color: #5f6c7b;
+  transition: background 0.15s, color 0.15s;
+  text-align: center;
+}
+
+.pr-vl-tab-btn:hover,
+.pr-vl-tab-btn.is-active {
+  background: var(--base);
+  color: #fff;
+  border-color: var(--base);
+}
+
+.pr-vl-panel { display: none; }
+.pr-vl-panel.is-active { display: block; }
+
+/* ── AIメッセージ スリムバナー ── */
+.pr-ai-banner {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 18px;
+  border-radius: 14px;
+  background: linear-gradient(135deg,
+    rgba(43, 108, 176, 0.06) 0%,
+    rgba(43, 108, 176, 0.02) 100%);
+  border: 1px solid rgba(43, 108, 176, 0.12);
+  animation: pr-card-rise 0.38s ease-out both;
+  animation-delay: 0.20s;
+}
+
+.pr-ai-banner__icon {
+  font-size: 1.6rem;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.pr-ai-banner__text {
+  flex: 1;
+  font-size: 0.9rem;
+  color: #374151;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ── 歴代ボードをボードカード内へ集約 ── */
+.pr-past-boards-toggle {
+  margin-top: 14px;
+  border-top: 1px solid rgba(201, 215, 234, 0.5);
+  padding-top: 10px;
+}
+
+.pr-past-boards-toggle summary {
+  cursor: pointer;
+  font-size: 0.84rem;
+  font-weight: 700;
+  color: var(--base);
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.pr-past-boards-toggle summary::-webkit-details-marker { display: none; }
+
+.pr-past-boards-toggle summary::before {
+  content: "▶";
+  font-size: 0.65rem;
+  transition: transform 0.2s;
+}
+
+.pr-past-boards-toggle[open] summary::before {
+  transform: rotate(90deg);
+}
+
+/* ── ショップカード コンパクト化 ── */
+.progress-page .shop-card {
+  padding: 14px 18px;
+}
+
+/* ── 単語帳サマリーバー 高さ縮小 ── */
+.progress-page .fc-summary-bar {
+  margin-bottom: 10px;
+}
+.progress-page .fc-summary-bar__done {
+  font-size: 1.3rem;
+}
+
+/* ── リスニング マスタリー行コンパクト ── */
+.pr-listen-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.pr-listen-row__name {
+  font-size: 0.82rem;
+  font-weight: 600;
+  min-width: 100px;
+  flex: 1;
+}
+
+.pr-listen-bar {
+  flex: 2;
+  height: 7px;
+  border-radius: 999px;
+  background: rgba(201, 215, 234, 0.5);
+  overflow: hidden;
+}
+
+.pr-listen-bar-fill {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  width: 0;
+  background: linear-gradient(90deg, #818cf8, #6366f1);
+  transition: width 0.9s cubic-bezier(0.34, 1.2, 0.64, 1);
+}
+
+.pr-listen-pct {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #4338ca;
+  min-width: 36px;
+  text-align: right;
+}
+
+/* ── カードホバー共通 ── */
+.progress-page .card:not(.sugoroku-hero) {
+  transition: transform 0.2s var(--ease-spring), box-shadow 0.2s;
+}
+
+.progress-page .card:not(.sugoroku-hero):hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(31, 79, 133, 0.10);
+}
+
+/* Alpine x-cloak サポート */
+[x-cloak] { display: none !important; }
+
+/* ── レスポンシブ ── */
+@media (max-width: 900px) {
+  .pr-grid-2 {
+    grid-template-columns: 1fr;
+  }
+  .pr-grid-2--half {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .pr-today-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .progress-page .card {
+    padding: 14px 16px;
+  }
+}
