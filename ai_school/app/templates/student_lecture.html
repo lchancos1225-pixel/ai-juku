@@ -11,9 +11,9 @@
     <span class="state-chip">{{ unit.display_name }}</span>
   </div>
   <div style="display: flex; gap: 8px;">
-    <button class="btn btn--voice" @click="toggleVoice()" :class="voiceEnabled ? 'is-active' : ''">
-      <span x-show="!voiceEnabled">🔇 音声オフ</span>
-      <span x-show="voiceEnabled">🔊 音声オン</span>
+    <button class="btn btn--voice" @click="toggleVoice()" :class="voiceEnabled ? 'is-active' : ''" title="音声読み上げのON/OFF">
+      <span class="voice-icon" x-text="voiceEnabled ? '🔊' : '🔇'"></span>
+      <span x-text="voiceEnabled ? '音声ON' : '音声OFF'"></span>
     </button>
     <a class="btn btn--back" href="/students/{{ student.student_id }}" aria-label="問題画面に戻る">問題に戻る</a>
   </div>
@@ -231,11 +231,24 @@ function lectureApp(total) {
     completed: false,
     voiceEnabled: false,
     synth: window.speechSynthesis,
+    voicesLoaded: false,
     
     init() {
       this.triggerVisualAnim(1);
-      // Pre-load voices to avoid delay on first click
-      if (this.synth) this.synth.getVoices();
+      // 音声リストが読み込まれるのを待つ（Chrome対応）
+      if (this.synth) {
+        this.loadVoices();
+        if (this.synth.onvoiceschanged !== undefined) {
+          this.synth.onvoiceschanged = () => this.loadVoices();
+        }
+      }
+    },
+    loadVoices() {
+      const voices = this.synth.getVoices();
+      if (voices.length > 0) {
+        this.voicesLoaded = true;
+        console.log('音声リスト読み込み完了:', voices.length, '件');
+      }
     },
     toggleVoice() {
       this.voiceEnabled = !this.voiceEnabled;
@@ -247,7 +260,7 @@ function lectureApp(total) {
     },
     speakCurrent() {
       if (!this.voiceEnabled || !this.synth) return;
-      this.synth.cancel(); // Stop any ongoing speech
+      this.synth.cancel();
       
       const stepEl = document.getElementById('lec-step-' + this.current);
       if (!stepEl) return;
@@ -257,14 +270,28 @@ function lectureApp(total) {
       
       const utterance = new SpeechSynthesisUtterance(text);
       utterance.lang = 'ja-JP';
-      utterance.rate = 1.1; // Slightly faster for an energetic AI teacher
+      utterance.rate = 1.0;
       
+      // 音声選択を確実に
       const voices = this.synth.getVoices();
-      const jaVoices = voices.filter(v => v.lang.includes('ja'));
+      const jaVoices = voices.filter(v => v.lang && v.lang.includes('ja'));
       if (jaVoices.length > 0) {
-        // Prefer natural voices if available
-        utterance.voice = jaVoices.find(v => v.name.includes('Google') || v.name.includes('Nanami') || v.name.includes('Keita')) || jaVoices[0];
+        const preferredVoice = jaVoices.find(v => 
+          v.name.includes('Google') || 
+          v.name.includes('Nanami') || 
+          v.name.includes('Keita') ||
+          v.name.includes('Microsoft') ||
+          v.name.includes('Sayaka')
+        );
+        utterance.voice = preferredVoice || jaVoices[0];
+        console.log('使用音声:', utterance.voice.name);
+      } else {
+        console.warn('日本語音声が見つかりません。デフォルトを使用。');
       }
+      
+      utterance.onerror = (e) => {
+        console.error('音声エラー:', e.error);
+      };
       
       this.synth.speak(utterance);
     },
