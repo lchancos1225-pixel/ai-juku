@@ -5,24 +5,25 @@
 {% set steps = lecture_steps.steps if lecture_steps else [] %}
 {% set total = steps | length %}
 
-<div class="student-top-bar">
-  <div class="student-top-bar__info">
-    <span class="student-top-bar__name">{{ student.display_name }} さん</span>
-    <span class="state-chip">{{ unit.display_name }}</span>
-  </div>
-  <div style="display: flex; gap: 8px;">
-    <button class="btn btn--voice" @click="toggleVoice()" :class="voiceEnabled ? 'is-active' : ''" title="音声読み上げのON/OFF">
-      <span class="voice-icon" x-text="voiceEnabled ? '🔊' : '🔇'">🔇</span>
-      <span x-text="voiceEnabled ? '音声ON' : '音声OFF'">音声OFF</span>
-    </button>
-    <a class="btn btn--back" href="/students/{{ student.student_id }}" aria-label="問題画面に戻る">問題に戻る</a>
-  </div>
-</div>
-
 {# ===== ステップ解説メインUI ===== #}
 <div class="lec-wrapper" id="lec-wrapper"
      x-data="lectureApp({{ total }})"
      x-init="init()">
+
+  {# トップバーをx-data内に移動 #}
+  <div class="student-top-bar">
+    <div class="student-top-bar__info">
+      <span class="student-top-bar__name">{{ student.display_name }} さん</span>
+      <span class="state-chip">{{ unit.display_name }}</span>
+    </div>
+    <div style="display: flex; gap: 8px;">
+      <button class="btn btn--voice" @click="toggleVoice()" :class="voiceEnabled ? 'is-active' : ''" title="音声読み上げのON/OFF">
+        <span class="voice-icon" x-text="voiceEnabled ? '🔊' : '🔇'">🔇</span>
+        <span x-text="voiceEnabled ? '音声ON' : '音声OFF'">音声OFF</span>
+      </button>
+      <a class="btn btn--back" href="/students/{{ student.student_id }}" aria-label="問題画面に戻る">問題に戻る</a>
+    </div>
+  </div>
 
   {# プログレスバー #}
   <div class="lec-progress">

@@ -118,6 +118,38 @@ class UnitDependency(Base):
     lecture_steps_json: Mapped[str | None] = mapped_column(Text, nullable=True)
 
 
+class UnitPrerequisite(Base):
+    """Many-to-many prerequisite edges between units.
+
+    Each row declares ``prerequisite_id`` is a foundation for ``unit_id``.
+    ``weight`` is the multiplicative cost used by the recursive CTE in
+    :mod:`ai_school.app.services.diagnostic_sql` for tie-breaking and future
+    weighted-routing extensions; defaults to 1.0 (uniform).
+
+    ``edge_kind`` distinguishes "hard" prerequisites (must be mastered first)
+    from "soft" ones (helpful but not strictly required).
+    """
+
+    __tablename__ = "unit_prerequisites"
+    __table_args__ = (
+        UniqueConstraint("unit_id", "prerequisite_id", name="uq_unit_prerequisites_pair"),
+    )
+
+    unit_id: Mapped[str] = mapped_column(
+        ForeignKey("unit_dependency.unit_id", ondelete="CASCADE"),
+        primary_key=True,
+        index=True,
+    )
+    prerequisite_id: Mapped[str] = mapped_column(
+        ForeignKey("unit_dependency.unit_id", ondelete="CASCADE"),
+        primary_key=True,
+        index=True,
+    )
+    weight: Mapped[float] = mapped_column(Float, default=1.0, nullable=False)
+    edge_kind: Mapped[str] = mapped_column(String(20), default="hard", nullable=False)
+    created_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow, nullable=False)
+
+
 class Student(Base):
     __tablename__ = "students"
 

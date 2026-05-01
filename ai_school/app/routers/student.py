@@ -652,6 +652,40 @@ def switch_unit(request: Request, student_id: int, unit_id: str = Form(...), db:
     return RedirectResponse(url=f"/students/{student_id}", status_code=303)
 
 
+@router.get("/{student_id}/video_lecture/{unit_id}", response_class=HTMLResponse)
+def video_lecture(request: Request, student_id: int, unit_id: str, db: Session = Depends(get_db)):
+    """Phase 2: タブレット最適化・スライド同期プレイヤー"""
+    auth = require_student_login(request, student_id)
+    if auth is not None:
+        return auth
+
+    student = db.get(Student, student_id)
+    if student is None:
+        raise HTTPException(status_code=404, detail="Student not found")
+    _ensure_student_classroom_access(request, student)
+
+    unit = db.get(UnitDependency, unit_id)
+    if unit is None:
+        raise HTTPException(status_code=404, detail="Unit not found")
+
+    # モックデータ: 本番環境ではデータベース（LectureVideo等）から取得する
+    mock_slides = [
+        {"id": 1, "start_time": 0, "end_time": 10, "image_url": "https://placehold.co/800x600/1e293b/ffffff?text=Intro:+What+is+Variables?", "thumbnail": "https://placehold.co/160x120/1e293b/ffffff?text=Intro"},
+        {"id": 2, "start_time": 10, "end_time": 25, "image_url": "https://placehold.co/800x600/0f172a/60a5fa?text=Basic+Concept", "thumbnail": "https://placehold.co/160x120/0f172a/60a5fa?text=Basic"},
+        {"id": 3, "start_time": 25, "end_time": 45, "image_url": "https://placehold.co/800x600/1e293b/f87171?text=Common+Mistakes", "thumbnail": "https://placehold.co/160x120/1e293b/f87171?text=Mistakes"},
+        {"id": 4, "start_time": 45, "end_time": 60, "image_url": "https://placehold.co/800x600/334155/34d399?text=Practice+Time!", "thumbnail": "https://placehold.co/160x120/334155/34d399?text=Practice"}
+    ]
+
+    return templates.TemplateResponse(
+        "student_video_lecture.html",
+        {
+            "request": request,
+            "student": student,
+            "unit": unit,
+            "slides_json": json.dumps(mock_slides)
+        },
+    )
+
 @router.get("/{student_id}/lecture/{unit_id}", response_class=HTMLResponse)
 def unit_lecture(request: Request, student_id: int, unit_id: str, db: Session = Depends(get_db)):
     """単元レクチャーページ"""
@@ -689,6 +723,84 @@ def unit_lecture(request: Request, student_id: int, unit_id: str, db: Session = 
             "intro_html": intro_html,
         },
     )
+
+@router.get("/{student_id}/diagnostic/{unit_id}/path")
+def diagnostic_remediation_path(
+    request: Request,
+    student_id: int,
+    unit_id: str,
+    weak_only: bool = False,
+    max_depth: int = 8,
+    mastery_threshold: float = 0.55,
+    db: Session = Depends(get_db),
+):
+    """Return the shortest remediation path for ``unit_id``.
+
+    Backed by :mod:`prerequisite_diagnostic_service`. Requires PostgreSQL.
+    All service-level errors are translated into ``HTTPException`` so they
+    surface as well-formed JSON to API consumers.
+    """
+    auth = require_student_login(request, student_id, api=True)
+    if auth is not None:
+        return auth
+
+    student = db.get(Student, student_id)
+    if student is None:
+        raise HTTPException(status_code=404, detail="Student not found")
+    _ensure_student_classroom_access(request, student)
+
+    from ..services.prerequisite_diagnostic_service import (
+        DatabaseDialectError,
+        DiagnosticServiceError,
+        DiagnosticTimeoutError,
+        DiagnosticTransientError,
+        PrerequisiteGraphError,
+        TargetUnitNotFoundError,
+        build_shortest_remediation_path,
+    )
+
+    try:
+        path_nodes = build_shortest_remediation_path(
+            db,
+            student_id=student_id,
+            target_unit_id=unit_id,
+            max_depth=max_depth,
+            mastery_threshold=mastery_threshold,
+            weak_only=weak_only,
+        )
+    except ValueError as exc:
+        raise HTTPException(status_code=400, detail=str(exc)) from exc
+    except TargetUnitNotFoundError as exc:
+        raise HTTPException(status_code=404, detail=str(exc)) from exc
+    except DatabaseDialectError as exc:
+        raise HTTPException(status_code=503, detail=str(exc)) from exc
+    except DiagnosticTimeoutError as exc:
+        raise HTTPException(status_code=504, detail=str(exc)) from exc
+    except DiagnosticTransientError as exc:
+        raise HTTPException(status_code=503, detail=str(exc)) from exc
+    except PrerequisiteGraphError as exc:
+        raise HTTPException(status_code=500, detail=str(exc)) from exc
+    except DiagnosticServiceError as exc:
+        raise HTTPException(status_code=500, detail=str(exc)) from exc
+
+    return {
+        "student_id": student_id,
+        "target_unit_id": unit_id,
+        "path": [
+            {
+                "unit_id": n.unit_id,
+                "display_name": n.display_name,
+                "depth": n.depth,
+                "via_unit": n.via_unit,
+                "mastery_score": round(n.mastery_score, 4),
+                "correct_count": n.correct_count,
+                "wrong_count": n.wrong_count,
+                "is_weak": n.is_weak,
+            }
+            for n in path_nodes
+        ],
+    }
+
 
 @router.post("/{student_id}/ocr", response_model=OCRResponse)
 def ocr_answer(request: Request, student_id: int, payload: OCRRequest, db: Session = Depends(get_db)):
