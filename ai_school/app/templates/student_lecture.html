@@ -12,8 +12,8 @@
   </div>
   <div style="display: flex; gap: 8px;">
     <button class="btn btn--voice" @click="toggleVoice()" :class="voiceEnabled ? 'is-active' : ''" title="音声読み上げのON/OFF">
-      <span class="voice-icon" x-text="voiceEnabled ? '🔊' : '🔇'"></span>
-      <span x-text="voiceEnabled ? '音声ON' : '音声OFF'"></span>
+      <span class="voice-icon" x-text="voiceEnabled ? '🔊' : '🔇'">🔇</span>
+      <span x-text="voiceEnabled ? '音声ON' : '音声OFF'">音声OFF</span>
     </button>
     <a class="btn btn--back" href="/students/{{ student.student_id }}" aria-label="問題画面に戻る">問題に戻る</a>
   </div>
