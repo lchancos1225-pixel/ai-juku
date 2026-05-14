@@ -149,11 +149,11 @@
 {% if problem and state and state.current_unit %}
 {% set consec_wrongs = metrics.get(student.student_id).consecutive_wrong if metrics and metrics.get(student.student_id) else 0 %}
 {% if consec_wrongs >= 3 %}
-<a class="lec-nudge-banner" href="/students/{{ student.student_id }}/lecture/{{ state.current_unit }}">
-  <span class="lec-nudge-banner__icon">📖</span>
+<a class="lec-nudge-banner" href="/students/{{ student.student_id }}/video_lecture/{{ state.current_unit }}">
+  <span class="lec-nudge-banner__icon">🎬</span>
   <div>
     <span class="lec-nudge-banner__title">解き方を確認しよう</span>
-    <span class="lec-nudge-banner__desc">ステップ解説でコツをつかめ！</span>
+    <span class="lec-nudge-banner__desc">動画解説でコツをつかめ！</span>
   </div>
   <span class="lec-nudge-banner__arrow">→</span>
 </a>

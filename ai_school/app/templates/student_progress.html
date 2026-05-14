@@ -255,15 +255,11 @@
     </div>
   </section>
 
-  {# ── 単語帳 + リスニング（Alpine タブ）── #}
-  <section class="card" x-data="{ tab: 'vocab' }">
-    <div class="pr-vocab-listen-tabs">
-      <button type="button" class="pr-vl-tab-btn" :class="{'is-active': tab==='vocab'}" @click="tab='vocab'">📚 単語帳</button>
-      <button type="button" class="pr-vl-tab-btn" :class="{'is-active': tab==='listening'}" @click="tab='listening'">🎧 リスニング</button>
-    </div>
-
-    {# 単語帳パネル #}
-    <div x-show="tab==='vocab'">
+  {# ── 単語帳 + リスニング 横並びカード ── #}
+  <div class="pr-right-grid">
+    {# 単語帳カード #}
+    <section class="card pr-right-card">
+      <p class="section-label">📚 単語帳</p>
       <div class="fc-summary-bar">
         <div class="fc-summary-bar__info">
           <span class="fc-summary-bar__done">{{ flashcard_summary.done }}</span>
@@ -304,10 +300,11 @@
       </details>
       <a class="hero-cta-btn" style="margin-top:12px; background:#ecfdf5; color:#065f46; display:inline-block;"
          href="/students/{{ progress.student.student_id }}/flashcards">📚 単語帳を開く</a>
-    </div>
+    </section>
 
-    {# リスニングパネル #}
-    <div x-show="tab==='listening'" style="display:none">
+    {# リスニングカード #}
+    <section class="card pr-right-card">
+      <p class="section-label">🎧 リスニング</p>
       {% if listening_mastery %}
         {% for unit in listening_mastery %}
         <div class="pr-listen-row">
@@ -322,8 +319,8 @@
         <p style="color:#6b7280; font-size:0.9rem; margin:0 0 12px;">まだリスニング記録がありません。</p>
       {% endif %}
       <a href="/students/{{ student_id }}/listening" class="hero-cta-btn" style="margin-top:12px; background:#eef2ff; color:#3730a3; display:inline-block;">🎧 リスニングを始める</a>
-    </div>
-  </section>
+    </section>
+  </div>{# end pr-right-grid #}
 
 </div>{# end pr-grid-2--half #}
 
