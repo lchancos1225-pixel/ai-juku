@@ -21,7 +21,7 @@ from .services.problem_service import ensure_runtime_schema, seed_initial_data
 _APP_DIR = Path(__file__).resolve().parent
 _REPO_ROOT = _APP_DIR.parents[1]
 _STATIC_DIR = _APP_DIR / "static"
-_LP_HTML = _REPO_ROOT / "lp.html"
+_LP_HTML = _APP_DIR / "templates" / "lp.html"
 
 
 @asynccontextmanager
@@ -90,38 +90,26 @@ SMTP_PASSWORD = os.getenv("SMTP_PASSWORD", "")
 async def contact_form(request: Request):
     """LP からのコンタクトフォーム送信を処理"""
     try:
-        form = await request.form()
-        inquiry_type = form.get("inquiry_type", "")
-        company_name = form.get("company_name", "")
-        name = form.get("name", "")
-        email = form.get("email", "")
-        phone = form.get("phone", "")
-        scale = form.get("scale", "")
-        message = form.get("message", "")
+        data = await request.json()
+        name           = data.get("name", "")
+        classroom_name = data.get("classroom_name", "")
+        email          = data.get("email", "")
+        message        = data.get("message", "")
         
         # メール本文を作成
         body = f"""
 【LP コンタクトフォーム】
 
-【お申し込み種別】
-{inquiry_type}
-
-【塾・学校名】
-{company_name}
-
 【お名前】
 {name}
+
+【教室名】
+{classroom_name}
 
 【メールアドレス】
 {email}
 
-【電話番号】
-{phone}
-
-【生徒数・教室規模】
-{scale}
-
-【ご質問・ご要望】
+【ご相談内容】
 {message}
 """
         
