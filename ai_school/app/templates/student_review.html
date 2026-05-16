@@ -600,14 +600,19 @@
           makeKey("(", () => appendToCurrent("("), false),
         ]);
         addRow([
-          makeKey(")", () => appendToCurrent(")"), false),
-          makeKey("^", () => appendToCurrent("^"), false),
+          makeKey("\u221a", () => appendToCurrent("sqrt("), false),
           makeKey("x\u00b2", () => appendToCurrent("x^2"), false),
+          makeKey("a\u00b2", () => appendToCurrent("a^2"), false),
         ]);
         addRow([
-          makeKey("a\u00b2", () => appendToCurrent("a^2"), false),
-          makeKey("\u221a", () => appendToCurrent("sqrt("), false),
-          makeKey("a/b", () => appendToCurrent("/"), false),
+          makeKey("x\u207f", () => appendToCurrent("^"), false),
+          makeKey("\u00f7", () => appendToCurrent("/"), false),
+          makeKey("\uff0d", () => appendToCurrent("-"), false),
+        ]);
+        addRow([
+          makeKey("(", () => appendToCurrent("("), false),
+          makeKey(")", () => appendToCurrent(")"), false),
+          makeKey("=", () => appendToCurrent("="), false),
         ]);
         addRow([makeKey("\u232b", backspace, true)]);
       } else if (mode === "fraction") {
