@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="card" style="max-width:600px;margin:0 auto;">
+  <p class="section-label">宿題管理</p>
+  <h2>宿題を作成</h2>
+
+  {% if error %}
+  <div style="background:#fee2e2;color:#b91c1c;padding:10px 14px;border-radius:8px;margin-bottom:16px;">{{ error }}</div>
+  {% endif %}
+
+  <form method="post" action="/teachers/homework/create" style="display:flex;flex-direction:column;gap:14px;">
+    <div>
+      <label style="font-weight:600;display:block;margin-bottom:4px;">タイトル <span style="color:#ef4444;">*</span></label>
+      <input type="text" name="title" required maxlength="100" value="{{ form.title or '' }}"
+        style="width:100%;padding:10px 12px;border-radius:8px;border:1px solid var(--border,#e2e8f0);box-sizing:border-box;font-size:0.95rem;">
+    </div>
+    <div>
+      <label style="font-weight:600;display:block;margin-bottom:4px;">単元（任意）</label>
+      <select name="unit_id" style="width:100%;padding:10px 12px;border-radius:8px;border:1px solid var(--border,#e2e8f0);box-sizing:border-box;font-size:0.95rem;">
+        <option value="">— すべての単元からランダム —</option>
+        {% for u in units %}
+        <option value="{{ u.unit_id }}" {% if form.unit_id == u.unit_id %}selected{% endif %}>{{ u.display_name }}</option>
+        {% endfor %}
+      </select>
+    </div>
+    <div>
+      <label style="font-weight:600;display:block;margin-bottom:4px;">問題数</label>
+      <select name="num_problems" style="padding:10px 12px;border-radius:8px;border:1px solid var(--border,#e2e8f0);font-size:0.95rem;">
+        {% for n in [3, 5, 8, 10] %}
+        <option value="{{ n }}" {% if (form.num_problems or 5) | int == n %}selected{% endif %}>{{ n }}問</option>
+        {% endfor %}
+      </select>
+    </div>
+    <div>
+      <label style="font-weight:600;display:block;margin-bottom:4px;">締切日（任意）</label>
+      <input type="date" name="due_date" value="{{ form.due_date or '' }}"
+        style="padding:10px 12px;border-radius:8px;border:1px solid var(--border,#e2e8f0);font-size:0.95rem;">
+    </div>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;">
+      <button type="submit" class="primary-button">✅ 作成する</button>
+      <a href="/teachers/homework" class="secondary-link">キャンセル</a>
+    </div>
+  </form>
+</section>
+{% endblock %}

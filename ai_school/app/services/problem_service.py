@@ -163,6 +163,8 @@ def ensure_runtime_schema(db: Session) -> None:
         db.execute(text("ALTER TABLE problems ADD COLUMN choices TEXT"))
     if "answer_input_spec" not in problem_columns:
         db.execute(text("ALTER TABLE problems ADD COLUMN answer_input_spec TEXT"))
+    if "challenge_category" not in problem_columns:
+        db.execute(text("ALTER TABLE problems ADD COLUMN challenge_category TEXT"))
     if "route_decision" not in log_columns:
         db.execute(text("ALTER TABLE learning_log ADD COLUMN route_decision TEXT"))
     if "error_pattern" not in log_columns:
@@ -511,6 +513,58 @@ def ensure_runtime_schema(db: Session) -> None:
             "avg_elapsed_sec REAL,"
             "updated_at TEXT NOT NULL DEFAULT (datetime('now')),"
             "UNIQUE(student_id, full_unit_id))"
+        )
+    )
+    db.execute(
+        text(
+            "CREATE TABLE IF NOT EXISTS board_posts ("
+            "post_id INTEGER PRIMARY KEY AUTOINCREMENT,"
+            "classroom_id INTEGER NOT NULL,"
+            "author_role TEXT NOT NULL,"
+            "author_id INTEGER NOT NULL,"
+            "author_name TEXT NOT NULL,"
+            "tag TEXT NOT NULL DEFAULT 'question',"
+            "body TEXT NOT NULL,"
+            "is_hidden INTEGER NOT NULL DEFAULT 0,"
+            "created_at TEXT NOT NULL DEFAULT (datetime('now')))"
+        )
+    )
+    db.execute(
+        text(
+            "CREATE INDEX IF NOT EXISTS idx_board_posts_classroom_created "
+            "ON board_posts(classroom_id, created_at)"
+        )
+    )
+    db.execute(
+        text(
+            "CREATE TABLE IF NOT EXISTS homework_sets ("
+            "hw_id INTEGER PRIMARY KEY AUTOINCREMENT,"
+            "classroom_id INTEGER NOT NULL,"
+            "title TEXT NOT NULL,"
+            "unit_id TEXT,"
+            "due_date TEXT,"
+            "problem_ids TEXT NOT NULL DEFAULT '[]',"
+            "created_by INTEGER NOT NULL,"
+            "created_at TEXT NOT NULL DEFAULT (datetime('now')))"
+        )
+    )
+    db.execute(
+        text(
+            "CREATE TABLE IF NOT EXISTS homework_submissions ("
+            "sub_id INTEGER PRIMARY KEY AUTOINCREMENT,"
+            "hw_id INTEGER NOT NULL,"
+            "student_id INTEGER NOT NULL,"
+            "answers TEXT NOT NULL DEFAULT '{}',"
+            "score INTEGER NOT NULL DEFAULT 0,"
+            "total INTEGER NOT NULL DEFAULT 0,"
+            "submitted_at TEXT NOT NULL DEFAULT (datetime('now')),"
+            "UNIQUE(hw_id, student_id))"
+        )
+    )
+    db.execute(
+        text(
+            "CREATE INDEX IF NOT EXISTS idx_hw_submissions_student "
+            "ON homework_submissions(student_id)"
         )
     )
     db.commit()

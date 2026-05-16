@@ -46,12 +46,15 @@ from ..services.test_service import (
 from ..services.text_display_service import render_math_text
 from ..services.unit_map_service import get_unit_map_entry, load_all_unit_maps
 from ..paths import TEMPLATES_DIR
+from ..utils.grade_display import grade_label
+from .board import get_recent_board_posts
 
 
 router = APIRouter(prefix="/teachers", tags=["teachers"])
 templates = Jinja2Templates(directory=TEMPLATES_DIR)
 templates.env.filters["render_math_text"] = render_math_text
 templates.env.filters["from_json"] = lambda s: json.loads(s) if s else []
+templates.env.globals["grade_label"] = grade_label
 
 
 VALID_REASON_CODES = {
@@ -359,6 +362,7 @@ def teacher_dashboard(request: Request, db: Session = Depends(get_db)):
             "effective_unlock_by_student": effective_unlock_by_student,
             "test_session_meta": test_session_meta,
             "misconception_heatmap": misconception_heatmap,
+            "board_recent": get_recent_board_posts(db, classroom.classroom_id, 5) if classroom else [],
         },
     )
 
@@ -528,6 +532,7 @@ def add_student(
         "status": "ok",
         "student_id": student.student_id,
         "display_name": student.display_name,
+        "grade_label": grade_label(student.grade),
         "new_pin_once": new_pin,
     }
 
@@ -1385,5 +1390,103 @@ def today_progress(
             "error_labels": error_labels,
             "diagnostic_label_ja": diagnostic_label_ja,
             "parent_message": parent_message,
+        },
+    )
+
+
+@router.get("/homework", response_class=HTMLResponse)
+def homework_list(request: Request, db: Session = Depends(get_db)):
+    auth = require_teacher_login(request)
+    if auth is not None:
+        return auth
+    session = read_session(request)
+    classroom_id = session.get("classroom_id")
+
+    from ..services.homework_service import list_homework_for_classroom
+    homeworks = list_homework_for_classroom(db, classroom_id) if classroom_id else []
+    return templates.TemplateResponse(
+        "homework_list_teacher.html",
+        {"request": request, "homeworks": homeworks, "auth_role": "teacher"},
+    )
+
+
+@router.get("/homework/create", response_class=HTMLResponse)
+def homework_create_form(request: Request, db: Session = Depends(get_db)):
+    auth = require_teacher_login(request)
+    if auth is not None:
+        return auth
+    from sqlalchemy import select as sa_select
+    units = db.scalars(sa_select(UnitDependency).order_by(UnitDependency.display_order.asc())).all()
+    return templates.TemplateResponse(
+        "homework_create.html",
+        {"request": request, "units": units, "form": {}, "error": None, "auth_role": "teacher"},
+    )
+
+
+@router.post("/homework/create", response_class=HTMLResponse)
+def homework_create_submit(
+    request: Request,
+    title: str = Form(...),
+    unit_id: str = Form(""),
+    num_problems: int = Form(5),
+    due_date: str = Form(""),
+    db: Session = Depends(get_db),
+):
+    auth = require_teacher_login(request)
+    if auth is not None:
+        return auth
+    session = read_session(request)
+    classroom_id = session.get("classroom_id")
+    teacher_id = session.get("teacher_id") or 0
+
+    title = title.strip()
+    if not title:
+        from sqlalchemy import select as sa_select
+        units = db.scalars(sa_select(UnitDependency).order_by(UnitDependency.display_order.asc())).all()
+        return templates.TemplateResponse(
+            "homework_create.html",
+            {
+                "request": request, "units": units,
+                "form": {"title": title, "unit_id": unit_id, "num_problems": num_problems, "due_date": due_date},
+                "error": "タイトルを入力してください",
+                "auth_role": "teacher",
+            },
+        )
+
+    from ..services.homework_service import create_homework
+    create_homework(
+        db, classroom_id, teacher_id, title,
+        unit_id or None, due_date or None, num_problems,
+    )
+    return RedirectResponse(url="/teachers/homework", status_code=303)
+
+
+@router.get("/homework/{hw_id}/results", response_class=HTMLResponse)
+def homework_results(request: Request, hw_id: int, db: Session = Depends(get_db)):
+    auth = require_teacher_login(request)
+    if auth is not None:
+        return auth
+    session = read_session(request)
+    classroom_id = session.get("classroom_id")
+
+    from ..services.homework_service import get_homework_detail, get_homework_results
+    hw = get_homework_detail(db, hw_id)
+    if hw is None or hw["classroom_id"] != classroom_id:
+        raise HTTPException(status_code=404, detail="宿題が見つかりません")
+
+    results = get_homework_results(db, hw_id)
+    submitted_ids = {r["student_id"] for r in results}
+
+    from sqlalchemy import select as sa_select
+    students = db.scalars(
+        sa_select(Student).where(Student.classroom_id == classroom_id)
+    ).all()
+    not_submitted = [s.display_name for s in students if s.student_id not in submitted_ids]
+
+    return templates.TemplateResponse(
+        "homework_results.html",
+        {
+            "request": request, "hw": hw, "results": results,
+            "not_submitted": not_submitted, "auth_role": "teacher",
         },
     )

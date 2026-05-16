@@ -69,6 +69,10 @@
      hx-boost="true" hx-target="#unit-select-panel" hx-swap="innerHTML">📐 数学単元を選ぶ</a>
   {% endif %}
   <div id="unit-select-panel" style="display:none;"></div>
+  {% if classroom_id %}
+  <a class="progress-chip-btn" href="/board/{{ classroom_id }}">📋 掲示板</a>
+  <a class="progress-chip-btn" href="/students/{{ student.student_id }}/homework">📝 宿題</a>
+  {% endif %}
 </div>
 
 {# ===== Meinの冒険パネル（統合ステータスバー） ===== #}
@@ -971,4 +975,5 @@ function selectChoice(btn, value) {
 })();
 </script>
 {% endif %}
+<script src="/static/js/math_input_panel.js?v=20260516a"></script>
 {% endblock %}

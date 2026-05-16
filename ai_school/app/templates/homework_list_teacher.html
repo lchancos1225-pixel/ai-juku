@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="card" style="max-width:700px;margin:0 auto;">
+  <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:16px;">
+    <div>
+      <p class="section-label">宿題管理</p>
+      <h2 style="margin:0;">宿題一覧</h2>
+    </div>
+    <div style="display:flex;gap:8px;flex-wrap:wrap;">
+      <a href="/teachers/homework/create" class="primary-button">＋ 宿題を作成</a>
+      <a href="/teachers/dashboard" class="secondary-link">← ダッシュボード</a>
+    </div>
+  </div>
+
+  {% if homeworks %}
+  <div style="display:flex;flex-direction:column;gap:10px;">
+    {% for hw in homeworks %}
+    <div class="card" style="padding:14px 16px;margin:0;">
+      <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;">
+        <div>
+          <div style="font-weight:700;font-size:1rem;">{{ hw.title }}</div>
+          <div style="font-size:0.82rem;color:#64748b;margin-top:2px;">
+            {{ hw.problem_count }}問
+            {% if hw.unit_id %}・{{ hw.unit_id }}{% endif %}
+            {% if hw.due_date %}・締切: {{ hw.due_date }}{% endif %}
+            ・作成: {{ hw.created_at[:10] }}
+          </div>
+        </div>
+        <a href="/teachers/homework/{{ hw.hw_id }}/results" class="secondary-link" style="font-size:0.85rem;">提出状況 →</a>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  {% else %}
+  <p style="color:#94a3b8;text-align:center;padding:32px 0;">まだ宿題がありません。「宿題を作成」から始めましょう。</p>
+  {% endif %}
+</section>
+{% endblock %}

@@ -21,9 +21,11 @@ from ..database import get_db
 from ..models import Flashcard, FlashcardProgress, Student
 from ..services.auth_service import require_student_login
 from ..paths import TEMPLATES_DIR
+from ..utils.grade_display import grade_label
 
 router = APIRouter(prefix="/students/{student_id}/flashcards", tags=["flashcards"])
 templates = Jinja2Templates(directory=TEMPLATES_DIR)
+templates.env.globals["grade_label"] = grade_label
 
 INITIAL_EASE = 2.5
 MIN_EASE = 1.3
@@ -272,7 +274,7 @@ def flashcard_home(request: Request, student_id: int, db: Session = Depends(get_
         sets.append({
             "unit_id": unit_id,
             "grade": grade,
-            "grade_label": f"中{grade - 6}",
+            "grade_label": grade_label(grade),
             "display_name": UNIT_DISPLAY_NAMES.get(unit_id, unit_id.replace("eng_", "").replace("_", " ").title()),
             "total": total_count,
             "done": done_count,

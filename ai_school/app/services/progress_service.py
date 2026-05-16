@@ -75,43 +75,66 @@ def _preview_challenge_question(text: str | None, max_len: int = 72) -> str:
     return t
 
 
+CHALLENGE_CATEGORY_LABELS: dict[str, str] = {
+    "speed": "⚡ 計算スピード",
+    "proof": "📝 証明・論述",
+    "applied": "🌍 応用・実生活",
+    "puzzle": "🧩 数学パズル",
+    "olympiad": "🏅 数学オリンピック風",
+}
+
+
 def _build_challenge_shop_groups(
     db: Session, unit_labels: dict[str, str], dependency_map: dict[str, UnitDependency]
 ) -> list[dict]:
-    problems = db.scalars(
-        select(Problem)
-        .where(
-            Problem.difficulty == 5,
-            Problem.problem_type == "practice",
-            Problem.status == "approved",
-            Problem.subject == "math",
+    from sqlalchemy import text as _t
+    rows = db.execute(
+        _t(
+            "SELECT problem_id, question_text, full_unit_id, unit, challenge_category "
+            "FROM problems "
+            "WHERE difficulty=5 AND problem_type='practice' AND status='approved' AND subject='math' "
+            "ORDER BY COALESCE(full_unit_id, unit, ''), problem_id"
         )
-        .order_by(func.coalesce(Problem.full_unit_id, Problem.unit, "").asc(), Problem.problem_id.asc())
     ).all()
+
+    by_cat: dict[str, list[dict]] = {}
     by_unit: dict[str, list[dict]] = {}
-    for p in problems:
-        uid = p.full_unit_id or p.unit
-        by_unit.setdefault(uid, []).append(
-            {
-                "problem_id": p.problem_id,
-                "preview": _preview_challenge_question(p.question_text),
-            }
-        )
+
+    for r in rows:
+        cat = r.challenge_category if r.challenge_category else None
+        item = {
+            "problem_id": r.problem_id,
+            "preview": _preview_challenge_question(r.question_text),
+        }
+        if cat:
+            by_cat.setdefault(cat, []).append(item)
+        else:
+            uid = r.full_unit_id or r.unit or "other"
+            by_unit.setdefault(uid, []).append(item)
+
+    groups: list[dict] = []
+
+    for cat, items in by_cat.items():
+        groups.append({
+            "unit_id": cat,
+            "unit_name": CHALLENGE_CATEGORY_LABELS.get(cat, cat),
+            "items": items,
+            "is_category": True,
+        })
 
     def _unit_sort_key(uid: str | None) -> tuple[int, str]:
         dep = dependency_map.get(uid) if uid is not None else None
         return (dep.display_order if dep else 9999, str(uid or ""))
 
-    groups: list[dict] = []
     for uid in sorted(by_unit.keys(), key=_unit_sort_key):
         label = unit_labels.get(uid, uid or "その他")
-        groups.append(
-            {
-                "unit_id": uid,
-                "unit_name": label,
-                "items": by_unit[uid],
-            }
-        )
+        groups.append({
+            "unit_id": uid,
+            "unit_name": label,
+            "items": by_unit[uid],
+            "is_category": False,
+        })
+
     return groups
 
 

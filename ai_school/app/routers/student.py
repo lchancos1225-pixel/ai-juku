@@ -71,6 +71,7 @@ from ..services.answer_input_spec_service import build_answer_panel_template_con
 from ..services.math_text_service import pair_for_student_numeric_result_display
 from ..services.text_display_service import render_math_text
 from ..paths import TEMPLATES_DIR
+from ..utils.grade_display import grade_label
 
 logger = logging.getLogger(__name__)
 
@@ -79,6 +80,7 @@ router = APIRouter(prefix="/students", tags=["students"])
 templates = Jinja2Templates(directory=TEMPLATES_DIR)
 templates.env.filters["render_math_text"] = render_math_text
 templates.env.filters["from_json"] = lambda s: json.loads(s) if s else []
+templates.env.globals["grade_label"] = grade_label
 
 
 # Phase 3-A: Meinメッセージキャッシュ（同じ文脈なら同じメッセージ）
@@ -297,6 +299,7 @@ def student_home(request: Request, student_id: int, hint_level: int = 0, subject
                 "test_scope_label": test_scope_label(active_test.test_scope),
                 "test_suggestion": None,
                 "classroom_name": classroom.classroom_name if classroom else None,
+                "classroom_id": classroom.classroom_id if classroom else None,
                 "today_answer_count": today_answer_count,
                 "quest_goal": quest_goal,
                 **build_answer_panel_template_context(test_problem),
@@ -376,6 +379,7 @@ def student_home(request: Request, student_id: int, hint_level: int = 0, subject
             "test_suggestion": test_suggestion,
             "test_scope_label": test_scope_label(test_suggestion) if test_suggestion else None,
             "classroom_name": classroom.classroom_name if classroom else None,
+            "classroom_id": classroom.classroom_id if classroom else None,
             "review_count": review_count,
             "flashcard_review_count": flashcard_review_count,
             "today_answer_count": today_answer_count,
@@ -1239,7 +1243,8 @@ def submit_answer(
 def buy_challenge_problem(
     request: Request,
     student_id: int,
-    problem_id: int = Form(...),
+    problem_id: int = Form(None),
+    category: str = Form(None),
     db: Session = Depends(get_db),
 ):
     require_student_login(request, student_id, api=True)
@@ -1253,20 +1258,29 @@ def buy_challenge_problem(
     if (state.gold or 0) < CHALLENGE_COST:
         raise HTTPException(status_code=400, detail=f"G不足です。{CHALLENGE_COST}G必要です（現在: {state.gold or 0}G）")
 
-    problem = get_approved_challenge_problem(db, problem_id)
-    if problem is None:
-        raise HTTPException(status_code=400, detail="選んだ問題は購入できません。一覧から選び直してください。")
+    if problem_id:
+        problem = get_approved_challenge_problem(db, problem_id)
+        if problem is None:
+            raise HTTPException(status_code=400, detail="選んだ問題は購入できません。一覧から選び直してください。")
+    elif category:
+        from ..services.deepseek_challenge_service import get_or_generate_challenge_problem
+        problem = get_or_generate_challenge_problem(db, category=category)
+        if problem is None:
+            raise HTTPException(status_code=503, detail="問題の取得・生成に失敗しました。しばらくしてから試してください。")
+    else:
+        from ..services.deepseek_challenge_service import get_or_generate_challenge_problem
+        problem = get_or_generate_challenge_problem(db)
+        if problem is None:
+            raise HTTPException(status_code=503, detail="問題の取得・生成に失敗しました。しばらくしてから試してください。")
 
     state.gold = (state.gold or 0) - CHALLENGE_COST
     state.pending_challenge_problem_id = problem.problem_id
     db.add(state)
     db.commit()
 
-    # フォームからのPOSTはホームへリダイレクト、APIはJSONを返す
     accept = request.headers.get("accept", "")
     if "application/json" in accept:
         return {"status": "ok", "problem_id": problem.problem_id, "remaining_gold": state.gold}
-    from fastapi.responses import RedirectResponse
     return RedirectResponse(url=f"/students/{student_id}", status_code=303)
 
 
@@ -1473,3 +1487,109 @@ def student_ranking(request: Request, student_id: int, db: Session = Depends(get
             "is_student_view": True,
         },
     )
+
+
+@router.get("/{student_id}/homework", response_class=HTMLResponse)
+def student_homework_list(request: Request, student_id: int, db: Session = Depends(get_db)):
+    auth = require_student_login(request, student_id)
+    if auth is not None:
+        return auth
+    student = db.get(Student, student_id)
+    if student is None:
+        raise HTTPException(status_code=404, detail="Student not found")
+    _ensure_student_classroom_access(request, student)
+
+    from ..services.homework_service import list_homework_for_student
+    homeworks = list_homework_for_student(db, student.classroom_id, student_id) if student.classroom_id else []
+    return templates.TemplateResponse(
+        "homework_list_student.html",
+        {"request": request, "student": student, "homeworks": homeworks, "is_student_view": True},
+    )
+
+
+@router.get("/{student_id}/homework/{hw_id}", response_class=HTMLResponse)
+def student_homework_solve(request: Request, student_id: int, hw_id: int, db: Session = Depends(get_db)):
+    auth = require_student_login(request, student_id)
+    if auth is not None:
+        return auth
+    student = db.get(Student, student_id)
+    if student is None:
+        raise HTTPException(status_code=404, detail="Student not found")
+    _ensure_student_classroom_access(request, student)
+
+    from ..services.homework_service import get_homework_detail, get_submission
+    hw = get_homework_detail(db, hw_id)
+    if hw is None or hw["classroom_id"] != student.classroom_id:
+        raise HTTPException(status_code=404, detail="宿題が見つかりません")
+
+    submission = get_submission(db, hw_id, student_id)
+    return templates.TemplateResponse(
+        "homework_solve.html",
+        {
+            "request": request,
+            "student": student,
+            "hw": hw,
+            "submission": submission,
+            "is_student_view": True,
+        },
+    )
+
+
+@router.post("/{student_id}/homework/{hw_id}/submit")
+async def student_homework_submit(
+    request: Request,
+    student_id: int,
+    hw_id: int,
+    db: Session = Depends(get_db),
+):
+    auth = require_student_login(request, student_id)
+    if auth is not None:
+        return auth
+    student = db.get(Student, student_id)
+    if student is None:
+        raise HTTPException(status_code=404, detail="Student not found")
+    _ensure_student_classroom_access(request, student)
+
+    from ..services.homework_service import get_homework_detail, get_submission
+    from ..services.grading_service import grade_answer_detailed
+    from sqlalchemy import text as _text
+    import json as _json
+
+    hw = get_homework_detail(db, hw_id)
+    if hw is None or hw["classroom_id"] != student.classroom_id:
+        raise HTTPException(status_code=404, detail="宿題が見つかりません")
+
+    if get_submission(db, hw_id, student_id):
+        return RedirectResponse(url=f"/students/{student_id}/homework", status_code=303)
+
+    form_data = dict(await request.form())
+
+    answers = {}
+    score = 0
+    for p in hw["problems"]:
+        key = f"answer_{p.problem_id}"
+        given = str(form_data.get(key, "")).strip()
+        answers[str(p.problem_id)] = given
+        result = grade_answer_detailed(p, given)
+        if result.get("judgment") == "correct":
+            score += 1
+
+    total = len(hw["problems"])
+    now = datetime.utcnow().isoformat()
+    db.execute(
+        _text(
+            "INSERT OR IGNORE INTO homework_submissions "
+            "(hw_id, student_id, answers, score, total, submitted_at) "
+            "VALUES (:hw, :sid, :ans, :score, :total, :now)"
+        ),
+        {
+            "hw": hw_id,
+            "sid": student_id,
+            "ans": _json.dumps(answers),
+            "score": score,
+            "total": total,
+            "now": now,
+        },
+    )
+    db.commit()
+    return RedirectResponse(url=f"/students/{student_id}/homework", status_code=303)

@@ -9,7 +9,7 @@
       <p class="meta-note">
         {{ week_start.month }}/{{ week_start.day }}（月）〜 {{ week_end.month }}/{{ week_end.day }}（日）
         ／ {{ classroom.classroom_name if classroom else "" }}
-        ／ 中{{ student.grade - 6 }}
+        ／ {{ grade_label(student.grade) }}
       </p>
     </div>
     <div class="wr-top-actions">
@@ -34,7 +34,7 @@
         <div class="wr-preview-sub">
           {{ week_start.month }}/{{ week_start.day }}（月）〜 {{ week_end.month }}/{{ week_end.day }}（日）
           ／ {{ classroom.classroom_name if classroom else "" }}
-          ／ 中{{ student.grade - 6 }}
+          ／ {{ grade_label(student.grade) }}
         </div>
       </div>
     </div>

@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="card" style="max-width:700px;margin:0 auto;">
+  <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:16px;">
+    <div>
+      <p class="section-label">掲示板</p>
+      <h2 style="margin:0;">{{ classroom.classroom_name }}</h2>
+    </div>
+    {% if auth_role == "teacher" %}
+    <a href="/teachers/dashboard" class="secondary-link">← ダッシュボード</a>
+    {% else %}
+    <a href="/students/{{ request.session.get('student_id', '') if request.session else '' }}" class="secondary-link">← ホーム</a>
+    {% endif %}
+  </div>
+
+  {# ── 投稿フォーム ── #}
+  {% if auth_role in ("student", "teacher") %}
+  <form action="/board/{{ classroom.classroom_id }}/post" method="post"
+        style="background:var(--surface,#f8fafc);padding:16px;border-radius:10px;margin-bottom:24px;">
+    <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:8px;">
+      <select name="tag" style="padding:6px 10px;border-radius:6px;border:1px solid var(--border,#e2e8f0);">
+        {% for key, label in tag_labels.items() %}
+        {% if auth_role == "teacher" or key != "notice" %}
+        <option value="{{ key }}">{{ label }}</option>
+        {% endif %}
+        {% endfor %}
+      </select>
+    </div>
+    <textarea name="body" rows="3" maxlength="1000" required
+      placeholder="メッセージを入力（最大1000文字）"
+      style="width:100%;padding:10px;border-radius:8px;border:1px solid var(--border,#e2e8f0);resize:vertical;box-sizing:border-box;font-size:0.95rem;"></textarea>
+    <button type="submit" class="primary-button" style="margin-top:8px;">📤 投稿する</button>
+  </form>
+  {% endif %}
+
+  {# ── 投稿一覧 ── #}
+  {% if posts %}
+  <div style="display:flex;flex-direction:column;gap:12px;">
+    {% for p in posts %}
+    <div class="card" style="padding:14px 16px;margin:0;position:relative;">
+      <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:6px;">
+        <span style="font-size:0.75rem;font-weight:700;padding:2px 8px;border-radius:99px;
+          background:{% if p.author_role=='teacher' %}#dbeafe{% else %}#dcfce7{% endif %};
+          color:{% if p.author_role=='teacher' %}#1d4ed8{% else %}#166534{% endif %};">
+          {{ "先生" if p.author_role == "teacher" else "生徒" }}
+        </span>
+        <span style="font-weight:600;font-size:0.9rem;">{{ p.author_name }}</span>
+        <span style="font-size:0.75rem;padding:2px 8px;border-radius:99px;background:#f1f5f9;color:#475569;">
+          {{ p.tag_label }}
+        </span>
+        <span style="font-size:0.75rem;color:#94a3b8;margin-left:auto;">{{ p.created_at[:16] | replace("T"," ") }}</span>
+      </div>
+      <p style="margin:0;white-space:pre-wrap;word-break:break-all;font-size:0.93rem;">{{ p.body }}</p>
+      {% if auth_role == "teacher" %}
+      <form action="/board/{{ classroom.classroom_id }}/hide/{{ p.post_id }}" method="post"
+            style="position:absolute;top:10px;right:10px;" onsubmit="return confirm('この投稿を非表示にしますか？')">
+        <button type="submit" style="font-size:0.75rem;padding:2px 6px;border-radius:4px;border:1px solid #fca5a5;background:#fff1f1;color:#b91c1c;cursor:pointer;">非表示</button>
+      </form>
+      {% endif %}
+    </div>
+    {% endfor %}
+  </div>
+  {% else %}
+  <p style="color:#94a3b8;text-align:center;padding:32px 0;">まだ投稿がありません。最初に投稿してみましょう！</p>
+  {% endif %}
+</section>
+{% endblock %}

@@ -36,7 +36,7 @@
 
 {# ── 自分の学年のセット ── #}
 <section class="card" style="margin-bottom: 20px;">
-  <p class="section-label">中{{ student_grade - 6 }}年のセット</p>
+  <p class="section-label">{{ grade_label(student_grade) }}年のセット</p>
   <h2 style="margin: 4px 0 16px;">単元を選んで始めよう</h2>
   {% set my_sets = sets | selectattr("grade", "equalto", student_grade) | list %}
   {% if my_sets %}
@@ -72,7 +72,7 @@
     <details>
       <summary style="cursor: pointer; list-style: none; display: flex; align-items: center; justify-content: space-between; user-select: none;">
         <div>
-          <p class="section-label" style="margin: 0;">中{{ grade_val - 6 }}年のセット</p>
+          <p class="section-label" style="margin: 0;">{{ grade_label(grade_val) }}年のセット</p>
           <span style="font-size: 0.85rem; color: #64748b; margin-top: 2px; display: block;">{{ other_sets | length }} セット
             /
             {% set grade_done = other_sets | sum(attribute='done') %}

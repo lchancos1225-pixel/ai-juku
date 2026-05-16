@@ -13,10 +13,11 @@ _ENV_FILE = Path(__file__).resolve().parents[2] / ".env"
 load_dotenv(_ENV_FILE)
 
 from .database import Base, DATA_DIR, SessionLocal, engine
-from .routers import auth, classroom, english, feedback, flashcard, listening, owner, student, teacher
+from .routers import auth, board, classroom, english, feedback, flashcard, listening, owner, student, teacher
 from .routers import api_students
 from .services.auth_service import check_startup_security
 from .services.problem_service import ensure_runtime_schema, seed_initial_data
+from .utils.grade_display import grade_label
 
 _APP_DIR = Path(__file__).resolve().parent
 _REPO_ROOT = _APP_DIR.parents[1]
@@ -61,6 +62,7 @@ app.include_router(classroom.router)
 app.include_router(owner.router)
 app.include_router(feedback.router)
 app.include_router(flashcard.router)
+app.include_router(board.router)
 
 
 @app.get("/", include_in_schema=False)

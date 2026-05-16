@@ -114,23 +114,39 @@
     <h3 style="margin:0 0 4px; font-size:1rem;">🏪 激ムズ問題ショップ</h3>
     <p class="shop-desc">100G で超難問に挑戦！解けたら達成感MAX 🔥</p>
     {% if progress.can_buy_challenge %}
-      {% if progress.has_challenge_problems %}
-      <form action="/students/{{ progress.student.student_id }}/shop/buy_challenge" method="post" class="shop-buy-form">
-        <label class="shop-select-label" for="shop_problem_id">買う問題を選んでね</label>
-        <select name="problem_id" id="shop_problem_id" class="shop-problem-select" required>
-          <option value="" disabled selected>— 問題を選択 —</option>
-          {% for group in progress.challenge_shop_groups %}
-          <optgroup label="{{ group.unit_name }}">
-            {% for item in group['items'] %}
-            <option value="{{ item.problem_id }}">{{ loop.index }}. {{ item.preview }}</option>
-            {% endfor %}
-          </optgroup>
+      {# ── カテゴリから AI 生成 ── #}
+      <div style="margin-bottom:12px;">
+        <p style="font-size:0.82rem;font-weight:700;margin:0 0 6px;color:#475569;">🤖 AIに問題を作ってもらう</p>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;">
+          {% for cat_key, cat_label in [("speed","⚡ 計算スピード"),("proof","📝 証明"),("applied","🌍 応用"),("puzzle","🧩 パズル"),("olympiad","🏅 オリンピック")] %}
+          <form action="/students/{{ progress.student.student_id }}/shop/buy_challenge" method="post" style="margin:0;">
+            <input type="hidden" name="category" value="{{ cat_key }}">
+            <button type="submit" class="shop-buy-btn" style="font-size:0.8rem;padding:6px 12px;background:#f0f9ff;border:1px solid #bae6fd;color:#0369a1;">
+              {{ cat_label }}
+            </button>
+          </form>
           {% endfor %}
-        </select>
-        <button type="submit" class="shop-buy-btn">🪙 100G で買う（残 {{ progress.gold }}G）</button>
-      </form>
-      {% else %}
-      <p class="shop-locked-msg">激ムズ問題の準備中です。またあとで！</p>
+        </div>
+      </div>
+
+      {% if progress.has_challenge_problems %}
+      {# ── 既存問題から選ぶ ── #}
+      <details style="margin-top:8px;">
+        <summary style="font-size:0.82rem;font-weight:700;color:#475569;cursor:pointer;list-style:none;">📂 既存問題から選ぶ</summary>
+        <form action="/students/{{ progress.student.student_id }}/shop/buy_challenge" method="post" class="shop-buy-form" style="margin-top:8px;">
+          <select name="problem_id" id="shop_problem_id" class="shop-problem-select" required>
+            <option value="" disabled selected>— 問題を選択 —</option>
+            {% for group in progress.challenge_shop_groups %}
+            <optgroup label="{{ group.unit_name }}">
+              {% for item in group['items'] %}
+              <option value="{{ item.problem_id }}">{{ loop.index }}. {{ item.preview }}</option>
+              {% endfor %}
+            </optgroup>
+            {% endfor %}
+          </select>
+          <button type="submit" class="shop-buy-btn">🪙 100G で買う（残 {{ progress.gold }}G）</button>
+        </form>
+      </details>
       {% endif %}
     {% else %}
     <p class="shop-locked-msg">🔒 あと {{ 100 - progress.gold }}G 貯めると解放！（現在 {{ progress.gold }}G）</p>

@@ -116,7 +116,7 @@
           data-effective-mode="{{ eff[0] if eff else 'progressive' }}"
           data-effective-up-to="{{ eff[1] if eff and eff[1] else '' }}"
           data-cm="{{ (classroom.unit_unlock_mode if classroom else None) or 'progressive' }}"
-          data-cu="{{ classroom.unit_unlock_up_to if classroom and classroom.unit_unlock_up_to else '' }}">{{ student.display_name }}（ID {{ student.student_id }}・中{{ student.grade }}）</option>
+          data-cu="{{ classroom.unit_unlock_up_to if classroom and classroom.unit_unlock_up_to else '' }}">{{ student.display_name }}（ID {{ student.student_id }}・{{ grade_label(student.grade) }}）</option>
         {% endfor %}
       </select>
     </div>
@@ -139,7 +139,7 @@
         <option value="">選択してください</option>
         {% for u in all_units %}
         {% if u.subject == 'math' %}
-        <option value="{{ u.unit_id }}">{{ u.display_name }}（中{{ u.grade - 6 if u.grade else '?' }}）</option>
+        <option value="{{ u.unit_id }}">{{ u.display_name }}（{{ grade_label(u.grade) if u.grade else '?' }}）</option>
         {% endif %}
         {% endfor %}
       </select>
@@ -279,7 +279,7 @@ document.addEventListener('DOMContentLoaded', function() {
         <span class="teacher-student-card__summary-name">{{ student.display_name }}</span>
         <span class="teacher-student-card__summary-id">#{{ student.student_id }}</span>
         <span class="teacher-student-meta teacher-student-meta--compact">
-          <span>中{{ student.grade }}</span>
+          <span>{{ grade_label(student.grade) }}</span>
           <span>{{ "有効" if student.is_active else "無効" }}</span>
           <span>{{ unit_labels.get(state.current_unit, state.current_unit) if state and state.current_unit else "単元未設定" }}</span>
           {% if metric and metric.teacher_intervention_needed %}<span class="teacher-student-meta__alert">要声かけ</span>{% endif %}
@@ -733,4 +733,44 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 </script>
+
+{# ===== 掲示板プレビュー ===== #}
+{% if classroom and board_recent is defined and board_recent %}
+<section class="card" style="margin-top:24px;">
+  <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:12px;">
+    <div>
+      <p class="section-label">掲示板</p>
+      <h3 style="margin:0;">最近の投稿</h3>
+    </div>
+    <a href="/board/{{ classroom.classroom_id }}" class="secondary-link">すべて見る →</a>
+  </div>
+  <div style="display:flex;flex-direction:column;gap:8px;">
+    {% for p in board_recent %}
+    <div style="padding:10px 12px;background:var(--surface,#f8fafc);border-radius:8px;border:1px solid var(--border,#e2e8f0);">
+      <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:4px;">
+        <span style="font-size:0.73rem;font-weight:700;padding:1px 6px;border-radius:99px;
+          background:{% if p.author_role=='teacher' %}#dbeafe{% else %}#dcfce7{% endif %};
+          color:{% if p.author_role=='teacher' %}#1d4ed8{% else %}#166534{% endif %};">
+          {{ "先生" if p.author_role == "teacher" else "生徒" }}
+        </span>
+        <span style="font-size:0.85rem;font-weight:600;">{{ p.author_name }}</span>
+        <span style="font-size:0.73rem;padding:1px 6px;border-radius:99px;background:#f1f5f9;color:#475569;">{{ p.tag_label }}</span>
+        <span style="font-size:0.72rem;color:#94a3b8;margin-left:auto;">{{ p.created_at[:16] | replace("T"," ") }}</span>
+      </div>
+      <p style="margin:0;font-size:0.88rem;color:#334155;white-space:pre-wrap;word-break:break-all;">{{ p.body[:120] }}{% if p.body|length > 120 %}…{% endif %}</p>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+{% elif classroom %}
+<section class="card" style="margin-top:24px;">
+  <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;">
+    <div>
+      <p class="section-label">掲示板</p>
+      <h3 style="margin:0;">まだ投稿がありません</h3>
+    </div>
+    <a href="/board/{{ classroom.classroom_id }}" class="secondary-link">掲示板を開く →</a>
+  </div>
+</section>
+{% endif %}
 {% endblock %}
