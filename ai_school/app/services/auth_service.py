@@ -345,8 +345,15 @@ def require_student_login(request: Request, student_id: int, api: bool = False):
     current_student_id = session.get("student_id")
     if role is None:
         return _redirect_for_missing_role(api, "/login")
-    if role != "student" or current_student_id != student_id:
-        raise HTTPException(status_code=403, detail="student access denied")
+    if role != "student":
+        if api:
+            raise HTTPException(status_code=403, detail="student access denied")
+        return RedirectResponse(url="/login", status_code=303)
+    if current_student_id != student_id:
+        if api:
+            raise HTTPException(status_code=403, detail="student access denied")
+        # 自分の生徒ページへリダイレクト
+        return RedirectResponse(url=f"/students/{current_student_id}", status_code=303)
     return None
 
 

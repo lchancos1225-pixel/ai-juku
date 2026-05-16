@@ -217,10 +217,10 @@ def _ensure_student_classroom_access(request: Request, student: Student) -> None
 @router.get("/me/progress", include_in_schema=False)
 def my_progress(request: Request):
     session = read_session(request)
-    if session.get("role") is None:
+    if session.get("role") is None or session.get("student_id") is None:
         return RedirectResponse(url="/login", status_code=303)
-    if session.get("role") != "student" or session.get("student_id") is None:
-        raise HTTPException(status_code=403, detail="student access denied")
+    if session.get("role") != "student":
+        return RedirectResponse(url="/login", status_code=303)
     return RedirectResponse(url=f"/students/{session['student_id']}/progress", status_code=303)
 
 
