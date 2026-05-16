@@ -869,13 +869,6 @@
           rightZone.appendChild(btn);
         });
 
-        const submitBtn = makeKey("\uff1d \u7b54\u3048\u308b", () => {
-          const sb = document.getElementById("submit-btn");
-          if (sb) sb.click();
-        }, true);
-        submitBtn.classList.add("keypad-submit");
-        rightZone.appendChild(submitBtn);
-
         keypad.appendChild(leftZone);
         keypad.appendChild(rightZone);
       } else if (mode === "fraction") {
