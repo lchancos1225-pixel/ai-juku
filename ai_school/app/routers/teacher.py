@@ -1415,11 +1415,16 @@ def homework_create_form(request: Request, db: Session = Depends(get_db)):
     auth = require_teacher_login(request)
     if auth is not None:
         return auth
+    session = read_session(request)
+    classroom_id = session.get("classroom_id")
     from sqlalchemy import select as sa_select
     units = db.scalars(sa_select(UnitDependency).order_by(UnitDependency.display_order.asc())).all()
+    students = db.scalars(
+        sa_select(Student).where(Student.classroom_id == classroom_id)
+    ).all() if classroom_id else []
     return templates.TemplateResponse(
         "homework_create.html",
-        {"request": request, "units": units, "form": {}, "error": None, "auth_role": "teacher"},
+        {"request": request, "units": units, "students": students, "form": {}, "error": None, "auth_role": "teacher"},
     )
 
 
@@ -1430,6 +1435,7 @@ def homework_create_submit(
     unit_id: str = Form(""),
     num_problems: int = Form(5),
     due_date: str = Form(""),
+    student_ids: list[str] = Form([]),
     db: Session = Depends(get_db),
 ):
     auth = require_teacher_login(request)
@@ -1439,15 +1445,21 @@ def homework_create_submit(
     classroom_id = session.get("classroom_id")
     teacher_id = session.get("teacher_id") or 0
 
+    # 個別指定された生徒IDをパース
+    target_ids = [int(sid) for sid in student_ids if sid.isdigit()] if student_ids else None
+
     title = title.strip()
     if not title:
         from sqlalchemy import select as sa_select
         units = db.scalars(sa_select(UnitDependency).order_by(UnitDependency.display_order.asc())).all()
+        students = db.scalars(
+            sa_select(Student).where(Student.classroom_id == classroom_id)
+        ).all() if classroom_id else []
         return templates.TemplateResponse(
             "homework_create.html",
             {
-                "request": request, "units": units,
-                "form": {"title": title, "unit_id": unit_id, "num_problems": num_problems, "due_date": due_date},
+                "request": request, "units": units, "students": students,
+                "form": {"title": title, "unit_id": unit_id, "num_problems": num_problems, "due_date": due_date, "student_ids": target_ids or []},
                 "error": "タイトルを入力してください",
                 "auth_role": "teacher",
             },
@@ -1456,7 +1468,7 @@ def homework_create_submit(
     from ..services.homework_service import create_homework
     create_homework(
         db, classroom_id, teacher_id, title,
-        unit_id or None, due_date or None, num_problems,
+        unit_id or None, due_date or None, target_ids, num_problems,
     )
     return RedirectResponse(url="/teachers/homework", status_code=303)
 
@@ -1478,10 +1490,15 @@ def homework_results(request: Request, hw_id: int, db: Session = Depends(get_db)
     submitted_ids = {r["student_id"] for r in results}
 
     from sqlalchemy import select as sa_select
-    students = db.scalars(
-        sa_select(Student).where(Student.classroom_id == classroom_id)
-    ).all()
-    not_submitted = [s.display_name for s in students if s.student_id not in submitted_ids]
+    if hw.get("target_student_ids"):
+        all_students = db.scalars(
+            sa_select(Student).where(Student.student_id.in_(hw["target_student_ids"]))
+        ).all()
+    else:
+        all_students = db.scalars(
+            sa_select(Student).where(Student.classroom_id == classroom_id)
+        ).all()
+    not_submitted = [s.display_name for s in all_students if s.student_id not in submitted_ids]
 
     return templates.TemplateResponse(
         "homework_results.html",

@@ -24,6 +24,13 @@
             {% if hw.unit_id %}・{{ hw.unit_id }}{% endif %}
             {% if hw.due_date %}・締切: {{ hw.due_date }}{% endif %}
             ・作成: {{ hw.created_at[:10] }}
+            {% if hw.target_names %}
+            <span style="display:inline-block;margin-top:2px;padding:1px 6px;background:#e0f2fe;border-radius:4px;color:#0369a1;font-size:0.75rem;">
+              対象: {{ hw.target_names | join('、') }}
+            </span>
+            {% else %}
+            <span style="display:inline-block;margin-top:2px;padding:1px 6px;background:#f1f5f9;border-radius:4px;color:#64748b;font-size:0.75rem;">全員対象</span>
+            {% endif %}
           </div>
         </div>
         <a href="/teachers/homework/{{ hw.hw_id }}/results" class="secondary-link" style="font-size:0.85rem;">提出状況 →</a>

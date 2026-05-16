@@ -544,6 +544,7 @@ def ensure_runtime_schema(db: Session) -> None:
             "unit_id TEXT,"
             "due_date TEXT,"
             "problem_ids TEXT NOT NULL DEFAULT '[]',"
+            "target_student_ids TEXT,"
             "created_by INTEGER NOT NULL,"
             "created_at TEXT NOT NULL DEFAULT (datetime('now')))"
         )
