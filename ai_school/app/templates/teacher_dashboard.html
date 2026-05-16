@@ -9,11 +9,23 @@
     <div><span>所属生徒</span><strong>{{ students|length }}人</strong></div>
   </div>
   {# クイックナビゲーション #}
-  <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;padding-top:12px;border-top:1px solid var(--border,#e2e8f0);">
-    <a href="/teachers/homework" class="primary-button" style="font-size:0.85rem;padding:6px 14px;text-decoration:none;">📝 宿題一覧</a>
-    <a href="/teachers/homework/create" class="primary-button" style="font-size:0.85rem;padding:6px 14px;text-decoration:none;background:#0ea5e9;">➕ 宿題を作成</a>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-top:16px;padding-top:14px;border-top:1px solid var(--border,#e2e8f0);">
+    <a href="/teachers/homework" style="display:flex;align-items:center;gap:10px;padding:12px 14px;border-radius:12px;background:linear-gradient(135deg,#6366f1 0%,#8b5cf6 100%);color:#fff;text-decoration:none;font-weight:700;font-size:0.92rem;box-shadow:0 2px 8px rgba(99,102,241,0.25);transition:transform 0.15s,box-shadow 0.15s;"
+       onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 4px 14px rgba(99,102,241,0.35)'" onmouseout="this.style.transform='';this.style.boxShadow='0 2px 8px rgba(99,102,241,0.25)'">
+      <span style="font-size:1.4rem;">📝</span>
+      <span>宿題一覧</span>
+    </a>
+    <a href="/teachers/homework/create" style="display:flex;align-items:center;gap:10px;padding:12px 14px;border-radius:12px;background:linear-gradient(135deg,#0ea5e9 0%,#06b6d4 100%);color:#fff;text-decoration:none;font-weight:700;font-size:0.92rem;box-shadow:0 2px 8px rgba(14,165,233,0.25);transition:transform 0.15s,box-shadow 0.15s;"
+       onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 4px 14px rgba(14,165,233,0.35)'" onmouseout="this.style.transform='';this.style.boxShadow='0 2px 8px rgba(14,165,233,0.25)'">
+      <span style="font-size:1.4rem;">➕</span>
+      <span>宿題を作成</span>
+    </a>
     {% if classroom %}
-    <a href="/board/{{ classroom.classroom_id }}" class="secondary-link" style="font-size:0.85rem;padding:6px 14px;">📋 掲示板</a>
+    <a href="/board/{{ classroom.classroom_id }}" style="display:flex;align-items:center;gap:10px;padding:12px 14px;border-radius:12px;background:linear-gradient(135deg,#f59e0b 0%,#f97316 100%);color:#fff;text-decoration:none;font-weight:700;font-size:0.92rem;box-shadow:0 2px 8px rgba(245,158,11,0.25);transition:transform 0.15s,box-shadow 0.15s;"
+       onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 4px 14px rgba(245,158,11,0.35)'" onmouseout="this.style.transform='';this.style.boxShadow='0 2px 8px rgba(245,158,11,0.25)'">
+      <span style="font-size:1.4rem;">📋</span>
+      <span>掲示板</span>
+    </a>
     {% endif %}
   </div>
 </section>
