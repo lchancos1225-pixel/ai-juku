@@ -8,6 +8,14 @@
     <div><span>所属講師</span><strong>{{ teachers|length }}人</strong></div>
     <div><span>所属生徒</span><strong>{{ students|length }}人</strong></div>
   </div>
+  {# クイックナビゲーション #}
+  <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;padding-top:12px;border-top:1px solid var(--border,#e2e8f0);">
+    <a href="/teachers/homework" class="primary-button" style="font-size:0.85rem;padding:6px 14px;text-decoration:none;">📝 宿題一覧</a>
+    <a href="/teachers/homework/create" class="primary-button" style="font-size:0.85rem;padding:6px 14px;text-decoration:none;background:#0ea5e9;">➕ 宿題を作成</a>
+    {% if classroom %}
+    <a href="/board/{{ classroom.classroom_id }}" class="secondary-link" style="font-size:0.85rem;padding:6px 14px;">📋 掲示板</a>
+    {% endif %}
+  </div>
 </section>
 
 {# ===== 今すぐ声かけアラート ===== #}
