@@ -36,7 +36,7 @@
     const panel = document.createElement("div");
     panel.className = "math-input-panel";
     panel.style.cssText = [
-      "display:none",
+      "display:flex",
       "flex-wrap:wrap",
       "gap:6px",
       "padding:8px",
@@ -76,32 +76,8 @@
       })();
     if (!input) return;
 
-    const wrapper = input.closest(".answer-input-wrapper") || input.parentElement;
-
-    const toggle = document.createElement("button");
-    toggle.type = "button";
-    toggle.textContent = "\u2328\ufe0f \u6570\u5f0f";
-    toggle.style.cssText = [
-      "font-size:0.8rem",
-      "padding:2px 8px",
-      "border-radius:4px",
-      "border:1px solid var(--border,#ccc)",
-      "background:transparent",
-      "cursor:pointer",
-      "margin-left:6px",
-      "vertical-align:middle",
-    ].join(";");
-
     const panel = buildPanel(input);
-    let visible = false;
-    toggle.addEventListener("click", () => {
-      visible = !visible;
-      panel.style.display = visible ? "flex" : "none";
-      toggle.textContent = visible ? "\u2715 \u9589\u3058\u308b" : "\u2328\ufe0f \u6570\u5f0f";
-    });
-
-    input.insertAdjacentElement("afterend", toggle);
-    toggle.insertAdjacentElement("afterend", panel);
+    input.insertAdjacentElement("afterend", panel);
   }
 
   if (document.readyState === "loading") {
