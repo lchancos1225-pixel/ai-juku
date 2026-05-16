@@ -90,6 +90,7 @@ def board_list(
             "role": role,
             "tag_labels": BOARD_TAG_LABELS,
             "auth_role": role,
+            "session": session,
         },
     )
 

@@ -9,7 +9,7 @@
     {% if auth_role == "teacher" %}
     <a href="/teachers/dashboard" class="secondary-link">← ダッシュボード</a>
     {% else %}
-    <a href="/students/{{ request.session.get('student_id', '') if request.session else '' }}" class="secondary-link">← ホーム</a>
+    <a href="/students/{{ session.student_id if session and session.get('student_id') else '' }}" class="secondary-link">← ホーム</a>
     {% endif %}
   </div>
 
