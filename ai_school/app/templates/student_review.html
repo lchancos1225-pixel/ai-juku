@@ -647,9 +647,9 @@
         leftZone.appendChild(bs);
 
         const syms = [
-          ["x\u00b2", "x^2"], ["\u221a", "sqrt("],
-          ["x", "x"], ["(", "("],
-          [")", ")"], ["\u25a1/\u25a1", "__FRAC__"],
+          ["x", "x"], ["x\u00b2", "x^2"],
+          ["\u221a", "sqrt("], ["\u25a1/\u25a1", "__FRAC__"],
+          ["(", "("], [")", ")"],
         ];
         syms.forEach(([label, val]) => {
           const onClick = val === "__FRAC__" ? openFractionQuickPanel : () => appendToCurrent(val);

@@ -5697,8 +5697,9 @@ td {
 /* ── 2カラムキーパッド（中学生向け） ── */
 .student-keypad--split {
   display: grid;
-  grid-template-columns: 1.3fr 1fr;
-  gap: 10px;
+  grid-template-columns: 3fr 2fr;
+  gap: 8px;
+  padding: 12px;
 }
 
 .keypad-zone {
