@@ -5763,6 +5763,90 @@ td {
   background: #168a63 !important;
 }
 
+/* ── クイック分数入力パネル ── */
+.fraction-quick-panel {
+  display: none;
+  padding: 14px 16px;
+  margin-bottom: 10px;
+  background: #fff;
+  border: 2px solid #1D9E75;
+  border-radius: 14px;
+}
+
+.fraction-quick-panel--open {
+  display: block;
+}
+
+.fraction-quick-panel__body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.fraction-quick-panel__input {
+  width: 100%;
+  max-width: 160px;
+  padding: 8px 12px;
+  font-size: 1.3rem;
+  text-align: center;
+  border: 2px solid #cbd5e1;
+  border-radius: 10px;
+  outline: none;
+  background: #f8fafc;
+  color: #0f172a;
+}
+
+.fraction-quick-panel__input:focus {
+  border-color: #1D9E75;
+  background: #fff;
+}
+
+.fraction-quick-panel__input--active {
+  border-color: #1D9E75;
+  box-shadow: 0 0 0 3px rgba(29, 158, 117, 0.15);
+}
+
+.fraction-quick-panel__line {
+  width: 60%;
+  height: 2px;
+  background: #64748b;
+  border-radius: 1px;
+}
+
+.fraction-quick-panel__actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+  width: 100%;
+  max-width: 200px;
+}
+
+.fraction-quick-panel__actions button {
+  flex: 1;
+  padding: 8px 0;
+  font-size: 0.95rem;
+  font-weight: 700;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.fq-btn-next {
+  background: #e1f5ee;
+  color: #085041;
+}
+
+.fq-btn-ok {
+  background: #1D9E75;
+  color: #fff;
+}
+
+.fq-btn-cancel {
+  background: #f1f5f9;
+  color: #64748b;
+}
+
 .hw-canvas-wrap--memo-only::after {
   display: none;
 }

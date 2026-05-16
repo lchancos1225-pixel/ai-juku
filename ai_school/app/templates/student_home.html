@@ -366,6 +366,18 @@
                 <button type="button" class="hw-btn" id="frac-focus-den">下段</button>
               </div>
             </div>
+            <div class="fraction-quick-panel" id="fraction-quick-panel">
+              <div class="fraction-quick-panel__body">
+                <input type="text" inputmode="numeric" class="fraction-quick-panel__input fraction-quick-panel__input--active" id="frac-quick-num" placeholder="分子" readonly>
+                <div class="fraction-quick-panel__line"></div>
+                <input type="text" inputmode="numeric" class="fraction-quick-panel__input" id="frac-quick-den" placeholder="分母" readonly>
+                <div class="fraction-quick-panel__actions">
+                  <button type="button" class="fq-btn-next" id="frac-quick-next">次へ ↓</button>
+                  <button type="button" class="fq-btn-ok" id="frac-quick-ok">確定</button>
+                  <button type="button" class="fq-btn-cancel" id="frac-quick-cancel">✕</button>
+                </div>
+              </div>
+            </div>
             <div class="student-keypad" id="student-keypad"></div>
           </div>
           <button type="submit" class="submit-answer-btn" id="submit-btn">{{ submit_label }}</button>
@@ -740,7 +752,39 @@
       });
     }
 
+    const fracQuickPanel = document.getElementById("fraction-quick-panel");
+    const fracQuickNum = document.getElementById("frac-quick-num");
+    const fracQuickDen = document.getElementById("frac-quick-den");
+    let fracQuickActive = null; // "num" | "den" | null
+
+    function openFractionQuickPanel() {
+      if (!fracQuickPanel) return;
+      fracQuickPanel.classList.add("fraction-quick-panel--open");
+      fracQuickNum.value = "";
+      fracQuickDen.value = "";
+      setFracQuickFocus("num");
+    }
+
+    function closeFractionQuickPanel() {
+      if (!fracQuickPanel) return;
+      fracQuickPanel.classList.remove("fraction-quick-panel--open");
+      fracQuickActive = null;
+      fracQuickNum.classList.remove("fraction-quick-panel__input--active");
+      fracQuickDen.classList.remove("fraction-quick-panel__input--active");
+    }
+
+    function setFracQuickFocus(part) {
+      fracQuickActive = part;
+      fracQuickNum.classList.toggle("fraction-quick-panel__input--active", part === "num");
+      fracQuickDen.classList.toggle("fraction-quick-panel__input--active", part === "den");
+    }
+
     function appendToCurrent(ch) {
+      if (fracQuickActive) {
+        const target = fracQuickActive === "num" ? fracQuickNum : fracQuickDen;
+        if (target) target.value += ch;
+        return;
+      }
       const b = activeBlank();
       if (b.input_mode === "fraction") {
         if (ch === "-" && fracFocus === "den") return;
@@ -756,6 +800,11 @@
     }
 
     function backspace() {
+      if (fracQuickActive) {
+        const target = fracQuickActive === "num" ? fracQuickNum : fracQuickDen;
+        if (target) target.value = target.value.slice(0, -1);
+        return;
+      }
       const b = activeBlank();
       if (b.input_mode === "fraction") {
         if (fracFocus === "num") fracDraft.num = fracDraft.num.slice(0, -1);
@@ -809,14 +858,13 @@
         leftZone.appendChild(bs);
 
         const syms = [
-          ["x\u00b2", "x^2"], ["a\u00b2", "a^2"],
-          ["x\u207f", "^"], ["\u221a", "sqrt("],
-          ["x", "x"], ["a", "a"],
-          ["\u00f7", "/"], ["(", "("],
-          [")", ")"], ["=", "="],
+          ["x\u00b2", "x^2"], ["\u221a", "sqrt("],
+          ["x", "x"], ["(", "("],
+          [")", ")"], ["\u25a1/\u25a1", "__FRAC__"],
         ];
         syms.forEach(([label, val]) => {
-          const btn = makeKey(label, () => appendToCurrent(val), false);
+          const onClick = val === "__FRAC__" ? openFractionQuickPanel : () => appendToCurrent(val);
+          const btn = makeKey(label, onClick, false);
           btn.classList.add("keypad-sym");
           rightZone.appendChild(btn);
         });
@@ -879,6 +927,21 @@
       fracFocus = "den";
       refreshFracDisp();
     });
+
+    document.getElementById("frac-quick-next").addEventListener("click", () => {
+      setFracQuickFocus("den");
+    });
+    document.getElementById("frac-quick-ok").addEventListener("click", () => {
+      const num = fracQuickNum.value.trim();
+      const den = fracQuickDen.value.trim();
+      if (num && den) {
+        appendToCurrent(num + "/" + den);
+      }
+      closeFractionQuickPanel();
+    });
+    document.getElementById("frac-quick-cancel").addEventListener("click", closeFractionQuickPanel);
+    fracQuickNum.addEventListener("click", () => setFracQuickFocus("num"));
+    fracQuickDen.addEventListener("click", () => setFracQuickFocus("den"));
 
     if (answerForm) {
       answerForm.addEventListener("submit", (e) => {
