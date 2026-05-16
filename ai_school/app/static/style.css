@@ -5786,8 +5786,7 @@ td {
 }
 
 .fraction-quick-panel__input {
-  width: 100%;
-  max-width: 120px;
+  width: 1cm;
   padding: 6px 8px;
   font-size: 1.1rem;
   text-align: center;
