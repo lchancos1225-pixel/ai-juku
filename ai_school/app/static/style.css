@@ -5694,6 +5694,75 @@ td {
   min-width: 120px;
 }
 
+/* ── 2カラムキーパッド（中学生向け） ── */
+.student-keypad--split {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 10px;
+}
+
+.keypad-zone {
+  display: grid;
+  gap: 6px;
+  padding: 10px;
+  border-radius: 12px;
+}
+
+.keypad-zone--num {
+  grid-template-columns: repeat(3, 1fr);
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+}
+
+.keypad-zone--sym {
+  grid-template-columns: repeat(2, 1fr);
+  background: #E1F5EE;
+  border: 1px solid #b8e0d0;
+}
+
+.keypad-zone .student-keypad__key {
+  min-height: 44px;
+  padding: 6px 4px;
+  font-size: 1.05rem;
+  border-radius: 10px;
+}
+
+.keypad-zone--num .student-keypad__key {
+  background: #fff;
+  color: #0f172a;
+  border-color: #cbd5e1;
+}
+
+.keypad-zone--sym .student-keypad__key {
+  background: #f0faf5;
+  color: #085041;
+  border-color: #a8d5c5;
+}
+
+.keypad-zone--sym .student-keypad__key:hover {
+  background: #d4f0e5;
+}
+
+.keypad-bs {
+  grid-column: 1 / -1;
+  background: #f1f5f9 !important;
+  color: #64748b !important;
+  font-size: 0.95rem !important;
+}
+
+.keypad-submit {
+  grid-column: 1 / -1;
+  background: #1D9E75 !important;
+  color: #fff !important;
+  border-color: #1D9E75 !important;
+  font-size: 0.95rem !important;
+  font-weight: 700;
+}
+
+.keypad-submit:hover {
+  background: #168a63 !important;
+}
+
 .hw-canvas-wrap--memo-only::after {
   display: none;
 }
